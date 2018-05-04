@@ -10,7 +10,7 @@
     * [Basic Authentication](1/api-1/basic-authentication.md)
     * OAuth
       * [Authorization Code Grant Flow](1/api-1/oauth/authorization-code-grant-flow.md)
-      * Untitled
+      * [Implict Grant Flow](1/api-1/oauth/untitled-1.md)
       * Untitled
 * 코스콤 시세API
 

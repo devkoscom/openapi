@@ -2,7 +2,9 @@
 
 **사용자\(end user\)**는 **`금융투자 핀테크포탈`**\([http://open.koscom.co.kr/](http://open.koscom.co.kr/)\) 또는 **`오핀(OFin)`**앱을 통해 핀테크 금융서비스를 이용할 수 있습니다.
 
+{% page-ref page="undefined.md" %}
 
+{% page-ref page="ofin.md" %}
 
 
 

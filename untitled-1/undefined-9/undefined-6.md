@@ -6,7 +6,7 @@
 
 #### URI 입력값
 
-* base URI : [https://sandbox-apigw.koscom.co.kr/](https://sandbox-apigw.koscom.co.kr/v2/market/stocks)
+* base URI : [https://sandbox-apigw.koscom.co.kr**/**_**v2/market/stocks/**_](https://sandbox-apigw.koscom.co.kr/v2/market/stocks/)
 * `marketcode `: 입력가능 marketcode 리스트  \[**`kospi`**, **`kosdaq`**\]
 * `issuecode `: 주식종목의 단축코드
 
@@ -14,9 +14,9 @@
 
 ##  주식종목 리스트 API {#api}
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/stocks/{marketcode}/lists" %}
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/stocks" path="/{marketcode}/lists" %}
 {% api-method-summary %}
-/v2/market/stocks/{marketcode}/lists
+/{marketcode}/lists
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -94,9 +94,9 @@
 
 ## 주식종목 마스터 API {#api}
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/stocks/{marketcode}/{issuecode}/master" %}
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/stocks" path="/{marketcode}/{issuecode}/master" %}
 {% api-method-summary %}
-/v2/market/stocks/{marketcode}/{issuecode}/master
+/{marketcode}/{issuecode}/master
 {% endapi-method-summary %}
 
 {% api-method-description %}

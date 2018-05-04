@@ -13,7 +13,7 @@
       * [Implict Grant Flow](1/api-1/oauth/untitled-1.md)
       * [Scope](1/api-1/oauth/untitled-2.md)
   * 개발자센터 이용방법
-    * Untitled
     * [애플리케이션 등록](1/undefined-2/undefined.md)
+    * Untitled
 * 코스콤 시세API
 

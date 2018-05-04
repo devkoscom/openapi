@@ -16,7 +16,7 @@
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/stocks" path="/{marketcode}/lists" %}
 {% api-method-summary %}
-/{marketcode}/lists
+ /v2/market/stocks/{marketcode}/lists
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -52,10 +52,6 @@
   *  /v2/market/stocks/**{marketcode}/lists    **
 * HTTP methods
   * GET
-* Format
-  * JSON &lt;application/json; charset=utf-8&gt;
-* Content-Type
-  * Application/json
 * Authentication
   * API Key
 
@@ -96,7 +92,7 @@
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/stocks" path="/{marketcode}/{issuecode}/master" %}
 {% api-method-summary %}
-/{marketcode}/{issuecode}/master
+/v2/market/stocks/{marketcode}/{issuecode}/master
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -136,10 +132,6 @@
   *  /v2/market/stocks/**{marketcode}/{issuecode}/master**
 * HTTP methods
   * GET
-* Format
-  * JSON &lt;application/json; charset=utf-8&gt;
-* Content-Type
-  * Application/json
 * Authentication
   * API Key
 
@@ -201,6 +193,91 @@
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+
+
+## 주식종목 종가 API {#api}
+
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/stocks" path="/{marketcode}/{issuecode}/closeprice" %}
+{% api-method-summary %}
+/v2/market/stocks/{marketcode}/{issuecode}/closeprice
+{% endapi-method-summary %}
+
+{% api-method-description %}
+종목 당일 종가제공
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="marketcode" type="string" required=true %}
+시장구분 \(kospi \| kosdaq\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="issuecode" type="string" required=true %}
+종목코드 ex\)005930
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+   "error": "당일 종가 제공 시간이 아닙니다." 
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Syntax {#syntax}
+
+* URI
+  *  /v2/market/stocks/**{marketcode}/{issuecode}/closeprice**
+* HTTP methods
+  * GET
+* Authentication
+  * API Key
+
+#### Example {#example}
+
+{% code-tabs %}
+{% code-tabs-item title="Response Body Example" %}
+```yaml
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+#### 응답리스트
+
+| No. | 항목명 | 한글명 | 설명 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | isuSrtCd | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| 2 | cmpprevddTpCd | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| 3 |  |  |  |
+| 4 |  |  |  |
+| 5 |  |  |  |
+| 6 |  |  |  |
+| 7 |  |  |  |
+| 8 |  |  |  |
+| 9 |  |  |  |
 
 
 

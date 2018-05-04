@@ -18,7 +18,7 @@
       * [증권사](1/api-2/undefined/undefined-2.md)
     * [B. 계좌서비스](1/api-2/undefined-1.md)
     * [C. 일임매매서비스](1/api-2/undefined-2.md)
-  * [API 인증 방식](1/api-1/README.md)
+  * [인증](1/api-1/README.md)
     * [API Key Authentication](1/api-1/api-key-authentication.md)
     * [Basic Authentication](1/api-1/basic-authentication.md)
     * [OAuth](1/api-1/oauth/README.md)

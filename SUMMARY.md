@@ -5,7 +5,7 @@
   * [오픈플랫폼 개요](1/undefined.md)
   * [오픈플랫폼 이용방법](1/undefined-1.md)
   * [제공 API 유형](1/api.md)
-  * API 인증 방식
+  * [API 인증 방식](1/api-1/README.md)
     * [API Key Authentication](1/api-1/api-key-authentication.md)
     * [Basic Authentication](1/api-1/basic-authentication.md)
     * [OAuth](1/api-1/oauth/README.md)

@@ -10,6 +10,8 @@
 * `marketcode `: 입력가능 marketcode 리스트  \[**`kospi`**, **`kosdaq`**\]
 * `issuecode `: 주식종목의 단축코드
 
+
+
 ##  주식종목 리스트 API {#api}
 
 조회대상이 되는 계좌의 실제 잔고 수량, 투자금액 대신 금융투자 상품의 구성비만을 제공함으로써 개인금융정보의 노출부담을 최소화하면서도 투자자산을 기초로 자산통합관리, 자문, 정보제공 등을 받을 수 있도록 하기 위한 API
@@ -25,6 +27,12 @@
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="marketcode" type="string" required=true %}
+kospi \| kosdaq
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}

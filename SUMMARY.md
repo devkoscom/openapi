@@ -16,6 +16,7 @@
     * [애플리케이션 등록](1/undefined-2/undefined.md)
     * [API 테스트](1/undefined-2/untitled.md)
   * [Error 처리](1/error.md)
+  * [기타](1/undefined-3.md)
 * [코스콤 시세API](untitled-1/README.md)
   * [목차](untitled-1/undefined.md)
 

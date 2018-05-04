@@ -10,6 +10,13 @@
 * `marketcode `: 입력가능 marketcode 리스트  \[**`kospi`**, **`kosdaq`**\]
 * `issuecode `: 주식종목의 단축코드
 
+#### Syntax
+
+* HTTP methods
+  * GET
+* Authentication
+  * API Key
+
 
 
 ##  주식종목 리스트 API {#api}

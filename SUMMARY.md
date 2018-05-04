@@ -11,6 +11,6 @@
     * OAuth
       * [Authorization Code Grant Flow](1/api-1/oauth/authorization-code-grant-flow.md)
       * [Implict Grant Flow](1/api-1/oauth/untitled-1.md)
-      * Untitled
+      * [Scope](1/api-1/oauth/untitled-2.md)
 * 코스콤 시세API
 

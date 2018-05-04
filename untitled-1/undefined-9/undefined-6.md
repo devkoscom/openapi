@@ -6,17 +6,17 @@
 
 #### URI 입력값
 
-* base URI : [https://sandbox-apigw.koscom.co.kr/v2/market/stocks](https://sandbox-apigw.koscom.co.kr/v2/market/stocks)
-* marketcode : 입력가능 marketcode 리스트  \[kospi, kosdaq\]
-* issuecode : 주식종목의 단축코드
+* base URI : [https://sandbox-apigw.koscom.co.kr/](https://sandbox-apigw.koscom.co.kr/v2/market/stocks)
+* `marketcode `: 입력가능 marketcode 리스트  \[**`kospi`**, **`kosdaq`**\]
+* `issuecode `: 주식종목의 단축코드
 
 ##  주식종목 리스트 API {#api}
 
 조회대상이 되는 계좌의 실제 잔고 수량, 투자금액 대신 금융투자 상품의 구성비만을 제공함으로써 개인금융정보의 노출부담을 최소화하면서도 투자자산을 기초로 자산통합관리, 자문, 정보제공 등을 받을 수 있도록 하기 위한 API
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/stocks" path="/{marketcode}/lists" %}
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/stocks/{marketcode}/lists" %}
 {% api-method-summary %}
-{marketcode}/lists
+/v2/market/stocks/{marketcode}/lists
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -25,12 +25,6 @@
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -49,28 +43,46 @@
 #### Syntax {#syntax}
 
 * URI
-  *  /account/portfolio/search
+  *  /v2/market/stocks/**{marketcode}/lists    **
 * HTTP methods
-  * POST
+  * GET
 * Format
   * JSON &lt;application/json; charset=utf-8&gt;
 * Content-Type
   * Application/json
 * Authentication
-  * OAuth 2- Authorization
-  * header – Authorization: Bearer 발급받은 access token
+  * API Key
 
 #### Example {#example}
 
-Add fileYAML 
-
-```text
-{   "partner":{     "comId":"F9999",    "srvId":"999"  },  "commonHeader":{     "reqIdPlatform":"",    "reqIdConsumer":"ID000001",    "ci":"S1V7HGXBV1EPGBJastZf4fQV+eOpOc1pfizByV6UIEEJHM/PF9QKu+PU2OThEog7QmVKSZNibNGg+/k0XB/9jQ=="  },  "devInfo":{     "ipAddr":"123451234500",    "macAddr":"7054D27EE247"  },  "accInfo":{       "vtAccNo":"160678007213500001"  },  "portfolioRequestBody":{     "queryType":{       "assetType":"ALL",      "rspType":"RAT",      "count":0,      "page":"null"    }  }}
+{% code-tabs %}
+{% code-tabs-item title="Response Body Example" %}
+```yaml
+{
+   "trdDd": "20180306",
+   "mktEndTm": "1540",
+   "isuLists": [ 
+    {
+       "isuSrtCd": "000020",
+       "isuCd": "KR7000020008",
+       "isuKorNm": "동화약품",
+       "isuKorAbbr": "동화약품",
+       "map_to": "000020*001" 
+    },
+     
+    {
+       "isuSrtCd": "000030",
+       "isuCd": "KR7000030007",
+       "isuKorNm": "우리은행",
+       "isuKorAbbr": "우리은행",
+       "map_to": "000030*001" 
+    },
+     ... 이하생략...
+  ]
+}
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
-Add fileYAML 
 
-```text
-{  "commonHeader":{
-```
 

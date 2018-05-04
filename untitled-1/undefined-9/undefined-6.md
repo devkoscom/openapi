@@ -38,27 +38,6 @@
 
 {% endapi-method-response-example-description %}
 
-```
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-#### Syntax {#syntax}
-
-* URI
-  *  /v2/market/stocks/**{marketcode}/lists    **
-* HTTP methods
-  * GET
-* Authentication
-  * API Key
-
-#### Example {#example}
-
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
 ```yaml
 {
    "trdDd": "20180306",
@@ -83,8 +62,19 @@
   ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Syntax {#syntax}
+
+* URI
+  *  /v2/market/stocks/**{marketcode}/lists    **
+* HTTP methods
+  * GET
+* Authentication
+  * API Key
 
 
 

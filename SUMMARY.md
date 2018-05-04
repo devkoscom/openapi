@@ -3,21 +3,21 @@
 * 오픈플랫폼
 * OPEN API 공용 매뉴얼
   * [오픈플랫폼 개요](1/undefined.md)
-  * [오픈플랫폼 이용방법](1/undefined-1.md)
-  * [제공 API 유형](1/api.md)
   * 이용방법
-    * [개발자센터 이용방법](1/undefined-4/undefined-2/README.md)
-      * [애플리케이션 등록](1/undefined-4/undefined-2/undefined.md)
-      * [API 테스트](1/undefined-4/undefined-2/untitled.md)
+    * [오픈플랫폼 이용방법](1/undefined-4/undefined-1.md)
     * [사용자 이용방법](1/undefined-4/undefined/README.md)
       * [핀테크포털 이용](1/undefined-4/undefined/undefined.md)
       * [오핀\(OFin\) 이용](1/undefined-4/undefined/ofin.md)
+    * [개발자센터 이용방법](1/undefined-4/undefined-2/README.md)
+      * [애플리케이션 등록](1/undefined-4/undefined-2/undefined.md)
+      * [API 테스트](1/undefined-4/undefined-2/untitled.md)
+  * [제공 API 유형](1/api.md)
   * API 서비스
-    * 공통서비스
+    * A. 공통서비스
       * [서비스연동](1/api-2/undefined/undefined.md)
       * [증권사](1/api-2/undefined/undefined-2.md)
-    * [계좌서비스](1/api-2/undefined-1.md)
-    * [일임매매서비스](1/api-2/undefined-2.md)
+    * [B. 계좌서비스](1/api-2/undefined-1.md)
+    * [C. 일임매매서비스](1/api-2/undefined-2.md)
   * [API 인증 방식](1/api-1/README.md)
     * [API Key Authentication](1/api-1/api-key-authentication.md)
     * [Basic Authentication](1/api-1/basic-authentication.md)

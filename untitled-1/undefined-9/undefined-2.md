@@ -154,3 +154,89 @@ URI 입력값
 
 
 
+## 상품/지수선물 종목 마스터
+
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/master" %}
+{% api-method-summary %}
+ /v2/market/futures/{marketcode}/{issuecode}/master
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
+시장코드
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="issuecode" required=true %}
+종목코드
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": [ " -" 
+    ],
+     "midyyHgstprc": null,
+     "midyyHgstprcDd": null,
+     "midyyLwstprc": null,
+     "midyyLwstprcDd": null,
+     "inlistHgstprc": null,
+     "inlistHgstprcDd": null,
+     "inlistLwstprc": null,
+     "inlistLwstprcDd": null,
+     "prevddClsprc": null,
+     "prevddOpnprc": null,
+     "prevddHgprc": null,
+     "prevddLwprc": null,
+     "prevddAccTrdvol": null,
+     "prevddAccTrdval": null,
+     "prevddOpnintQty": null,
+     "setlPrcTheoPrcDivrgRt": null,
+     "BzDd": 20180504,
+     "basPrc": null,
+     "isuKorNm": " -",
+     "isuKorAbbrv": " -",
+     "isuCd": " -",
+     "listDd": null,
+     "remainDys": null,
+     "cdInt": null,
+     "lsttrdDd": null,
+     "expDd": null,
+     "ulyId": " -",
+     "prcLmtStep1Uplmtprc": null,
+     "prcLmtStep2Uplmtprc": null,
+     "prcLmtStep3Uplmtprc": null,
+     "prcLmtStep1Lwlmtprc": null,
+     "prcLmtStep2Lwlmtprc": null,
+     "prcLmtStep3Lwlmtprc": null,
+     "opnintLmtQty": null,
+     "setlmult": null,
+     "setlTheoPrc": null,
+     "basTheoPrc": null 
+  } 
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+
+
+
+

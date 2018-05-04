@@ -21,7 +21,7 @@
   * API 서비스
     * 공통서비스
     * [계좌서비스](1/api-2/undefined-1.md)
-    * 일임매매서비스
+    * [일임매매서비스](1/api-2/undefined-2.md)
 * [코스콤 시세API](untitled-1/README.md)
   * [목차](untitled-1/undefined.md)
 

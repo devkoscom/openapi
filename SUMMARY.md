@@ -8,7 +8,7 @@
   * API 인증 방식
     * [API Key Authentication](1/api-1/api-key-authentication.md)
     * [Basic Authentication](1/api-1/basic-authentication.md)
-    * OAuth
+    * [OAuth](1/api-1/oauth/README.md)
       * [Authorization Code Grant Flow](1/api-1/oauth/authorization-code-grant-flow.md)
       * [Implict Grant Flow](1/api-1/oauth/untitled-1.md)
       * [Scope](1/api-1/oauth/untitled-2.md)

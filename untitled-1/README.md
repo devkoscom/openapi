@@ -1,8 +1,8 @@
 ---
-description: 야호야호시세
+description: 코스콤 시세서비스
 ---
 
-# 코스콤 시세API
+# D. 시세서비스
 
 꺄르륵 목차
 

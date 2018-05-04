@@ -27,6 +27,6 @@
       * [Scope](1/api-1/oauth/untitled-2.md)
   * [Error Msg](1/error.md)
   * [기타](1/undefined-3.md)
-* [코스콤 시세API](untitled-1/README.md)
+* [D. 시세서비스](untitled-1/README.md)
   * [목차](untitled-1/undefined.md)
 

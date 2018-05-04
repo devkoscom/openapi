@@ -14,6 +14,6 @@
       * [Scope](1/api-1/oauth/untitled-2.md)
   * 개발자센터 이용방법
     * [애플리케이션 등록](1/undefined-2/undefined.md)
-    * Untitled
+    * [API 테스트](1/undefined-2/untitled.md)
 * 코스콤 시세API
 

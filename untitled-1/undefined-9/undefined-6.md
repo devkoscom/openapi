@@ -14,8 +14,6 @@
 
 ##  주식종목 리스트 API {#api}
 
-조회대상이 되는 계좌의 실제 잔고 수량, 투자금액 대신 금융투자 상품의 구성비만을 제공함으로써 개인금융정보의 노출부담을 최소화하면서도 투자자산을 기초로 자산통합관리, 자문, 정보제공 등을 받을 수 있도록 하기 위한 API
-
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/stocks/{marketcode}/lists" %}
 {% api-method-summary %}
 /v2/market/stocks/{marketcode}/lists
@@ -29,7 +27,7 @@
 {% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="marketcode" type="string" required=true %}
-kospi \| kosdaq
+시장구분 \(kospi \| kosdaq\)
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -87,6 +85,118 @@ kospi \| kosdaq
     },
      ... 이하생략...
   ]
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+
+
+## 주식종목 마스터 API {#api}
+
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/stocks/{marketcode}/lists" %}
+{% api-method-summary %}
+/v2/market/stocks/{marketcode}/{issuecode}/master
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="marketcode" type="string" required=true %}
+시장구분 \(kospi \| kosdaq\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="issuecode" type="string" required=true %}
+종목코드 ex\)005930
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Syntax {#syntax}
+
+* URI
+  *  /v2/market/stocks/**{marketcode}/lists    **
+* HTTP methods
+  * GET
+* Format
+  * JSON &lt;application/json; charset=utf-8&gt;
+* Content-Type
+  * Application/json
+* Authentication
+  * API Key
+
+#### Example {#example}
+
+{% code-tabs %}
+{% code-tabs-item title="Response Body Example" %}
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",
+     "prevddClsprc": 2650000,
+     "prevddAccTrdvol": 0,
+     "prevddAccTrdval": 0,
+     "prevddNav": 0,
+     "BzDd": 20180504,
+     "acntclsMm": "12",
+     "acntclsCd": "000000000001",
+     "eps": 5997,
+     "bps": 28126,
+     "per": 8.67,
+     "pbr": 1.85,
+     "divYd": 0,
+     "basPrc": 53000,
+     "arrantrdYn": "N",
+     "isuKorAbbrv": "삼성전자",
+     "isuCd": "KR7005930003",
+     "listDd": 19750611,
+     "idxIndUpclssCd": 13,
+     "idxIndMidclssCd": 13,
+     "idxIndLwclssCd": 13,
+     "mfindYn": "Y",
+     "kospi100Yn": "N",
+     "kospi50Yn": "N",
+     "parval": 100,
+     "dps": 850,
+     "admisuYn": "N",
+     "mktWarnTpCd": "00",
+     "haltYn": "N",
+     "isuPrc": 0,
+     "uplmtprc": 68900,
+     "lwlmtprc": 37100,
+     "sbPrc": 41340,
+     "listShrs": 6419324700,
+     "regulssQtyUnit": 1,
+     "mktcapScaleCd": 2,
+     "kospiYn": "N",
+     "invstcautnRemndIsuYn": "N",
+     "srttrmOverheatIsuTpCd": "0",
+     "secugrpId": "ST",
+     "smeYn": "N",
+     "isuTrdvol": "Y",
+     "creditOrdPosblYn": "N",
+     "adjStkprcCalcYn": "Y" 
+  } 
 }
 ```
 {% endcode-tabs-item %}

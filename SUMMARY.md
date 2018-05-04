@@ -25,7 +25,7 @@
       * [Authorization Code Grant Flow](1/api-1/oauth/authorization-code-grant-flow.md)
       * [Implict Grant Flow](1/api-1/oauth/untitled-1.md)
       * [Scope](1/api-1/oauth/untitled-2.md)
-  * [Error 처리](1/error.md)
+  * [Error Msg](1/error.md)
   * [기타](1/undefined-3.md)
 * [코스콤 시세API](untitled-1/README.md)
   * [목차](untitled-1/undefined.md)

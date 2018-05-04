@@ -94,7 +94,7 @@
 
 ## 주식종목 마스터 API {#api}
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/stocks/{marketcode}/lists" %}
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/stocks/{marketcode}/{issuecode}/master" %}
 {% api-method-summary %}
 /v2/market/stocks/{marketcode}/{issuecode}/master
 {% endapi-method-summary %}
@@ -133,7 +133,7 @@
 #### Syntax {#syntax}
 
 * URI
-  *  /v2/market/stocks/**{marketcode}/lists    **
+  *  /v2/market/stocks/**{marketcode}/{issuecode}/master**
 * HTTP methods
   * GET
 * Format

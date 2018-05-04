@@ -260,7 +260,21 @@
 {% code-tabs %}
 {% code-tabs-item title="Response Body Example" %}
 ```yaml
-
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",
+     "trdPrc": 51900,
+     "cmpprevddTpCd": "5",
+     "opnprc": 53000,
+     "hgprc": 53900,
+     "lwprc": 51800,
+     "accTrdvol": 39421505,
+     "accTrdval": 2070538849200,
+     "cmpprevddPrc": -1100 
+  } 
+}
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -271,13 +285,13 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | isuSrtCd | 종목단축코드 | 예\) KR7000660001 → 000660 |
 | 2 | cmpprevddTpCd | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
-| 6 |  |  |  |
-| 7 |  |  |  |
-| 8 |  |  |  |
-| 9 |  |  |  |
+| 3 | cmpprevddPrc | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
+| 4 | opnprc | 시가 | 단위:원 |
+| 5 | hgprc | 고가 | 단위:원 |
+| 6 | lwprc | 저가 | 단위:원 |
+| 7 | trdPrc | 체결가 |  |
+| 8 | accTrdvol | 누적체결수량,누적거래량 | 단위:주 |
+| 9 | accTrdval | 누적거래대금 | 단위:원 |
 
 
 

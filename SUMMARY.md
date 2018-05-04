@@ -12,7 +12,7 @@
       * [Authorization Code Grant Flow](1/api-1/oauth/authorization-code-grant-flow.md)
       * [Implict Grant Flow](1/api-1/oauth/untitled-1.md)
       * [Scope](1/api-1/oauth/untitled-2.md)
-  * 개발자센터 이용방법
+  * [개발자센터 이용방법](1/undefined-2/README.md)
     * [애플리케이션 등록](1/undefined-2/undefined.md)
     * [API 테스트](1/undefined-2/untitled.md)
 * 코스콤 시세API

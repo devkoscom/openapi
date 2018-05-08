@@ -1,21 +1,14 @@
-# 선물 시세조회
+# 옵션 시세조회
 
-상품/지수 선물시장에 상장된 종목 리스트, 종목 마스터, 종목 체결, 호가 잔량등을 제공한다.
+상품/지수 옵션시장에 상장된 종목 리스트, 종목 마스터, 종목 체결, 호가 잔량등을 제공한다.
 
 
 
 #### URI 입력값
 
-* base URI : [https://sandbox-apigw.koscom.co.kr**/**_**v2/market/futures/**_](https://sandbox-apigw.koscom.co.kr/v2/market/stocks/)
+* base URI : [https://sandbox-apigw.koscom.co.kr**/**_**v2/market/options/**_](https://sandbox-apigw.koscom.co.kr/v2/market/stocks/)
 * `marketcode `:  ☞ 코드표1  '시장코드표' 참조
 * `issuecode `:  예\) KR4101C90009 → K101C9000
-  * 종목코드\(issuecode\) 추가:  연결선물코드
-
-     - 선물최근월물의  종목히스토리 조회를 위해  사용가능
-
-     - 현재가 조회시 조회결과 종목코드는 현재     기준 시장에서 거래되는 종목의 단축종목코드로 결과를 보내줌
-
-     - 코드표 -&gt;  '시장코드표' 참조
 
 #### Syntax
 
@@ -24,13 +17,11 @@
 * Authentication
   * API Key
 
+## 상품/지수옵션 종목 리스트
 
-
-## 상품/지수선물 종목 리스트
-
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/lists" %}
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/lists" %}
 {% api-method-summary %}
- /v2/market/futures/{marketcode}/lists
+ /v2/market/options/{marketcode}/lists
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -83,11 +74,11 @@
 
 
 
-## 상품/지수선물 종목 마스터
+## 상품/지수옵 종목 마스터
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/master" %}
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/{issuecode}/master" %}
 {% api-method-summary %}
- /v2/market/futures/{marketcode}/{issuecode}/master
+ /v2/market/ options/{marketcode}/{issuecode}/master
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -167,11 +158,11 @@
 
 
 
-## 상품/지수선물 종목 종가
+## 상품/지수옵션 종목 종가
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/closeprice" %}
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/{issuecode}/closeprice" %}
 {% api-method-summary %}
- /v2/market/futures/{marketcode}/{issuecode}/closeprice
+ /v2/market/options/{marketcode}/{issuecode}/closeprice
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -219,11 +210,11 @@ ddddd
 
 
 
-## 상품/지수선물 종목 체결
+## 상품/지수옵 종목 체결
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/price" %}
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/{issuecode}/price" %}
 {% api-method-summary %}
- /v2/market/futures/{marketcode}/{issuecode}/price
+ /v2/market/options/{marketcode}/{issuecode}/price
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -280,11 +271,11 @@ ddddd
 
 
 
-## 상품/지수선물 종목 우선호가
+## 상품/지수옵션 종목 우선호가
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/orderbook" %}
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/{issuecode}/orderbook" %}
 {% api-method-summary %}
- /v2/market/futures/{marketcode}/{issuecode}/orderbook
+ /v2/market/options/{marketcode}/{issuecode}/orderbook
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -363,11 +354,11 @@ ddddd
 
 
 
-## 상품/지수선물 종목 일중
+## 상품/지수옵션 종목 일중
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/intraday" %}
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/{issuecode}/intraday" %}
 {% api-method-summary %}
- /v2/market/futures/{marketcode}/{issuecode}/intraday
+ /v2/market/options/{marketcode}/{issuecode}/intraday
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -419,11 +410,11 @@ ddddd
 
 
 
-## 상품/지수선물 종목 히스토리
+## 상품/지수옵션 종목 히스토리
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/history" %}
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/{issuecode}/history" %}
 {% api-method-summary %}
- /v2/market/futures/{marketcode}/{issuecode}/history
+ /v2/market/options/{marketcode}/{issuecode}/history
 {% endapi-method-summary %}
 
 {% api-method-description %}

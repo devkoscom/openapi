@@ -73,7 +73,7 @@
 
 
 
-## 상품/지수옵 종목 마스터
+## 상품/지수옵션 종목 마스터
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/{issuecode}/master" %}
 {% api-method-summary %}

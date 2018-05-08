@@ -44,8 +44,8 @@ KOSPI/KOSDAQ등의 지수 예상지수 및 업종별 투자자별 거래량등�
 시장코드
 {% endapi-method-parameter %}
 
-{% api-method-parameter type="string" name="issuecode" required=true %}
-종목코드
+{% api-method-parameter type="string" required=true name="issuecode" %}
+업종코드 ex\) K1
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -95,7 +95,7 @@ ddddd
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="issuecode" required=true %}
-종목코드
+업종코드 ex\) K1
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -111,45 +111,13 @@ ddddd
    "jsonrpc": "2.0",
    "result": 
   {
-     "isuSrtCd": "201N6220",
-     "midyyHgstprc": 100.5,
-     "midyyHgstprcDd": 20180419,
-     "midyyLwstprc": 100.5,
-     "midyyLwstprcDd": 20180419,
-     "inlistHgstprc": 100.5,
-     "inlistHgstprcDd": 20180419,
-     "inlistLwstprc": 100.5,
-     "inlistLwstprcDd": 20180419,
-     "prevddClsprc": 100.95,
-     "prevddOpnprc": 100.95,
-     "prevddHgprc": 100.95,
-     "prevddLwprc": 100.95,
-     "prevddAccTrdvol": 0,
-     "prevddAccTrdval": 0,
-     "prevddOpnintQty": 1,
-     "setlPrcTheoPrcDivrgRt": 0,
-     "impVolt": 0.1,
-     "BzDd": 20180508,
-     "basPrc": 97.15,
-     "isuKorNm": "KOSPI 200 콜옵션 1806 220.0",
-     "isuKorAbbrv": "K200 옵션 1806 C220.0",
-     "isuCd": "KR4201N62201",
-     "listDd": 20160610,
-     "remainDys": 38,
-     "cdInt": 1.65,
-     "lsttrdDd": 20180614,
-     "expDd": 201806,
-     "exerPrc": 220,
-     "ulyId": "KOSPI200",
-     "prcLmtStep1Uplmtprc": 122.45,
-     "prcLmtStep2Uplmtprc": 144.6,
-     "prcLmtStep3Uplmtprc": 160.45,
-     "prcLmtStep1Lwlmtprc": 71.8,
-     "prcLmtStep2Lwlmtprc": 49.65,
-     "prcLmtStep3Lwlmtprc": 33.8,
-     "setlmult": 250000,
-     "setlTheoPrc": 0,
-     "basTheoPrc": 97.13 
+     "isuSrtCd": "K1",
+     "trdPrc": 2469.21,
+     "cmpprevddTpCd": "2",
+     "accTrdvol": 494710,
+     "trdTm": 13063000,
+     "accTrdval": 6246486,
+     "cmpprevddPrc": 7.83 
   } 
 }
 ```
@@ -416,11 +384,11 @@ ddddd
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="strtTm" required=true %}
-시작시각 \(HHMMSS\)
+시작시각 \(HHMM\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="endTm" required=true %}
-종료시각 \(HHMMSS\)
+종료시각 \(HHMM\)
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -432,7 +400,41 @@ ddddd
 {% endapi-method-response-example-description %}
 
 ```yaml
-ddddd
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "K1",
+     "hisLists": [ 
+      {
+         "inddTm": "9300000",
+         "inddOpnprc": 2386.7,
+         "inddHgprc": 2388.88,
+         "inddLwprc": 2385.62,
+         "inddClsprc": 2387.58,
+         "inddTrdvol": 53052 
+      },
+       
+      {
+         "inddTm": "9200000",
+         "inddOpnprc": 2387.03,
+         "inddHgprc": 2388.37,
+         "inddLwprc": 2385.86,
+         "inddClsprc": 2386.65,
+         "inddTrdvol": 42379 
+      },
+       
+      {
+         "inddTm": "9100000",
+         "inddOpnprc": 2386.76,
+         "inddHgprc": 2388.33,
+         "inddLwprc": 2383.47,
+         "inddClsprc": 2387.37,
+         "inddTrdvol": 29504 
+      } 
+    ] 
+  } 
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

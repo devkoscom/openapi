@@ -45,5 +45,7 @@
 
 ## API 구독\(사용\) 절차 {#api-1}
 
-핀테크 기업이 오픈 플랫폼의 API를 이용하여 새로운 서비스를 제공하기 위해서는 Sandbox에서 업무적합성 검증을 완료하여야 합니다.​![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAC1weNfJUe4eNPg6tP%2F-LAC3aWr5eX7a-nzPceE%2Fimage.png?alt=media&token=7d8fd192-8962-47d7-bab9-580c37d4c2d2)
+핀테크 기업이 오픈 플랫폼의 API를 이용하여 새로운 서비스를 제공하기 위해서는 Sandbox에서 업무적합성 검증을 완료하여야 합니다.
+
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAC1weNfJUe4eNPg6tP%2F-LAC3aWr5eX7a-nzPceE%2Fimage.png?alt=media&token=7d8fd192-8962-47d7-bab9-580c37d4c2d2)
 

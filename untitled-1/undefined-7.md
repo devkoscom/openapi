@@ -8,14 +8,11 @@
 
 
 
-## 1. 시장별 현재가 시세표
+## 현재가 시세표 API
 
-> ### 현재가, 시고저종
-
-#### **시장기준으로 1회 조회 요청 시 전종목의 현재가\(1초주기\), 시고저종을  리스트 형식으로 제공**
+시장기준으로 1회 조회 요청 시 전종목의 현재가\(1초주기\)를 리스트 형식으로 제공
 
 * **현재가**: 현재가, 누적거래량, 누적거래대금
-* **시고저종**: 시가, 고가, 저가, 종가\(현재가\)
 * 제공시장 : 유가증권, 코스닥시장
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/multiquote/stocks/{marketcode}/pricelist" %}
@@ -24,7 +21,7 @@
 {% endapi-method-summary %}
 
 {% api-method-description %}
-주식시장별 **현재가 **리스트 \(현재가, 누적거래량, 누적거래대금\)
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -68,13 +65,22 @@
 {% endapi-method-spec %}
 {% endapi-method %}
 
+
+
+## 시고저종 시세표 API
+
+시장기준으로 1회 조회 요청 시 시고저종을  리스트 형식으로 제공
+
+* **시고저종**: 시가, 고가, 저가, 종가\(현재가\)
+* 제공시장 : 유가증권, 코스닥시장
+
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/multiquote/stocks/{marketcode}/ohlclists" %}
 {% api-method-summary %}
 /v2/market/multiquote/stocks/{marketcode}/ohlclists
 {% endapi-method-summary %}
 
 {% api-method-description %}
-주식시장별 **시고저종 **\(시가, 고가, 저가, 종가\)
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -121,11 +127,11 @@
 {% endapi-method-spec %}
 {% endapi-method %}
 
-## 2. 복수종목 시세표 
 
-> ###  현재가, 호가잔량
 
-#### 현재가  또는 호가잔량  실시간 조회를  최대 20개의 임의의  종목에 대해 일괄적으로 조회
+## 복수종목 현재가 시세표 API
+
+**현재가  **실시간 조회를  최대 20개의 임의의  종목에 대해 일괄적으로 조회
 
 * 제공시장 : 유가증권 , 코스닥 시장
 * 복수종목 리스트간 구분자는 쉼표\(,\) 임
@@ -205,6 +211,15 @@
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+
+
+## 복수종목  호가잔량 시세표 API
+
+**호가잔량  **실시간 조회를  최대 20개의 임의의  종목에 대해 일괄적으로 조회
+
+* 제공시장 : 유가증권 , 코스닥 시장
+* 복수종목 리스트간 구분자는 쉼표\(,\) 임
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/multiquote/stocks/{marketcode}/orderbook" %}
 {% api-method-summary %}

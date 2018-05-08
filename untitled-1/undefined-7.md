@@ -8,6 +8,20 @@
 
 
 
+#### URI 입력값  {#uri}
+
+* base URI : [https://sandbox-apigw.koscom.co.kr**/**_**v2/market/multiquote/stocks/**_](https://sandbox-apigw.koscom.co.kr/v2/market/stocks/)​
+* `marketcode` : 시장구분 \[**`kospi`**, **`kosdaq`**\]
+* `isuCd` :  종목코드 ex\) 005930,000660
+
+#### Syntax {#syntax}
+
+* HTTP methods
+  * GET
+* Authentication
+
+  * API Key
+
 ## 현재가 시세표 API
 
 시장기준으로 1회 조회 요청 시 전종목의 현재가\(1초주기\)를 리스트 형식으로 제공

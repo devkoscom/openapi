@@ -10,9 +10,11 @@ description: 시세 서비스 개요
 
 
 
+
+
 ## 제공 데이터
 
-###     A. 조회 서비스
+### A.  조회 서비스
 
 > #### 1. 종가정보 조회  
 >
@@ -41,7 +43,7 @@ description: 시세 서비스 개요
 
 
 
-###     B. 스트리밍 서비스
+### B.  스트리밍 서비스
 
 > #### 1. WebSocket 종목별 상세 구독
 >
@@ -75,14 +77,16 @@ description: 시세 서비스 개요
 
 ## 송수신 프로토콜
 
+
+
 ### A. 전문 프로토콜
 
-#### A-1. OPEN API 데이타 프로토콜
+####   A-1. OPEN API 데이타 프로토콜
 
 * GET 방식 조회서비스 : JSON-RPC 2.0
 * Web Socket 실시간 서비스 : JSON-RPC 2.0 
 
-#### A-2. JSON-RPC 2.0
+####   A-2. JSON-RPC 2.0
 
 *  JSON-RPC 2.0 주요 Object member
 
@@ -112,15 +116,15 @@ description: 시세 서비스 개요
 
 ### B. 조회업무 관련 송수신 전문
 
-1. 조회요청
+  1. 조회요청
 
       시장/종목별  요구형/Preset 데이타 조회 요청
 
-2. 조회응답
+  2. 조회응답
 
       조회 요청에 대한 정상응답 \( result : ~\)
 
-3. 에러
+  3. 에러
 
       조회 요청에 대한 에러응답  \( error : ~\)
 
@@ -131,31 +135,31 @@ description: 시세 서비스 개요
 
 ### C. 실시간업무 관련 송수신전문
 
-1. 초기화       
+  1. 초기화       
 
     업무개시를 위한 세션정보 전송 요청 \(method: init, ~ \)
 
-2. 구독요청  
+  2. 구독요청  
 
     시장/종목별 요구형/PRESET 실시간 데이타를  요청 \(method:subscribe, ~ \)
 
-3. 구독취소 
+  3. 구독취소 
 
     실시간 데이타 요청을 취소\(method:unsubscribe, ~ \)
 
-4. 구독응답  
+  4. 구독응답  
 
     구독요청/취소에 대한 정상응답\(result:~ \)
 
-5. 에러           
+  5. 에러           
 
     구독요청/구독취소에 대한 에러응답 \(error:~\)
 
-6. 실시간      
+  6. 실시간      
 
     실시간 데이타 발생시 전송되는 시세데이타 \(method:push, ~ \)
 
-7. 채널점검  
+  7. 채널점검  
 
      Heartbeat 점검 \(method:heartbeat, ~\)
 
@@ -168,7 +172,7 @@ description: 시세 서비스 개요
 
 ### D. 실시간 업무흐름
 
-#### D-1. WebSocket 종목별 상세 구독
+####   D-1. WebSocket 종목별 상세 구독
 
 1. 실시간 데이타 수신을 위해 WebSocket  Session연결
 2. 업무개시를 위한 세션정보 전송 요청 \(`method`: init,  `data `: API key, 회사명 \)
@@ -179,7 +183,7 @@ description: 시세 서비스 개요
 
 ![WebSocket &#xC885;&#xBAA9;&#xBCC4; &#xC0C1;&#xC138; &#xAD6C;&#xB3C5;](../.gitbook/assets/image%20%288%29.png)
 
-#### D-2. WebSocket  시장별 체결구독
+####   D-2. WebSocket  시장별 체결구독
 
 1. 실시간 데이타 수신을 위해 WebSocket  Session연결
 2. 업무개시를 위한 세션정보 전송 요청 \(`method`: init,  `data `:API key, 회사명 \)
@@ -197,13 +201,13 @@ description: 시세 서비스 개요
 
 ### E. 송수신 전문 예
 
-#### 1. 요청 \(Request\)
+####   1. 요청 \(Request\)
 
-1-1. GET 방식 조회
+   1-1. GET 방식 조회
 
 ![GET &#xC870;&#xD68C;](../.gitbook/assets/image%20%285%29.png)
 
-1-2. Web Socket 초기화
+   1-2. Web Socket 초기화
 
 {% code-tabs %}
 {% code-tabs-item title="init" %}
@@ -221,7 +225,7 @@ description: 시세 서비스 개요
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-1-3. WebSocket 실시간 구독요청/취소
+   1-3. WebSocket 실시간 구독요청/취소
 
 {% code-tabs %}
 {% code-tabs-item title="subscribe" %}
@@ -239,7 +243,7 @@ description: 시세 서비스 개요
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-1-4. WebSocket 채널점검 \(Heartbeat\)
+   1-4. WebSocket 채널점검 \(Heartbeat\)
 
 {% code-tabs %}
 {% code-tabs-item title="heartbeat" %}
@@ -255,7 +259,7 @@ description: 시세 서비스 개요
 
 
 
-#### 2. 응답 \(Response\)
+####   2. 응답 \(Response\)
 
 ```yaml
 {
@@ -281,7 +285,7 @@ description: 시세 서비스 개요
 
 
 
-#### 3. 통보 \(Notification\)
+####   3. 통보 \(Notification\)
 
 ```yaml
 {
@@ -299,7 +303,7 @@ description: 시세 서비스 개요
 
 ####  {#3-notification}
 
-#### 4. 에러 {#3-notification}
+####   4. 에러 {#3-notification}
 
 ```yaml
 {

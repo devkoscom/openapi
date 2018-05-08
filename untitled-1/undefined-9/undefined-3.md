@@ -7,7 +7,7 @@
 #### URI 입력값
 
 * base URI : [https://sandbox-apigw.koscom.co.kr**/**_**v2/market/options/**_](https://sandbox-apigw.koscom.co.kr/v2/market/stocks/)
-* `marketcode `:  ☞ 코드표1  '시장코드표' 참조
+* `marketcode `:  ☞ 코드표  '시장코드표' 참조
 * `issuecode `:  예\) KR4101C90009 → K101C9000
 
 #### Syntax

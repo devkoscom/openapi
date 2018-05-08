@@ -11,7 +11,7 @@ KOSPI/KOSDAQ등의 지수 예상지수 및 업종별 투자자별 거래량등�
 
 * base URI : [https://sandbox-apigw.koscom.co.kr**/**_**v2/market/index/**_](https://sandbox-apigw.koscom.co.kr/v2/market/stocks/)
 * `marketcode` : ☞ 코드표 '시장코드표' 참조
-* `issuecode` :  ☞ 코드표 '업종' 참조
+* `issuecode` :  ☞ 코드표 '업종코드표' 참조
 
 #### Syntax {#syntax}
 

@@ -453,7 +453,40 @@ ddddd
 {% endapi-method-response-example-description %}
 
 ```yaml
-ddddd
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "201N6220",
+     "hisLists": [ 
+      {
+         "BzDd": 20180330,
+         "trdPrc": 94.6,
+         "cmpprevddTpCd": "0",
+         "opnprc": 94.6,
+         "hgprc": 94.6,
+         "lwprc": 94.6,
+         "accTrdvol": 0,
+         "accTrdval": 0,
+         "opnintQty": 0,
+         "cmpprevddPrc": 0 
+      },
+       
+      {
+         "BzDd": 20180329,
+         "trdPrc": 92.3,
+         "cmpprevddTpCd": "0",
+         "opnprc": 92.3,
+         "hgprc": 92.3,
+         "lwprc": 92.3,
+         "accTrdvol": 0,
+         "accTrdval": 0,
+         "opnintQty": 0,
+         "cmpprevddPrc": 0 
+      } 
+    ] 
+  } 
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

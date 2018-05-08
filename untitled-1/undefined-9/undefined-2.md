@@ -207,5 +207,259 @@ ddddd
 
 
 
-## 
+## 상품/지수선물 종목 체결
+
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/price" %}
+{% api-method-summary %}
+ /v2/market/futures/{marketcode}/{issuecode}/price
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="marketcode" type="string" required=true %}
+시장코드
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="issuecode" required=true %}
+종목코드
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": [ " -" 
+    ],
+     "trdPrc": null,
+     "opnprc": null,
+     "hgprc": null,
+     "lwprc": null,
+     "accTrdvol": null,
+     "trdTm": null,
+     "trdvol": null,
+     "lstTrdTpCd": 0,
+     "accTrdval": null,
+     "fstmmAgndaContrtPrc": null,
+     "futrmmAgndaContrtPrc": null,
+     "negoBlkAccTrdvol": null,
+     "realtmUplmtprc": null,
+     "realtmLwlmtprc": null 
+  } 
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+
+
+## 상품/지수선물 종목 우선호가
+
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/orderbook" %}
+{% api-method-summary %}
+ /v2/market/futures/{marketcode}/{issuecode}/orderbook
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="marketcode" type="string" required=true %}
+시장코드
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="issuecode" required=true %}
+종목코드
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": [ " -" 
+    ],
+     "askStep1BstordPrc": null,
+     "askStep2BstordPrc": null,
+     "askStep3BstordPrc": null,
+     "askStep4BstordPrc": null,
+     "askStep5BstordPrc": null,
+     "askStep1BstordRqty": null,
+     "askStep2BstordRqty": null,
+     "askStep3BstordRqty": null,
+     "askStep4BstordRqty": null,
+     "askStep5BstordRqty": null,
+     "bidStep1BstordPrc": null,
+     "bidStep2BstordPrc": null,
+     "bidStep3BstordPrc": null,
+     "bidStep4BstordPrc": null,
+     "bidStep5BstordPrc": null,
+     "bidStep1BstordRqty": null,
+     "bidStep2BstordRqty": null,
+     "bidStep3BstordRqty": null,
+     "bidStep4BstordRqty": null,
+     "bidStep5BstordRqty": null,
+     "askTotOrdRqty": null,
+     "bidTotOrdRqty": null,
+     "askStep1BstordCnt": null,
+     "bidStep1BstordCnt": null,
+     "askStep2BstordCnt": null,
+     "bidStep2BstordCnt": null,
+     "askStep3BstordCnt": null,
+     "bidStep3BstordCnt": null,
+     "askStep4BstordCnt": null,
+     "bidStep4BstordCnt": null,
+     "askStep5BstordCnt": null,
+     "bidStep5BstordCnt": null,
+     "askValidOrdCnt": null,
+     "bidValidOrdCnt": null,
+     "ordAcptTm": null,
+     "deemTrdPrc": null 
+  } 
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+
+
+## 상품/지수선물 종목 일중
+
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/intraday" %}
+{% api-method-summary %}
+ /v2/market/futures/{marketcode}/{issuecode}/intraday
+{% endapi-method-summary %}
+
+{% api-method-description %}
+상품/지수선물 종목 10초/분별 데이터 제공
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
+시장코드
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="issuecode" required=true %}
+종목코드
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="inddCycleTpCd" required=true %}
+일중전송주기구분코드 구분코드 \(10:10초, 60:1분, 600:10분\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="inqStrtDd" required=true %}
+조회시작일자 \(YYYYMMDD\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="strtTm" required=true %}
+시작시각 \(HHMMSS\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="endTm" required=true %}
+종료시각 \(HHMMSS\)
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+ddddd
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+
+
+## 상품/지수선물 종목 히스토리
+
+{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/history" %}
+{% api-method-summary %}
+ /v2/market/futures/{marketcode}/{issuecode}/history
+{% endapi-method-summary %}
+
+{% api-method-description %}
+상품/지수선물 종목 10초/분별 데이터 제공
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
+시장코드
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="issuecode" required=true %}
+종목코드
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="trnsmCycleTpCd" required=true %}
+전송주기구분코드 \(D:일별, W:주별, M:월별\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="inqStrtDd" required=true %}
+조회시작일자 \(YYYYMMDD\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="inqEndDd" required=true %}
+조회종료일자 \(YYYYMMDD\_\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="reqCnt" required=true %}
+요청건수 \(최대 100건\)
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+ddddd
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+
 

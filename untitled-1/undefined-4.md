@@ -1,5 +1,5 @@
 ---
-description: 실시간 스트리밍 (Web Socket)
+description: 실시간 스트리밍 시세 (WebSocket 방식)
 ---
 
 # 스트리밍 시세
@@ -12,8 +12,8 @@ description: 실시간 스트리밍 (Web Socket)
 >
 > * **Web Socket **을 통해서 실시간 송수신 지원
 > * 시장데이타 발생 시 미리 정의된 체결, 호가 데이타구조의 데이타가 일괄적으로 전송
-> * tick, quote 는tick10, quote10 의 단축형으로 모든시장에 대해서 동일하게 전송 가능
-> * tick10, quote10 은 주식/선물/옵션시장별 체결, 호가 조회데이타와 동일
+> * tick, quote 는 tick10, quote10 의 단축형으로 모든 시장에 대해 동일하게 전송 가능
+> * tick10, quote10 은 주식/선물/옵션시장별 체결, 호가조회 데이타와 동일
 >   * 아래는 주식기준으로 기술하였으며, 시장별 일부 데이타 항목만 상이함
 > * 유가증권, 코스닥 전종목 시세 제공
 > * **종목 호가 및 체결**은 **1세션**, 동시 **최대 200건**으로 제한 
@@ -72,6 +72,79 @@ WebSocket 세션을 연결하면, 시장기준 전종목의 현재가가 변경�
 
 * **요약 **:  **session 연결 후 publish without subscribe**
 * 데이타 전송의 효율성을 위하여 최대 50건씩 Packing 하여 전송
+*  * `marketcode` : 시장구분 
+    * 코스피: ws\_kospi_, _코스닥_: _ws\_kosdaq
+  * `isuCd` :  종목코드 ex\) 005930,000660
+
+{% hint style="warning" %}
+ 장 시간 중에만 실시간 데이터 발생
+{% endhint %}
+
+{% api-method method="options" host="ws://sandbox-apigw.koscom.co.kr" path="/{ws\_marketcode}/" %}
+{% api-method-summary %}
+WebSocket 전종목 실시간 API
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="ws\_marketcode" type="string" required=true %}
+ kospi 또는 kosdaq \(ex. ws\_ksp \| ws\_kdq \)
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+[
+    {
+        "isuSrtCd" : "000210",
+        "trdPrc" : "81000",
+        "trdVol" : "5", 
+        "trdTm" : "14340400"
+    },
+    {    
+        "isuSrtCd" : "500032",
+        "trdPrc" : "12760",
+        "trdVol" : "400", 
+        "trdTm" : "14340400"
+    },
+    ...
+]
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+Send Msg
+
+```yaml
+ {
+	"jsonrpc" : "2.0",
+	"id" : 1,
+	"method"  : "init",
+	"params" :  {
+	    "key" : "XXXXXXXX" ,
+	    "membername" : "XXX Company"
+	 }
+}
+```
 
 
 

@@ -147,7 +147,7 @@ ddddd
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="issuecode" required=true %}
-종목코드
+업종코드 ex\) K1
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -163,45 +163,13 @@ ddddd
    "jsonrpc": "2.0",
    "result": 
   {
-     "isuSrtCd": "201N6220",
-     "midyyHgstprc": 100.5,
-     "midyyHgstprcDd": 20180419,
-     "midyyLwstprc": 100.5,
-     "midyyLwstprcDd": 20180419,
-     "inlistHgstprc": 100.5,
-     "inlistHgstprcDd": 20180419,
-     "inlistLwstprc": 100.5,
-     "inlistLwstprcDd": 20180419,
-     "prevddClsprc": 100.95,
-     "prevddOpnprc": 100.95,
-     "prevddHgprc": 100.95,
-     "prevddLwprc": 100.95,
-     "prevddAccTrdvol": 0,
-     "prevddAccTrdval": 0,
-     "prevddOpnintQty": 1,
-     "setlPrcTheoPrcDivrgRt": 0,
-     "impVolt": 0.1,
-     "BzDd": 20180508,
-     "basPrc": 97.15,
-     "isuKorNm": "KOSPI 200 콜옵션 1806 220.0",
-     "isuKorAbbrv": "K200 옵션 1806 C220.0",
-     "isuCd": "KR4201N62201",
-     "listDd": 20160610,
-     "remainDys": 38,
-     "cdInt": 1.65,
-     "lsttrdDd": 20180614,
-     "expDd": 201806,
-     "exerPrc": 220,
-     "ulyId": "KOSPI200",
-     "prcLmtStep1Uplmtprc": 122.45,
-     "prcLmtStep2Uplmtprc": 144.6,
-     "prcLmtStep3Uplmtprc": 160.45,
-     "prcLmtStep1Lwlmtprc": 71.8,
-     "prcLmtStep2Lwlmtprc": 49.65,
-     "prcLmtStep3Lwlmtprc": 33.8,
-     "setlmult": 250000,
-     "setlTheoPrc": 0,
-     "basTheoPrc": 97.13 
+     "isuSrtCd": "K1",
+     "deemTm": "9000000",
+     "deemTrdPrc": 2471.12,
+     "deemAccTrdvol": 15801,
+     "deemcmpprevddPrc": 9.74,
+     "deemcmpprevddTpCd": "69",
+     "deemAccTrdval": 298225 
   } 
 }
 ```
@@ -231,7 +199,7 @@ ddddd
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="issuecode" required=true %}
-종목코드
+업종코드 ex\) K1
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -247,20 +215,11 @@ ddddd
    "jsonrpc": "2.0",
    "result": 
   {
-     "isuSrtCd": "201N6220*006",
-     "trdPrc": 97.15,
-     "opnprc": 0,
-     "hgprc": 0,
-     "lwprc": 0,
-     "accTrdvol": 0,
-     "trdTm": 0,
-     "trdvol": 0,
-     "lstTrdTpCd": 0,
-     "accTrdval": 0,
-     "isuCd": "KR4201N62201",
-     "negoBlkAccTrdvol": 0,
-     "realtmUplmtprc": 122.45,
-     "realtmLwlmtprc": 71.8 
+     "isuSrtCd": "K1",
+     "isuCnt": 1442,
+     "accTrdvol": 501479,
+     "accTrdval": 6323816,
+     "listShrs": 53642471 
   } 
 }
 ```
@@ -290,7 +249,7 @@ ddddd
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="issuecode" required=true %}
-종목코드
+업종코드 ex\) K1
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -306,43 +265,25 @@ ddddd
    "jsonrpc": "2.0",
    "result": 
   {
-     "isuSrtCd": "201N6220",
-     "askStep1BstordPrc": 122.35,
-     "askStep2BstordPrc": 0,
-     "askStep3BstordPrc": 0,
-     "askStep4BstordPrc": 0,
-     "askStep5BstordPrc": 0,
-     "askStep1BstordRqty": 10,
-     "askStep2BstordRqty": 0,
-     "askStep3BstordRqty": 0,
-     "askStep4BstordRqty": 0,
-     "askStep5BstordRqty": 0,
-     "bidStep1BstordPrc": 71.9,
-     "bidStep2BstordPrc": 0,
-     "bidStep3BstordPrc": 0,
-     "bidStep4BstordPrc": 0,
-     "bidStep5BstordPrc": 0,
-     "bidStep1BstordRqty": 10,
-     "bidStep2BstordRqty": 0,
-     "bidStep3BstordRqty": 0,
-     "bidStep4BstordRqty": 0,
-     "bidStep5BstordRqty": 0,
-     "askTotOrdRqty": 10,
-     "bidTotOrdRqty": 10,
-     "askStep1BstordCnt": 1,
-     "bidStep1BstordCnt": 1,
-     "askStep2BstordCnt": 0,
-     "bidStep2BstordCnt": 0,
-     "askStep3BstordCnt": 0,
-     "bidStep3BstordCnt": 0,
-     "askStep4BstordCnt": 0,
-     "bidStep4BstordCnt": 0,
-     "askStep5BstordCnt": 0,
-     "bidStep5BstordCnt": 0,
-     "askValidOrdCnt": 1,
-     "bidValidOrdCnt": 1,
-     "ordAcptTm": 9012700,
-     "deemTrdPrc": 0 
+     "Tm": "0",
+     "isuSrtCd": "K1",
+     "invstLists": [ 
+      {
+         "invstCd": "0",
+         "askTrdvol": 5907489,
+         "askTrdval": 302311797,
+         "bidTrdvol": 6739796,
+         "bidTrdval": 381023826 
+      },
+      {
+         "invstCd": "0",
+         "askTrdvol": 2065869,
+         "askTrdval": 96146505,
+         "bidTrdvol": 2982361,
+         "bidTrdval": 122971912 
+      },
+      ... 이하생략 ...
+    ] 
   } 
 }
 ```
@@ -372,7 +313,7 @@ ddddd
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="issuecode" required=true %}
-종목코드
+업종코드 ex\) K1
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="inddCycleTpCd" required=true %}
@@ -414,7 +355,6 @@ ddddd
          "inddClsprc": 2387.58,
          "inddTrdvol": 53052 
       },
-       
       {
          "inddTm": "9200000",
          "inddOpnprc": 2387.03,
@@ -423,7 +363,6 @@ ddddd
          "inddClsprc": 2386.65,
          "inddTrdvol": 42379 
       },
-       
       {
          "inddTm": "9100000",
          "inddOpnprc": 2386.76,
@@ -462,7 +401,7 @@ ddddd
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="issuecode" required=true %}
-업종코드 \(ex. K1\)
+업종코드 ex\) K1
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="trnsmCycleTpCd" required=true %}

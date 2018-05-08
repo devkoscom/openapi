@@ -83,32 +83,33 @@ description: 시세 서비스 개요
 
 ####   A-1. OPEN API 데이타 프로토콜
 
-* GET 방식 조회서비스 : JSON-RPC 2.0
-* Web Socket 실시간 서비스 : JSON-RPC 2.0 
+* GET 방식 조회서비스               : JSON-RPC 2.0
+* Web Socket 실시간 서비스     : JSON-RPC 2.0 
 
 ####   A-2. JSON-RPC 2.0
 
 *  JSON-RPC 2.0 주요 Object member
 
-  > * "jsonrpc"     : 버전
-  > * "method"     : 업무구분
-  > * "params"     : 업무구분에 대한 데이타
-  > * "id"               : id, key
-  > * "result"        : 요청에 대한 응답
-  > * "error"          : 에러처리 \("code", "mesage" member를 가짐\)
+  > * "`jsonrpc`"     : 버전
+  > * "`method`"     : 업무구분
+  > * "`params`"     : 업무구분에 대한 데이타
+  > * "`id`"               :  id, key
+  > * "`result`"        : 요청에 대한 응답
+  > * "`error`"          : 에러처리 \("code", "mesage" member를 가짐\)
 
 * 송수신 전문 
 
-  > * 요청 \(Request\)        :  실시간 구독  요청/취소 및 조회요청\(method:~, params : ~  \) 
+  > * 요청 \(Request\)        :  실시간 구독  요청/취소 및 조회요청 \(method:~, params : ~  \) 
   >   * method 값 구분 
   >
-  >     "init":Websocket 초기화,  "subscribe" : 구독,  "unsubscribe" :구독해제,  "query" :  조회요청
+  >     "`init`" : Websocket 초기화,  "`subscribe`" : 구독,  "`unsubscribe`" :구독해제,  "`query`" :  조회요청
   > * 응답 \(Response\)     :  실시간 구독  요청/취소 및 조회요청 \(result :  ~ \)
   > * 통보 \(Notification\)  :  실시간 시세 데이타 \(method : push, params :  ~ \) , id 를 보내지 않는다.
   > * 에러 \(Error\)              :  요청에 대한 에러 \(error:  ~  \)
 
-* www.jsonrpc.org/specification 참조
-* 실시간 시세 전송은 Notification 으로 처리함 \( "method":"push" 이고,  "id" member는 없음\) 
+* [www.jsonrpc.org/specification](http://www.jsonrpc.org/specification) 참조
+* 실시간 시세 전송은 Notification 으로 처리
+  *  "method":"push" 이고,  "id" member는 없음
 * URI 기반 조회 요청 시 RPC 2.0 데이타 구조의 예외 허용
   * 조회요청 데이타 "method", "id" member 누락 허용
 
@@ -145,11 +146,11 @@ description: 시세 서비스 개요
 
   3. 구독취소 
 
-    실시간 데이타 요청을 취소\(method:unsubscribe, ~ \)
+    실시간 데이타 요청을 취소 \(method:unsubscribe, ~ \)
 
   4. 구독응답  
 
-    구독요청/취소에 대한 정상응답\(result:~ \)
+    구독요청/취소에 대한 정상응답 \(result:~ \)
 
   5. 에러           
 
@@ -189,7 +190,7 @@ description: 시세 서비스 개요
 2. 업무개시를 위한 세션정보 전송 요청 \(`method`: init,  `data `:API key, 회사명 \)
 3. 업무개시 이후 발생되는 체결데이타부터 별도 절차 없이 시장기준으로 전송됨
 
-   \(여러종목을 배열형태로 전송\)
+   \(여러 종목을 배열형태로 전송\)
 
 4. WebSocket Session 종료
 
@@ -207,7 +208,7 @@ description: 시세 서비스 개요
 
 ![GET &#xC870;&#xD68C;](../.gitbook/assets/image%20%285%29.png)
 
-   1-2. Web Socket 초기화
+   1-2. WebSocket 초기화
 
 {% code-tabs %}
 {% code-tabs-item title="init" %}

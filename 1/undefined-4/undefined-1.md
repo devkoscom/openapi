@@ -39,10 +39,11 @@
 
 ## API 게시\(제공\) 절차 {#api}
 
-오픈 플랫폼에 API를 게시하기 위해서는 Sandbox에서 API 게시 및 테스트를 완료하여야 합니다.​![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAC1weNfJUe4eNPg6tP%2F-LAC3GwvaJ4Umb1EgGgl%2Fimage.png?alt=media&token=c943d88a-145b-4eb5-a11e-329ab3e52858)
+오픈 플랫폼에 API를 게시하기 위해서는 Sandbox에서 API 게시 및 테스트를 완료하여야 합니다.
+
+​![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAC1weNfJUe4eNPg6tP%2F-LAC3GwvaJ4Umb1EgGgl%2Fimage.png?alt=media&token=c943d88a-145b-4eb5-a11e-329ab3e52858)
 
 ## API 구독\(사용\) 절차 {#api-1}
 
-핀테크 기업이 오픈 플랫폼의 API를 이용하여 새로운 서비스를 제공하기 위해서는 Sandbox에서 업무적합성 검증을 완료하여야 합니다.​![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAC1weNfJUe4eNPg6tP%2F-LAC3aWr5eX7a-nzPceE%2Fimage.png?alt=media&token=7d8fd192-8962-47d7-bab9-580c37d4c2d2)Replace  
-
+핀테크 기업이 오픈 플랫폼의 API를 이용하여 새로운 서비스를 제공하기 위해서는 Sandbox에서 업무적합성 검증을 완료하여야 합니다.​![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAC1weNfJUe4eNPg6tP%2F-LAC3aWr5eX7a-nzPceE%2Fimage.png?alt=media&token=7d8fd192-8962-47d7-bab9-580c37d4c2d2)
 

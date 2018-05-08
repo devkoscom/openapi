@@ -71,10 +71,13 @@ WebSocket 세션연결후 개별 종목기준으로 실시간 데이타 수신�
 WebSocket 세션을 연결하면, 시장기준 전종목의 현재가가 변경시 주기적\(0.5 초 이내\)으로 종목코드, 시간, 체결가, 누적거래량을 전송
 
 * **요약 **:  **session 연결 후 publish without subscribe**
-* 데이타 전송의 효율성을 위하여 최대 50건씩 Packing 하여 전송
-*  * `marketcode` : 시장구분 
-    * 코스피: ws\_kospi_, _코스닥_: _ws\_kosdaq
-  * `isuCd` :  종목코드 ex\) 005930,000660
+* 특징
+  * `ws_marketcode `: 시장구분 
+    * KOSPI:  ws\_ksp_,   _KOSDAQ :  ws\_kdq
+  * 데이타 항목
+    * 종목코드, 체결가, 체결수량, 시간
+  * 데이타 전송의 효율성을 위하여 최대 50건씩 Packing 하여 전송
+  * 별도의 데이터 복구 및 재전송 작업 없음
 
 {% hint style="warning" %}
  장 시간 중에만 실시간 데이터 발생
@@ -82,7 +85,7 @@ WebSocket 세션을 연결하면, 시장기준 전종목의 현재가가 변경�
 
 {% api-method method="options" host="ws://sandbox-apigw.koscom.co.kr" path="/{ws\_marketcode}/" %}
 {% api-method-summary %}
-WebSocket 전종목 실시간 API
+WS 전종목 실시간시세 API
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -96,12 +99,6 @@ WebSocket 전종목 실시간 API
  kospi 또는 kosdaq \(ex. ws\_ksp \| ws\_kdq \)
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -124,7 +121,7 @@ WebSocket 전종목 실시간 API
         "trdVol" : "400", 
         "trdTm" : "14340400"
     },
-    ...
+    ...이하 생략...
 ]
 ```
 {% endapi-method-response-example %}

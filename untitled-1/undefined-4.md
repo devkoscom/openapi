@@ -72,8 +72,8 @@ WebSocket 세션을 연결하면, 시장기준 전종목의 현재가가 변경�
 
 * **요약 **:  **session 연결 후 publish without subscribe**
 * 특징
-  * `ws_marketcode `: 시장구분 
-    * KOSPI:  ws\_ksp_,   _KOSDAQ :  ws\_kdq
+  * `ws_marketcode` : 시장구분 
+    * KOSPI :  ws\_ksp_,   _KOSDAQ :  ws\_kdq
   * 데이타 항목
     * 종목코드, 체결가, 체결수량, 시간
   * 데이타 전송의 효율성을 위하여 최대 50건씩 Packing 하여 전송
@@ -129,7 +129,7 @@ WS 전종목 실시간시세 API
 {% endapi-method-spec %}
 {% endapi-method %}
 
-Send Msg
+#### Send Msg \(init 전문송신\)
 
 ```yaml
  {

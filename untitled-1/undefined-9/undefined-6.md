@@ -7,7 +7,7 @@
 #### URI 입력값
 
 * base URI : [https://sandbox-apigw.koscom.co.kr**/**_**v2/market/stocks/**_](https://sandbox-apigw.koscom.co.kr/v2/market/stocks/)
-* `marketcode `: 입력가능 marketcode 리스트  \[**`kospi`**, **`kosdaq`**\]
+* `marketcode `: 시장구분 \[**`kospi`**, **`kosdaq`**\]
 * `issuecode `: 주식종목의 단축코드
 
 #### Syntax

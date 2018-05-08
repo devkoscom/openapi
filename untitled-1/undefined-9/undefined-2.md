@@ -415,7 +415,7 @@ ddddd
 {% endapi-method-summary %}
 
 {% api-method-description %}
-상품/지수선물 종목 10초/분별 데이터 제공
+
 {% endapi-method-description %}
 
 {% api-method-spec %}

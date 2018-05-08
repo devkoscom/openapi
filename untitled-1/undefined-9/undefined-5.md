@@ -21,7 +21,7 @@ KOSPI/KOSDAQ등의 지수 예상지수 및 업종별 투자자별 거래량등�
   * API Key
 
 {% hint style="info" %}
-업종지수  스트리밍 조회는 아래를 참고하세요.
+업종지수  스트리밍 조회는 xx를 참고하세요.
 {% endhint %}
 
 
@@ -460,7 +460,7 @@ ddddd
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="issuecode" required=true %}
-종목코드
+업종코드 \(ex. K1\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="trnsmCycleTpCd" required=true %}
@@ -472,7 +472,7 @@ ddddd
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="inqEndDd" required=true %}
-조회종료일자 \(YYYYMMDD\_\)
+조회종료일자 \(YYYYMMDD\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="number" name="reqCnt" required=true %}
@@ -492,32 +492,30 @@ ddddd
    "jsonrpc": "2.0",
    "result": 
   {
-     "isuSrtCd": "201N6220",
+     "isuSrtCd": "K1",
      "hisLists": [ 
       {
-         "BzDd": 20180330,
-         "trdPrc": 94.6,
-         "cmpprevddTpCd": "0",
-         "opnprc": 94.6,
-         "hgprc": 94.6,
-         "lwprc": 94.6,
-         "accTrdvol": 0,
-         "accTrdval": 0,
-         "opnintQty": 0,
-         "cmpprevddPrc": 0 
+         "BzDd": 20170331,
+         "trdPrc": 2160.23,
+         "cmpprevddTpCd": "5",
+         "opnprc": 2166.62,
+         "hgprc": 2166.93,
+         "lwprc": 2159.8,
+         "accTrdvol": 441640,
+         "accTrdval": 4479971,
+         "cmpprevddPrc": -4.41 
       },
        
       {
-         "BzDd": 20180329,
-         "trdPrc": 92.3,
-         "cmpprevddTpCd": "0",
-         "opnprc": 92.3,
-         "hgprc": 92.3,
-         "lwprc": 92.3,
-         "accTrdvol": 0,
-         "accTrdval": 0,
-         "opnintQty": 0,
-         "cmpprevddPrc": 0 
+         "BzDd": 20170330,
+         "trdPrc": 2164.64,
+         "cmpprevddTpCd": "5",
+         "opnprc": 2170.18,
+         "hgprc": 2174.16,
+         "lwprc": 2159.16,
+         "accTrdvol": 643563,
+         "accTrdval": 4574158,
+         "cmpprevddPrc": -2.34 
       } 
     ] 
   } 

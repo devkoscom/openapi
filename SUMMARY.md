@@ -27,10 +27,10 @@
       * [Scope](1/api-1/oauth/untitled-2.md)
   * [Error Msg](1/error.md)
   * [기타](1/undefined-3.md)
-* [D. 시세서비스](untitled-1/README.md)
+* D. 시세서비스
   * [목차](untitled-1/undefined.md)
   * 스트리밍 시세
-  * 주식 시세표
+  * [주식 시세표](untitled-1/undefined-7.md)
   * 조회
     * [주식 시세조회](untitled-1/undefined-9/undefined-6.md)
     * [선물 시세조회](untitled-1/undefined-9/undefined-2.md)

@@ -4,25 +4,29 @@
 
 
 
-#### URI 입력값
-
-* base URI : [https://sandbox-apigw.koscom.co.kr**/**_**v2/market/futures/**_](https://sandbox-apigw.koscom.co.kr/v2/market/stocks/)
-* `marketcode `:  ☞ 코드표  '시장코드표' 참조
-* `issuecode `:  예\) KR4101C90009 → K101C9000
-  * 종목코드\(issuecode\) 추가:  연결선물코드
-
-     - 선물최근월물의  종목히스토리 조회를 위해  사용가능
-
-     - 현재가 조회시 조회결과 종목코드는 현재     기준 시장에서 거래되는 종목의 단축종목코드로 결과를 보내줌
-
-     - 코드표 -&gt;  '시장코드표' 참조
-
 #### Syntax
 
 * HTTP methods
-  * GET
+  * **GET**
 * Authentication
-  * API Key
+  * **API Key**
+
+
+
+**Reference**
+
+> * `marketcode`  
+>   * 코드표 &gt; 시장코드표 참조
+> * `issuecode`
+>   * ex\) KR4101C90009 → **K101C9000**
+>   * 코드표 &gt; 시장코드표 참조**    **
+>   * 연결선물코드 추가 \(issuecode / 종목코드\)
+>
+>      - 선물최근월물의  종목히스토리 조회를 위해  사용가능
+>
+>      - 현재가 조회시 조회결과 종목코드는 현재기준시장에서 거래되는 종목의 단축종목코드로 결과를 보내줌
+
+
 
 
 

@@ -83,7 +83,19 @@ ddddd
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Response Parameters {#request-parameters}
 
+| **Name** | **Type** | **Description** |
+| --- | --- | --- | --- | --- |
+| fundcode | String\(20\) | 펀드표준코드 |
+| fundName | Number | 펀드이름 |
+| valAtTrade | ​ |  다음 page를 지시하는 키로 첫 요청은 null\(“null”\)로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청하며, ALL인 경우는 page없이 일괄전송이므로 본 필드는 의미 없음 |
+| varAtCur | ​ | 잔고구분 \[\* 테이블하단참고\] |
+
+> * varAtCur : 잔고구분
+>   * NRM\(일반/현금\), CRD\(신용\), LOAN\(대출\), SUM \(분류가 불가한 경우 구분 없이 합산한 경우며 대출잔고는 제외\)
+
+#### ​ {#undefined-1}
 
 
 

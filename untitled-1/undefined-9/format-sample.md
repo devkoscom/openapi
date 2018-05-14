@@ -74,11 +74,19 @@ ddddd
 {% endapi-method-spec %}
 {% endapi-method %}
 
-## 업종 지수
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/index" path="/{marketcode}/{issuecode}/index" %}
+
+
+
+## 2. POST 방식
+
+## 계좌잔고 조회 API
+
+조회대상이 되는 계좌의 실제 잔고 수량, 손익, 수익률 등을 상세히 조회하기 위한 API
+
+{% api-method method="post" host="https://sandbox-apigw.koscom.co.kr/v1/증권사단축명/account" path="/balance/search" %}
 {% api-method-summary %}
- /v2/market/index/{marketcode}/{issuecode}/index
+/account/balance/search
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -87,16 +95,6 @@ ddddd
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter type="string" name="marketcode" required=true %}
-시장코드
-{% endapi-method-parameter %}
-
-{% api-method-parameter type="string" name="issuecode" required=true %}
-업종코드 ex\) K1
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -104,27 +102,116 @@ ddddd
 
 {% endapi-method-response-example-description %}
 
-```yaml
-{
-   "jsonrpc": "2.0",
-   "result": 
-  {
-     "isuSrtCd": "K1",
-     "trdPrc": 2469.21,
-     "cmpprevddTpCd": "2",
-     "accTrdvol": 494710,
-     "trdTm": 13063000,
-     "accTrdval": 6246486,
-     "cmpprevddPrc": 7.83 
-  } 
-}
+```
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Syntax
+
+* URI
+
+  * /account/balance/search
+
+* HTTP methods
+
+  * POST
+
+* Format
+
+  * JSON &lt;application/json; charset=utf-8&gt;
+
+* Content-Type
+
+  * Application/json
+
+* Authentication
+  * OAuth 2- Authorization
+  * header – Authorization: Bearer 발급받은 access token
+
+#### Example
+
+{% code-tabs %}
+{% code-tabs-item title="Request Body Example" %}
+```yaml
+{ 
+  "partner":{ 
+    "comId":"F9999",
+    "srvId":"999"
+  },
+  "commonHeader":{ 
+    "reqIdPlatform":"",
+    "reqIdConsumer":"ID00002",
+    "ci":" S1V7HGXBV1EPGBJastZf4fQV+eOpOc1pfizByV6UIEEJHM/PF9QKu+PU2OThEog7QmVKSZNibNGg+/k0XB/9jQ=="
+  },
+  "devInfo":{ 
+    "ipAddr":"123451234500",
+    "macAddr":"7054D27EE247"
+  },
+"accInfo":{ 
+      "vtAccNo":"160678007213500001"
+   },
+  "balanceRequestBody":{ 
+    "queryType":{ 
+      "assetType":"ALL",
+      "count":0,
+      "page":"null"
+    }
+  }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+{% code-tabs %}
+{% code-tabs-item title="Response Body Example" %}
+```yaml
+{ 
+  "commonHeader":{ 
+    "reqIdPlatform":"fagbbs22321",
+    "reqIdConsumer":" ID00002",
+    "certDn":"",
+    "ci":" S1V7HGXBV1EPGBJastZf4fQV+eOpOc1pfizByV6UIEEJHM/PF9QKu+PU2OThEog7QmVKSZNibNGg+/k0XB/9jQ=="
+  },
+"accInfo":{ 
+"realAccNo":"",
+      "vtAccNo":"160678007213500001"
+  },
+  "balanceResponseBody":{ 
+    "queryType":{ 
+      "assetType":"ALL",
+      "count":"0",
+      "page":"null"
+    },
+    "queryResult":{ 
+      "totalCnt":157.0,
+      "count":157.0,
+      "page":"null"
+    }
+  },
+  "balanceList":{ 
+    "balance":{ 
+        "summary":{ 
+          "cashBalance":6976542.0,
+          "d1":6976542.0,
+          "d2":6976542.0,
+          "substitute":9.816358E7,
+          "receivable":0.0,]
+          
+          dddddddd
+          
+          "cashAvWithdraw":6976542.0
+      }
+}
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+ 
 
 
-## 2. POST 방식
 

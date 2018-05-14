@@ -2,7 +2,7 @@
 description: Error 처리
 ---
 
-# Error Msg
+# Error Code
 
 Error는 금융투자회사, 오픈플랫폼의 시스템 등 여러 위치에서 발생할 수 있으나 `HTTP Response Status Code`와 `Response Body`를 통해 오픈플랫폼 표준 `error code`와 `message`로 전달합니다.
 

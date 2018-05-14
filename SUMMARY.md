@@ -13,11 +13,11 @@
       * [API 테스트](1/undefined-4/undefined-2/untitled.md)
   * [제공 API 유형](1/api.md)
   * API 서비스
-    * A. 공통서비스
-      * [A.1 서비스연동](1/api-2/undefined/undefined.md)
-      * [A.2 증권사](1/api-2/undefined/undefined-2.md)
-    * [B. 계좌서비스](1/api-2/undefined-1.md)
-    * [C. 일임매매서비스](1/api-2/undefined-2.md)
+    * 공통서비스
+      * [서비스연동](1/api-2/undefined/undefined.md)
+      * [증권사](1/api-2/undefined/undefined-2.md)
+    * [계좌서비스](1/api-2/undefined-1.md)
+    * [일임매매서비스](1/api-2/undefined-2.md)
   * [인증](1/api-1/README.md)
     * [API Key Authentication](1/api-1/api-key-authentication.md)
     * [Basic Authentication](1/api-1/basic-authentication.md)

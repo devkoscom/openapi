@@ -37,7 +37,8 @@
     * [선물 시세조회](untitled-1/undefined-9/undefined-2.md)
     * [옵션 시세조회](untitled-1/undefined-9/undefined-3.md)
     * [업종지수 조회](untitled-1/undefined-9/undefined-5.md)
-    * [format sample](untitled-1/undefined-9/format-sample.md)
+    * [format sample \(GET\)](untitled-1/undefined-9/format-sample.md)
+    * [format sample \(POST\)](untitled-1/undefined-9/format-sample-post.md)
   * 요구형항목
   * [코드표](untitled-1/undefined-8.md)
 

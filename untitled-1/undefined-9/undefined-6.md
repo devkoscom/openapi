@@ -13,9 +13,9 @@
 #### Syntax
 
 * HTTP methods
-  * GET
+  * **GET**
 * Authentication
-  * API Key
+  * **API Key**
 
 
 
@@ -74,16 +74,7 @@
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Syntax {#syntax}
-
-* URI
-  *  /v2/market/stocks/**{marketcode}/lists    **
-* HTTP methods
-  * GET
-* Authentication
-  * API Key
-
-
+####  {#syntax}
 
 ## 주식종목 마스터 API {#api}
 
@@ -115,27 +106,6 @@
 
 {% endapi-method-response-example-description %}
 
-```
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-#### Syntax {#syntax}
-
-* URI
-  *  /v2/market/stocks/**{marketcode}/{issuecode}/master**
-* HTTP methods
-  * GET
-* Authentication
-  * API Key
-
-#### Example {#example}
-
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
 ```yaml
 {
    "jsonrpc": "2.0",
@@ -188,8 +158,10 @@
   } 
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 
 
@@ -223,8 +195,22 @@
 
 {% endapi-method-response-example-description %}
 
-```
-
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",
+     "trdPrc": 51900,
+     "cmpprevddTpCd": "5",
+     "opnprc": 53000,
+     "hgprc": 53900,
+     "lwprc": 51800,
+     "accTrdvol": 39421505,
+     "accTrdval": 2070538849200,
+     "cmpprevddPrc": -1100 
+  } 
+}
 ```
 {% endapi-method-response-example %}
 
@@ -243,52 +229,19 @@
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Syntax {#syntax}
+#### Response Parameters
 
-* URI
-  *  /v2/market/stocks/**{marketcode}/{issuecode}/closeprice**
-* HTTP methods
-  * GET
-* Authentication
-  * API Key
-
-#### Example {#example}
-
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
-```yaml
-{
-   "jsonrpc": "2.0",
-   "result": 
-  {
-     "isuSrtCd": "005930",
-     "trdPrc": 51900,
-     "cmpprevddTpCd": "5",
-     "opnprc": 53000,
-     "hgprc": 53900,
-     "lwprc": 51800,
-     "accTrdvol": 39421505,
-     "accTrdval": 2070538849200,
-     "cmpprevddPrc": -1100 
-  } 
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-#### 응답리스트
-
-| No. | 항목명 | 한글명 | 설명 |
+| **Name** | **Type** | **Description** |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | isuSrtCd | 종목단축코드 | 예\) KR7000660001 → 000660 |
-| 2 | cmpprevddTpCd | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
-| 3 | cmpprevddPrc | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
-| 4 | opnprc | 시가 | 단위:원 |
-| 5 | hgprc | 고가 | 단위:원 |
-| 6 | lwprc | 저가 | 단위:원 |
-| 7 | trdPrc | 체결가격 |  |
-| 8 | accTrdvol | 누적체결수량,누적거래량 | 단위:주 |
-| 9 | accTrdval | 누적거래대금 | 단위:원 |
+| isuSrtCd | dd | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| cmpprevddTpCd |  | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| cmpprevddPrc |  | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
+| opnprc |  | 시가 | 단위:원 |
+| hgprc |  | 고가 | 단위:원 |
+| lwprc |  | 저가 | 단위:원 |
+| trdPrc |  | 체결가격 |  |
+| accTrdvol |  | 누적체결수량,누적거래량 | 단위:주 |
+| accTrdval |  | 누적거래대금 | 단위:원 |
 
 
 
@@ -322,8 +275,22 @@
 
 {% endapi-method-response-example-description %}
 
-```
-
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",
+     "trdPrc": 51900,
+     "cmpprevddTpCd": "5",
+     "opnprc": 53000,
+     "hgprc": 53900,
+     "lwprc": 51800,
+     "accTrdvol": 39421505,
+     "accTrdval": 2070538849200,
+     "cmpprevddPrc": -1100 
+  } 
+}
 ```
 {% endapi-method-response-example %}
 
@@ -342,57 +309,24 @@
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Syntax {#syntax}
+#### Response Parameters
 
-* URI
-  *  /v2/market/stocks/**{marketcode}/{issuecode}/closeprice**
-* HTTP methods
-  * GET
-* Authentication
-  * API Key
-
-#### Example {#example}
-
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
-```yaml
-{
-   "jsonrpc": "2.0",
-   "result": 
-  {
-     "isuSrtCd": "005930",
-     "trdPrc": 51900,
-     "cmpprevddTpCd": "5",
-     "opnprc": 53000,
-     "hgprc": 53900,
-     "lwprc": 51800,
-     "accTrdvol": 39421505,
-     "accTrdval": 2070538849200,
-     "cmpprevddPrc": -1100 
-  } 
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-#### 응답리스트
-
-| No. | 항목명 | 한글명 | 설명 |
+| **Name** | **Description** |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | isuSrtCd | 종목단축코드 | 예\) KR7000660001 → 000660 |
-| 2 | cmpprevddTpCd | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
-| 3 | cmpprevddPrc | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
-| 4 | opnprc | 시가 | 단위:원 |
-| 5 | hgprc | 고가 | 단위:원 |
-| 6 | lwprc | 저가 | 단위:원 |
-| 7 | trdPrc | 체결가격 | 0 |
-| 8 | trdvol | 체결수량, 거래량 | 0 |
-| 9 | accTrdvol | 누적체결수량,누적거래량 | 단위:주 |
-| 10 | accTrdval | 누적거래대금 | 단위:원 |
-| 11 | lstAskbidTpCd | 최종매도매수구분코드 | 1:매도, 2:매수 \(최종으로 들어온 호가의 매도매수구분값\) |
-| 12 | trdTm | 체결시각,거래시각 |  |
-|  | askordPrc\_1 | 매도호가가격\_1 | 단위:원 \(체결+우선호가 발생시에만 전송\) |
-| 14 | bidordPrc\_1 | 매수호가가격\_1 |  단위:원 |
+| isuSrtCd | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| cmpprevddTpCd | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| cmpprevddPrc | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
+| opnprc | 시가 | 단위:원 |
+| hgprc | 고가 | 단위:원 |
+| lwprc | 저가 | 단위:원 |
+| trdPrc | 체결가격 | 0 |
+| trdvol | 체결수량, 거래량 | 0 |
+| accTrdvol | 누적체결수량,누적거래량 | 단위:주 |
+| accTrdval | 누적거래대금 | 단위:원 |
+| lstAskbidTpCd | 최종매도매수구분코드 | 1:매도, 2:매수 \(최종으로 들어온 호가의 매도매수구분값\) |
+| trdTm | 체결시각,거래시각 |  |
+| askordPrc\_1 | 매도호가가격\_1 | 단위:원 \(체결+우선호가 발생시에만 전송\) |
+| bidordPrc\_1 | 매수호가가격\_1 |  단위:원 |
 
 > *  `trdTm`
 >   * "HHMMSSmm 형태로 시간전송

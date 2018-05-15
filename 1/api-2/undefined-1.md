@@ -83,10 +83,6 @@
 
 
 
-
-
-
-
 ## 자산 포트폴리오 조회 API
 
 조회대상이 되는 계좌의 실제 잔고 수량, 투자금액 대신 금융투자 상품의 구성비만을 제공함으로써 개인금융정보의 노출부담을 최소화하면서도 투자자산을 기초로 자산통합관리, 자문, 정보제공 등을 받을 수 있도록 하기 위한 API
@@ -287,7 +283,7 @@ Bearer 발급받은 access token
 > * macAddr : Mac주소
 >   * PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정
 > * assetType : 요청하는 자산유형
->   * 값은: CASH\(현금\), EQTY\(주식\), FUND\(펀드\), ETC\(기타자산\), ALL\(전체\)인 경우는 page 처리없이 대용량 데이터 전송이 가능한 증권사만 가능
+>   * 값: CASH\(현금\), EQTY\(주식\), FUND\(펀드\), ETC\(기타자산\), ALL\(전체\)인 경우는 page 처리없이 대용량 데이터 전송이 가능한 증권사만 가능
 > * rspType : 응답 유형
 >   * 값은 RAT\(잔고구성비율\)은 기본으로 제공하며, 증권사에 따라 QTY\(실제잔고수량\)도 가능하나 본 API의 목적상 사용을 권장하지 않음
 > * count : 응답별 최대 응답 건수
@@ -323,7 +319,7 @@ Bearer 발급받은 access token
 | amt | number | 전체 자산 중 현금잔고 또는 비중  |  |
 | assetType | String\(8\) | 상품구분자 | \*테이블 하단 참조 |
 | isinCode | String\(20\) | . | 현재는 지원안함 \(1.0부터 지원예정\) |
-| qty | number | 수량 또는 비중\(equity 내 비중\) | 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영안함 |
+| qty | number | 수량 또는 비중 | \*테이블 하단 참조  |
 | earningRate | number | 수익률 | 소수점 2째자리까지 |
 | fundCode | string\(20\) | 펀드표준코드 |  |
 | fundName | string\(15\) | 펀드명 | \(최대 15자\) |
@@ -339,6 +335,8 @@ Bearer 발급받은 access token
 >     *  KSP\(코스피\), KDQ\(코스닥\), ETF\(ETF\), FUT\(선물\), OPT\(옵션\), ELW\(ELW\), ETC\(기타\)
 >   * portfolio / etclist / assetType
 >     * BOND\(채권\), CD, CP, DLS, ELS, STB\(사채\), RP\(미구분\), CRP\(약정식RP\), RRP\(수시RP\), WRT\(워런트\)
+> * qty : 수량 또는 비중 \(equity 내 비중\)
+>   * 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영안함
 
 
 
@@ -572,7 +570,7 @@ Application/json
 | cashAvWithdraw | Number | 출금가능액 |  |
 | assetType | String\(8\) | 상품구분자 | \*테이블 하단 참조 |
 | isinCode | String\(20\) | . | 현재는 지원안함 \(1.0부터 지원예정\) |
-| qty | number | 수량 또는 비중\(equity 내 비중\) | 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영안함 |
+| qty | number | 수량 또는 비중 | \*테이블 하단 참조 |
 | tradeType | string\(8\) | 잔고 구분 | \*테이블 하단 참조 |
 | varAtTrade | number | 매수금액 |  |
 | valAtCur | number | 평가금액 |  |
@@ -597,6 +595,8 @@ Application/json
 > * tradeType : 잔고구분
 >   * portfolio / equityList /tradeType && portfolio / etcList / tradeType
 >     * NRM\(일반/현금\), CRD\(신용\), LOAN\(대출\), SUM\(분류가 불가한 경우 구분 없이 합산한 경우며 대출잔고는 제외\)
+> * qty : 수량 또는 비중 \(equity 내 비중\)
+>   * 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영안함
 
 
 
@@ -626,6 +626,28 @@ Bearer 발급받은 access token
 Application/json
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="partner" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="commonHeader" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="devInfo" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="accInfo" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="transactionHistoryRequestBody" type="object" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -727,7 +749,6 @@ Application/json
     }
   }
 }
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -809,8 +830,6 @@ Application/json
 
 
 
-
-
 ## 관심종목 조회 API
 
 조회대상이 되는 계좌에 설정된 관심종목을 조회할 수 있는 API
@@ -835,6 +854,28 @@ Bearer 발급받은 access token
 Application/json
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="partner" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="commonHeader" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="devInfo" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="accInfo" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="interestSymbolListRequestBody" type="object" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -893,7 +934,7 @@ Application/json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Example
+#### Request Example
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -925,10 +966,64 @@ Application/json
     }
   }
 }
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
- 
+#### Request Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| comId | string\(5\) | 핀테크 기업 코드 |  |
+| srvId | string\(20\) | 핀테크 서비스 코드 |  |
+| reqIdPlatform | string | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
+| reqIdConsumer | string\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 | 선택 |
+| ci | string\(88\) | 연계정보  | 88bytes |
+| ipAddr | string\(32\) | 사용자 단말 IP주소  | \*테이블 하단 참조 |
+| macAddr | string\(50\) | 사용자 MAC주소  | \*테이블 하단 참조 |
+| vtAccNo | string\(30\) | 가상계좌번호 |  |
+| assetType | String\(8\) | 자산유형 | EQY\(유가증권/코스닥\) |
+| rspType | String\(8\) | 응답유형 | "" \(값없음\) |
+| count | number | 응답별 최대 응답 건수 | \*테이블 하단 참조 |
+| page | String\(8\) | 다음page를 지시하는 키 | \*테이블 하단 참조 |
+
+> * ipAddr : IP주소
+>   * dot없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 dash없이 10자리로 채워서 설정
+> * macAddr : Mac주소
+>   * PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정
+> * count : 응답별 최대 응답 건수
+>   * 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음
+>
+>     0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함
+> * page: 다음 page를 지시하는 키
+>   * 첫 요청은 “null”로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청
+
+{% hint style="danger" %}
+"`queryType`"은 **삼성증권**만** 지원**되며, 타 증권사는 사용하지 못함
+{% endhint %}
+
+
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
+| reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
+| certDn | String\(256\) | "" | 사용안함 |
+| ci | String\(88\) | 연계정보 |  |
+| realAccNo | String\(40\) | "" | 사용안함 |
+| vtAccNo | String\(30\) | 가상계좌번호 |  |
+| totalCnt | number | 총 메시지 건수 |  |
+| count | number | 메시지 내 응답 건수 |  |
+| page | string\(24\) | 다음 page 번호 |  “null”이면 더 이상 없음 |
+| groupName | String\(20\) | 관심종목 그룹 이름 |  |
+| modifyDate | String\(12\) | 최종 수정일 |  |
+| isinCode | String\(20\) | 종목코드 | String Array\(각 20\) |
+| respCode | string\(8\) | 응답코드 참고 |  |
+| respMsg | string\(50\) | 응답메세지 참고 |  |
+
+
+
+
 

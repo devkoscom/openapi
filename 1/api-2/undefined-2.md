@@ -55,6 +55,20 @@ Application/json
 Basic Authentication 인증 사용
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="partner" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="commonHeader" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="orderDetailListRequestBody" type="object" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -266,6 +280,20 @@ Application/json
 Basic Authentication 인증 사용
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="partner" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="commonHeader" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="balanceListRequestBody" type="object" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}

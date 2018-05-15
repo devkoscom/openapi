@@ -4,11 +4,6 @@
 
 
 
-#### URI 입력값
-
-* `marketcode `: 시장구분 \[**`kospi`**, **`kosdaq`**\]
-* `issuecode `: 주식종목 단축코드
-
 #### Syntax
 
 * HTTP methods
@@ -16,9 +11,16 @@
 * Authentication
   * **API Key**
 
+**Reference**
+
+> * `marketcode`  
+>   * 시장구분 \[**`kospi`**, **`kosdaq`**\]
+> * `issuecode`
+>   * 주식종목 단축코드
 
 
-##  주식종목 리스트 API {#api}
+
+## 주식종목 리스트 API {#api}
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/stocks" path="/{marketcode}/lists" %}
 {% api-method-summary %}
@@ -174,7 +176,7 @@
 #### Response Parameters
 
 | **Name** | **Type** | **Description** | ​ |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | trdDd | string\(8\) | 체결일자, 거래일자, 매매일자 | YYYYMMDD |
 | isuCd | string\(12\) | 종목코드 | ​ |
 | isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
@@ -205,6 +207,17 @@
 | arrantrdYn | string\(1\) | 정리매매여부 |  |
 | creditOrdPosblYn | string\(1\) | 신용주문가능여부 | Y, N |
 | regulssQtyUnit | number\(6\) | 정규장매매수량단위 |  |
+| invstcautnRemndIsuYn | string\(1\) | 투자주의환기종목여부 | Y, N |
+| srttrmOverheatIsuTpCd | string\(1\) | 단기과열종목구분코드 | 0: 해당없음, 1: 지정예고, 2: 지정, 3: 지정연장\(해제연기\) |
+| eps | number\(11\) | 주당순이익 |  |
+| per | number\(11\) | 주가수익률 |  |
+| bps | number\(11\) | 주당순자산가치 |  |
+| pbr | number\(11\) | 주당순자산비율 |  |
+| dps | number\(11\) | 주당배당금액 |  |
+| divYd | number\(11\) | 배당수익율 |  |
+| acntclsCd | string\(12\) | 결산월구분 | 월별 Map 구조 \(001001001001 =&gt; 3,6,9,12 월\) |
+| adjStkprcCalcYn | string\(1\) | 수정주가산출여부 | Y, N |
+| prevddNav | number\(22\) | 전일순자산가치 | ETF종목일 경우 소수점 2자리로 표현, 일반종목은 0 |
 
 > * secugrpId : 증권그룹 ID
 >   * ST:주권, MF:증권투자회사, RT:부동산투자회사, SC:선박투자회사,

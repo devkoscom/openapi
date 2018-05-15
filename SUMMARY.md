@@ -13,7 +13,7 @@
       * [API 테스트](1/undefined-4/undefined-2/untitled.md)
   * [제공 API 유형](1/api.md)
   * API 서비스
-    * 공통서비스
+    * [공통서비스](1/api-2/undefined/README.md)
       * [서비스연동](1/api-2/undefined/undefined.md)
       * [증권사](1/api-2/undefined/undefined-2.md)
     * [계좌서비스](1/api-2/undefined-1.md)

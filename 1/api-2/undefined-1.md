@@ -2,23 +2,24 @@
 
 계좌기반 조회 API는 증권사별로 호출 URI가 다르나 큰 틀은 동일하며 단지 증권사구분이 URI에 포함되어 있는 구조입니다. 
 
-API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 있습니다. 
-
-#### **URI구조**
-
-* 전체 URI - `https://APIgateway주소/버전정보/증권사단축명/조회서비스구분  `
-* Endpoint – `https://APIgateway주소/버전정보/증권사단축명/  `
-
-#### **오픈플랫폼 API gateway 주소**
-
-* Production – `https://apigw.koscom.co.kr  `
-* Sandbox – `https://sandbox-apigw.koscom.co.kr  `
+#### 
 
 {% hint style="success" %}
-계좌기반 조회 API에 대한 **자세한 설명**과 **사용방법**은 아래의 [링크](https://developers.koscom.co.kr/documentation/account)를 클릭하면 이용할 수 있습니다:
-
-[​개발자센터-계좌조회API​](https://developers.koscom.co.kr/documentation/account)
+계좌기반 조회 API는[ 개발자센터-계좌조회API​](https://developers.koscom.co.kr/documentation/account) 에서 이용할 수 있습니다
 {% endhint %}
+
+
+
+#### Syntax
+
+* HTTP methods
+  * **POST**
+* Authentication
+  * **OAuth2**
+* URI
+  * URI - `https://{APIGWAddr}/{버전정보}/증권사단축명/조회서비스구분    `
+  * Endpoint – `https://{APIGWAddr}/{버전정보}/증권사단축명/    `
+    * API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 있습니다. 
 
 
 
@@ -101,6 +102,16 @@ API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 �
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+Bearer 발급받은 access token
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+ Application/json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -108,213 +119,6 @@ API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 �
 
 {% endapi-method-response-example-description %}
 
-```
-{
-  "commonHeader":{
-    "reqIdPlatform":"fs27abe2231",
-    "reqIdConsumer":"ID000001",
-    "certDn":"",
-    "ci":" S1V7HGXBV1EPGBJastZf4fQV+eOpOc1pfizByV6UIEEJHM/PF9QKu+PU2OThEog7QmVKSZNibNGg+/k0XB/9jQ=="
-},
-"accInfo":{
-    "realAccNo":"",
-      "vtAccNo":"160678007213500001"
-    },
-  "portfolioResponseBody":{
-"queryType":{
-      "assetType":"ALL",
-      "rspType":"RAT",
-      "count":"0",
-      "page":"null"
-    },
-    "queryResult":{
-      "totalCnt":157.0,
-      "count":157.0,
-      "page":"null"
-    }
-},
-  "resp":{
-    "respCode":"200",
-    "respMsg":"OK"
-  },
-  "portfolioList":{
-    "portfolio":{
-        "cash":{
-          "amt":6976542.0
-      },
-        "equityList":[
-          {
-            "assetType":"KSP",
-            "isinCode":"HK0000050325",
-            "qty":0.0,
-            "earningRate":-12.9
-          },
-          {
-            "assetType":"KDQ",
-            "isinCode":"HK0000054723",
-            "qty":0.0,
-            "earningRate":-19.72
-          },
-          {
-            "assetType":"KSP",
-            "isinCode":"KR7000020008",
-            "qty":0.0,
-            "earningRate":10.95
-          },
-          {
-            "assetType":"KSP",
-            "isinCode":"KR7000270009",
-            "qty":1.0,
-            "earningRate":-3.97
-          },
-          {
-            "assetType":"KSP",
-            "isinCode":"KR7000400002",
-            "qty":0.0,
-            "earningRate":-2.68
-          }
-        ],
-        "fundList":[
-          {
-            "fundCode":"KRZ500395135",
-            "fundName":"삼성중소형FOCUS증권자1호[주식]",
-            "qty":46.0,
-            "earningRate":-9.58,
-            "maturity":"00000000"
-          },
-          {
-            "fundCode":"KRZ500395136",
-            "fundName":"삼성중소형FOCUS증권자1호[주식]",
-            "qty":5.0,
-            "earningRate":-12.52,
-            "maturity":"00000000"
-          },
-          {
-            "fundCode":"KRZ501130561",
-            "fundName":"미래에셋고배당포커스증권자1호(",
-            "qty":5.0,
-            "earningRate":-6.32,
-            "maturity":"00000000"
-          }
-        ],
-        "etcList":[
-          {
-            "assetType":"BOND",
-            "assetName":"국민주택1종11-07",
-            "qty":2.0,
-            "earningRate":22.73
-          },
-          {
-            "assetType":"BOND",
-            "assetName":"국고03000-2409(14-5)",
-            "qty":2.0,
-            "earningRate":7.68
-          },
-{
-            "assetType":"BOND",
-            "assetName":"광주지방채11",
-            "qty":2.0,
-            "earningRate":4.53
-          },
-          {
-            "assetType":"DLS",
-            "assetName":"우리투자증권(DLS)1120",
-            "qty":14.0,
-            "earningRate":2.61
-          },
-          {
-            "assetType":"ELS",
-            "assetName":"NH투자증권(ELB)759",
-            "qty":5.0,
-            "earningRate":2.5
-          },
-          {
-            "assetType":"CP",
-            "assetName":"루카스 20131227-89-6",
-            "qty":0.0,
-            "earningRate":0.86
-          },
-{
-            "assetType":"CP",
-            "assetName":"루카스 20131227-89-14",
-            "qty":0.0,
-            "earningRate":0.86
-          },
-          {
-            "assetType":"CP",
-            "assetName":"루카스 20131227-89-15",
-            "qty":0.0,
-            "earningRate":0.86
-          }
-        ]
-}
-}
-}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-#### Syntax
-
-* URI
-
-  *  /account/portfolio/search
-
-* HTTP methods
-
-  * POST
-
-* Format
-
-  * JSON &lt;application/json; charset=utf-8&gt;
-
-* Content-Type
-
-  * Application/json
-
-* Authentication
-  * OAuth 2- Authorization
-  * header – Authorization: Bearer 발급받은 access token
-
-#### Example
-
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
-```yaml
-{ 
-  "partner":{ 
-    "comId":"F9999",
-    "srvId":"999"
-  },
-  "commonHeader":{ 
-    "reqIdPlatform":"",
-    "reqIdConsumer":"ID000001",
-    "ci":"S1V7HGXBV1EPGBJastZf4fQV+eOpOc1pfizByV6UIEEJHM/PF9QKu+PU2OThEog7QmVKSZNibNGg+/k0XB/9jQ=="
-  },
-  "devInfo":{ 
-    "ipAddr":"123451234500",
-    "macAddr":"7054D27EE247"
-  },
-  "accInfo":{ 
-      "vtAccNo":"160678007213500001"
-  },
-  "portfolioRequestBody":{ 
-    "queryType":{ 
-      "assetType":"ALL",
-      "rspType":"RAT",
-      "count":0,
-      "page":"null"
-    }
-  }
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
 ```yaml
 {
   "commonHeader":{
@@ -357,24 +161,6 @@ API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 �
               "earningRate":-12.9
             },
             {
-              "assetType":"KDQ",
-              "isinCode":"HK0000054723",
-              "qty":0.0,
-              "earningRate":-19.72
-            },
-            {
-              "assetType":"KSP",
-              "isinCode":"KR7000020008",
-              "qty":0.0,
-              "earningRate":10.95
-            },
-            {
-              "assetType":"KSP",
-              "isinCode":"KR7000270009",
-              "qty":1.0,
-              "earningRate":-3.97
-            },
-            {
               "assetType":"KSP",
               "isinCode":"KR7000400002",
               "qty":0.0,
@@ -387,13 +173,6 @@ API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 �
               "fundName":"삼성중소형FOCUS증권자1호[주식]",
               "qty":46.0,
               "earningRate":-9.58,
-              "maturity":"00000000"
-            },
-            {
-              "fundCode":"KRZ500395136",
-              "fundName":"삼성중소형FOCUS증권자1호[주식]",
-              "qty":5.0,
-              "earningRate":-12.52,
               "maturity":"00000000"
             },
             {
@@ -412,42 +191,6 @@ API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 �
               "earningRate":22.73
             },
             {
-              "assetType":"BOND",
-              "assetName":"국고03000-2409(14-5)",
-              "qty":2.0,
-              "earningRate":7.68
-            },
-            {
-              "assetType":"BOND",
-              "assetName":"광주지방채11",
-              "qty":2.0,
-              "earningRate":4.53
-            },
-            {
-              "assetType":"DLS",
-              "assetName":"우리투자증권(DLS)1120",
-              "qty":14.0,
-              "earningRate":2.61
-            },
-            {
-              "assetType":"ELS",
-              "assetName":"NH투자증권(ELB)759",
-              "qty":5.0,
-              "earningRate":2.5
-            },
-            {
-              "assetType":"CP",
-              "assetName":"루카스 20131227-89-6",
-              "qty":0.0,
-              "earningRate":0.86
-            },
-            {
-              "assetType":"CP",
-              "assetName":"루카스 20131227-89-14",
-              "qty":0.0,
-              "earningRate":0.86
-            },
-            {
               "assetType":"CP",
               "assetName":"루카스 20131227-89-15",
               "qty":0.0,
@@ -458,14 +201,47 @@ API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 �
   }
 }
 ```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Request Example
+
+{% code-tabs %}
+{% code-tabs-item title="Request Body Example" %}
+```yaml
+{ 
+  "partner":{ 
+    "comId":"F9999",
+    "srvId":"999"
+  },
+  "commonHeader":{ 
+    "reqIdPlatform":"",
+    "reqIdConsumer":"ID000001",
+    "ci":"S1V7HGXBV1EPGBJastZf4fQV+eOpOc1pfizByV6UIEEJHM/PF9QKu+PU2OThEog7QmVKSZNibNGg+/k0XB/9jQ=="
+  },
+  "devInfo":{ 
+    "ipAddr":"123451234500",
+    "macAddr":"7054D27EE247"
+  },
+  "accInfo":{ 
+      "vtAccNo":"160678007213500001"
+  },
+  "portfolioRequestBody":{ 
+    "queryType":{ 
+      "assetType":"ALL",
+      "rspType":"RAT",
+      "count":0,
+      "page":"null"
+    }
+  }
+}
+```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
- 자세한 포맷은 [개발자센터](https://developers.koscom.co.kr/documentation/common/member) 또는 [공식매뉴얼](https://developers.koscom.co.kr/documentation/reference) 에서 확인하세요.
-
- [​개발자센터-계좌조회API​](https://developers.koscom.co.kr/documentation/account)
-
-
+table
 
 
 

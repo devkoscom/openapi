@@ -74,7 +74,16 @@
 {% endapi-method-spec %}
 {% endapi-method %}
 
-####  {#syntax}
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| trdDd | String\(8\) | 체결일자, 거래일자, 매매일자 | YYYYMMDD |
+| isuLists | Array\(4\) | 종목리스트 | 데이터 개수 |
+| isuCd | String\(12\) | 종목코드 |  |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| isuKorNm | String\(80\) | 종목한글명 |  |
+| isuKorAbbrv | String\(40\) | 종목한글약명 | 가나다 |
 
 ## 주식종목 마스터 API {#api}
 
@@ -233,15 +242,15 @@
 
 | **Name** | **Type** | **Description** |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| isuSrtCd | dd | 종목단축코드 | 예\) KR7000660001 → 000660 |
-| cmpprevddTpCd |  | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
-| cmpprevddPrc |  | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
-| opnprc |  | 시가 | 단위:원 |
-| hgprc |  | 고가 | 단위:원 |
-| lwprc |  | 저가 | 단위:원 |
-| trdPrc |  | 체결가격 |  |
-| accTrdvol |  | 누적체결수량,누적거래량 | 단위:주 |
-| accTrdval |  | 누적거래대금 | 단위:원 |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
+| opnprc | number\(11\) | 시가 | 단위:원 |
+| hgprc | number\(11\) | 고가 | 단위:원 |
+| lwprc | number\(11\) | 저가 | 단위:원 |
+| trdPrc | number\(11\) | 체결가격 |  |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위:주 |
+| accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
 
 
 
@@ -311,25 +320,25 @@
 
 #### Response Parameters
 
-| **Name** | **Description** |  |
+| **Name** | **Type** | **Description** |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| isuSrtCd | 종목단축코드 | 예\) KR7000660001 → 000660 |
-| cmpprevddTpCd | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
-| cmpprevddPrc | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
-| opnprc | 시가 | 단위:원 |
-| hgprc | 고가 | 단위:원 |
-| lwprc | 저가 | 단위:원 |
-| trdPrc | 체결가격 | 0 |
-| trdvol | 체결수량, 거래량 | 0 |
-| accTrdvol | 누적체결수량,누적거래량 | 단위:주 |
-| accTrdval | 누적거래대금 | 단위:원 |
-| lstAskbidTpCd | 최종매도매수구분코드 | 1:매도, 2:매수 \(최종으로 들어온 호가의 매도매수구분값\) |
-| trdTm | 체결시각,거래시각 |  |
-| askordPrc\_1 | 매도호가가격\_1 | 단위:원 \(체결+우선호가 발생시에만 전송\) |
-| bidordPrc\_1 | 매수호가가격\_1 |  단위:원 |
+| isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| cmpprevddTpCd | string\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
+| opnprc | number\(11\) | 시가 | 단위:원 |
+| hgprc | number\(11\) | 고가 | 단위:원 |
+| lwprc | number\(11\) | 저가 | 단위:원 |
+| trdPrc | number\(11\) | 체결가격 | 0 |
+| trdvol | number\(10\) | 체결수량, 거래량 | 0 |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위:주 |
+| accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
+| lstAskbidTpCd | string\(1\) | 최종매도매수구분코드 | 1:매도, 2:매수 \(최종으로 들어온 호가의 매도매수구분값\) |
+| trdTm | string\(8\) | 체결시각,거래시각 |  |
+| askordPrc\_1 | number\(11\) | 매도호가가격\_1 | 단위:원 \(체결+우선호가 발생시에만 전송\) |
+| bidordPrc\_1 | number\(11\) | 매수호가가격\_1 |  단위:원 |
 
 > *  `trdTm`
->   * "HHMMSSmm 형태로 시간전송
+>   * "HHMMSSmm" 형태로 시간전송
 >
 >      - 정규장 개시전 또는 정규장 체결 발생 이전 : 0
 >

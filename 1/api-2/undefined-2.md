@@ -176,7 +176,63 @@ Basic Authentication 인증 사용
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+#### Request Parameters
 
+| **Name** | **Type** | **Description** | ​ |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| comId | string\(5\) | 핀테크 기업 코드 | ​ |
+| srvId | string\(20\) | 핀테크 서비스 코드 | ​ |
+| reqIdPlatform | string | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
+| reqIdConsumer | string\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
+| qrAssetType | String\(8\) | 자산유형 | EQTY\(주식\), FUND\(펀드\), ETC\(기타\) |
+| qrSellBuyType | String\(8\) | 매도수구분 | 0\(전체\), 1\(매도\), 2\(매수\) |
+| qrAccNo | String\(20\) | 계좌번호 |  |
+| qrOrderDate | String\(12\) | 주문일자 | 선택 \(입력없는경우 당일YYYYMMDD\) |
+| qrIsinCode | String\(20\) | 종목코드 | 선택 \(입력 시 해당 종목만 요청\) |
+| qrOrderNo | String\(20\) | 주문번호 | 선택 \(입력 시 해당 주문만 조회\) |
+| count | number | 응답별 최대 응답 건수 |  |
+| page | **String\(100\)** | 다음page를 지시하는 키 |  |
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |  |
+| reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
+| certDn | String\(256\) | . | 사용안함 |
+| ci | String\(88\) | 연계정보 | 사용안함 |
+| totalCnt	 | Number | 총 메시지 건수 |  |
+| count	 | Number | 메시지 내 응답 건수 |  |
+| page	 | String\(100\) | 다음 page 번호 | null이면 더 이상 없음 |
+| accNo | String\(20\) | 계좌번호 |  |
+| accName | String\(20\) | 계좌명 |  |
+| modifyType | String\(8\) | 정정구분 | 0\(정상\), 1\(정정\) |
+| cancelType | String\(8\) | 취소구분 | 0\(정상\), 1\(취소\) |
+| orderNo | String\(20\) | 주문번호 |  |
+| orgOrderNo | String\(20\) | 원주문번호 |  |
+| sellBuyType | String\(8\) | 매도수구분 | 1\(매도\), 2\(매수\) |
+| orderType | String\(20\) | 주문유형 | Text표기 |
+| exchange | String\(8\) | KRX를 제외한 시장의 거래소명 | Text표기 |
+| crcyCode | String\(20\) | 외화의 경우 통화코드 표기 |  |
+| orderQty | Number | 주문수량 |  |
+| orderPrice | Number | 주문단가 |  |
+| execSumQty | Number | 체결합계수량 |  |
+| orderExecType | String\(20\) | 주문체결구분 | 접수전, 정정, 취소확인, 거부 등 |
+| cmsnType | String\(20\) | 수수료유형 | Text표기 |
+| settDays | Number | 결제일수 |  |
+| buyQtyUnit | Number | 매수량단위 |  |
+| sellQtyUnit | Number | 매도수량단위 |  |
+| orderTime | String\(12\) | 주문시각 |  |
+| orderRejectReason | String\(20\) | 주문거부사유 | Text표기 |
+| isinType | String\(20\) | 종목코드종류 | 표준코드,축약코드, 축약영문 등 |
+| isinCode | String\(20\) | 종목코드 |  |
+| isinName | String\(40\) | 종목명 |  |
+| execQty | Number | 체결 수량 |  |
+| execPrice | Number | 체결 단가 |  |
+| execNo | Number | 체결번호 |  |
+| execTime | String\(12\) | 체결시각 |  |
+| respCode | string\(8\) | 응답코드 참고 |  |
+| respMsg | string\(50\) | 응답메세지 참고 |  |
 
 
 

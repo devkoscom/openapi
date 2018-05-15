@@ -32,7 +32,7 @@ description: 서비스연동 API
 
 핀테크 서비스 이용자가 금융투자 핀테크 포탈에 가입했는지를 확인하기 위한 API
 
-{% api-method method="post" host="https://sandbox-apigw.koscom.co.kr/v1/common/member" path="/register/search" %}
+{% api-method method="post" host="" path="/register/search" %}
 {% api-method-summary %}
 /register/search
 {% endapi-method-summary %}

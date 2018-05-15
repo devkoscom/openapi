@@ -18,6 +18,16 @@ description: 서비스연동 API
 
 
 
+#### Syntax {#syntax}
+
+* HTTP methods
+  * **POST**
+* Authentication
+  * **API Key**
+* URI
+  * https://apigw.koscom.co.kr/v1/common/member/
+  * https://sandbox-apigw.koscom.co.kr/v1/common/member/ 
+
 
 
 ## 금융투자 핀테크 포탈 가입 여부 확인 API
@@ -40,6 +50,20 @@ Request Body
 Application/json
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="partner" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="commonHeader" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="body" type="object" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -48,7 +72,7 @@ Application/json
 
 {% endapi-method-response-example-description %}
 
-```
+```yaml
 {
   "result": "member"
 }
@@ -58,30 +82,7 @@ Application/json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Syntax
-
-* URI
-
-  * https://apigw.koscom.co.kr/v1/common/member/register/search
-  * https://sandbox-apigw.koscom.co.kr/v1/common/member/ register/search
-
-* HTTP methods
-
-  * POST
-
-* Format
-
-  * JSON &lt;application/json; charset=utf-8&gt;
-
-* Content-Type
-
-  * Application/json
-
-* Authentication
-  * API Key
-  * header – apikey: 발급받은 API key
-
-#### Example
+#### Request Example
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -104,19 +105,22 @@ Application/json
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
-```yaml
-{
-  "result": "member"
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+#### Request Parameters
 
-자세한 포맷은 [개발자센터 ](https://developers.koscom.co.kr/documentation/common/member)또는 [공식매뉴얼](https://developers.koscom.co.kr/documentation/reference) 에서 확인하세요.
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| comId | string\(5\) | 핀테크 기업 코드 |  |
+| srvId | string\(20\) | 핀테크 서비스 코드 |  |
+| reqIdPlatform | string | . | 사용안함 |
+| reqIdConsumer | string\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 | 선택 |
+| ci | string\(88\) | 연계정보 88byte |  |
+| korName | string\(10\) | 한글이름 |  |
 
+#### Response Parameters
 
+| **Name** | **Type** | **Description** |  |
+| --- | --- |
+| result | string\(12\) | 가입여부 member \| nonMember |  |
 
 
 
@@ -135,6 +139,26 @@ Application/json
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+ Application/json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="partner" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="commonHeader" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="body" type="object" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -142,7 +166,7 @@ Application/json
 
 {% endapi-method-response-example-description %}
 
-```
+```yaml
 {  
    "vtAccList":[  
       {  
@@ -163,30 +187,7 @@ Application/json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Syntax
-
-* URI
-
-  * https://apigw.koscom.co.kr/v1/common/member/consent/search
-  * https://sandbox-apigw.koscom.co.kr/v1/common/member/consent/search
-
-* HTTP methods
-
-  * POST
-
-* Format
-
-  * JSON &lt;application/json; charset=utf-8&gt;
-
-* Content-Type
-
-  * Application/json
-
-* Authentication
-  * API Key
-  * header – apikey: 발급받은 API key
-
- **Example**
+**Request Example**
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -209,26 +210,25 @@ Application/json
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
-```yaml
-{  
-   "vtAccList":[  
-      {  
-         "comId": " 00002",
-         "vtAccNo":"160657695589800099",
-         "vtAccAlias":"주식투자용"
-      },
-      {  
-         "comId":" 00002",
-         "vtAccNo":"160657695589800099",
-         "vtAccAlias":"펀드투자용"
-      }
-   ]
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+#### Request Parameters
 
- 자세한 포맷은 [개발자센터](https://developers.koscom.co.kr/documentation/common/member) 또는 [공식매뉴얼](https://developers.koscom.co.kr/documentation/reference) 에서 확인하세요.
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| comId | string\(5\) | 핀테크 기업 코드 |  |
+| srvId | string\(20\) | 핀테크 서비스 코드 |  |
+| reqIdPlatform | string | . | 사용안함 |
+| reqIdConsumer | string\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 | 선택 |
+| ci | string\(88\) | 연계정보 88byte |  |
+| korName | string\(10\) | 한글이름 |  |
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- | --- | --- |
+| vtAccList | Array | 가상계좌번호 묶음 \(배열로 반복\) |
+| comId | String\(5\) | 금융회사 코드 |
+| vtAccNo | String\(18\) | 가상계좌번호 |
+| vtAccAlias | String\(20\) | 가상계좌번호 별칭 |
+
+
 

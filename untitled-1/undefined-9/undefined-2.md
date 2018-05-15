@@ -81,6 +81,19 @@
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| trdDd | String\(8\) | 체결일자, 거래일자, 매매일자 | YYYYMMDD |
+| isuLists | Array\(4\) | 종목리스트 |  |
+| isuCd | String\(12\) | 종목코드 |  |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| isuKorNm | String\(80\) | 종목한글명 |  |
+| isuKorAbbrv | String\(40\) | 종목한글약명 | 가나다 |
+
+
+
 
 
 ## 상품/지수선물 종목 마스터
@@ -164,6 +177,58 @@
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** | ​ |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| trdDd | string\(8\) | 체결일자, 거래일자, 매매일자 | YYYYMMDD |
+| isuCd | string\(12\) | 종목코드 | ​ |
+| isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| isuKorNm | string\(80\) | 종목한글명 |  |
+| isuKorAbbrv | string\(40\) | 종목한글약명 | 가나다 |
+| listDd | string\(8\) | 상장일자 | YYYYMMDD |
+| prcLmtStep1Uplmtprc | number\(12\) | 가격제한1단계상한가 |  |
+| prcLmtStep1Lwlmtprc | number\(12\) | 가격제한1단계하한가 |  |
+| prcLmtStep2Uplmtprc | number\(12\) | 가격제한2단계상한가 |  |
+| prcLmtStep2Lwlmtprc | number\(12\) | 가격제한2단계하한가 |  |
+| prcLmtStep3Uplmtprc | number\(12\) | 가격제한3단계상한가 |  |
+| prcLmtStep3Lwlmtprc | number\(12\) | 가격제한3단계하한가 |  |
+| basPrc | number\(11\) | 기준가격,기준가액 |  |
+| ulyId | string\(3\) | 기초자산명 |  |
+| lsttrdDd | string\(8\) | 최종거래일자 |  |
+| expDd | string\(8\) | 만기년월 | 권리행사 가능한 만기년월 |
+| 업종 | number\(22\) | 거래승수 | 약정대금 및 결제시 사용하는 계산승수 |
+| remainDys | number\(8\) | 잔존일수 |  |
+| setlTheoPrc | number\(16\) | 정산이론가격 |  |
+| basTheoPrc | number\(16\) | 기준이론가격 |  |
+| prevddClsprc | number\(11\) | 전일종가 |  |
+| prevddOpnprc | number\(11\) | 전일시가 |  |
+| prevddHgprc | number\(11\) | 전일고가 |  |
+| prevddLwprc | number\(11\) | 전일저가 |  |
+| setlPrcTheoPrcDivrgRt | number\(13\) | 정산가격이론가격괴리율 |  |
+| prevddOpnintQty | number\(12\) | 전일미결제약정수량 |  |
+| inlistHgstprc | number\(11\) | 상장중최고가 |  |
+| inlistLwstprc | number\(11\) | 상장중최저가 |  |
+| midyyHgstprc | number\(11\) | 연중최고가 |  |
+| midyyLwstprc | number\(11\) | 연중최저가 |  |
+| inlistHgstprcDd | string\(8\) | 상장중최고가일자 |  |
+| inlistLwstprcDd | string\(8\) | 상장중최저가일자 |  |
+| midyyHgstprcDd | string\(8\) | 연중최고가일자 |  |
+| midyyLwstprcDd | string\(8\) | 연중최저가일자 |  |
+| prevddAccTrdvol | number\(15\) | 전일체결수량,전일거래량 |  |
+| prevddAccTrdval | number\(22\) | 전일거래대금 |  |
+| cdInt | number\(7\) | CD금리 | 예\) 999.999 |
+| opnintLmtQty | number\(15\) | 미결제한도수량 | \*테이블 하단 참 |
+
+> * opnintLmtQty
+>   * 적용일에 적용되는 상품의 계좌별  미결제 한도 계약수. 
+>   * 미결제 한도가 적용되지 않은 상품은 0
+>   * 주식선물에만 해당
+
+
+
+
 
 
 

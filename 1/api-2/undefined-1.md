@@ -201,8 +201,6 @@ Bearer 발급받은 access token
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-
-
 #### Request Parameters
 
 | **Name** | **Type** | **Description** |  |
@@ -242,8 +240,6 @@ Bearer 발급받은 access token
 
 주\) 보유비중 조회는 현재 일부 증권사의 경우 값이 부정확한 경우가 있고, 비중대신 수량을 제공하는 경우도 있으므로 주의 필요함. 보유비중은 수익기여도 \(해당 자산군에서 해당종목이 차지하는 수익기여도\)로 산출한 경우가 대부분이며, 증권사별 산출 기준은 추후 게시예정
 {% endhint %}
-
-
 
 #### Response Parameters
 
@@ -481,8 +477,6 @@ Application/json
 
 : NH투자증권, 대신증권, 키움증권, 신한증권
 {% endhint %}
-
-
 
 #### Response Parameters
 
@@ -727,8 +721,6 @@ Application/json
 > * page: 다음 page를 지시하는 키
 >   * 첫 요청은 “null”로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청
 
-
-
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
@@ -943,8 +935,6 @@ Application/json
 {% hint style="danger" %}
 "`queryType`"은 **삼성증권**만** 지원**되며, 타 증권사는 사용하지 못함
 {% endhint %}
-
-
 
 #### Response Parameters
 

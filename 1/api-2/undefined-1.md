@@ -17,8 +17,8 @@
 * Authentication
   * **OAuth2**
 * URI
-  * URI - `https://{APIGWAddr}/{버전정보}/증권사단축명/조회서비스구분    `
-  * Endpoint – `https://{APIGWAddr}/{버전정보}/증권사단축명/    `
+  * URI           -  `https://{APIGWAddr}/{버전}/증권사단축명/조회서비스구분    `
+  * Endpoint  - `https://{APIGWAddr}/{버전}/증권사단축명/    `
     * API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 있습니다. 
 
 
@@ -262,6 +262,16 @@ table
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+Bearer 발급받은 access token
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="Content-Type" required=true %}
+Application/json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -269,72 +279,6 @@ table
 
 {% endapi-method-response-example-description %}
 
-```
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-#### Syntax
-
-* URI
-
-  * /account/balance/search
-
-* HTTP methods
-
-  * POST
-
-* Format
-
-  * JSON &lt;application/json; charset=utf-8&gt;
-
-* Content-Type
-
-  * Application/json
-
-* Authentication
-  * OAuth 2- Authorization
-  * header – Authorization: Bearer 발급받은 access token
-
-#### Example
-
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
-```yaml
-{ 
-  "partner":{ 
-    "comId":"F9999",
-    "srvId":"999"
-  },
-  "commonHeader":{ 
-    "reqIdPlatform":"",
-    "reqIdConsumer":"ID00002",
-    "ci":" S1V7HGXBV1EPGBJastZf4fQV+eOpOc1pfizByV6UIEEJHM/PF9QKu+PU2OThEog7QmVKSZNibNGg+/k0XB/9jQ=="
-  },
-  "devInfo":{ 
-    "ipAddr":"123451234500",
-    "macAddr":"7054D27EE247"
-  },
-"accInfo":{ 
-      "vtAccNo":"160678007213500001"
-   },
-  "balanceRequestBody":{ 
-    "queryType":{ 
-      "assetType":"ALL",
-      "count":0,
-      "page":"null"
-    }
-  }
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
 ```yaml
 { 
   "commonHeader":{ 
@@ -387,180 +331,6 @@ table
             "earningRate":-12.9
           },
           { 
-            "assetType":"KDQ",
-            "isinCode":"HK0000054723",
-            "qty":1186.0,
-            "tradeType":"SUM",
-            "valAtTrade":2326871.0,
-            "valAtCur":1867950.0,
-            "proLoss":-458921.0,
-            "earningRate":-19.72
-          },
-          { 
-            "assetType":"KSP",
-            "isinCode":"KR7000020008",
-            "qty":19.0,
-            "tradeType":"SUM",
-            "valAtTrade":181519.0,
-            "valAtCur":201400.0,
-            "proLoss":19881.0,
-            "earningRate":10.95
-          },
-          { 
-            "assetType":"KDQ",
-            "isinCode":"USU652221081",
-            "qty":71.0,
-            "tradeType":"SUM",
-            "valAtTrade":514957.0,
-            "valAtCur":501970.0,
-            "proLoss":-12987.0,
-            "earningRate":-2.52
-          }
-        ],
-        "fundList":[ 
-          { 
-            "fundCode":"KRZ500395135",
-            "fundName":"삼성중소형FOCUS증권자1호[주식]",
-            "valAtTrade":0.0,
-            "valAtCur":7.2329965E7,
-            "proLoss":7.2329965E7,
-            "firstDateBuy":"20160112",
-            "lastDateBuy":"20160113",
-            "maturity":"00000000",
-            "earningRate":-9.58
-          },
-          { 
-            "fundCode":"KRZ500395136",
-            "fundName":"삼성중소형FOCUS증권자1호[주식]",
-            "valAtTrade":0.0,
-            "valAtCur":8747937.0,
-            "proLoss":8747937.0,
-            "firstDateBuy":"20150820",
-            "lastDateBuy":"20150910",
-            "maturity":"00000000",
-            "earningRate":-12.52
-          },          { 
-            "fundCode":"KRZ501831185",
-            "fundName":"메리츠코리아증권투자신탁1호[주",
-            "valAtTrade":0.0,
-            "valAtCur":8416030.0,
-            "proLoss":8416030.0,
-            "firstDateBuy":"20150818",
-            "lastDateBuy":"20150819",
-            "maturity":"00000000",
-            "earningRate":-15.83
-          }
-        ],
-        "etcList":[ 
-          { 
-            "assetType":"BOND",
-            "assetName":"국민주택1종11-07",
-            "qty":1.0E10,
-            "tradeType":"SUM",
-            "valAtTrade":9.438E9,
-            "valueAtCur":1.1584E10,
-            "earningRate":22.73
-          },
-          { 
-            "assetType":"BOND",
-            "assetName":"한국지역난방공사13-1",
-            "qty":1.0E10,
-            "tradeType":"SUM",
-            "valAtTrade":9.992E9,
-            "valueAtCur":1.0168E10,
-            "earningRate":1.76
-          },
-          { 
-            "assetType":"BOND",
-            "assetName":"주택금융공사MBS2016-10(1-4)",
-            "qty":1.0E10,
-            "tradeType":"SUM",
-            "valAtTrade":1.0E10,
-            "valueAtCur":1.0145E10,
-            "earningRate":1.45
-          },
-          { 
-            "assetType":"BOND",
-            "assetName":"주택금융공사MBS2016-7(1-5)",
-            "qty":2.0E10,
-            "tradeType":"SUM",
-            "valAtTrade":2.0E10,
-            "valueAtCur":2.0616E10,
-            "earningRate":3.08
-          },
-          { 
-            "assetType":"BOND",
-            "assetName":"강원도개발공사121",
-            "qty":1.0E10,
-            "tradeType":"SUM",
-            "valAtTrade":1.0E10,
-            "valueAtCur":1.0024E10,
-            "earningRate":0.24
-          },
-          { 
-            "assetType":"DLS",
-            "assetName":"우리투자증권(DLS)1120",
-            "qty":5.4E10,
-            "tradeType":"SUM",
-            "valAtTrade":5.4E10,
-            "valueAtCur":5.54094E10,
-            "earningRate":2.61
-          },
-          { 
-            "assetType":"ELS",
-            "assetName":"NH투자증권(ELB)759",
-            "qty":2.0E10,
-            "tradeType":"SUM",
-            "valAtTrade":2.0E10,
-            "valueAtCur":2.05E10,
-            "earningRate":2.5
-          },
-          { 
-            "assetType":"CP",
-            "assetName":"루카스 20131227-89-2",
-            "qty":1.0E9,
-            "tradeType":"SUM",
-            "valAtTrade":9.91452055E8,
-            "valueAtCur":1.0E9,
-            "earningRate":0.86
-          },
-          { 
-            "assetType":"CP",
-            "assetName":"루카스 20131227-89-6",
-            "qty":1.0E9,
-            "tradeType":"SUM",
-            "valAtTrade":9.91452055E8,
-            "valueAtCur":1.0E9,
-            "earningRate":0.86
-          },
-          { 
-            "assetType":"CP",
-            "assetName":"루카스 20131227-89-7",
-            "qty":1.0E9,
-            "tradeType":"SUM",
-            "valAtTrade":9.91452055E8,
-            "valueAtCur":1.0E9,
-            "earningRate":0.86
-          },
-          { 
-            "assetType":"CP",
-            "assetName":"루카스 20131227-89-12",
-            "qty":1.0E9,
-            "tradeType":"SUM",
-            "valAtTrade":9.91452055E8,
-            "valueAtCur":1.0E9,
-            "earningRate":0.86
-          },
-          { 
-            "assetType":"CP",
-            "assetName":"루카스 20131227-89-14",
-            "qty":1.0E9,
-            "tradeType":"SUM",
-            "valAtTrade":9.91452055E8,
-            "valueAtCur":1.0E9,
-            "earningRate":0.86
-          },
-          { 
             "assetType":"CP",
             "assetName":"루카스 20131227-89-15",
             "qty":1.0E9,
@@ -578,6 +348,44 @@ table
   }
 }
 
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+
+
+#### Example
+
+{% code-tabs %}
+{% code-tabs-item title="Request Body Example" %}
+```yaml
+{ 
+  "partner":{ 
+    "comId":"F9999",
+    "srvId":"999"
+  },
+  "commonHeader":{ 
+    "reqIdPlatform":"",
+    "reqIdConsumer":"ID00002",
+    "ci":" S1V7HGXBV1EPGBJastZf4fQV+eOpOc1pfizByV6UIEEJHM/PF9QKu+PU2OThEog7QmVKSZNibNGg+/k0XB/9jQ=="
+  },
+  "devInfo":{ 
+    "ipAddr":"123451234500",
+    "macAddr":"7054D27EE247"
+  },
+"accInfo":{ 
+      "vtAccNo":"160678007213500001"
+   },
+  "balanceRequestBody":{ 
+    "queryType":{ 
+      "assetType":"ALL",
+      "count":0,
+      "page":"null"
+    }
+  }
+}
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -607,6 +415,16 @@ table
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+Bearer 발급받은 access token
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+Application/json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -614,35 +432,63 @@ table
 
 {% endapi-method-response-example-description %}
 
-```
-
+```yaml
+{ 
+  "commonHeader":{ 
+    "reqIdPlatform":"2ddacehgg",
+    "reqIdConsumer":"ID00003",
+    "certDn":"",
+    "ci":" S1V7HGXBV1EPGBJastZf4fQV+eOpOc1pfizByV6UIEEJHM/PF9QKu+PU2OThEog7QmVKSZNibNGg+/k0XB/9jQ=="
+  },
+  "accInfo":{ 
+      "realAccNo":"",
+      "vtAccNo":"160731060768600001"
+  },
+  "transactionHistoryResponseBody":{ 
+    "queryParams":{ 
+      "fromDate":"20160101",
+      "toDate":"20160720",
+      "isinCode":"",
+      "side":"",
+      "count":30,
+      "page":""
+    },
+    "queryResult":{ 
+      "count":30,
+      "page":"201603100000000961",
+      "totalCnt":120
+    }
+  },
+  "transList":{ 
+    "transaction":[ 
+      { 
+        "transDate":"20160126",
+        "transType":"DEP",
+        "isinCode":"",
+        "changeAmt":14399400,
+        "changeQty":0,
+        "qty":0
+      },
+      { 
+        "transDate":"20160310",
+        "transType":"WID",
+        "isinCode":"",
+        "changeAmt":-10500,
+        "changeQty":0,
+        "qty":0
+      }
+    ]
+  },
+  "resp":{ 
+    "respCode":"200",
+    "respMsg":"OK"
+  }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-#### Syntax
-
-* URI
-
-  * /account/transaction/search
-
-* HTTP methods
-
-  * POST
-
-* Format
-
-  * JSON &lt;application/json; charset=utf-8&gt;
-
-* Content-Type
-
-  * Application/json
-
-* Authentication
-  * OAuth 2- Authorization
-  * header – Authorization: Bearer 발급받은 access token
 
 #### Example
 
@@ -683,107 +529,7 @@ table
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
-```yaml
-{ 
-  "commonHeader":{ 
-    "reqIdPlatform":"2ddacehgg",
-    "reqIdConsumer":"ID00003",
-    "certDn":"",
-    "ci":" S1V7HGXBV1EPGBJastZf4fQV+eOpOc1pfizByV6UIEEJHM/PF9QKu+PU2OThEog7QmVKSZNibNGg+/k0XB/9jQ=="
-  },
-  "accInfo":{ 
-      "realAccNo":"",
-      "vtAccNo":"160731060768600001"
-  },
-  "transactionHistoryResponseBody":{ 
-    "queryParams":{ 
-      "fromDate":"20160101",
-      "toDate":"20160720",
-      "isinCode":"",
-      "side":"",
-      "count":30,
-      "page":""
-    },
-    "queryResult":{ 
-      "count":30,
-      "page":"201603100000000961",
-      "totalCnt":120
-    }
-  },
-  "transList":{ 
-    "transaction":[ 
-      { 
-        "transDate":"20160126",
-        "transType":"DEP",
-        "isinCode":"",
-        "changeAmt":14399400,
-        "changeQty":0,
-        "qty":0
-      },
-      { 
-        "transDate":"20160126",
-        "transType":"ASK",
-        "isinCode":"NC30010",
-        "changeAmt":-14399400,
-        "changeQty":0,
-        "qty":0
-      },
-      { 
-        "transDate":"20160202",
-        "transType":"DEP",
-        "isinCode":"",
-        "changeAmt":100,
-        "changeQty":0,
-        "qty":0
-      },
-      { 
-        "transDate":"20160202",
-        "transType":"ETC",
-        "isinCode":"",
-        "changeAmt":-100,
-        "changeQty":0,
-        "qty":0
-      },
-      { 
-        "transDate":"20160310",
-        "transType":"BID",
-        "isinCode":"NC30010",
-        "changeAmt":180456840,
-        "changeQty":0,
-        "qty":0
-      },
-      { 
-        "transDate":"20160310",
-        "transType":"WID",
-        "isinCode":"",
-        "changeAmt":-10000,
-        "changeQty":0,
-        "qty":0
-      },
-      { 
-        "transDate":"20160310",
-        "transType":"WID",
-        "isinCode":"",
-        "changeAmt":-10500,
-        "changeQty":0,
-        "qty":0
-      }
-    ]
-  },
-  "resp":{ 
-    "respCode":"200",
-    "respMsg":"OK"
-  }
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
- 자세한 포맷은 [개발자센터](https://developers.koscom.co.kr/documentation/common/member) 또는 [공식매뉴얼](https://developers.koscom.co.kr/documentation/reference) 에서 확인하세요.
-
- [​개발자센터-계좌조회API​](https://developers.koscom.co.kr/documentation/account)
+ 
 
 
 
@@ -806,6 +552,16 @@ table
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+Bearer 발급받은 access token
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+Application/json
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -813,75 +569,6 @@ table
 
 {% endapi-method-response-example-description %}
 
-```
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-#### Syntax
-
-* URI
-
-  * /account/interest/search
-
-* HTTP methods
-
-  * POST
-
-* Format
-
-  * JSON &lt;application/json; charset=utf-8&gt;
-
-* Content-Type
-
-  * Application/json
-
-* Authentication
-  * OAuth 2- Authorization
-  * header – Authorization: Bearer 발급받은 access token
-
-#### Example
-
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
-```yaml
-{ 
-  "partner":{ 
-    "comId":"F9999",
-    "srvId":"999"
-  },
-  "commonHeader":{ 
-    "reqIdPlatform":"",
-    "reqIdConsumer":"ID0000020",
-    "ci":" S1V7HGXBV1EPGBJastZf4fQV+eOpOc1pfizByV6UIEEJHM/PF9QKu+PU2OThEog7QmVKSZNibNGg+/k0XB/9jQ=="
-  },
-  "devInfo":{ 
-    "ipAddr":"123456789012",
-    "macAddr":"7054D27EE247"
-  },
-  "accInfo":{ 
-      "vtAccNo":"160731060768600001"
-  },
-  "interestSymbolListRequestBody":{ 
-    "queryType":{ 
-      "assetType":"",
-      "rspType":null,
-      "count":0,
-      "page":"",
-      "totalCnt":0
-    }
-  }
-}
-
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
 ```yaml
 { 
   "commonHeader":{ 
@@ -927,10 +614,47 @@ table
   }
 }
 ```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Example
+
+{% code-tabs %}
+{% code-tabs-item title="Request Body Example" %}
+```yaml
+{ 
+  "partner":{ 
+    "comId":"F9999",
+    "srvId":"999"
+  },
+  "commonHeader":{ 
+    "reqIdPlatform":"",
+    "reqIdConsumer":"ID0000020",
+    "ci":" S1V7HGXBV1EPGBJastZf4fQV+eOpOc1pfizByV6UIEEJHM/PF9QKu+PU2OThEog7QmVKSZNibNGg+/k0XB/9jQ=="
+  },
+  "devInfo":{ 
+    "ipAddr":"123456789012",
+    "macAddr":"7054D27EE247"
+  },
+  "accInfo":{ 
+      "vtAccNo":"160731060768600001"
+  },
+  "interestSymbolListRequestBody":{ 
+    "queryType":{ 
+      "assetType":"",
+      "rspType":null,
+      "count":0,
+      "page":"",
+      "totalCnt":0
+    }
+  }
+}
+
+```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
- 자세한 포맷은 [개발자센터](https://developers.koscom.co.kr/documentation/common/member) 또는 [공식매뉴얼](https://developers.koscom.co.kr/documentation/reference) 에서 확인하세요.
-
- [​개발자센터-계좌조회API​](https://developers.koscom.co.kr/documentation/account)
+ 
 

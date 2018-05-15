@@ -539,6 +539,20 @@ Basic Authentication 인증 사용
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter type="string" name="Content-Type" required=true %}
+Application/json
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="comId" required=true %}
+오픈 플랫폼으로부터 발급받은 기관 코드번호
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="authorization" required=true %}
+Basic Authentication 인증 사용
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -546,71 +560,6 @@ Basic Authentication 인증 사용
 
 {% endapi-method-response-example-description %}
 
-```
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-#### Syntax {#syntax-1}
-
-* URI
-
-  * /b2baccount/accountlist/search
-
-  ​
-
-* HTTP methods
-
-  * POST
-
-  ​
-
-* Format
-
-  * JSON &lt;application/json; charset=utf-8&gt;
-
-  ​
-
-* Content-Type
-
-  * Application/json
-
-  ​
-
-* Authentication
-  * Basic Authentication
-  * header – comId: 오픈 플랫폼으로부터 발급받은 기관 코드번호
-  * header – authorization: Basic Authentication 인증 사용
-
-#### Example {#example-1}
-
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
-```yaml
-{
-    "partner": {
-        "comId": "00995",
-        "srvId": "100"
-    },
-    "commonHeader": {
-        "reqIdConsumer": "Fintech-2016062200001"
-    },
-    "accountListRequestBody": {
-        "queryParameter": {
-            "count": 0,
-            "page": null
-        }
-    }
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
 ```yaml
 {
    "commonHeader": 
@@ -652,14 +601,34 @@ Basic Authentication 인증 사용
   } 
 }
 ```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Request Example {#example-1}
+
+{% code-tabs %}
+{% code-tabs-item title="Request Body Example" %}
+```yaml
+{
+    "partner": {
+        "comId": "00995",
+        "srvId": "100"
+    },
+    "commonHeader": {
+        "reqIdConsumer": "Fintech-2016062200001"
+    },
+    "accountListRequestBody": {
+        "queryParameter": {
+            "count": 0,
+            "page": null
+        }
+    }
+}
+```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
-
- 자세한 포맷은 [개발자센터](https://developers.koscom.co.kr/documentation/common/member) 또는 [공식매뉴얼](https://developers.koscom.co.kr/documentation/reference) 에서 확인하세요.
-
-[ ​개발자센터-일임매매API](https://developers.koscom.co.kr/documentation/b2baccount)
-
-
 
 
 
@@ -680,6 +649,20 @@ Basic Authentication 인증 사용
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Content-Type" required=true type="string" %}
+Application/json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="comId" required=true type="string" %}
+오픈 플랫폼으로부터 발급받은 기관 코드번호
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="authorization" required=true type="string" %}
+Basic Authentication 인증 사용
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -687,74 +670,6 @@ Basic Authentication 인증 사용
 
 {% endapi-method-response-example-description %}
 
-```
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-#### Syntax
-
-* URI
-
-  * /b2baccount/tradebook/search
-
-  ​
-
-* HTTP methods
-
-  * POST
-
-  ​
-
-* Format
-
-  * JSON &lt;application/json; charset=utf-8&gt;
-
-  ​
-
-* Content-Type
-
-  * Application/json
-
-  ​
-
-* Authentication
-  * Basic Authentication
-  * header – comId: 오픈 플랫폼으로부터 발급받은 기관 코드번호
-  * header – authorization: Basic Authentication 인증 사용
-
-#### Example {#example}
-
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
-```yaml
-{
-    "partner": {
-        "comId": "00995",
-        "srvId": "100"
-    },
-    "commonHeader": {
-        "reqIdConsumer": "Fintech-2016062200001"
-    },
-    "tradeBookListRequestBody": {
-        "queryParameter": {
-            "qrAccNo": "0019923122221",
-            "qrFromDate": "20170622",
-            "qrToDate": "20170627",
-            "count": 0,
-            "page": "null"
-        }
-    }
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
 ```yaml
 {
    "commonHeader": 
@@ -796,7 +711,6 @@ Basic Authentication 인증 사용
              "isinCode": "KR0065300",
              "isinName": "삼성생명" 
           },
-           
           {
 
              "isinType": "단축코드",
@@ -809,12 +723,10 @@ Basic Authentication 인증 사용
              "costName": "거래세",
              "cost": 45000 
           },
-           
           {
              "costName": "주민세",
              "cost": 126000 
           },
-           
           {
              "costName": "일반수수료",
              "cost": 990 
@@ -837,10 +749,37 @@ Basic Authentication 인증 사용
   } 
 }
 ```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Request Example {#example}
+
+{% code-tabs %}
+{% code-tabs-item title="Request Body Example" %}
+```yaml
+{
+    "partner": {
+        "comId": "00995",
+        "srvId": "100"
+    },
+    "commonHeader": {
+        "reqIdConsumer": "Fintech-2016062200001"
+    },
+    "tradeBookListRequestBody": {
+        "queryParameter": {
+            "qrAccNo": "0019923122221",
+            "qrFromDate": "20170622",
+            "qrToDate": "20170627",
+            "count": 0,
+            "page": "null"
+        }
+    }
+}
+```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
- 자세한 포맷은 [개발자센터](https://developers.koscom.co.kr/documentation/common/member) 또는 [공식매뉴얼](https://developers.koscom.co.kr/documentation/reference) 에서 확인하세요.
-
-[ ​개발자센터-일임매매API](https://developers.koscom.co.kr/documentation/b2baccount)
+ 
 

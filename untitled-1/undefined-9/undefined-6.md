@@ -6,9 +6,8 @@
 
 #### URI 입력값
 
-* base URI : [https://sandbox-apigw.koscom.co.kr**/**_**v2/market/stocks/**_](https://sandbox-apigw.koscom.co.kr/v2/market/stocks/)
 * `marketcode `: 시장구분 \[**`kospi`**, **`kosdaq`**\]
-* `issuecode `: 주식종목의 단축코드
+* `issuecode `: 주식종목 단축코드
 
 #### Syntax
 
@@ -172,7 +171,58 @@
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Response Parameters
 
+| **Name** | **Type** | **Description** | ​ |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| trdDd | string\(8\) | 체결일자, 거래일자, 매매일자 | YYYYMMDD |
+| isuCd | string\(12\) | 종목코드 | ​ |
+| isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| isuKorAbbrv | string\(40\) | 종목한글약명 | 가나다 |
+| secugrpId | string\(2\) | 증권그룹ID | \*테이블하단참고 |
+| mktWarnTpCd | string\(2\) | 시장경보구분코드 | \*테이블하단참고 |
+| admisuYn | string\(1\) | 관리종목여부 | Y:관리 N:일반 |
+| haltYn | string\(1\) | 거래정지여부 | Y, N  |
+| idxIndMidclssCd | string\(3\) | 지수업종중분류코드 | 업종분류, 상세코드는 코드표\(업종\) 참고 |
+| mktcapScaleCd | string\(1\) | 시가총액규모코드 | \*테이블하단참고 |
+| mfindYn | string\(1\) | 제조업여부 | Y, N \(유가\)제조업여부 |
+| smeYn | string\(1\) | 중소기업여부 | Y, N \(코스닥\)중소기업여부 |
+| 업종 | string\(1\) | KRX100종목여부 | Y, N \(유가\)KOSPI100여부 \(코스닥\)프리미어여부 |
+| kospiYn | string\(1\) | KOSPI여부 | Y, N |
+| kospi100Yn | string\(1\) | KOSPI100여부 | Y, N \(유가\)KOSPI여부 |
+| kospi50Yn | string\(1\) | KOSPI50여부 | Y, N \(유가\)KOSPI50여부 |
+| basPrc | number\(11\) | 기준가격,기준가액 |  |
+| prevddClsprc | number\(11\) | 전일종가 |  |
+| prevddAccTrdvol | number\(12\) | 상장중최저가일자 |  |
+| prevddAccTrdval | number\(22\) | 전일누적거래대금 |  |
+| uplmtprc | number\(11\) | 상한가 |  |
+| lwlmtprc | number\(11\) | 하한가 |  |
+| sbPrc | number\(11\) | 대용가격 | ST,FS,DR,MF,RT,SC,IF,ET,FE,BC,EN 만 해당  |
+| parval | number\(11\) | 액면가 | \*테이블하단참고 |
+| isuPrc | number\(11\) | 발행가격 | ELW, 신주인수권증서 포함 |
+| listDd | string\(8\) | 상장일자 | YYYYMMDD |
+| listShrs | number\(16\) | 상장주식수,상장증권수 |  |
+| arrantrdYn | string\(1\) | 정리매매여부 |  |
+| creditOrdPosblYn | string\(1\) | 신용주문가능여부 | Y, N |
+| regulssQtyUnit | number\(6\) | 정규장매매수량단위 |  |
+
+> * secugrpId : 증권그룹 ID
+>   * ST:주권, MF:증권투자회사, RT:부동산투자회사, SC:선박투자회사,
+>
+>     IF:사회간접자본투융자회사, DR:주식예탁증서,     EW:ELW, EF:ETF,     SW:신주인수권증권, SR:신주인수권증서, BC:수익증권,     FE:해외ETF, FS:외국주권    , EN:ETN 
+> * mktWarnTpCd : 시장경보구분코드
+>   * 00:해당없음\(시장경보가 지정될 수 있는 종목에 대해서 지정된
+>
+>     바가 없음을 의미\), 01:투자주의, 02:투자경고, 03:투자위험
+> * mktcapScaleCd : 시가총액규모코드
+>   * 유가 \(0:제외 1:대 2:중 3:소\)
+>   * 코스닥 \(0:제외 1:KOSDAQ100 2:KOSDAQmid300 3:KOSDAQsmall\)
+> * parval : 액면가
+>   * 9\(9\)V9\(3\) 외국주권일 경우 소숫점셋째자리까지 표현가능
+>
+>     코스닥의 각국의 최소화폐단위 표시는 유가기준으로 통일
+>
+>     ※ST,FS,RT,SC,BC만 해당
 
 ## 주식종목 종가 API {#api}
 
@@ -290,14 +340,19 @@
    "result": 
   {
      "isuSrtCd": "005930",
-     "trdPrc": 51900,
+     "trdPrc": 49650,
      "cmpprevddTpCd": "5",
-     "opnprc": 53000,
-     "hgprc": 53900,
-     "lwprc": 51800,
-     "accTrdvol": 39421505,
-     "accTrdval": 2070538849200,
-     "cmpprevddPrc": -1100 
+     "opnprc": 50200,
+     "hgprc": 50400,
+     "lwprc": 49550,
+     "accTrdvol": 4767636,
+     "trdTm": 10103900,
+     "trdvol": 20,
+     "accTrdval": 238067176750,
+     "cmpprevddPrc": -450,
+     "bidordPrc_1": 49650,
+     "askordPrc_1": 49700,
+     "lstAskbidTpCd": 1 
   } 
 }
 ```

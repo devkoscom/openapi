@@ -11,12 +11,7 @@
 * Authentication
   * **API Key**
 
-**Reference**
 
-> * `marketcode`  
->   * 시장구분 \[**`kospi`**, **`kosdaq`**\]
-> * `issuecode`
->   * 주식종목 단축코드
 
 
 

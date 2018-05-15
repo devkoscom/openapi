@@ -769,7 +769,7 @@ Application/json
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 |  |
 | reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | . | 사용안함 |
@@ -777,28 +777,32 @@ Application/json
 | realAccNo | String\(40\) |  | 사용안함 |
 | vtAccNo | String\(30\) | 가상계좌번호 |  |
 | totalCnt | number | 조회 조건의 총 메시지 건수 |  |
-| count | number | 현 메시지 내 응답 건수 |  |
-| page | string\(24\) | 다음 page 번호 |  “null”이면 더 이상 없음 |
-| substitute | Number | 대용금 |  |
-| receivable | Number | 미수/미납금 |  |
-| subsMargin | Number | 대용증거금 |  |
-| loanCredit | Number | 대출/신용금 |  |
-| valAtTrade | Number | 유가증권매수금액 |  |
-| valueAtCur | Number | 유가증권평가금액 |  |
-| proLoss | Number | 유가증권평가손익 |  |
-| totalAccVal | Number | 총평가금액 |  |
-| assetType | String\(8\) | 상품구분자 | \*테이블 하단 참조 |
+| count | number | 응답 건수 | \*테이블 하단 참조 |
+| page | string\(24\) | 다음 page 번호 | \*테이블 하단 참조 |
+| fromDate | String\(12\) | 조회시작날짜 | YYYYMMDD |
+| toDate | String\(12\) | 조회종료날짜 | YYYYMMDD |
 | transaction | Array | 거래 |  |
-| isinCode | String\(20\) | 종목코 | 입출금은 CASH로 표기 |
+| isinCode | String\(20\) | 종목코드 | 입출금은 CASH로 표기 |
 | qty | number | 잔고수량 | 거래후 잔량 |
 | transDate | string\(12\) | 거래일자 | YYYYMMDD |
-| transType | string\(8\) | 잔고 구분 | \*테이블 하단 참조 |
+| transType | string\(8\) | 거래구분 | \*테이블 하단 참조 |
 | changeAmt | Number | 금액증감 | 매도/매수/이체에 따른 금액변동 |
 | changeQty | Number | 수량증감 | 매도/매수량, 이체 시는 0 |
 | respCode | string\(8\) | 응답코드 참고 |  |
 | respMsg | string\(50\) | 응답메세지 참고 |  |
 
-> * transType : 잔고구분
+> * count : 응답별 건수
+>   * transactionHistoryResponseBody / queryResult / count
+>     * 메시지 내 응답 건수
+>   * transactionHistoryResponseBody / queryParams / count
+>     * 응답 별 건수 \(default는 50\)
+>     * 0이면 50건과 동일
+> * page
+>   * transactionHistoryResponseBody / queryResult / page
+>     * 다음 page 번호, “null” 이면 더 이상 없음
+>   * transactionHistoryResponseBody / queryParams / page
+>     * 응답데이터의 특정 지점을 지정할 경우 \(요청 시 값\)
+> * transType : 거래구분
 >   * BID\(매도\), ASK\(매수\),DEP\(이체입금\), WID\(이체출금\)
 
 

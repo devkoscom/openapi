@@ -686,13 +686,14 @@ Application/json
     "respMsg":"OK"
   }
 }
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Example
+#### Request Example
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -731,7 +732,74 @@ Application/json
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
- 
+#### Request Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| comId | string\(5\) | 핀테크 기업 코드 |  |
+| srvId | string\(20\) | 핀테크 서비스 코드 |  |
+| reqIdPlatform | string | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
+| reqIdConsumer | string\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 | 선택 |
+| ci | string\(88\) | 연계정보  | 88bytes |
+| ipAddr | string\(32\) | 사용자 단말 IP주소  | \*테이블 하단 참조 |
+| macAddr | string\(50\) | 사용자 MAC주소  | \*테이블 하단 참조 |
+| vtAccNo | string\(30\) | 가상계좌번호 |  |
+| queryPrams | Object | . | 조회범위는 증권사마다 상이 |
+| fromDate | String\(12\) | 조회시작날짜 | YYYYMMDD |
+| toDate | String\(12\) | 조회종료날짜 | YYYYMMDD |
+| isinCode | String\(20\) | 조회조건: 종목코드 | 종목코드지정 없으면 전체종목을 대상 |
+| side | String\(8\) | 조회조건 | \*테이블 하단 참조 |
+| count | number | 응답별 최대 응답 건수 | \*테이블 하단 참조 |
+| page | String\(8\) | 다음page를 지시하는 키 | \*테이블 하단 참조 |
+
+> * ipAddr : IP주소
+>   * dot없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 dash없이 10자리로 채워서 설정
+> * macAddr : Mac주소
+>   * PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정
+> * side: 조회조건
+>   * BID\(매도\), ASK\(매수\), DEP\(이체입금\), WID\(이체출금\), 조회조건이 없거나 ‘ALL’이면 전체구분자가 대상
+> * count : 응답별 최대 응답 건수
+>   * 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음
+>   * 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함
+> * page: 다음 page를 지시하는 키
+>   * 첫 요청은 “null”로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청
+
+
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 |  |
+| reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
+| certDn | String\(256\) | . | 사용안함 |
+| ci | String\(88\) | 연계정보 |  |
+| realAccNo | String\(40\) |  | 사용안함 |
+| vtAccNo | String\(30\) | 가상계좌번호 |  |
+| totalCnt | number | 조회 조건의 총 메시지 건수 |  |
+| count | number | 현 메시지 내 응답 건수 |  |
+| page | string\(24\) | 다음 page 번호 |  “null”이면 더 이상 없음 |
+| substitute | Number | 대용금 |  |
+| receivable | Number | 미수/미납금 |  |
+| subsMargin | Number | 대용증거금 |  |
+| loanCredit | Number | 대출/신용금 |  |
+| valAtTrade | Number | 유가증권매수금액 |  |
+| valueAtCur | Number | 유가증권평가금액 |  |
+| proLoss | Number | 유가증권평가손익 |  |
+| totalAccVal | Number | 총평가금액 |  |
+| assetType | String\(8\) | 상품구분자 | \*테이블 하단 참조 |
+| transaction | Array | 거래 |  |
+| isinCode | String\(20\) | 종목코 | 입출금은 CASH로 표기 |
+| qty | number | 잔고수량 | 거래후 잔량 |
+| transDate | string\(12\) | 거래일자 | YYYYMMDD |
+| transType | string\(8\) | 잔고 구분 | \*테이블 하단 참조 |
+| changeAmt | Number | 금액증감 | 매도/매수/이체에 따른 금액변동 |
+| changeQty | Number | 수량증감 | 매도/매수량, 이체 시는 0 |
+| respCode | string\(8\) | 응답코드 참고 |  |
+| respMsg | string\(50\) | 응답메세지 참고 |  |
+
+> * transType : 잔고구분
+>   * BID\(매도\), ASK\(매수\),DEP\(이체입금\), WID\(이체출금\)
 
 
 

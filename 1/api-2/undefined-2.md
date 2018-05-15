@@ -2,21 +2,18 @@
 
 일임주문 연계조회 API는 증권사별로 호출 URI가 다르나 큰 틀은 동일하며 단지 증권사구분이 URI에 포함되어 있는 구조입니다. API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 있습니다. 
 
-#### **URI구조**
-
-* 전체 URI - `https://APIgateway주소/버전정보/증권사단축명/조회서비스구분  `
-* Endpoint – `https://APIgateway주소/버전정보/증권사단축명/  `
-
-#### **오픈플랫폼 API gateway 주소**
-
-* Production – `https://apigw.koscom.co.kr  `
-* Sandbox – `https://sandbox-apigw.koscom.co.kr  `
-
 {% hint style="success" %}
-일임매매 연계 API에 대한 **자세한 설명**과 **사용방법**은 아래의 [링크](https://developers.koscom.co.kr/documentation/b2baccount)를 클릭하면 이용할 수 있습니다:
-
-[개발자센터-일임매매 연계 API](https://developers.koscom.co.kr/documentation/b2baccount)
+일임매매 연계 API는 [개발자센터-일임매매 연계 API](https://developers.koscom.co.kr/documentation/b2baccount)에서 이용할 수 있습니다:
 {% endhint %}
+
+
+
+#### Syntax
+
+* HTTP methods
+  * **POST**
+* Authentication
+  * **Basic Authentication**
 
 
 
@@ -45,6 +42,20 @@
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Content-Type" required=true type="string" %}
+Application/json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="comId" required=true type="string" %}
+오픈 플랫폼으로부터 발급받은 기관 코드번호
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="authorization" required=true type="string" %}
+Basic Authentication 인증 사용
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -52,77 +63,6 @@
 
 {% endapi-method-response-example-description %}
 
-```
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-#### Syntax
-
-* URI
-
-  * /b2baccount/orderdetail/search
-
-  ​
-
-* HTTP methods
-
-  * POST
-
-  ​
-
-* Format
-
-  * JSON &lt;application/json; charset=utf-8&gt;
-
-  ​
-
-* Content-Type
-
-  * Application/json
-
-  ​
-
-* Authentication
-  * Basic Authentication
-  * header – comId: 오픈 플랫폼으로부터 발급받은 기관 코드번호
-  * header – authorization: Basic Authentication 인증 사용
-
-#### Example {#example}
-
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
-```yaml
-{
-    "partner": {
-        "comId": "F9999",
-        "srvId": "999"
-    },
-    "commonHeader": {
-        "reqIdConsumer": "Fintech-2016062200001"
-    },
-    "orderDetailListRequestBody": {
-        "queryParameter": {
-            "qrAssetType": "EQTY",
-            "qrSellBuyType": "1",
-            "qrAccNo": "0019923122221",
-            "qrOrderDate": "20160622",
-            "qrIsinCode": null,
-            "qrOrderNo": null,
-            "count": 0,
-            "page": null
-        }
-    }
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
 ```yaml
 {
    "commonHeader": 
@@ -201,12 +141,40 @@
   } 
 }
 ```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Request Example {#example}
+
+{% code-tabs %}
+{% code-tabs-item title="Request Body Example" %}
+```yaml
+{
+    "partner": {
+        "comId": "F9999",
+        "srvId": "999"
+    },
+    "commonHeader": {
+        "reqIdConsumer": "Fintech-2016062200001"
+    },
+    "orderDetailListRequestBody": {
+        "queryParameter": {
+            "qrAssetType": "EQTY",
+            "qrSellBuyType": "1",
+            "qrAccNo": "0019923122221",
+            "qrOrderDate": "20160622",
+            "qrIsinCode": null,
+            "qrOrderNo": null,
+            "count": 0,
+            "page": null
+        }
+    }
+}
+```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
-
- 자세한 포맷은 [개발자센터](https://developers.koscom.co.kr/documentation/common/member) 또는 [공식매뉴얼](https://developers.koscom.co.kr/documentation/reference) 에서 확인하세요.
-
-[ ​개발자센터-일임매매API](https://developers.koscom.co.kr/documentation/b2baccount)
 
 
 
@@ -229,6 +197,20 @@
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+Application/json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="comId" type="string" required=true %}
+오픈 플랫폼으로부터 발급받은 기관 코드번호
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="authorization" type="string" required=true %}
+Basic Authentication 인증 사용
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -236,73 +218,6 @@
 
 {% endapi-method-response-example-description %}
 
-```
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-#### Syntax {#syntax}
-
-* URI
-
-  * /b2baccount/balancelist/search
-
-  ​
-
-* HTTP methods
-
-  * POST
-
-  ​
-
-* Format
-
-  * JSON &lt;application/json; charset=utf-8&gt;
-
-  ​
-
-* Content-Type
-
-  * Application/json
-
-  ​
-
-* Authentication
-  * Basic Authentication
-  * header – comId: 오픈 플랫폼으로부터 발급받은 기관 코드번호
-  * header – authorization: Basic Authentication 인증 사용
-
-#### Example {#example}
-
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
-```yaml
-{
-    "partner": {
-        "comId": "F9999",
-        "srvId": "100"
-    },
-    "commonHeader": {
-        "reqIdConsumer": "Fintech-2016062200001"
-    },
-    "balanceListRequestBody": {
-        "queryParameter": {
-            "qrAccNo": "0019923122221",
-            "qrAssetType": "EQTY",
-            "count": 0,
-            "page": null
-        }
-    }
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
 ```yaml
 {
    "commonHeader": 
@@ -378,7 +293,6 @@
                  "isinCode": "KR0065300",
                  "isinName": "삼성생명" 
               },
-        
               {
                  "isinType": "단축코드",
                  "isinCode": "A06530",
@@ -421,16 +335,38 @@
   } 
 }
 ```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Request Example {#example}
+
+{% code-tabs %}
+{% code-tabs-item title="Request Body Example" %}
+```yaml
+{
+    "partner": {
+        "comId": "F9999",
+        "srvId": "100"
+    },
+    "commonHeader": {
+        "reqIdConsumer": "Fintech-2016062200001"
+    },
+    "balanceListRequestBody": {
+        "queryParameter": {
+            "qrAccNo": "0019923122221",
+            "qrAssetType": "EQTY",
+            "count": 0,
+            "page": null
+        }
+    }
+}
+```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
- 자세한 포맷은 [개발자센터](https://developers.koscom.co.kr/documentation/common/member) 또는 [공식매뉴얼](https://developers.koscom.co.kr/documentation/reference) 에서 확인하세요.
-
-[ ​개발자센터-일임매매API](https://developers.koscom.co.kr/documentation/b2baccount)
-
-
-
-
+ 
 
 
 
@@ -449,6 +385,20 @@
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Content-Type" required=true type="string" %}
+Application/json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="comId" required=true type="string" %}
+오픈 플랫폼으로부터 발급받은 기관 코드번호
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="authorization" required=true type="string" %}
+Basic Authentication 인증 사용
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -456,76 +406,6 @@
 
 {% endapi-method-response-example-description %}
 
-```
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-#### Syntax {#syntax}
-
-* URI
-
-  * /b2baccount/settlelist/search/
-
-  ​
-
-* HTTP methods
-
-  * POST
-
-  ​
-
-* Format
-
-  * JSON &lt;application/json; charset=utf-8&gt;
-
-  ​
-
-* Content-Type
-
-  * Application/json
-
-  ​
-
-* Authentication
-  * Basic Authentication
-  * header – comId: 오픈 플랫폼으로부터 발급받은 기관 코드번호
-  * header – authorization: Basic Authentication 인증 사용
-
-#### Example {#example}
-
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
-```yaml
-{
-    "partner": {
-        "comId": "F9999",
-        "srvId": "100"
-    },
-    "commonHeader": {
-        "reqIdConsumer": "Fintech-2016062200001"
-    },
-    "settleListRequestBody": {
-        "queryParameter": {
-            "qrAssetType": "EQTY",
-            "qrSellBuyType": "0",
-            "qrAccNo": "0019923122221",
-            "qrOrderDate": "20170622",
-            "qrIsinCode": "KR0065300",
-            "count": 0,
-            "page": null
-        }
-    }
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
 ```yaml
 {
    "commonHeader": 
@@ -581,7 +461,6 @@
              "isinCode": "KR0065300",
              "isinName": "삼성생명" 
           },
-           
           {
              "isinType": "단축코드",
              "isinCode": "A06530",
@@ -593,12 +472,10 @@
              "costName": "거래세",
              "cost": 45000 
           },
-           
           {
              "costName": "주민세",
              "cost": 126000 
           },
-           
           {
              "costName": "일반수수료",
              "cost": 990 
@@ -609,16 +486,41 @@
   } 
 }
 ```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Example {#example}
+
+{% code-tabs %}
+{% code-tabs-item title="Request Body Example" %}
+```yaml
+{
+    "partner": {
+        "comId": "F9999",
+        "srvId": "100"
+    },
+    "commonHeader": {
+        "reqIdConsumer": "Fintech-2016062200001"
+    },
+    "settleListRequestBody": {
+        "queryParameter": {
+            "qrAssetType": "EQTY",
+            "qrSellBuyType": "0",
+            "qrAccNo": "0019923122221",
+            "qrOrderDate": "20170622",
+            "qrIsinCode": "KR0065300",
+            "count": 0,
+            "page": null
+        }
+    }
+}
+```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
- 자세한 포맷은 [개발자센터](https://developers.koscom.co.kr/documentation/common/member) 또는 [공식매뉴얼](https://developers.koscom.co.kr/documentation/reference) 에서 확인하세요.
-
-[ ​개발자센터-일임매매API](https://developers.koscom.co.kr/documentation/b2baccount)
-
-
-
-
+ 
 
 
 

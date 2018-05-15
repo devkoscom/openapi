@@ -145,8 +145,6 @@ Application/json
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### 
-
 #### Request Parameters
 
 | **Name** | **Type** | **Description** |

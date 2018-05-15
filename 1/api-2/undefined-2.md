@@ -542,6 +542,20 @@ Application/json
 Basic Authentication 인증 사용
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="partner" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="commonHeader" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="settleListRequestBody" type="object" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -635,7 +649,7 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Example {#example}
+#### Request Example {#example}
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -664,7 +678,56 @@ Basic Authentication 인증 사용
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
- 
+####  Request Parameters
+
+| **Name** | **Type** | **Description** | ​ |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| comId | string\(5\) | 핀테크 기업 코드 | ​ |
+| srvId | string\(20\) | 핀테크 서비스 코드 | ​ |
+| reqIdPlatform | string\(50\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
+| reqIdConsumer | string\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 | ​ |
+| qrAssetType | String\(8\) | 자산유형 | EQTY\(주식\), FUND\(펀드\), ETC\(기타\) |
+| qrSellBuyType | String\(8\) | 매도수구분 | 0\(전체\), 1\(매도\), 2\(매수\) |
+| qrAccNo | String\(20\) | 계좌번호 | ​ |
+| qrOrderDate | String\(12\) | 주문일자 | 결제 전인 경우만 입력, 입력없음 당일\(YYYYMMDD\) |
+| qrIsinCode | String\(20\) | 종목코드 | 입력 시 해당 종목만 요청 |
+| count | number | 응답별 최대 응답 건수 | ​ |
+| page | **String\(100\)** | 다음page를 지시하는 키 | ​ |
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |  |
+| reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
+| certDn | String\(256\) | "" | 사용안함 |
+| ci | String\(88\) | 연계정보 | 사용안함 |
+| totalCnt	 | Number | 총 메시지 건수 |  |
+| count	 | Number | 메시지 내 응답 건수 |  |
+| page	 | String\(100\) | 다음 page 번호 | null이면 더 이상 없음 |
+| accNo | String\(20\) | 계좌번호 |  |
+| accName | String\(20\) | 계좌명 |  |
+| sellBuyType | String\(8\) | 매도수구분 | 1\(매도\), 2\(매수\) |
+| exchange | String\(8\) | KRX를 제외한 시장의 거래소명 | Text표기 |
+| crcyCode | String\(20\) | 외화의 경우 통화코드 표기 |  |
+| settQty | Number | 결제수량 |  |
+| settAmt | Number | 결제금액 |  |
+| tradeType | String\(20\) | 거래유형 | Text 표기 |
+| loanCreditDate | String\(12\) | 신용/대출일 | YYYYMMDD |
+| loanCreditAmt | Number | 신용/대출금액 |  |
+| settDate | String\(12\) | 결제일자 |  |
+| costTotal | Number | 비용합계 |  |
+| isinType | String\(20\) | 종목코드종류 | 표준코드, 펀드코드, 단축코드, 상품코드 등 |
+| isinCode | String\(20\) | 종목코드, 펀드코드, 상품코드 |  |
+| isinName | String\(40\) | 종목명, 펀드명, 상품코드명 |  |
+| costName | String\(20\) | 비용명 | 수수료, 거래세, 농특세, 주민세 등 |
+| cost | Number | 비용금액 |  |
+| respCode | string\(8\) | 응답코드 참고 |  |
+| respMsg | string\(50\) | 응답메세지 참고 |  |
+
+
+
+
 
 
 

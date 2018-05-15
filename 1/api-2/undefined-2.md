@@ -516,7 +516,9 @@ Basic Authentication 인증 사용
 
 ## 결제예정 정산 조회 API
 
-전일 및 당일 주문 체결 내역에 대한 매매정리 내역을 상세히 조회하기 위한 API로 오전 08:30이전과 오후 16:00 이후 조회 가능
+전일 및 당일 주문 체결 내역에 대한 매매정리 내역을 상세히 조회하기 위한 API
+
+오전 08:30이전과 오후 16:00 이후 조회 가능
 
 {% api-method method="post" host="https://sandbox-apigw.koscom.co.kr/v1/증권사단축명/b2baccount" path="/settlelist/search" %}
 {% api-method-summary %}
@@ -759,6 +761,20 @@ Application/json
 Basic Authentication 인증 사용
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="partner" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="commonHeader" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="accountListRequestBody" type="object" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -837,6 +853,35 @@ Basic Authentication 인증 사용
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+#### Request Parameters
+
+| **Name** | **Type** | **Description** | ​ |
+| --- | --- | --- | --- | --- | --- | --- |
+| comId | string\(5\) | 핀테크 기업 코드 | ​ |
+| srvId | string\(20\) | 핀테크 서비스 코드 | ​ |
+| reqIdPlatform | string\(50\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
+| reqIdConsumer | string\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 | ​ |
+| count | number | 응답별 최대 응답 건수 | ​ |
+| page | **String\(100\)** | 다음page를 지시하는 키 | ​ |
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |  |
+| reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
+| certDn | String\(256\) | "" | 사용안함 |
+| ci | String\(88\) | 연계정보 | 사용안함 |
+| totalCnt | Number | 총 메시지 건수 |  |
+| count	 | Number | 메시지 내 응답 건수 |  |
+| page	 | String\(100\) | 다음 page 번호 | null이면 더 이상 없음 |
+| accNo | String\(20\) | 계좌번호 |  |
+| accName | String\(20\) | 계좌명 |  |
+| virtualAccNo | String\(20\) | 가상계좌번호 |  |
+| contractStatus | String\(8\) | 일임설정상태 | 0\(계약\), 1\(해지\), 2\(만기\) |
+| respCode | string\(8\) | 응답코드 참고 |  |
+| respMsg | string\(50\) | 응답메세지 참고 |  |
+
 
 
 
@@ -869,6 +914,20 @@ Application/json
 Basic Authentication 인증 사용
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="partner" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="commonHeader" type="object" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="tradeBookListRequestBody" type="object" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -988,5 +1047,57 @@ Basic Authentication 인증 사용
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
- 
+####  Request Parameters
+
+| **Name** | **Type** | **Description** | ​ |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| comId | string\(5\) | 핀테크 기업 코드 | ​ |
+| srvId | string\(20\) | 핀테크 서비스 코드 | ​ |
+| reqIdPlatform | string\(50\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
+| reqIdConsumer | string\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 | ​ |
+| qrAccNo | String\(20\) | 계좌번호 |  |
+| qrFromDate | String\(12\) | 조회시작날짜 | YYYYMMDD |
+| qrToDate | String\(12\) | 조회종료날짜 | YYYYMMDD |
+| count | number | 응답별 최대 응답 건수 | ​ |
+| page | **String\(100\)** | 다음page를 지시하는 키 | ​ |
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |
+| reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |  |
+| reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
+| certDn | String\(256\) | "" | 사용안함 |
+| ci | String\(88\) | 연계정보 | 사용안함 |
+| qrAccNo | String\(20\) | 계좌번호 |  |
+| qrFromDate | String\(12\) | 조회시작날짜 | YYYYMMDD |
+| qrToDate | String\(12\) | 조회종료날짜 | YYYYMMDD |
+| count | Number | . |  |
+| page | String\(100\) | . |  |
+| totalCnt | Number | 총 메시지 건수 |  |
+| count	 | Number | 메시지 내 응답 건수 |  |
+| page	 | String\(100\) | 다음 page 번호 | null이면 더 이상 없음 |
+| tradeBook | Array | 거래 |  |
+| accNo | String\(20\) | 계좌번호 |  |
+| accName | String\(20\) | 계좌명 |  |
+| transDate | String\(12\) | 거래일자 | YYYYMMDD |
+| transType | String\(8\) | 거래구분 | BID\(매도\), ASK\(매수\),DEP\(이체입금\), WID\(이체출금\) |
+| changeAmt | Number | 금액증감 | 매도/매수/이체에 따른 금액변동으로 감소 시 “-“ 표기 |
+| changeQty | Number | 수량증감 | 매도/매수/출고에 따른 변동으로 수량 감소 시 “-“ 표기 |
+| qty | Number | 잔고수량 | 거래 후 잔량 |
+| amt | Number | 예수금 | 거래 후 현금 |
+| exchange | String\(20\) | 거래소명 | Text표기 |
+| crcyCode | String\(8\) | 통화코드 |  |
+| subject | String\(40\) | 계정명 | Text표기 |
+| summary | String\(40\) | 적요명 | Text표기 |
+| isinType | String\(20\) | 종목코드 종류 | Text 표기 |
+| isinCode | String\(20\) | 종목코드, 펀드코드, 상품코드 등 |  |
+| isinName | String\(40\) | 종목명 |  |
+| costName | String\(20\) | 비용명 | Text 표기 |
+| cost | Number | 비용 |  |
+| respCode | string\(8\) | 응답코드 참고 |  |
+| respMsg | string\(50\) | 응답메세지 참고 |  |
+
+
 

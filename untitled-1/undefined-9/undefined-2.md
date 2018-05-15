@@ -471,6 +471,10 @@ ddddd
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% hint style="danger" %}
+테이블 추가작업 해야함 :DDDDDDDDDDD
+{% endhint %}
+
 
 
 ## 상품/지수선물 종목 일중
@@ -499,7 +503,7 @@ ddddd
 일중전송주기구분코드 구분코드 \(10:10초, 60:1분, 600:10분\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter type="string" name="inqStrtDd" required=true %}
+{% api-method-parameter type="string" name="inqStrtDd" required=false %}
 조회시작일자 \(YYYYMMDD\)
 {% endapi-method-parameter %}
 
@@ -526,6 +530,22 @@ ddddd
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| isuNm | String\(80\) | 종목명 |  |
+| hisLists | Array\(4\) | 과거리스트 |  |
+| inddTm | string\(8\) | 일중시간 | HH:MM:SS |
+| inddOpnprc | number\(11\) | 일중시가 | 일중데이타\(10초, 1분, 10분\) |
+| inddHgprc | number\(11\) | 일중고가 | 일중데이타\(10초, 1분, 10분\) |
+| inddLwprc | number\(11\) | 일중저가 | 일중데이타\(10초, 1분, 10분\) |
+| inddClsprc | number\(11\) | 일중종가 | 일중데이타\(10초, 1분, 10분\) |
+| inddTrdvol | number\(11\) | 일중거래량 | 일중데이타\(10초, 1분, 10분\) |
+
+
 
 
 
@@ -563,7 +583,7 @@ ddddd
 조회종료일자 \(YYYYMMDD\_\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter type="string" name="reqCnt" required=true %}
+{% api-method-parameter type="string" name="reqCnt" required=false %}
 요청건수 \(최대 100건\)
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -582,6 +602,26 @@ ddddd
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| isuNm | String\(80\) | 종목명 |  |
+| hisLists | Array\(4\) | 과거리스트 |  |
+| trdDd | string\(8\) | 체결일자,거래일자,매매일자 | YYYYMMDD |
+| trdPrc | number\(11\) | 체결가격 |  |
+| cmpprevddTpCd | string\(1\) | 전일대비부호 |  |
+| cmpprevddPrc | number\(11\) | 전일대비가격 |  |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 |  |
+| accTrdval | number\(22\) | 누적거래대금 |  |
+| opnprc | number\(11\) | 시가 |  |
+| hgprc | number\(11\) | 고가 |  |
+| lwprc | number\(11\) | 저가 |  |
+| opnintQty | number\(10\) | 미결제약정수량 |  |
+
+
 
 
 

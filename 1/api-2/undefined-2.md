@@ -254,7 +254,9 @@ Basic Authentication 인증 사용
 
 ## 일임 계좌잔고 조회 API
 
- 조회대상이 되는 계좌의 실제 잔고 수량, 평가손익 등을 상세히 조회하기 위한 API로 오전 08:30이전과 오후 16:00 이후 조회 가능
+ 조회대상이 되는 계좌의 실제 잔고 수량, 평가손익 등을 상세히 조회하기 위한 API
+
+오전 08:30이전과 오후 16:00 이후 조회 가능
 
 {% api-method method="post" host="https://sandbox-apigw.koscom.co.kr/v1/증권사단축명/b2baccount" path="/balancelist/search" %}
 {% api-method-summary %}
@@ -450,7 +452,65 @@ Basic Authentication 인증 사용
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
- 
+#### Request Parameters {#request-parameters}
+
+| **Name** | **Type** | **Description** | ​ |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| comId | string\(5\) | 핀테크 기업 코드 | ​ |
+| srvId | string\(20\) | 핀테크 서비스 코드 | ​ |
+| reqIdPlatform | string | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
+| reqIdConsumer | string\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 | ​ |
+| qrAssetType | String\(8\) | 자산유형 | EQTY\(주식\), FUND\(펀드\), ETC\(기타\) |
+| qrAccNo | String\(20\) | 계좌번호 | ​ |
+| count | number | 응답별 최대 응답 건수 | ​ |
+| page | **String\(100\)** | 다음page를 지시하는 키 | ​ |
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |  |
+| reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
+| certDn | String\(256\) | . | 사용안함 |
+| ci | String\(88\) | 연계정보 | 사용안함 |
+| totalCnt	 | Number | 총 메시지 건수 |  |
+| count	 | Number | 메시지 내 응답 건수 |  |
+| page	 | String\(100\) | 다음 page 번호 | null이면 더 이상 없음 |
+| accNo | String\(20\) | 계좌번호 |  |
+| accName | String\(20\) | 계좌명 |  |
+| cashBalance | Number | 현금잔고 |  |
+| margin | Number | 증거금 |  |
+| substitute | Number | 대용금 |  |
+| receivable | Number | 미수미납금 |  |
+| totCreditAmt | Number | 총대출금 |  |
+| totlLoanAmt | Number | 총신용금액 |  |
+| valAtCur | Number | 평가금액 |  |
+| crcyCode | String\(8\) | 통화코드 | 국제 통화코드 표기 |
+| cashAvWithdraw | Number | 출금가능현금 |  |
+| assetType | String\(8\) | 자산유형 | 상품유형 표 참조 |
+| exchange | String\(20\) | KRX를 제외한 시장의 거래소명 | 대표적으로 해외주식 |
+| crcyCode | String\(8\) | 외화의 경우 통화코드 표기 |  |
+| loanCreditType | String\(20\) | 신용/대출구분 | Text표기 |
+| loanCreditAmt | Number | 신용/대출금 |  |
+| qty | Number | 잔고수량 |  |
+| valAtTrade | Number | 매수금액 |  |
+| valAtCur | Number | 평가금액 |  |
+| proLoss | Number | 평가손익 |  |
+| earningRate | Number | 수익률 | 소수점 2째자리까지 |
+| lastBuyDate | String\(12\) | 최종매수일 | YYYYMMDD |
+| maturity | String\(12\) | 만기일 | YYYYMMDD |
+| foreignDeposit | Number | 외화예수금 |  |
+| wonDeposit | Number | 원화예수금 |  |
+| currencyRate | Number | 기준환율 |  |
+| isinType | String\(20\) | 종목코드종류 | 표준코드,축약코드, 축약영문 등 |
+| isinCode | String\(20\) | 종목코드, 펀드코드, 상품코드 |  |
+| isinName | String\(40\) | 종목명, 펀드명, 상품코드명 |  |
+| respCode | string\(8\) | 응답코드 참고 |  |
+| respMsg | string\(50\) | 응답메세지 참고 |  |
+
+
+
+
 
 
 

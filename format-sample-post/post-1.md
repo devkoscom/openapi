@@ -4,22 +4,11 @@ KOSPI/KOSDAQ등의 지수 예상지수 및 업종별 투자자별 거래량등�
 
 
 
-
-
 ## Syntax
 
 | **HTTP methods** | POST |
 | --- | --- |
 | **Authentication** | API Key |
-
-
-
-## Syntax
-
-```text
-HTTP methods      |  POST
-Authentication    |  API Key
-```
 
 
 
@@ -180,6 +169,13 @@ Application/json
 
 > `page`  
 > 첫 요청은 null\(“null”\)로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청하며, ALL인 경우는 page없이 일괄전송이므로 본 필드는 의미 없음
+
+> `count`  
+> 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음  
+> 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함  
+> assetType이 ‘ALL’인 경우는 page없이 일괄전송이므로 본 필드는 의미 없으므로 0으로 설정
+
+
 
 #### Response Parameters
 
@@ -388,24 +384,24 @@ Bearer 발급받은 access token
 | count | number | 응답별 최대 응답 건수 | \*테이블 하단 참조 |
 | page | String\(8\) | 다음page를 지시하는 키 | \*테이블 하단 참조 |
 
-> ipAddr  
+> `ipAddr`  
 > dot없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 dash없이 10자리로 채워서 설정
-
-> macAddr  
+>
+> `macAddr`  
 > PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정
-
-> assetType  
+>
+> `assetType`  
 > 값: CASH\(현금\), EQTY\(주식\), FUND\(펀드\), ETC\(기타자산\), ALL\(전체\)인 경우는 page 처리없이 대용량 데이터 전송이 가능한 증권사만 가능
-
-> rspType  
+>
+> `rspType`  
 > 값은 RAT\(잔고구성비율\)은 기본으로 제공하며, 증권사에 따라 QTY\(실제잔고수량\)도 가능하나 본 API의 목적상 사용을 권장하지 않음
-
-> count  
+>
+> `count`  
 > 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음  
 > 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함  
 > assetType이 ‘ALL’인 경우는 page없이 일괄전송이므로 본 필드는 의미 없으므로 0으로 설정
-
-> page  
+>
+> `page`  
 > 첫 요청은 “null”로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청
 
 
@@ -421,6 +417,8 @@ Bearer 발급받은 access token
 
 보유비중은 수익기여도 \(해당 자산군에서 해당종목이 차지하는 수익기여도\)로 산출한 경우가 대부분이며, 증권사별 산출 기준은 추후 게시예정
 {% endhint %}
+
+#### 
 
 #### Response Parameters
 
@@ -455,7 +453,10 @@ Bearer 발급받은 access token
 > `qty`   
 > 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영안함
 
-
+> `count`  
+> 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음  
+> 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함  
+> assetType이 ‘ALL’인 경우는 page없이 일괄전송이므로 본 필드는 의미 없으므로 0으로 설정
 
 
 

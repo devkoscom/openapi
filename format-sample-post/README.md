@@ -22,13 +22,6 @@ Authentication     \|   **API Key**
 
 
 
-### Syntax
-
-* HTTP methods   \|   **POST**
-* Authentication    \|   **API Key**
-
-
-
 ## Syntax
 
 ```text
@@ -38,23 +31,11 @@ Authentication    |  API Key
 
 
 
-#### Syntax
+## Syntax
 
 > HTTP methods   \|  **POST**
 >
 > Authentication    \|  **API Key**
-
-
-
-#### Syntax
-
-{% hint style="info" %}
-HTTP methods  \|  **POST**
-
-Authentication   \|  **API Key**
-{% endhint %}
-
-
 
 
 

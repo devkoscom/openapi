@@ -85,10 +85,10 @@ ddddd
 | varAtCur | string\(5\)​ | 잔고구분 | \*테이블 하단 참고 |
 | qrToDate | String\(12\) | 조회종료날짜 | YYYYMMDD |
 
-> varAtTrade   
+> `varAtTrade`   
 > 첫 요청은 null\(“null”\)로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청하며, ALL인 경우는 page없이 일괄전송이므로 본 필드는 의미 없음
 
-> varAtCur   
+> `varAtCur`   
 > NRM\(일반/현금\), CRD\(신용\), LOAN\(대출\), SUM \(분류가 불가한 경우 구분 없이 합산한 경우며 대출잔고는 제외\)
 
 
@@ -230,18 +230,18 @@ ddddd
 | adjStkprcCalcYn | string\(1\) | 수정주가산출여부 | Y, N |
 | prevddNav | number\(22\) | 전일순자산가치 | ETF종목일 경우 소수점 2자리로 표현, 일반종목은 0 |
 
-> secugrpId   
-> ST:주권, MF:증권투자회사, RT:부동산투자회사, SC:선박투자회사, IF:사회간접자본투융자회사, DR:주식예탁증서, EW:ELW, EF:ETF, SW:신주인수권증권, SR:신주인수권증서, BC:수익증권, FE:해외ETF, FS:외국주권, EN:ETN
-
-> mktWarnTpCd  
+> `secugrpId`   
+> ST:주권, MF:증권투자회사, RT:부동산투자회사, SC:선박투자회사, IF:사회간접자본투융자회사, DR:주식예탁증서, EW:ELW, EF:ETF, SW:신주인수권증권, SR:신주인수권증서, BC:수익증권, FE:해외ETF, FS:외국주권, EN:ETN 
+>
+> `mktWarnTpCd`  
 > 00:해당없음\(시장경보가 지정될 수 있는 종목에 대해서 지정된바가 없음을 의미\),   
 > 01:투자주의, 02:투자경고, 03:투자위험
-
-> mktcapScaleCd   
+>
+> `mktcapScaleCd`   
 > 유가 \(0:제외 1:대 2:중 3:소\)  
 > 코스닥 \(0:제외 1:KOSDAQ100 2:KOSDAQmid300 3:KOSDAQsmall\)
-
-> parval   
+>
+> `parval`   
 > 9\(9\)V9\(3\) 외국주권일 경우 소숫점셋째자리까지 표현가능  
 > 코스닥의 각국의 최소화폐단위 표시는 유가기준으로 통일  
 > ST,FS,RT,SC,BC만 해당

@@ -8,26 +8,22 @@
 
 
 
-#### URI 입력값  {#uri}
+## Syntax
 
-* base URI : [https://sandbox-apigw.koscom.co.kr**/**_**v2/market/multiquote/stocks/**_](https://sandbox-apigw.koscom.co.kr/v2/market/stocks/)​
-* `marketcode` : 시장구분 \[**`kospi`**, **`kosdaq`**\]
-* `isuCd` :  종목코드 ex\) 005930,000660
+HTTP methods   \|   **GET**
 
-#### Syntax {#syntax}
+Authentication    \|   **API Key**
 
-* HTTP methods
-  * GET
-* Authentication
 
-  * API Key
+
+
 
 ## 현재가 시세표 API
 
 시장기준으로 1회 조회 요청 시 전종목의 현재가\(1초주기\)를 리스트 형식으로 제공
 
-* **현재가**: 현재가, 누적거래량, 누적거래대금
-* 제공시장 : 유가증권, 코스닥시장
+현재가      :   현재가, 누적거래량, 누적거래대금  
+제공시장  :   유가증권, 코스닥시장
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/multiquote/stocks/{marketcode}/pricelist" %}
 {% api-method-summary %}
@@ -87,8 +83,8 @@
 
 시장기준으로 1회 조회 요청 시 시고저종을  리스트 형식으로 제공
 
-* **시고저종**: 시가, 고가, 저가, 종가\(현재가\)
-* 제공시장 : 유가증권, 코스닥시장
+시고저종  :  시가, 고가, 저가, 종가\(현재가\)  
+제공시장  :  유가증권, 코스닥시장
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/multiquote/stocks/{marketcode}/ohlclists" %}
 {% api-method-summary %}
@@ -151,10 +147,10 @@
 
 ## 복수종목 현재가 시세표 API
 
-**현재가**  실시간 조회를  최대 20개의 임의의  종목에 대해 일괄적으로 조회
+**현재가**  실시간 조회를  최대 20개의 임의의  종목에 대해 일괄적으로 조회  
+복수종목 리스트간 구분자는 쉼표\(,\) 임
 
-* 제공시장 : 유가증권 , 코스닥 시장
-* 복수종목 리스트간 구분자는 쉼표\(,\) 임
+제공시장 : 유가증권 , 코스닥 시장
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/multiquote/stocks/{marketcode}/price" %}
 {% api-method-summary %}
@@ -162,7 +158,7 @@
 {% endapi-method-summary %}
 
 {% api-method-description %}
-주식 복수종목 **현재가** \(최대 20종목\)
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -238,10 +234,10 @@
 
 ## 복수종목  호가잔량 시세표 API
 
-**호가잔량**  실시간 조회를  최대 20개의 임의의  종목에 대해 일괄적으로 조회
+**호가잔량**  실시간 조회를  최대 20개의 임의의  종목에 대해 일괄적으로 조회  
+복수종목 리스트간 구분자는 쉼표\(,\) 임
 
-* 제공시장 : 유가증권 , 코스닥 시장
-* 복수종목 리스트간 구분자는 쉼표\(,\) 임
+제공시장  :  유가증권 , 코스닥 시장
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/multiquote/stocks/{marketcode}/orderbook" %}
 {% api-method-summary %}
@@ -249,7 +245,7 @@
 {% endapi-method-summary %}
 
 {% api-method-description %}
-주식 복수종목 **호가잔량** \(최대 20종목\)
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -386,4 +382,6 @@
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+
 

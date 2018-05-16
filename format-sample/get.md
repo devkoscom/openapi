@@ -56,7 +56,15 @@ Authentication     \|   **API Key**
 {% endapi-method-response-example-description %}
 
 ```yaml
-ddddd
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",ㅇ
+     "creditOrdPosblYn": "N",
+     "adjStkprcCalcYn": "Y" 
+  } 
+}
 ```
 {% endapi-method-response-example %}
 

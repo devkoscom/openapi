@@ -192,15 +192,15 @@ ddddd
 | isuCd | string\(12\) | 종목코드 | ​ |
 | isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
 | isuKorAbbrv | string\(40\) | 종목한글약명 | 가나다 |
-| secugrpId | string\(2\) | 증권그룹ID | \*테이블하단참고 |
-| mktWarnTpCd | string\(2\) | 시장경보구분코드 | \*테이블하단참고 |
+| secugrpId | string\(2\) | 증권그룹ID | \*테이블 하단 참고 |
+| mktWarnTpCd | string\(2\) | 시장경보구분코드 | \*테이블하단 참고 |
 | admisuYn | string\(1\) | 관리종목여부 | Y:관리 N:일반 |
 | haltYn | string\(1\) | 거래정지여부 | Y, N  |
-| idxIndMidclssCd | string\(3\) | 지수업종중분류코드 | 코드표&gt; 업종코드표 참고 |
+| idxIndMidclssCd | string\(3\) | 지수업종중분류코드 | 코드표 &gt; 업종코드표 참고 |
 | mktcapScaleCd | string\(1\) | 시가총액규모코드 | \*테이블하단참고 |
 | mfindYn | string\(1\) | 제조업여부 | Y, N \(유가\)제조업여부 |
 | smeYn | string\(1\) | 중소기업여부 | Y, N \(코스닥\)중소기업여부 |
-| 업종 | string\(1\) | KRX100종목여부 | Y, N \(유가\)KOSPI100여부 / \(코스닥\)프리미어여부 |
+| 업종 | string\(1\) | KRX100종목여부 | Y, N \(유가\)KOSPI100여부 \(코스닥\)프리미어여부 |
 | kospiYn | string\(1\) | KOSPI여부 | Y, N |
 | kospi100Yn | string\(1\) | KOSPI100여부 | Y, N \(유가\)KOSPI여부 |
 | kospi50Yn | string\(1\) | KOSPI50여부 | Y, N \(유가\)KOSPI50여부 |
@@ -210,8 +210,8 @@ ddddd
 | prevddAccTrdval | number\(22\) | 전일누적거래대금 |  |
 | uplmtprc | number\(11\) | 상한가 |  |
 | lwlmtprc | number\(11\) | 하한가 |  |
-| sbPrc | number\(11\) | 대용가격 | ST, FS, DR, MF, RT, SC ,IF ,ET, FE, BC, EN 만 해당  |
-| parval | number\(11\) | 액면가 | \*테이블하단참고 |
+| sbPrc | number\(11\) | 대용가격 | ST,FS,DR,MF,RT,SC,IF,ET,FE,BC,EN 만 해당 |
+| parval | number\(11\) | 액면가 | \*테이블 하단 참고 |
 | isuPrc | number\(11\) | 발행가격 | ELW, 신주인수권증서 포함 |
 | listDd | string\(8\) | 상장일자 | YYYYMMDD |
 | listShrs | number\(16\) | 상장주식수,상장증권수 |  |
@@ -219,16 +219,16 @@ ddddd
 | creditOrdPosblYn | string\(1\) | 신용주문가능여부 | Y, N |
 | regulssQtyUnit | number\(6\) | 정규장매매수량단위 |  |
 | invstcautnRemndIsuYn | string\(1\) | 투자주의환기종목여부 | Y, N |
-| srttrmOverheatIsuTpCd | string\(1\) | 단기과열종목구분코드 | 0: 해당없음, 1: 지정예고, 2: 지정, 3: 지정연장\(해제연기\) |
+| srttrmOverheatIsuTpCd | string\(1\) | 단기과열종목구분코드 | 0:해당없음 1:지정예고 2:지정 3:지정연장 \(해제연기\) |
 | eps | number\(11\) | 주당순이익 |  |
 | per | number\(11\) | 주가수익률 |  |
 | bps | number\(11\) | 주당순자산가치 |  |
 | pbr | number\(11\) | 주당순자산비율 |  |
 | dps | number\(11\) | 주당배당금액 |  |
 | divYd | number\(11\) | 배당수익율 |  |
-| acntclsCd | string\(12\) | 결산월구분 | 월별 Map 구조 \(001001001001 -&gt; 3,6,9,12 월\) |
+| acntclsCd | string\(12\) | 결산월구분 | 월별 Map구조 \(001001001001 -&gt; 3,6,9,12월\) |
 | adjStkprcCalcYn | string\(1\) | 수정주가산출여부 | Y, N |
-| prevddNav | number\(22\) | 전일순자산가치 | ETF종목일 경우 소수점 2자리, 일반종목은 0 |
+| prevddNav | number\(22\) | 전일순자산가치 | ETF는 소수점 2자리, 일반종목은 0 |
 
 > `secugrpId`   
 > ST:주권, MF:증권투자회사, RT:부동산투자회사, SC:선박투자회사, IF:사회간접자본투융자회사, DR:주식예탁증서, EW:ELW, EF:ETF, SW:신주인수권증권, SR:신주인수권증서, BC:수익증권, FE:해외ETF, FS:외국주권, EN:ETN 
@@ -242,9 +242,7 @@ ddddd
 > 코스닥 \(0:제외 1:KOSDAQ100 2:KOSDAQmid300 3:KOSDAQsmall\)
 >
 > `parval`   
-> 9\(9\)V9\(3\) 외국주권일 경우 소숫점셋째자리까지 표현가능  
-> 코스닥의 각국의 최소화폐단위 표시는 유가기준으로 통일  
-> ST,FS,RT,SC,BC만 해당
+> 9\(9\)V9\(3\) 외국주권일 경우 소숫점셋째자리까지 표현가능 / 코스닥의 각국의 최소화폐단위 표시는 유가기준으로 통일 / ST,FS,RT,SC,BC만 해당
 
 
 

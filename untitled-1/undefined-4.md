@@ -10,7 +10,7 @@ description: 실시간 스트리밍 시세 (WebSocket 방식)
 
 > ####  **주요 특징**
 >
-> * **Web Socket **을 통해서 실시간 송수신 지원
+> * **Web Socket** 을 통해서 실시간 송수신 지원
 > * 시장데이타 발생 시 미리 정의된 체결, 호가 데이타구조의 데이타가 일괄적으로 전송
 > * tick, quote 는 tick10, quote10 의 단축형으로 모든 시장에 대해 동일하게 전송 가능
 > * tick10, quote10 은 주식/선물/옵션시장별 체결, 호가조회 데이타와 동일
@@ -26,7 +26,7 @@ description: 실시간 스트리밍 시세 (WebSocket 방식)
 WebSocket 세션연결후 개별 종목기준으로 실시간 데이타 수신등록\(subscribe\)하면,   
 등록된 종목의 시세 변동시 지정된 항목등 \(preset 방식\) 또는 요청한 항목들 \(요구형- change\) 이 실시간으로 전송\(publish\) 됨 
 
-* **요약 **:  **session 연결 후 subscribe & publish**
+* **요약** :  **session 연결 후 subscribe & publish**
 * 세션기준 200건 등록\(subscribe\) 가능
   * 체결, 호가 동시 등록시 100종목
 
@@ -70,7 +70,7 @@ WebSocket 세션연결후 개별 종목기준으로 실시간 데이타 수신�
 
 WebSocket 세션을 연결하면, 시장기준 전종목의 현재가가 변경시 주기적\(0.5 초 이내\)으로 종목코드, 시간, 체결가, 누적거래량을 전송
 
-* **요약 **:  **session 연결 후 publish without subscribe**
+* **요약** :  **session 연결 후 publish without subscribe**
 
 
 
@@ -89,7 +89,7 @@ WebSocket 세션을 연결하면, 시장기준 전종목의 현재가가 변경�
 
 * `ws_marketcode` : 시장구분 
 
-            \( KOSPI :  **ws\_ksp**_,   _KOSDAQ :  **ws\_kdq **\)
+            \( KOSPI :  **ws\_ksp**_,_   KOSDAQ :  **ws\_kdq** \)
 
 #### Syntax {#syntax}
 

@@ -18,7 +18,7 @@ description: API 테스트 절차
 
 ![&#xC2DC;&#xC138;&#xC11C;&#xBE44;&#xC2A4;-&#xC8FC;&#xC2DD;&#xC885;&#xBAA9;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAHP22XoyNPzixZ3_FG%2F-LAHPoJtyQDRgiqyR45f%2Fimage.png?alt=media&token=ea5f1cd1-cf33-4eed-a4a0-717e110378dc)
 
-‘Authentication \(None\)’ 버튼을_ _누르시고, 인증 방식을 ‘API Key’로 선택 합니다.
+‘Authentication \(None\)’ 버튼을 __누르시고, 인증 방식을 ‘API Key’로 선택 합니다.
 
 ![&#xC778;&#xC99D;&#xBC29;&#xBC95; &#xC120;&#xD0DD;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAHQTPq8f_lGc4mSjWu%2F-LAHQTwRiw6LPPCZxS-B%2Fimage.png?alt=media&token=08f4e02e-3248-4f6b-aa7e-3bf52fbeecbe)
 
@@ -69,7 +69,7 @@ description: API 테스트 절차
 
 {% hint style="info" %}
 **가상증권사 테스트 계정   
- : **코스콤 개발자센터 -&gt; API문서 &gt; 계좌서비스 -&gt; [가상증권사용 테스트 데이터 참조](https://developers.koscom.co.kr/documentation/account)
+ :** 코스콤 개발자센터 -&gt; API문서 &gt; 계좌서비스 -&gt; [가상증권사용 테스트 데이터 참조](https://developers.koscom.co.kr/documentation/account)
 {% endhint %}
 
 ![&#xB85C;&#xADF8;&#xC778;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAHVaBFz-1K1zgJ-1hK%2F-LAHVdgooH8OWxGIrGxD%2Fimage.png?alt=media&token=079a6f64-0e4f-46fc-a15a-16eebc031b90)

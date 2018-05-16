@@ -162,11 +162,12 @@ Application/json
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- |
 | fundcode | String\(20\) | 펀드표준코드 |  |
 | fundName | Number | 펀드이름 |  |
 | valAtTrade | Number | 펀드이름 | 사용 안함 |
 | varAtCur | Number | 펀드이름 |  |
+| toDate | String\(12\) | 날짜 | YYYYMMDD |
 
 
 

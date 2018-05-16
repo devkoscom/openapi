@@ -6,7 +6,7 @@ description: 시세 서비스 개요
 
 ## Open API 시세 정보
 
- 다양한 금융시장정보의 실시간 및  과거데이타를 이용하기 편한 **Restful API** 및 **WebSocket **서비스로 제공
+ 다양한 금융시장정보의 실시간 및  과거데이타를 이용하기 편한 **Restful API** 및 **WebSocket** 서비스로 제공
 
 
 
@@ -176,7 +176,7 @@ description: 시세 서비스 개요
 ####   D-1. WebSocket 종목별 상세 구독
 
 1. 실시간 데이타 수신을 위해 WebSocket  Session연결
-2. 업무개시를 위한 세션정보 전송 요청 \(`method`: init,  `data `: API key, 회사명 \)
+2. 업무개시를 위한 세션정보 전송 요청 \(`method`: init,  `data` : API key, 회사명 \)
 3. 연결된 Session을 통해서 종목 기준으로 업무요건별로 Subscribe/Unsubscribe  요청을 한다.
 4. 구독요청 결과에 대해서  Push시세\(현재 시세메모리 정보\)  또는 에러를 반드시 전송한다.
 5. 구독하는 종목에 대한 시세 발생시 비동기 방식으로 실시간 데이타 전송
@@ -187,7 +187,7 @@ description: 시세 서비스 개요
 ####   D-2. WebSocket  시장별 체결구독
 
 1. 실시간 데이타 수신을 위해 WebSocket  Session연결
-2. 업무개시를 위한 세션정보 전송 요청 \(`method`: init,  `data `:API key, 회사명 \)
+2. 업무개시를 위한 세션정보 전송 요청 \(`method`: init,  `data` :API key, 회사명 \)
 3. 업무개시 이후 발생되는 체결데이타부터 별도 절차 없이 시장기준으로 전송됨
 
    \(여러 종목을 배열형태로 전송\)

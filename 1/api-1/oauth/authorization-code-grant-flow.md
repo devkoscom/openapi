@@ -30,15 +30,15 @@ description: Server-side Web Application Flow
 
 | **Method** | GET |
 | --- | --- | --- |
-| **EndPoint ** | [https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/authorize](https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token)[https://apigw.koscom.co.kr/auth/oauth/v2/authorize](https://apigw.koscom.co.kr/auth/oauth/v2/authorize) |
-| **Parameters** | **response\_type=**`code`&**client\_id=**`클라이언트 ID(API Key)`&**redirect\_uri=**`구현된 callback listener 주소`&**scope=**`지정된 scope`&**state=**`돌려받을 opaque value` |
+| **EndPoint**  | [https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/authorize](https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token)[https://apigw.koscom.co.kr/auth/oauth/v2/authorize](https://apigw.koscom.co.kr/auth/oauth/v2/authorize) |
+| **Parameters** | **response\_type=**`code`&**client\_id=**`클라이언트 ID(API Key)`&**redirect\_uri=**`구현된 callback listener 주소`&**scope=**`지정된 scope`&**state=**`돌려받을 opaque value` |
 
 > * **Parameters**
->   * `response_type `: code
->   * `client_id `: 서비스 등록 시 부여 받은 Client ID\(API Key\) 
->   * `redirect_uri `: 핀테크 기업의 웹 서버에 구현된 OAuth callback listener 주소이며, 이 값은 최초 서비스 등록 시 입력했던 값과 동일해야 함
->   * `scope `: API가 접근하고자 하는 자원 범위
->   * `state `:  state 값은 본래 cross-site request forgery\(CSRF\) 공격에 대응하기 위해 사용하나, 대체로 사용자 세션정보를 넣어 authorization code 요청의 응답이 서버로 redirect되었을 때 어느 사용자의 authorization code인지를 구분하기 위해 사용하는 것이 보통임. 요청에 전송했던 값이 응답에 그대로 반환됨
+>   * `response_type` : code
+>   * `client_id` : 서비스 등록 시 부여 받은 Client ID\(API Key\) 
+>   * `redirect_uri` : 핀테크 기업의 웹 서버에 구현된 OAuth callback listener 주소이며, 이 값은 최초 서비스 등록 시 입력했던 값과 동일해야 함
+>   * `scope` : API가 접근하고자 하는 자원 범위
+>   * `state` :  state 값은 본래 cross-site request forgery\(CSRF\) 공격에 대응하기 위해 사용하나, 대체로 사용자 세션정보를 넣어 authorization code 요청의 응답이 서버로 redirect되었을 때 어느 사용자의 authorization code인지를 구분하기 위해 사용하는 것이 보통임. 요청에 전송했던 값이 응답에 그대로 반환됨
 > * **Example**
 >   *  ​[https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/authorize?response\_type=code&client\_id=l7xxf234248b6fbd42a1a6844861524b2320&redirect\_uri=http://localhost:8080/OpenAPITest/callbacknew&scope=test.kiwoom&state=70e86bd5](https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/authorize?response_type=code&client_id=l7xxf234248b6fbd42a1a6844861524b2320&redirect_uri=http://localhost:8080/OpenAPITest/callbacknew&scope=test.kiwoom&state=70e86bd5)​
 
@@ -70,10 +70,10 @@ Flow 3, 4 절차가 정상적으로 수행되면 오픈플랫폼은 authorizatio
 
 | **Method** | POST |
 | --- | --- | --- | --- | --- |
-| **Header **authorization | Basic _Base64\(client\_id:client\_secret\)_ |
-|  **Header **Content-type | Application/x-www-form-urlencoded |
+| **Header** authorization | Basic _Base64\(client\_id:client\_secret\)_ |
+|  **Header** Content-type | Application/x-www-form-urlencoded |
 | **EndPoint** | [https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/authorize](https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token)[https://apigw.koscom.co.kr/auth/oauth/v2/token](https://apigw.koscom.co.kr/auth/oauth/v2/token) |
-| **Parameters** | **grant\_type=**`authorization_code` &**code=**`할당받은 authorization code` &**redirect\_uri=**`구현된 callback listener 주소` |
+| **Parameters** | **grant\_type=**`authorization_code` &**code=**`할당받은 authorization code` &**redirect\_uri=**`구현된 callback listener 주소` |
 
 > * **Header authorization**
 >
@@ -82,8 +82,8 @@ Flow 3, 4 절차가 정상적으로 수행되면 오픈플랫폼은 authorizatio
 >
 > * **Parameters**
 >   * `grant_type`: authorization code
->   * `code `: Authorization code 요청을 통해 받은 code
->   * `redirect_uri `: 핀테크 기업의 웹 서버에 구현된 OAuth callback listener 주소이며, 이 값은 최초 서비스 등록 시 입력했던 값과 동일해야 함
+>   * `code` : Authorization code 요청을 통해 받은 code
+>   * `redirect_uri` : 핀테크 기업의 웹 서버에 구현된 OAuth callback listener 주소이며, 이 값은 최초 서비스 등록 시 입력했던 값과 동일해야 함
 
 
 
@@ -115,15 +115,15 @@ Refresh token 기능 지원여부는 비즈니스 모델 및 사용 기업의 �
 | **Header** authorization | Basic _Base64\(client\_id:client\_secret\)_ |
 |  **Header** Content-type | Application/x-www-form-urlencoded |
 | **EndPoint** | [https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token](https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token)[https://apigw.koscom.co.kr/auth/oauth/v2/token](https://apigw.koscom.co.kr/auth/oauth/v2/token) |
-| **Parameters** | **grant\_type= **`refresh_token` &**refresh\_token= **`발급받은 refresh_token` &**scope= **`지정된 scope` |
+| **Parameters** | **grant\_type=** `refresh_token` &**refresh\_token=** `발급받은 refresh_token` &**scope=** `지정된 scope` |
 
 > * **Header authorization**
 >   * `Basic Base64(client_id:client_secret)`
 >   * client\_id와 client\_secret을 “:”으로 연결하여 base64로 encoding한 값을 위 형식으로 설정
 > * **Parameters**
->   * `grant_type `: refresh\_token
->   * `refresh_token `: Access token을 발급받을 때 포함되어 있던 refresh token
->   * `scope `: 지정된 scope으로 선택항목
+>   * `grant_type` : refresh\_token
+>   * `refresh_token` : Access token을 발급받을 때 포함되어 있던 refresh token
+>   * `scope` : 지정된 scope으로 선택항목
 
 ### 2. 응답
 
@@ -140,14 +140,14 @@ Access token 요청에 대한 응답과 동일한 형태의 JSON 메시지가 �
 | **Header** authorization | Basic _Base64\(client\_id:client\_secret\)_ |
 |  **Header** Content-type | Application/x-www-form-urlencoded |
 | **Endpoint** | [https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token/revoke](https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token/revoke) [https://apigw.koscom.co.kr/auth/oauth/v2/token/revoke](https://apigw.koscom.co.kr/auth/oauth/v2/token/revoke) |
-| **Parameters** | **token= **`발급받았던_token` &**token\_type\_hint= **`access_token또는refresh_token` |
+| **Parameters** | **token=** `발급받았던_token` &**token\_type\_hint=** `access_token또는refresh_token` |
 
 > * Header authorization
->   * `Basic Base64(client_id:client_secret)    `
+>   * `Basic Base64(client_id:client_secret)`
 >   * client\_id와 client\_secret을 “:”으로 연결하여 base64로 encoding한 값을  위 형식으로 설정
 > * Parameters
->   * `token `: rovoke대상이되는 access token
->   * `token_type_hint `: access\_token, refresh\_token
+>   * `token` : rovoke대상이되는 access token
+>   * `token_type_hint` : access\_token, refresh\_token
 
 ### 2. 응답
 

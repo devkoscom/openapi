@@ -45,4 +45,5 @@
   * [GET - 테이블 외부](format-sample/get-1.md)
 * [format sample \(POST\)](format-sample-post/README.md)
   * [POST - 테이블 내부 설명](format-sample-post/post.md)
+  * [POST - 테이블 외부](format-sample-post/post-1.md)
 

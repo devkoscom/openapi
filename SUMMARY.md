@@ -40,6 +40,9 @@
     * [업종지수 조회](untitled-1/undefined-9/undefined-5.md)
   * 요구형항목
   * [코드표](untitled-1/undefined-8.md)
-* [format sample \(GET\)](format-sample.md)
-* [format sample \(POST\)](format-sample-post.md)
+* [format sample \(GET\)](format-sample/README.md)
+  * [GET - 테이블 내부 설명](format-sample/get.md)
+  * [GET - 테이블 외부](format-sample/get-1.md)
+* [format sample \(POST\)](format-sample-post/README.md)
+  * [POST - 테이블 내부 설명](format-sample-post/post.md)
 

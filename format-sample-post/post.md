@@ -4,10 +4,11 @@ KOSPI/KOSDAQ등의 지수 예상지수 및 업종별 투자자별 거래량등�
 
 
 
-#### Syntax {#syntax}
+## Syntax
 
-* HTTP methods \|  **POST**
-* Authentication  \|  **API Key**
+HTTP methods  \|   **POST**
+
+Authentication   \|   **API Key**
 
 
 
@@ -373,8 +374,7 @@ Bearer 발급받은 access token
 {% endhint %}
 
 {% hint style="warning" %}
-보유비중 조회는 현재 일부 증권사의 경우 값이 부정확한 경우가 있고, 비중대신 수량을 제공하는 경우도 있으므로 주의 필요함. 
-
+보유비중 조회는 현재 일부 증권사의 경우 값이 부정확한 경우가 있고, 비중대신 수량을 제공하는 경우도 있으므로 주의 필요함.   
 보유비중은 수익기여도 \(해당 자산군에서 해당종목이 차지하는 수익기여도\)로 산출한 경우가 대부분이며, 증권사별 산출 기준은 추후 게시예정
 {% endhint %}
 

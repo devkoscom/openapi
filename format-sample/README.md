@@ -3,29 +3,30 @@
 KOSPI/KOSDAQ등의 지수 예상지수 및 업종별 투자자별 거래량등을 제공한다.  
 
 
-#### Syntax {#syntax}
+## Syntax
 
-* HTTP methods
-  * **GET**
-* Authentication
-  * **API Key**
+HTTP methods   \|   **GET**
+
+Authentication    \|   **API Key**
+
+
 
 {% hint style="info" %}
-업종지수  스트리밍 조회는 xx를 참고하세요.
+업종지수 스트리밍 조회는 xx를 참고하세요.
+{% endhint %}
+
+{% hint style="warning" %}
+`marketcode` 및 `issuecode` 는 [코드표 &gt; "시장코드표"](https://koscom.gitbook.io/open-api/untitled-1/undefined-8#undefined)를 참조하세요.
 {% endhint %}
 
 
 
-**Reference**
+`issuecode`
 
-> * `marketcode`  
->   * 코드표 &gt; "시장코드표" 참조
-> * `issuecode`
->   * ex\) KR4101C90009 → **K101C9000**
->   * 코드표 &gt; "시장코드표" 참조    ****
->   * 연결선물코드 추가
->     * 선물최근월물의  종목히스토리 조회를 위해  사용가능
->     * 현재가 조회시 조회결과 종목코드는 현재기준시장에서 거래되는 종목의 단축종목코드로 결과를 보내줌
+연결선물코드 추가
+
+선물최근월물의  종목히스토리 조회를 위해  사용가능  
+현재가 조회시 조회결과 종목코드는 현재기준시장에서 거래되는 종목의 단축종목코드로 결과를 보내줌
 
 
 

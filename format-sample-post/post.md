@@ -12,6 +12,8 @@ Authentication   \|   **API Key**
 
 
 
+
+
 ## 계좌잔고 조회 API
 
 조회대상이 되는 계좌의 실제 잔고 수량, 손익, 수익률 등을 상세히 조회하기 위한 API
@@ -360,17 +362,9 @@ Bearer 발급받은 access token
 | count | number | 응답별 최대 응답 건수 | 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 / assetType이 ‘ALL’인 경우는 page없이 일괄전송이므로 본 필드는 의미 없으므로 0으로 설정 |
 | page | String\(8\) | 다음page를 지시하는 키 | 첫 요청은 “null”로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청 |
 
-> * count : 응답별 최대 응답 건수
->   * 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음
->   * 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함
->   * assetType이 ‘ALL’인 경우는 page없이 일괄전송이므로 본 필드는 의미 없으므로 0으로 설정
-
-
-
-{% hint style="info" %}
-**`assetType`을 ‘ALL’로 요청 가능한 증권사**
-
-: NH투자증권, 대신증권, 키움증권, 신한증권 
+{% hint style="success" %}
+**`assetType`을 ‘ALL’로 요청 가능한 증권사**  
+   :  NH투자증권,  대신증권,  키움증권,  신한증권 
 {% endhint %}
 
 {% hint style="warning" %}
@@ -392,26 +386,16 @@ Bearer 발급받은 access token
 | count | number | 현 메시지 내 응답 건수 |  |
 | page | string\(24\) | 다음 page 번호 |  “null”이면 더 이상 없음 |
 | amt | number | 전체 자산 중 현금잔고 또는 비중  |  |
-| assetType | String\(8\) | 상품구분자 | \*테이블 하단 참조 |
+| assetType | String\(8\) | 상품구분자 | "portfolioResponseBody/queryType/assetType" : "요청시 설정했던 값이 그대로 전송" / "portfolio/equityList/assetType" : "KSP\(코스피\), KDQ\(코스닥\), ETF\(ETF\), FUT\(선물\), OPT\(옵션\), ELW\(ELW\), ETC\(기타\)" / "portfolio/etclist/assetType" : "BOND\(채권\), CD, CP, DLS, ELS, STB\(사채\), RP\(미구분\), CRP\(약정식RP\), RRP\(수시RP\), WRT\(워런트\)" |
 | isinCode | String\(20\) | . | 현재는 지원안함 \(1.0부터 지원예정\) |
 | qty | number | 수량 또는 비중 | 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영안함  |
 | earningRate | number | 수익률 | 소수점 2째자리까지 |
 | fundCode | string\(20\) | 펀드표준코드 |  |
-| fundName | string\(15\) | 펀드명 | \(최대 15자\) |
+| fundName | string\(15\) | 펀드명 | 최대 15자 |
 | maturity | string\(12\) | 만기일 | YYYYMMDD |
 | assetName | string\(15\) | 상품명 |  |
 | respCode | string\(8\) | 응답코드 참고 |  |
 | respMsg | string\(50\) | 응답메세지 참고 |  |
-
-> * assetType : 상품구분자
->   * portfolioResponseBody / queryType / assetType
->     * 요청시 설정했던 값이 그대로 전송
->   * portfolio / equityList /assetType
->     *  KSP\(코스피\), KDQ\(코스닥\), ETF\(ETF\), FUT\(선물\), OPT\(옵션\), ELW\(ELW\), ETC\(기타\)
->   * portfolio / etclist / assetType
->     * BOND\(채권\), CD, CP, DLS, ELS, STB\(사채\), RP\(미구분\), CRP\(약정식RP\), RRP\(수시RP\), WRT\(워런트\)
-
-
 
 
 

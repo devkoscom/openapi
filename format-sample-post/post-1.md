@@ -12,14 +12,6 @@ KOSPI/KOSDAQ등의 지수 예상지수 및 업종별 투자자별 거래량등�
 
 
 
-## Syntax
-
-> HTTP methods   \|  **POST**
->
-> Authentication    \|  **API Key**
-
-
-
 
 
 ## 계좌잔고 조회 API

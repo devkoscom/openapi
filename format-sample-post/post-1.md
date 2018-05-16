@@ -446,13 +446,13 @@ Bearer 발급받은 access token
 | respMsg | string\(50\) | 응답메세지 참고 |  |
 
 > `assetType`  
-> - portfolioResponseBody / queryType / assetType : 요청시 설정했던 값이 그대로 전송  
-> - portfolio / equityList /assetType : KSP\(코스피\), KDQ\(코스닥\), ETF\(ETF\), FUT\(선물\), OPT\(옵션\), ELW\(ELW\), ETC\(기타\)  
-> - portfolio / etclist / assetType : BOND\(채권\), CD, CP, DLS, ELS, STB\(사채\), RP\(미구분\), CRP\(약정식RP\), RRP\(수시RP\), WRT\(워런트\)
-
+> portfolioResponseBody / queryType / assetType : 요청시 설정했던 값이 그대로 전송  
+> portfolio / equityList /assetType : KSP\(코스피\), KDQ\(코스닥\), ETF\(ETF\), FUT\(선물\), OPT\(옵션\), ELW\(ELW\), ETC\(기타\)  
+> portfolio / etclist / assetType : BOND\(채권\), CD, CP, DLS, ELS, STB\(사채\), RP\(미구분\), CRP\(약정식RP\), RRP\(수시RP\), WRT\(워런트\)
+>
 > `qty`   
 > 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영안함
-
+>
 > `count`  
 > 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음  
 > 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함  

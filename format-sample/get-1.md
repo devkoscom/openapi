@@ -12,7 +12,7 @@ Authentication    \|   **API Key**
 
 
 {% hint style="info" %}
-업종지수  스트리밍 조회는 xx를 참고하세요.
+업종지수 스트리밍 조회는 xx를 참고하세요.
 {% endhint %}
 
 {% hint style="warning" %}

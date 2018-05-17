@@ -1,6 +1,7 @@
-# GET - 테이블 내부 설명
+# format sample \(GET\)
 
-KOSPI/KOSDAQ등의 지수 예상지수 및 업종별 투자자별 거래량등을 제공한다.  
+KOSPI/KOSDAQ등의 지수 예상지수 및 업종별 투자자별 거래량등을 제공한다.
+
 
 
 ## Syntax
@@ -314,6 +315,13 @@ Authentication     \|   **API Key**
 | futrmmAgndaContrtPrc | number\(11\) | 원월물의제약정가격 |  |
 | realtmUplmtprc | number\(11\) | 실시간상한가 |  |
 | realtmLwlmtprc | number\(11\) | 실시간하한가 |  |
+
+> `secugrpId`   
+> ST:주권, MF:증권투자회사, RT:부동산투자회사, SC:선박투자회사, IF:사회간접자본투융자회사, DR:주식예탁증서, EW:ELW, EF:ETF, SW:신주인수권증권, SR:신주인수권증서, BC:수익증권, FE:해외ETF, FS:외국주권, EN:ETN 
+>
+> `mktWarnTpCd`  
+> 00:해당없음\(시장경보가 지정될 수 있는 종목에 대해서 지정된바가 없음을 의미\),   
+> 01:투자주의, 02:투자경고, 03:투자위험
 
 
 

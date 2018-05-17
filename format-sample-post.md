@@ -1,4 +1,4 @@
-# POST - 테이블 외부
+# format sample \(POST\)
 
 KOSPI/KOSDAQ등의 지수 예상지수 및 업종별 투자자별 거래량등을 제공한다.
 
@@ -6,9 +6,9 @@ KOSPI/KOSDAQ등의 지수 예상지수 및 업종별 투자자별 거래량등�
 
 ## Syntax
 
-| **HTTP methods** | POST |
-| --- | --- |
-| **Authentication** | API Key |
+HTTP methods    \|   **POST**
+
+Authentication     \|   **API Key**
 
 
 
@@ -152,22 +152,8 @@ Application/json
 | --- | --- | --- | --- | --- |
 | fundcode | String\(20\) | 펀드표준코드 |  |
 | fundName | Number | 펀드이름 |  |
-| page | string\(1\) | 다음 page를 지시하는 키 | \*테이블 하단 참조 |
-| varAtCur | string\(3\) | 잔고구분 | \*테이블 하단 참조 |
-
-> `varAtCur`  
-> NRM\(일반/현금\), CRD\(신용\), LOAN\(대출\), SUM   
-> \(분류가 불가한 경우 구분 없이 합산한 경우며 대출잔고는 제외\)
->
-> `page`  
-> 첫 요청은 null\(“null”\)로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청하며, ALL인 경우는 page없이 일괄전송이므로 본 필드는 의미 없음
->
-> `count`  
-> 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음  
-> 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함  
-> assetType이 ‘ALL’인 경우는 page없이 일괄전송이므로 본 필드는 의미 없으므로 0으로 설정
-
-
+| page | string\(1\) | 다음 page를 지시하는 키 | 첫 요청은 null\(“null”\)로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청하며, ALL인 경우는 page없이 일괄전송이므로 본 필드는 의미 없음 |
+| varAtCur | string\(3\) | 잔고구분 | NRM\(일반/현금\), CRD\(신용\), LOAN\(대출\), SUM \(분류가 불가한 경우 구분 없이 합산한 경우며 대출잔고는 제외\) |
 
 #### Response Parameters
 
@@ -368,48 +354,23 @@ Bearer 발급받은 access token
 | reqIdPlatform | string | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
 | reqIdConsumer | string\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 | 선택 |
 | ci | string\(88\) | 연계정보  | 88bytes |
-| ipAddr | string\(32\) | 사용자 단말 IP주소  | \*테이블 하단 참조 |
-| macAddr | string\(50\) | 사용자 MAC주소  | \*테이블 하단 참조 |
+| ipAddr | string\(32\) | 사용자 단말 IP주소  | dot없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 dash없이 10자리로 채워서 설정 |
+| macAddr | string\(50\) | 사용자 MAC주소  | PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정 |
 | vtAccNo | string\(30\) | 가상계좌번호 |  |
-| assetType | String\(8\) | 자산유형 | \*테이블 하단 참조 |
-| rspType | String\(8\) | 응답유형 | \*테이블 하단 참조 |
-| count | number | 응답별 최대 응답 건수 | \*테이블 하단 참조 |
-| page | String\(8\) | 다음page를 지시하는 키 | \*테이블 하단 참조 |
+| assetType | String\(8\) | 자산유형 | CASH\(현금\), EQTY\(주식\), FUND\(펀드\), ETC\(기타자산\), ALL\(전체\)인 경우는 page 처리없이 대용량 데이터 전송이 가능한 증권사만 가능 |
+| rspType | String\(8\) | 응답유형 | RAT\(잔고구성비율\)은 기본으로 제공하며, 증권사에 따라 QTY\(실제잔고수량\)도 가능하나 본 API의 목적상 사용을 권장하지 않음 |
+| count | number | 응답별 최대 응답 건수 | 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 / assetType이 ‘ALL’인 경우는 page없이 일괄전송이므로 본 필드는 의미 없으므로 0으로 설정 |
+| page | String\(8\) | 다음page를 지시하는 키 | 첫 요청은 “null”로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청 |
 
-> `ipAddr`  
-> dot없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 dash없이 10자리로 채워서 설정
->
-> `macAddr`  
-> PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정
->
-> `assetType`  
-> 값: CASH\(현금\), EQTY\(주식\), FUND\(펀드\), ETC\(기타자산\), ALL\(전체\)인 경우는 page 처리없이 대용량 데이터 전송이 가능한 증권사만 가능
->
-> `rspType`  
-> 값은 RAT\(잔고구성비율\)은 기본으로 제공하며, 증권사에 따라 QTY\(실제잔고수량\)도 가능하나 본 API의 목적상 사용을 권장하지 않음
->
-> `count`  
-> 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음  
-> 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함  
-> assetType이 ‘ALL’인 경우는 page없이 일괄전송이므로 본 필드는 의미 없으므로 0으로 설정
->
-> `page`  
-> 첫 요청은 “null”로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청
-
-
-
-{% hint style="info" %}
-**`assetType`을 ‘ALL’로 요청 가능한 증권사**
-
-: NH투자증권, 대신증권, 키움증권, 신한증권 
+{% hint style="success" %}
+**`assetType`을 ‘ALL’로 요청 가능한 증권사**  
+   :  NH투자증권,  대신증권,  키움증권,  신한증권 
 {% endhint %}
 
 {% hint style="warning" %}
 보유비중 조회는 현재 일부 증권사의 경우 값이 부정확한 경우가 있고, 비중대신 수량을 제공하는 경우도 있으므로 주의 필요함.   
 보유비중은 수익기여도 \(해당 자산군에서 해당종목이 차지하는 수익기여도\)로 산출한 경우가 대부분이며, 증권사별 산출 기준은 추후 게시예정
 {% endhint %}
-
-#### 
 
 #### Response Parameters
 
@@ -425,29 +386,18 @@ Bearer 발급받은 access token
 | count | number | 현 메시지 내 응답 건수 |  |
 | page | string\(24\) | 다음 page 번호 |  “null”이면 더 이상 없음 |
 | amt | number | 전체 자산 중 현금잔고 또는 비중  |  |
-| assetType | String\(8\) | 상품구분자 | \*테이블 하단 참조 |
+| assetType | String\(8\) | 상품구분자 | "portfolioResponseBody/queryType/assetType" : "요청시 설정했던 값이 그대로 전송" / "portfolio/equityList/assetType" : "KSP\(코스피\), KDQ\(코스닥\), ETF\(ETF\), FUT\(선물\), OPT\(옵션\), ELW\(ELW\), ETC\(기타\)" / "portfolio/etclist/assetType" : "BOND\(채권\), CD, CP, DLS, ELS, STB\(사채\), RP\(미구분\), CRP\(약정식RP\), RRP\(수시RP\), WRT\(워런트\)" |
 | isinCode | String\(20\) | . | 현재는 지원안함 \(1.0부터 지원예정\) |
-| qty | number | 수량 또는 비중 | \*테이블 하단 참조  |
+| qty | number | 수량 또는 비중 | 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영안함  |
 | earningRate | number | 수익률 | 소수점 2째자리까지 |
 | fundCode | string\(20\) | 펀드표준코드 |  |
-| fundName | string\(15\) | 펀드명 | \(최대 15자\) |
+| fundName | string\(15\) | 펀드명 | 최대 15자 |
 | maturity | string\(12\) | 만기일 | YYYYMMDD |
 | assetName | string\(15\) | 상품명 |  |
 | respCode | string\(8\) | 응답코드 참고 |  |
 | respMsg | string\(50\) | 응답메세지 참고 |  |
 
-> `assetType`  
-> portfolioResponseBody / queryType / assetType : 요청시 설정했던 값이 그대로 전송  
-> portfolio / equityList /assetType : KSP\(코스피\), KDQ\(코스닥\), ETF\(ETF\), FUT\(선물\), OPT\(옵션\), ELW\(ELW\), ETC\(기타\)  
-> portfolio / etclist / assetType : BOND\(채권\), CD, CP, DLS, ELS, STB\(사채\), RP\(미구분\), CRP\(약정식RP\), RRP\(수시RP\), WRT\(워런트\)
->
-> `qty`   
-> 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영안함
->
-> `count`  
-> 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음  
-> 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함  
-> assetType이 ‘ALL’인 경우는 page없이 일괄전송이므로 본 필드는 의미 없으므로 0으로 설정
+
 
 
 
@@ -591,8 +541,6 @@ Application/json
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### 
-
 #### Request Parameters
 
 | **Name** | **Type** | **Description** |  |
@@ -602,32 +550,17 @@ Application/json
 | reqIdPlatform | string | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
 | reqIdConsumer | string\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 | 선택 |
 | ci | string\(88\) | 연계정보  | 88bytes |
-| ipAddr | string\(32\) | 사용자 단말 IP주소  | \*테이블 하단 참조 |
-| macAddr | string\(50\) | 사용자 MAC주소  | \*테이블 하단 참조 |
+| ipAddr | string\(32\) | 사용자 단말 IP주소  | dot없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 dash없이 10자리로 채워서 설정 |
+| macAddr | string\(50\) | 사용자 MAC주소  | PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정 |
 | vtAccNo | string\(30\) | 가상계좌번호 |  |
 | assetType | String\(8\) | 자산유형 | EQY\(유가증권/코스닥\) |
 | rspType | String\(8\) | 응답유형 | "" \(값없음\) |
-| count | number | 응답별 최대 응답 건수 | \*테이블 하단 참조 |
-| page | String\(8\) | 다음page를 지시하는 키 | \*테이블 하단 참조 |
-
-> `ipAddr`  
-> dot없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 dash없이 10자리로 채워서 설정
->
-> `macAddr`  
-> PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정
->
-> `count`  
-> 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음  
-> 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함
->
-> `page`  
-> 첫 요청은 “null”로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청
+| count | number | 응답별 최대 응답 건수 | 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 |
+| page | String\(8\) | 다음page를 지시하는 키 | 첫 요청은 “null”로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청 |
 
 {% hint style="danger" %}
 `queryType`은 **삼성증권**만 **지원**되며, 타 증권사는 사용하지 못함
 {% endhint %}
-
-#### 
 
 #### Response Parameters
 
@@ -648,7 +581,11 @@ Application/json
 | respCode | string\(8\) | 응답코드 참고 |  |
 | respMsg | string\(50\) | 응답메세지 참고 |  |
 
-
+> `ipAddr`  
+> dot없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 dash없이 10자리로 채워서 설정
+>
+> `macAddr`  
+> PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정
 
 
 

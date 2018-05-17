@@ -15,7 +15,7 @@ description: 오픈API사용시 필요한 절차
 
 ## 오픈API 사용자격은 무엇인가요?
 
-Yes, after a few months we finally found the answer. Sadly, Mike is on vacations right now so I'm afraid we are not able to provide the answer at this point.
+사업자등록이 되어 있는 법인이면 사용이 가능합니다. 다만, 본 오픈API를 이용하여 영위하려는 서비스가 사행성 또는 미풍양속에 저해되는 것을 방지하고자 사전 사업계획서\(서비스설명서\) 제출을 통하여 사전 사용승인 절차를 진행하고 있습니다.
 
 ## 오픈API의 종류는 무엇이 있나요?
 

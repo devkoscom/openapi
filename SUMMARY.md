@@ -26,7 +26,7 @@
       * [Implict Grant Flow](1/api-1/oauth/untitled-1.md)
       * [Scope](1/api-1/oauth/untitled-2.md)
   * [Error Code](1/error.md)
-  * [FAQ](1/faq/README.md)
+  * FAQ
     * [오픈API 사용절차](1/faq/api.md)
   * [기타](1/undefined-3.md)
 * D. 시세서비스

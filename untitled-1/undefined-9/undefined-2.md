@@ -349,14 +349,12 @@ ddddd
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| isuSrtCd | string\(12\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
-| cmpprevddTpCd | string\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
-| cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | string\(12\) | 종목단축코드 | 표준코드 |
 | opnprc | number\(11\) | 시가 | 단위:원 |
 | hgprc | number\(11\) | 고가 | 단위:원 |
 | lwprc | number\(11\) | 저가 | 단위:원 |
-| trdPrc | number\(11\) | 체결가격 | 0 |
+| trdPrc | number\(11\) | 체결가격 |  |
 | trdvol | number\(10\) | 체결수량, 거래량 | 단위:주 |
 | accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 일반체결수량+협의대량체결수량+EFP누적체결수량 /2009.08.31 |
 | accTrdval | number\(22\) | 누적거래대금 | 일반체결대금+협의대량체결대금+EFP누적체결대금 /2009.08.31 |
@@ -460,18 +458,44 @@ ddddd
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| isuSrtCd | String\(12\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
-| isuNm | String\(80\) | 종목명 |  |
-| hisLists | Array\(4\) | 과거리스트 |  |
-| inddTm | string\(8\) | 일중시간 | HH:MM:SS |
-| inddOpnprc | number\(11\) | 일중시가 | 일중데이타\(10초, 1분, 10분\) |
-| inddHgprc | number\(11\) | 일중고가 | 일중데이타\(10초, 1분, 10분\) |
-| inddLwprc | number\(11\) | 일중저가 | 일중데이타\(10초, 1분, 10분\) |
-| inddClsprc | number\(11\) | 일중종가 | 일중데이타\(10초, 1분, 10분\) |
-| inddTrdvol | number\(11\) | 일중거래량 | 일중데이타\(10초, 1분, 10분\) |
-
-
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(12\) | 종목단축코드 | 단축코 |
+| bidTotOrdRqty | number\(12\) | 매수총호가잔량 |  |
+| bidStep1BstordPrc | number\(11\) | 매수1단계우선호가가격 |  |
+| bidStep1BstordRqty | number\(12\) | 매수1단계우선호가잔량 |  |
+| bidStep2BstordPrc | number\(11\) | 매수2단계우선호가가격 |  |
+| bidStep2BstordRqty | number\(12\) | 매수2단계우선호가잔량 |  |
+| bidStep3BstordPrc | number\(11\) | 매수3단계우선호가가격 |  |
+| bidStep3BstordRqty | number\(12\) | 매수3단계우선호가잔량 |  |
+| bidStep4BstordPrc | number\(11\) | 매수4단계우선호가가격 |  |
+| bidStep4BstordRqty | number\(12\) | 매수4단계우선호가잔량 |  |
+| bidStep5BstordPrc | number\(11\) | 매수5단계우선호가가격 |  |
+| bidStep5BstordRqty | number\(12\) | 매수5단계우선호가잔량 |  |
+| askTotOrdRqty | number\(12\) | 매도총호가잔량 |  |
+| askStep1BstordPrc | number\(11\) | 매도1단계우선호가가격 |  |
+| askStep1BstordRqty | number\(12\) | 매도1단계우선호가잔량 |  |
+| askStep2BstordPrc | number\(11\) | 매도2단계우선호가가격 |  |
+| askStep2BstordRqty | number\(12\) | 매도2단계우선호가잔량 |  |
+| askStep3BstordPrc | number\(11\) | 매도3단계우선호가가격 |  |
+| askStep3BstordRqty | number\(12\) | 매도3단계우선호가잔량 |  |
+| askStep4BstordPrc | number\(11\) | 매도4단계우선호가가격 |  |
+| askStep4BstordRqty | number\(12\) | 매도4단계우선호가잔량 |  |
+| askStep5BstordPrc | number\(11\) | 매도5단계우선호가가격 |  |
+| askStep5BstordRqty | number\(12\) | 매도5단계우선호가잔량 |  |
+| bidValidOrdCnt | number\(11\) | 매수유효호가건수 |  |
+| bidStep1BstordCnt | number\(11\) | 매수1단계우선호가건수 |  |
+| bidStep2BstordCnt | number\(11\) | 매수2단계우선호가건수 |  |
+| bidStep3BstordCnt | number\(11\) | 매수3단계우선호가건수 |  |
+| bidStep4BstordCnt | number\(11\) | 매수4단계우선호가건수 |  |
+| bidStep5BstordCnt | number\(11\) | 매수5단계우선호가건수 |  |
+| askValidOrdCnt | number\(11\) | 매도유효호가건수 |  |
+| askStep1BstordCnt | number\(11\) | 매도1단계우선호가건수 |  |
+| askStep2BstordCnt | number\(11\) | 매도2단계우선호가건수 |  |
+| askStep1BstordCnt | number\(11\) | 매도3단계우선호가건수 |  |
+| askStep1BstordCnt | number\(11\) | 매도4단계우선호가건수 |  |
+| askStep1BstordCnt | number\(11\) | 매도5단계우선호가건수 |  |
+| ordAcptTm | number\(11\) | 호가접수시각 | HHMMSSmm |
+| deemTrdPrc | number\(11\) | 예상체결가격 |  |
 
 
 

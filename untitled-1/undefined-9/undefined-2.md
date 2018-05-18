@@ -648,3 +648,5 @@ ddddd
 | lwprc | number\(11\) | 저가 |  |
 | opnintQty | number\(10\) | 미결제약정수량 |  |
 
+
+

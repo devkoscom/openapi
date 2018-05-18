@@ -664,5 +664,23 @@ ddddd
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR4201KC1756 → 201KC175 |
+| isuNm | String\(80\) | 종목명 |  |
+| hisLists | Array\(4\) | 과거리스트 |  |
+| trdDd | string\(8\) | 체결일자,거래일자,매매일자 | YYYYMMDD |
+| trdPrc | number\(11\) | 체결가격 |  |
+| cmpprevddTpCd | string\(1\) | 전일대비부호 |  |
+| cmpprevddPrc | number\(11\) | 전일대비가격 |  |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 |  |
+| accTrdval | number\(22\) | 누적거래대금 |  |
+| opnprc | number\(11\) | 시가 |  |
+| hgprc | number\(11\) | 고가 |  |
+| lwprc | number\(11\) | 저가 |  |
+| opnintQty | number\(10\) | 미결제약정수량 |  |
+
 
 

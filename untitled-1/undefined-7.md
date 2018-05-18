@@ -36,11 +36,11 @@ Authentication    \|   **API Key**
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter type="string" required=true name="marketcode" %}
-시장구분 \(kospi \| kosdaq\)
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
+시장구분\(kospi \| kosdaq\)
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -97,11 +97,11 @@ Authentication    \|   **API Key**
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter type="string" name="marketcode" required=true %}
-시장구분 \(kospi \| kosdaq\)
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" required=true name="marketcode" %}
+시장구분\(kospi \| kosdaq\)
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -163,11 +163,13 @@ Authentication    \|   **API Key**
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
+{% api-method-path-parameters %}
 {% api-method-parameter type="string" name="marketcode" required=true %}
-시장구분 \(kospi \| kosdaq\)
+시장구분\(kospi \| kosdaq\)
 {% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
+{% api-method-query-parameters %}
 {% api-method-parameter type="string" name="isuCd" required=true %}
 종목코드 ex\) 005930,000660
 {% endapi-method-parameter %}
@@ -250,11 +252,13 @@ Authentication    \|   **API Key**
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
+{% api-method-path-parameters %}
 {% api-method-parameter type="string" name="marketcode" required=true %}
-시장구분 \(kospi \| kosdaq\)
+시장구분\(kospi \| kosdaq\)
 {% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
+{% api-method-query-parameters %}
 {% api-method-parameter type="string" name="isuCd" required=true %}
 종목코드 ex\) 005930,000660
 {% endapi-method-parameter %}

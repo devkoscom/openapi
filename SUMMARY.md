@@ -27,7 +27,8 @@
       * [Scope](1/api-1/oauth/untitled-2.md)
   * [Error Code](1/error.md)
   * FAQ
-    * [오픈API 사용절차](1/faq/api.md)
+    * [오픈API 사용절차](1/faq/api/README.md)
+      * [계좌조회서비스](1/faq/api/undefined.md)
   * [기타](1/undefined-3.md)
 * D. 시세서비스
   * [개요](untitled-1/undefined-2.md)

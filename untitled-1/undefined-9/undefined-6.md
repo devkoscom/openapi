@@ -4,12 +4,11 @@
 
 
 
-#### Syntax
+## Syntax
 
-* HTTP methods
-  * **GET**
-* Authentication
-  * **API Key**
+HTTP methods    \|   **GET**
+
+Authentication     \|   **API Key**
 
 
 
@@ -28,11 +27,11 @@
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="marketcode" type="string" required=true %}
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" required=true name="marketcode" %}
 시장구분 \(kospi \| kosdaq\)
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -98,15 +97,15 @@
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="marketcode" type="string" required=true %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="marketcode" required=true type="string" %}
 시장구분 \(kospi \| kosdaq\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="issuecode" type="string" required=true %}
+{% api-method-parameter name="issuecode" required=true type="string" %}
 종목코드 ex\)005930
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -180,12 +179,12 @@
 | isuCd | string\(12\) | 종목코드 | ​ |
 | isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
 | isuKorAbbrv | string\(40\) | 종목한글약명 | 가나다 |
-| secugrpId | string\(2\) | 증권그룹ID | \*테이블하단참고 |
-| mktWarnTpCd | string\(2\) | 시장경보구분코드 | \*테이블하단참고 |
+| secugrpId | string\(2\) | 증권그룹ID | ST:주권, MF:증권투자회사, RT:부동산투자회사, SC:선박투자회사,IF:사회간접자본투융자회사, DR:주식예탁증서, EW:ELW, EF:ETF,SW:신주인수권증권, SR:신주인수권증서, BC:수익증권, FE:해외ETF, FS:외국주권, EN:ETN  |
+| mktWarnTpCd | string\(2\) | 시장경보구분코드 | 00:해당없음\(시장경보가 지정될 수 있는 종목에 대해서 지정된 바가 없음을 의미\), 01:투자주의, 02:투자경고, 03:투자위험 |
 | admisuYn | string\(1\) | 관리종목여부 | Y:관리 N:일반 |
 | haltYn | string\(1\) | 거래정지여부 | Y, N  |
 | idxIndMidclssCd | string\(3\) | 지수업종중분류코드 | 업종분류, 상세코드는 코드표\(업종\) 참고 |
-| mktcapScaleCd | string\(1\) | 시가총액규모코드 | \*테이블하단참고 |
+| mktcapScaleCd | string\(1\) | 시가총액규모코드 | 유가 \(0:제외 1:대 2:중 3:소\) / 코스닥 \(0:제외 1:KOSDAQ100 2:KOSDAQmid300 3:KOSDAQsmall\) |
 | mfindYn | string\(1\) | 제조업여부 | Y, N \(유가\)제조업여부 |
 | smeYn | string\(1\) | 중소기업여부 | Y, N \(코스닥\)중소기업여부 |
 | 업종 | string\(1\) | KRX100종목여부 | Y, N \(유가\)KOSPI100여부 \(코스닥\)프리미어여부 |
@@ -199,7 +198,7 @@
 | uplmtprc | number\(11\) | 상한가 |  |
 | lwlmtprc | number\(11\) | 하한가 |  |
 | sbPrc | number\(11\) | 대용가격 | ST,FS,DR,MF,RT,SC,IF,ET,FE,BC,EN 만 해당  |
-| parval | number\(11\) | 액면가 | \*테이블하단참고 |
+| parval | number\(11\) | 액면가 | 9\(9\)V9\(3\) 외국주권일 경우 소숫점셋째자리까지 표현가능/코스닥의 각국의 최소화폐단위 표시는 유가기준으로 통일 ※ST,FS,RT,SC,BC만 해당 |
 | isuPrc | number\(11\) | 발행가격 | ELW, 신주인수권증서 포함 |
 | listDd | string\(8\) | 상장일자 | YYYYMMDD |
 | listShrs | number\(16\) | 상장주식수,상장증권수 |  |
@@ -218,24 +217,6 @@
 | adjStkprcCalcYn | string\(1\) | 수정주가산출여부 | Y, N |
 | prevddNav | number\(22\) | 전일순자산가치 | ETF종목일 경우 소수점 2자리로 표현, 일반종목은 0 |
 
-> * secugrpId : 증권그룹 ID
->   * ST:주권, MF:증권투자회사, RT:부동산투자회사, SC:선박투자회사,
->
->     IF:사회간접자본투융자회사, DR:주식예탁증서,     EW:ELW, EF:ETF,     SW:신주인수권증권, SR:신주인수권증서, BC:수익증권,     FE:해외ETF, FS:외국주권    , EN:ETN 
-> * mktWarnTpCd : 시장경보구분코드
->   * 00:해당없음\(시장경보가 지정될 수 있는 종목에 대해서 지정된
->
->     바가 없음을 의미\), 01:투자주의, 02:투자경고, 03:투자위험
-> * mktcapScaleCd : 시가총액규모코드
->   * 유가 \(0:제외 1:대 2:중 3:소\)
->   * 코스닥 \(0:제외 1:KOSDAQ100 2:KOSDAQmid300 3:KOSDAQsmall\)
-> * parval : 액면가
->   * 9\(9\)V9\(3\) 외국주권일 경우 소숫점셋째자리까지 표현가능
->
->     코스닥의 각국의 최소화폐단위 표시는 유가기준으로 통일
->
->     ※ST,FS,RT,SC,BC만 해당
-
 
 
 
@@ -253,15 +234,15 @@
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="marketcode" type="string" required=true %}
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
 시장구분 \(kospi \| kosdaq\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="issuecode" type="string" required=true %}
+{% api-method-parameter type="string" name="issuecode" required=true %}
 종목코드 ex\)005930
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -335,15 +316,15 @@
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="marketcode" type="string" required=true %}
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
 시장구분 \(kospi \| kosdaq\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="issuecode" type="string" required=true %}
+{% api-method-parameter type="string" required=true name="issuecode" %}
 종목코드 ex\)005930
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -406,24 +387,16 @@
 | accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위:주 |
 | accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
 | lstAskbidTpCd | string\(1\) | 최종매도매수구분코드 | 1:매도, 2:매수 \(최종으로 들어온 호가의 매도매수구분값\) |
-| trdTm | string\(8\) | 체결시각,거래시각 |  |
+| trdTm | string\(8\) | 체결시각,거래시각 | \*테이블 하단 참고 |
 | askordPrc\_1 | number\(11\) | 매도호가가격\_1 | 단위:원 \(체결+우선호가 발생시에만 전송\) |
 | bidordPrc\_1 | number\(11\) | 매수호가가격\_1 |  단위:원 |
 
-> *  `trdTm`
->   * "HHMMSSmm" 형태로 시간전송
+> `trdTm`
 >
->      - 정규장 개시전 또는 정규장 체결 발생 이전 : 0
->
->      - 장운영시그널, 대량체결 포함
->
->   * ※ 장운영시그널
->
->     정규장마감\(15:00\):31000000/장종료시간외마감\(15:30\):41000000/단일가마감\(18:00\):81000000/
->
->     일반Buy-in마감\(18:00\):91000007/당일Buy-in마감\(18:00\):91000008
->
->   * ※ 대량체결시 장전대량매매체결:51000000/장중대량매매체결:61000000/장후대량매매체결:71000000"
-
-
+>  "HHMMSSmm" 형태로 시간전송  
+>    - 정규장 개시전 또는 정규장 체결 발생 이전 : 0  
+>    - 장운영시그널, 대량체결 포함  
+> ※ 장운영시그널  
+>   정규장마감\(15:00\):31000000/장종료시간외마감\(15:30\):41000000/단일가마감\(18:00\):81000000/일반Buy-in마감\(18:00\):91000007/당일Buy-in마감\(18:00\):91000008  
+> ※ 대량체결시 장전대량매매체결:51000000/장중대량매매체결:61000000/장후대량매매체결:71000000"
 

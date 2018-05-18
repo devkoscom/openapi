@@ -22,8 +22,9 @@ tick10, quote10 은 주식/선물/옵션시장별 체결, 호가조회 데이타
 
 ## 1. 실시간 시세
 
-WebSocket 세션연결후 개별 종목기준으로 실시간 데이타 수신등록\(subscribe\)하면, 등록된 종목의 시세 변동시 지정된 항목등 \(preset 방식\) 또는 요청한 항목들 \(요구형- change\) 이 실시간으로 전송\(publish\) 됨   
-**요약** :  **session 연결 후 subscribe & publish**
+WebSocket 세션연결후 개별 종목기준으로 실시간 데이타 수신등록\(subscribe\)하면, 등록된 종목의 시세 변동시 지정된 항목등 \(preset 방식\) 또는 요청한 항목들 \(요구형- change\) 이 실시간으로 전송\(publish\) 됨 
+
+**Summary**            \|    **session 연결 후 subscribe & publish**
 
 세션기준 200건 등록\(subscribe\) 가능 / 체결, 호가 동시 등록시 100종목
 
@@ -65,34 +66,29 @@ WebSocket 세션연결후 개별 종목기준으로 실시간 데이타 수신�
 
 ## 2. 전종목 실시간 시세
 
-WebSocket 세션을 연결하면, 시장기준 전종목의 현재가가 변경시 주기적\(0.5 초 이내\)으로 종목코드, 시간, 체결가, 누적거래량을 전송  
-**요약** :  **session 연결 후 publish without subscribe**
+WebSocket 세션을 연결하면, 시장기준 전종목의 현재가가 변경시 주기적\(0.5 초 이내\)으로 종목코드, 시간, 체결가, 누적거래량을 전송
+
+**Summary**            \|    **session 연결 후 publish without subscribe**
+
+## Syntax
+
+Methods               \|   **Web Socket**
+
+Authentication     \|   **API Key**
 
 
 
-#### 특징
+### 특징
 
-* 데이타 항목
-  * 종목코드, 체결가, 체결수량, 시간
-* 데이타 전송의 효율성을 위하여 최대 50건씩 Packing 하여 전송
-* 별도의 데이터 복구 및 재전송 작업 없음
+데이타 항목          \|   종목코드, 체결가, 체결수량, 시간  
+데이타 전송의 효율성을 위하여 최대 50건씩 Packing 하여 전송  
+별도의 데이터 복구 및 재전송 작업 없음
 
 {% hint style="warning" %}
  장 시간 중에만 실시간 데이터 발생
 {% endhint %}
 
-#### URI 입력값 {#uri}
-
-* `ws_marketcode` : 시장구분 
-
-            \( KOSPI :  **ws\_ksp**_,_   KOSDAQ :  **ws\_kdq** \)
-
-#### Syntax {#syntax}
-
-* Methods
-  * web socket
-* Authentication
-  * API Key
+####  {#uri}
 
 {% api-method method="options" host="ws://sandbox-apigw.koscom.co.kr" path="/{ws\_marketcode}/" %}
 {% api-method-summary %}

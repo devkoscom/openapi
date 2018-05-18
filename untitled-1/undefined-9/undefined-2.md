@@ -370,7 +370,7 @@ ddddd
 
 
 
-## 상품/지수선물 종목 우선호가
+## 상품/지수선물 우선호가
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/orderbook" %}
 {% api-method-summary %}
@@ -451,15 +451,11 @@ ddddd
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% hint style="danger" %}
-테이블 추가작업 해야함 :DDDDDDDDDDD
-{% endhint %}
-
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| isuSrtCd | String\(12\) | 종목단축코드 | 단축코 |
+| isuSrtCd | String\(12\) | 종목단축코드 | 단축코드 |
 | bidTotOrdRqty | number\(12\) | 매수총호가잔량 |  |
 | bidStep1BstordPrc | number\(11\) | 매수1단계우선호가가격 |  |
 | bidStep1BstordRqty | number\(12\) | 매수1단계우선호가잔량 |  |
@@ -494,14 +490,14 @@ ddddd
 | askStep1BstordCnt | number\(11\) | 매도3단계우선호가건수 |  |
 | askStep1BstordCnt | number\(11\) | 매도4단계우선호가건수 |  |
 | askStep1BstordCnt | number\(11\) | 매도5단계우선호가건수 |  |
-| ordAcptTm | number\(11\) | 호가접수시각 | HHMMSSmm |
+| ordAcptTm | number\(11\) | 호가접수시각 |  |
 | deemTrdPrc | number\(11\) | 예상체결가격 |  |
 
 
 
 
 
-## 상품/지수선물 종목 일중
+## 상품/지수선물 일중
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/intraday" %}
 {% api-method-summary %}
@@ -509,7 +505,7 @@ ddddd
 {% endapi-method-summary %}
 
 {% api-method-description %}
-상품/지수선물 종목 10초/분별 데이터 제공
+상품/지수선물 종목 10초/분별 데이터 제공 \(최대 100건까지 조회가능\)
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -648,8 +644,4 @@ ddddd
 | hgprc | number\(11\) | 고가 |  |
 | lwprc | number\(11\) | 저가 |  |
 | opnintQty | number\(10\) | 미결제약정수량 |  |
-
-
-
-
 

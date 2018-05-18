@@ -2,17 +2,17 @@
 
 개별 종목기준 현재가 조회 대비 조회 빈도를 줄일수 있는 방식의 조회로 시장기준/복수종목기준 방식을 제공 
 
-{% hint style="danger" %}
-별도의 **시세표 라이센스 필요**
-{% endhint %}
-
-
-
 ## Syntax
 
 HTTP methods   \|   **GET**
 
 Authentication    \|   **API Key**
+
+
+
+{% hint style="danger" %}
+별도의 **시세표 라이센스 필요!**
+{% endhint %}
 
 
 

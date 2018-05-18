@@ -38,28 +38,6 @@ Authentication     \|   **API Key**
 Application/json
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="accInfo" type="string" required=true %}
- 요청메세지 본문
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="partner" type="object" required=true %}
- 핀테크 서비스 정보
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="commonHeader" type="object" required=true %}
- 요청 메세지 제어 헤더 
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="devInfo" type="object" required=true %}
- .
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="balanceRequestBody" type="object" required=true %}
- .
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -193,28 +171,6 @@ Bearer 발급받은 access token
  Application/json
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="partner" type="string" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="commonHeader" type="string" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="devInfo" type="string" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="accInfo" type="string" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="portfolioRequestBody" type="string" required=true %}
-
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -425,28 +381,6 @@ Bearer 발급받은 access token
 Application/json
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="partner" type="object" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="commonHeader" type="object" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="devInfo" type="object" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="accInfo" type="object" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="interestSymbolListRequestBody" type="object" required=true %}
-
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}

@@ -148,6 +148,27 @@ ddddd
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(3\) | 업종코드 | 업종코드표 참조 |
+| trdTm | String\(8\) | 체결시각,거래시각 | \*테이블 하단 참고 |
+| trdPrc | number\(10\) | 지수 |  |
+| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| cmpprevddPrc | number\(11\) | 전일대비지수 |  |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위:주 |
+| accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
+
+> `trdTm`
+>
+>  "HHMMSSmm" 형태로 시간전송  
+>    - 정규장 개시전 또는 정규장 체결 발생 이전 : 0  
+>    - 장운영시그널, 대량체결 포함  
+> ※ 장운영시그널  
+>   정규장마감\(15:00\):31000000/장종료시간외마감\(15:30\):41000000/단일가마감\(18:00\):81000000/일반Buy-in마감\(18:00\):91000007/당일Buy-in마감\(18:00\):91000008  
+> ※ 대량체결시 장전대량매매체결:51000000/장중대량매매체결:61000000/장후대량매매체결:71000000"
+
 
 
 ## 업종 예상지수
@@ -200,6 +221,20 @@ ddddd
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(3\) | 업종코드 | 업종코드표 참조 |
+| deemTm | String\(8\) | 예상체결시각 | HHMMSSmm |
+| deemTrdPrc | number\(10\) | 예상지수 |  |
+| deemcmpprevddTpCd | String\(1\) | 예상전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| deemcmpprevddPrc | number\(11\) | 예상전일대비지수 |  |
+| deemAccTrdvol | number\(12\) | 예상누적체결수량 | 단위:주 |
+| deemAccTrdval | number\(22\) | 예상누적거래대금 | 단위:원 |
+
+
+
 
 
 ## 업종 시가총액
@@ -249,6 +284,19 @@ ddddd
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(3\) | 업종코드 |  |
+| isuCnt | number\(16\) | 종목수 |  |
+| listShrs | number\(16\) | 상장주식수,상장증권수 | 업종상장주식수 단위는  천주, 그외는 1주 |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위:주 |
+| accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
+| mktcap | number\(22\) | 시가총액 | 단위: 업종-백만 |
+
+
 
 
 
@@ -314,6 +362,18 @@ ddddd
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Tm | string\(8\) | 장시간 | HHMMSSmm |
+| invstLists | Array\(4\) | 투자자리스트 |  |
+| invstCd | string\(4\) | 투자자코드 | '투자자코드표' 참조 |
+| askTrdvol | number\(10\) | 매도체결수량,매도거래량 |  |
+| askTrdval | number\(22\) | 매도거래대금 |  |
+| bidTrdvol | number\(10\) | 매수체결수량,매수거래량 |  |
+| bidTrdval | number\(22\) | 매수거래대금 |  |
+
 
 
 
@@ -346,7 +406,7 @@ ddddd
 일중전송주기구분코드 구분코드 \(10:10초, 60:1분, 600:10분\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter type="string" name="inqStrtDd" required=true %}
+{% api-method-parameter type="string" name="inqStrtDd" required=false %}
 조회시작일자 \(YYYYMMDD\)
 {% endapi-method-parameter %}
 
@@ -410,7 +470,7 @@ ddddd
 
 | **Name** | **Type** | **Description** |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| isuSrtCd | String\(3\) | 업종코드 | 0 |
 | isuNm | String\(80\) | 종목명 |  |
 | hisLists | Array\(4\) | 과거리스트 |  |
 | inddTm | string\(8\) | 일중시간 | HH:MM:SS |

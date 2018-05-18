@@ -77,6 +77,27 @@ ddddd
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
+| opnprc | number\(11\) | 시가 | 단위:원 |
+| hgprc | number\(11\) | 고가 | 단위:원 |
+| lwprc | number\(11\) | 저가 | 단위:원 |
+| trdPrc | number\(11\) | 체결가격 |  |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위:주 |
+| accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
+| isuCnt | number\(16\) | 종목수 |  |
+| listShrs | number\(16\) | 상장주식수,상장증권수 | 업종상장주식수 단위는  천주, 그외는 1주 |
+| mktcap | number\(22\) | 시가총액 | 단위: 업종-백만 |
+
+
+
+
+
 ## 업종 지수
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/index" path="/{marketcode}/{issuecode}/index" %}
@@ -295,6 +316,8 @@ ddddd
 
 
 
+
+
 ## 업종 일중
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/index" path="/{marketcode}/{issuecode}/intraday" %}
@@ -382,6 +405,22 @@ ddddd
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| isuNm | String\(80\) | 종목명 |  |
+| hisLists | Array\(4\) | 과거리스트 |  |
+| inddTm | string\(8\) | 일중시간 | HH:MM:SS |
+| inddOpnprc | number\(11\) | 일중시가 | 일중데이타\(10초, 1분, 10분\) |
+| inddHgprc | number\(11\) | 일중고가 | 일중데이타\(10초, 1분, 10분\) |
+| inddLwprc | number\(11\) | 일중저가 | 일중데이타\(10초, 1분, 10분\) |
+| inddClsprc | number\(11\) | 일중종가 | 일중데이타\(10초, 1분, 10분\) |
+| inddTrdvol | number\(11\) | 일중거래량 | 일중데이타\(10초, 1분, 10분\) |
+
+
 
 
 
@@ -471,6 +510,23 @@ ddddd
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(3\) | 업종코드 | 코드표 &gt;업종코드표 참조 |
+| isuKorNm | String\(80\) | 종목한글명 |  |
+| hisLists | Array\(4\) | 과거리스트 |  |
+| trdDd | string\(8\) | 체결일자,거래일자,매매일자 | YYYYMMDD |
+| trdPrc | number\(11\) | 체결가격 |  |
+| cmpprevddTpCd | string\(1\) | 전일대비부호 |  |
+| cmpprevddPrc | number\(11\) | 전일대비가격 |  |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 |  |
+| accTrdval | number\(22\) | 누적거래대금 |  |
+| opnprc | number\(11\) | 시가 |  |
+| hgprc | number\(11\) | 고가 |  |
+| lwprc | number\(11\) | 저가 |  |
 
 
 

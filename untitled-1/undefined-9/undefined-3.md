@@ -338,6 +338,8 @@ ddddd
      "realtmLwlmtprc": 71.8 
   } 
 }
+
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -347,24 +349,29 @@ ddddd
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| isuSrtCd | string\(12\) | 종목코드 | 예\) KR7000660001 → 000660 |
-| cmpprevddTpCd | string\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
-| cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuCd | string\(12\) | 종목코드 | 표준코드 |
 | opnprc | number\(11\) | 시가 | 단위:원 |
 | hgprc | number\(11\) | 고가 | 단위:원 |
 | lwprc | number\(11\) | 저가 | 단위:원 |
 | trdPrc | number\(11\) | 체결가격 | 0 |
-| trdvol | number\(10\) | 체결수량, 거래량 | 단위:주 |
-| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 일반체결수량+협의대량체결수량+EFP누적체결수량 /2009.08.31 |
-| accTrdval | number\(22\) | 누적거래대금 | 일반체결대금+협의대량체결대금+EFP누적체결대금 /2009.08.31 |
-| negoBlkAccTrdvol | number\(12\) | 협의대량누적체결수량 |  |
+| trdvol | number\(10\) | 체결수량, 거래량 | 0 |
+| trdTm | string\(8\) | 체결시각,거래시각 | \*테이블 하단 참고 |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위:주 |
+| accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
+| negoBlkAccTrdvol | number\(15\) | 협의대량누적체결수량 |  |
 | lstAskbidTpCd | string\(1\) | 최종매도매수구분코드 | 1:매도, 2:매수 \(최종으로 들어온 호가의 매도매수구분값\) |
-| trdTm | string\(8\) | 체결시각,거래시각 |  |
-| fstmmAgndaContrtPrc | number\(11\) | 최근월물의제약정가격 |  |
-| futrmmAgndaContrtPrc | number\(11\) | 원월물의제약정가격 |  |
 | realtmUplmtprc | number\(11\) | 실시간상한가 |  |
 | realtmLwlmtprc | number\(11\) | 실시간하한가 |  |
+
+> `trdTm`
+>
+>  "HHMMSSmm" 형태로 시간전송  
+>    - 정규장 개시전 또는 정규장 체결 발생 이전 : 0  
+>    - 장운영시그널, 대량체결 포함  
+> ※ 장운영시그널  
+>   정규장마감\(15:00\):31000000/장종료시간외마감\(15:30\):41000000/단일가마감\(18:00\):81000000/일반Buy-in마감\(18:00\):91000007/당일Buy-in마감\(18:00\):91000008  
+> ※ 대량체결시 장전대량매매체결:51000000/장중대량매매체결:61000000/장후대량매매체결:71000000"
 
 
 
@@ -448,9 +455,53 @@ ddddd
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(12\) | 종목단축코드 | 단축코드 |
+| bidTotOrdRqty | number\(12\) | 매수총호가잔량 |  |
+| bidStep1BstordPrc | number\(11\) | 매수1단계우선호가가격 |  |
+| bidStep1BstordRqty | number\(12\) | 매수1단계우선호가잔량 |  |
+| bidStep2BstordPrc | number\(11\) | 매수2단계우선호가가격 |  |
+| bidStep2BstordRqty | number\(12\) | 매수2단계우선호가잔량 |  |
+| bidStep3BstordPrc | number\(11\) | 매수3단계우선호가가격 |  |
+| bidStep3BstordRqty | number\(12\) | 매수3단계우선호가잔량 |  |
+| bidStep4BstordPrc | number\(11\) | 매수4단계우선호가가격 |  |
+| bidStep4BstordRqty | number\(12\) | 매수4단계우선호가잔량 |  |
+| bidStep5BstordPrc | number\(11\) | 매수5단계우선호가가격 |  |
+| bidStep5BstordRqty | number\(12\) | 매수5단계우선호가잔량 |  |
+| askTotOrdRqty | number\(12\) | 매도총호가잔량 |  |
+| askStep1BstordPrc | number\(11\) | 매도1단계우선호가가격 |  |
+| askStep1BstordRqty | number\(12\) | 매도1단계우선호가잔량 |  |
+| askStep2BstordPrc | number\(11\) | 매도2단계우선호가가격 |  |
+| askStep2BstordRqty | number\(12\) | 매도2단계우선호가잔량 |  |
+| askStep3BstordPrc | number\(11\) | 매도3단계우선호가가격 |  |
+| askStep3BstordRqty | number\(12\) | 매도3단계우선호가잔량 |  |
+| askStep4BstordPrc | number\(11\) | 매도4단계우선호가가격 |  |
+| askStep4BstordRqty | number\(12\) | 매도4단계우선호가잔량 |  |
+| askStep5BstordPrc | number\(11\) | 매도5단계우선호가가격 |  |
+| askStep5BstordRqty | number\(12\) | 매도5단계우선호가잔량 |  |
+| bidValidOrdCnt | number\(11\) | 매수유효호가건수 |  |
+| bidStep1BstordCnt | number\(11\) | 매수1단계우선호가건수 |  |
+| bidStep2BstordCnt | number\(11\) | 매수2단계우선호가건수 |  |
+| bidStep3BstordCnt | number\(11\) | 매수3단계우선호가건수 |  |
+| bidStep4BstordCnt | number\(11\) | 매수4단계우선호가건수 |  |
+| bidStep5BstordCnt | number\(11\) | 매수5단계우선호가건수 |  |
+| askValidOrdCnt | number\(11\) | 매도유효호가건수 |  |
+| askStep1BstordCnt | number\(11\) | 매도1단계우선호가건수 |  |
+| askStep2BstordCnt | number\(11\) | 매도2단계우선호가건수 |  |
+| askStep1BstordCnt | number\(11\) | 매도3단계우선호가건수 |  |
+| askStep1BstordCnt | number\(11\) | 매도4단계우선호가건수 |  |
+| askStep1BstordCnt | number\(11\) | 매도5단계우선호가건수 |  |
+| ordAcptTm | number\(11\) | 호가접수시각 |  |
+| deemTrdPrc | number\(11\) | 예상체결가격 |  |
 
 
-## 상품/지수옵션 종목 일중
+
+
+
+## 상품/지수옵션 일중
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/{issuecode}/intraday" %}
 {% api-method-summary %}
@@ -458,7 +509,7 @@ ddddd
 {% endapi-method-summary %}
 
 {% api-method-description %}
-상품/지수선물 종목 10초/분별 데이터 제공
+상품/지수선물 종목 10초/분별 데이터 제공 \(최대 100건까지 조회가능\)
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -478,7 +529,7 @@ ddddd
 일중전송주기구분코드 구분코드 \(10:10초, 60:1분, 600:10분\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter type="string" name="inqStrtDd" required=true %}
+{% api-method-parameter type="string" name="inqStrtDd" required=false %}
 조회시작일자 \(YYYYMMDD\)
 {% endapi-method-parameter %}
 
@@ -505,6 +556,22 @@ ddddd
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| isuNm | String\(80\) | 종목명 |  |
+| hisLists | Array\(4\) | 과거리스트 |  |
+| inddTm | string\(8\) | 일중시간 | HH:MM:SS |
+| inddOpnprc | number\(11\) | 일중시가 | 일중데이타\(10초, 1분, 10분\) |
+| inddHgprc | number\(11\) | 일중고가 | 일중데이타\(10초, 1분, 10분\) |
+| inddLwprc | number\(11\) | 일중저가 | 일중데이타\(10초, 1분, 10분\) |
+| inddClsprc | number\(11\) | 일중종가 | 일중데이타\(10초, 1분, 10분\) |
+| inddTrdvol | number\(11\) | 일중거래량 | 일중데이타\(10초, 1분, 10분\) |
+
+
 
 
 

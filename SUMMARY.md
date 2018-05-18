@@ -28,7 +28,8 @@
   * [Error Code](1/error.md)
   * FAQ
     * [오픈API 사용절차](1/faq/api/README.md)
-      * [계좌조회서비스](1/faq/api/undefined.md)
+      * [계좌조회서비스](1/faq/api/undefined/README.md)
+        * [오픈API문의](1/faq/api/undefined/api.md)
   * [기타](1/undefined-3.md)
 * D. 시세서비스
   * [개요](untitled-1/undefined-2.md)

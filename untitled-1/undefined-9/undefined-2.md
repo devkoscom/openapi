@@ -4,25 +4,19 @@
 
 
 
-#### Syntax
+## Syntax
 
-* HTTP methods
-  * **GET**
-* Authentication
-  * **API Key**
+HTTP methods    \|   **GET**
 
-**Reference**
+Authentication     \|   **API Key**
 
-> * `marketcode`  
->   * "코드표 &gt; 시장코드표" 지수 참조
-> * `issuecode`
->   * ex\) KR4101C90009 → **K101C9000**
->   * "코드표 &gt; 시장코드표" 지수 참조    ****
->   * 연결선물코드 추가
->
->      - 선물최근월물의  종목히스토리 조회를 위해  사용가능
->
->      - 현재가 조회시 조회결과 종목코드는 현재기준시장에서 거래되는 종목의 단축종목코드로 결과를 보내줌
+
+
+{% hint style="warning" %}
+`marketcode` 및 `issuecode` 는 [코드표 &gt; "시장코드표"](https://koscom.gitbook.io/open-api/untitled-1/undefined-8#undefined)를 참조하세요.
+{% endhint %}
+
+
 
 
 
@@ -39,11 +33,11 @@
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
+{% api-method-path-parameters %}
 {% api-method-parameter type="string" name="marketcode" required=true %}
 시장코드
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -109,7 +103,7 @@
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
+{% api-method-path-parameters %}
 {% api-method-parameter type="string" name="marketcode" required=true %}
 시장코드
 {% endapi-method-parameter %}
@@ -117,7 +111,7 @@
 {% api-method-parameter type="string" name="issuecode" required=true %}
 종목코드
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -219,12 +213,7 @@
 | prevddAccTrdvol | number\(15\) | 전일체결수량,전일거래량 |  |
 | prevddAccTrdval | number\(22\) | 전일거래대금 |  |
 | cdInt | number\(7\) | CD금리 | 예\) 999.999 |
-| opnintLmtQty | number\(15\) | 미결제한도수량 | \*테이블 하단 참 |
-
-> * opnintLmtQty
->   * 적용일에 적용되는 상품의 계좌별  미결제 한도 계약수. 
->   * 미결제 한도가 적용되지 않은 상품은 0
->   * 주식선물에만 해당
+| opnintLmtQty | number\(15\) | 미결제한도수량 | 적용일에 적용되는 상품의 계좌별  미결제 한도 계약수./ 미결제 한도가 적용되지 않은 상품은 0/ 주식선물에만 해당 |
 
 
 
@@ -243,15 +232,15 @@
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="marketcode" type="string" required=true %}
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
 시장코드
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="issuecode" required=true %}
 종목코드
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -311,15 +300,15 @@ ddddd
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
+{% api-method-path-parameters %}
 {% api-method-parameter name="marketcode" type="string" required=true %}
 시장코드
 {% endapi-method-parameter %}
 
-{% api-method-parameter type="string" name="issuecode" required=true %}
+{% api-method-parameter name="issuecode" type="string" required=true %}
 종목코드
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -369,8 +358,8 @@ ddddd
 | lwprc | number\(11\) | 저가 | 단위:원 |
 | trdPrc | number\(11\) | 체결가격 | 0 |
 | trdvol | number\(10\) | 체결수량, 거래량 | 단위:주 |
-| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | \*테이블 하단 참조 |
-| accTrdval | number\(22\) | 누적거래대금 | \*테이블 하단 참조 |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 일반체결수량+협의대량체결수량+EFP누적체결수량 /2009.08.31 |
+| accTrdval | number\(22\) | 누적거래대금 | 일반체결대금+협의대량체결대금+EFP누적체결대금 /2009.08.31 |
 | negoBlkAccTrdvol | number\(12\) | 협의대량누적체결수량 |  |
 | lstAskbidTpCd | string\(1\) | 최종매도매수구분코드 | 1:매도, 2:매수 \(최종으로 들어온 호가의 매도매수구분값\) |
 | trdTm | string\(8\) | 체결시각,거래시각 |  |
@@ -378,13 +367,6 @@ ddddd
 | futrmmAgndaContrtPrc | number\(11\) | 원월물의제약정가격 |  |
 | realtmUplmtprc | number\(11\) | 실시간상한가 |  |
 | realtmLwlmtprc | number\(11\) | 실시간하한가 |  |
-
-> *  accTrdvol : 누적체결수량,누적거래량
->   * 일반체결수량+협의대량체결수량+EFP누적체결수량
->   * 2009.08.31
-> * accTrdval : 누적거래대금
->   * 일반체결대금+협의대량체결대금+EFP누적체결대금
->   * 2009.08.31
 
 
 
@@ -403,15 +385,15 @@ ddddd
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="marketcode" type="string" required=true %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="marketcode" required=true type="string" %}
 시장코드
 {% endapi-method-parameter %}
 
-{% api-method-parameter type="string" name="issuecode" required=true %}
+{% api-method-parameter name="issuecode" required=true type="string" %}
 종목코드
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -494,7 +476,7 @@ ddddd
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
+{% api-method-path-parameters %}
 {% api-method-parameter type="string" name="marketcode" required=true %}
 시장코드
 {% endapi-method-parameter %}
@@ -502,7 +484,9 @@ ddddd
 {% api-method-parameter type="string" name="issuecode" required=true %}
 종목코드
 {% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
+{% api-method-query-parameters %}
 {% api-method-parameter type="string" name="inddCycleTpCd" required=true %}
 일중전송주기구분코드 구분코드 \(10:10초, 60:1분, 600:10분\)
 {% endapi-method-parameter %}
@@ -566,15 +550,17 @@ ddddd
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter type="string" name="marketcode" required=true %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="marketcode" type="string" required=true %}
 시장코드
 {% endapi-method-parameter %}
 
-{% api-method-parameter type="string" name="issuecode" required=true %}
+{% api-method-parameter name="issuecode" type="string" required=true %}
 종목코드
 {% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
+{% api-method-query-parameters %}
 {% api-method-parameter type="string" name="trnsmCycleTpCd" required=true %}
 전송주기구분코드 \(D:일별, W:주별, M:월별\)
 {% endapi-method-parameter %}

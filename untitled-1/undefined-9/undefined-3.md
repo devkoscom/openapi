@@ -14,6 +14,9 @@ Authentication     \|   **API Key**
 
 {% hint style="warning" %}
 `marketcode` 및 `issuecode` 는 [코드표 &gt; "시장코드표"](https://koscom.gitbook.io/open-api/untitled-1/undefined-8#undefined)를 참조하세요.
+
+`issuecode(옵션)`  
+  ex\) KR4201KC1756 → 201KC175
 {% endhint %}
 
 
@@ -73,6 +76,17 @@ Authentication     \|   **API Key**
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| trdDd | String\(8\) | 체결일자, 거래일자, 매매일자 | YYYYMMDD |
+| isuLists | Array\(4\) | 종목리스트 |  |
+| isuCd | String\(12\) | 종목코드 | 표준코 |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR4201KC1756 → 201KC175 |
+| isuKorNm | String\(80\) | 종목한글명 |  |
+| isuKorAbbrv | String\(40\) | 종목한글약명 | 가나다 |
 
 
 
@@ -158,6 +172,51 @@ Authentication     \|   **API Key**
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Response Parameters
+
+| **Name** | **Type** | **Description** | ​ |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| trdDd | string\(8\) | 체결일자, 거래일자, 매매일자 | YYYYMMDD |
+| isuCd | string\(12\) | 종목코드 | ​ |
+| isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR4201KC1756 → 201KC175 |
+| isuKorNm | string\(80\) | 종목한글명 |  |
+| isuKorAbbrv | string\(40\) | 종목한글약명 | 가나다 |
+| listDd | string\(8\) | 상장일자 | YYYYMMDD |
+| prcLmtStep1Uplmtprc | number\(12\) | 가격제한1단계상한가 |  |
+| prcLmtStep1Lwlmtprc | number\(12\) | 가격제한1단계하한가 |  |
+| prcLmtStep2Uplmtprc | number\(12\) | 가격제한2단계상한가 |  |
+| prcLmtStep2Lwlmtprc | number\(12\) | 가격제한2단계하한가 |  |
+| prcLmtStep3Uplmtprc | number\(12\) | 가격제한3단계상한가 |  |
+| prcLmtStep3Lwlmtprc | number\(12\) | 가격제한3단계하한가 |  |
+| basPrc | number\(11\) | 기준가격,기준가액 |  |
+| ulyId | string\(3\) | 기초자산명 |  |
+| lsttrdDd | string\(8\) | 최종거래일자 |  |
+| expDd | string\(8\) | 만기년월 | 권리행사 가능한 만기년월 |
+| 업종 | number\(22\) | 거래승수 | 약정대금 및 결제시 사용하는 계산승수 |
+| remainDys | number\(8\) | 잔존일수 |  |
+| setlTheoPrc | number\(16\) | 정산이론가격 |  |
+| basTheoPrc | number\(16\) | 기준이론가격 |  |
+| prevddClsprc | number\(11\) | 전일종가 |  |
+| prevddOpnprc | number\(11\) | 전일시가 |  |
+| prevddHgprc | number\(11\) | 전일고가 |  |
+| prevddLwprc | number\(11\) | 전일저가 |  |
+| setlPrcTheoPrcDivrgRt | number\(13\) | 정산가격이론가격괴리율 |  |
+| prevddOpnintQty | number\(12\) | 전일미결제약정수량 |  |
+| impVolt | number\(11\) | 내재변동성 |  |
+| inlistHgstprc | number\(11\) | 상장중최고가 |  |
+| inlistLwstprc | number\(11\) | 상장중최저가 |  |
+| midyyHgstprc | number\(11\) | 연중최고가 |  |
+| midyyLwstprc | number\(11\) | 연중최저가 |  |
+| inlistHgstprcDd | string\(8\) | 상장중최고가일자 |  |
+| inlistLwstprcDd | string\(8\) | 상장중최저가일자 |  |
+| midyyHgstprcDd | string\(8\) | 연중최고가일자 |  |
+| midyyLwstprcDd | string\(8\) | 연중최저가일자 |  |
+| prevddAccTrdvol | number\(15\) | 전일체결수량,전일거래량 |  |
+| prevddAccTrdval | number\(22\) | 전일거래대금 |  |
+| cdInt | number\(7\) | CD금리 | 예\) 999.999 |
+
+
+
 
 
 ## 상품/지수옵션 종목 종가
@@ -209,6 +268,22 @@ ddddd
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR4101C90009 → K101C9000 |
+| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
+| opnprc | number\(11\) | 시가 | 단위:원 |
+| hgprc | number\(11\) | 고가 | 단위:원 |
+| lwprc | number\(11\) | 저가 | 단위:원 |
+| trdPrc | number\(11\) | 체결가격 |  |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위:주 |
+| accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
+
+
 
 
 
@@ -273,7 +348,7 @@ ddddd
 
 | **Name** | **Type** | **Description** |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| isuSrtCd | string\(12\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| isuSrtCd | string\(12\) | 종목코드 | 예\) KR7000660001 → 000660 |
 | cmpprevddTpCd | string\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
 | cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
 | opnprc | number\(11\) | 시가 | 단위:원 |

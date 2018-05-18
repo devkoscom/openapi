@@ -14,6 +14,9 @@ Authentication     \|   **API Key**
 
 {% hint style="warning" %}
 `marketcode` 및 `issuecode` 는 [코드표 &gt; "시장코드표"](https://koscom.gitbook.io/open-api/untitled-1/undefined-8#undefined)를 참조하세요.
+
+`issuecode(선물)`  
+  ex\) KR4101C90009 → K101C9000
 {% endhint %}
 
 

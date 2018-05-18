@@ -219,7 +219,7 @@ Authentication     \|   **API Key**
 
 
 
-## 상품/지수선물 종목 종가
+## 상품/지수선물 종가
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/closeprice" %}
 {% api-method-summary %}
@@ -287,7 +287,7 @@ ddddd
 
 
 
-## 상품/지수선물 종목 체결
+## 상품/지수선물 체결
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/price" %}
 {% api-method-summary %}
@@ -350,7 +350,7 @@ ddddd
 
 | **Name** | **Type** | **Description** |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| isuSrtCd | string\(12\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
 | cmpprevddTpCd | string\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
 | cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
 | opnprc | number\(11\) | 시가 | 단위:원 |

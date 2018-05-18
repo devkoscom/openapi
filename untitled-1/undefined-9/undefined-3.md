@@ -4,19 +4,19 @@
 
 
 
-#### Syntax
+## Syntax
 
-* HTTP methods
-  * **GET**
-* Authentication
-  * **API Key**
+HTTP methods    \|   **GET**
 
-**Reference**
+Authentication     \|   **API Key**
 
-> * `marketcode`  
->   * 코드표 &gt; 시장코드표 참조
-> * `issuecode`
->   * ex\) KR4101C90009 → **K101C9000**
+
+
+{% hint style="warning" %}
+`marketcode` 및 `issuecode` 는 [코드표 &gt; "시장코드표"](https://koscom.gitbook.io/open-api/untitled-1/undefined-8#undefined)를 참조하세요.
+{% endhint %}
+
+
 
 
 
@@ -33,11 +33,11 @@
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter type="string" name="marketcode" required=true %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="marketcode" required=true type="string" %}
 시장코드
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -89,7 +89,7 @@
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
+{% api-method-path-parameters %}
 {% api-method-parameter type="string" name="marketcode" required=true %}
 시장코드
 {% endapi-method-parameter %}
@@ -97,7 +97,7 @@
 {% api-method-parameter type="string" name="issuecode" required=true %}
 종목코드
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -173,15 +173,15 @@
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
+{% api-method-path-parameters %}
 {% api-method-parameter name="marketcode" type="string" required=true %}
 시장코드
 {% endapi-method-parameter %}
 
-{% api-method-parameter type="string" name="issuecode" required=true %}
+{% api-method-parameter name="issuecode" type="string" required=true %}
 종목코드
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -212,7 +212,7 @@ ddddd
 
 
 
-## 상품/지수옵 종목 체결
+## 상품/지수옵션 종목 체결
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/{issuecode}/price" %}
 {% api-method-summary %}
@@ -225,15 +225,15 @@ ddddd
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="marketcode" type="string" required=true %}
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
 시장코드
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="issuecode" required=true %}
 종목코드
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -284,15 +284,15 @@ ddddd
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="marketcode" type="string" required=true %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="marketcode" required=true type="string" %}
 시장코드
 {% endapi-method-parameter %}
 
-{% api-method-parameter type="string" name="issuecode" required=true %}
+{% api-method-parameter name="issuecode" required=true type="string" %}
 종목코드
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -366,15 +366,17 @@ ddddd
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter type="string" name="marketcode" required=true %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="marketcode" required=true type="string" %}
 시장코드
 {% endapi-method-parameter %}
 
-{% api-method-parameter type="string" name="issuecode" required=true %}
+{% api-method-parameter name="issuecode" required=true type="string" %}
 종목코드
 {% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
+{% api-method-query-parameters %}
 {% api-method-parameter type="string" name="inddCycleTpCd" required=true %}
 일중전송주기구분코드 구분코드 \(10:10초, 60:1분, 600:10분\)
 {% endapi-method-parameter %}
@@ -422,15 +424,17 @@ ddddd
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter type="string" name="marketcode" required=true %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="marketcode" required=true type="string" %}
 시장코드
 {% endapi-method-parameter %}
 
-{% api-method-parameter type="string" name="issuecode" required=true %}
+{% api-method-parameter name="issuecode" required=true type="string" %}
 종목코드
 {% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
+{% api-method-query-parameters %}
 {% api-method-parameter type="string" name="trnsmCycleTpCd" required=true %}
 전송주기구분코드 \(D:일별, W:주별, M:월별\)
 {% endapi-method-parameter %}

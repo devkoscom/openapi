@@ -13,10 +13,10 @@ Authentication     \|   **API Key**
 
 
 {% hint style="warning" %}
-`marketcode` 및 `issuecode` 는 [코드표 &gt; "시장코드표"](https://koscom.gitbook.io/open-api/untitled-1/undefined-8#undefined)를 참조하세요.
+`marketcode`및 `issuecode`는 [코드표 &gt; "시장코드표"](https://koscom.gitbook.io/open-api/untitled-1/undefined-8#undefined)를 참조하세요.
 
 `issuecode(선물)`  
-  ex\) KR4101C90009 → K101C9000
+    ex\) KR4101C90009 → K101C9000
 {% endhint %}
 
 
@@ -25,7 +25,7 @@ Authentication     \|   **API Key**
 
 ## 상품/지수선물 종목 리스트
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/lists" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/futures" path="/{marketcode}/lists" %}
 {% api-method-summary %}
  /v2/market/futures/{marketcode}/lists
 {% endapi-method-summary %}
@@ -95,7 +95,7 @@ Authentication     \|   **API Key**
 
 ## 상품/지수선물 종목 마스터
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/master" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/futures" path="/{marketcode}/{issuecode}/master" %}
 {% api-method-summary %}
  /v2/market/futures/{marketcode}/{issuecode}/master
 {% endapi-method-summary %}
@@ -224,7 +224,7 @@ Authentication     \|   **API Key**
 
 ## 상품/지수선물 종가
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/closeprice" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/futures" path="/{marketcode}/{issuecode}/closeprice" %}
 {% api-method-summary %}
  /v2/market/futures/{marketcode}/{issuecode}/closeprice
 {% endapi-method-summary %}
@@ -292,7 +292,7 @@ ddddd
 
 ## 상품/지수선물 체결
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/price" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/futures" path="/{marketcode}/{issuecode}/price" %}
 {% api-method-summary %}
  /v2/market/futures/{marketcode}/{issuecode}/price
 {% endapi-method-summary %}
@@ -375,7 +375,7 @@ ddddd
 
 ## 상품/지수선물 우선호가
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/orderbook" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/futures" path="/{marketcode}/{issuecode}/orderbook" %}
 {% api-method-summary %}
  /v2/market/futures/{marketcode}/{issuecode}/orderbook
 {% endapi-method-summary %}
@@ -502,13 +502,15 @@ ddddd
 
 ## 상품/지수선물 일중
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/intraday" %}
+상품/지수선물 종목 10초/분별 데이터 제공 \(최대 100건까지 조회가능\)
+
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/futures" path="/{marketcode}/{issuecode}/intraday" %}
 {% api-method-summary %}
  /v2/market/futures/{marketcode}/{issuecode}/intraday
 {% endapi-method-summary %}
 
 {% api-method-description %}
-상품/지수선물 종목 10초/분별 데이터 제공 \(최대 100건까지 조회가능\)
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -576,7 +578,7 @@ ddddd
 
 ## 상품/지수선물 종목 히스토리
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/history" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/futures" path="/{marketcode}/{issuecode}/history" %}
 {% api-method-summary %}
  /v2/market/futures/{marketcode}/{issuecode}/history
 {% endapi-method-summary %}

@@ -159,7 +159,7 @@ description: 모바일 오핀(OFin) 이용절차
 
 **\[통합계좌조회\] 앱 사용 신청**
 
-앱 신청과 관련된 부분은 앱 사용 신청 부분을 참고하시기 바랍니다. 
+앱 신청과 관련된 부분은 [앱 사용 신청 ](https://koscom.gitbook.io/open-api/1/undefined-4/undefined/ofin#undefined-3)부분을 참고하시기 바랍니다. 
 
 ![](../../../.gitbook/assets/image%20%2856%29.png)
 

@@ -483,5 +483,11 @@ List 취소 주문은 지원 하지 않음
 
 
 
- API 에 대한 자세한 설명은 [개발자센터](https://developers.koscom.co.kr) 또는 [공식매뉴얼](https://developers.koscom.co.kr/documentation/reference) 에서 확인하세요.
+
+
+{% hint style="info" %}
+API 에 대한 자세한 설명은 [개발자센터](https://developers.koscom.co.kr) 에서 확인하세요.
+{% endhint %}
+
+
 

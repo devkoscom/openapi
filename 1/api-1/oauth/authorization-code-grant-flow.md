@@ -60,7 +60,7 @@ Flow 2를 요청하면 그 응답으로 Authorization Code를 받아오는 것�
 
 Flow 3, 4 절차가 정상적으로 수행되면 오픈플랫폼은 authorization code를 응답으로 내려주되, 핀테크 서비스 등록과 Authorization Code 요청 시 지정된 redirect\_uri로 응답을 전달할 수 있도록 http 헤더의 status code를 302로 설정하여 응답을 전송하며, redirect된 응답은 핀테크 서비스 서버 사이드에 구현된 OAuth Callback Listener \(Servlet 등\)로 전달되며, Callback Listener로 유입된 응답 parameter에서 state와 code를 추출하고 누구의 authorization code인지를 확인\(state에 설정한 식별정보 이용\)하여 다음 절차인 access token을 요청합니다. 
 
-에러처리는 에러처리 챕터를 참고하시기 바랍니다.
+에러처리는 [에러처리 챕터](https://koscom.gitbook.io/open-api/~/edit/primary/1/error)를 참고하시기 바랍니다.
 
 
 
@@ -107,7 +107,8 @@ Flow 3, 4 절차가 정상적으로 수행되면 오픈플랫폼은 authorizatio
 Access token 발급 메시지에는 갱신에 사용되는 refresh token \(`refresh_token`\)과 유효시간\(`expires_in`\)이 들어있습니다. 필요에 따라 각 access token이 만료되기 전에 갱신을 요청하면 새로운 access token을 발급받을 수 있습니다. 
 
 {% hint style="danger" %}
-Refresh token 기능 지원여부는 비즈니스 모델 및 사용 기업의 신뢰도에 따라 다를 수 있음 \(이를 고려한 비즈니스 모델은 사전 협의 필요\)
+Refresh token 기능 지원여부는 비즈니스 모델 및 사용 기업의 신뢰도에 따라 다를 수 있음   
+\(이를 고려한 비즈니스 모델은 사전 협의 필요\)
 {% endhint %}
 
 | **Method** | POST |

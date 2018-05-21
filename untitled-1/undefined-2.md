@@ -14,7 +14,7 @@ description: 시세 서비스 개요
 
 ### 조회 서비스 \(Restful API\)
 
-**종가정보 조회     \|**  장개시전 및 장마감정보에 대한 조회
+**종가정보 조회     \|**    장개시전 및 장마감정보에 대한 조회
 
 | **PRESET** | 주식종목마스터와 같이 조회시 지정된 58개 항목 전체가 결과값으로 보여줌 |
 | --- | --- |
@@ -22,7 +22,7 @@ description: 시세 서비스 개요
 
 
 
-**실시간시세 조회   \|**  실시간 가격정보, 장개시전 및 장마감정보에 대한 조회
+**실시간시세 조회   \|**    실시간 가격정보, 장개시전 및 장마감정보에 대한 조회
 
 | **PRESET** | 주식종목체결과 같이 조회시 지정된 14개 항목 전체가 결과값으로 보여줌 |
 | --- | --- |
@@ -74,15 +74,15 @@ description: 시세 서비스 개요
 
 **OPEN API 데이타 프로토콜**
 
-GET 방식 조회서비스                \|   JSON-RPC 2.0
+GET 방식 조회서비스                \|   `JSON-RPC 2.0`
 
-Web Socket 실시간 서비스      \|   JSON-RPC 2.0 
+Web Socket 실시간 서비스      \|   `JSON-RPC 2.0` 
 
 
 
 **JSON-RPC 2.0**
 
-_JSON-RPC 2.0 주요 Object member_
+JSON-RPC 2.0 주요 Object member
 
 | `jsonrpc` | 버전 |
 | --- | --- | --- | --- | --- | --- |
@@ -92,7 +92,8 @@ _JSON-RPC 2.0 주요 Object member_
 | `result` | 요청에 대한 응답 |
 | `error` | 에러처리 \("code", "mesage" member를 가짐\) |
 
-_송수신 전문_ 
+  
+송수신 전문 
 
 | **요청** \(Request\)  | 실시간 구독 요청/취소 및 조회요청 | method : ~ /  param : ~ |
 | --- | --- | --- | --- |
@@ -100,6 +101,7 @@ _송수신 전문_
 | **통보** \(Notification\) | 실시간 시세 데이타 \(id를 보내지 않는다\) | method : push / params : ~  |
 | **에러** \(Error\)  | 요청에 대한 에러 | error:  ~ |
 
+  
 실시간시세 전송은 Notification으로 처리 \("method":"push" 이고,  "id" member는 없음\)  
 URI 기반 조회 요청 시 RPC 2.0 데이타 구조의 예외 허용 \(조회요청 데이타 "method", "id" member 누락 허용\)
 
@@ -137,7 +139,7 @@ Json-RPC 2.0 에 관한 자세한 설명은[ 이곳](http://www.jsonrpc.org/spec
 실시간 구독요청시 실시간구독항목이 아닌 데이타를 구독요청하면 에러를 전송한다.  
 
 세션당 200개의 실시간 구독 가능  
-ex\) 200종목에 대한 체결데이타만 구독  또는 100종목에 대한 체결 및 호가데이타 구독\)
+  ex\) 200종목에 대한 체결데이타만 구독  또는 100종목에 대한 체결 및 호가데이타 구독\)
 
 
 
@@ -154,7 +156,7 @@ ex\) 200종목에 대한 체결데이타만 구독  또는 100종목에 대한 �
 5. 구독하는 종목에 대한 시세 발생시 비동기 방식으로 실시간 데이타 전송
 6. WebSocket Session 종료시 모든 실시간 구독내역은 초기화 된다.
 
-![WebSocket &#xC885;&#xBAA9;&#xBCC4; &#xC0C1;&#xC138; &#xAD6C;&#xB3C5;](../.gitbook/assets/image%20%2879%29.png)
+![WebSocket &#xC885;&#xBAA9;&#xBCC4; &#xC0C1;&#xC138; &#xAD6C;&#xB3C5;](../.gitbook/assets/image%20%2860%29.png)
 
 #### WebSocket  시장별 체결구독
 
@@ -166,9 +168,11 @@ ex\) 200종목에 대한 체결데이타만 구독  또는 100종목에 대한 �
 
 4. WebSocket Session 종료
 
-\*  세션 연결 전에 조회서비스를 통해서 전종목 시세 수신을 권장합니다.
+![WebSocket &#xC2DC;&#xC7A5;&#xBCC4; &#xCCB4;&#xACB0;&#xAD6C;&#xB3C5;](../.gitbook/assets/image%20%282%29.png)
 
-![WebSocket  &#xC2DC;&#xC7A5;&#xBCC4; &#xCCB4;&#xACB0;&#xAD6C;&#xB3C5;](../.gitbook/assets/image%20%2863%29.png)
+{% hint style="success" %}
+세션 연결 전에 조회서비스를 통해서 전종목 시세 수신을 권장합니다.
+{% endhint %}
 
 
 
@@ -176,13 +180,13 @@ ex\) 200종목에 대한 체결데이타만 구독  또는 100종목에 대한 �
 
 ### E. 송수신전문 예
 
-####   1. 요청 \(Request\)
+#### 요청 \(Request\)
 
-   1-1. GET 방식 조회
+1. GET 방식 조회
 
-![](../.gitbook/assets/image%20%2835%29.png)
+![](../.gitbook/assets/image%20%2836%29.png)
 
-   1-2. WebSocket 초기화
+2. WebSocket 초기화
 
 {% code-tabs %}
 {% code-tabs-item title="init" %}
@@ -200,7 +204,7 @@ ex\) 200종목에 대한 체결데이타만 구독  또는 100종목에 대한 �
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-   1-3. WebSocket 실시간 구독요청/취소
+3. WebSocket 실시간 구독요청/취소
 
 {% code-tabs %}
 {% code-tabs-item title="subscribe" %}
@@ -218,7 +222,7 @@ ex\) 200종목에 대한 체결데이타만 구독  또는 100종목에 대한 �
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-   1-4. WebSocket 채널점검 \(Heartbeat\)
+4. WebSocket 채널점검 \(Heartbeat\)
 
 {% code-tabs %}
 {% code-tabs-item title="heartbeat" %}
@@ -234,7 +238,7 @@ ex\) 200종목에 대한 체결데이타만 구독  또는 100종목에 대한 �
 
 
 
-####   2. 응답 \(Response\)
+#### 응답 \(Response\)
 
 ```yaml
 {
@@ -260,7 +264,7 @@ ex\) 200종목에 대한 체결데이타만 구독  또는 100종목에 대한 �
 
 
 
-####   3. 통보 \(Notification\)
+####  통보 \(Notification\)
 
 ```yaml
 {
@@ -278,7 +282,7 @@ ex\) 200종목에 대한 체결데이타만 구독  또는 100종목에 대한 �
 
 ####  {#3-notification}
 
-####   4. 에러 {#3-notification}
+#### 에러 \(Error\) {#3-notification}
 
 ```yaml
 {

@@ -10,10 +10,10 @@ description: API 테스트 절차
 
 
 
-## API Key Type 인증방식
+## API Key 인증방식
 
 ‘API문서 &gt; 시세 서비스 &gt; 주식 종목’ 메뉴에서 ‘Select an Application’ 을 눌러서 앱을 선택 합니다.  
-앱이 보이지 않으시면 해당 API를 사용하는 앱을 먼저 만드셔야 합니다. 자세한 사항은 [이 페이지](https://finpl.gitbook.io/open-api/~/edit/primary/untitled/undefined)를 참조하세요.
+앱이 보이지 않으시면 해당 API를 사용하는 앱을 먼저 만드셔야 합니다. 자세한 사항은 [이곳](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2/undefined#application)을 참조하세요.
 
 ![&#xC2DC;&#xC138;&#xC11C;&#xBE44;&#xC2A4;-&#xC8FC;&#xC2DD;&#xC885;&#xBAA9;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAHP22XoyNPzixZ3_FG%2F-LAHPoJtyQDRgiqyR45f%2Fimage.png?alt=media&token=ea5f1cd1-cf33-4eed-a4a0-717e110378dc)
 
@@ -29,7 +29,7 @@ description: API 테스트 절차
 
 ![Response &#xACB0;&#xACFC;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAHQTPq8f_lGc4mSjWu%2F-LAHR_jk6QEPQF6xGi-c%2Fimage.png?alt=media&token=5cf0681c-5eea-45f1-a00e-a7f5c6bba277)
 
- ‘Query’ 탭을 누르시면 Request 및 다양한 개발 언어별 샘플 코드를 참고 하실 수 있습니다.
+ ‘Query’ 탭을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
 ![Query Tab](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAHQTPq8f_lGc4mSjWu%2F-LAHRl1jJ11b-eMf4KwK%2Fimage.png?alt=media&token=372650a8-9d66-4bc6-b633-67c3e2c1ec4c)
 
@@ -71,8 +71,8 @@ description: API 테스트 절차
 >
 >        [https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token](https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token)   값을 입력 합니다.
 
-‘OK’ 버튼을 누르시면, 사용자 로그인창이 오픈 되며, 아이디 및 비밀번호를 입력하시고, 로그인 합니다.   
-아이디와 비밀번호\(OTP번호\)는 금융투자 핀테크 포털 가입 시 등록한 것이며, 테스트를 위해 별도로 부여되며 추가적인 고유 계정이 필요 하시면 관리자에게 문의 하십시요.
+‘OK’ 버튼을 누르시면 사용자 로그인창이 오픈 되며, 아이디 및 비밀번호를 입력하시고 로그인 합니다.   
+아이디와 비밀번호\(OTP번호\)는 금융투자 핀테크 포털 가입 시 등록한 것이며, 테스트를 위해 별도로 부여되며 추가적인 고유 계정이 필요하시면 관리자에게 문의하십시요.
 
 {% hint style="info" %}
 **가상증권사 테스트 계정   
@@ -81,13 +81,11 @@ description: API 테스트 절차
 
 ![&#xB85C;&#xADF8;&#xC778;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAHVaBFz-1K1zgJ-1hK%2F-LAHVdgooH8OWxGIrGxD%2Fimage.png?alt=media&token=079a6f64-0e4f-46fc-a15a-16eebc031b90)
 
-테스트할 API를 선택 하시고, ‘Try it Out’ 버튼을 누르시면 아래와 같이 Response 결과를 받아 보실 수 있습니다.
+테스트할 API를 선택 하시고 ‘Try it Out’ 버튼을 누르면 아래와 같이 Response결과를 받아 보실 수 있습니다.
 
 ![Response &#xACB0;&#xACFC;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAHVaBFz-1K1zgJ-1hK%2F-LAHVjv-VTtiPvbdWSO0%2Fimage.png?alt=media&token=cbc4b583-9abf-4483-a43e-704c9870d948)
 
-‘Query’ 을 누르시면 Request 및 다양한 개발 언어별 샘플 코드를 참고 하실 수 있습니다.
+‘Query’ 을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAHVaBFz-1K1zgJ-1hK%2F-LAHVtaDjx5QyuTjklsJ%2Fimage.png?alt=media&token=0c4ae049-4ed9-417e-8c6b-e59ddf83d11c)
-
-
 

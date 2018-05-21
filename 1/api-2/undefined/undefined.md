@@ -1,7 +1,3 @@
----
-description: 서비스연동 API
----
-
 # 서비스연동
 
 오픈플랫폼과 핀테크 서비스 간에 연동을 위해 **금융투자 핀테크 포탈 가입여부 확인 API**와 핀테크 서비스에 연결된 **가상계좌를 조회할 수 있는 API**를 제공합니다. 
@@ -21,8 +17,6 @@ description: 서비스연동 API
 HTTP methods    \|   **POST**
 
 Authentication     \|   **API Key**
-
-
 
 
 

@@ -8,7 +8,7 @@
 
 ## 이용기관 등록 절차 {#undefined}
 
-![](../../.gitbook/assets/image%20%287%29.png)
+![](../../.gitbook/assets/image%20%2813%29.png)
 
 1. **API 및 서비스 사전검증**
 
@@ -42,7 +42,7 @@
 
 오픈플랫폼에 API를 게시하기 위해서는 Sandbox에서 API게시 및 테스트를 완료하여야 합니다.
 
-![](../../.gitbook/assets/image%20%2817%29.png)
+![](../../.gitbook/assets/image%20%2824%29.png)
 
 
 

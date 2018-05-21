@@ -692,7 +692,7 @@ Bearer 발급받은 access token
 
  조회대상이 되는 계좌의 입금, 출금, 매수, 매도 이력을 조회할 수 있는 API
 
-{% api-method method="post" host="https://sandbox-apigw.koscom.co.kr/v1/증권사단축명/account" path="/transaction/search" %}
+{% api-method method="post" host="https://{APIGWAddr}/v1/{증권사단축명}/account" path="/transaction/search" %}
 {% api-method-summary %}
 /account/transaction/search
 {% endapi-method-summary %}
@@ -703,6 +703,16 @@ Bearer 발급받은 access token
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Content-Type" required=true type="string" %}
+Application/json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Authorization" required=true type="string" %}
+Bearer 발급받은 access token
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -710,77 +720,6 @@ Bearer 발급받은 access token
 
 {% endapi-method-response-example-description %}
 
-```
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-#### Syntax
-
-* URI
-
-  * /account/transaction/search
-
-* HTTP methods
-
-  * POST
-
-* Format
-
-  * JSON &lt;application/json; charset=utf-8&gt;
-
-* Content-Type
-
-  * Application/json
-
-* Authentication
-  * OAuth 2- Authorization
-  * header – Authorization: Bearer 발급받은 access token
-
-#### Example
-
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
-```yaml
-{ 
-  "partner":{ 
-    "comId":"F9999",
-    "srvId":"999"
-  },
-  "commonHeader":{ 
-    "reqIdPlatform":"",
-    "reqIdConsumer":"ID00003",
-    "ci":" S1V7HGXBV1EPGBJastZf4fQV+eOpOc1pfizByV6UIEEJHM/PF9QKu+PU2OThEog7QmVKSZNibNGg+/k0XB/9jQ=="
-  },
-  "devInfo":{ 
-    "ipAddr":"123456789012",
-    "macAddr":"7054D27EE247"
-  },
-  "accInfo":{ 
-      "realAccNo":null,
-      "vtAccNo":"160731060768600001"
-  },
-  "transactionHistoryRequestBody":{ 
-    "queryParams":{ 
-      "fromDate":"20160101",
-      "toDate":"20160720",
-      "isinCode":"",
-      "side":"",
-      "count":30,
-      "page":""
-    }
-  }
-}
-
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
 ```yaml
 { 
   "commonHeader":{ 
@@ -874,12 +813,51 @@ Bearer 발급받은 access token
   }
 }
 ```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Request xample
+
+{% code-tabs %}
+{% code-tabs-item title="Request Body Example" %}
+```yaml
+{ 
+  "partner":{ 
+    "comId":"F9999",
+    "srvId":"999"
+  },
+  "commonHeader":{ 
+    "reqIdPlatform":"",
+    "reqIdConsumer":"ID00003",
+    "ci":" S1V7HGXBV1EPGBJastZf4fQV+eOpOc1pfizByV6UIEEJHM/PF9QKu+PU2OThEog7QmVKSZNibNGg+/k0XB/9jQ=="
+  },
+  "devInfo":{ 
+    "ipAddr":"123456789012",
+    "macAddr":"7054D27EE247"
+  },
+  "accInfo":{ 
+      "realAccNo":null,
+      "vtAccNo":"160731060768600001"
+  },
+  "transactionHistoryRequestBody":{ 
+    "queryParams":{ 
+      "fromDate":"20160101",
+      "toDate":"20160720",
+      "isinCode":"",
+      "side":"",
+      "count":30,
+      "page":""
+    }
+  }
+}
+
+```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
- 자세한 포맷은 [개발자센터](https://developers.koscom.co.kr/documentation/common/member) 또는 [공식매뉴얼](https://developers.koscom.co.kr/documentation/reference) 에서 확인하세요.
 
- [​개발자센터-계좌조회API​](https://developers.koscom.co.kr/documentation/account)
 
 
 

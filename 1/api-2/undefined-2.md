@@ -18,21 +18,11 @@ Authentication     \|   **Basic Authentication**
 
 
 
-## 조회 유의사항
-
-조회는 API에 지정된 가상계좌를 조회범위로 하기 때문에 계좌속성\(위탁, 펀드, 파생상품 등\)에 따라 조회조건이 충족되지 않을 수 있으므로 전 상품군을 대상으로 조회할 경우는 주의가 필요합니다. 예로 보통 증권회사의 종합계좌는 모든 금융상품을 취급할 수 있는 것이지만 경우에 따라 파생상품과 같은 특정 상품군은 별도로 관리되는 증권회사도 있으며, 종합계좌 개념을 도입하지 않는 증권사도 존재합니다. 따라서 종합계좌라고 판단되어 KOSPI200 파생상품 잔고를 조회하였을 때 응답에 해당상품이 반드시 포함될 것이라 판단하고 비즈니스를 설계하면 안됩니다. 
-
-예로 계좌잔고조회의 경우 모든 상품군을 조회범위에 포함하는 ‘ALL’검색조건을 지원하는 증권사의 경우 해당 조건으로 모든 계좌를 조회하면 문제가 없지만, ‘ALL’검색조건을 지원하지 않는 증권사의 경우 각 상품군별로 모든 계좌를 대상으로 조회해야 누락 없이 전 상품군을 조회할 수 있습니다.
-
-
-
-
-
 ## 주문체결 조회 API
 
 계좌의 주문 체결 내역을 상세히 조회하기 위한 API
 
-{% api-method method="post" host="https://sandbox-apigw.koscom.co.kr/v1/증권사단축명/b2baccount" path="/orderdetail/search" %}
+{% api-method method="post" host="https://{APIGWAddr}/v1/{증권사단축명}/b2baccount" path="/orderdetail/search" %}
 {% api-method-summary %}
 /b2baccount/orderdetail/search
 {% endapi-method-summary %}
@@ -56,20 +46,6 @@ Application/json
 Basic Authentication 인증 사용
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="partner" type="object" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="commonHeader" type="object" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="orderDetailListRequestBody" type="object" required=true %}
-
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -202,11 +178,11 @@ Basic Authentication 인증 사용
 | qrAssetType | String\(8\) | 자산유형 | EQTY\(주식\), FUND\(펀드\), ETC\(기타\) |
 | qrSellBuyType | String\(8\) | 매도수구분 | 0\(전체\), 1\(매도\), 2\(매수\) |
 | qrAccNo | String\(20\) | 계좌번호 |  |
-| qrOrderDate | String\(12\) | 주문일자 | 선택 \(입력없는경우 당일YYYYMMDD\) |
-| qrIsinCode | String\(20\) | 종목코드 | 선택 \(입력 시 해당 종목만 요청\) |
-| qrOrderNo | String\(20\) | 주문번호 | 선택 \(입력 시 해당 주문만 조회\) |
-| count | number | 응답별 최대 응답 건수 |  |
-| page | **String\(100\)** | 다음page를 지시하는 키 |  |
+| qrOrderDate | String\(12\) | 주문일자 | 선택 / \(입력없는경우 당일YYYYMMDD\) |
+| qrIsinCode | String\(20\) | 종목코드 | 선택 / \(입력 시 해당 종목만 요청\) |
+| qrOrderNo | String\(20\) | 주문번호 | 선택 / \(입력 시 해당 주문만 조회\) |
+| count | number | 응답별 최대 응답 건수 | 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 |
+| page | **String\(100\)** | 다음page를 지시하는 키 | 선택 / 첫 요청은 null로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청함 |
 
 #### Response Parameters
 
@@ -235,7 +211,7 @@ Basic Authentication 인증 사용
 | orderExecType | String\(20\) | 주문체결구분 | 접수전, 정정, 취소확인, 거부 등 |
 | cmsnType | String\(20\) | 수수료유형 | Text표기 |
 | settDays | Number | 결제일수 |  |
-| buyQtyUnit | Number | 매수량단위 |  |
+| buyQtyUnit | Number | 매수수량단위 |  |
 | sellQtyUnit | Number | 매도수량단위 |  |
 | orderTime | String\(12\) | 주문시각 |  |
 | orderRejectReason | String\(20\) | 주문거부사유 | Text표기 |
@@ -255,11 +231,10 @@ Basic Authentication 인증 사용
 
 ## 일임 계좌잔고 조회 API
 
- 조회대상이 되는 계좌의 실제 잔고 수량, 평가손익 등을 상세히 조회하기 위한 API
-
+조회대상이 되는 계좌의 실제 잔고 수량, 평가손익 등을 상세히 조회하기 위한 API  
 오전 08:30이전과 오후 16:00 이후 조회 가능
 
-{% api-method method="post" host="https://sandbox-apigw.koscom.co.kr/v1/증권사단축명/b2baccount" path="/balancelist/search" %}
+{% api-method method="post" host="https://{APIGWAddr}/v1/{증권사단축명}/b2baccount" path="/balancelist/search" %}
 {% api-method-summary %}
 /b2baccount/balancelist/search
 {% endapi-method-summary %}
@@ -283,20 +258,6 @@ Application/json
 Basic Authentication 인증 사용
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="partner" type="object" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="commonHeader" type="object" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="balanceListRequestBody" type="object" required=true %}
-
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -517,11 +478,10 @@ Basic Authentication 인증 사용
 
 ## 결제예정 정산 조회 API
 
-전일 및 당일 주문 체결 내역에 대한 매매정리 내역을 상세히 조회하기 위한 API
+전일 및 당일 주문 체결 내역에 대한 매매정리 내역을 상세히 조회하기 위한 API  
+오전 08:30이전과 오후 16:00 이후 조회 가능
 
-오전 08:30이전과 오후 16:00 이후 조회 가능
-
-{% api-method method="post" host="https://sandbox-apigw.koscom.co.kr/v1/증권사단축명/b2baccount" path="/settlelist/search" %}
+{% api-method method="post" host="https://{APIGWAddr}/v1/{증권사단축명}/b2baccount" path="/settlelist/search" %}
 {% api-method-summary %}
 /b2baccount/settlelist/search
 {% endapi-method-summary %}
@@ -545,20 +505,6 @@ Application/json
 Basic Authentication 인증 사용
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="partner" type="object" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="commonHeader" type="object" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="settleListRequestBody" type="object" required=true %}
-
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -694,8 +640,8 @@ Basic Authentication 인증 사용
 | qrAccNo | String\(20\) | 계좌번호 | ​ |
 | qrOrderDate | String\(12\) | 주문일자 | 결제 전인 경우만 입력, 입력없음 당일\(YYYYMMDD\) |
 | qrIsinCode | String\(20\) | 종목코드 | 입력 시 해당 종목만 요청 |
-| count | number | 응답별 최대 응답 건수 | ​ |
-| page | **String\(100\)** | 다음page를 지시하는 키 | ​ |
+| count | number | 응답별 최대 응답 건수 | ​증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 |
+| page | **String\(100\)** | 다음page를 지시하는 키 | ​첫 요청은 null\(“null”\)로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청함 |
 
 #### Response Parameters
 
@@ -738,7 +684,7 @@ Basic Authentication 인증 사용
 
 핀테크 기업의 일임 설정 계좌의 정보 조회하기 위한 API
 
-{% api-method method="post" host="https://sandbox-apigw.koscom.co.kr/v1/증권사단축명/b2baccount" path="/accountlist/search" %}
+{% api-method method="post" host="https://{APIGWAddr}/v1/{증권사단축명}/b2baccount" path="/accountlist/search" %}
 {% api-method-summary %}
 /b2baccount/accountlist/search
 {% endapi-method-summary %}
@@ -762,20 +708,6 @@ Application/json
 Basic Authentication 인증 사용
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="partner" type="object" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="commonHeader" type="object" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="accountListRequestBody" type="object" required=true %}
-
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -862,8 +794,8 @@ Basic Authentication 인증 사용
 | srvId | string\(20\) | 핀테크 서비스 코드 | ​ |
 | reqIdPlatform | string\(50\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
 | reqIdConsumer | string\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 | ​ |
-| count | number | 응답별 최대 응답 건수 | ​ |
-| page | **String\(100\)** | 다음page를 지시하는 키 | ​ |
+| count | number | 응답별 최대 응답 건수 | ​증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 |
+| page | **String\(100\)** | 다음page를 지시하는 키 | ​첫 요청은 null\(“null”\)로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청함 |
 
 #### Response Parameters
 
@@ -891,7 +823,7 @@ Basic Authentication 인증 사용
 
 계좌의 거래내역을 상세히 조회하기 위한 API
 
-{% api-method method="post" host="" path="/tradebook/search" %}
+{% api-method method="post" host="https://{APIGWAddr}/v1/{증권사단축명}/b2baccount" path="/tradebook/search" %}
 {% api-method-summary %}
 /b2baccount/tradebook/search
 {% endapi-method-summary %}
@@ -915,20 +847,6 @@ Application/json
 Basic Authentication 인증 사용
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="partner" type="object" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="commonHeader" type="object" required=true %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="tradeBookListRequestBody" type="object" required=true %}
-
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -1059,8 +977,8 @@ Basic Authentication 인증 사용
 | qrAccNo | String\(20\) | 계좌번호 |  |
 | qrFromDate | String\(12\) | 조회시작날짜 | YYYYMMDD |
 | qrToDate | String\(12\) | 조회종료날짜 | YYYYMMDD |
-| count | number | 응답별 최대 응답 건수 | ​ |
-| page | **String\(100\)** | 다음page를 지시하는 키 | ​ |
+| count | number | 응답별 최대 응답 건수 | ​증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 |
+| page | **String\(100\)** | 다음page를 지시하는 키 | ​첫 요청은 null\(“null”\)로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청함 |
 
 #### Response Parameters
 

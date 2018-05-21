@@ -29,7 +29,7 @@ Authentication     \|   **API Key**
 
 ## 업종 종가
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/index" path="/{marketcode}/{issuecode}/closeprice" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/index" path="/{marketcode}/{issuecode}/closeprice" %}
 {% api-method-summary %}
  /v2/market/index/{marketcode}/{issuecode}/closeprice
 {% endapi-method-summary %}
@@ -100,7 +100,7 @@ ddddd
 
 ## 업종 지수
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/index" path="/{marketcode}/{issuecode}/index" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/index" path="/{marketcode}/{issuecode}/index" %}
 {% api-method-summary %}
  /v2/market/index/{marketcode}/{issuecode}/index
 {% endapi-method-summary %}
@@ -173,7 +173,7 @@ ddddd
 
 ## 업종 예상지수
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/index" path="/{marketcode}/{issuecode}/prospectindex" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/index" path="/{marketcode}/{issuecode}/prospectindex" %}
 {% api-method-summary %}
  /v2/market/index/{marketcode}/{issuecode}/prospectindex
 {% endapi-method-summary %}
@@ -239,7 +239,7 @@ ddddd
 
 ## 업종 시가총액
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/index" path="/{marketcode}/{issuecode}/marketcap" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/index" path="/{marketcode}/{issuecode}/marketcap" %}
 {% api-method-summary %}
  /v2/market/index/{marketcode}/{issuecode}/marketcap
 {% endapi-method-summary %}
@@ -302,7 +302,7 @@ ddddd
 
 ## 업종별 투자자별
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/index" path="/{marketcode}/{issuecode}/investors" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/index" path="/{marketcode}/{issuecode}/investors" %}
 {% api-method-summary %}
  /v2/market/index/{marketcode}/{issuecode}/investors
 {% endapi-method-summary %}
@@ -380,7 +380,7 @@ ddddd
 
 ## 업종 일중
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/index" path="/{marketcode}/{issuecode}/intraday" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/index" path="/{marketcode}/{issuecode}/intraday" %}
 {% api-method-summary %}
  /v2/market/index/{marketcode}/{issuecode}/intraday
 {% endapi-method-summary %}
@@ -486,7 +486,7 @@ ddddd
 
 ## 업종 히스토리
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/index" path="/{marketcode}/{issuecode}/history" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/index" path="/{marketcode}/{issuecode}/history" %}
 {% api-method-summary %}
  /v2/market/index/{marketcode}/{issuecode}/history
 {% endapi-method-summary %}

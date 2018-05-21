@@ -22,8 +22,8 @@ Authentication    \|   **API Key**
 
 시장기준으로 1회 조회 요청 시 전종목의 현재가\(1초주기\)를 리스트 형식으로 제공
 
-현재가      :   현재가, 누적거래량, 누적거래대금  
-제공시장  :   유가증권, 코스닥시장
+현재가      \|   현재가, 누적거래량, 누적거래대금  
+제공시장  \|   유가증권, 코스닥시장
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/multiquote/stocks/{marketcode}/pricelist" %}
 {% api-method-summary %}
@@ -83,8 +83,8 @@ Authentication    \|   **API Key**
 
 시장기준으로 1회 조회 요청 시 시고저종을  리스트 형식으로 제공
 
-시고저종  :  시가, 고가, 저가, 종가\(현재가\)  
-제공시장  :  유가증권, 코스닥시장
+시고저종  \|  시가, 고가, 저가, 종가\(현재가\)  
+제공시장  \|  유가증권, 코스닥시장
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/multiquote/stocks/{marketcode}/ohlclists" %}
 {% api-method-summary %}
@@ -150,7 +150,7 @@ Authentication    \|   **API Key**
 **현재가**  실시간 조회를  최대 20개의 임의의  종목에 대해 일괄적으로 조회  
 복수종목 리스트간 구분자는 쉼표\(,\) 임
 
-제공시장 : 유가증권 , 코스닥 시장
+제공시장 \| 유가증권 , 코스닥 시장
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/multiquote/stocks/{marketcode}/price" %}
 {% api-method-summary %}
@@ -239,7 +239,7 @@ Authentication    \|   **API Key**
 **호가잔량**  실시간 조회를  최대 20개의 임의의  종목에 대해 일괄적으로 조회  
 복수종목 리스트간 구분자는 쉼표\(,\) 임
 
-제공시장  :  유가증권 , 코스닥 시장
+제공시장  \|  유가증권 , 코스닥 시장
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/multiquote/stocks/{marketcode}/orderbook" %}
 {% api-method-summary %}

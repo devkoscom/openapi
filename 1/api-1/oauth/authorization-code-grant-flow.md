@@ -4,7 +4,7 @@ description: Server-side Web Application Flow
 
 # Authorization Code Grant Flow
 
-이 OAuth 방식은 데이터소유자\(Resource Owner, 서비스 이용자\)에게 데이터 접근에 대한 권한을 위임 받아 access token을 오픈플랫폼으로부터 받아오고, 만기\(expiration time\)을 갖는 access token을 갱신\(refresh token\)할 수 있는 권한도 부여 받아 데이터소유자의 승인과정 없이도 API를 통해 데이터에 접근할 수 있는 인증방식입니다.
+이 OAuth 방식은 데이터소유자\(Resource Owner, 서비스 이용자\)에게 데이터 접근에 대한 권한을 위임 받아 `access token`을 오픈플랫폼으로부터 받아오고, 만기\(expiration time\)을 갖는 access token을 갱신\(refresh token\)할 수 있는 권한도 부여 받아 데이터소유자의 승인과정 없이도 API를 통해 데이터에 접근할 수 있는 인증방식입니다.
 
 따라서 주로 서버 사이드의 웹 애플리케이션에서 API를 사용할 경우에 적합하며, 주기적으로 데이터소유자의 위임을 받아 데이터에 접근할 필요가 있는 비즈니스 모델에 사용됩니다.
 

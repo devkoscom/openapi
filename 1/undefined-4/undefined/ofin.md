@@ -16,7 +16,7 @@ description: 모바일 오핀(OFin) 이용절차
 
 로그인 후에는 신청 완료된 내 앱 목록이 출력됩니다. 
 
-![](../../../.gitbook/assets/image%20%2855%29.png)
+![](../../../.gitbook/assets/image%20%2856%29.png)
 
 **\[메인화면\] 검색**
 
@@ -111,7 +111,7 @@ description: 모바일 오핀(OFin) 이용절차
 
 신청이 완료되었습니다. 코스콤과 선택한 핀테크기업에 정보 제공을 허용한 유효기간 동안 서비스 이용이 가능합니다.
 
-![](../../../.gitbook/assets/image%20%2853%29.png)
+![](../../../.gitbook/assets/image%20%2854%29.png)
 
 **\[앱사용신청\] 메인 \(앱목록\)**
 
@@ -155,13 +155,13 @@ description: 모바일 오핀(OFin) 이용절차
 
 통합계좌조회 메뉴 터치 시, 신청 여부를 체크하여 신청 전일 경우 메시지를 출력합니다. 확인 버튼 터치 시 신청 화면으로 이동합니다. 
 
-![](../../../.gitbook/assets/image%20%2858%29.png)
+![](../../../.gitbook/assets/image%20%2860%29.png)
 
 **\[통합계좌조회\] 앱 사용 신청**
 
 앱 신청과 관련된 부분은 [앱 사용 신청 ](https://koscom.gitbook.io/open-api/1/undefined-4/undefined/ofin#undefined-3)부분을 참고하시기 바랍니다. 
 
-![](../../../.gitbook/assets/image%20%2856%29.png)
+![](../../../.gitbook/assets/image%20%2857%29.png)
 
 **\[통합계좌조회\] 정보제공 권한 허용**
 

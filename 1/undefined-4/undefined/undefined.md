@@ -10,7 +10,7 @@ description: 금융투자 핀테크포털 이용절차
 
 **1. 포털 초기화면**
 
-![](../../../.gitbook/assets/image%20%2860%29.png)
+![](../../../.gitbook/assets/image%20%2862%29.png)
 
 ## 회원가입
 
@@ -52,7 +52,7 @@ description: 금융투자 핀테크포털 이용절차
 
 **7. \[앱사용신청\] 사용하실 핀테크 앱 선택**
 
-![](../../../.gitbook/assets/image%20%2861%29.png)
+![](../../../.gitbook/assets/image%20%2863%29.png)
 
 
 

@@ -18,19 +18,19 @@ description: API 테스트절차
 ‘API문서 &gt; 시세 서비스 &gt; 주식종목’ 메뉴에서 ‘Select an Application’ 을 눌러서 앱을 선택 합니다.  
 앱이 보이지 않으시면 해당 API를 사용하는 앱을 먼저 만드셔야 합니다. 자세한 사항은 [이곳](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2/undefined#application)을 참조하세요.
 
-![&#xC2DC;&#xC138;&#xC11C;&#xBE44;&#xC2A4; - &#xC8FC;&#xC2DD;&#xC885;&#xBAA9;](../../../.gitbook/assets/image%20%2870%29.png)
+![&#xC2DC;&#xC138;&#xC11C;&#xBE44;&#xC2A4; - &#xC8FC;&#xC2DD;&#xC885;&#xBAA9;](../../../.gitbook/assets/image%20%2871%29.png)
 
 ‘Authentication \(None\)’ 버튼을 __누르시고, 인증방식을 ‘API Key’로 선택 합니다.
 
-![&#xC778;&#xC99D;&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2824%29.png)
+![&#xC778;&#xC99D;&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2825%29.png)
 
 해당 API의 Method가 GET방식이면 ‘API Key Type’를 Query로 선택 하시고, POST방식이면 Header로 선택 하세요.
 
-![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - API Key](../../../.gitbook/assets/image%20%2851%29.png)
+![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - API Key](../../../.gitbook/assets/image%20%2852%29.png)
 
 테스트할 API를 선택 하시고, ‘Try it Out’ 버튼을 누르시면 아래와 같이 Response 결과를 받아 보실 수 있습니다.
 
-![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%2880%29.png)
+![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%2881%29.png)
 
  ‘Query’ 탭을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
@@ -48,7 +48,7 @@ description: API 테스트절차
 
 ‘APIs & 플랜’ 메뉴에서 ‘OAuth2.0-Authorization Code를 지원하는 API를 확인 합니다. 테스트할 앱을 선택하고, ‘OAuth2.0’을 선택 합니다.
 
-![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - OAuth2.0](../../../.gitbook/assets/image%20%2848%29.png)
+![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - OAuth2.0](../../../.gitbook/assets/image%20%2849%29.png)
 
 > * Grant Type
 >
@@ -86,9 +86,9 @@ description: API 테스트절차
 
 테스트할 API를 선택 하시고 ‘Try it Out’ 버튼을 누르면 아래와 같이 Response결과를 받아 보실 수 있습니다.
 
-![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%2823%29.png)
+![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%2824%29.png)
 
 ‘Query’ 을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
-![Query &#xD0ED;](../../../.gitbook/assets/image%20%2885%29.png)
+![Query &#xD0ED;](../../../.gitbook/assets/image%20%2886%29.png)
 

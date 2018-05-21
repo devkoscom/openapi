@@ -12,8 +12,7 @@ description: API 테스트 절차
 
 ## API Key Type 인증방식
 
- ‘API문서 &gt; 시세 서비스 &gt; 주식 종목’ 메뉴에서 ‘Select an Application’ 을 눌러서 앱을 선택 합니다.
-
+‘API문서 &gt; 시세 서비스 &gt; 주식 종목’ 메뉴에서 ‘Select an Application’ 을 눌러서 앱을 선택 합니다.  
 앱이 보이지 않으시면 해당 API를 사용하는 앱을 먼저 만드셔야 합니다. 자세한 사항은 [이 페이지](https://finpl.gitbook.io/open-api/~/edit/primary/untitled/undefined)를 참조하세요.
 
 ![&#xC2DC;&#xC138;&#xC11C;&#xBE44;&#xC2A4;-&#xC8FC;&#xC2DD;&#xC885;&#xBAA9;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAHP22XoyNPzixZ3_FG%2F-LAHPoJtyQDRgiqyR45f%2Fimage.png?alt=media&token=ea5f1cd1-cf33-4eed-a4a0-717e110378dc)
@@ -42,8 +41,6 @@ description: API 테스트 절차
 현재는 OAuth2.0 Grant Type 중 **Authorization Code만 지원**하며, Implicit Grant Type 등은 보안수준 및 비즈니스모델에 따라 협의가 필요합니다. 
 {% endhint %}
 
-
-
 ![&#xC571; &#xC120;&#xD0DD;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAHSimn2EyIoqg7WH6a%2F-LAHTJRcJQ1TJN2cZq4v%2Fimage.png?alt=media&token=9c433181-1efc-446b-94f2-60d26bdf365b)
 
 ‘APIs & 플랜’ 메뉴에서 ‘OAuth2.0-Authorization Code를 지원하는 API를 확인 합니다. 테스트할 앱을 선택하고, ‘OAuth2.0’을 선택 합니다.
@@ -51,20 +48,30 @@ description: API 테스트 절차
 ![OAuth2.0 &#xC778;&#xC99D;&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9n-1MugBfAycrCN1bv%2F-LAHSimn2EyIoqg7WH6a%2F-LAHSpPibYXiyoOePl-X%2Fimage.png?alt=media&token=323b826c-7318-46e9-8b7f-6148a7cc5c66)
 
 > * Grant Type
->   * ‘Authorization Code’를 선택 합니다.
+>
+>        ‘Authorization Code’를 선택 합니다.
+>
 > * Client ID
->   * 앱의 API Key 값을 입력 합니다. \(자동 입력\)
+>
+>        앱의 API Key 값을 입력 합니다. \(자동 입력\)
+>
 > * Client Secret
->   * 앱의 Secret 값을 입력 합니다. \(자동 입력\)
+>
+>        앱의 Secret 값을 입력 합니다. \(자동 입력\)
+>
 > * Scope
->   * 앱에 등록한 Scope 값을 입력 합니다
+>
+>        앱에 등록한 Scope 값을 입력 합니다
+>
 > * Authorize Endpoint
->   * [https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/authorize](https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/authorize) 값을 입력 합니다.
+>
+>        [https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/authorize](https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/authorize) 값을 입력 합니다.
+>
 > * Token Endpoint
->   * [https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token](https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token) 값을 입력 합니다.
+>
+>        [https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token](https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token)   값을 입력 합니다.
 
-‘OK’ 버튼을 누르시면, 사용자 로그인창이 오픈 되며, 아이디 및 비밀번호를 입력하시고, 로그인 합니다. 
-
+‘OK’ 버튼을 누르시면, 사용자 로그인창이 오픈 되며, 아이디 및 비밀번호를 입력하시고, 로그인 합니다.   
 아이디와 비밀번호\(OTP번호\)는 금융투자 핀테크 포털 가입 시 등록한 것이며, 테스트를 위해 별도로 부여되며 추가적인 고유 계정이 필요 하시면 관리자에게 문의 하십시요.
 
 {% hint style="info" %}

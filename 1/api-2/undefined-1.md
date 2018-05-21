@@ -2,18 +2,6 @@
 
 계좌기반 조회 API는 증권사별로 호출 URI가 다르나 큰 틀은 동일하며 단지 증권사구분이 URI에 포함되어 있는 구조입니다. 
 
-API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 있습니다. 
-
-#### **URI구조**
-
-* 전체 URI - `https://APIgateway주소/버전정보/증권사단축명/조회서비스구분`
-* Endpoint – `https://APIgateway주소/버전정보/증권사단축명/`
-
-#### **오픈플랫폼 API gateway 주소**
-
-* Production – `https://apigw.koscom.co.kr`
-* Sandbox – `https://sandbox-apigw.koscom.co.kr`
-
 {% hint style="success" %}
 계좌기반 조회 API에 대한 **자세한 설명**과 **사용방법**은 아래의 [링크](https://developers.koscom.co.kr/documentation/account)를 클릭하면 이용할 수 있습니다:
 
@@ -22,65 +10,21 @@ API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 �
 
 
 
-### 조회 유의사항
+## Syntax
+
+HTTP methods    \|   **POST**
+
+Authentication     \|   **OAuth2**
+
+
+
+
+
+## 조회 유의사항
 
  조회는 API에 지정된 가상계좌를 조회범위로 하기 때문에 계좌속성\(위탁, 펀드, 파생상품 등\)에 따라 조회조건이 충족되지 않을 수 있으므로 전 상품군을 대상으로 조회할 경우는 주의가 필요합니다. 예로 보통 증권회사의 종합계좌는 모든 금융상품을 취급할 수 있는 것이지만 경우에 따라 파생상품과 같은 특정 상품군은 별도로 관리되는 증권회사도 있으며, 종합계좌 개념을 도입하지 않는 증권사도 존재합니다. 따라서 종합계좌라고 판단되어 KOSPI200 파생상품 잔고를 조회하였을 때 응답에 해당상품이 반드시 포함될 것이라 판단하고 비즈니스를 설계하면 안됩니다. 
 
 예로 자산포트폴리오조회와 계좌잔고조회의 경우 모든 상품군을 조회범위에 포함하는 ‘ALL’검색조건을 지원하는 증권사의 경우 해당 조건으로 계좌를 조회하면 문제가 없지만, ‘ALL’검색조건을 지원하지 않는 증권사의 경우 각 상품군별로  계좌를 대상으로 조회해야 누락 없이 전 상품군을 조회할 수 있습니다. 
-
-
-
-## 증권사단축명 & API 제공여부
-
-> \(’2017.05.30 기준\)
-
-| **`증권사명`**  | **`단축명`**  | **`코드`**  | **`API제공여부`** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 교보증권 | KYOBO | 00001 | 미제공\(미정\) |
-| 신한금융투자 | SHINHAN | 00002 | 제공 |
-| 한국투자증권 | KOREAINVEST | 00003 | 제공 |
-| 대신증권 | DAISHIN | 00004 | 제공 |
-| 대우증권 | DAEWOO | 00005 | 미제공\(미정\) |
-| 신영증권 | SHINYOUNG | 00006 | 미제공\(미정\) |
-| 유진투자증권 | EUGENE | 00008 | 제공 |
-| 한양증권 | HANYANG | 00009 | 미제공\(예정\) |
-| 메리츠종합금융증권 | MERITZ | 00010 | 미제공\(예정\) |
-| NH투자증권 | NHINVEST | 00012 | 제공 |
-| 부국증권 | BOOKOOK | 00013 | 미제공\(예정\) |
-| KB투자증권 | KBINVEST | 00017 | 제공 |
-| 한화투자증권 | HANWHA | 00021 | 미제공\(미정\) |
-| 에이치엠씨투자증권 | HMC | 00022 | 미제공\(미정\) |
-| 유화증권 | YUWHA | 00023 | 미제공\(미정\) |
-| 유안타증권 | YUANTA | 00024 | 제공 |
-| SK증권 | SK | 00025 | 제공 |
-| 골든브릿지투자증권 | GBRIDGE | 00029 | 미제공\(계획중\) |
-| 삼성증권 | SAMSUNG | 00030 | 제공 |
-| 동부증권 | DONGBU | 00031 | 제공 |
-| ~~케이비투자증권~~ | ~~KB~~ | ~~00034~~ | ~~미제공\(계획중\)~~ |
-| 하이투자증권 | HI | 00046 | 제공 |
-| 미래에셋증권 | MIRAEASSET | 00049 | 미제공\(미정\) |
-| 키움증권 | KIWOOM | 00050 | 미제공\(예정\) |
-| 리딩투자증권 | LEADING | 00052 | 미제공\(미정\) |
-| 하나금융투자 | HANA | 00056 | 미제공\(미정\) |
-| 이베스트투자증권 | EBEST | 00063 | 제공 |
-| 코리아에셋투자증권 | KOREAASSET | 00064	 | 미제공\(계획중\) |
-| 비엔지증권 | BNG | 00065 | 미제공\(계획중\) |
-| 흥국증권 | HEUNGKUK | 00066 | 미제공\(계획중\) |
-| IBK투자증권 | IBK | 00068 | 미제공\(계획중\) |
-| 바로투자증권 | BAROFN | 00069 | 미제공\(계획중\) |
-| 토러스투자증권 | TAURUS | 00070 | 미제공\(계획중\) |
-| KTB투자증권 | KTB	 | 00071 | 미제공\(계획중\) |
-| 엘아이지투자증권 | LIG | 00072 | 미제공\(계획중\) |
-| 애플투자증권 | APPLE | 00073 | 미제공\(계획중\) |
-| 비엔케이투자증권 | BNKFN | 00086 | 미제공\(계획중\) |
-
-{% hint style="danger" %}
- API 제공 증권사, 일정, API 제공 범위는 증권사의 사정에 따라 변경될 수 있음
-{% endhint %}
-
-
-
-
 
 
 
@@ -101,6 +45,16 @@ API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 �
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Content-Type" required=true type="string" %}
+Application/json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Authorization" required=true type="string" %}
+Bearer 발급받은 access token
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -108,7 +62,7 @@ API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 �
 
 {% endapi-method-response-example-description %}
 
-```
+```yaml
 {
   "commonHeader":{
     "reqIdPlatform":"fs27abe2231",
@@ -255,28 +209,6 @@ API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 �
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-#### Syntax
-
-* URI
-
-  *  /account/portfolio/search
-
-* HTTP methods
-
-  * POST
-
-* Format
-
-  * JSON &lt;application/json; charset=utf-8&gt;
-
-* Content-Type
-
-  * Application/json
-
-* Authentication
-  * OAuth 2- Authorization
-  * header – Authorization: Bearer 발급받은 access token
 
 #### Example
 

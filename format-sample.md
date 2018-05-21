@@ -28,7 +28,7 @@ Authentication     \|   **API Key**
 
 ## 상품/지수선물 종가
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/closeprice" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/futures" path="/{marketcode}/{issuecode}/closeprice" %}
 {% api-method-summary %}
  /v2/market/futures/{marketcode}/{issuecode}/closeprice
 {% endapi-method-summary %}
@@ -96,7 +96,7 @@ ddddd
 
 ## 상품/지수선물 체결
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/price" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/futures" path="/{marketcode}/{issuecode}/price" %}
 {% api-method-summary %}
  /v2/market/futures/{marketcode}/{issuecode}/price
 {% endapi-method-summary %}
@@ -179,7 +179,7 @@ ddddd
 
 ## 상품/지수선물 종목 체결
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/futures" path="/{marketcode}/{issuecode}/price" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/futures" path="/{marketcode}/{issuecode}/price" %}
 {% api-method-summary %}
  /v2/market/futures/{marketcode}/{issuecode}/price
 {% endapi-method-summary %}

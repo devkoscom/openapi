@@ -18,7 +18,7 @@ Authentication     \|   **OAuth2**
 
 조회대상이 되는 계좌의 실제 잔고 수량, 손익, 수익률 등을 상세히 조회하기 위한 API
 
-{% api-method method="post" host="https://sandbox-apigw.koscom.co.kr/v1/증권사단축명/account" path="/balance/search" %}
+{% api-method method="post" host="https://{APIGWAddr}/v1/{증권사단축명}/account" path="/balance/search" %}
 {% api-method-summary %}
 /account/balance/search
 {% endapi-method-summary %}
@@ -151,7 +151,7 @@ Application/json
 
 조회대상이 되는 계좌의 실제 잔고 수량, 투자금액 대신 금융투자 상품의 구성비만을 제공함으로써 개인금융정보의 노출부담을 최소화하면서도 투자자산을 기초로 자산통합관리, 자문, 정보제공 등을 받을 수 있도록 하기 위한 API
 
-{% api-method method="post" host="https://sandbox-apigw.koscom.co.kr/v1/증권사단축명/account" path="/portfolio/search" %}
+{% api-method method="post" host="https://{APIGWAddr}/v1/{증권사단축명}/account" path="/portfolio/search" %}
 {% api-method-summary %}
 /account/portfolio/search
 {% endapi-method-summary %}
@@ -361,7 +361,7 @@ Bearer 발급받은 access token
 
 조회대상이 되는 계좌에 설정된 관심종목을 조회할 수 있는 API
 
-{% api-method method="post" host="https://sandbox-apigw.koscom.co.kr/v1/증권사이름/account" path="/interest/search" %}
+{% api-method method="post" host="https://{APIGWAddr}/v1/{증권사단축명}/account" path="/interest/search" %}
 {% api-method-summary %}
 /account/interest/search
 {% endapi-method-summary %}

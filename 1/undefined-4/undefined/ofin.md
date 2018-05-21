@@ -1,5 +1,5 @@
 ---
-description: 모바일 오핀(OFin) 이용절차
+description: 모바일 앱 '오핀(OFin)' 이용절차
 ---
 
 # 오핀\(OFin\) 이용

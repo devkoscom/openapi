@@ -94,7 +94,7 @@ Authentication     \|   **API Key**
 
 {% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/{issuecode}/master" %}
 {% api-method-summary %}
- /v2/market/ options/{marketcode}/{issuecode}/master
+ /v2/market/options/{marketcode}/{issuecode}/master
 {% endapi-method-summary %}
 
 {% api-method-description %}

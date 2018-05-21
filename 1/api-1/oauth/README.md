@@ -6,6 +6,8 @@ OAuth인증체계를 사용하는 API는 **민감정보가 포함된** 데이터
 
 해당 인증방식은 2가지로 나눌 수 있습니다.
 
+
+
 ## 1. Authorization Code Grant Flow
 
 > Server-Side Web Application Flow

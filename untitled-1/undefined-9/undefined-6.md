@@ -16,7 +16,7 @@ Authentication     \|   **API Key**
 
 ## 주식종목 리스트 API {#api}
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/stocks" path="/{marketcode}/lists" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/lists" %}
 {% api-method-summary %}
  /v2/market/stocks/{marketcode}/lists
 {% endapi-method-summary %}
@@ -86,7 +86,7 @@ Authentication     \|   **API Key**
 
 ## 주식종목 마스터 API {#api}
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/stocks" path="/{marketcode}/{issuecode}/master" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/master" %}
 {% api-method-summary %}
 /v2/market/stocks/{marketcode}/{issuecode}/master
 {% endapi-method-summary %}
@@ -223,7 +223,7 @@ Authentication     \|   **API Key**
 
 ## 주식종목 종가 API {#api}
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/stocks" path="/{marketcode}/{issuecode}/closeprice" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/closeprice" %}
 {% api-method-summary %}
 /v2/market/stocks/{marketcode}/{issuecode}/closeprice
 {% endapi-method-summary %}
@@ -305,7 +305,7 @@ Authentication     \|   **API Key**
 
 ## 주식종목 체결 API {#api}
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/stocks" path="/{marketcode}/{issuecode}/price" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/price" %}
 {% api-method-summary %}
 /v2/market/stocks/{marketcode}/{issuecode}/price
 {% endapi-method-summary %}

@@ -8,8 +8,6 @@ HTTP methods   \|   **GET**
 
 Authentication    \|   **API Key**
 
-
-
 {% hint style="danger" %}
 별도의 **시세표 라이센스 필요!**
 {% endhint %}
@@ -25,7 +23,7 @@ Authentication    \|   **API Key**
 현재가      \|   현재가, 누적거래량, 누적거래대금  
 제공시장  \|   유가증권, 코스닥시장
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/multiquote/stocks/{marketcode}/pricelist" %}
+{% api-method method="get" host="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/pricelist" %}
 {% api-method-summary %}
 /v2/market/multiquote/stocks/{marketcode}/pricelist
 {% endapi-method-summary %}
@@ -86,7 +84,7 @@ Authentication    \|   **API Key**
 시고저종  \|  시가, 고가, 저가, 종가\(현재가\)  
 제공시장  \|  유가증권, 코스닥시장
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/multiquote/stocks/{marketcode}/ohlclists" %}
+{% api-method method="get" host="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/ohlclists" %}
 {% api-method-summary %}
 /v2/market/multiquote/stocks/{marketcode}/ohlclists
 {% endapi-method-summary %}
@@ -152,7 +150,7 @@ Authentication    \|   **API Key**
 
 제공시장 \| 유가증권 , 코스닥 시장
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/multiquote/stocks/{marketcode}/price" %}
+{% api-method method="get" host="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/price" %}
 {% api-method-summary %}
 /v2/market/multiquote/stocks/{marketcode}/price
 {% endapi-method-summary %}
@@ -241,7 +239,7 @@ Authentication    \|   **API Key**
 
 제공시장  \|  유가증권 , 코스닥 시장
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr" path="/v2/market/multiquote/stocks/{marketcode}/orderbook" %}
+{% api-method method="get" host="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/orderbook" %}
 {% api-method-summary %}
 /v2/market/list/{marketcode}/orderbook
 {% endapi-method-summary %}

@@ -880,45 +880,28 @@ Bearer 발급받은 access token
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
 | reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | "" | 사용안함 |
 | ci | String\(88\) | 연계정보 |  |
 | realAccNo | String\(40\) | . | 사용안함 |
 | vtAccNo | String\(30\) | 가상계좌번호 |  |
-| totalCnt | Number | 조회 조건의 총 메시지 건수 |  |
-| count | Number | 현 메시지 내 응답 건수 |  |
-| page | String\(24\) | 다음 page 번호 | “null”이면 더 이상 없음 |
-| summary | Object | 잔고 요약 | SUM |
-| cashBalance | Number | 현금잔고 | 현금잔고 |
-| d1 | Number | D+1잔고 |  |
-| d2 | Number | D+2잔고 |  |
-| substitute | Number | 대용금 |  |
-| receivable | Number | 미수/미납금 |  |
-| subsMargin | Number | 대용증거금 |  |
-| loanCredit | Number | 대출/신용금 |  |
-| valAtTrade | Number | 유가증권매수금액 |  |
-| valueAtCur | Number | 유가증권평가금액 |  |
-| proLoss | Number | 유가증권평가손익 |  |
-| totalAccVal | Number | 총평가금액 |  |
-| cashAvWithdraw | Number | 출금가능액 |  |
-| equityList: assetType | String\(8\) | 상품구분자 | KSP\(코스피\), KDQ\(코스닥\), ETF\(ETF\), FUT\(선물\), OPT\(옵션\), ELW\(ELW\), ETC\(기타\) |
-| equityList :isinCode | String\(12\) | ISINCODE\(12\) |  |
-| qty | Number | 수량 또는 비중 | equity 내 비중, 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영안함 |
-| tradeType | String\(8\) | 잔고구분 | NRM\(일반/현금\), CRD\(신용\), LOAN\(대출\), SUM\(분류가 불가한 경우 구분 없이 합산한 경우며 대출잔고는 제외\) |
-| valAtTrade | Number | 매수금액 |  |
-| valAtCur | Number | 평가금액 |  |
-| proLoss | Number | 평가손익 |  |
-| earningRate | Number | 수익률 | 소수점 2째자리까지 |
-| fundCode | String\(20\) | 펀드표준코드 |  |
-| fundName | Number | 펀드명 | 최대 15자 |
-| firstDateBuy | String\(12\) | 최초매수일 | YYYYMMDD |
-| lastDateBuy | String\(12\) | 최종매수일 | YYYYMMDD |
-| maturity | String\(12\) | 만기일 | YYYYMMDD |
-| etcList: assetType | String\(8\) | 상품구분자 | BOND\(채권\), CD, CP, DLS, ELS, STB\(사채\), RP\(미구분\), CRP\(약정식RP\), RRP\(수시RP\), WRT\(워런트\) |
-| etcList: assetName | String\(15\) | 상품명 |  |
-| etcList: isinCode | String\(12\) | . | 현재는 지원 안 함 \(1.0부터 지원예정\) |
+| queryResult: totalCnt | Number | 조회 조건의 총 메시지 건수 |  |
+| queryResult: count | Number | 현 메시지 내 응답 건수 |  |
+| queryResult: page | String\(24\) | 다음 page 번호 | “null”이면 더 이상 없음 |
+| queryPrams: fromDate | String\(12\) | 조회시작날짜 | YYYYMMDD |
+| queryPrams: toDate | String\(12\) | 조회종료날짜 | YYYYMMDD |
+| queryPrams: isinCode | String\(12\) | 조회조건 | 종목코드 |
+| queryPrams: side | String\(8\) | 조회조건 | BID\(매도\), ASK\(매수\) |
+| queryPrams: count | Number | 응답 별 건수 | default는 50 |
+| queryPrams: page | String\(24\) | 다음 page 번 | 응답데이터의 특정 지점을 지정할 경우 \(요청 시 값\) |
+| transaction: isinCode | String\(20\) | 종목코드 | 입출금은 CASH로 표기 |
+| transaction: transDate | String\(12\) | 거래일자 | YYYYMMDD |
+| transaction: transType | String\(8\) | 거래구분 | BID\(매도\), ASK\(매수\), DEP\(이체입금\), WID\(이체출금\) |
+| transaction: changeAmt | Number | 금액증감 | 매도/매수/이체에 따른 금액변동 |
+| transaction: changeQty | Number | 수량증감 | 매도/매수량, 이체 시는 0 |
+| transaction: qty | Number | 잔고수량 | 거래 후 잔량 |
 | respCode | String\(8\) | 응답코드 |  |
 | respMsg | String\(50\) | 응답메시지 |  |
 

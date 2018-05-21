@@ -25,7 +25,7 @@ Authentication     \|   **API Key**
 
 ## 상품/지수옵션 종목 리스트
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/lists" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/options" path="/{marketcode}/lists" %}
 {% api-method-summary %}
  /v2/market/options/{marketcode}/lists
 {% endapi-method-summary %}
@@ -92,7 +92,7 @@ Authentication     \|   **API Key**
 
 ## 상품/지수옵션 종목 마스터
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/{issuecode}/master" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/options" path="/{marketcode}/{issuecode}/master" %}
 {% api-method-summary %}
  /v2/market/options/{marketcode}/{issuecode}/master
 {% endapi-method-summary %}
@@ -221,7 +221,7 @@ Authentication     \|   **API Key**
 
 ## 상품/지수옵션 종목 종가
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/{issuecode}/closeprice" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/options" path="/{marketcode}/{issuecode}/closeprice" %}
 {% api-method-summary %}
  /v2/market/options/{marketcode}/{issuecode}/closeprice
 {% endapi-method-summary %}
@@ -289,7 +289,7 @@ ddddd
 
 ## 상품/지수옵션 종목 체결
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/{issuecode}/price" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/options" path="/{marketcode}/{issuecode}/price" %}
 {% api-method-summary %}
  /v2/market/options/{marketcode}/{issuecode}/price
 {% endapi-method-summary %}
@@ -377,7 +377,7 @@ ddddd
 
 ## 상품/지수옵션 종목 우선호가
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/{issuecode}/orderbook" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/options" path="/{marketcode}/{issuecode}/orderbook" %}
 {% api-method-summary %}
  /v2/market/options/{marketcode}/{issuecode}/orderbook
 {% endapi-method-summary %}
@@ -503,7 +503,7 @@ ddddd
 
 ## 상품/지수옵션 일중
 
-{% api-method method="get" host="https://sandbox-apigw.koscom.co.kr/v2/market/options" path="/{marketcode}/{issuecode}/intraday" %}
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/options" path="/{marketcode}/{issuecode}/intraday" %}
 {% api-method-summary %}
  /v2/market/options/{marketcode}/{issuecode}/intraday
 {% endapi-method-summary %}

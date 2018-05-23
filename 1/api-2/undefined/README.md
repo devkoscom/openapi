@@ -16,7 +16,7 @@
                                API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 있습니다. 
 
 {% hint style="success" %}
-{APIGWAddr} = 오픈플랫폼 API Gateway 주소
+`{APIGWAddr}` :  오픈플랫폼 API Gateway 주소
 {% endhint %}
 
 

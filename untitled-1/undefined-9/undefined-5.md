@@ -4,7 +4,8 @@ description: (조회 방식)
 
 # 업종지수 조회
 
-KOSPI/KOSDAQ등의 지수 예상지수 및 업종별 투자자별 거래량등을 제공한다.  
+KOSPI/KOSDAQ등의 지수 예상지수 및 업종별 투자자별 거래량등을 제공한다.
+
 
 
 ## Syntax
@@ -15,12 +16,12 @@ Authentication     \|   **API Key**
 
 
 
-{% hint style="info" %}
-업종지수 스트리밍 조회는 xx를 참고하세요.
+{% hint style="success" %}
+`marketcode` 및 `issuecode` 는 [코드표 &gt; "시장코드표"](https://koscom.gitbook.io/open-api/untitled-1/undefined-8#undefined)를 참조하세요.
 {% endhint %}
 
-{% hint style="warning" %}
-`marketcode` 및 `issuecode` 는 [코드표 &gt; "시장코드표"](https://koscom.gitbook.io/open-api/untitled-1/undefined-8#undefined)를 참조하세요.
+{% hint style="info" %}
+업종지수 스트리밍 조회는 xx를 참고하세요.
 {% endhint %}
 
 
@@ -160,14 +161,16 @@ ddddd
 | accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위:주 |
 | accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
 
-> `trdTm`
->
->  "HHMMSSmm" 형태로 시간전송  
+> `trdTm`  
+> "HHMMSSmm" 형태로 시간전송  
 >    - 정규장 개시전 또는 정규장 체결 발생 이전 : 0  
 >    - 장운영시그널, 대량체결 포함  
-> ※ 장운영시그널  
->   정규장마감\(15:00\):31000000/장종료시간외마감\(15:30\):41000000/단일가마감\(18:00\):81000000/일반Buy-in마감\(18:00\):91000007/당일Buy-in마감\(18:00\):91000008  
-> ※ 대량체결시 장전대량매매체결:51000000/장중대량매매체결:61000000/장후대량매매체결:71000000"
+> _※ 장운영시그널_  
+> 정규장마감\(15:00\):31000000 /장종료시간외마감\(15:30\):41000000 /단일가마감\(18:00\):81000000 /일반Buy-in마감\(18:00\):91000007 /당일Buy-in마감\(18:00\):91000008  
+> _※ 대량체결시_   
+> 장전대량매매체결:51000000/장중대량매매체결:61000000/장후대량매매체결:71000000"
+
+
 
 
 

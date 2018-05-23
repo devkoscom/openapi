@@ -12,11 +12,12 @@ Authentication     \|   **API Key**
 
 
 
-{% hint style="warning" %}
-`marketcode` 및 `issuecode` 는 [코드표 &gt; "시장코드표"](https://koscom.gitbook.io/open-api/untitled-1/undefined-8#undefined)를 참조하세요.
+{% hint style="success" %}
+`marketcode`및 `issuecode`는 [코드표 &gt; "시장코드표"](https://koscom.gitbook.io/open-api/untitled-1/undefined-8#undefined)를 참조하세요.
+{% endhint %}
 
-`issuecode(옵션)`  
-  ex\) KR4201KC1756 → 201KC175
+{% hint style="warning" %}
+`issuecode(옵션)`            ex\) KR4201KC1756 → 201KC175
 {% endhint %}
 
 
@@ -364,14 +365,14 @@ ddddd
 | realtmUplmtprc | number\(11\) | 실시간상한가 |  |
 | realtmLwlmtprc | number\(11\) | 실시간하한가 |  |
 
-> `trdTm`
->
->  "HHMMSSmm" 형태로 시간전송  
+> `trdTm`  
+> "HHMMSSmm" 형태로 시간전송  
 >    - 정규장 개시전 또는 정규장 체결 발생 이전 : 0  
 >    - 장운영시그널, 대량체결 포함  
-> ※ 장운영시그널  
->   정규장마감\(15:00\):31000000/장종료시간외마감\(15:30\):41000000/단일가마감\(18:00\):81000000/일반Buy-in마감\(18:00\):91000007/당일Buy-in마감\(18:00\):91000008  
-> ※ 대량체결시 장전대량매매체결:51000000/장중대량매매체결:61000000/장후대량매매체결:71000000"
+> _※ 장운영시그널_  
+> 정규장마감\(15:00\):31000000 /장종료시간외마감\(15:30\):41000000 /단일가마감\(18:00\):81000000 /일반Buy-in마감\(18:00\):91000007 /당일Buy-in마감\(18:00\):91000008  
+> _※ 대량체결시_   
+> 장전대량매매체결:51000000/장중대량매매체결:61000000/장후대량매매체결:71000000"
 
 
 

@@ -1,4 +1,4 @@
-# 시세코드표
+# 코드표 \(시세\)
 
 {% hint style="success" %}
 시세API 에러코드는 [Error Code](https://koscom.gitbook.io/open-api/1/error#error-3) 를 참조하세요.

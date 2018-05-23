@@ -117,7 +117,7 @@ GET /v2/market/stocks/kospi/005930/masterchanage?prevddClsprc&wk52HgstPrc
 ### \[실시간\] 주식
 
 | Name | Type | Description |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | isuSrtCd | string\(9\) | 종목단축코드 | 마스터 |
 | accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 체결 |
 | askStep1BstordPrc | number\(11\) | 매도1단계우선호가가격 | 호가 |
@@ -142,12 +142,41 @@ GET /v2/market/stocks/kospi/005930/masterchanage?prevddClsprc&wk52HgstPrc
 | bidStep5BstordRqty | number\(12\) | 매수5단계우선호가잔량 | 호가 |
 | askStep6BstordPrc | number\(11\) | 매도6단계우선호가가격 | 호가 |
 | bidStep6BstordPrc | number\(11\) | 매수6단계우선호가가격 | 호가 |
-| askStep6BstordRqty |  | 매도6단계우선호가잔량 |  |
-| bidStep6BstordRqty |  | 매수6단계우선호가잔량 |  |
-|  | number\(11\) |  |  |
-|  | number\(11\) |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| askStep6BstordRqty | number\(12\) | 매도6단계우선호가잔량 | 호가 |
+| bidStep6BstordRqty | number\(12\) | 매수6단계우선호가잔량 | 호가 |
+| askStep7BstordPrc | number\(11\) | 매도7단계우선호가가격 | 호가 |
+| bidStep7BstordPrc | number\(11\) | 매수7단계우선호가가격 | 호가 |
+| askStep7BstordRqty | number\(12\) | 매도7단계우선호가잔량 | 호가 |
+| bidStep7BstordRqty | number\(12\) | 매수7단계우선호가잔량 | 호가 |
+| askStep8BstordPrc | number\(11\) | 매도8단계우선호가가격 | 호가 |
+| bidStep8BstordPrc | number\(11\) | 매수8단계우선호가가격 | 호가 |
+| askStep8BstordRqty | number\(12\) | 매도8단계우선호가잔량 | 호가 |
+| bidStep8BstordRqty | number\(12\) | 매수8단계우선호가잔량 | 호가 |
+| askStep9BstordPrc | number\(11\) | 매도9단계우선호가가격 | 호가 |
+| bidStep9BstordPrc | number\(11\) | 매수9단계우선호가가격 | 호가 |
+| askStep9BstordRqty | number\(12\) | 매도9단계우선호가잔량 | 호가 |
+| bidStep9BstordRqty | number\(12\) | 매수9단계우선호가잔량 | 호가 |
+| askStep10BstordPrc | number\(11\) | 매도10단계우선호가가격 | 호가 |
+| bidStep10BstordPrc | number\(11\) | 매수10단계우선호가가격 | 호가 |
+| askStep10BstordRqty | number\(12\) | 매도10단계우선호가잔량 | 호가 |
+| bidStep10BstordRqty | number\(12\) | 매수10단계우선호가잔량 | 호가 |
+| askordTotRqty | number\(12\) | 매도호가총잔량 | 호가 |
+| bidordTotRqty | number\(12\) | 매수호가총잔량 | 호가 |
+| pstoffhrAskTotOrdRqty | number\(15\) | 장종료후시간외매도총호가잔량 | 호가 |
+| pstoffhrBidTotOrdRqty | number\(15\) | 장종료후시간외매수총호가잔량 | 호가 |
+| deemTrdPrc | number\(11\) | 예상체결가격 | 체결 |
+| deemTrdvol | number\(12\) | 예상체결수량 | 체결 |
+| deemAccTrdvol | number\(12\) | 예상누적체결수량 | 체결 |
+| cmpprevddTpCd | string\(1\) | 전일대비구분코드 | 체결 |
+| cmpprevddPrc | number\(11\) | 전일대비가격 | 체결 |
+| trdPrc | number\(11\) | 체결가격 | 체결 |
+| trdvol | number\(10\) | 상장중최저가일자 | 체결 |
+| opnprc | number\(11\) | 시가 | 체결 |
+| hgprc | number\(11\) | 고가 | 체결 |
+| lwprc | number\(11\) | 저가 | 체결 |
+| accTrdval | number\(22\) | 누적거래대금 | 체결 |
+| lstAskbidTpCd | string\(1\) | 최종매도매수구분코드 | 체결 |
+| trdTm | string\(8\) | 체결시각,거래시각 | 체결 |
 
 
 

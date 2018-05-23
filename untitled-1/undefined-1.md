@@ -1,5 +1,9 @@
 # 요구형항목
 
+요구형항목은 **조회형** 또는 **실시간형**으로 나뉩니다.
+
+ 
+
 ## 조회
 
 > 요구형항목 - 마스터데이타 조회\(주식\)
@@ -114,9 +118,9 @@ GET /v2/market/stocks/kospi/005930/masterchanage?prevddClsprc&wk52HgstPrc
 호가, 체결 preset 으로 제공하는 데이타 항목을 요구형 실시간 데이타 항목으로 제공한다.  
 아래 항목이외의 항목에 대해서 요구형 실시간을 요청하면 ERROR를 수신하며, 실시간 요청등록은 실패한다. 
 
-### \[실시간\] 주식
+### \[실시간\]  주식
 
-| Name | Type | Description |  |
+| **Name** | **Type** | **Description** |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | isuSrtCd | string\(9\) | 종목단축코드 | 마스터 |
 | accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 체결 |
@@ -180,7 +184,61 @@ GET /v2/market/stocks/kospi/005930/masterchanage?prevddClsprc&wk52HgstPrc
 
 
 
+### \[실시간\]  선물
 
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | string\(12\) | 종목단축코드 | 마스터 |
+| bidTotOrdRqty | number\(12\) | 매수총호가잔량 | 호가 |
+| bidStep1BstordPrc | number\(11\) | 매수1단계우선호가가격 | 호가 |
+| bidStep1BstordRqty | number\(12\) | 매수1단계우선호가잔량 | 호가 |
+| bidStep2BstordPrc | number\(11\) | 매수2단계우선호가가격 | 호가 |
+| bidStep2BstordRqty | number\(12\) | 매수2단계우선호가잔량 | 호가 |
+| bidStep3BstordPrc | number\(11\) | 매수3단계우선호가가격 | 호가 |
+| bidStep3BstordRqty | number\(12\) | 매수3단계우선호가잔량 | 호가 |
+| bidStep4BstordPrc | number\(11\) | 매수4단계우선호가가격 | 호가 |
+| bidStep4BstordRqty | number\(12\) | 매수4단계우선호가잔량 | 호가 |
+| bidStep5BstordPrc | number\(11\) | 매수5단계우선호가가격 | 호가 |
+| bidStep5BstordRqty | number\(12\) | 매수5단계우선호가잔량 | 호가 |
+| askTotOrdRqty | number\(12\) | 매도총호가잔량 | 호 |
+| askStep1BstordPrc | number\(11\) | 매도1단계우선호가가격 | 호가 |
+| askStep1BstordRqty | number\(12\) | 매도1단계우선호가잔량 | 호가 |
+| askStep2BstordPrc | number\(11\) | 매도2단계우선호가가격 | 호가 |
+| askStep2BstordRqty | number\(12\) | 매도2단계우선호가잔량 | 호가 |
+| askStep3BstordPrc | number\(11\) | 매도3단계우선호가가격 | 호가 |
+| askStep3BstordRqty | number\(12\) | 매도3단계우선호가잔량 | 호가 |
+| askStep4BstordPrc | number\(11\) | 매도4단계우선호가가격 | 호가 |
+| askStep4BstordRqty | number\(12\) | 매도4단계우선호가잔량 | 호가 |
+| askStep5BstordPrc | number\(11\) | 매도5단계우선호가가격 | 호가 |
+| askStep5BstordRqty | number\(12\) | 매도5단계우선호가잔량 | 호가 |
+| bidValidOrdCnt | number\(11\) | 매수유효호가건수 | 호가 |
+| bidStep1BstordCnt | number\(11\) | 매수1단계우선호가건수 | 호가 |
+| bidStep2BstordCnt | number\(11\) | 매수2단계우선호가건수 | 호가 |
+| bidStep3BstordCnt | number\(11\) | 매수3단계우선호가건수 | 호가 |
+| bidStep4BstordCnt | number\(11\) | 매수4단계우선호가건수 | 호가 |
+| bidStep5BstordCnt | number\(11\) | 매수5단계우선호가건수 | 호가 |
+| askValidOrdCnt | number\(11\) | 매도유효호가건수 | 호가 |
+| askStep1BstordCnt | number\(11\) | 매도1단계우선호가건수 | 호가 |
+| askStep2BstordCnt | number\(11\) | 매도2단계우선호가건수 | 호가 |
+| askStep3BstordCnt | number\(11\) | 매도3단계우선호가건수 | 호가 |
+| askStep4BstordCnt | number\(11\) | 매도4단계우선호가건수 | 호가 |
+| askStep5BstordCnt | number\(11\) | 매도5단계우선호가건수 | 호가 |
+| ordAcptTm | string\(11\) | 호가접수시각 | 호가 |
+| deemTrdPrc | number\(11\) | 예상체결가격 | 체결 |
+| trdPrc | number\(11\) | 체결가격 | 체결 |
+| trdvol | number\(10\) | 체결수량,거래량 | 체결 |
+| trdTm | string\(8\) | 체결시각,거래시각 | 체결 |
+| fstmmAgndaContrtPrc | number\(11\) | 최근월물의제약정가격 | 체결 |
+| futrmmAgndaContrtPrc | number\(11\) | 원월물의제약정가격 | 체결 |
+| opnprc | number\(11\) | 시가 | 체결 |
+| hgprc | number\(11\) | 고가 | 체결 |
+| lwprc | number\(11\) | 저가 | 체결 |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 체결 |
+| accTrdval | number\(22\) | 누적거래대금 | 체결 |
+| negoBlkAccTrdvol | number\(12\) | 협의대량누적체결수량 | 체결 |
+| lstTrdTpCd | string\(1\) | 최종매도매수구분코드 | 체결 |
+| realtmUplmtprc | number\(11\) | 실시간상한가 | 체결 |
+| realtmLwlmtprc | number\(11\) | 실시간하한가 | 체결 |
 
 
 

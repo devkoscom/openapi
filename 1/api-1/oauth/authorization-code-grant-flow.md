@@ -219,10 +219,8 @@ Access token 요청에 대한 응답과 동일한 형태의 JSON 메시지가 �
 
 ### 1. 요청
 
-핀테크 서비스를 구현할 때 반드시 고객이 위임하였던 정보접근권한\(access token, refresh token\)을 무효화할 수 있는 기능을 제공 및 사전 안내해야 하며, 이를 OAuth에서는 Token revocation으로 구현할 수 있습니다. Revocation된 후에 다시 API를 통해 서비스를 재 사용하려면 OAuth 인증 flow를 다시 수행하면 됩니다.
-
-
-
+핀테크 서비스를 구현할 때 반드시 고객이 위임하였던 정보접근권한\(access token, refresh token\)을 무효화할 수 있는 기능을 제공 및 사전 안내해야 하며, 이를 OAuth에서는 Token revocation으로 구현할 수 있습니다. Revocation된 후에 다시 API를 통해 서비스를 재 사용하려면 OAuth 인증 flow를 다시 수행하면 됩니다.  
+  
 HTTP methods    \|   **POST** or **DELETE**
 
 Authentication     \|   **Basic Authorization**

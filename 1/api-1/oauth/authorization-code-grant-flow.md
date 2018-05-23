@@ -29,9 +29,9 @@ description: Server-side Web Application Flow
 
 
 
-### Flow 2
+### **Authorization Code 요청**
 
-> **Authorization Code 요청**
+> **Flow 2**
 
 HTTP methods    \|   **GET**
 
@@ -60,11 +60,11 @@ Parameters          \|   **`response_type`**=code & **`client_id`**=클라이언
 
 ### 
 
-### Flow 3,  Flow 4
+### **Authorization Code 부여**
 
-> **Authorization Code 부여**
+> **Flow 3,  Flow 4**
 
-####  \(데이터접근위임동의\)에 대한 승인정보 입력 
+#### '데이터접근위임동의' 에 대한 승인정보 입력 
 
 Flow 2를 요청하면 그 응답으로 Authorization Code를 받아오는 것을 승인할 수 있도록 아래와 같은 권한정보입력 창을 응답으로 내려줍니다.
 
@@ -74,11 +74,7 @@ Flow 2를 요청하면 그 응답으로 Authorization Code를 받아오는 것�
 
 
 
-
-
-### Flow 5,  Flow 6
-
-> **Authorization Code 부여**
+> **Flow 5,  Flow 6**
 
 Flow 3, 4 절차가 정상적으로 수행되면 오픈플랫폼은 authorization code를 응답으로 내려주되, 핀테크 서비스 등록과 Authorization Code 요청 시 지정된 redirect\_uri로 응답을 전달할 수 있도록 http 헤더의 status code를 302로 설정하여 응답을 전송하며, redirect된 응답은 핀테크 서비스 서버 사이드에 구현된 OAuth Callback Listener \(Servlet 등\)로 전달되며, Callback Listener로 유입된 응답 parameter에서 state와 code를 추출하고 누구의 authorization code인지를 확인\(state에 설정한 식별정보 이용\)하여 다음 절차인 access token을 요청합니다.   
 에러처리는 [Error Code](https://koscom.gitbook.io/open-api/~/edit/primary/1/error)를 참고하시기 바랍니다.
@@ -87,9 +83,9 @@ Flow 3, 4 절차가 정상적으로 수행되면 오픈플랫폼은 authorizatio
 
 
 
-### Flow 7
+### **Access Token 요청**
 
-> **Access Token 요청**
+> **Flow 7**
 
 실제 API를 호출할 때 필요한 것은 access token입니다. Access token은 authorization code를 이용하여 요청할 수 있습니다. 
 
@@ -116,9 +112,9 @@ Parameters          \|   **`grant_type`**=authorization\_code & **`code`**=할�
 
 
 
-### Flow 8
+### **Access Token 응답**
 
-> **Access Token 응답**
+> **Flow 8**
 
 Access Token의 응답은 JSON형태로 제공되며 다음의 항목이 포함되어 있으며, 응답은 정상일 경우 status는 200으로 redirection없이 전송됩니다.
 

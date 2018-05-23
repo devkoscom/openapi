@@ -9,7 +9,7 @@ description: API 테스트절차
 
 ![APIs &#xBA54;&#xB274;](../../../.gitbook/assets/image%20%286%29.png)
 
-인증방식에 대한 자세한 설명을 원하실 경우, [이곳](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1)을 참조하세요.
+인증방식에 대한 자세한 설명을 원하실 경우 [이곳](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1)을 참조하세요.
 
 
 
@@ -24,7 +24,7 @@ description: API 테스트절차
 
 ![&#xC778;&#xC99D;&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2825%29.png)
 
-해당 API의 Method가 **GET방식**이면 'API Key Type'를 **Query**로 선택 하시고, **POST방식**이면 **Header**로 선택 하세요.
+ 'API Key Type'은 해당 API의 Method가 **GET방식**이면 **Query**로 선택 하시고, **POST방식**이면 **Header**로 선택 하세요.
 
 ![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - API Key](../../../.gitbook/assets/image%20%2852%29.png)
 

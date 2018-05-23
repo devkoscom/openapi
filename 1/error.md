@@ -15,10 +15,10 @@ Error는 금융투자회사, 오픈플랫폼의 시스템 등 여러 위치에�
 | **HTTP Response Content-Type** | Application/json;  charset=utf-8 |
 | **HTTP Response Body** | {"`category`": "op-exco",  "`code`": 9011,  "`message`": "invalid virtual account number.",   "`description`": "blah blah"} |
 
-> `category`          : 오류 발생 지점  
-> `code`                  : 상세 오류 코드  
-> `message`            : 상세 오류 메세지  
-> `description`    : 추가 정보
+> `category`           \|   오류 발생 지점  
+> `code`                   \|   상세 오류 코드  
+> `message`             **\|**   상세 오류 메세지  
+> `description`     **\|**   추가 정보
 
 ### 
 
@@ -29,7 +29,7 @@ Error는 금융투자회사, 오픈플랫폼의 시스템 등 여러 위치에�
 | `op-apim` | 오픈플랫폼 API Gateway Server |
 | `op-auth` | 오픈플랫폼 인증 서버 |
 | `op-exco` | 오픈플랫폼 증권사 연계 서버 |
-| `{증권사명}` | Ex\) saumgsung, Hyundai  |
+| `{증권사명}` | ex\) samsung, Hyundai  |
 
 
 
@@ -40,7 +40,7 @@ Error는 금융투자회사, 오픈플랫폼의 시스템 등 여러 위치에�
 | **category** | String |
 | **code** | Integer |
 | **message** | String |
-| **description**\(\*optional\) | String |
+| **description** \(\*optional\) | String |
 
 
 
@@ -150,7 +150,7 @@ Error는 금융투자회사, 오픈플랫폼의 시스템 등 여러 위치에�
 | 10080 | 서버 시스템 에러 입니다 |
 | 10090 | 데이터 점검중입니다.신속히 복구 하겠습니다.감사합니다 |
 | 13001 | 고객정보가 일치하지 않습니다 |
-| 13003 | 해지 단말입니다.당사로 연락바랍니다\(1577-3600\) |
+| 13003 | 해지 단말입니다.당사로 연락바랍니다 \(1577-3600\) |
 | 13004 | 잠시후 재접속을 하여주시기 바랍니다 |
 | 20010 | 기간입력이 잘못되었습니다 |
 | 20020 | 해당 년,월,일에 자료가 없습니다 |

@@ -42,7 +42,7 @@
 
 오픈플랫폼에 API를 게시하기 위해서는 Sandbox에서 API게시 및 테스트를 완료하여야 합니다.
 
-![](../../.gitbook/assets/image%20%2839%29.png)
+![](../../.gitbook/assets/image%20%2840%29.png)
 
 
 

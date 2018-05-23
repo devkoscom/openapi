@@ -9,7 +9,7 @@ HTTP methods   \|   **GET**
 Authentication    \|   **API Key**
 
 {% hint style="danger" %}
-별도의 **시세표 라이센스 필요!**
+별도의 시세표 **라이센스 필요**
 {% endhint %}
 
 

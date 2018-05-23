@@ -117,8 +117,36 @@ GET /v2/market/stocks/kospi/005930/masterchanage?prevddClsprc&wk52HgstPrc
 ### \[실시간\] 주식
 
 | Name | Type | Description |  |
-| --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | isuSrtCd | string\(9\) | 종목단축코드 | 마스터 |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 체결 |
+| askStep1BstordPrc | number\(11\) | 매도1단계우선호가가격 | 호가 |
+| bidStep1BstordPrc | number\(11\) | 매수1단계우선호가가격 | 호가 |
+| askStep1BstordRqty | number\(12\) | 매도1단계우선호가잔량 | 호가 |
+| bidStep1BstordRqty | number\(12\) | 매1단계우선호가잔량 | 호가 |
+| askStep2BstordPrc | number\(11\) | 매도2단계우선호가가격 | 호가 |
+| bidStep2BstordPrc | number\(11\) | 매수2단계우선호가가격 | 호가 |
+| askStep2BstordRqty | number\(12\) | 매도2단계우선호가잔량 | 호가 |
+| bidStep2BstordRqty | number\(12\) | 매수2단계우선호가잔량 | 호가 |
+| askStep3BstordPrc | number\(11\) | 매도3단계우선호가가격 | 호가 |
+| bidStep3BstordPrc | number\(11\) | 매수3단계우선호가가격 | 호가 |
+| askStep3BstordRqty | number\(12\) | 매도3단계우선호가잔량 | 호가 |
+| bidStep3BstordRqty | number\(12\) | 매수3단계우선호가잔량 | 호가 |
+| askStep4BstordPrc | number\(11\) | 매도4단계우선호가가격 | 호가 |
+| bidStep4BstordPrc | number\(11\) | 매수4단계우선호가가격 | 호가 |
+| askStep4BstordRqty | number\(12\) | 매도4단계우선호가잔량 | 호가 |
+| bidStep4BstordRqty | number\(12\) | 매수4단계우선호가잔량 | 호가 |
+| askStep5BstordPrc | number\(11\) | 매도5단계우선호가가격 | 호가 |
+| bidStep5BstordPrc | number\(11\) | 매수5단계우선호가가격 | 호가 |
+| askStep5BstordRqty | number\(12\) | 매도5단계우선호가잔량 | 호가 |
+| bidStep5BstordRqty | number\(12\) | 매수5단계우선호가잔량 | 호가 |
+| askStep6BstordPrc | number\(11\) | 매도6단계우선호가가격 | 호가 |
+| bidStep6BstordPrc | number\(11\) | 매수6단계우선호가가격 | 호가 |
+| askStep6BstordRqty |  | 매도6단계우선호가잔량 |  |
+| bidStep6BstordRqty |  | 매수6단계우선호가잔량 |  |
+|  | number\(11\) |  |  |
+|  | number\(11\) |  |  |
+|  |  |  |  |
 |  |  |  |  |
 
 

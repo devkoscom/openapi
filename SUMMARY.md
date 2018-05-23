@@ -28,7 +28,7 @@
   * [Error Code](1/error.md)
   * FAQ
     * [계좌조회API](1/faq/undefined.md)
-    * [오픈API문의](1/faq/api-1.md)
+    * [오픈API 문의](1/faq/api-1.md)
     * [오픈API 사용절차](1/faq/api.md)
     * [시세API](1/faq/api-2.md)
   * [기타](1/undefined-3.md)
@@ -43,6 +43,7 @@
     * [업종지수 조회](untitled-1/undefined-9/undefined-5.md)
   * [요구형항목](untitled-1/undefined-1.md)
   * [시세코드표](untitled-1/undefined-8.md)
+  * [기타](untitled-1/undefined.md)
 * [format sample \(GET\)](format-sample.md)
 * [format sample \(POST\)](format-sample-post.md)
 

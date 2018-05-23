@@ -28,7 +28,6 @@
       * [주식 시세표](1/api-2/untitled-1-1/undefined-7.md)
       * [요구형항목](1/api-2/untitled-1-1/undefined-1.md)
       * [코드표 \(시세\)](1/api-2/untitled-1-1/undefined-8.md)
-      * [기타](1/api-2/untitled-1-1/undefined.md)
   * [인증](1/api-1/README.md)
     * [API Key Authentication](1/api-1/api-key-authentication.md)
     * [Basic Authentication](1/api-1/basic-authentication.md)
@@ -42,7 +41,7 @@
     * [오픈API 문의](1/faq/api-1.md)
     * [오픈API 사용절차](1/faq/api.md)
     * [시세API](1/faq/api-2.md)
-  * [기타](1/undefined-3.md)
+  * [개정내역](1/undefined-3.md)
 * [format sample \(GET\)](format-sample.md)
 * [format sample \(POST\)](format-sample-post.md)
 

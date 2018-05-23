@@ -31,7 +31,7 @@ description: 코스콤 시세API 요약
 | 주식 | 주식 거래상위 회원사 정보 | /v2/market/stocks/{marketcode}/{issuecode}/traderaking |
 | 주식 | 주식 외국인 보유율 히스토리 | /v2/market/stocks/{marketcode}/{issuecode}/foreignhistory |
 | 주식 | 주식 종목 히스토리 | /v2/market/stocks/{marketcode}/{issuecode}/history |
-| 선 | 상품/지수선물 종목 리스트 | /v2/market/futures/{marketcode}/lists |
+| 선물 | 상품/지수선물 종목 리스트 | /v2/market/futures/{marketcode}/lists |
 | 선물 | 상품/지수선물 종목 마스터 | /v2/market/futures/{marketcode}/{issuecode}/master |
 | 선물 | 상품/지수선물 종목 종가 | /v2/market/futures/{marketcode}/{issuecode}/closeprice |
 | 선물 | 상품/지수선물\_체결 | /v2/market/futures/{marketcode}/{issuecode}/price |

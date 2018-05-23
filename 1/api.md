@@ -347,7 +347,7 @@ List 취소 주문은 지원 하지 않음
 {% endtab %}
 {% endtabs %}
 
-{% page-ref page="../untitled-1/" %}
+{% page-ref page="api-2/untitled-1-1/" %}
 
 
 

@@ -7,10 +7,10 @@
 이미 금융투자 핀테크 포탈에 가입한 이용자는 핀테크서비스에 가상계좌를 연결하였는지를 확인하기 위해 핀테크 서비스 연결 여부 확인 및 가상계좌 리스트 조회 API를 이용하여 설정한 가상계좌가 있는지를 확인하고, 이용자가 원하는 계좌가 추가로 필요하다면 가상계좌발급과 연결을 안내해야 합니다. 
 
 {% hint style="success" %}
-서비스연동 API에 대한 **자세한 설명**과 **사용방법**은 아래의 [링크](https://developers.koscom.co.kr/documentation/common/member#!method_0_0_operation_0_content)를 클릭하면 이용할 수 있습니다:
-
-[개발자센터-서비스연동API](https://developers.koscom.co.kr/documentation/common/member)
+서비스연동 API은 [개발자센터-서비스연동](https://developers.koscom.co.kr/documentation/common/member) 에서 이용할 수 있습니다.
 {% endhint %}
+
+
 
 ## Syntax
 

@@ -253,7 +253,7 @@ Bearer 발급받은 access token
 | page | String\(24\) | 다음 page를 지시하는 키 | 첫 요청은 “null”로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청 |
 
 {% hint style="success" %}
- `assetType`을 ‘ALL’로 요청 가능한 증권사    
+ `assetType`을 'ALL'로 요청 가능한 증권사    
    : NH투자증권, 대신증권, 키움증권, 신한증권 
 {% endhint %}
 
@@ -625,7 +625,7 @@ Bearer 발급받은 access token
 | page | String\(24\) | 다음 page를 지시하는 키 | 첫 요청은 “null”로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청 |
 
 {% hint style="success" %}
- `assetType`을 ‘ALL’로 요청 가능한 증권사    
+ `assetType`을 'ALL'로 요청 가능한 증권사    
    : NH투자증권, 대신증권, 키움증권, 신한증권 
 {% endhint %}
 

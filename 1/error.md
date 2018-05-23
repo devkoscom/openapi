@@ -13,13 +13,12 @@ Error는 금융투자회사, 오픈플랫폼의 시스템 등 여러 위치에�
 | **HTTP Response Status Code** | 4xx ~ 5xx |
 | --- | --- | --- |
 | **HTTP Response Content-Type** | Application/json; charset=utf-8 |
-| **HTTP Response Body** | {"category": "op-exco",  "code": 9011,  "message": "invalid virtual account number.",   "description": "blah blah"} |
+| **HTTP Response Body** | {"`category`": "op-exco",  "`code`": 9011,  "`message`": "invalid virtual account number.",   "`description`": "blah blah"} |
 
-> * HTTP Response Body
->   * `category` : 오류 발생 지점.
->   * `code` : 상세 오류 코드
->   * `message` : 상세 오류 메세지
->   * `description` : 추가 정보
+> `category`          : 오류 발생 지점.  
+> `code`                  : 상세 오류 코드  
+> `message`            : 상세 오류 메세지  
+> `description`    : 추가 정보
 
 ### 
 
@@ -69,7 +68,7 @@ Error는 금융투자회사, 오픈플랫폼의 시스템 등 여러 위치에�
 
 ### Custom Error
 
-#### A. 오픈플랫폼 인증서버 에러
+#### 오픈플랫폼 인증서버 에러
 
 | **`HTTP Response Status Code`** | **`Error Code`** | **`Error Message`** | **`Description`** |
 | --- | --- | --- | --- | --- |
@@ -80,7 +79,7 @@ Error는 금융투자회사, 오픈플랫폼의 시스템 등 여러 위치에�
 
 
 
-#### B. 오픈플랫폼 증권사 연계 서버 에러
+#### 오픈플랫폼 증권사 연계 서버 에러
 
 | **`HTTP Response Status Code`** | **`Error Code`** | **`Error Message`** | **`Description`** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -102,7 +101,7 @@ Error는 금융투자회사, 오픈플랫폼의 시스템 등 여러 위치에�
 
 
 
-#### C. 증권사 서버 에러
+#### 증권사 서버 에러
 
 | **`HTTP Response Status Code`** | **`Error Code`** | **`Error Message`** | **`Description`** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

@@ -1,7 +1,7 @@
 # 시세코드표
 
 {% hint style="success" %}
-시세API 에러코드는 이곳을 참조하세요.
+시세API 에러코드는 [Error Code](https://koscom.gitbook.io/open-api/1/error#error-3) 를 참조하세요.
 {% endhint %}
 
 ## 시장코드 및 연결선물코드

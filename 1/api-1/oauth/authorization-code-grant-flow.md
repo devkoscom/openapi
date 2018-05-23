@@ -48,9 +48,7 @@ Parameters          \|   **`response_type`**=code & **`client_id`**=클라이언
 > `scope`                     :  API가 접근하고자 하는 자원 범위  
 > `state`                     :  본래 cross-site request forgery\(CSRF\) 공격에 대응하기 위해 사용하나, 대체로 사용자 세션정보를 넣어 authorization code 요청의 응답이 서버로 redirect되었을 때 어느 사용자의 authorization code인지를 구분하기 위해 사용하는 것이 보통임. 요청에 전송했던 값이 응답에 그대로 반환됨
 
-
-
-**Authorization Code Request Example**
+**Example**
 
 ```python
 ​https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/authorize?response_type=code&client_id=l7xxf234248b6fbd42a1a6844861524b2320&redirect_uri=http://localhost:8080/OpenAPITest/callbacknew&scope=test.kiwoom&state=70e86bd5​
@@ -62,7 +60,7 @@ Parameters          \|   **`response_type`**=code & **`client_id`**=클라이언
 
 ### **Authorization Code 부여**
 
-> **Flow 3,  Flow 4**
+> **Flow 3,   Flow 4**
 
 #### '데이터접근위임동의' 에 대한 승인정보 입력 
 
@@ -74,7 +72,7 @@ Flow 2를 요청하면 그 응답으로 Authorization Code를 받아오는 것�
 
 
 
-> **Flow 5,  Flow 6**
+> **Flow 5,   Flow 6**
 
 Flow 3, 4 절차가 정상적으로 수행되면 오픈플랫폼은 authorization code를 응답으로 내려주되, 핀테크 서비스 등록과 Authorization Code 요청 시 지정된 redirect\_uri로 응답을 전달할 수 있도록 http 헤더의 status code를 302로 설정하여 응답을 전송하며, redirect된 응답은 핀테크 서비스 서버 사이드에 구현된 OAuth Callback Listener \(Servlet 등\)로 전달되며, Callback Listener로 유입된 응답 parameter에서 state와 code를 추출하고 누구의 authorization code인지를 확인\(state에 설정한 식별정보 이용\)하여 다음 절차인 access token을 요청합니다.   
 에러처리는 [Error Code](https://koscom.gitbook.io/open-api/~/edit/primary/1/error)를 참고하시기 바랍니다.

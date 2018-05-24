@@ -256,3 +256,201 @@ private void startJoinSampleForActivityResult() {
 
 
 
+\*  **회원가입 페이지로 이동**
+
+회원가입 안내  
+회원가입 API 호출이 성공하면, 가입에 대한 안내 화면으로 이동합니다. 내용 확인 후 \[가입진행\] 버튼을 터치합니다.
+
+![&#xD68C;&#xC6D0;&#xAC00;&#xC785; &#xC548;&#xB0B4;](../.gitbook/assets/image%20%2848%29.png)
+
+약관 및 본인인증  
+약관에 동의하시면 휴대폰 인증 버튼이 활성화됩니다. 
+
+![&#xC57D;&#xAD00; &#xBC0F; &#xBCF8;&#xC778;&#xC778;&#xC99D;](../.gitbook/assets/image%20%2873%29.png)
+
+휴대폰 인증  
+정보 입력 후 \[인증번호 전송\] 버튼을 터치하면 SMS로 인증번호가 발송됩니다. 수신된 인증번호 입력 후 \[인증하기\] 버튼을 터치합니다. 
+
+![&#xD734;&#xB300;&#xD3F0; &#xC778;&#xC99D;](../.gitbook/assets/image%20%2867%29.png)
+
+
+
+**2.  OAuth 로그인창 API 호출 \( fn : oauth \)**
+
+‘오핀’의 OAuth로그인을 통해 사용자 인증을 요청 합니다.   
+responseType 은 안전한 금융거래 정보 보호를 위해 ‘Authorization Code’ 방식만 제공 합니다. 입력 파라메터는 ‘Authorization Code 요청’ 과 동일하며, callbackUrl로 Code값을 전달 합니다. Access token 은 기존 절차에 따릅니다. 
+
+{% hint style="info" %}
+OAuth 절차는 [이곳](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1/oauth) 을 참조하세요.
+{% endhint %}
+
+{% code-tabs %}
+{% code-tabs-item title="JSON 파라미터 예제" %}
+```yaml
+{
+  "data": {
+      "scope": "account",
+      "callbackUrl": "https://open.koscom.co.kr/CallbackURL",
+      "clientId": "l7xx296eb0af278542b38a6ebd507xxxxxxx",
+      "responseType": "code",
+      "state": "test"
+   }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+해당 API는 사용자 인증을 위한 OAuth 로그인창만 제공하며, Access Token 취득은 기존 URL을 통해 획득 하시면 됩니다. 인증 성공 \(SUCCESS\), 인증 실패\(FAIL\)는 아래와 같은 에러가 리턴 됩니다.   
+더 자세한 에러 코드 정보는 [이곳](https://koscom.gitbook.io/open-api/1/error#oauth-error) 에서 확인하세요.
+
+> OAuth 로그인창 Error Code
+
+| **`Error code`** | **`Description`** |
+| --- | --- | --- | --- | --- | --- |
+| 4000 | 일반적인 에러 |
+| 4100 | API 및 서비스 이용 권한 획득에 실패한 경우. |
+| 4200 | Authorization Code 전달에 실패한 경우 |
+| 4300 | 사용자가 요청한 리소스의 권한 허용 거부 |
+| 4400 | 비회원 인증 중 이미 가입된 회원 |
+
+{% code-tabs %}
+{% code-tabs-item title="Service OAuth API Request Example" %}
+```java
+/**
+* Koscom Open API App 샐행. Activity의 startActivity를 호출.
+* 응답 결과 수신을 위해 Fintech-App에 Custom URL Schem를 설정하고 전달해야함.
+*/
+private void startOAuthSampleForActivity() {
+    JSONObject data = new JSONObject();
+    try {
+        EditText editText = (EditText) this.findViewById(R.id.input_scope);
+        data.put("scope", editText.getText().toString());
+        EditText editText1 = (EditText) this.findViewById(R.id.input_url);
+        data.put("callbackUrl", editText1.getText().toString());
+        EditText editText2 = (EditText) this.findViewById(R.id.input_cliId);
+        data.put("clientId", editText2.getText().toString());
+        EditText editText3 = (EditText) this.findViewById(R.id.input_respType);
+        data.put("responseType", editText3.getText().toString());
+        EditText editText4 = (EditText) this.findViewById(R.id.input_state);
+        data.put("state", editText4.getText().toString());
+    
+    } catch (JSONException e) {
+        e.printStackTrace();
+    }
+    
+    /*
+     * Koscom Open API App 샐행 <br>
+     * Custom URL Schem으로 Intent를 구성하여 Activity의 startActivity를 호출하여 <br>
+     * Koscom Open API App을 실행하고 응답 결과는 Fintech-App에 Custom URL Schem를 설정하고 <br>
+     * 서비스 호출 시 데이터와 같이 전달하여 수신한다.
+     *
+     * @param activity OPPFLibActivity, Activity는 OPPFLibActivity를 상속 받아 구현하여야 한다.
+     * @param fn String, Koscom Open API의 서비스 이름
+     * @param data JSONObject, App에 전달 할 데이터
+     * @param callbackUrl String, 응답 수신용 Custom URL Schem
+     * @param listener OOPPFLibFintech.FintechListener, Koscom Open API 응답 수신 리스너
+    */
+    try {
+        fintech.requestForResult((OPPFLibActivity)this, "oauth", data, "fintech-app://com.fintech.oppf2.app.oauth", new ExFintechListener());
+    
+    } catch (ActivityNotFoundException e) {
+        e.printStackTrace();
+        showResultDialog("FinTech OAuth 결과", "서비스 연동 실패[oauth] " + e.getLocalizedMessage());
+    
+    } catch (OPPFLibParameterException e) {
+        e.printStackTrace();    
+        showResultDialog("FinTech OAuth 결과", "서비스 연동 실패[oauth] " + e.getLocalizedMessage());
+    }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+
+
+ **\*  OAuth 로그인창 호출**
+
+OAuth 로그인  
+OAuth  로그인창 호출시 , OFIN설치 여부 체크 후 설치되어 있을 경우 OFIN 실행&gt;OAuth 화면이 열립니다. 
+
+![OAuth &#xB85C;&#xADF8;&#xC778;](../.gitbook/assets/image%20%2822%29.png)
+
+정보제공 권한 허용  
+OAuth로그인이 완료되면 정보제공 권한 여부 설정 화면으로 이동합니다. \[허용\] 터치 시 핀테크 앱의 서비스를 이용할 수 있습니다. 
+
+![&#xC815;&#xBCF4;&#xC81C;&#xACF5; &#xAD8C;&#xD55C; &#xD5C8;&#xC6A9;](../.gitbook/assets/image%20%2893%29.png)
+
+
+
+**3.  앱 상세 페이지 이동API 호출 \( fn : appRequest \)**
+
+서비스연동 API \(가상계좌 리스트 조회\) 확인 후 해당 고객에 연결된 계좌가 없거나 추가로 앱 사용 신청이 필요한 경우 ‘오핀’ 앱 상세 페이지로 이동하여 서비스 신청을 유도 합니다.  
+\* appId : 앱 등록 후 할당 받은 AppID 값을 입력
+
+{% code-tabs %}
+{% code-tabs-item title="JSON parameter Example" %}
+```yaml
+{
+   "data": {
+      "appId": "139"
+   }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+{% code-tabs %}
+{% code-tabs-item title="앱 상세페이지 이동 API 호출 Example" %}
+```java
+private void startRequestSampleForActivityResult() {
+    JSONObject data = new JSONObject();
+    try {
+        data.put("appId", this.findViewById(R.id.input_appId));
+    
+    } catch (JSONException e) {
+        e.printStackTrace();
+    }
+    
+    /*
+    * Koscom Open API App 샐행 <br>
+    * CustomURL Schem으로 Intent를 구성하여 Activity의 startActivityForResult를 호출하여 <br>
+    * Koscom Open API App을 실행하고 응답 결과는 OPPFLibAppCompatActivity의 onActivityResult를 통해 전달 받는다. <br>
+    *
+    * @param activity OPPFLibAppCompatActivity, Activity는 OPPFLibAppCompatActivity를 상속 받아 구현하여야 한다.
+    * @param fn String, Koscom Open API의 서비스 이름
+    * @param data JSONObject, App에 전달 할 데이터
+    * @param listener OPPFLibFintech.FintechListener, Koscom Open API 응답 수신 리스너
+    */
+    try {
+        fintech.requestForActivityResult((OPPFLibAppCompatActivity)this, "appRequest", data, new ExFintechListener());
+    
+    } catch (ActivityNotFoundException e) {
+        e.printStackTrace();
+        showResultDialog("FinTech App 신청 결과", "서비스 연동 실패[request] " + e.getLocalizedMessage());
+    
+    } catch (OPPFLibParameterException e) {
+        e.printStackTrace();
+        showResultDialog("FinTech App 신청 결과", "서비스 연동 실패[request] " + e.getLocalizedMessage());
+    }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+
+
+ **\*  앱 상세 페이지로 이동**
+
+앱 소개 \(상세\)  
+
+
+![](../.gitbook/assets/image%20%2870%29.png)
+
+
+
+## API Reference
+
+### 
+
+
+

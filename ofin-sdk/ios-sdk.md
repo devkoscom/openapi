@@ -317,7 +317,7 @@ Koscom OpenAPI 서비스 연동 기능을 구현한 Class 입니다.
 
 | **Syntax** | \(id \_\_nullable\)initWithCallnackUrlScheme : \(NSString\* \_\_nonnull\)callbackUrl |
 | --- | --- | --- | --- |
-| **Parameter** | \(NSString\* \_\_nonnull\)callbackUrl - 응답을 수신하기 위해 필요한 Custom URL Scheme |
+| **Parameter** | \(NSString\* \_\_nonnull\)callbackUrl _- 응답을 수신하기 위해 필요한 Custom URL Scheme_ |
 | **Description** | OPPFintech 객체 초기화 및 URL Scheme 등록 - “URL schemes://URL identifier” |
 | **Note** | 필수 호출 함수 |
 
@@ -326,7 +326,7 @@ Koscom OpenAPI 서비스 연동 기능을 구현한 Class 입니다.
 
 | **Syntax** | \(void\) openAppStore:\(id&lt;OPPFFintechAppStoreDelegate&gt;\)delegate; |
 | --- | --- | --- | --- |
-| **Parameter** | id&lt;OPPFFintechAppStoreDelegate&gt; delegate - AppStore 연결서비스 결과를 전달받기 위한 리스너 Delegate |
+| **Parameter** | id&lt;OPPFFintechAppStoreDelegate&gt; delegate _- AppStore 연결서비스 결과를 전달받기 위한 리스너 Delegate_ |
 | **Description** | Koscom OpenAPI App을 설치하기 위해 App Store를 구동시킨다.  Koscom OpenAPI 서비스에서 App URL을 조회하여 앱 스토어를 호출한다. |
 | **Note** | 만약 App URL 조회 실패 시 앱스토어를 구동 시킴 |
 
@@ -335,9 +335,27 @@ Koscom OpenAPI 서비스 연동 기능을 구현한 Class 입니다.
 
 | **Syntax** | \(void\) openAppStoreWithHandler:\(void \(^ \_\_nullable\)\(NSString\* \_\_nonnull code, NSString\* \_\_nonnull message\)\)handler |
 | --- | --- | --- | --- |
-| **Parameter** | \(void \(^ \_\_nullable\)\(NSString\* \_\_nonnull code, NSString\* \_\_nonnull message\)\)handler - App Store 연결 서비스 결과를 전달 받기 위한 Callback Block |
+| **Parameter** | \(void \(^ \_\_nullable\)\(NSString\* \_\_nonnull code, NSString\* \_\_nonnull message\)\)handler _- App Store 연결 서비스 결과를 전달 받기 위한 Callback Block_ |
 | **Description** | Koscom OpenAPI App을 설치하기 위해 App Store를 구동시킨다.  Koscom OpenAPI 서비스에서 App URL을 조회하여 앱 스토어를 호출한다. |
 | **Note** | 만약 App URL 조회 실패 시 앱스토어를 구동 시킴 |
 
+  
+**requestForResult**
 
+| **Syntax** | - \(void\) **requestForResult**:\(NSString\* \_\_nonnull\)fn                                                                                                             **data**:\(NSDictionary\* \_\_nonnull\)dicData                                                                                          **success**:\(void \(^ \_\_nullable\)\(NSString\* \_\_nonnull fn, NSString\* \_\_nonnull message, NSDictionary\* \_\_nonnull data\)\)success                                                                                                                                                **failure**:\(void \(^ \_\_nullable\)\(NSString\* \_\_nonnull fn, NSString\* \_\_nonnull code, NSString\* \_\_nonnull message\)\)failure; |
+| --- | --- | --- | --- |
+| **Parameter** | \(NSString\* \_\_nonnull\)fn _- Koscom OpenAPI 서비스 이름_  //  data:\(NSDictionary\* \_\_nonnull\)dicData _- Koscom OpenAPI 서비스에 전달 할 데이터, 없으면 nil_  //  \(void \(^ \_\_nullable\)\(NSString\* \_\_nonnull fn, NSString\* \_\_nonnull message, NSDictionary\* \_\_nonnull data\)\)success _- Koscom OpenAPI 서비스 연동 결과를 전달 받기 위한 Callback Block_  //  \(void \(^ \_\_nullable\)\(NSString\* \_\_nonnull fn, NSString\* \_\_nonnull code, NSString\* \_\_nonnull message\)\)failure; _- Koscom OpenAPI 서비스 연동 실패를 전달 받기 위한 Callback Block_ |
+| **Description** | Koscom OpenAPI 서비스를 요청한다. |
+| **Note** | . |
+
+
+
+### OPPFAppDelegate
+
+OPPFFintech가 제공하는 연동 기능을 사용하기 위해서는 Application App은 OPPFAppDelegate을 상속하여 구현해야 합니다.
+
+| **Syntax** | @interface OPPFAppDelegate : UIResponder &lt;UIApplicationDelegate&gt; |
+| --- | --- | --- |
+| **Usage** | @interface AppDelegate : OPPFAppDelegate&lt;UIApplicationDelegate&gt; |
+| **Description** | App이 수신한 Custom URL Scheme 데이터를 전달하기 위한 리스너 |
 

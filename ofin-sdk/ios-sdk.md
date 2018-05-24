@@ -18,6 +18,8 @@ description: Fintech Mobile SDK Guide – iOS
 
 
 
+
+
 ## 준비사항
 
 **Library File Import**
@@ -32,9 +34,15 @@ description: Fintech Mobile SDK Guide – iOS
 
 
 
+
+
+
+
 ## 연동
 
 OPPFFintech가 제공하는 연동 기능을 사용하기 위해서는 Application App은 OPPFAppDelegate을 상속하여 구현해야 합니다. 또한, 서비스 연동은 Custom URL Scheme을 이용하므로 응답을 수신하기 위해서 App에 Custom URL Scheme을 설정하고 OPPFFintech객체에 등록해야 합니다.
+
+### 
 
 ### **OPPFAppDelegate 상속**
 
@@ -133,7 +141,7 @@ NSMutableDictionary* dicData = [[NSMutableDictionary alloc] init];
 
 
 
-**회원가입 페이지로 이동**
+\*  **회원가입 페이지로 이동**
 
 회원가입 안내  
 회원가입 API 호출이 성공하면, 가입에 대한 안내 화면으로 이동합니다. 내용 확인 후 \[가입진행\] 버튼을 터치합니다.
@@ -154,10 +162,8 @@ NSMutableDictionary* dicData = [[NSMutableDictionary alloc] init];
 
 **2.  OAuth 로그인창 API 호출 \( fn : oauth \)**
 
-‘오핀’의 OAuth로그인을 통해 사용자 인증을 요청 합니다.  
-responseType 은 안전한 금융거래 정보 보호를 위해 ‘Authorization Code’ 방식만 제공 합니다.  
-입력 파라메터는 ‘Authorization Code 요청’ 과 동일하며, callbackUrl로 Code값을 전달 합니다.  
-Access token 은 기존 절차에 따릅니다. 
+‘오핀’의 OAuth로그인을 통해 사용자 인증을 요청 합니다.   
+responseType 은 안전한 금융거래 정보 보호를 위해 ‘Authorization Code’ 방식만 제공 합니다. 입력 파라메터는 ‘Authorization Code 요청’ 과 동일하며, callbackUrl로 Code값을 전달 합니다. Access token 은 기존 절차에 따릅니다. 
 
 {% hint style="info" %}
 OAuth 절차는 [이곳](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1/oauth) 을 참조하세요.
@@ -238,7 +244,7 @@ NSString * responseType = [txtResponseType text];
 
 
 
-**OAuth 로그인창 호출**
+ **\*  OAuth 로그인창 호출**
 
 OAuth 로그인  
 OAuth  로그인창 호출시 , OFIN설치 여부 체크 후 설치되어 있을 경우 OFIN 실행&gt;OAuth 화면이 열립니다. 
@@ -304,7 +310,13 @@ NSString * appID = [txtAppID text ];
 
 
 
+
+
+
+
 ## API Reference
+
+### 
 
 ### OPPFFintech
 
@@ -347,6 +359,8 @@ Koscom OpenAPI 서비스 연동 기능을 구현한 Class 입니다.
 | **Parameter** | \(NSString\* \_\_nonnull\)fn _- Koscom OpenAPI 서비스 이름_  //  data:\(NSDictionary\* \_\_nonnull\)dicData _- Koscom OpenAPI 서비스에 전달 할 데이터, 없으면 nil_  //  \(void \(^ \_\_nullable\)\(NSString\* \_\_nonnull fn, NSString\* \_\_nonnull message, NSDictionary\* \_\_nonnull data\)\)success _- Koscom OpenAPI 서비스 연동 결과를 전달 받기 위한 Callback Block_  //  \(void \(^ \_\_nullable\)\(NSString\* \_\_nonnull fn, NSString\* \_\_nonnull code, NSString\* \_\_nonnull message\)\)failure; _- Koscom OpenAPI 서비스 연동 실패를 전달 받기 위한 Callback Block_ |
 | **Description** | Koscom OpenAPI 서비스를 요청한다. |
 | **Note** | . |
+
+
 
 
 

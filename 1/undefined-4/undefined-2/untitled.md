@@ -18,23 +18,23 @@ description: API 테스트절차
 'API문서 &gt; 시세 서비스 &gt; 주식종목' 메뉴에서 'Select an Application' 을 눌러서 앱을 선택 합니다.  
 앱이 보이지 않으시면 해당 API를 사용하는 앱을 먼저 만드셔야 합니다. 애플리케이션 등록 방법은 [이곳](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2/undefined#application)을 참조하세요.
 
-![Authentication&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2881%29.png)
+![Authentication&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2883%29.png)
 
 ‘Authentication \(None\)’ 버튼을 __누르시고, 인증방식을 ‘API Key’로 선택 합니다.
 
-![&#xC778;&#xC99D;&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2827%29.png)
+![&#xC778;&#xC99D;&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2828%29.png)
 
  'API Key Type'은 해당 API의 Method가 **GET방식**이면 **Query**로 선택 하시고, **POST방식**이면 **Header**로 선택 하세요.
 
-![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - API Key](../../../.gitbook/assets/image%20%2857%29.png)
+![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - API Key](../../../.gitbook/assets/image%20%2858%29.png)
 
 테스트할 API를 선택 하시고 'Try it Out' 버튼을 누르시면 아래와 같이 Response 결과를 받아 보실 수 있습니다.
 
-![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%2894%29.png)
+![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%2896%29.png)
 
 'Query' 탭을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
-![Query &#xD0ED;](../../../.gitbook/assets/image%20%2818%29.png)
+![Query &#xD0ED;](../../../.gitbook/assets/image%20%2819%29.png)
 
 
 
@@ -48,7 +48,7 @@ description: API 테스트절차
 
 'APIs & 플랜' 메뉴에서 OAuth2.0-Authorization Code를 지원하는 API를 확인 합니다. 테스트할 앱을 선택하고 'OAuth2.0'을 선택 합니다.
 
-![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - OAuth2.0](../../../.gitbook/assets/image%20%2854%29.png)
+![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - OAuth2.0](../../../.gitbook/assets/image%20%2855%29.png)
 
 > * Grant Type
 >
@@ -86,9 +86,9 @@ description: API 테스트절차
 
 테스트할 API를 선택 하시고 ‘Try it Out’ 버튼을 누르면 아래와 같이 Response결과를 받아 보실 수 있습니다.
 
-![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%2825%29.png)
+![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%2826%29.png)
 
 ‘Query’ 을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
-![Query &#xD0ED;](../../../.gitbook/assets/image%20%28100%29.png)
+![Query &#xD0ED;](../../../.gitbook/assets/image%20%28102%29.png)
 

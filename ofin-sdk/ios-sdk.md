@@ -14,7 +14,7 @@ description: Fintech Mobile SDK Guide – iOS
 
 ## 전체 진행 시나리오
 
-![Ofin\(ios\) &#xC2DC;&#xB098;&#xB9AC;&#xC624; ](../.gitbook/assets/image%20%2845%29.png)
+![Ofin\(ios\) &#xC2DC;&#xB098;&#xB9AC;&#xC624; ](../.gitbook/assets/image%20%2846%29.png)
 
 
 
@@ -26,11 +26,11 @@ description: Fintech Mobile SDK Guide – iOS
 
 라이브러리 사용을 위해 Xcode 에 배포된 라이브러리를 추가합니다. 
 
-![Xcode AppSample](../.gitbook/assets/image%20%2884%29.png)
+![Xcode AppSample](../.gitbook/assets/image%20%2886%29.png)
 
 **링크 대상에 추가**
 
-![](../.gitbook/assets/image%20%2826%29.png)
+![](../.gitbook/assets/image%20%2827%29.png)
 
 
 
@@ -146,17 +146,17 @@ NSMutableDictionary* dicData = [[NSMutableDictionary alloc] init];
 회원가입 안내  
 회원가입 API 호출이 성공하면, 가입에 대한 안내 화면으로 이동합니다. 내용 확인 후 \[가입진행\] 버튼을 터치합니다.
 
-![&#xD68C;&#xC6D0;&#xAC00;&#xC785; &#xC548;&#xB0B4;](../.gitbook/assets/image%20%2847%29.png)
+![&#xD68C;&#xC6D0;&#xAC00;&#xC785; &#xC548;&#xB0B4;](../.gitbook/assets/image%20%2848%29.png)
 
 약관 및 본인인증  
 약관에 동의하시면 휴대폰 인증 버튼이 활성화됩니다. 
 
-![&#xC57D;&#xAD00; &#xBC0F; &#xBCF8;&#xC778;&#xC778;&#xC99D;](../.gitbook/assets/image%20%2870%29.png)
+![&#xC57D;&#xAD00; &#xBC0F; &#xBCF8;&#xC778;&#xC778;&#xC99D;](../.gitbook/assets/image%20%2872%29.png)
 
 휴대폰 인증  
 정보 입력 후 \[인증번호 전송\] 버튼을 터치하면 SMS로 인증번호가 발송됩니다. 수신된 인증번호 입력 후 \[인증하기\] 버튼을 터치합니다. 
 
-![&#xD734;&#xB300;&#xD3F0; &#xC778;&#xC99D;](../.gitbook/assets/image%20%2865%29.png)
+![&#xD734;&#xB300;&#xD3F0; &#xC778;&#xC99D;](../.gitbook/assets/image%20%2867%29.png)
 
 
 
@@ -249,12 +249,12 @@ NSString * responseType = [txtResponseType text];
 OAuth 로그인  
 OAuth  로그인창 호출시 , OFIN설치 여부 체크 후 설치되어 있을 경우 OFIN 실행&gt;OAuth 화면이 열립니다. 
 
-![OAuth &#xB85C;&#xADF8;&#xC778;](../.gitbook/assets/image%20%2821%29.png)
+![OAuth &#xB85C;&#xADF8;&#xC778;](../.gitbook/assets/image%20%2822%29.png)
 
 정보제공 권한 허용  
 OAuth로그인이 완료되면 정보제공 권한 여부 설정 화면으로 이동합니다. \[허용\] 터치 시 핀테크 앱의 서비스를 이용할 수 있습니다. 
 
-![&#xC815;&#xBCF4;&#xC81C;&#xACF5; &#xAD8C;&#xD55C; &#xD5C8;&#xC6A9;](../.gitbook/assets/image%20%2890%29.png)
+![&#xC815;&#xBCF4;&#xC81C;&#xACF5; &#xAD8C;&#xD55C; &#xD5C8;&#xC6A9;](../.gitbook/assets/image%20%2892%29.png)
 
 
 

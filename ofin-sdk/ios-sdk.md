@@ -177,10 +177,10 @@ OAuth 절차는 [이곳](https://koscom.gitbook.io/open-api/~/edit/primary/1/api
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-해당 API는 사용자 인증을 위한 OAuth 로그인창만 제공하며, Access Token 취득은 기존 URL을 통해 획득 하시면 됩니다.  
-인증 성공 \(SUCCESS\), 인증 실패\(FAIL\)는 아래와 같은 에러가 리턴 됩니다.
+해당 API는 사용자 인증을 위한 OAuth 로그인창만 제공하며, Access Token 취득은 기존 URL을 통해 획득 하시면 됩니다. 인증 성공 \(SUCCESS\), 인증 실패\(FAIL\)는 아래와 같은 에러가 리턴 됩니다.   
+더 자세한 에러 코드 정보는 이곳 에서 확인하세요.
 
-OAuth 로그인창 Error Code
+> OAuth 로그인창 Error Code
 
 | **`Error code`** | **`Description`** |
 | --- | --- | --- | --- | --- | --- |

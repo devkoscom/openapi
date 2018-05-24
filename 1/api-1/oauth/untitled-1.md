@@ -13,5 +13,5 @@ description: Client-side Web Application Flow
 향후 본 인증체계를 사용하게 되는 경우에 상세 내용을 제공하겠습니다.
 {% endhint %}
 
-![Implicit Grant Flow &#xC808;&#xCC28;](../../../.gitbook/assets/image%20%2833%29.png)
+![Implicit Grant Flow &#xC808;&#xCC28;](../../../.gitbook/assets/image%20%2834%29.png)
 

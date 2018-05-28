@@ -30,6 +30,8 @@ Project &gt; Open Module Settings &gt; Dependencies &gt; \(+\)  add File depende
 
 
 
+
+
 ## 연동
 
 ### Activity 설정
@@ -63,7 +65,7 @@ public class JoinActivity extends OPPFLibAppCompatActivity {
 SDK 를 호출하는 방법으로  requestForResult 방식과 requestForActivityResult 방식  두 가지를 제공합니다.
 
   
-**1. OPPFLibFintech\#requestForResult** 를 이용하는 경우
+**1.  OPPFLibFintech\#requestForResult** 를 이용하는 경우
 
 Activity에 응답 수신용 Custom URL Schem과 launchMode를 "singleTask"으로설정  
 URL Scheme :”scheme://host” \(ex.   “fintech-app://com.example.kscomapisdk.join" \)
@@ -125,7 +127,7 @@ private void startJoinSampleForActivity() {
 ```
 
   
-**2. OPPFLibFintech\#requestForActivityResult** 를 사용하여 SDK를 호출
+**2.  OPPFLibFintech\#requestForActivityResult** 를 사용하여 SDK를 호출
 
 Custom URL Schem과 launchMode를 설정 할 필요가 없다.
 
@@ -456,9 +458,13 @@ private void startRequestSampleForActivityResult() {
 
 ![](../.gitbook/assets/image%20%2874%29.png)
 
+
+
+
+
 ## API Reference
 
-
+### 
 
 ### OPPFLibActivity / OPPFLibFragmentActivity / OPPFLibAppCompatActivity
 
@@ -527,8 +533,4 @@ Koscom Open API 응답 결과를 전달 받기 위한 인터페이스 정의 클
 | --- | --- | --- |
 | **Parameter** | String fn _- Koscom Open API의 서비스 이름_ // String code _- 응답 error code_ // String message _- 응답 message_ // |
 | **Description** | 서비스 요청 실패를 전달 빋기 위한 인터페이스 |
-
-
-
-
 

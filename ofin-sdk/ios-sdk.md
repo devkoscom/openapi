@@ -366,10 +366,12 @@ Koscom OpenAPI 서비스 연동 기능을 구현한 Class 입니다.
 
 ### OPPFAppDelegate
 
-OPPFFintech가 제공하는 연동 기능을 사용하기 위해서는 Application App은 OPPFAppDelegate을 상속하여 구현해야 합니다.
+OPPFFintech가 제공하는 연동 기능을 사용하기 위해서는 Application App은 OPPFAppDelegate 을 상속하여 구현해야 합니다.
 
 | **Syntax** | @interface OPPFAppDelegate : UIResponder &lt;UIApplicationDelegate&gt; |
 | --- | --- | --- |
 | **Usage** | @interface AppDelegate : OPPFAppDelegate&lt;UIApplicationDelegate&gt; |
 | **Description** | App이 수신한 Custom URL Scheme 데이터를 전달하기 위한 리스너 |
+
+
 

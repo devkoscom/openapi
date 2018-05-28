@@ -22,7 +22,7 @@ description: 실시간 스트리밍 시세 (WebSocket 방식)
 
 
 
-## 1. 실시간 시세
+## 실시간 시세
 
 WebSocket 세션연결후 개별 종목기준으로 실시간 데이타 수신등록\(subscribe\)하면, 등록된 종목의 시세 변동시 지정된 항목등 \(preset 방식\) 또는 요청한 항목들 \(요구형- change\) 이 실시간으로 전송\(publish\) 됨 
 
@@ -32,7 +32,7 @@ WebSocket 세션연결후 개별 종목기준으로 실시간 데이타 수신�
 
 #### 
 
-#### 데이터 제공방식
+### 데이터 제공방식
 
 | **Name** | **Type** | **Description** |  |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -50,13 +50,15 @@ WebSocket 세션연결후 개별 종목기준으로 실시간 데이타 수신�
 
 
 
-#### WebSocket Address
+### WebSocket Address
 
 ```text
 ws://sandbox-apigw.koscom.co.kr/블라블라/ws
 ```
 
 #### 
+
+### Request
 
 #### Request Example - Preset Type
 
@@ -149,6 +151,8 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/ws
 | preset | string | 구독유형 | quote:호가, tick:체결,  quote10:10단계호가, tick10:체결\(확장\), index:지수, change:요구형  \* 항목을 지정하지 않을경우 사용자요청번호 전체 구독취소 |
 
 
+
+### Response
 
 #### Response Msg Example - OK
 
@@ -262,7 +266,7 @@ Recieved: {
 
 
 
-## 2. 전종목 실시간 시세
+## 전종목 실시간 시세
 
 WebSocket 세션을 연결하면, 시장기준 전종목의 현재가가 변경시 주기적\(0.5 초 이내\)으로 종목코드, 시간, 체결가, 누적거래량을 전송
 
@@ -279,7 +283,7 @@ WebSocket 세션을 연결하면, 시장기준 전종목의 현재가가 변경�
 
 #### 
 
-#### WebSocket Address
+### WebSocket Address
 
 ```text
 ws://sandbox-apigw.koscom.co.kr/블라블라/{ws_marketcode}
@@ -287,7 +291,9 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/{ws_marketcode}
 
 > `ws_marketcode`   :  kospi 또는 kosdaq \(ex. ws\_ksp \| ws\_kdq \)
 
-#### 
+
+
+### Request
 
 #### Request Example - Init 전문 송신
 
@@ -307,7 +313,9 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/{ws_marketcode}
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### 
+
+
+### Response
 
 #### Response Data Example
 

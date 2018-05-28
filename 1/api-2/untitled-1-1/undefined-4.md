@@ -154,3 +154,153 @@ Authentication     \|   **API Key**
 
 
 
+## Preset 데이터 항목구성
+
+### tick
+
+> 체결
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| trdPrc | Number\(11\) | 체결가격 |  |
+| trdvol | Number\(10\) | 체결수량,거래량 |  |
+| trdTm | String\(8\) | 체결시각,거래시각 | \*테이블 하단 참고 |
+
+> `trdTm`  
+> HHMMSSmm 형태로 시간전송  
+>    - 정규장 개시전 또는 정규장 체결 발생 이전 : 0  
+>    - 장운영시그널, 대량체결 포함  
+> ※ _장운영시그널_  
+> 정규장마감\(15:00\):31000000 /장종료시간외마감\(15:30\):41000000 /단일가마감\(18:00\):81000000 /일반Buy-in마감\(18:00\):91000007 /당일Buy-in마감\(18:00\):91000008  
+> ※ _대량체결시_   
+> 장전대량매매체결:51000000 /장중대량매매체결:61000000 /장후대량매매체결:71000000
+
+
+
+### quote
+
+> 호가
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| accTrdvol | Number\(12\) | 누적체결수량,누적거래량 | 단위: 주 |
+| askStep1BstordPrc | Number\(11\) | 매도1단계우선호가가격 |  |
+| bidStep1BstordPrc | Number\(11\) | 매수1단계우선호가가격 |  |
+| askStep1BstordRqty | Number\(12\) | 매도1단계우선호가잔량 |  |
+| bidStep1BstordRqty | Number\(12\) | 매수1단계우선호가잔량 |  |
+
+
+
+### quote10
+
+> 10호가
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 -&gt; 00660 |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위: 주 |
+| askStep1BstordPrc | number\(11\) | 매도1단계우선호가가격 |  |
+| bidStep1BstordPrc | number\(11\) | 매수1단계우선호가가격 |  |
+| askStep1BstordRqty | number\(12\) | 매도1단계우선호가잔량 |  |
+| bidStep1BstordRqty | number\(12\) | 매1단계우선호가잔량 |  |
+| askStep2BstordPrc | number\(11\) | 매도2단계우선호가가격 |  |
+| bidStep2BstordPrc | number\(11\) | 매수2단계우선호가가격 |  |
+| askStep2BstordRqty | number\(12\) | 매도2단계우선호가잔량 |  |
+| bidStep2BstordRqty | number\(12\) | 매수2단계우선호가잔량 |  |
+| askStep3BstordPrc | number\(11\) | 매도3단계우선호가가격 |  |
+| bidStep3BstordPrc | number\(11\) | 매수3단계우선호가가격 |  |
+| askStep3BstordRqty | number\(12\) | 매도3단계우선호가잔량 |  |
+| bidStep3BstordRqty | number\(12\) | 매수3단계우선호가잔량 |  |
+| askStep4BstordPrc | number\(11\) | 매도4단계우선호가가격 |  |
+| bidStep4BstordPrc | number\(11\) | 매수4단계우선호가가격 |  |
+| askStep4BstordRqty | number\(12\) | 매도4단계우선호가잔량 |  |
+| bidStep4BstordRqty | number\(12\) | 매수4단계우선호가잔량 |  |
+| askStep5BstordPrc | number\(11\) | 매도5단계우선호가가격 |  |
+| bidStep5BstordPrc | number\(11\) | 매수5단계우선호가가격 |  |
+| askStep5BstordRqty | number\(12\) | 매도5단계우선호가잔량 |  |
+| bidStep5BstordRqty | number\(12\) | 매수5단계우선호가잔량 |  |
+| askStep6BstordPrc | number\(11\) | 매도6단계우선호가가격 |  |
+| bidStep6BstordPrc | number\(11\) | 매수6단계우선호가가격 |  |
+| askStep6BstordRqty | number\(12\) | 매도6단계우선호가잔량 |  |
+| bidStep6BstordRqty | number\(12\) | 매수6단계우선호가잔량 |  |
+| askStep7BstordPrc | number\(11\) | 매도7단계우선호가가격 |  |
+| bidStep7BstordPrc | number\(11\) | 매수7단계우선호가가격 |  |
+| askStep7BstordRqty | number\(12\) | 매도7단계우선호가잔량 |  |
+| bidStep7BstordRqty | number\(12\) | 매수7단계우선호가잔량 |  |
+| askStep8BstordPrc | number\(11\) | 매도8단계우선호가가격 |  |
+| bidStep8BstordPrc | number\(11\) | 매수8단계우선호가가격 |  |
+| askStep8BstordRqty | number\(12\) | 매도8단계우선호가잔량 |  |
+| bidStep8BstordRqty | number\(12\) | 매수8단계우선호가잔량 |  |
+| askStep9BstordPrc | number\(11\) | 매도9단계우선호가가격 |  |
+| bidStep9BstordPrc | number\(11\) | 매수9단계우선호가가격 |  |
+| askStep9BstordRqty | number\(12\) | 매도9단계우선호가잔량 |  |
+| bidStep9BstordRqty | number\(12\) | 매수9단계우선호가잔량 |  |
+| askStep10BstordPrc | number\(11\) | 매도10단계우선호가가격 |  |
+| bidStep10BstordPrc | number\(11\) | 매수10단계우선호가가격 |  |
+| askStep10BstordRqty | number\(12\) | 매도10단계우선호가잔량 |  |
+| bidStep10BstordRqty | number\(12\) | 매수10단계우선호가잔량 |  |
+| askordTotRqty | number\(12\) | 매도호가총잔량 |  |
+| bidordTotRqty | number\(12\) | 매수호가총잔량 |  |
+| pstoffhrAskTotOrdRqty | number\(15\) | 장종료후시간외매도총호가잔량 |  |
+| pstoffhrBidTotOrdRqty | number\(15\) | 장종료후시간외매수총호가잔량 |  |
+| deemTrdPrc | number\(11\) | 예상체결가격 |  |
+| deemTrdvol | number\(12\) | 예상체결수량 |  |
+| deemAccTrdvol | number\(12\) | 예상누적체결수량 |  |
+
+
+
+### tick10
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| cmpprevddTpCd | string\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
+| opnprc | number\(11\) | 시가 | 단위:원 |
+| hgprc | number\(11\) | 고가 | 단위:원 |
+| lwprc | number\(11\) | 저가 | 단위:원 |
+| trdPrc | number\(11\) | 체결가격 | 0 |
+| trdvol | number\(10\) | 체결수량, 거래량 | 0 |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위:주 |
+| accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
+| lstAskbidTpCd | string\(1\) | 최종매도매수구분코드 | 1:매도, 2:매수 \(최종으로 들어온 호가의 매도매수구분값\) |
+| trdTm | string\(8\) | 체결시각,거래시각 | \*테이블 하단 참고 |
+| askordPrc\_1 | number\(11\) | 매도호가가격\_1 | 단위:원 \(체결+우선호가 발생시에만 전송\) |
+| bidordPrc\_1 | number\(11\) | 매수호가가격\_1 |  단위:원 |
+
+> `trdTm`  
+> HHMMSSmm 형태로 시간전송  
+>    - 정규장 개시전 또는 정규장 체결 발생 이전 : 0  
+>    - 장운영시그널, 대량체결 포함  
+> ※ _장운영시그널_  
+> 정규장마감\(15:00\):31000000 /장종료시간외마감\(15:30\):41000000 /단일가마감\(18:00\):81000000 /일반Buy-in마감\(18:00\):91000007 /당일Buy-in마감\(18:00\):91000008  
+> ※ _대량체결시_   
+> 장전대량매매체결:51000000 /장중대량매매체결:61000000 /장후대량매매체결:71000000
+
+
+
+### index
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(3\) | 업종코드 | 코드표 &gt; 업종 참조 |
+| trdTm | String\(8\) | 체결시각,거래시각 | \*테이블 하단 참고 |
+| trdPrc | number\(10\) | 지수 |  |
+| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| cmpprevddPrc | number\(11\) | 전일대비지수 |  |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위:주 |
+| accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
+
+> `trdTm`  
+> "HHMMSSmm" 형태로 시간전송  
+>    - 정규장 개시전 또는 정규장 체결 발생 이전 : 0  
+>    - 장운영시그널, 대량체결 포함  
+> _※ 장운영시그널_  
+> 정규장마감\(15:00\):31000000 /장종료시간외마감\(15:30\):41000000 /단일가마감\(18:00\):81000000 /일반Buy-in마감\(18:00\):91000007 /당일Buy-in마감\(18:00\):91000008  
+> _※ 대량체결시_   
+> 장전대량매매체결:51000000/장중대량매매체결:61000000/장후대량매매체결:71000000"
+
+
+

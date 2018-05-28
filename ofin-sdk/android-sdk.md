@@ -2,7 +2,7 @@
 description: Fintech Mobile SDK Guide - Android
 ---
 
-# android sdk
+# Android sdk
 
 ## 개요
 

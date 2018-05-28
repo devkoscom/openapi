@@ -46,5 +46,5 @@
 * [format sample \(POST\)](format-sample-post.md)
 * [OFin SDK 가이드](ofin-sdk/README.md)
   * [iOS sdk](ofin-sdk/ios-sdk.md)
-  * [android sdk](ofin-sdk/android-sdk.md)
+  * [Android sdk](ofin-sdk/android-sdk.md)
 

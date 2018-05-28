@@ -58,6 +58,16 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/ws
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+#### **Request Parameters - Preset Type**
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- |
+| jsonrpc | string | JSON-RPC 버전 | 2.0 |
+| id | number | 사용자요청번호 | 사용자가 채번하는 ID 요청번호 |
+| method | string | 업무구분 | **subscribe:구독**, ~~unsubscribe:구독해제, push:실시간, query:조회~~ |
+| isuSrtCode | string | 종목코드 | 종목코드 단축 |
+| preset | string | 구독유형 | **quote:호가, tick:체결,  quote10:10단계호가, tick10:체결\(확장\), index:지수**, ~~change:요구형~~ |
+
 #### Request Example - Change Type
 
 {% code-tabs %}
@@ -77,6 +87,21 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/ws
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+#### **Request Parameters - Change Type**
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| jsonrpc | string | JSON-RPC 버전 | 2.0 |
+| id | number | 사용자요청번호 | 사용자가 채번하는 ID 요청번호 |
+| method | string | 업무구분 | **subscribe:구독**, ~~unsubscribe:구독해제, push:실시간, query:조회~~ |
+| isuSrtCode | string | 종목코드 | 종목코드 단축 |
+| preset | string | 구독유형 | ~~quote:호가, tick:체결,  quote10:10단계호가, tick10:체결\(확장\), index:지수~~, **change:요구형** |
+| items | string | 요구형 구독 항목리스트 | 배열형태로 종목에 대한 변경 시세 발생시 전송할 항목들 입력 |
+
+> \* 시장데이타방식의 tick을 요구형데이타로 표현
+
+
+
 #### Request Example - UnSubscribe
 
 {% code-tabs %}
@@ -95,7 +120,17 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/ws
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### 
+#### **Request Parameters - UnSubscribe**
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- |
+| jsonrpc | string | JSON-RPC 버전 | 2.0 |
+| id | number | 사용자요청번호 | 사용자가 채번하는 ID 요청번호 |
+| method | string | 업무구분 | ~~subscribe:구독~~, **unsubscribe:구독해제**, ~~push:실시간, query:조회~~ |
+| isuSrtCode | string | 종목코드 | 종목코드 단축 |
+| preset | string | 구독유형 | quote:호가, tick:체결,  quote10:10단계호가, tick10:체결\(확장\), index:지수, change:요구형  \* 항목을 지정하지 않을경우 사용자요청번호 전체 구독취소 |
+
+
 
 #### Response Msg Example - OK
 
@@ -209,12 +244,6 @@ Recieved: {
 
 
 
-
-
-
-
-
-
 ## 2. 전종목 실시간 시세
 
 WebSocket 세션을 연결하면, 시장기준 전종목의 현재가가 변경시 주기적\(0.5 초 이내\)으로 종목코드, 시간, 체결가, 누적거래량을 전송
@@ -244,6 +273,8 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/{ws_marketcode}
 
 #### Request Example - Init 전문 송신
 
+{% code-tabs %}
+{% code-tabs-item title="\[요청\]  전종목 init" %}
 ```yaml
  {
 	"jsonrpc" : "2.0",
@@ -255,11 +286,15 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/{ws_marketcode}
 	 }
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 #### 
 
-#### Response Example
+#### Response Data Example
 
+{% code-tabs %}
+{% code-tabs-item title="\[Data\]  전종목" %}
 ```yaml
 [
     {
@@ -277,6 +312,8 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/{ws_marketcode}
     ...이하 생략...
 ]
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 
 

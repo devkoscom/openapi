@@ -30,39 +30,41 @@ WebSocket 세션연결후 개별 종목기준으로 실시간 데이타 수신�
 
 세션기준 200건 등록\(subscribe\) 가능 - 체결, 호가 동시 등록시 100종목
 
+#### 
 
+#### WebSocket Address
 
-{% api-method method="head" host="ws://sandbox-apigw.koscom.co.kr:9887" path="/ws/" %}
-{% api-method-summary %}
-
-{% endapi-method-summary %}
-
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+```text
+ws://sandbox-apigw.koscom.co.kr/블라블라/ws
 ```
 
+#### 
+
+#### Request Example - Init 전문 송신
+
+```yaml
+ {
+	"jsonrpc" : "2.0",
+	"id" : 1,
+	"method"  : "init",
+	"params" :  {
+	    "key" : "XXXXXXXX" ,
+	    "membername" : "XXX Company"
+	 }
+}
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+
+#### 
+
+#### Response Example
+
+
+
+
+
+
+
+
 
 
 
@@ -82,39 +84,35 @@ WebSocket 세션을 연결하면, 시장기준 전종목의 현재가가 변경�
  장 시간 중에만 실시간 데이터 발생
 {% endhint %}
 
+#### 
 
+#### WebSocket Address
 
-## Syntax
+```text
+ws://sandbox-apigw.koscom.co.kr/블라블라/{ws_marketcode}
+```
 
-Methods               \|   **Web Socket**
+> `ws_marketcode`   :  kospi 또는 kosdaq \(ex. ws\_ksp \| ws\_kdq \)
 
-Authentication     \|   **API Key**
+#### 
 
+#### Request Example - Init 전문 송신
 
+```yaml
+ {
+	"jsonrpc" : "2.0",
+	"id" : 1,
+	"method"  : "init",
+	"params" :  {
+	    "key" : "XXXXXXXX" ,
+	    "membername" : "XXX Company"
+	 }
+}
+```
 
-{% api-method method="options" host="ws://sandbox-apigw.koscom.co.kr" path="/{ws\_marketcode}/" %}
-{% api-method-summary %}
+#### 
 
-{% endapi-method-summary %}
-
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="ws\_marketcode" type="string" required=true %}
- kospi 또는 kosdaq \(ex. ws\_ksp \| ws\_kdq \)
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
+#### Response Example
 
 ```yaml
 [
@@ -133,24 +131,10 @@ Authentication     \|   **API Key**
     ...이하 생략...
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
-#### Send Msg \(init 전문송신\)
 
-```yaml
- {
-	"jsonrpc" : "2.0",
-	"id" : 1,
-	"method"  : "init",
-	"params" :  {
-	    "key" : "XXXXXXXX" ,
-	    "membername" : "XXX Company"
-	 }
-}
-```
+
+
 
 
 

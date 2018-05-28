@@ -475,15 +475,60 @@ SDK 를 사용하기 위하여 Activity 파일에서 상속해야 하는 Activit
 
 
 
+
+
 ### OPPFLibFintech
 
 **requestForResult**
 
 | **Syntax** | void requestForResult\(final OPPFLibActivity activity, final String fn, JSONObject data, String resCallbackUrl, final FintechListener listener\) |
 | --- | --- | --- | --- |
-| **Parameter** |  |
-| **Description** |  |
-| **Note** |  |
+| **Parameter** | OPPFLibActivity activity _- Activity는 OPPFLibActivity를 상속 받아 구현_ // String fn _- Koscom Open API의 서비스 이름_ // JSONObject data _- App에 전달 할 데이터_ // String resCallbackUrl _- 응답 수신용 Custom URL Scheme_ // final FintechListener listener _- Koscom Open API 응답 수신 리스너_ |
+| **Description** | Koscom Open API App 실행하는 함수.  Custom URL Schem으로 Intent를 구성, Activity의 startActivity를 호출하여Koscom Open API App을 실행합니다. 응답 결과는 서비스 호출 시 데이터와 같이 전달한 수신합니다. |
+| **Note** | OPPFLibFragmentActivity 또는 OPPFLibAppCompatActivity 를 Parameter 로 받는 동일 함수가 있습니다. |
+
+  
+**requestForActivityResult**
+
+| **Syntax** | public void requestForActivityResult\(final OPPFLibAppCompatActivity activity, final String fn, final JSONObject data, final FintechListener listener\) |
+| --- | --- | --- | --- |
+| **Parameter** | OPPFLibActivity activity _- Activity는 OPPFLibActivity를 상속 받아 구현_ // String fn _- Koscom Open API의 서비스 이름_ // JSONObject data _- App에 전달 할 데이터_ // final FintechListener listener _- Koscom Open API 응답 수신 리스너_ |
+| **Description** | Koscom Open API App 실행하는 함수.  Custom URL Schem으로 Intent를 구성, Activity의 startActivity를 호출하여 Koscom Open API App을 실행하고 응답 결과는 OPPFLibAppCompatActivity onActivityResult를 통해 전달 받습니다. |
+| **Note** | OPPFLibFragmentActivity 또는 OPPFLibAppCompatActivity 를 Parameter 로 받는 동일 함수가 있습니다. |
+
+  
+**goAppStore**
+
+| **Syntax** | public void goAppStore\(final Activity activity\)  |
+| --- | --- | --- |
+| **Parameter** | Activity activity _- activity.startActivity 에 새로운 intent로 PlayStore 화면을 띄우는 방식._ |
+| **Description** | PlayStore 설치 화면으로 이동한다. |
+
+
+
+
+
+### **\(interface\) FintechListener**
+
+Koscom Open API 응답 결과를 전달 받기 위한 인터페이스 정의 클래스
+
+  
+**onKoscomResultData**
+
+| **Syntax** | public void goAppStore\(final Activity activity\)  |
+| --- | --- | --- |
+| **Parameter** | String fn _- Koscom Open API의 서비스 이름_ // String message _- 응답 message_ // JSONObject data _- 응답 데이터_ |
+| **Description** | 서비스 요청 성공 시 서비스 응답 결과를 전달 받기 위한 인터페이스 |
+
+  
+**onKoscomResultFail**
+
+| **Syntax** | public void goAppStore\(final Activity activity\)  |
+| --- | --- | --- |
+| **Parameter** | String fn _- Koscom Open API의 서비스 이름_ // String code _- 응답 error code_ // String message _- 응답 message_ // |
+| **Description** | 서비스 요청 실패를 전달 빋기 위한 인터페이스 |
+
+
 
 
 

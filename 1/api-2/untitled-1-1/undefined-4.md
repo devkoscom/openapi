@@ -42,6 +42,8 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/ws
 
 #### Request Example - Preset Type
 
+{% code-tabs %}
+{% code-tabs-item title="\[요청\]  Preset" %}
 ```yaml
 {
     "jsonrpc" : "2.0",
@@ -53,9 +55,13 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/ws
     }
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 #### Request Example - Change Type
 
+{% code-tabs %}
+{% code-tabs-item title="\[요청\]  Change 요구형데이타" %}
 ```yaml
 {
     "jsonrpc" : "2.0",
@@ -68,9 +74,13 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/ws
     }
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 #### Request Example - UnSubscribe
 
+{% code-tabs %}
+{% code-tabs-item title="\[요청\]  구독취소" %}
 ```yaml
 {
     "jsonrpc" : "2.0",
@@ -82,11 +92,15 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/ws
         }
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 #### 
 
 #### Response Msg Example - OK
 
+{% code-tabs %}
+{% code-tabs-item title="\[응답\]  OK Msg" %}
 ```yaml
 {
     "jsonrpc" : "2.0",
@@ -96,9 +110,13 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/ws
     }
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 #### Response Msg Example - Error
 
+{% code-tabs %}
+{% code-tabs-item title="\[응답\]  Error Msg" %}
 ```yaml
 {
     "jsonrpc" : "2.0"
@@ -108,11 +126,15 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/ws
     }
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 
 
 #### Response Date Example - Preset Type
 
+{% code-tabs %}
+{% code-tabs-item title="\[Data\]  Preset" %}
 ```yaml
 {
     "jsonrpc":"2.0",
@@ -140,12 +162,46 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/ws
     }
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 #### Response Data Example - Change Type
 
-```text
-
+{% code-tabs %}
+{% code-tabs-item title="\[Data\]  Change 요구형" %}
+```yaml
+{
+    "jsonrpc":"2.0",
+    "method":"push",
+    "params":{
+        "isuCd":"KR7005930003",
+        "isuSrtCd":"005930",
+        "trdPrc":2465000,
+        "trdTm":14340400
+    }
+}
+{
+    "jsonrpc":"2.0",
+    "method":"push",
+    "params":{
+        "isuCd":"KR7005930003",
+        "isuSrtCd":"005930",
+        "trdPrc":2466000,
+        "trdTm":14340300
+    }
+}
+Recieved: {
+    "jsonrpc":"2.0",
+    "method":"push",
+    "params":{
+        "isuCd":"KR7005930003",
+        "isuSrtCd":"005930",
+        "trdPrc":2465000
+    }
+}
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 
 

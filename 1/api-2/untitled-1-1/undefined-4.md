@@ -32,6 +32,24 @@ WebSocket 세션연결후 개별 종목기준으로 실시간 데이타 수신�
 
 #### 
 
+#### 데이터 제공방식
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| tick | Preset | 체결 데이타 \(단축형\) | 종목 Preset \(주식/선물/옵션\) |
+| quote | Preset | 호가\(단축형\) | 종목 Preset \(주식/선물/옵션\) |
+| tick10 | Preset | 체결 데이타\(확장형\) | 종목 Preset \(주식/선물/옵션\) |
+| quote10 | Preset | 호가\(10단계\) | 종목 Preset \(주식/선물/옵션\) |
+| index | Preset | 업종지수 실시간 | 지수 Preset \(업종\) |
+| change | Change | 요구형 데이타 | 항목기준 변경데이타만 실시간으로 전송 \(주식/선물/옵션만 제공, 업종은 미제공\) - 변경된 항목만 전송함으로써 송수신 데이타 Traffic 및 시스템 처리부하 감소 |
+
+{% hint style="warning" %}
+종목코드, 구독유형\(Preset\), 요구형데이타\(Change\) 항목은   
+반드시 유효한 값을 입력하여야 한다.
+{% endhint %}
+
+
+
 #### WebSocket Address
 
 ```text

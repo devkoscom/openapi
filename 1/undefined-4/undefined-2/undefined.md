@@ -27,7 +27,7 @@ description: 핀테크 서비스 애플리케이션 등록
 
 'API관리' 탭에서는 사용할 API를 선택하고, 그에 해당하는 API '이용 약관에 동의' 하고, 더 이상 사용할 API가 없으면 'Next Step'버튼을 누릅니다.
 
-![](../../../.gitbook/assets/image%20%2889%29.png)
+![](../../../.gitbook/assets/image%20%2891%29.png)
 
 > * API 추가 
 >
@@ -39,7 +39,7 @@ description: 핀테크 서비스 애플리케이션 등록
 
 ## 인증 정보 등록
 
-![&#xC778;&#xC99D; &#xD0ED;](../../../.gitbook/assets/image%20%2890%29.png)
+![&#xC778;&#xC99D; &#xD0ED;](../../../.gitbook/assets/image%20%2892%29.png)
 
 {% hint style="danger" %}
 인증 탭의 **Callback URL**, **Scope**, **유형** 항목은   

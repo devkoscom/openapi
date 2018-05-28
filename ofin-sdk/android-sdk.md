@@ -12,7 +12,7 @@ O'FIN\(오핀\)은 금융투자회사, 유관기관, 핀테크 기업의 데이�
 
 
 
-## 전체 진행 시나리
+## 전체 진행 시나리오
 
 ![Android &#xC2DC;&#xB098;&#xB9AC;&#xC624;](../.gitbook/assets/image%20%2813%29.png)
 
@@ -266,7 +266,7 @@ private void startJoinSampleForActivityResult() {
 약관 및 본인인증  
 약관에 동의하시면 휴대폰 인증 버튼이 활성화됩니다. 
 
-![&#xC57D;&#xAD00; &#xBC0F; &#xBCF8;&#xC778;&#xC778;&#xC99D;](../.gitbook/assets/image%20%2873%29.png)
+![&#xC57D;&#xAD00; &#xBC0F; &#xBCF8;&#xC778;&#xC778;&#xC99D;](../.gitbook/assets/image%20%2875%29.png)
 
 휴대폰 인증  
 정보 입력 후 \[인증번호 전송\] 버튼을 터치하면 SMS로 인증번호가 발송됩니다. 수신된 인증번호 입력 후 \[인증하기\] 버튼을 터치합니다. 
@@ -378,7 +378,7 @@ OAuth  로그인창 호출시 , OFIN설치 여부 체크 후 설치되어 있을
 정보제공 권한 허용  
 OAuth로그인이 완료되면 정보제공 권한 여부 설정 화면으로 이동합니다. \[허용\] 터치 시 핀테크 앱의 서비스를 이용할 수 있습니다. 
 
-![&#xC815;&#xBCF4;&#xC81C;&#xACF5; &#xAD8C;&#xD55C; &#xD5C8;&#xC6A9;](../.gitbook/assets/image%20%2893%29.png)
+![&#xC815;&#xBCF4;&#xC81C;&#xACF5; &#xAD8C;&#xD55C; &#xD5C8;&#xC6A9;](../.gitbook/assets/image%20%2895%29.png)
 
 
 
@@ -442,15 +442,48 @@ private void startRequestSampleForActivityResult() {
  **\*  앱 상세 페이지로 이동**
 
 앱 소개 \(상세\)  
+앱 상세 페이지로 이동 및 사용 신청을 유도 합니다. 
 
+![](../.gitbook/assets/image%20%2871%29.png)
+
+연결계좌 선택  
+가상계좌를 발급 및 연결 계좌를 선택 합니다. 
 
 ![](../.gitbook/assets/image%20%2870%29.png)
 
+앱 사용 신청 완료  
+사용 신청이 정상적으로 완료 되면 해당 핀테크 서비스를 사용 하실 수 있습니다. 
 
+![](../.gitbook/assets/image%20%2874%29.png)
 
 ## API Reference
 
-### 
+
+
+### OPPFLibActivity / OPPFLibFragmentActivity / OPPFLibAppCompatActivity
+
+SDK 를 사용하기 위하여 Activity 파일에서 상속해야 하는 Activity Class 입니다. OPPFLibActivity 는 Activity를 상속하고, OPPFLibFragmentActivity 는 FragmentActivity 를 상속하며, OPPFLibAppCompatActivity 는 AppCompatActivity 를 상속합니다. \(상황에 맞게 사용하시면 됩니다. 
+
+  
+**setURLSchemeListener**
+
+| **Syntax** | void setURLSchemeListener\(OPPFLibURLSchemeListener urlSchemeListener\) |
+| --- | --- | --- | --- |
+| **Parameter** | OPPFLibURLSchemeListener urlSchemeListener  - 서비스 결과를 전달 받기 위한 인터페이스\(OPPFLibURLSchemeListener\) 객체 |
+| **Description** | Koscom Open API App에서 전달 빋은 서비스 결과를 전달 받기 위한 인터페이스 객체를 등록한다. |
+| **Note** | OPPFLibFintech의 requestForActivityResult / requestForResult 에서 사용 됩니다. |
+
+
+
+### OPPFLibFintech
+
+**requestForResult**
+
+| **Syntax** | void requestForResult\(final OPPFLibActivity activity, final String fn, JSONObject data, String resCallbackUrl, final FintechListener listener\) |
+| --- | --- | --- | --- |
+| **Parameter** |  |
+| **Description** |  |
+| **Note** |  |
 
 
 

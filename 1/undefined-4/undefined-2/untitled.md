@@ -18,7 +18,7 @@ description: API 테스트절차
 'API문서 &gt; 시세 서비스 &gt; 주식종목' 메뉴에서 'Select an Application' 을 눌러서 앱을 선택 합니다.  
 앱이 보이지 않으시면 해당 API를 사용하는 앱을 먼저 만드셔야 합니다. 애플리케이션 등록 방법은 [이곳](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2/undefined#application)을 참조하세요.
 
-![Authentication&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2884%29.png)
+![Authentication&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2886%29.png)
 
 ‘Authentication \(None\)’ 버튼을 __누르시고, 인증방식을 ‘API Key’로 선택 합니다.
 
@@ -30,7 +30,7 @@ description: API 테스트절차
 
 테스트할 API를 선택 하시고 'Try it Out' 버튼을 누르시면 아래와 같이 Response 결과를 받아 보실 수 있습니다.
 
-![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%2897%29.png)
+![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%2899%29.png)
 
 'Query' 탭을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
@@ -90,5 +90,5 @@ description: API 테스트절차
 
 ‘Query’ 을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
-![Query &#xD0ED;](../../../.gitbook/assets/image%20%28103%29.png)
+![Query &#xD0ED;](../../../.gitbook/assets/image%20%28105%29.png)
 

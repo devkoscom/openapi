@@ -26,7 +26,7 @@ description: Fintech Mobile SDK Guide – iOS
 
 라이브러리 사용을 위해 Xcode 에 배포된 라이브러리를 추가합니다. 
 
-![Xcode AppSample](../.gitbook/assets/image%20%2887%29.png)
+![Xcode AppSample](../.gitbook/assets/image%20%2889%29.png)
 
 **링크 대상에 추가**
 
@@ -151,7 +151,7 @@ NSMutableDictionary* dicData = [[NSMutableDictionary alloc] init];
 약관 및 본인인증  
 약관에 동의하시면 휴대폰 인증 버튼이 활성화됩니다. 
 
-![&#xC57D;&#xAD00; &#xBC0F; &#xBCF8;&#xC778;&#xC778;&#xC99D;](../.gitbook/assets/image%20%2873%29.png)
+![&#xC57D;&#xAD00; &#xBC0F; &#xBCF8;&#xC778;&#xC778;&#xC99D;](../.gitbook/assets/image%20%2875%29.png)
 
 휴대폰 인증  
 정보 입력 후 \[인증번호 전송\] 버튼을 터치하면 SMS로 인증번호가 발송됩니다. 수신된 인증번호 입력 후 \[인증하기\] 버튼을 터치합니다. 
@@ -254,7 +254,7 @@ OAuth  로그인창 호출시 , OFIN설치 여부 체크 후 설치되어 있을
 정보제공 권한 허용  
 OAuth로그인이 완료되면 정보제공 권한 여부 설정 화면으로 이동합니다. \[허용\] 터치 시 핀테크 앱의 서비스를 이용할 수 있습니다. 
 
-![&#xC815;&#xBCF4;&#xC81C;&#xACF5; &#xAD8C;&#xD55C; &#xD5C8;&#xC6A9;](../.gitbook/assets/image%20%2893%29.png)
+![&#xC815;&#xBCF4;&#xC81C;&#xACF5; &#xAD8C;&#xD55C; &#xD5C8;&#xC6A9;](../.gitbook/assets/image%20%2895%29.png)
 
 
 

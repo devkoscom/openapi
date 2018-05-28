@@ -384,7 +384,7 @@ OAuth로그인이 완료되면 정보제공 권한 여부 설정 화면으로 �
 
 
 
-**3.  앱 상세 페이지 이동API 호출 \( fn : appRequest \)**
+**3.  앱 상세 페이지 이동 API 호출 \( fn : appRequest \)**
 
 서비스연동 API \(가상계좌 리스트 조회\) 확인 후 해당 고객에 연결된 계좌가 없거나 추가로 앱 사용 신청이 필요한 경우 ‘오핀’ 앱 상세 페이지로 이동하여 서비스 신청을 유도 합니다.  
 \* appId : 앱 등록 후 할당 받은 AppID 값을 입력
@@ -475,7 +475,7 @@ SDK 를 사용하기 위하여 Activity 파일에서 상속해야 하는 Activit
 
 | **Syntax** | void setURLSchemeListener\(OPPFLibURLSchemeListener urlSchemeListener\) |
 | --- | --- | --- | --- |
-| **Parameter** | OPPFLibURLSchemeListener urlSchemeListener  - 서비스 결과를 전달 받기 위한 인터페이스\(OPPFLibURLSchemeListener\) 객체 |
+| **Parameter** | OPPFLibURLSchemeListener urlSchemeListener  _- 서비스 결과를 전달 받기 위한 인터페이스\(OPPFLibURLSchemeListener\) 객체_ |
 | **Description** | Koscom Open API App에서 전달 빋은 서비스 결과를 전달 받기 위한 인터페이스 객체를 등록한다. |
 | **Note** | OPPFLibFintech의 requestForActivityResult / requestForResult 에서 사용 됩니다. |
 
@@ -532,5 +532,7 @@ Koscom Open API 응답 결과를 전달 받기 위한 인터페이스 정의 클
 | **Syntax** | public void goAppStore\(final Activity activity\)  |
 | --- | --- | --- |
 | **Parameter** | String fn _- Koscom Open API의 서비스 이름_ // String code _- 응답 error code_ // String message _- 응답 message_ // |
-| **Description** | 서비스 요청 실패를 전달 빋기 위한 인터페이스 |
+| **Description** | 서비스 요청 실패를 전달 받기 위한 인터페이스 |
+
+
 

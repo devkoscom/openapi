@@ -40,23 +40,112 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/ws
 
 #### 
 
-#### Request Example - Init 전문 송신
+#### Request Example - Preset Type
 
 ```yaml
- {
-	"jsonrpc" : "2.0",
-	"id" : 1,
-	"method"  : "init",
-	"params" :  {
-	    "key" : "XXXXXXXX" ,
-	    "membername" : "XXX Company"
-	 }
+{
+    "jsonrpc" : "2.0",
+    "id" : 1 ,
+    "method"  : "subscribe" ,
+    "params" :  {
+        "preset" : "tick",
+        "isuSrtCd" : "005930"
+    }
+}
+```
+
+#### Request Example - Change Type
+
+```yaml
+{
+    "jsonrpc" : "2.0",
+    "id" : 1 ,
+    "method"  : "subscribe" ,
+    "params" :  {
+        "preset" : "change",
+        "isuSrtCd" : "005930",
+        "items" : ["trdPrc", "trdTm"]
+    }
+}
+```
+
+#### Request Example - UnSubscribe
+
+```yaml
+{
+    "jsonrpc" : "2.0",
+    "id" : 1 ,
+    "method"  : "unsubscribe" ,
+    "params" :  {
+        "preset" : "quote" ,
+        "isuSrtCd" : "005930"
+        }
 }
 ```
 
 #### 
 
-#### Response Example
+#### Response Msg Example - OK
+
+```yaml
+{
+    "jsonrpc" : "2.0",
+    "id" : 1 ,
+    "result"  {
+        "message" : "ok"
+    }
+}
+```
+
+#### Response Msg Example - Error
+
+```yaml
+{
+    "jsonrpc" : "2.0"
+    "error" :  {
+        "message" :  "정상적인 JSON-RPC 형식이 아닙니다",
+        "code" : 47
+    }
+}
+```
+
+
+
+#### Response Date Example - Preset Type
+
+```yaml
+{
+    "jsonrpc":"2.0",
+    "method":"push",
+    "params":{
+        "preset":"quote",
+        "isuSrtCd":"005930",
+        "askStep1BstordPrc":2465000,
+        "askStep1BstordRqty":144,
+        "bidStep1BstordPrc":2464000,
+        "bidStep1BstordRqty":298
+    }
+}
+{
+    "jsonrpc":"2.0",
+    "method":"push",
+    "params":{
+        "preset":"tick",
+        "isuSrtCd":"005930",
+        "trdPrc":2465000,
+        "trdvol":2,
+        "accTrdvol":251916,
+        "accTrdval":627899637000,
+        "trdTm":14412000
+    }
+}
+```
+
+#### Response Data Example - Change Type
+
+```text
+
+```
 
 
 
@@ -78,7 +167,8 @@ WebSocket 세션을 연결하면, 시장기준 전종목의 현재가가 변경�
 데이타 항목        \|   종목코드, 체결가, 체결수량, 시간
 
 데이타 전송의 효율성을 위하여 최대 50건씩 Packing 하여 전송  
-별도의 데이터 복구 및 재전송 작업 없음
+별도의 데이터 복구 및 재전송 작업 없음  
+채널점검용 heartbeat 송수신 가능
 
 {% hint style="warning" %}
  장 시간 중에만 실시간 데이터 발생

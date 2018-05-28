@@ -116,27 +116,23 @@ data 필드는 해당 업무에 필요한 데이터를 정의 합니다. 각 업
 NSMutableDictionary* dicData = [[NSMutableDictionary alloc] init];
 
 [oppfFintech requestForResult:@"join"
-                         data:(NSDictionary *)dicData
-                      success:^(NSString * _Nonnull fn, NSString * _Nonnull message, NSDictionary * _Nonnull data) {
-                      
-                          NSString* msg = [NSString stringWithFormat:@"message=%@\ndata=%@", message, data];
-                          [self printResultText: msg ];
-                          
-                      } 
-                      failure:^(NSString * _Nonnull fn, NSString * _Nonnull code, NSString * _Nonnull message) {
-                          
-                          NSString* msg = [NSString stringWithFormat:@"code=%@\nmessage=%@", code, message];
-                          [self printResultText: message];
-                      
-                          if([code isEqualToString:OPPF_CODE_NOT_INSTALLED]) {
-                              // go appstore
-                              //[oppfFintech goAppStore];
-                          }
-                          else {
-                              //,,,,,
-                          }
-                      }
-];        
+    data:(NSDictionary *)dicData
+    success:^(NSString * _Nonnull fn, NSString * _Nonnull message, NSDictionary * _Nonnull data) {
+      NSString* msg = [NSString stringWithFormat:@"message=%@\ndata=%@", message, data];
+      [self printResultText: msg ];
+    } 
+    failure:^(NSString * _Nonnull fn, NSString * _Nonnull code, NSString * _Nonnull message) {
+        NSString* msg = [NSString stringWithFormat:@"code=%@\nmessage=%@", code, message];
+        [self printResultText: message];
+        if([code isEqualToString:OPPF_CODE_NOT_INSTALLED]) {
+            // go appstore
+            //[oppfFintech goAppStore];
+        }
+        else {
+            //,,,,,
+        }
+    }
+];   
 ```
 
 
@@ -192,8 +188,8 @@ OAuth 절차는 [이곳](https://koscom.gitbook.io/open-api/~/edit/primary/1/api
 
 | **`Error code`** | **`Description`** |
 | --- | --- | --- | --- | --- | --- |
-| 4000 | 일반적인 에 |
-| 4100 | API 및 서비스 이용 권한 획득에 실패한 경우. |
+| 4000 | 일반적인 에러 |
+| 4100 | API 및 서비스 이용 권한 획득에 실패한 경우 |
 | 4200 | Authorization Code 전달에 실패한 경우 |
 | 4300 | 사용자가 요청한 리소스의 권한 허용 거부 |
 | 4400 | 비회원 인증 중 이미 가입된 회원 |
@@ -320,8 +316,7 @@ NSString * appID = [txtAppID text ];
 
 ### OPPFFintech
 
-Koscom OpenAPI 서비스 연동 기능을 구현한 Class 입니다.
-
+Koscom OpenAPI 서비스 연동 기능을 구현한 Class 입니다.  
 서비스 연동은 Custom URL Scheme을 이용하므로 응답을 수신하기 위해서 App에 Custom URL Scheme을 설정하고 OPPFFintech객체에 등록해야 한다.
 
   

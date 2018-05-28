@@ -2,7 +2,7 @@
 description: Fintech Mobile SDK Guide – iOS
 ---
 
-# ios sdk
+# iOS sdk
 
 ## 개요
 
@@ -14,7 +14,7 @@ description: Fintech Mobile SDK Guide – iOS
 
 ## 전체 진행 시나리오
 
-![Ofin\(ios\) &#xC2DC;&#xB098;&#xB9AC;&#xC624; ](../.gitbook/assets/image%20%2846%29.png)
+![OFin &#xC2DC;&#xB098;&#xB9AC;&#xC624; ](../.gitbook/assets/image%20%2846%29.png)
 
 
 
@@ -40,9 +40,9 @@ description: Fintech Mobile SDK Guide – iOS
 
 ## 연동
 
-OPPFFintech가 제공하는 연동 기능을 사용하기 위해서는 Application App은 OPPFAppDelegate을 상속하여 구현해야 합니다. 또한, 서비스 연동은 Custom URL Scheme을 이용하므로 응답을 수신하기 위해서 App에 Custom URL Scheme을 설정하고 OPPFFintech객체에 등록해야 합니다.
+OPPFFintech가 제공하는 연동 기능을 사용하기 위해서는 Application App 은 OPPFAppDelegate 을 상속하여 구현해야 합니다. 또한, 서비스 연동은 Custom URL Scheme 을 이용하므로 응답을 수신하기 위해서 App에 Custom URL Scheme을 설정하고 OPPFFintech 객체에 등록해야 합니다.
 
-### 
+
 
 ### **OPPFAppDelegate 상속**
 
@@ -61,13 +61,13 @@ OPPFFintech가 제공하는 연동 기능을 사용하기 위해서는 Applicati
 
 ### **Custom URL Scheme 설정** 
 
-info.plist 에 URL types 를 다음과 같이 설정하여 추가  : URL identifier, URL Schemes 은 직접 설정
+info.plist 에 URL types 를 다음과 같이 설정하여 추가 : URL identifier, URL Schemes 은 직접 설정
 
 ![](../.gitbook/assets/1.png)
 
 
 
-### **OPPFFintech 객체생성 및 URL Scheme 등록**
+### **OPPFFintech 객체생성  및  URL Scheme 등록**
 
 위에서 설정한 URL scheme 정보 등록 
 
@@ -109,7 +109,7 @@ data 필드는 해당 업무에 필요한 데이터를 정의 합니다. 각 업
 
 #### **1.  회원 가입 API 호출 \( fn : join \)**
 
-서비스 연동 API의 ‘오핀’ – ‘회원가입 여부를 확인’ 후 결과가 ‘nonmember’인 경우 ‘오핀’ 의 회원가입 페이지 호출
+서비스 연동 API의 '오핀' – ‘회원가입 여부를 확인’ 후 결과가 ‘nonmember’인 경우 ‘오핀’ 의 회원가입 페이지 호출
 
 ```swift
 //Service API 회원 가입 호출 코드 예
@@ -118,14 +118,16 @@ NSMutableDictionary* dicData = [[NSMutableDictionary alloc] init];
 [oppfFintech requestForResult:@"join"
                          data:(NSDictionary *)dicData
                       success:^(NSString * _Nonnull fn, NSString * _Nonnull message, NSDictionary * _Nonnull data) {
-                          
+                      
                           NSString* msg = [NSString stringWithFormat:@"message=%@\ndata=%@", message, data];
                           [self printResultText: msg ];
                           
-                      } failure:^(NSString * _Nonnull fn, NSString * _Nonnull code, NSString * _Nonnull message) {
+                      } 
+                      failure:^(NSString * _Nonnull fn, NSString * _Nonnull code, NSString * _Nonnull message) {
                           
                           NSString* msg = [NSString stringWithFormat:@"code=%@\nmessage=%@", code, message];
                           [self printResultText: message];
+                      
                           if([code isEqualToString:OPPF_CODE_NOT_INSTALLED]) {
                               // go appstore
                               //[oppfFintech goAppStore];
@@ -133,10 +135,8 @@ NSMutableDictionary* dicData = [[NSMutableDictionary alloc] init];
                           else {
                               //,,,,,
                           }
-
-                      }];
-                          
- }];
+                      }
+];        
 ```
 
 

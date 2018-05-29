@@ -159,11 +159,10 @@ description: 코스콤(정보사업부) 시세 API
 1개 세션에 유가/코스닥/선물/옵션기준으로 전종목의 요약 체결정보\(종목코드, 체결가, 체결량, 시간\) 전송  
 고객요청에 따라 당사의 풍부한 데이타를  다양한 방식으로 제공가능 
 
+  
 스트리밍\(시세\) API는 아래 페이지에서 참조하세요 **:** 
 
 {% page-ref page="undefined-4.md" %}
-
-
 
 
 
@@ -255,7 +254,7 @@ JSON-RPC 2.0 에 관한 자세한 설명은[ 이곳](http://www.jsonrpc.org/spec
 3. 연결된 Session을 통해서 종목 기준으로 업무요건별로 Subscribe/Unsubscribe  요청을 한다.
 4. 구독요청 결과에 대해서  Push시세\(현재 시세메모리 정보\)  또는 에러를 반드시 전송한다.
 5. 구독하는 종목에 대한 시세 발생시 비동기 방식으로 실시간 데이타 전송
-6. WebSocket Session 종료시 모든 실시간 구독내역은 초기화 된다.
+6. WebSocket Session 종료 시 모든 실시간 구독내역은 초기화 된다.
 
 ![WebSocket &#xC885;&#xBAA9;&#xBCC4; &#xC0C1;&#xC138; &#xAD6C;&#xB3C5;](../../../.gitbook/assets/image%20%2872%29.png)
 
@@ -283,11 +282,11 @@ JSON-RPC 2.0 에 관한 자세한 설명은[ 이곳](http://www.jsonrpc.org/spec
 
 #### 요청 \(Request\)
 
-1. GET 방식 조회
+ 1. GET 방식 조회
 
 ![](../../../.gitbook/assets/image%20%2824%29.png)
 
-2. WebSocket 초기화
+ 2. WebSocket 초기화
 
 {% code-tabs %}
 {% code-tabs-item title="init" %}
@@ -305,7 +304,7 @@ JSON-RPC 2.0 에 관한 자세한 설명은[ 이곳](http://www.jsonrpc.org/spec
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-3. WebSocket 실시간 구독요청/취소
+ 3. WebSocket 실시간 구독요청/취소
 
 {% code-tabs %}
 {% code-tabs-item title="subscribe" %}
@@ -323,7 +322,7 @@ JSON-RPC 2.0 에 관한 자세한 설명은[ 이곳](http://www.jsonrpc.org/spec
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-4. WebSocket 채널점검 \(Heartbeat\)
+ 4. WebSocket 채널점검 \(Heartbeat\)
 
 {% code-tabs %}
 {% code-tabs-item title="heartbeat" %}

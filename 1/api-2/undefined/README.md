@@ -70,7 +70,7 @@
 {% endhint %}
 
 {% hint style="info" %}
-개발자센터 _어플리케이션 등록_  및  _API 테스트\(인증\)_  이용절차는 [이곳](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2) 에서 확인하세요.
+개발자센터  어플리케이션 등록  및  API 테스트\(인증\)  이용방법은 [이곳](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2) 에서 확인하세요.
 {% endhint %}
 
 

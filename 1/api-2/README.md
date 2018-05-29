@@ -1,8 +1,8 @@
 ---
-description: 제공 중인 API 유형
+description: 제공 중인 API 서비스
 ---
 
-# API 서비스
+# API
 
 Here are the articles in this section:
 

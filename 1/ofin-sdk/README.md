@@ -1,5 +1,5 @@
 ---
-description: Fintech Mobile SDK Guide
+description: Fintech  Mobile  SDK  Guide
 ---
 
 # OFin SDK 가이드

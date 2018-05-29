@@ -1,5 +1,5 @@
 ---
-description: 시세 코드표
+description: 시세서비스 코드표
 ---
 
 # 코드표\(시세\)
@@ -7,7 +7,7 @@ description: 시세 코드표
 
 
 {% hint style="success" %}
-시세API 에러코드는 [Error Code](https://koscom.gitbook.io/open-api/1/error#error-3) 를 참조하세요.
+시세API 에러코드는 [Error Code](https://koscom.gitbook.io/open-api/1/error#error-3) 에서 확인하세요.
 {% endhint %}
 
 ## 시장코드 및 연결선물코드

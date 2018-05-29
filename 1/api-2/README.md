@@ -4,7 +4,7 @@ description: 제공 중인 API 유형
 
 # API 서비스
 
-
+Here are the articles in this section:
 
 {% page-ref page="undefined/" %}
 
@@ -64,8 +64,6 @@ description: 제공 중인 API 유형
 오픈플랫폼 \(일반정보\)
 {% endtab %}
 {% endtabs %}
-
-상세한 설명은 아래의 링크를 참조하세요:
 
 {% page-ref page="undefined/" %}
 
@@ -144,8 +142,6 @@ description: 제공 중인 API 유형
  금투사 \(민감도 **높은** 금융정보\)
 {% endtab %}
 {% endtabs %}
-
- 상세한 설명은 아래의 링크를 참조하세요:
 
 {% page-ref page="undefined-1.md" %}
 
@@ -291,8 +287,6 @@ List 취소 주문은 지원 하지 않음
 금투사 \(일임형 자문업자만 사용 가능\)
 {% endtab %}
 {% endtabs %}
-
-상세한 설명은 아래의 링크를 참조하세요:
 
 {% page-ref page="undefined-2.md" %}
 
@@ -498,11 +492,9 @@ List 취소 주문은 지원 하지 않음
 
 
 
-## 
+
 
 {% hint style="info" %}
-API 는[ 코스콤 개발자센터](https://developers.koscom.co.kr) 에서 이용할 수 있습니다.
+모든 API 는[ 코스콤 개발자센터](https://developers.koscom.co.kr) 에서 이용할 수 있습니다.
 {% endhint %}
-
-
 

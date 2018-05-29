@@ -103,10 +103,17 @@ Parameters          \|   **`grant_type`**=authorization\_code & **`code`**=할�
 > `code`                        :  Authorization code 요청을 통해 받은 code  
 > `redirect_uri`        :  핀테크 기업의 웹 서버에 구현된 OAuth callback listener 주소이며, 이 값은 최초 서비스 등록 시 입력했던 값과 동일해야 함
 
-\*   _Base64\(client\_id:client\_secret\)_     
-      client\_id와 client\_secret을 “:”으로 연결하여 base64로 encoding한 값을  위 형식으로 설정
+\*   _**Base64\(client\_id:client\_secret\)**_ ****  
+      :   client\_id와 client\_secret을 “:”으로 연결하여 base64 로 encoding 한 값을  위 형식으로 설정  
+      ex\) client\_id : client\_secret   -&gt;   748c46c8-940f-4eb8-a553-4656253dbac6
 
-
+{% code-tabs %}
+{% code-tabs-item title="Header Authorization Example" %}
+```yaml
+Authorization: Bearer 748c46c8-940f-4eb8-a553-4656253dbac6
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 
 
@@ -178,14 +185,14 @@ curl -X POST -H "Authorization: Bearer 748c46c8-940f-4eb8-a553-4656253dbac6" -H 
 
 ## Access Token 갱신 
 
-> Refresh Token 갱신 요
+> Refresh Token 갱신
 
 ### 1. 요청
 
 Access token 발급 메시지에는 갱신에 사용되는 refresh token \(`refresh_token`\)과 유효시간\(`expires_in`\)이 들어있습니다. 필요에 따라 각 access token이 만료되기 전에 갱신을 요청하면 새로운 access token을 발급받을 수 있습니다. 
 
 {% hint style="danger" %}
-Refresh token 기능 지원여부는 비즈니스 모델 및 사용 기업의 신뢰도에 따라 다를 수 있음   
+Refresh token 기능 지원여부는 비즈니스 모델 및 사용 기업의 신뢰도에 따라 다를 수 있음.   
 \(이를 고려한 비즈니스 모델은 사전 협의 필요\)
 {% endhint %}
 

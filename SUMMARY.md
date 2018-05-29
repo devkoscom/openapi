@@ -27,7 +27,7 @@
       * [주식 시세표](1/api-2/untitled-1-1/undefined-7.md)
       * [요구형항목](1/api-2/untitled-1-1/undefined-1.md)
       * [코드표 \(시세\)](1/api-2/untitled-1-1/undefined-8.md)
-  * [인증방식](1/api-1/README.md)
+  * [인증](1/api-1/README.md)
     * [API Key Authentication](1/api-1/api-key-authentication.md)
     * [Basic Authentication](1/api-1/basic-authentication.md)
     * [OAuth](1/api-1/oauth/README.md)

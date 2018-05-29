@@ -2,7 +2,7 @@
 description: Fintech Mobile SDK Guide – iOS
 ---
 
-# iOS sdk
+# iOS
 
 ## 개요
 

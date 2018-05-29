@@ -35,8 +35,8 @@
       * [Implict Grant Flow](1/api-1/oauth/untitled-1.md)
       * [Scope](1/api-1/oauth/untitled-2.md)
   * [OFin SDK 가이드](1/ofin-sdk/README.md)
-    * [iOS sdk](1/ofin-sdk/ios-sdk.md)
-    * [Android sdk](1/ofin-sdk/android-sdk.md)
+    * [iOS](1/ofin-sdk/ios-sdk.md)
+    * [Android](1/ofin-sdk/android-sdk.md)
   * [Error Code](1/error.md)
   * FAQ
     * [오픈 API](1/faq/api-1.md)

@@ -78,7 +78,7 @@ Flow 2를 요청하면 그 응답으로 Authorization Code를 받아오는 것�
 > **Flow 5,   Flow 6**
 
 Flow 3, 4 절차가 정상적으로 수행되면 오픈플랫폼은 authorization code를 응답으로 내려주되, 핀테크 서비스 등록과 Authorization Code 요청 시 지정된 redirect\_uri로 응답을 전달할 수 있도록 http 헤더의 status code를 302로 설정하여 응답을 전송하며, redirect된 응답은 핀테크 서비스 서버 사이드에 구현된 OAuth Callback Listener \(Servlet 등\)로 전달되며, Callback Listener로 유입된 응답 parameter에서 state와 code를 추출하고 누구의 authorization code인지를 확인\(state에 설정한 식별정보 이용\)하여 다음 절차인 access token을 요청합니다.   
-에러처리는 [Error Code](https://koscom.gitbook.io/open-api/~/edit/primary/1/error)를 참고하시기 바랍니다.
+에러 처리는 [Error Code](https://koscom.gitbook.io/open-api/~/edit/primary/1/error)를 참고하시기 바랍니다.
 
 
 
@@ -88,7 +88,7 @@ Flow 3, 4 절차가 정상적으로 수행되면 오픈플랫폼은 authorizatio
 
 > **Flow 7**
 
-실제 API를 호출할 때 필요한 것은 access token입니다. Access token은 authorization code를 이용하여 요청할 수 있습니다. 
+실제 API를 호출할 때 필요한 것은 access token입니다. access token은 authorization code를 이용하여 요청할 수 있습니다. 
 
 HTTP methods    \|   **POST**
 

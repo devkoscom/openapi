@@ -79,7 +79,7 @@ iOS 및 Android 용 SDK를 지원하고 있습니다.
 
 더 자세한 설명은 아래의 OFin SDK 가이드에서 확인하세요.
 
-{% page-ref page="../../../ofin-sdk/" %}
+{% page-ref page="../../ofin-sdk/" %}
 
 
 

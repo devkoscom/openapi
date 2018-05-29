@@ -1,6 +1,6 @@
-# 오픈API 문의
+# 오픈 API
 
-## 코스콤 개발자센터 가입필요서류 및 코스콤 오픈API플랫폼 담당자 연락처는 무엇인지요
+## 코스콤 개발자센터 가입필요서류 및 코스콤 오픈 API 플랫폼 담당자 연락처는 무엇인지요
 
  1. 개발자센터 가입 안내 참조               \|    [http://biz.koscom.co.kr/cmm/intro/introOppfUse.do](http://biz.koscom.co.kr/cmm/intro/introOppfUse.do)
 

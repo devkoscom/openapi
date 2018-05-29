@@ -1,8 +1,8 @@
 ---
-description: 오픈API사용시 필요한 절차
+description: 오픈API 사용 시 필요한 절차
 ---
 
-# 오픈API 사용절차
+# 오픈 API 사용절차
 
 ## 오픈API를 사용하려면 어떤 서류가 필요한가요?
 

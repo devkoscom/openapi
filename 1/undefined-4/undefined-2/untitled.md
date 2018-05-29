@@ -1,15 +1,14 @@
----
-description: API 테스트절차
----
-
 # API 테스트
 
-본 페이지에서는 **API Key** 및 **OAuth2.0** 인증에 관한 **테스트절차**를 다룹니다.   
+본 페이지에서는 **API Key** 및 **OAuth2.0** 인증에 관한 **테스트 절차**를 다룹니다. 
+
 'APIs & 플랜' 메뉴에서 테스트 하려는 API의 인증유형을 확인합니다.
 
 ![APIs &#xBA54;&#xB274;](../../../.gitbook/assets/image%20%286%29.png)
 
-인증방식에 대한 자세한 설명을 원하실 경우 [이곳](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1)을 참조하세요.
+{% hint style="info" %}
+인증에 대한 상세한 설명을 원하실 경우 [이곳](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1)을 참조하세요.
+{% endhint %}
 
 
 

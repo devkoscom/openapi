@@ -1,12 +1,10 @@
 ---
-description: 이용절차
+description: 금융투자 핀테크포털 이용절차
 ---
 
 # 핀테크포털 이용
 
 **금융투자 핀테크포털          \|**     ****[http://open.koscom.co.kr/](http://open.koscom.co.kr/)  
-
-
 
 
 {% hint style="info" %}

@@ -88,7 +88,7 @@ Implicit Grant Type 등은 보안수준 및 비즈니스모델에 따라 협의�
 
 ![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%2826%29.png)
 
-‘Query’ 을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
+‘Query’ 탭을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
 ![Query &#xD0ED;](../../../.gitbook/assets/image%20%28106%29.png)
 

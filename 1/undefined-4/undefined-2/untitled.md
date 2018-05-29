@@ -29,7 +29,7 @@
 
 테스트할 API를 선택 하시고 'Try it Out' 버튼을 누르시면 아래와 같이 Response 결과를 받아 보실 수 있습니다.
 
-![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%2899%29.png)
+![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%28100%29.png)
 
 'Query' 탭을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
@@ -89,5 +89,5 @@
 
 ‘Query’ 을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
-![Query &#xD0ED;](../../../.gitbook/assets/image%20%28105%29.png)
+![Query &#xD0ED;](../../../.gitbook/assets/image%20%28106%29.png)
 

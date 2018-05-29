@@ -60,7 +60,7 @@ OAuth인증체계를 사용하는 API는 **민감정보가 포함된** 데이터
 **OAuth 로그인**  
 OFin 설치 여부 체크 후 설치되어 있을 경우 OFIN 실행 &gt; OAuth 화면이 열립니다. 
 
-![](../../../.gitbook/assets/image%20%28102%29.png)
+![](../../../.gitbook/assets/image%20%28103%29.png)
 
 
 

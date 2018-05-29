@@ -65,5 +65,11 @@ OAuth로그인이 완료되면 정보제공 권한 여부 설정 화면으로 �
 iOS 및 Android 용 SDK를 지원하고 있습니다.
 {% endhint %}
 
-'코스콤 개발자센터 \(http://developers.koscom.co.kr\) &gt; API 문서 &gt; 참조문서' 및 '리소스 &gt; SDK 다운로드' 를 참조 하세요.
+
+
+더 자세한 설명은 아래의 OFin SDK 가이드에서 확인하세요.
+
+{% page-ref page="../../../ofin-sdk/" %}
+
+
 

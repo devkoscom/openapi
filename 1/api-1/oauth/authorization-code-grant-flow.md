@@ -92,7 +92,7 @@ Flow 3, 4 절차가 정상적으로 수행되면 오픈플랫폼은 authorizatio
 
 HTTP methods    \|   **POST**
 
-Authentication     \|   **Basic Authorization**
+~~Authentication     \|   **Basic Authorization**~~
 
 Header                  \|     "**Content-Type**"   :  Application/x-www-form-urlencoded  
                                      "**authorization**"    :  Basic _Base64\(client\_id:client\_secret\)_
@@ -118,12 +118,12 @@ Parameters          \|   **`grant_type`**=authorization\_code & **`code`**=할�
 
 > **Flow 8**
 
-Access Token의 응답은 JSON형태로 제공되며 다음의 항목이 포함되어 있으며, 응답은 정상일 경우 status는 200으로 redirection없이 전송됩니다.
+Access Token의 응답은 JSON 형태로 제공되며 다음의 항목이 포함되어 있습니다. 응답은 정상일 경우 status는 200으로 redirection 없이 전송됩니다.
 
-| **access token** | API호출시 사용할 access token |
+| **access token** | API 호출시 사용할 Access token |
 | --- | --- | --- | --- | --- |
 | **refresh token** | Access token을 갱신하기 위해 사용되는 token |
-| **scope** | Authorization code요청시 지정된 scope |
+| **scope** | Authorization code 요청시 지정된 scope |
 | **token\_type** | Bearer |
 | **expires\_in** | 유효시간 \(초\) |
 
@@ -133,7 +133,7 @@ Access Token의 응답은 JSON형태로 제공되며 다음의 항목이 포함�
 
 ## API 호출
 
-Access Token발급절차를 통해 받은 access token을 HTTP 헤더 내의 지정된 필드에 포함시켜 API를 호출하면 됩니다.
+access token 발급절차를 통해 받은 access token을 HTTP 헤더 내의 지정된 필드에 포함시켜 API를 호출하면 됩니다.
 
 HTTP methods    \|   **POST**
 
@@ -173,7 +173,6 @@ curl -X POST -H "Authorization: Bearer 748c46c8-940f-4eb8-a553-4656253dbac6" -H 
     "srvId": "Mock"
   }
 }' "https://10.10.10.101:8443/v1/cyber/account/balance/search"
-
 ```
 
 
@@ -195,7 +194,7 @@ Refresh token 기능 지원여부는 비즈니스 모델 및 사용 기업의 �
 
 HTTP methods    \|   **POST**
 
-Authentication     \|   **Basic Authorization**
+~~Authentication     \|   **Basic Authorization**~~
 
 Header                  \|     "**Content-Type**"   :  Application/x-www-form-urlencoded"  
                                      "**authorization**"    :  Basic _Base64\(client\_id:client\_secret\)_

@@ -1,5 +1,5 @@
 ---
-description: 금융투자회사(증권사) 제공 API 이용방법
+description: 금융투자회사(증권사) 공통
 ---
 
 # 증권사

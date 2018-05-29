@@ -1,5 +1,5 @@
 ---
-description: 코스콤(정보사업부) 시세 API
+description: 코스콤(정보사업부) 제공
 ---
 
 # 시세 서비스

@@ -71,9 +71,8 @@
 
 
 
-{% page-ref page="undefined.md" %}
-
-{% page-ref page="undefined-2.md" %}
-
-
+{% hint style="info" %}
+코스콤 개발자센터에서  어플리케이션 등록  및  API 테스트\(인증\) 이용 절차를 원하실 경우,   
+ [이곳 ](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2)을 참조하세요.
+{% endhint %}
 

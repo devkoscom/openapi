@@ -40,7 +40,8 @@
 ## OAuth 인증방식
 
 {% hint style="warning" %}
-현재는 OAuth2.0 Grant Type 중 **Authorization Code만 지원**하며 Implicit Grant Type 등은 보안수준 및 비즈니스모델에 따라 협의가 필요합니다. 
+현재는 OAuth2.0 Grant Type 중 **Authorization Code 만 지원**하며,   
+Implicit Grant Type 등은 보안수준 및 비즈니스모델에 따라 협의가 필요합니다. 
 {% endhint %}
 
 ![&#xC571; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%288%29.png)

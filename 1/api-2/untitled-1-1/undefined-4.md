@@ -10,10 +10,10 @@ description: 실시간 스트리밍 시세 (WebSocket 방식)
 문의; 실시간 Guide는 상세한 설명제공 안하는 거 같았음 :O
 {% endhint %}
 
-
-
+{% hint style="warning" %}
 **종목 호가 및 체결**은 **1 세션**, 동시 **최대 200건**으로 제한,   
 샌드박스 : 1세션 최대 20건으로 제한
+{% endhint %}
 
 
 

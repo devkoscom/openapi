@@ -1,18 +1,19 @@
 ---
-description: 실시간 스트리밍 시세 (WebSocket 방식)
+description: 실시간 스트리밍 시세 (WebSocket)
 ---
 
 # 스트리밍
 
-유가증권시장\(코스피, 코스닥\) 및 파생상품\(선물시장,옵션시장\)의 호가 및 체결 정보를 실시간으로 제공한다. Web Socket 방식 이용.
+**Web Socket 방식** 으로  유가증권시장\(코스피, 코스닥\) 및 파생상품\(선물시장,옵션시장\)의 호가 및 체결 정보를 실시간으로 제공한다.  스트리밍시세 API는 '실시간 시세' 또는 '전종목 실시간 시세' 방식으로 제공된다.
 
 {% hint style="danger" %}
 문의; 실시간 Guide는 상세한 설명제공 안하는 거 같았음 :O
 {% endhint %}
 
 {% hint style="warning" %}
-**종목 호가 및 체결**은 **1 세션**, 동시 **최대 200건**으로 제한,   
-샌드박스 : 1세션 최대 20건으로 제한
+**종목 호가 및 체결**은  **1 세션,**  동시 **최대 200건** 으로 제한
+
+샌드박스\(Sandbox\) :  1 세션  최대 20건 으로 제한
 {% endhint %}
 
 
@@ -23,7 +24,7 @@ WebSocket 세션연결후 개별 종목기준으로 실시간 데이타 수신�
 
 **Summary**            \|   **session 연결 후 subscribe & publish**
 
-세션기준 200건 등록\(subscribe\) 가능 - 체결, 호가 동시 등록시 100종목
+세션기준 200건 등록\(subscribe\) 가능  - 체결, 호가 동시 등록시 100종목
 
 #### 
 
@@ -55,7 +56,7 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/ws
 
 ### Request
 
-#### Request Example - Preset Type
+#### Request Example - **Preset Type**
 
 {% code-tabs %}
 {% code-tabs-item title="\[요청\]  Preset" %}
@@ -343,7 +344,7 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/{ws_marketcode}
 
 
 
-## Preset 데이터 항목구성
+## Preset 데이터 항목 구성
 
 시장데이타 발생 시 미리 정의된 체결, 호가 데이타구조의 데이타가 일괄적으로 전송  
 아래는 주식기준으로 기술하였으며, 시장별 일부 데이타 항목만 상이함

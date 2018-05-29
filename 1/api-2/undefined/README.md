@@ -66,13 +66,12 @@
 | 비엔케이투자증권 | BNKFN | 00086 | 미제공\(계획중\) |
 
 {% hint style="danger" %}
- API 제공 증권사, 일정, API 제공 범위는 증권사의 사정에 따라 변경될 수 있음
+ API 제공 증권사,  일정,  API 제공 범위 는 증권사의 사정에 따라 변경될 수 있음.
 {% endhint %}
-
-
 
 {% hint style="info" %}
-코스콤 개발자센터에서  어플리케이션 등록  및  API 테스트\(인증\) 이용 절차를 원하실 경우,   
- [이곳 ](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2)을 참조하세요.
+개발자센터 _어플리케이션 등록_  및  _API 테스트\(인증\)_  이용절차는 [이곳](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2) 에서 확인하세요.
 {% endhint %}
+
+
 

@@ -7,10 +7,10 @@ description: 금융투자회사(증권사) 제공
 계좌기반 조회 API는 증권사별로 호출 URI가 다르나 큰 틀은 동일하며 단지 증권사구분이 URI에 포함되어 있는 구조입니다. 
 
 {% hint style="success" %}
-계좌기반 조회 API에 대한 **자세한 설명**과 **사용방법**은 아래의 [링크](https://developers.koscom.co.kr/documentation/account)를 클릭하면 이용할 수 있습니다:
-
-[​개발자센터-계좌조회API​](https://developers.koscom.co.kr/documentation/account)
+계좌기반 조회 API 는 [개발자센터-계좌조회API](https://developers.koscom.co.kr/documentation/account) 에서 테스트할 수 있습니다.
 {% endhint %}
+
+
 
 
 

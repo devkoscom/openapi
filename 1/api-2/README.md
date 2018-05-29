@@ -2,7 +2,19 @@
 description: 제공 중인 API 유형
 ---
 
-# API 유형
+# API 서비스
+
+
+
+{% page-ref page="undefined/" %}
+
+{% page-ref page="undefined-1.md" %}
+
+{% page-ref page="undefined-2.md" %}
+
+{% page-ref page="untitled-1-1/" %}
+
+## 
 
 오픈플랫폼에서 제공하고 있는 API는 크게 **금융거래정보**를 받기 위한 것과 **기타 정보**를 전달하기 위한 것으로 나뉩니다.
 
@@ -10,6 +22,8 @@ description: 제공 중인 API 유형
 계좌기반 API를 사용하여 개발한 서비스는 요청 메시지의 키가 되는 실계좌번호를 노출시키지 않고, 안전하게 제3자에게 제공하기 위해 서비스 이용자\(최종사용자\)가 금융투자 핀테크 포탈에 가입하여 가상계좌번호를 발급하고, 금융거래정보 제3자 제공 동의서를 작성한 후 가상계좌번호를 사용하고자 하는 핀테크 서비스에 연결하는 선행과정이 필요합니다. 그리고 핀테크 서비스가 해당 API를 이용하려고 시도하는 과정에서 서비스 이용자의 확인과정이 개입됩니다. 계좌기반 API를 제외한 나머지 API는 금융투자 핀테크 포탈 가입 여부와 관계없이 오픈플랫폼에 등록이 된 핀테크 기업의 경우 이용자에게 서비스를 제공할 수 있습니다. 
 
 단, 주문 및 일임매매 관련 API는 투자일임업 라이선스를 보유한 법인만 사용 가능 합니다.
+
+제공 중인 API 유형은 다음과 같습니다.
 
 
 
@@ -53,7 +67,7 @@ description: 제공 중인 API 유형
 
 상세한 설명은 아래의 링크를 참조하세요:
 
-{% page-ref page="api-2/undefined/" %}
+{% page-ref page="undefined/" %}
 
 
 
@@ -133,7 +147,7 @@ description: 제공 중인 API 유형
 
  상세한 설명은 아래의 링크를 참조하세요:
 
-{% page-ref page="api-2/undefined-1.md" %}
+{% page-ref page="undefined-1.md" %}
 
 
 
@@ -280,7 +294,7 @@ List 취소 주문은 지원 하지 않음
 
 상세한 설명은 아래의 링크를 참조하세요:
 
-{% page-ref page="api-2/undefined-2.md" %}
+{% page-ref page="undefined-2.md" %}
 
 
 
@@ -347,7 +361,7 @@ List 취소 주문은 지원 하지 않음
 {% endtab %}
 {% endtabs %}
 
-{% page-ref page="api-2/untitled-1-1/" %}
+{% page-ref page="untitled-1-1/" %}
 
 
 

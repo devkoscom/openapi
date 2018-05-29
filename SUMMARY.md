@@ -11,8 +11,7 @@
     * [개발자센터 이용방법](1/undefined-4/undefined-2/README.md)
       * [애플리케이션 등록](1/undefined-4/undefined-2/undefined.md)
       * [API 테스트](1/undefined-4/undefined-2/untitled.md)
-  * [API 유형](1/api.md)
-  * API 서비스
+  * [API 서비스](1/api-2/README.md)
     * [공통 서비스](1/api-2/undefined/README.md)
       * [서비스연동](1/api-2/undefined/undefined.md)
       * [증권사](1/api-2/undefined/undefined-2.md)

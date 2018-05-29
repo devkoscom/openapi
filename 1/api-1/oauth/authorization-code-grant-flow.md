@@ -20,10 +20,10 @@ description: Server-side Web Application Flow
 
 > **Flow** **0 ~ 1      \|    핀테크 서비스 자체 인증 수행**
 >
-> **Flow 2 ~ 6      \|    Authorization Code 요청과 응답**  
+> **Flow 2 ~ 6      \|    Authorization Code  요청 & 응답**  
 > 데이터소유자의 동의를 통해 authorization code를 받기 위한 flow를 클라이언트 사이드에서 수행하고, 그 결과를 서버 사이드에 구현된 OAuth callback listener로 redirect하는 과정.
 >
-> **Flow 7 ~ 8      \|    Access Token 요청과 응답**
+> **Flow 7 ~ 8      \|    Access Token  요청 & 응답**
 
 
 

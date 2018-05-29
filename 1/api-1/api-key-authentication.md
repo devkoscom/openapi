@@ -38,3 +38,9 @@ curl -X POST -H "apikey: l7xxf234248b6fbd42a1a6844861524b2320" -H "Content-Type:
 
 
 
+{% hint style="info" %}
+코스콤 개발자센터\(Sandbox\)   API Key 이용방법은  [이곳 ](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2/untitled#api-key)을 참조하세요.
+{% endhint %}
+
+
+

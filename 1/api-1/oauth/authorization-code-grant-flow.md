@@ -48,7 +48,7 @@ Parameters          \|   **`response_type`**=code & **`client_id`**=클라이언
 > `scope`                     :  API가 접근하고자 하는 자원 범위   \(\*하단 테이블 참조\)  
 > `state`                     :  본래 cross-site request forgery\(CSRF\) 공격에 대응하기 위해 사용하나, 대체로 사용자 세션정보를 넣어 authorization code 요청의 응답이 서버로 redirect되었을 때 어느 사용자의 authorization code인지를 구분하기 위해 사용하는 것이 보통임. 요청에 전송했던 값이 응답에 그대로 반환됨
 
-| **`Scope`** | **`Description`** | **`유효시간`** |
+| **`Scope`** | **Description** | **유효시간** |
 | --- | --- | --- |
 | profile | 회원 프로필 API \(\*별도 문의\) | 600초 |
 | account |  금융투자 회사의 계좌조회 API _\(계좌잔고, 거래내역, 포트폴리오, 관심종목\)_ | 2592000초 \(30일\) |
@@ -94,7 +94,7 @@ HTTP methods    \|   **POST**
 
 Authentication     \|   **Basic Authorization**
 
-Header                  \|     "**Content-Type**"   :  Application/x-www-form-urlencoded"  
+Header                  \|     "**Content-Type**"   :  Application/x-www-form-urlencoded  
                                      "**authorization**"    :  Basic _Base64\(client\_id:client\_secret\)_
 
 End Point              \|   **​https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token​  
@@ -103,7 +103,7 @@ End Point              \|   **​https://sandbox-apigw.koscom.co.kr/auth/oauth/v
 Parameters          \|   **`grant_type`**=authorization\_code & **`code`**=할당받은 authorizationcode   
                                   & **`redirect_uri`**=구현된 callback listener 주소
 
-> `code`                        :  Authorization code 요청을 통해 받은 code  
+> `code`                        :   Authorization code 요청을 통해 받은 code  
 > `redirect_uri`        :  핀테크 기업의 웹 서버에 구현된 OAuth callback listener 주소이며, 이 값은 최초 서비스 등록 시 입력했던 값과 동일해야 함
 
 \*   _**Base64\(client\_id:client\_secret\)**_ ****  

@@ -107,16 +107,10 @@ Parameters          \|   **`grant_type`**=authorization\_code & **`code`**=할�
 > `redirect_uri`        :  핀테크 기업의 웹 서버에 구현된 OAuth callback listener 주소이며, 이 값은 최초 서비스 등록 시 입력했던 값과 동일해야 함
 
 \*   _**Base64\(client\_id:client\_secret\)**_ ****  
-      :   client\_id와 client\_secret을 “:”으로 연결하여 base64 로 encoding 한 값을  위 형식으로 설정  
-      ex\) client\_id : client\_secret   -&gt;   748c46c8-940f-4eb8-a553-4656253dbac6
+     **:**   client\_id와 client\_secret을 “:”으로 연결하여 base64 로 encoding 한 값을  위 형식으로 설정  
+         더욱 자세한 설명은  [Base64 로 encoding 하는 방법](https://koscom.gitbook.io/open-api/1/api-1/basic-authentication#base64-encoding) 을 참조하세요.
 
-{% code-tabs %}
-{% code-tabs-item title="Header Authorization Example" %}
-```yaml
-Authorization: Bearer 123c98c7-120f-1eb1-a123-1234567dbac9
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 
 

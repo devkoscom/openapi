@@ -226,7 +226,7 @@ Access token 요청에 대한 응답과 동일한 형태의 JSON 메시지가 �
   
 HTTP methods    \|   **POST** or **DELETE**
 
-Authentication     \|   **Basic Authorization**
+~~Authentication     \|   **Basic Authorization**~~
 
 Header                  \|     "**Content-Type**"   :  Application/x-www-form-urlencoded"  
                                      "**authorization**"    :  Basic _Base64\(client\_id:client\_secret\)_

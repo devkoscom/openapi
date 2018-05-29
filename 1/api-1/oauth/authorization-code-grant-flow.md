@@ -110,7 +110,7 @@ Parameters          \|   **`grant_type`**=authorization\_code & **`code`**=í• ë‹
 {% code-tabs %}
 {% code-tabs-item title="Header Authorization Example" %}
 ```yaml
-Authorization: Bearer 748c46c8-940f-4eb8-a553-4656253dbac6
+Authorization: Bearer 123c98c7-120f-1eb1-a123-1234567dbac9
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}

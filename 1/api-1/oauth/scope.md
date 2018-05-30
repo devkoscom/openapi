@@ -1,8 +1,6 @@
 # Scope
 
-scope는 
-
-Scope
+## Scope
 
 | **`Scope`** | **Description** | **유효시간** |
 | --- | --- | --- |

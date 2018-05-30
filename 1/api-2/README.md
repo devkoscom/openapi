@@ -12,7 +12,7 @@ Here are the articles in this section:
 
 {% page-ref page="undefined-2.md" %}
 
-{% page-ref page="../untitled-1-1/" %}
+{% page-ref page="untitled-1-1/" %}
 
 ## 
 
@@ -356,7 +356,7 @@ List 취소 주문은 지원 하지 않음
 {% endtab %}
 {% endtabs %}
 
-{% page-ref page="../untitled-1-1/" %}
+{% page-ref page="untitled-1-1/" %}
 
 
 

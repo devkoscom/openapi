@@ -814,3 +814,127 @@ Authentication     \|   **API Key**
 | askTrdWtMbr4 | number\(5\) | 매도상위거래비중 회원4 |  |
 | askTrdWtMbr5 | number\(5\) | 매도상위거래비중 회원5 |  |
 
+
+
+
+
+## 주식종목\(ETF\) 장마감후 순자산가치 API {#api}
+
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/closenav" %}
+{% api-method-summary %}
+/v2/market/stocks/{marketcode}/{issuecode}/closenav
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
+시장구분 \(kospi \| kosdaq\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" required=true name="issuecode" %}
+종목코드 ex\)005930
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+   "error": "당일 종가 제공 시간이 아닙니다." 
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+**Response Parameters**
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- |
+| isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| nav | number\(11\) | 순자산가치 |  |
+| cmpprevddNav | number\(11\) | 전일대비순자산가치 |  |
+
+
+
+
+
+## 주식 공매도 API {#api}
+
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/shortsell" %}
+{% api-method-summary %}
+/v2/market/stocks/{marketcode}/{issuecode}/shortsell
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
+시장구분 \(kospi \| kosdaq\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" required=true name="issuecode" %}
+종목코드 ex\)005930
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+   "error": "당일 종가 제공 시간이 아닙니다." 
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+**Response Parameterd**
+

@@ -46,11 +46,11 @@ description: 코스콤(정보사업부) 제공
 | 선물 | 상품/지수선물 종목 히스토리 | /v2/market/futures/{marketcode}/{issuecode}/history |
 | 옵션 | 상품/지수 옵션 종목 리스트 | /v2/market/options/{marketcode}/lists |
 | 옵션 | 상품/지수 옵션 종목 마스터 | /v2/market/options/{marketcode}/{issuecode}/master |
-| 옵션 | 상품/지수옵션 종목 종가 | /v2/market/options/{marketcode}/{issuecode}/closeprice |
-| 옵션 | 상품/지수옵션\_체결 | /v2/market/options/{marketcode}/{issuecode}/price |
-| 옵션 | 상품/지수옵션\_우선호가 | /v2/market/options/{marketcode}/{issuecode}/orderbook |
-| 옵션 | 상품/지수옵션 일중 | /v2/market/options/{marketcode}/{issuecode}/intraday |
-| 옵션 | 상품/지수옵션 종목 히스토리 | /v2/market/options/{marketcode}/{issuecode}/history |
+| 옵션 | 상품/지수 옵션 종목 종가 | /v2/market/options/{marketcode}/{issuecode}/closeprice |
+| 옵션 | 상품/지수 옵션\_체결 | /v2/market/options/{marketcode}/{issuecode}/price |
+| 옵션 | 상품/지수 옵션\_우선호가 | /v2/market/options/{marketcode}/{issuecode}/orderbook |
+| 옵션 | 상품/지수 옵션 일중 | /v2/market/options/{marketcode}/{issuecode}/intraday |
+| 옵션 | 상품/지수 옵션 종목 히스토리 | /v2/market/options/{marketcode}/{issuecode}/history |
 | 업종 | 업종 종가 | /v2/market/index/{marketcode}/{issuecode}/closeindex |
 | 업종 | 업종 지수 | /v2/market/index/{marketcode}/{issuecode}/index |
 | 업종 | 업종 예상지수 | /v2/market/index/{marketcode}/{issuecode}/prospectindex |

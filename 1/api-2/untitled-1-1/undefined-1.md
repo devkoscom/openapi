@@ -20,7 +20,7 @@
 ex\) 삼성전자 전일종가와 52주 최고가격만 조회하고자 할 경우 
 
 ```swift
-GET /v2/market/stocks/kospi/005930/masterchanage?prevddClsprc&wk52HgstPrc
+GET /v2/market/stocks/kospi/005930/selectivemaster?prevddClsprc&wk52HgstPrc
 ```
 
   

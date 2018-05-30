@@ -818,18 +818,62 @@ Authentication     \|   **API Key**
 {% endapi-method-response-example-description %}
 
 ```yaml
-
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
 {
-   "error": "당일 종가 제공 시간이 아닙니다." 
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930*001",
+     "askTrdVolMbr1": 1624492,
+     "askTrdVolMbr2": 1513371,
+     "askTrdVolMbr3": 1375482,
+     "askTrdVolMbr4": 1329901,
+     "askTrdVolMbr5": 1047098,
+     "askTrdAmtMbr1": 81468964800,
+     "askTrdAmtMbr2": 75912353450,
+     "askTrdAmtMbr3": 68980967250,
+     "askTrdAmtMbr4": 66647026950,
+     "askTrdAmtMbr5": 52154008800,
+     "askTrdWtMbr1": 8.05,
+     "askTrdWtMbr2": 7.5,
+     "askTrdWtMbr3": 6.82,
+     "askTrdWtMbr4": 6.59,
+     "askTrdWtMbr5": 5.19,
+     "bidTrdVolMbr1": 2173655,
+     "bidTrdVolMbr2": 2040900,
+     "bidTrdVolMbr3": 1615481,
+     "bidTrdVolMbr4": 1602244,
+     "bidTrdVolMbr5": 1426981,
+     "bidTrdAmtMbr1": 108687418100,
+     "bidTrdAmtMbr2": 102074693350,
+     "bidTrdAmtMbr3": 80907780450,
+     "bidTrdAmtMbr4": 80022847600,
+     "bidTrdAmtMbr5": 71408978100,
+     "bidTrdWtMbr1": 10.78,
+     "bidTrdWtMbr2": 10.12,
+     "bidTrdWtMbr3": 8.01,
+     "bidTrdWtMbr4": 7.94,
+     "bidTrdWtMbr5": 7.07,
+     "bidTrdPrcMbr1": 50002,
+     "bidTrdPrcMbr2": 50015,
+     "bidTrdPrcMbr3": 50083,
+     "bidTrdPrcMbr4": 49944,
+     "bidTrdPrcMbr5": 50042,
+     "askTrdPrcMbr1": 50150,
+     "askTrdPrcMbr2": 50161,
+     "askTrdPrcMbr3": 50150,
+     "askTrdPrcMbr4": 50114,
+     "askTrdPrcMbr5": 49808,
+     "bidTrdMbr1": "키움증권",
+     "bidTrdMbr2": "미래에셋대우",
+     "bidTrdMbr3": "신한투자",
+     "bidTrdMbr4": "삼성증권",
+     "bidTrdMbr5": "NH투자증권",
+     "askTrdMbr1": "미래에셋대우",
+     "askTrdMbr2": "CS",
+     "askTrdMbr3": "HSBC증권",
+     "askTrdMbr4": "모간스탠리",
+     "askTrdMbr5": "삼성증권" 
+  } 
 }
 ```
 {% endapi-method-response-example %}
@@ -1007,18 +1051,21 @@ Authentication     \|   **API Key**
 {% endapi-method-response-example-description %}
 
 ```yaml
-
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
 {
-   "error": "당일 종가 제공 시간이 아닙니다." 
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",
+     "hisLists": [ 
+      {
+         "BzDd": 20180102,
+         "lendBalQty": 0,
+         "lendBalAmt": 0,
+         "srtsellTrdVol": 1266,
+         "srtsellTrdAmt": 3229159000 
+      } 
+    ] 
+  } 
 }
 ```
 {% endapi-method-response-example %}

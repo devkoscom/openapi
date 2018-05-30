@@ -680,18 +680,30 @@ Authentication     \|   **API Key**
 {% endapi-method-response-example-description %}
 
 ```yaml
-
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
 {
-   "error": "당일 종가 제공 시간이 아닙니다." 
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "Tm": "0",
+     "isuSrtCd": "K1",
+     "invstLists": [ 
+      {
+         "invstCd": "0",
+         "askTrdvol": 6036208,
+         "askTrdval": 199945230,
+         "bidTrdvol": 6123967,
+         "bidTrdval": 245146511 
+      },
+       ...이하 생략...
+      {
+         "invstCd": "0",
+         "askTrdvol": 6816483,
+         "askTrdval": 41879010,
+         "bidTrdvol": 6145938,
+         "bidTrdval": 77914532 
+      } 
+    ] 
+  } 
 }
 ```
 {% endapi-method-response-example %}
@@ -975,9 +987,9 @@ Authentication     \|   **API Key**
    "jsonrpc": "2.0",
    "result": 
   {
-     "isuSrtCd": "005930",
-     "nav": 0,
-     "cmpprevddNav": 0 
+     "isuSrtCd": "590003",
+     "nav": 11936.79,
+     "cmpprevddNav": -156.52 
   } 
 }
 ```

@@ -179,13 +179,13 @@ description: 코스콤(정보사업부) 제공
 
 GET 방식 조회서비스                \|   `JSON-RPC 2.0`
 
-Web Socket 실시간 서비스      \|   `JSON-RPC 2.0` 
+Web Socket 실시간 서비스      \|   `JSON-RPC 2.0`
 
 
 
 **JSON-RPC 2.0**
 
-> JSON-RPC 2.0 주요 Object member
+JSON-RPC 2.0 주요 Object member
 
 | `jsonrpc` | 버전 |
 | --- | --- | --- | --- | --- | --- |
@@ -195,13 +195,17 @@ Web Socket 실시간 서비스      \|   `JSON-RPC 2.0`
 | `result` | 요청에 대한 응답 |
 | `error` | 에러처리 \("code", "mesage" member를 가짐\) |
 
-> 송수신 전문
+  
+송수신 전문 
 
 | **요청** \(Request\)  | 실시간 구독 요청/취소 및 조회요청 | method : ~ /  param : ~ |
 | --- | --- | --- | --- |
 | **응답** \(Response\) | 실시간 구독  요청/취소 및 조회요청 | result : ~ |
 | **통보** \(Notification\) | 실시간 시세 데이타 \(id를 보내지 않는다\) | method : push / params : ~  |
 | **에러** \(Error\)  | 요청에 대한 에러 | error:  ~ |
+
+> 요청\(Request\)  method 값 구분  
+>    **:**   "init" : Websocket 초기화,  "subscribe" : 구독,  "unsubscribe" : 구독해제,  "query" :  조회요청
 
 실시간시세 전송은 Notification으로 처리 \("method":"push" 이고,  "id" member는 없음\)  
 URI 기반 조회 요청 시 RPC 2.0 데이타 구조의 예외 허용 \(조회요청 데이타 "method", "id" member 누락 허용\)
@@ -252,7 +256,7 @@ JSON-RPC 2.0 에 관한 자세한 설명은[ 이곳](http://www.jsonrpc.org/spec
 
 ####  WebSocket 종목별 상세 구독
 
-1. 실시간 데이타 수신을 위해 WebSocket  Session연결
+1. 실시간 데이타 수신을 위해 WebSocket  Session 연결
 2. 업무개시를 위한 세션정보 전송 요청 \(`method`: init,  `data` : API key, 회사명 \)
 3. 연결된 Session을 통해서 종목 기준으로 업무요건별로 Subscribe/Unsubscribe  요청을 한다.
 4. 구독요청 결과에 대해서  Push시세\(현재 시세메모리 정보\)  또는 에러를 반드시 전송한다.
@@ -263,7 +267,7 @@ JSON-RPC 2.0 에 관한 자세한 설명은[ 이곳](http://www.jsonrpc.org/spec
 
 #### WebSocket  시장별 체결구독
 
-1. 실시간 데이타 수신을 위해 WebSocket  Session연결
+1. 실시간 데이타 수신을 위해 WebSocket  Session 연결
 2. 업무개시를 위한 세션정보 전송 요청 \(`method`: init,  `data` :API key, 회사명 \)
 3. 업무개시 이후 발생되는 체결데이타부터 별도 절차 없이 시장기준으로 전송됨
 
@@ -347,7 +351,7 @@ JSON-RPC 2.0 에 관한 자세한 설명은[ 이곳](http://www.jsonrpc.org/spec
 {
     "jsonrpc" : "2.0",
     "id" : 1 ,
-    "result"  {
+    "result" : {
         "message" : "ok"
     }
 }
@@ -355,7 +359,7 @@ JSON-RPC 2.0 에 관한 자세한 설명은[ 이곳](http://www.jsonrpc.org/spec
 {
     "jsonrpc" : "2.0",
     "id" : 1 ,
-    "result" :  {
+    "result" : {
         "isuSrtCd": "005930",
         "trdPrc":1310000,  
         "trdvol":86,

@@ -1095,3 +1095,79 @@ Authentication     \|   **API Key**
 
 
 
+
+
+## 주식 종목 히스토리
+
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/history" %}
+{% api-method-summary %}
+ /v2/market/stocks/{marketcode}/{issuecode}/history
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
+시장구분
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="issuecode" required=true %}
+종목코드 
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter type="string" name="trnsmCycleTpCd" required=true %}
+전송주기구분코드 \(D:일별, W:주별, M:월별\) 해당기간의 마지막영업일 기준시세. ex\) W:주-금요일, M:월-31일
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="inqStrtDd" required=true %}
+조회시작일자 \(YYYYMMDD\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="inqEndDd" required=true %}
+조회종료일자 \(YYYYMMDD\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="number" name="reqCnt" required=true %}
+요청건수 \(최대 100건\)
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(3\) | 종목단축코드 |  |
+| hisLists | Array\(4\) | 과거리스트 |  |
+| trdDd | string\(8\) | 체결일자,거래일자,매매일자 | YYYYMMDD |
+| trdPrc | number\(11\) | 체결가격 |  |
+| cmpprevddTpCd | string\(1\) | 전일대비구분코 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서,증권의 신규 상장 당일 : 0 |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위:주 |
+| accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
+| opnprc | number\(11\) | 시가 | 단위:원 |
+| hgprc | number\(11\) | 고가 | 단위:원 |
+| lwprc | number\(11\) | 저가 | 단위:원 |
+
+
+

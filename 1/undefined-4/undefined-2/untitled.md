@@ -64,7 +64,7 @@ Implicit Grant Type 등은 보안수준 및 비즈니스모델에 따라 협의�
 >
 > * Scope
 >
->        앱에 등록한 Scope 값을 입력 합니다   \( \* [Scope ](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1/oauth/authorization-code-grant-flow)참조\)
+>        앱에 등록한 Scope 값을 입력 합니다   \( \* [Scope](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1/oauth/scope) 참조\)
 >
 > * Authorize Endpoint
 >

@@ -256,7 +256,7 @@ JSON-RPC 2.0 에 관한 자세한 설명은[ 이곳](http://www.jsonrpc.org/spec
 5. 구독하는 종목에 대한 시세 발생시 비동기 방식으로 실시간 데이타 전송
 6. WebSocket Session 종료 시 모든 실시간 구독내역은 초기화 된다.
 
-![WebSocket &#xC885;&#xBAA9;&#xBCC4; &#xC0C1;&#xC138; &#xAD6C;&#xB3C5;](../../../.gitbook/assets/image%20%2872%29.png)
+![WebSocket &#xC885;&#xBAA9;&#xBCC4; &#xC0C1;&#xC138; &#xAD6C;&#xB3C5;](../../.gitbook/assets/image%20%2876%29.png)
 
 #### WebSocket  시장별 체결구독
 
@@ -268,7 +268,7 @@ JSON-RPC 2.0 에 관한 자세한 설명은[ 이곳](http://www.jsonrpc.org/spec
 
 4. WebSocket Session 종료
 
-![WebSocket &#xC2DC;&#xC7A5;&#xBCC4; &#xCCB4;&#xACB0;&#xAD6C;&#xB3C5;](../../../.gitbook/assets/image%20%282%29.png)
+![WebSocket &#xC2DC;&#xC7A5;&#xBCC4; &#xCCB4;&#xACB0;&#xAD6C;&#xB3C5;](../../.gitbook/assets/image%20%282%29.png)
 
 {% hint style="success" %}
 세션 연결 전에 조회서비스를 통해서 전종목 시세 수신을 권장합니다.
@@ -284,7 +284,7 @@ JSON-RPC 2.0 에 관한 자세한 설명은[ 이곳](http://www.jsonrpc.org/spec
 
  1. GET 방식 조회
 
-![](../../../.gitbook/assets/image%20%2824%29.png)
+![](../../.gitbook/assets/image%20%2826%29.png)
 
  2. WebSocket 초기화
 

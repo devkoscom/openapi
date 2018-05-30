@@ -15,5 +15,5 @@ description: Client-side Web Application Flow
 
 
 
-![Implicit Grant Flow &#xC808;&#xCC28;](../../../.gitbook/assets/image%20%2835%29.png)
+![Implicit Grant Flow &#xC808;&#xCC28;](../../../.gitbook/assets/image%20%2837%29.png)
 

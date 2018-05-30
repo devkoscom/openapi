@@ -17,23 +17,49 @@
 'API문서 &gt; 시세 서비스 &gt; 주식종목' 메뉴에서 'Select an Application' 을 눌러서 앱을 선택 합니다.  
 앱이 보이지 않으시면 해당 API를 사용하는 앱을 먼저 만드셔야 합니다. 애플리케이션 등록 방법은 [이곳](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2/undefined#application)을 참조하세요.
 
-![Authentication&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2886%29.png)
+![Authentication &#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2892%29.png)
 
 ‘Authentication \(None\)’ 버튼을 __누르시고, 인증방식을 ‘API Key’로 선택 합니다.
 
-![&#xC778;&#xC99D;&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2828%29.png)
+![&#xC778;&#xC99D;&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2830%29.png)
 
 'API Key Type'은 해당 API의 Method가 **GET방식**이면 **Query**로 선택 하시고,  **POST방식**이면 **Header**로 선택 하세요.
 
-![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - API Key](../../../.gitbook/assets/image%20%2858%29.png)
+![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - API Key](../../../.gitbook/assets/image%20%2861%29.png)
 
 테스트할 API를 선택 하시고 'Try it Out' 버튼을 누르시면 아래와 같이 Response 결과를 받아 보실 수 있습니다.
 
-![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%28100%29.png)
+![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%28108%29.png)
 
 'Query' 탭을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
-![Query &#xD0ED;](../../../.gitbook/assets/image%20%2819%29.png)
+![Query &#xD0ED;](../../../.gitbook/assets/image%20%2821%29.png)
+
+
+
+## Basic 인증방식
+
+'API문서 &gt; 일임매매서비스 &gt; XX증권-일임매매서비스' 메뉴에서 'Select an Application' 을 눌러서 앱을 선택 합니다. 앱이 보이지 않으시면 해당 API를 사용하는 앱을 먼저 만드셔야 합니다. 애플리케이션 등록 방법은 [이곳](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2/undefined#application)을 참조하세요.
+
+![&#xC571; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2866%29.png)
+
+‘Authentication \(None\)’ 버튼을 __누르시고, 인증방식을 'HTTP Basic'으로 선택 합니다.
+
+![Basic &#xC778;&#xC99D;&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2830%29.png)
+
+'API Key Type'은 해당 API의 Method가 **GET방식**이면 **Query**로 선택 하시고,  **POST방식**이면 **Header**로 선택 하세요.
+
+![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - Basic](../../../.gitbook/assets/image%20%28109%29.png)
+
+> * Username
+>
+>        앱의 API Key 값을 입력 합니다.
+>
+> * Password
+>
+>        앱의 Secret 값을 입력 합니다.
+
+
 
 
 
@@ -44,11 +70,11 @@
 Implicit Grant Type 등은 보안수준 및 비즈니스모델에 따라 협의가 필요합니다. 
 {% endhint %}
 
-![&#xC571; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%288%29.png)
+![&#xC571; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%289%29.png)
 
 'APIs & 플랜' 메뉴에서 OAuth2.0-Authorization Code를 지원하는 API를 확인 합니다. 테스트할 앱을 선택하고 'OAuth2.0'을 선택 합니다.
 
-![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - OAuth2.0](../../../.gitbook/assets/image%20%2855%29.png)
+![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - OAuth2.0](../../../.gitbook/assets/image%20%2858%29.png)
 
 > * Grant Type
 >
@@ -64,7 +90,7 @@ Implicit Grant Type 등은 보안수준 및 비즈니스모델에 따라 협의�
 >
 > * Scope
 >
->        앱에 등록한 Scope 값을 입력 합니다   \( \* [Scope](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1/oauth/scope) 참조\)
+>        앱에 등록한 Scope 값을 입력 합니다   \( \* [Scope](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1/oauth/scope) 페이지 참조 \)
 >
 > * Authorize Endpoint
 >
@@ -86,9 +112,25 @@ Implicit Grant Type 등은 보안수준 및 비즈니스모델에 따라 협의�
 
 테스트할 API를 선택 하시고 ‘Try it Out’ 버튼을 누르면 아래와 같이 Response결과를 받아 보실 수 있습니다.
 
-![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%2826%29.png)
+![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%2828%29.png)
 
 ‘Query’ 탭을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
-![Query &#xD0ED;](../../../.gitbook/assets/image%20%28106%29.png)
+![Query &#xD0ED;](../../../.gitbook/assets/image%20%28115%29.png)
+
+
+
+## 앱 API Key &Secret 조회
+
+> 등록한 애플리케이션\(이하 앱\)의 API Key 및 Secret 을 조회하는 방법
+
+'대시보드' &gt; '어플리케이션' 으로 이동 후, 등록한 애플리케이션의 '설정' 버튼을 클릭합니다. 그 뒤 '편집' 탭을 선택합니다.
+
+![&#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158; &#xD3B8;&#xC9D1;](../../../.gitbook/assets/image%20%2893%29.png)
+
+인증 탭에서 Key와 Secret 버튼을 클릭하면 애플리케이션의 API Key와 Secret을 확인할 수 있습니다. 
+
+![&#xC778;&#xC99D; &#xD0ED;](../../../.gitbook/assets/image%20%288%29.png)
+
+
 

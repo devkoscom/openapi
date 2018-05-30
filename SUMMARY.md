@@ -33,7 +33,7 @@
     * [OAuth](1/api-1/oauth/README.md)
       * [Authorization Code Grant Flow](1/api-1/oauth/authorization-code-grant-flow.md)
       * [Implict Grant Flow](1/api-1/oauth/untitled-1.md)
-      * [Scope](1/api-1/oauth/untitled-2.md)
+      * [Scope](1/api-1/oauth/scope.md)
   * [OFin SDK 가이드](1/ofin-sdk/README.md)
     * [iOS](1/ofin-sdk/ios-sdk.md)
     * [Android](1/ofin-sdk/android-sdk.md)

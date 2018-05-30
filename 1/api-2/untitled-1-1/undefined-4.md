@@ -117,7 +117,7 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/ws
 #### Request Example - UnSubscribe
 
 {% code-tabs %}
-{% code-tabs-item title="\[요청\]  구독취소" %}
+{% code-tabs-item title="\[요청\]  구독취소/해제" %}
 ```yaml
 {
     "jsonrpc" : "2.0",

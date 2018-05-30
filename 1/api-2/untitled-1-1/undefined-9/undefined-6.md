@@ -885,7 +885,15 @@ Authentication     \|   **API Key**
 {% endapi-method-response-example-description %}
 
 ```yaml
-
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",
+     "nav": 0,
+     "cmpprevddNav": 0 
+  } 
+}
 ```
 {% endapi-method-response-example %}
 

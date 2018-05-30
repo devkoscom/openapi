@@ -57,7 +57,8 @@
 >
 > * Password
 >
->        앱의 Secret 값을 입력 합니다.
+>        앱의 Secret 값을 입력 합니다.  
+>   \*  API Key 및 Secret 조회 방법은 '[앱 API Key & Secret 조회](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2/untitled#api-key-and-secret)' 를 참조하세요.
 
 
 
@@ -124,7 +125,7 @@ Implicit Grant Type 등은 보안수준 및 비즈니스모델에 따라 협의�
 
 > 등록한 애플리케이션\(이하 앱\)의 API Key 및 Secret 을 조회하는 방법
 
-'대시보드' &gt; '어플리케이션' 으로 이동 후, 등록한 애플리케이션의 '설정' 버튼을 클릭합니다. 그 뒤 '편집' 탭을 선택합니다.
+'대시보드 &gt; 어플리케이션' 으로 이동 후, 등록한 애플리케이션의 '설정' 버튼을 클릭합니다.  그 뒤 '편집' 탭을 선택합니다.
 
 ![&#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158; &#xD3B8;&#xC9D1;](../../../.gitbook/assets/image%20%2893%29.png)
 

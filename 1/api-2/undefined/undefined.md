@@ -89,7 +89,7 @@ Application/json
 | srvId | String\(20\) | 핀테크서비스코드 |  |
 | reqIdPlatform | String | . | 사용안함 |
 | reqIdConsumer | String\(20\) | 핀테크기업에서 사용하는 메시지 | 선택 |
-| ci | String\(88\) | 연계정 |  |
+| ci | String\(88\) | 연계정보 |  |
 | korName | String\(10\) | 한글이름 |  |
 
 #### Response Parameters
@@ -183,7 +183,7 @@ Application/json
 | reqIdPlatform | String | . | 사용안함 |
 | reqIdConsumer | String\(20\) | 핀테크기업에서 사용하는 메시지 | 선택 |
 | ci | String\(88\) | 연계정보 |  |
-| korName | String\(10\) | 한글이름 |  |
+| korName | String\(12\) | 한글이름 |  |
 
 #### Response Parameters
 

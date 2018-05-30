@@ -339,22 +339,21 @@ Authentication     \|   **API Key**
    "jsonrpc": "2.0",
    "result": 
   {
-     "isuSrtCd": [ " -" 
-    ],
-     "trdPrc": null,
-     "opnprc": null,
-     "hgprc": null,
-     "lwprc": null,
-     "accTrdvol": null,
-     "trdTm": null,
-     "trdvol": null,
-     "lstTrdTpCd": 0,
-     "accTrdval": null,
-     "fstmmAgndaContrtPrc": null,
-     "futrmmAgndaContrtPrc": null,
-     "negoBlkAccTrdvol": null,
-     "realtmUplmtprc": null,
-     "realtmLwlmtprc": null 
+     "isuSrtCd": "101N6000",
+     "trdPrc": 308.7,
+     "opnprc": 314.8,
+     "hgprc": 315,
+     "lwprc": 307.55,
+     "accTrdvol": 285881,
+     "trdTm": 71000000,
+     "trdvol": 5488,
+     "lstTrdTpCd": 1,
+     "accTrdval": 22175503587500,
+     "fstmmAgndaContrtPrc": 309.3,
+     "futrmmAgndaContrtPrc": 0,
+     "negoBlkAccTrdvol": 0,
+     "realtmUplmtprc": 341.3,
+     "realtmLwlmtprc": 290.8 
   } 
 }
 ```
@@ -422,46 +421,46 @@ Authentication     \|   **API Key**
    "jsonrpc": "2.0",
    "result": 
   {
-     "isuSrtCd": [ " -" 
-    ],
-     "askStep1BstordPrc": null,
-     "askStep2BstordPrc": null,
-     "askStep3BstordPrc": null,
-     "askStep4BstordPrc": null,
-     "askStep5BstordPrc": null,
-     "askStep1BstordRqty": null,
-     "askStep2BstordRqty": null,
-     "askStep3BstordRqty": null,
-     "askStep4BstordRqty": null,
-     "askStep5BstordRqty": null,
-     "bidStep1BstordPrc": null,
-     "bidStep2BstordPrc": null,
-     "bidStep3BstordPrc": null,
-     "bidStep4BstordPrc": null,
-     "bidStep5BstordPrc": null,
-     "bidStep1BstordRqty": null,
-     "bidStep2BstordRqty": null,
-     "bidStep3BstordRqty": null,
-     "bidStep4BstordRqty": null,
-     "bidStep5BstordRqty": null,
-     "askTotOrdRqty": null,
-     "bidTotOrdRqty": null,
-     "askStep1BstordCnt": null,
-     "bidStep1BstordCnt": null,
-     "askStep2BstordCnt": null,
-     "bidStep2BstordCnt": null,
-     "askStep3BstordCnt": null,
-     "bidStep3BstordCnt": null,
-     "askStep4BstordCnt": null,
-     "bidStep4BstordCnt": null,
-     "askStep5BstordCnt": null,
-     "bidStep5BstordCnt": null,
-     "askValidOrdCnt": null,
-     "bidValidOrdCnt": null,
-     "ordAcptTm": null,
-     "deemTrdPrc": null 
+     "isuSrtCd": "101N6000",
+     "askStep1BstordPrc": 308.75,
+     "askStep2BstordPrc": 308.8,
+     "askStep3BstordPrc": 308.85,
+     "askStep4BstordPrc": 308.9,
+     "askStep5BstordPrc": 308.95,
+     "askStep1BstordRqty": 37,
+     "askStep2BstordRqty": 2,
+     "askStep3BstordRqty": 4,
+     "askStep4BstordRqty": 12,
+     "askStep5BstordRqty": 4,
+     "bidStep1BstordPrc": 308.7,
+     "bidStep2BstordPrc": 308.65,
+     "bidStep3BstordPrc": 308.6,
+     "bidStep4BstordPrc": 308.55,
+     "bidStep5BstordPrc": 308.5,
+     "bidStep1BstordRqty": 232,
+     "bidStep2BstordRqty": 156,
+     "bidStep3BstordRqty": 129,
+     "bidStep4BstordRqty": 34,
+     "bidStep5BstordRqty": 236,
+     "askTotOrdRqty": 7759,
+     "bidTotOrdRqty": 4937,
+     "askStep1BstordCnt": 4,
+     "bidStep1BstordCnt": 28,
+     "askStep2BstordCnt": 2,
+     "bidStep2BstordCnt": 10,
+     "askStep3BstordCnt": 3,
+     "bidStep3BstordCnt": 11,
+     "askStep4BstordCnt": 3,
+     "bidStep4BstordCnt": 10,
+     "askStep5BstordCnt": 4,
+     "bidStep5BstordCnt": 20,
+     "askValidOrdCnt": 1232,
+     "bidValidOrdCnt": 612,
+     "ordAcptTm": 15450000,
+     "deemTrdPrc": 308.7 
   } 
 }
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -565,7 +564,41 @@ Authentication     \|   **API Key**
 {% endapi-method-response-example-description %}
 
 ```yaml
-ddddd
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "101N6000",
+     "hisLists": [ 
+      {
+         "inddTm": "9300000",
+         "inddOpnprc": 318.85,
+         "inddHgprc": 318.95,
+         "inddLwprc": 318.5,
+         "inddClsprc": 318.65,
+         "inddTrdvol": 32300 
+      },
+       
+      {
+         "inddTm": "9200000",
+         "inddOpnprc": 319.4,
+         "inddHgprc": 319.6,
+         "inddLwprc": 318.6,
+         "inddClsprc": 318.85,
+         "inddTrdvol": 26591 
+      },
+       
+      {
+         "inddTm": "9100000",
+         "inddOpnprc": 319.2,
+         "inddHgprc": 319.65,
+         "inddLwprc": 318.65,
+         "inddClsprc": 319.4,
+         "inddTrdvol": 18505 
+      } 
+    ] 
+  } 
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

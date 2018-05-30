@@ -2,9 +2,7 @@
 
 요구형항목은 **조회형** 또는 **실시간형** 데이터를 제공합니다.
 
-{% hint style="danger" %}
-실시간 요구형항목도 제공중인지 물어보자 &gt;&lt;
-{% endhint %}
+
 
 ## 조회
 
@@ -121,6 +119,10 @@ GET /v2/market/stocks/kospi/005930/masterchanage?prevddClsprc&wk52HgstPrc
 
 호가, 체결 preset 으로 제공하는 데이타 항목을 요구형 실시간 데이타 항목으로 제공한다.  
 아래 항목 이외의 항목에 대해서 요구형 실시간을 요청하면 ERROR를 수신하며, 실시간 요청등록은 실패한다. 
+
+{% hint style="warning" %}
+실시간시세\(요구형항목\) 서비스는 추후 제공 예정입니다.
+{% endhint %}
 
 
 

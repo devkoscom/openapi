@@ -672,7 +672,40 @@ Authentication     \|   **API Key**
 {% endapi-method-response-example-description %}
 
 ```yaml
-ddddd
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "101N6000",
+     "hisLists": [ 
+      {
+         "BzDd": 20180330,
+         "trdPrc": 315.7,
+         "cmpprevddTpCd": "2",
+         "opnprc": 317.15,
+         "hgprc": 318,
+         "lwprc": 315.4,
+         "accTrdvol": 141527,
+         "accTrdval": 11212588950000,
+         "opnintQty": 231976,
+         "cmpprevddPrc": 0.1 
+      },
+       
+      {
+         "BzDd": 20180329,
+         "trdPrc": 315.6,
+         "cmpprevddTpCd": "2",
+         "opnprc": 312.95,
+         "hgprc": 315.6,
+         "lwprc": 311.55,
+         "accTrdvol": 224236,
+         "accTrdval": 17545050775000,
+         "opnintQty": 234267,
+         "cmpprevddPrc": 3.8 
+      } 
+    ] 
+  } 
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

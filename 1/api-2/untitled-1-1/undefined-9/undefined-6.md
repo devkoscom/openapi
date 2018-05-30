@@ -580,7 +580,7 @@ Authentication     \|   **API Key**
 
 
 
-## KOSPI/KOSDAQ 지수 투자자 마감정보 API {#api}
+## KOSPI/KOSDAQ 지수 투자자 마감정보 API
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/investors" %}
 {% api-method-summary %}
@@ -637,6 +637,73 @@ Authentication     \|   **API Key**
 | askTrdval | number\(22\) | 매도거래대금 |  |
 | bidTrdvol | number\(10\) | 매수체결수량,매수거래량 |  |
 | bidTrdval | number\(22\) | 매수거래대금 |  |
+
+
+
+
+
+## KOSPI/KOSDAQ 지수 API {#api}
+
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/index" %}
+{% api-method-summary %}
+/v2/market/stocks/{marketcode}/index
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
+시장구분 \(kospi \| kosdaq\)
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+   "error": "당일 종가 제공 시간이 아닙니다." 
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+**Response Parameters**
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
+| opnprc | number\(11\) | 시가 | 단위:원 |
+| hgprc | number\(11\) | 고가 | 단위:원 |
+| lwprc | number\(11\) | 저가 | 단위:원 |
+| trdPrc | number\(11\) | 체결가격 |  |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위:주 |
+| accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
+| isuCnt | number\(16\) | 종목수 |  |
+| listShrs | number\(16\) | 상장주식수,상장증권수 | 업종상장주식수 단위는  천주, 그외는 1주 |
+| mktcap | number\(22\) | 시가총액 | 단위: 업종-백만 |
 
 
 

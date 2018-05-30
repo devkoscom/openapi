@@ -36,8 +36,6 @@ O'FIN\(오핀\)은 금융투자회사, 유관기관, 핀테크 기업의 데이�
 
 
 
-
-
 ## 연동
 
 OPPFFintech가 제공하는 연동 기능을 사용하기 위해서는 Application App 은 OPPFAppDelegate 을 상속하여 구현해야 합니다. 또한, 서비스 연동은 Custom URL Scheme 을 이용하므로 응답을 수신하기 위해서 App에 Custom URL Scheme을 설정하고 OPPFFintech 객체에 등록해야 합니다.

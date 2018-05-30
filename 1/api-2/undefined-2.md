@@ -181,8 +181,8 @@ Basic Authentication 인증 사용
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | comId | string\(5\) | 핀테크 기업 코드 | ​ |
 | srvId | string\(20\) | 핀테크 서비스 코드 | ​ |
-| reqIdPlatform | string | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
-| reqIdConsumer | string\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
+| reqIdPlatform | string\(50\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
+| reqIdConsumer | string\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | qrAssetType | String\(8\) | 자산유형 | EQTY\(주식\), FUND\(펀드\), ETC\(기타\) |
 | qrSellBuyType | String\(8\) | 매도수구분 | 0\(전체\), 1\(매도\), 2\(매수\) |
 | qrAccNo | String\(20\) | 계좌번호 |  |

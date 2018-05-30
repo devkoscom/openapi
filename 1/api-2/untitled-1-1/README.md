@@ -6,7 +6,7 @@ description: 코스콤(정보사업부) 제공
 
 ## Open API 시세 정보
 
- 다양한 금융시장정보의 실시간 및  과거데이타를 이용하기 편한 **Restful API** 및 **WebSocket** 서비스로 제공
+ 다양한 금융시장정보의 실시간 및  과거데이터를 이용하기 편한 **Restful API** 및 **WebSocket** 서비스로 제공
 
 
 

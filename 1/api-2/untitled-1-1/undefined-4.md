@@ -398,7 +398,7 @@ ws://sandbox-apigw.koscom.co.kr/블라블라/{ws_marketcode}
 | askStep1BstordPrc | number\(11\) | 매도1단계우선호가가격 |  |
 | bidStep1BstordPrc | number\(11\) | 매수1단계우선호가가격 |  |
 | askStep1BstordRqty | number\(12\) | 매도1단계우선호가잔량 |  |
-| bidStep1BstordRqty | number\(12\) | 매1단계우선호가잔량 |  |
+| bidStep1BstordRqty | number\(12\) | 매수1단계우선호가잔량 |  |
 | askStep2BstordPrc | number\(11\) | 매도2단계우선호가가격 |  |
 | bidStep2BstordPrc | number\(11\) | 매수2단계우선호가가격 |  |
 | askStep2BstordRqty | number\(12\) | 매도2단계우선호가잔량 |  |

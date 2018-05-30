@@ -39,8 +39,8 @@
     * [Android](1/ofin-sdk/android-sdk.md)
   * [Error Code](1/error.md)
   * FAQ
-    * [오픈 API](1/faq/api-1.md)
-    * [오픈 API 사용절차](1/faq/api.md)
+    * [오픈플랫폼](1/faq/api-1.md)
+    * [API 사용절차](1/faq/api.md)
     * [계좌 서비스](1/faq/undefined.md)
     * [시세 서비스](1/faq/api-2.md)
   * [개정내역](1/undefined-3.md)

@@ -96,16 +96,16 @@ Error는 금융투자회사, 오픈플랫폼의 시스템 등 여러 위치에�
 | **`HTTP Response Status Code`** | **`Error Code`** | **`Error Message`** | **`Description`** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 500 | 3001 | `Bad response trcode` | 금투사로부터 잘못된 TRCODE가 옴 |
-| 400 | 3002 | `Unknown api url` | 요청한 금투사 api 연결정보를 찾을 수 없는 경우 |
+| 400 | 3002 | `Unknown api url` | 요청한 금투사 API 연결정보를 찾을 수 없는 경우 |
 | 400 | 3003 | `필수 항목 누락` | 필수 항목이 누락된 경우 |
 | 500 | 3004 | `network error` | 일시적 network 장애가 발생한 경우 |
 | 500 | 3005 | `network timeout` | 금투사 서버로부터 메시지 응답이 지연된 경우 |
 | 500 | 3006 | `not found dn` | 요청한 ci로 사용자 dn값을 찾을 수 없을 경우 |
-| 500 | 3007 | `not found user` | 요청한 CI로 사용자를 찾을 수 없을 경우 |
+| 500 | 3007 | `not found user` | 요청한 ci로 사용자를 찾을 수 없을 경우 |
 | 500 | 3008 | `not found company info` | 요청한 금투사의 정보를 찾을 수 없을 경우 |
 | 500 | 3009 | `not found account info` | 실계좌번호를 찾을 수 없을 경우 |
 | 500 | 3010 | `expired account` | 요청계좌가 폐기된 계좌일 경우 |
-| 500 | 3011 | `Json parsing error` | Json 메시지 규격에 오류가 있을 경우 |
+| 500 | 3011 | `Json parsing error` | JSON 메시지 규격에 오류가 있을 경우 |
 | 500 | 3012 | `Unknown account number` | 요청계좌가 증권사에 존재하지 않을 경우 |
 | 500 | 3013 | `Unknown account type` | 등록되지 않은 계좌 유형의 경우 |
 | 500 | 3999 | `Unknown error` | 프로그램 내부 에러\(ex : DB에러\) 가 발생했을 경우 |

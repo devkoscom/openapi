@@ -29,7 +29,7 @@
 
 테스트할 API를 선택 하시고 'Try it Out' 버튼을 누르시면 아래와 같이 Response 결과를 받아 보실 수 있습니다.
 
-![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%28108%29.png)
+![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%28109%29.png)
 
 'Query' 탭을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
@@ -49,7 +49,7 @@
 
 'API Key Type'은 해당 API의 Method가 **GET방식**이면 **Query**로 선택 하시고,  **POST방식**이면 **Header**로 선택 하세요.
 
-![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - Basic](../../../.gitbook/assets/image%20%28109%29.png)
+![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - Basic](../../../.gitbook/assets/image%20%28110%29.png)
 
 > * Username
 >
@@ -57,10 +57,11 @@
 >
 > * Password
 >
->        앱의 Secret 값을 입력 합니다.  
->   \*  API Key 및 Secret 조회 방법은 '[앱 API Key & Secret 조회](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2/untitled#api-key-and-secret)' 를 참조하세요.
+>        앱의 Secret 값을 입력 합니다.
 
+테스트할 API를 선택 하시고 'Try it Out' 버튼을 누르시면 아래와 같이 Response 결과를 받아 보실 수 있습니다.
 
+![Response &#xACB0;&#xACFC;](../../../.gitbook/assets/image%20%28105%29.png)
 
 
 
@@ -117,13 +118,13 @@ Implicit Grant Type 등은 보안수준 및 비즈니스모델에 따라 협의�
 
 ‘Query’ 탭을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
-![Query &#xD0ED;](../../../.gitbook/assets/image%20%28115%29.png)
+![Query &#xD0ED;](../../../.gitbook/assets/image%20%28116%29.png)
 
 
 
-## 앱 API Key &Secret 조회
+## API Key &Secret 조회 방법
 
-> 등록한 애플리케이션\(이하 앱\)의 API Key 및 Secret 을 조회하는 방법
+> 등록한 애플리케이션\(앱\) 의 API Key 및 Secret 조회하는 방법
 
 '대시보드 &gt; 어플리케이션' 으로 이동 후, 등록한 애플리케이션의 '설정' 버튼을 클릭합니다.  그 뒤 '편집' 탭을 선택합니다.
 

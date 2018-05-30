@@ -155,13 +155,13 @@ description: 모바일 앱 오핀(OFin) 이용절차
 
 통합계좌조회 메뉴 터치 시, 신청 여부를 체크하여 신청 전일 경우 메시지를 출력합니다. 확인 버튼 터치 시 신청 화면으로 이동합니다. 
 
-![](../../../.gitbook/assets/image%20%28113%29.png)
+![](../../../.gitbook/assets/image%20%28114%29.png)
 
 **\[통합계좌조회\] 앱 사용 신청**
 
 앱 신청과 관련된 부분은 [앱 사용 신청 ](https://koscom.gitbook.io/open-api/1/undefined-4/undefined/ofin#undefined-3)부분을 참고하시기 바랍니다. 
 
-![](../../../.gitbook/assets/image%20%28107%29.png)
+![](../../../.gitbook/assets/image%20%28108%29.png)
 
 **\[통합계좌조회\] 정보제공 권한 허용**
 

@@ -1119,7 +1119,21 @@ Authentication     \|   **API Key**
 {% endapi-method-response-example-description %}
 
 ```yaml
-
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",
+     "hisLists": [ 
+      {
+         "FornHdVol": 68095088,
+         "cmpprevddFornHdVol": 5862,
+         "FornHdVolRt": 52.75,
+         "BzDd": 20180102 
+      } 
+    ] 
+  } 
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

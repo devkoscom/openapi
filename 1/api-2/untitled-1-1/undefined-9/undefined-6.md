@@ -954,6 +954,8 @@ Authentication     \|   **API Key**
 
 
 
+
+
 ## 주식 종목 일중 API
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/intraday" %}
@@ -1025,6 +1027,71 @@ Authentication     \|   **API Key**
 | inddTrdvol | number\(11\) | 일중거래량 | 일중데이타\(10초, 1분, 10분\) |
 
 
+
+
+
+## 주식 외국인보유율 히스토리 API
+
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/foreignhistory" %}
+{% api-method-summary %}
+/v2/market/stocks/{marketcode}/{issuecode}/foreignhistory
+{% endapi-method-summary %}
+
+{% api-method-description %}
+최대 100건 까지만 조회 가능
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
+시장구분
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="issuecode" required=true %}
+종목코드
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter type="string" name="inqStrtDd" required=true %}
+조회시작일자 \(YYYYMMDD\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="inqEndDd" required=true %}
+조회종료일자
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="number" name="reqCnt" %}
+요청건수 \(최대100건\)
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(9\) | 종목단축코드 |  |
+| hisLists | Array\(4\) | 과거리스트 |  |
+| trdDd | string\(8\) | 체결일자,거래일자,매매일자 |  |
+| FornHdVol | number\(11\) | 외국인보유주식수 |  |
+| cmpprevddFornHdVol | number\(11\) | 외국인보유주식수전일대비 |  |
+| FornHdVolRt | number\(5\) | 외국인보유율 |  |
 
 
 

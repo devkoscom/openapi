@@ -17,7 +17,7 @@ description: 코스콤(정보사업부) 제공
 | WS | 종목별 실시간상세 \(유가+코스닥\) | /ws |
 | WS | 유가증권 전종목실시간 | /ws\_ksp |
 | WS | 코스닥 전종목실시간 | /ws\_kdq |
-| 시세 | 주식시장별 현재가리스트 | /v2/market/multiquote/stocks/{marketcode}/lists |
+| 시세표 | 주식시장별 현재가리스트 | /v2/market/multiquote/stocks/{marketcode}/lists |
 | 시세표 | 주식시장별 시고저 현재가리스트 | /v2/market/multiquote/stocks/{marketcode}/ohlclists |
 | 시세표 | 주식 복수종목 현재가 | /v2/market/multiquote/stocks/{marketcode}/price |
 | 시세표 | 주식 복수종목 호가잔량 | /v2/market/multiquote/stocks/{marketcode}/orderbook |

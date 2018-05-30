@@ -406,7 +406,7 @@ Authentication     \|   **API Key**
 
 ## 주식종목 호가잔량 API {#api}
 
-LP호가 제외
+**LP호가 제외**
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/orderbook" %}
 {% api-method-summary %}
@@ -514,7 +514,7 @@ LP호가 제외
 
 
 
-## 주식종목별 투자자별 종가API {#api}
+## 주식종목별 투자자별 종가 API {#api}
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/investors" %}
 {% api-method-summary %}
@@ -534,6 +534,68 @@ LP호가 제외
 
 {% api-method-parameter type="string" required=true name="issuecode" %}
 종목코드 ex\)005930
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+   "error": "당일 종가 제공 시간이 아닙니다." 
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+**Response Parameters**
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | string\(9\) | 종목단축코드 |  |
+| invstLists | Array\(4\) | 투자자리스트 |  |
+| invstCd | string\(4\) | 투자자코드 | '투자자코드표' 참조 |
+| askTrdvol | number\(10\) | 매도체결수량,매도거래량 |  |
+| askTrdval | number\(22\) | 매도거래대금 |  |
+| bidTrdvol | number\(10\) | 매수체결수량,매수거래량 |  |
+| bidTrdval | number\(22\) | 매수거래대금 |  |
+
+
+
+
+
+## KOSPI/KOSDAQ 지수 투자자 마감정보 API {#api}
+
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/investors" %}
+{% api-method-summary %}
+/v2/market/stocks/{marketcode}/investors
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
+시장구분 \(kospi \| kosdaq\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}

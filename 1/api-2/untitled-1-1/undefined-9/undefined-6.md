@@ -669,18 +669,23 @@ Authentication     \|   **API Key**
 {% endapi-method-response-example-description %}
 
 ```yaml
-
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
 {
-   "error": "당일 종가 제공 시간이 아닙니다." 
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "K1",
+     "isuCnt": 891,
+     "trdPrc": 2409.03,
+     "cmpprevddTpCd": "5",
+     "opnprc": 2446.81,
+     "hgprc": 2449.88,
+     "lwprc": 2399.58,
+     "accTrdvol": 575922,
+     "accTrdval": 8999465,
+     "mktcap": 1609052294,
+     "cmpprevddPrc": -48.22,
+     "listShrs": 53713300 
+  } 
 }
 ```
 {% endapi-method-response-example %}

@@ -1204,7 +1204,26 @@ Authentication     \|   **API Key**
 {% endapi-method-response-example-description %}
 
 ```yaml
-
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",
+     "hisLists": [ 
+      {
+         "BzDd": 20180102,
+         "trdPrc": 50825,
+         "cmpprevddTpCd": "2",
+         "opnprc": 51184,
+         "hgprc": 51204,
+         "lwprc": 50586,
+         "accTrdvol": 169485,
+         "accTrdval": 432677351468,
+         "cmpprevddPrc": 59 
+      } 
+    ] 
+  } 
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

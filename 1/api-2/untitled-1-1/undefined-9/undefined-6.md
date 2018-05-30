@@ -762,7 +762,7 @@ Authentication     \|   **API Key**
 **Response Parameters**
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | bidTrdMbr1 | string\(64\) | 매수상위회원명1 | 매수랭킹 TOP5 1위 회원사 한글명 |
 | bidTrdMbr2 | string\(64\) | 매수상위회원명2 | 매수랭킹 TOP5 2위 회원사 한글명 |
 | bidTrdMbr3 | string\(64\) | 매수상위회원명3 | 매수랭킹 TOP5 3위 회원사 한글명 |
@@ -793,5 +793,24 @@ Authentication     \|   **API Key**
 | askTrdAmtMbr3 | number\(11\) | 매도상위거래금액 회원3 |  |
 | askTrdAmtMbr4 | number\(11\) | 매도상위거래금액 회원4 |  |
 | askTrdAmtMbr5 | number\(11\) | 매도상위거래금액 회원5 |  |
-|  |  |  |  |
+| bidTrdPrcMbr1 | number\(11\) | 매수상위거래단가 회원1 | 매수랭킹 TOP5 1위 회원사 거래단가 |
+| bidTrdPrcMbr2 | number\(11\) | 매수상위거래단가 회원2 |  |
+| bidTrdPrcMbr3 | number\(11\) | 매수상위거래단가 회원3 |  |
+| bidTrdPrcMbr4 | number\(11\) | 매수상위거래단가 회원4 |  |
+| bidTrdPrcMbr5 | number\(11\) | 매수상위거래단가 회원5 |  |
+| askTrdPrcMbr1 | number\(11\) | 매도상위거래단가 회원1 | 매도랭킹 TOP5 1위 회원사 거래단가 |
+| askTrdPrcMbr2 | number\(11\) | 매도상위거래단가 회원2 |  |
+| askTrdPrcMbr3 | number\(11\) | 매도상위거래단가 회원3 |  |
+| askTrdPrcMbr4 | number\(11\) | 매도상위거래단가 회원4 |  |
+| askTrdPrcMbr5 | number\(11\) | 매도상위거래단가 회원5 |  |
+| bidTrdWtMbr1 | number\(5\) | 매수상위거래비중 회원1 | 매수랭킹 TOP5 1위 회원사 거래비중 \(백분율, X100\) |
+| bidTrdWtMbr2 | number\(5\) | 매수상위거래비중 회원2 |  |
+| bidTrdWtMbr3 | number\(5\) | 매수상위거래비중 회원3 |  |
+| bidTrdWtMbr4 | number\(5\) | 매수상위거래비중 회원4 |  |
+| bidTrdWtMbr5 | number\(5\) | 매수상위거래비중 회원5 |  |
+| askTrdWtMbr1 | number\(5\) | 매도상위거래비중 회원1 | 매도랭킹 TOP5 1위 회원사 거래비중 \(백분율, X100\) |
+| askTrdWtMbr2 | number\(5\) | 매도상위거래비중 회원2 |  |
+| askTrdWtMbr3 | number\(5\) | 매도상위거래비중 회원3 |  |
+| askTrdWtMbr4 | number\(5\) | 매도상위거래비중 회원4 |  |
+| askTrdWtMbr5 | number\(5\) | 매도상위거래비중 회원5 |  |
 

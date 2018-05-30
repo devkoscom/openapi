@@ -23,7 +23,7 @@
 
 ![&#xC778;&#xC99D;&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../../.gitbook/assets/image%20%2828%29.png)
 
- 'API Key Type'은 해당 API의 Method가 **GET방식**이면 **Query**로 선택 하시고, **POST방식**이면 **Header**로 선택 하세요.
+'API Key Type'은 해당 API의 Method가 **GET방식**이면 **Query**로 선택 하시고,  **POST방식**이면 **Header**로 선택 하세요.
 
 ![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - API Key](../../../.gitbook/assets/image%20%2858%29.png)
 

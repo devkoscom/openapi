@@ -245,8 +245,8 @@ Bearer 발급받은 access token
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | comId | String\(5\) | 핀테크기업코드 |  |
 | srvId | String\(20\) | 핀테크서비스코드 |  |
-| reqIdPlatform | String | . | 사용안함 |
-| reqIdConsumer | String\(20\) | 핀테크기업에서 사용하는 메시지 | 선택 |
+| reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
+| reqIdConsumer | String\(20\) | 핀테크기업에서 사용하는 메시지 |  |
 | ci | String\(88\) | 연계정보 |  |
 | ipAddr | String\(32\) | 사용자 단말 IP주소  | dot없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 dash없이 10자리로 채워서 설정 |
 | macAddr | String\(50\) | 사용자 MAC 주소 | PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정 |
@@ -271,9 +271,9 @@ Bearer 발급받은 access token
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
 | reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
-| certDn | String\(256\) | . | 사용안함 |
+| certDn | String\(256\) | "" | 사용안함 |
 | ci | String\(88\) | 연계정보 |  |
-| realAccNo | String\(40\) | . | 사용안함 |
+| realAccNo | String\(40\) | "" | 사용안함 |
 | vtAccNo | String\(30\) | 가상계좌번호 |  |
 | totalCnt | Number | 조회 조건의 총 메시지 건수 |  |
 | count | Number | 현 메시지 내 응답 건수 |  |

@@ -251,7 +251,21 @@ Authentication     \|   **API Key**
 {% endapi-method-response-example-description %}
 
 ```yaml
-ddddd
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "201N6220",
+     "trdPrc": 96.35,
+     "cmpprevddTpCd": "0",
+     "opnprc": 96.35,
+     "hgprc": 96.35,
+     "lwprc": 96.35,
+     "accTrdvol": 0,
+     "accTrdval": 0,
+     "cmpprevddPrc": 0 
+  } 
+}
 ```
 {% endapi-method-response-example %}
 
@@ -324,23 +338,21 @@ ddddd
    "result": 
   {
      "isuSrtCd": "201N6220*006",
-     "trdPrc": 97.15,
-     "opnprc": 0,
-     "hgprc": 0,
-     "lwprc": 0,
+     "trdPrc": 96.35,
+     "opnprc": 96.35,
+     "hgprc": 96.35,
+     "lwprc": 96.35,
      "accTrdvol": 0,
-     "trdTm": 0,
+     "trdTm": 31000000,
      "trdvol": 0,
      "lstTrdTpCd": 0,
      "accTrdval": 0,
      "isuCd": "KR4201N62201",
      "negoBlkAccTrdvol": 0,
-     "realtmUplmtprc": 122.45,
-     "realtmLwlmtprc": 71.8 
+     "realtmUplmtprc": 121.65,
+     "realtmLwlmtprc": 71.1 
   } 
 }
-
-
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

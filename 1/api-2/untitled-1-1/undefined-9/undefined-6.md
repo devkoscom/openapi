@@ -437,18 +437,60 @@ Authentication     \|   **API Key**
 {% endapi-method-response-example-description %}
 
 ```yaml
-
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
 {
-   "error": "당일 종가 제공 시간이 아닙니다." 
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",
+     "askStep1BstordPrc": 49550,
+     "askStep2BstordPrc": 49600,
+     "askStep3BstordPrc": 49650,
+     "askStep4BstordPrc": 49700,
+     "askStep5BstordPrc": 49750,
+     "askStep6BstordPrc": 49800,
+     "askStep7BstordPrc": 49850,
+     "askStep8BstordPrc": 49900,
+     "askStep9BstordPrc": 49950,
+     "askStep10BstordPrc": 50000,
+     "askStep1BstordRqty": 8540,
+     "askStep2BstordRqty": 50070,
+     "askStep3BstordRqty": 51234,
+     "askStep4BstordRqty": 50025,
+     "askStep5BstordRqty": 68761,
+     "askStep6BstordRqty": 69198,
+     "askStep7BstordRqty": 19611,
+     "askStep8BstordRqty": 58397,
+     "askStep9BstordRqty": 38738,
+     "askStep10BstordRqty": 33875,
+     "bidStep1BstordPrc": 49500,
+     "bidStep2BstordPrc": 49450,
+     "bidStep3BstordPrc": 49400,
+     "bidStep4BstordPrc": 49350,
+     "bidStep5BstordPrc": 49300,
+     "bidStep6BstordPrc": 49250,
+     "bidStep7BstordPrc": 49200,
+     "bidStep8BstordPrc": 49150,
+     "bidStep9BstordPrc": 49100,
+     "bidStep10BstordPrc": 49050,
+     "bidStep1BstordRqty": 416587,
+     "bidStep2BstordRqty": 103798,
+     "bidStep3BstordRqty": 111538,
+     "bidStep4BstordRqty": 35168,
+     "bidStep5BstordRqty": 69624,
+     "bidStep6BstordRqty": 32293,
+     "bidStep7BstordRqty": 100011,
+     "bidStep8BstordRqty": 53010,
+     "bidStep9BstordRqty": 124551,
+     "bidStep10BstordRqty": 61867,
+     "askordTotRqty": 448449,
+     "bidordTotRqty": 1108447,
+     "pstoffhrAskTotOrdRqty": 0,
+     "pstoffhrBidTotOrdRqty": 91373,
+     "accTrdvol": 20498098,
+     "deemTrdPrc": 49500,
+     "deemTrdvol": 0,
+     "deemAccTrdvol": 1650992 
+  } 
 }
 ```
 {% endapi-method-response-example %}

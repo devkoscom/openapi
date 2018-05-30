@@ -642,12 +642,12 @@ Basic Authentication 인증 사용
 | comId | string\(5\) | 핀테크 기업 코드 | ​ |
 | srvId | string\(20\) | 핀테크 서비스 코드 | ​ |
 | reqIdPlatform | string\(50\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
-| reqIdConsumer | string\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 | ​ |
+| reqIdConsumer | string\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 | ​ |
 | qrAssetType | String\(8\) | 자산유형 | EQTY\(주식\), FUND\(펀드\), ETC\(기타\) |
 | qrSellBuyType | String\(8\) | 매도수구분 | 0\(전체\), 1\(매도\), 2\(매수\) |
 | qrAccNo | String\(20\) | 계좌번호 | ​ |
-| qrOrderDate | String\(12\) | 주문일자 | 결제 전인 경우만 입력, 입력없음 당일\(YYYYMMDD\) |
-| qrIsinCode | String\(20\) | 종목코드 | 입력 시 해당 종목만 요청 |
+| qrOrderDate | String\(12\) | 주문일자 | 선택;  결제 전인 경우만 입력, 입력없음 당일\(YYYYMMDD\) |
+| qrIsinCode | String\(20\) | 종목코드 | 선택;  입력 시 해당 종목만 요청 |
 | count | number | 응답별 최대 응답 건수 | ​증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 |
 | page | **String\(100\)** | 다음page를 지시하는 키 | ​첫 요청은 null\(“null”\)로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청함 |
 
@@ -665,8 +665,8 @@ Basic Authentication 인증 사용
 | accNo | String\(20\) | 계좌번호 |  |
 | accName | String\(20\) | 계좌명 |  |
 | sellBuyType | String\(8\) | 매도수구분 | 1\(매도\), 2\(매수\) |
-| exchange | String\(8\) | KRX를 제외한 시장의 거래소명 | Text표기 |
-| crcyCode | String\(20\) | 외화의 경우 통화코드 표기 |  |
+| exchange | String\(20\) | KRX를 제외한 시장의 거래소명 | Text표기 |
+| crcyCode | String\(8\) | 외화의 경우 통화코드 표기 |  |
 | settQty | Number | 결제수량 |  |
 | settAmt | Number | 결제금액 |  |
 | tradeType | String\(20\) | 거래유형 | Text 표기 |
@@ -674,7 +674,7 @@ Basic Authentication 인증 사용
 | loanCreditAmt | Number | 신용/대출금액 |  |
 | settDate | String\(12\) | 결제일자 |  |
 | costTotal | Number | 비용합계 |  |
-| isinType | String\(20\) | 종목코드종류 | 표준코드, 펀드코드, 단축코드, 상품코드 등 |
+| isinType | String\(20\) | 코드종류 | 표준코드, 펀드코드, 단축코드, 상품코드 등 |
 | isinCode | String\(20\) | 종목코드, 펀드코드, 상품코드 |  |
 | isinName | String\(40\) | 종목명, 펀드명, 상품코드명 |  |
 | costName | String\(20\) | 비용명 | 수수료, 거래세, 농특세, 주민세 등 |

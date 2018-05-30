@@ -587,7 +587,38 @@ Authentication     \|   **API Key**
 {% endapi-method-response-example-description %}
 
 ```yaml
- 
+ {
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuCd": "KR7005930003",
+     "isuSrtCd": "005930",
+     "invstLists": [ 
+      {
+         "invstCd": "01",
+         "askTrdvol": 2624215,
+         "askTrdval": 131761498,
+         "bidTrdvol": 549821,
+         "bidTrdval": 27510307 
+      },
+      {
+         "invstCd": "02",
+         "askTrdvol": 344289,
+         "askTrdval": 17107455,
+         "bidTrdvol": 434960,
+         "bidTrdval": 21726525 
+      },
+       ...이하 생략...
+      {
+         "invstCd": "16",
+         "askTrdvol": 82305,
+         "askTrdval": 4139264,
+         "bidTrdvol": 133696,
+         "bidTrdval": 6688786 
+      } 
+    ] 
+  } 
+}
 ```
 {% endapi-method-response-example %}
 

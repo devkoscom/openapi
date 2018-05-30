@@ -402,3 +402,113 @@ Authentication     \|   **API Key**
 
 
 
+
+
+## 주식종목 호가잔량 API {#api}
+
+LP호가 제외
+
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/orderbook" %}
+{% api-method-summary %}
+/v2/market/stocks/{marketcode}/{issuecode}/orderbook
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
+시장구분 \(kospi \| kosdaq\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" required=true name="issuecode" %}
+종목코드 ex\)005930
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+   "error": "당일 종가 제공 시간이 아닙니다." 
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 -&gt; 000660 |
+| accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위: 주 |
+| askStep1BstordPrc | number\(11\) | 매도1단계우선호가가격 |  |
+| bidStep1BstordPrc | number\(11\) | 매수1단계우선호가가격 |  |
+| askStep1BstordRqty | number\(12\) | 매도1단계우선호가잔량 |  |
+| bidStep1BstordRqty | number\(12\) | 매수1단계우선호가잔량 |  |
+| askStep2BstordPrc | number\(11\) | 매도2단계우선호가가격 |  |
+| bidStep2BstordPrc | number\(11\) | 매수2단계우선호가가격 |  |
+| askStep2BstordRqty | number\(12\) | 매도2단계우선호가잔량 |  |
+| bidStep2BstordRqty | number\(12\) | 매수2단계우선호가잔량 |  |
+| askStep3BstordPrc | number\(11\) | 매도3단계우선호가가격 |  |
+| bidStep3BstordPrc | number\(11\) | 매수3단계우선호가가격 |  |
+| askStep3BstordRqty | number\(12\) | 매도3단계우선호가잔량 |  |
+| bidStep3BstordRqty | number\(12\) | 매수3단계우선호가잔량 |  |
+| askStep4BstordPrc | number\(11\) | 매도4단계우선호가가격 |  |
+| bidStep4BstordPrc | number\(11\) | 매수4단계우선호가가격 |  |
+| askStep4BstordRqty | number\(12\) | 매도4단계우선호가잔량 |  |
+| bidStep4BstordRqty | number\(12\) | 매수4단계우선호가잔량 |  |
+| askStep5BstordPrc | number\(11\) | 매도5단계우선호가가격 |  |
+| bidStep5BstordPrc | number\(11\) | 매수5단계우선호가가격 |  |
+| askStep5BstordRqty | number\(12\) | 매도5단계우선호가잔량 |  |
+| bidStep5BstordRqty | number\(12\) | 매수5단계우선호가잔량 |  |
+| askStep6BstordPrc | number\(11\) | 매도6단계우선호가가격 |  |
+| bidStep6BstordPrc | number\(11\) | 매수6단계우선호가가격 |  |
+| askStep6BstordRqty | number\(12\) | 매도6단계우선호가잔량 |  |
+| bidStep6BstordRqty | number\(12\) | 매수6단계우선호가잔량 |  |
+| askStep7BstordPrc | number\(11\) | 매도7단계우선호가가격 |  |
+| bidStep7BstordPrc | number\(11\) | 매수7단계우선호가가격 |  |
+| askStep7BstordRqty | number\(12\) | 매도7단계우선호가잔량 |  |
+| bidStep7BstordRqty | number\(12\) | 매수7단계우선호가잔량 |  |
+| askStep8BstordPrc | number\(11\) | 매도8단계우선호가가격 |  |
+| bidStep8BstordPrc | number\(11\) | 매수8단계우선호가가격 |  |
+| askStep8BstordRqty | number\(12\) | 매도8단계우선호가잔량 |  |
+| bidStep8BstordRqty | number\(12\) | 매수8단계우선호가잔량 |  |
+| askStep9BstordPrc | number\(11\) | 매도9단계우선호가가격 |  |
+| bidStep9BstordPrc | number\(11\) | 매수9단계우선호가가격 |  |
+| askStep9BstordRqty | number\(12\) | 매도9단계우선호가잔량 |  |
+| bidStep9BstordRqty | number\(12\) | 매수9단계우선호가잔량 |  |
+| askStep10BstordPrc | number\(11\) | 매도10단계우선호가가격 |  |
+| bidStep10BstordPrc | number\(11\) | 매수10단계우선호가가격 |  |
+| askStep10BstordRqty | number\(12\) | 매도10단계우선호가잔량 |  |
+| bidStep10BstordRqty | number\(12\) | 매수10단계우선호가잔량 |  |
+| askordTotRqty | number\(12\) | 매도호가총잔량 |  |
+| bidordTotRqty | number\(12\) | 매수호가총잔량 |  |
+| pstoffhrAskTotOrdRqty | number\(15\) | 장종료후시간외매도총호가잔량 |  |
+| pstoffhrBidTotOrdRqty | number\(15\) | 장종료후시간외매수총호가잔량 |  |
+| deemTrdPrc | number\(11\) | 예상체결가격 |  |
+| deemTrdvol | number\(12\) | 예상체결수량 |  |
+| deemAccTrdvol | number\(12\) | 예상누적체결수량 |  |
+
+
+

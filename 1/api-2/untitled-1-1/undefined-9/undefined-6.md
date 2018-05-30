@@ -904,8 +904,12 @@ Authentication     \|   **API Key**
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
+{% api-method-parameter type="string" name="inqStrtDd" required=false %}
+조회시작일자
+{% endapi-method-parameter %}
 
+{% api-method-parameter type="string" name="inqEndDd" required=true %}
+조회종료일자
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -936,5 +940,19 @@ Authentication     \|   **API Key**
 {% endapi-method-spec %}
 {% endapi-method %}
 
-**Response Parameterd**
+**Response Parameter**
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| hisLists | Array\(4\) | 과거리스트 |  |
+| trdDd | string\(8\) | 체결일자,거래일자,매매일자 | YYYYMMDD |
+| srtsellTrdvol | number\(11\) | 공매도거래량 | 공매도거래량\(주식수, 전일기준\) |
+| srtsellTrdAmt | number\(11\) | 공매도거래금액 | 공매도거래금액\(주식수, 전일기준\) |
+| lendBalQty | number\(11\) | 대차잔고수량 | 대차잔고수량\(주식수, 전일기준\) |
+| lendBalAmt | number\(11\) | 대차잔고금액 | 단위 1,000 원 |
+
+
+
+
 

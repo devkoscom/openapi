@@ -10,7 +10,9 @@ description: 금융투자회사(증권사) 제공
 일임매매 연계 API 는 [개발자센터-일임매매 연계 API](https://developers.koscom.co.kr/documentation/b2baccount) 에서 테스트할 수 있습니다.
 {% endhint %}
 
-
+{% hint style="danger" %}
+제공 대상 **:** 일임 투자자문이나 자산운용 회사 등의 금융기관 \(협의 필요\)
+{% endhint %}
 
 
 

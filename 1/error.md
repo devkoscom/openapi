@@ -10,11 +10,11 @@ Error는 금융투자회사, 오픈플랫폼의 시스템 등 여러 위치에�
 
 ## Error Message Format
 
-| **HTTP Response   Status Code** | 4xx ~ 5xx |
+| **HTTP Response  Status Code** | 4xx ~ 5xx |
 | --- | --- |
-| **HTTP Response   Content-Type** | Application/json;   charset=utf-8 |
+| **HTTP Response  Content-Type** | Application/json;   charset=utf-8 |
 
-**HTTP Response   Body**  
+**HTTP Response  Body**
 
 ```yaml
 {

@@ -1031,7 +1031,7 @@ Bearer 발급받은 access token
 | reqIdConsumer | String\(20\) | 핀테크기업에서 사용하는 메시지 구분 |  |
 | ci | String\(88\) | 연계정보 |  |
 | ipAddr | String\(32\) | 사용자 단말 IP주소  | dot없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 dash없이 10자리로 채워서 설정 |
-| macAddr | String\(50\) | 사용자 MAC 주소 | PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정 |
+| macAddr | ~~**String\(50\)**~~ | 사용자 MAC 주소 | PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정 |
 | vtAccNo | String\(30\) | 가상계좌번호 |  |
 | queryType | Object | . | 지원증권사 : 삼성증권 |
 | assetType | String\(8\) | . | EQY\(유가증권/코스닥\) |
@@ -1053,8 +1053,8 @@ Bearer 발급받은 access token
 | ci | String\(88\) | 연계정보 |  |
 | realAccNo | String\(40\) | . | 사용안함 |
 | vtAccNo | String\(30\) | 가상계좌번호 |  |
-| queryResult: totalCnt | Number | 조회 조건의 총 메시지 건수 |  |
-| queryResult: count | Number | 현 메시지 내 응답 건수 |  |
+| queryResult: totalCnt | Number | 총 메시지 건수 |  |
+| queryResult: count | Number | 메시지 내 응답 건수 |  |
 | queryResult: page | String\(24\) | 다음 page 번호 | “null”이면 더 이상 없음 |
 | group: groupName | String\(20\) | 관심종목 그룹 이름 |  |
 | group: modifyDate | String\(12\) | 최종 수정일 | 선택 |

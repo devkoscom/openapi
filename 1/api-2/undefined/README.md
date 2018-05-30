@@ -2,9 +2,11 @@
 
 ## **오픈플랫폼 API Gateway 주소** 
 
-**Production**\(상용\)         \|    `https://apigw.koscom.co.kr`
+> `{APIGWAddr}`
 
-**Sandbox**\(샌드박스\)     \|    `https://sandbox-apigw.koscom.co.kr`
+**Production**\(상용\)         \|    `apigw.koscom.co.kr`
+
+**Sandbox**\(샌드박스\)     \|    `sandbox-apigw.koscom.co.kr`
 
 
 

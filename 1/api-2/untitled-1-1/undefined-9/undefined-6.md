@@ -954,5 +954,77 @@ Authentication     \|   **API Key**
 
 
 
+## 주식 종목 일중 API
+
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/intraday" %}
+{% api-method-summary %}
+/v2/market/stocks/{marketcode}/{issuecode}/intraday
+{% endapi-method-summary %}
+
+{% api-method-description %}
+최대 100건 까지만 조회 가능
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
+시장구분
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="issuecode" required=true %}
+종목코드
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter type="string" name="inddCycleTpCd" required=true %}
+일중전송주기구분코드 구분코드 \(10:10초, 60:1분, 600:10분\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="inqStrtDd" required=false %}
+조회시작일자 \(YYYYMMDD\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="strtTm" required=true %}
+개시시각,시작시각 \(HHMM\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" name="endTm" required=true %}
+종료시각 \(HHMM\)
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| isuSrtCd | String\(9\) | 종목단축코드 |  |
+| isuNm | String\(80\) | 종목명 |  |
+| hisLists | Array\(4\) | 과거리스트 |  |
+| inddTm | string\(8\) | 일중시간 | HH:MM:SS |
+| inddOpnprc | number\(11\) | 일중시가 | 일중데이타\(10초, 1분, 10분\) |
+| inddHgprc | number\(11\) | 일중고가 | 일중데이타\(10초, 1분, 10분\) |
+| inddLwprc | number\(11\) | 일중저가 | 일중데이타\(10초, 1분, 10분\) |
+| inddClsprc | number\(11\) | 일중종가 | 일중데이타\(10초, 1분, 10분\) |
+| inddTrdvol | number\(11\) | 일중거래량 | 일중데이타\(10초, 1분, 10분\) |
+
+
+
 
 

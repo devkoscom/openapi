@@ -4,14 +4,14 @@ description: 금융투자회사(증권사) 제공
 
 # 일임매매 서비스
 
-일임주문 연계조회 API는 증권사별로 호출 URI가 다르나 큰 틀은 동일하며 단지 증권사구분이 URI에 포함되어 있는 구조입니다. API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 있습니다. 
+일임주문 연계조회 API는 증권사별로 호출 URI가 다르나 큰 틀은 동일하며 단지 증권사구분이 URI에 포함되어 있는 구조입니다.
 
 {% hint style="success" %}
 일임매매 연계 API 는 [개발자센터-일임매매 연계 API](https://developers.koscom.co.kr/documentation/b2baccount) 에서 테스트할 수 있습니다.
 {% endhint %}
 
 {% hint style="danger" %}
-제공 대상 **:** 일임 투자자문이나 자산운용 회사 등의 금융기관 \(협의 필요\)
+제공대상 :  일임 투자자문이나 자산운용 회사 등의 금융기관 \(협의 필요\)
 {% endhint %}
 
 

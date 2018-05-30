@@ -709,3 +709,89 @@ Authentication     \|   **API Key**
 
 
 
+## 주식 거래 상위 회원사 API {#api}
+
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/traderanking" %}
+{% api-method-summary %}
+/v2/market/stocks/{marketcode}/{issuecode}/traderanking
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter type="string" name="marketcode" required=true %}
+시장구분 \(kospi \| kosdaq\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="string" required=true name="issuecode" %}
+종목코드 ex\)005930
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+   "error": "당일 종가 제공 시간이 아닙니다." 
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+**Response Parameters**
+
+| **Name** | **Type** | **Description** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| bidTrdMbr1 | string\(64\) | 매수상위회원명1 | 매수랭킹 TOP5 1위 회원사 한글명 |
+| bidTrdMbr2 | string\(64\) | 매수상위회원명2 | 매수랭킹 TOP5 2위 회원사 한글명 |
+| bidTrdMbr3 | string\(64\) | 매수상위회원명3 | 매수랭킹 TOP5 3위 회원사 한글명 |
+| bidTrdMbr4 | string\(64\) | 매수상위회원명4 | 매수랭킹 TOP5 4위 회원사 한글명 |
+| bidTrdMbr5 | string\(64\) | 매수상위회원명5 | 매수랭킹 TOP5 5위 회원사 한글명 |
+| askTrdMbr1 | string\(64\) | 매도상위회원명1 | 매도랭킹 TOP5 1위 회원사 한글명 |
+| askTrdMbr2 | string\(64\) | 매도상위회원명2 | 매도랭킹 TOP5 2위 회원사 한글명 |
+| askTrdMbr3 | string\(64\) | 매도상위회원명3 | 매도랭킹 TOP5 3위 회원사 한글명 |
+| askTrdMbr4 | string\(64\) | 매도상위회원명4 | 매도랭킹 TOP5 4위 회원사 한글명 |
+| askTrdMbr5 | string\(64\) | 매도상위회원명5 | 매도랭킹 TOP5 5위 회원사 한글명 |
+| bidTrdVolMbr1 | number\(11\) | 매수상위거래량 회원1 | 매수랭킹 TOP5 1위 회원사 거래량 |
+| bidTrdVolMbr2 | number\(11\) | 매수상위거래량 회원2 |  |
+| bidTrdVolMbr3 | number\(11\) | 매수상위거래량 회원3 |  |
+| bidTrdVolMbr4 | number\(11\) | 매수상위거래량 회원4 |  |
+| bidTrdVolMbr5 | number\(11\) | 매수상위거래량 회원5 |  |
+| askTrdVolMbr1 | number\(11\) | 매도상위거래량 회원1 | 매도랭킹 TOP5 1위 회원사 거래량 |
+| askTrdVolMbr2 | number\(11\) | 매도상위거래량 회원2 |  |
+| askTrdVolMbr3 | number\(11\) | 매도상위거래량 회원3 |  |
+| askTrdVolMbr4 | number\(11\) | 매도상위거래량 회원4 |  |
+| askTrdVolMbr5 | number\(11\) | 매도상위거래량 회원5 |  |
+| bidTrdAmtMbr1 | number\(11\) | 매수상위거래금액 회원1 | 매수랭킹 TOP5 1위 회원사 거래금액 |
+| bidTrdAmtMbr2 | number\(11\) | 매수상위거래금액 회원2 |  |
+| bidTrdAmtMbr3 | number\(11\) | 매수상위거래금액 회원3 |  |
+| bidTrdAmtMbr4 | number\(11\) | 매수상위거래금액 회원4 |  |
+| bidTrdAmtMbr5 | number\(11\) | 매수상위거래금액 회원5 |  |
+| askTrdAmtMbr1 | number\(11\) | 매도상위거래금액 회원1 | 매도랭킹 TOP5 1위 회원사 거래금액 |
+| askTrdAmtMbr2 | number\(11\) | 매도상위거래금액 회원2 |  |
+| askTrdAmtMbr3 | number\(11\) | 매도상위거래금액 회원3 |  |
+| askTrdAmtMbr4 | number\(11\) | 매도상위거래금액 회원4 |  |
+| askTrdAmtMbr5 | number\(11\) | 매도상위거래금액 회원5 |  |
+|  |  |  |  |
+

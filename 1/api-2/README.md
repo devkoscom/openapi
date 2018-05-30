@@ -499,3 +499,10 @@ List 취소 주문은 지원 하지 않음
 모든 API 는[ 코스콤 개발자센터](https://developers.koscom.co.kr) 에서 이용할 수 있습니다.
 {% endhint %}
 
+{% hint style="warning" %}
+해당 온라인 공용매뉴얼에 기술되지 않은 **기타 API** 관련 매뉴얼은   
+'코스콤 개발자 센터 &gt; API 문서 &gt; [참조문서](https://developers.koscom.co.kr/documentation/reference)’ 에서 확인하세요.
+{% endhint %}
+
+
+

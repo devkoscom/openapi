@@ -336,8 +336,8 @@ Bearer 발급받은 access token
     "certDn":"",
     "ci":" S1V7HGXBV1EPGBJastZf4fQV+eOpOc1pfizByV6UIEEJHM/PF9QKu+PU2OThEog7QmVKSZNibNGg+/k0XB/9jQ=="
   },
-"accInfo":{ 
-"realAccNo":"",
+  "accInfo":{ 
+      "realAccNo":"",
       "vtAccNo":"160678007213500001"
   },
   "balanceResponseBody":{ 

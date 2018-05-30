@@ -884,12 +884,12 @@ Bearer 발급받은 access token
 | queryResult: totalCnt | Number | 조회 조건의 총 메시지 건수 |  |
 | queryResult: count | Number | 현 메시지 내 응답 건수 |  |
 | queryResult: page | String\(24\) | 다음 page 번호 | “null”이면 더 이상 없음 |
-| queryPrams: fromDate | String\(12\) | 조회시작날짜 | YYYYMMDD |
-| queryPrams: toDate | String\(12\) | 조회종료날짜 | YYYYMMDD |
-| queryPrams: isinCode | String\(12\) | 조회조건 | 종목코드 |
-| queryPrams: side | String\(8\) | 조회조건 | BID\(매도\), ASK\(매수\) |
-| queryPrams: count | Number | 응답 별 건수 | default는 50 |
-| queryPrams: page | String\(24\) | 다음 page 번 | 응답데이터의 특정 지점을 지정할 경우 \(요청 시 값\) |
+| queryParams: fromDate | String\(12\) | 조회시작날짜 | YYYYMMDD |
+| queryParams: toDate | String\(12\) | 조회종료날짜 | YYYYMMDD |
+| queryParams: isinCode | String\(12\) | 조회조건 | 종목코드 |
+| queryParams: side | String\(8\) | 조회조건 | BID\(매도\), ASK\(매수\) |
+| queryParams: count | Number | 응답 별 건수 | default는 50 |
+| queryParams: page | String\(24\) | 다음 page 번 | 응답데이터의 특정 지점을 지정할 경우 \(요청 시 값\) |
 | transaction: isinCode | String\(20\) | 종목코드 | 입출금은 CASH로 표기 |
 | transaction: transDate | String\(12\) | 거래일자 | YYYYMMDD |
 | transaction: transType | String\(8\) | 거래구분 | BID\(매도\), ASK\(매수\), DEP\(이체입금\), WID\(이체출금\) |

@@ -10,17 +10,27 @@ Error는 금융투자회사, 오픈플랫폼의 시스템 등 여러 위치에�
 
 ## Error Message Format
 
-| **HTTP Response Status Code** | 4xx ~ 5xx |
-| --- | --- | --- |
-| **HTTP Response Content-Type** | Application/json;  charset=utf-8 |
-| **HTTP Response Body** | {"`category`": "op-exco",  "`code`": 9011,  "`message`": "invalid virtual account number.",   "`description`": "blah blah"} |
+| **HTTP Response   Status Code** | 4xx ~ 5xx |
+| --- | --- |
+| **HTTP Response   Content-Type** | Application/json;   charset=utf-8 |
+
+**HTTP Response   Body**  
+
+```yaml
+{
+    "category": "op-exco",  
+    "code": 9011,  
+    "message": "invalid virtual account number.",   
+    "description": "blah blah"
+}
+```
 
 > `category`           \|   오류 발생 지점  
 > `code`                   \|   상세 오류 코드  
 > `message`             **\|**   상세 오류 메세지  
 > `description`     **\|**   추가 정보
 
-### 
+
 
 ## Error Category
 

@@ -17,7 +17,7 @@ Authentication     \|   **API Key**
 
 
 {% hint style="success" %}
-`marketcode` 및 `issuecode` 는 [코드표 &gt; "시장코드표"](https://koscom.gitbook.io/open-api/untitled-1/undefined-8#undefined)를 참조하세요.
+`marketcode` 및 `issuecode` 는 [코드표 &gt; "시장코드표"](https://koscom.gitbook.io/open-api/api-2/untitled-1-1/undefined-8#undefined)를 참조하세요.
 {% endhint %}
 
 {% hint style="info" %}

@@ -45,7 +45,7 @@ Parameters          \|   **`response_type`**=code & **`client_id`**=클라이언
                                   & **`state`**=돌려받을 opaque value
 
 > `redirect_uri`       :  핀테크 기업의 웹 서버에 구현된 OAuth callback listener 주소이며, 이 값은 최초 서비스 등록 시 입력했던 값과 동일해야 함  
-> `scope`                     :  API가 접근하고자 하는 자원 범위   \(\* [Scope](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1/oauth/scope) 참조\)  
+> `scope`                     :  API가 접근하고자 하는 자원 범위   \(\* [Scope](https://koscom.gitbook.io/open-api/api-1/oauth/scope) 참조\)  
 > `state`                     :  본래 cross-site request forgery\(CSRF\) 공격에 대응하기 위해 사용하나, 대체로 사용자 세션정보를 넣어 authorization code 요청의 응답이 서버로 redirect되었을 때 어느 사용자의 authorization code인지를 구분하기 위해 사용하는 것이 보통임. 요청에 전송했던 값이 응답에 그대로 반환됨
 
 **Example**
@@ -73,7 +73,7 @@ Flow 2를 요청하면 그 응답으로 Authorization Code를 받아오는 것�
 > **Flow 5,   Flow 6**
 
 Flow 3, 4 절차가 정상적으로 수행되면 오픈플랫폼은 authorization code를 응답으로 내려주되, 핀테크 서비스 등록과 Authorization Code 요청 시 지정된 redirect\_uri로 응답을 전달할 수 있도록 http 헤더의 status code를 302로 설정하여 응답을 전송하며, redirect된 응답은 핀테크 서비스 서버 사이드에 구현된 OAuth Callback Listener \(Servlet 등\)로 전달되며, Callback Listener로 유입된 응답 parameter에서 state와 code를 추출하고 누구의 authorization code인지를 확인\(state에 설정한 식별정보 이용\)하여 다음 절차인 access token을 요청합니다.   
-에러 처리는 [Error Code](https://koscom.gitbook.io/open-api/~/edit/primary/1/error)를 참고하시기 바랍니다.
+에러 처리는 [Error Code](https://koscom.gitbook.io/open-api/error)를 참고하시기 바랍니다.
 
 
 
@@ -103,7 +103,7 @@ Parameters          \|   **`grant_type`**=authorization\_code & **`code`**=할�
 
 \*   _**Base64\(client\_id:client\_secret\)**_ ****  
      **:**   client\_id와 client\_secret을 “:”으로 연결하여 base64 로 encoding 한 값을  위 형식으로 설정  
-         더욱 자세한 설명은  [Base64 로 encoding 하는 방법](https://koscom.gitbook.io/open-api/1/api-1/basic-authentication#base64-encoding) 을 참조하세요.
+         더욱 자세한 설명은  [Base64 로 encoding 하는 방법](https://koscom.gitbook.io/open-api/api-1/basic-authentication#base64-encoding) 을 참조하세요.
 
 
 
@@ -118,7 +118,7 @@ Access Token의 응답은 JSON 형태로 제공되며 다음의 항목이 포함
 | **access token** | API 호출시 사용할 Access token |
 | --- | --- | --- | --- | --- |
 | **refresh token** | Access token을 갱신하기 위해 사용되는 token |
-| **scope** | Authorization code 요청시 지정된 scope \( \* [Scope ](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1/oauth/authorization-code-grant-flow)참조\)  |
+| **scope** | Authorization code 요청시 지정된 scope \( \* [Scope ](https://koscom.gitbook.io/open-api/api-1/oauth/scope)참조\)  |
 | **token\_type** | Bearer |
 | **expires\_in** | 유효시간 \(초\) |
 
@@ -243,7 +243,7 @@ Parameters          \|   **`token`**=발급받았던\_token & **`token_type_hint
 
 
 {% hint style="info" %}
-코스콤 개발자센터\(Sandbox\)   OAuth2 이용방법은   [이곳](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2/untitled#oauth) 을 참조하세요.
+코스콤 개발자센터\(Sandbox\)   OAuth2 이용방법은   [이곳](https://koscom.gitbook.io/open-api/undefined-4/undefined-2/untitled#oauth) 을 참조하세요.
 {% endhint %}
 
 

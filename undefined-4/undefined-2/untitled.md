@@ -7,7 +7,7 @@
 ![APIs &#xBA54;&#xB274;](../../.gitbook/assets/image%20%286%29.png)
 
 {% hint style="info" %}
-인증에 대한 상세한 설명을 원하실 경우 [이곳](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1)을 참조하세요.
+인증에 대한 상세한 설명을 원하실 경우 [이곳](https://koscom.gitbook.io/open-api/api-1)을 참조하세요.
 {% endhint %}
 
 

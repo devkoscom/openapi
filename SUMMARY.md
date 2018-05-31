@@ -3,7 +3,7 @@
 * 자본시장 오픈플랫폼
 * OPEN API 공용 매뉴얼
   * [오픈플랫폼 개요](1/undefined.md)
-  * 이용방법
+  * [이용방법](1/undefined-4/README.md)
     * [오픈플랫폼 이용방법](1/undefined-4/undefined-1.md)
     * [사용자 이용방법](1/undefined-4/undefined/README.md)
       * [핀테크포털 이용](1/undefined-4/undefined/undefined.md)

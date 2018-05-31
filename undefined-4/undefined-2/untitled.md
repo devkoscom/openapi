@@ -47,7 +47,7 @@
 
 ![Basic &#xC778;&#xC99D;&#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../.gitbook/assets/image%20%2831%29.png)
 
-'API Key Type'은 해당 API의 Method가 **GET방식**이면 **Query**로 선택 하시고,  **POST방식**이면 **Header**로 선택 하세요.
+Username과 Password 항목에 등록한 어플리케이션의 API Key값과 Secret 값을 입력합니다. 
 
 ![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - Basic](../../.gitbook/assets/image%20%28111%29.png)
 

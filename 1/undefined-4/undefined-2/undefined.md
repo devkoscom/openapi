@@ -46,8 +46,9 @@ description: 핀테크 서비스 애플리케이션 등록
 ![&#xC778;&#xC99D; &#xD0ED;](../../../.gitbook/assets/image%20%28100%29.png)
 
 {% hint style="danger" %}
-인증 탭의 **Callback URL**, **Scope**, **유형** 항목은   
-사용할 API의 인증 방식이 **OAuth** \(현재는 OAuth2.0만 지원\)일 때는 **필수로 입력**해야 합니다.
+인증 탭의 '**Callback URL**',  **'Scope**',  '**유형**' 항목은   
+사용할 API의 인증 방식이 **OAuth** \(현재는 OAuth2.0만 지원\)일 때는 **필수로 입력**해야 합니다.  
+Scope 항목은 [이곳](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1/oauth/scope) 에서 확인하세요.
 {% endhint %}
 
 {% hint style="warning" %}

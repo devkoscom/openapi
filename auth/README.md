@@ -6,13 +6,13 @@
 
 계좌기반API를 제외한 **일반정보 API**를 사용하는 경우 코스콤 개발자센터 \([https://developers.koscom.co.kr](https://developers.koscom.co.kr/)\)에 앱을 등록 완료 후 할당 받은 `API Key`를 지정된 Query parameter 혹은 HTTP header에 넣어 전송하고, 이를 오픈플랫폼에서 인증하는 방식
 
-{% page-ref page="api-key-authentication.md" %}
+{% page-ref page="api-key.md" %}
 
 ## 2. Basic Authentication
 
 **일임매매 전용 API**를 사용하는 경우 코스콤 개발자센터 \([https://developers.koscom.co.kr](https://developers.koscom.co.kr/)\)에 앱을 등록 완료 후 할당 받은 `API Key` 및 `Secret`를 조합하여 `Base64로 인코딩한 값`을 지정된 HTTP header에 넣어 전송하고, 이를 오픈플랫폼에서 인증하는 방식
 
-{% page-ref page="basic-authentication.md" %}
+{% page-ref page="basic.md" %}
 
 ## 3. OAuth
 

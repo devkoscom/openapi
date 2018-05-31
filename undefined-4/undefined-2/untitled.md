@@ -39,7 +39,7 @@
 
 ## Basic 인증방식
 
-'API문서 &gt; 일임매매서비스 &gt; XX증권-일임매매서비스' 메뉴에서 'Select an Application' 을 눌러서 앱을 선택 합니다. 앱이 보이지 않으시면 해당 API를 사용하는 앱을 먼저 만드셔야 합니다. 애플리케이션 등록 방법은 [이곳](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2/undefined#application)을 참조하세요.
+'API문서 &gt; 일임매매서비스 &gt; XX증권-일임매매서비스' 메뉴에서 'Select an Application' 을 눌러서 앱을 선택 합니다. 앱이 보이지 않으시면 해당 API를 사용하는 앱을 먼저 만드셔야 합니다. 애플리케이션 등록 방법은 [이곳](https://koscom.gitbook.io/open-api/undefined-4/undefined-2/undefined)을 참조하세요.
 
 ![&#xC571; &#xC120;&#xD0DD;](../../.gitbook/assets/image%20%2867%29.png)
 

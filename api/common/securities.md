@@ -53,9 +53,9 @@
 
 각 API에 대한 자세한 설명은 아래의 링크를 클릭하세요 :
 
-{% page-ref page="../undefined-1.md" %}
+{% page-ref page="../account.md" %}
 
-{% page-ref page="../undefined-2.md" %}
+{% page-ref page="../b2baccount.md" %}
 
 
 

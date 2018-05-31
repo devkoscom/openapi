@@ -2,11 +2,11 @@
 
 Here are the articles in this section:
 
-{% page-ref page="undefined-1.md" %}
+{% page-ref page="account.md" %}
 
-{% page-ref page="undefined-2.md" %}
+{% page-ref page="b2baccount.md" %}
 
-{% page-ref page="undefined-3/" %}
+{% page-ref page="market/" %}
 
 ## 
 
@@ -136,7 +136,7 @@ Here are the articles in this section:
 {% endtab %}
 {% endtabs %}
 
-{% page-ref page="undefined-1.md" %}
+{% page-ref page="account.md" %}
 
 
 
@@ -281,7 +281,7 @@ List 취소 주문은 지원 하지 않음
 {% endtab %}
 {% endtabs %}
 
-{% page-ref page="undefined-2.md" %}
+{% page-ref page="b2baccount.md" %}
 
 
 
@@ -348,7 +348,7 @@ List 취소 주문은 지원 하지 않음
 {% endtab %}
 {% endtabs %}
 
-{% page-ref page="undefined-3/" %}
+{% page-ref page="market/" %}
 
 
 

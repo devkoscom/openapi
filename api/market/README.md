@@ -155,7 +155,7 @@
   
 스트리밍\(시세\) API는 아래 페이지에서 참조하세요 **:** 
 
-{% page-ref page="undefined.md" %}
+{% page-ref page="streaming.md" %}
 
 {% hint style="success" %}
 고객요청에 따라 당사의 풍부한 데이타를  다양한 방식으로 제공가능 

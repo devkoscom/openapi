@@ -1,6 +1,7 @@
 # 공통 서비스
 
-## **오픈플랫폼 API Gateway 주소** 
+## **오픈플랫폼 API Gateway 주소**
+ 
 
 > `{APIGWAddr}`
 
@@ -12,7 +13,8 @@
 
 ## 공통 URI
 
-**URI                   \|**     `https://{APIGWAddr}/{버전정보}/{증권사단축명}/{조회서비스구분}`
+**URI                   \|**     `https://{APIGWAddr}/{버전정보}/{증권사단축명}/{조회서비스구분
+}`
 
 **Endpoint         \|**      `https://{APIGWAddr}/{버전정보}/{증권사단축명}/`  
                                API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 있습니다. 
@@ -44,6 +46,7 @@
 | 미래에셋증권 | MIRAEASSET | 00049 | 계약완료 |
 | 키움증권 | KIWOOM | 00050 | 계약완료 |
 | 이베스트투자증권 | EBEST | 00063 | 제공 |
+| 코리아에셋투자증권 | KOREAASSET | 00064	 | 계약완료 |
 | 코리아에셋투자증권 | KOREAASSET | 00064	 | 계약완료 |
 
 {% hint style="danger" %}

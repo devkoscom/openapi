@@ -1,6 +1,6 @@
 # Table of contents
 
-* 자본시장 오픈플랫폼
+* 자본시장 오픈플랫폼 API 매뉴얼
 * [오픈플랫폼 개요](undefined.md)
 * 이용방법
   * [오픈플랫폼 이용방법](undefined-4/undefined-1.md)

@@ -212,7 +212,7 @@ GET /v2/market/stocks/kospi/005930/selectivemaster?prevddClsprc&wk52HgstPrc
 | bidStep4BstordRqty | number\(12\) | 매수4단계우선호가잔량 | 호가 |
 | bidStep5BstordPrc | number\(11\) | 매수5단계우선호가가격 | 호가 |
 | bidStep5BstordRqty | number\(12\) | 매수5단계우선호가잔량 | 호가 |
-| askTotOrdRqty | number\(12\) | 매도총호가잔량 | 호 |
+| askTotOrdRqty | number\(12\) | 매도총호가잔량 | 호가 |
 | askStep1BstordPrc | number\(11\) | 매도1단계우선호가가격 | 호가 |
 | askStep1BstordRqty | number\(12\) | 매도1단계우선호가잔량 | 호가 |
 | askStep2BstordPrc | number\(11\) | 매도2단계우선호가가격 | 호가 |

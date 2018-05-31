@@ -13,7 +13,7 @@
     * [API 테스트](howtouse/devcentor/testapi.md)
 * [API](api/README.md)
   * [공통 서비스](api/common/README.md)
-    * [서비스연동](api/common/connectservice.md)
+    * [서비스연동](api/common/connect.md)
     * [증권사](api/common/securities.md)
   * [계좌 서비스](api/account.md)
   * [일임매매 서비스](api/b2baccount.md)

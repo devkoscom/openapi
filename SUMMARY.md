@@ -2,15 +2,15 @@
 
 * Introduction
 * 자본시장 오픈플랫폼 API 매뉴얼
-* [오픈플랫폼 개요](oppfsummary.md)
+* [오픈플랫폼 개요](oppf-summary.md)
 * 이용방법
-  * [오픈플랫폼 이용방법](howtouse/oppf.md)
-  * [사용자 이용방법](howtouse/user/README.md)
-    * [핀테크포털 이용](howtouse/user/portal.md)
-    * [오핀\(OFin\) 이용](howtouse/user/ofin.md)
-  * [개발자센터 이용방법](howtouse/devcentor/README.md)
-    * [애플리케이션 등록](howtouse/devcentor/enrollapp.md)
-    * [API 테스트](howtouse/devcentor/testapi.md)
+  * [오픈플랫폼 이용방법](how-to-use/oppf.md)
+  * [사용자 이용방법](how-to-use/user/README.md)
+    * [핀테크포털 이용](how-to-use/user/portal.md)
+    * [오핀\(OFin\) 이용](how-to-use/user/ofin.md)
+  * [개발자센터 이용방법](how-to-use/devcenter/README.md)
+    * [애플리케이션 등록](how-to-use/devcenter/enrollapp.md)
+    * [API 테스트](how-to-use/devcenter/testapi.md)
 * [API](api/README.md)
   * [공통 서비스](api/common/README.md)
     * [서비스연동](api/common/connect.md)

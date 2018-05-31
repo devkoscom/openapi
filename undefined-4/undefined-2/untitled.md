@@ -15,7 +15,7 @@
 ## API Key 인증방식
 
 'API문서 &gt; 시세 서비스 &gt; 주식종목' 메뉴에서 'Select an Application' 을 눌러서 앱을 선택 합니다.  
-앱이 보이지 않으시면 해당 API를 사용하는 앱을 먼저 만드셔야 합니다. 애플리케이션 등록 방법은 [이곳](https://koscom.gitbook.io/open-api/1/undefined-4/undefined-2/undefined#application)을 참조하세요.
+앱이 보이지 않으시면 해당 API를 사용하는 앱을 먼저 만드셔야 합니다. 애플리케이션 등록 방법은 [이곳](https://koscom.gitbook.io/open-api/undefined-4/undefined-2/undefined)을 참조하세요.
 
 ![Authentication &#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../.gitbook/assets/image%20%2893%29.png)
 
@@ -92,7 +92,7 @@ Implicit Grant Type 등은 보안수준 및 비즈니스모델에 따라 협의�
 >
 > * Scope
 >
->        앱에 등록한 Scope 값을 입력 합니다   \( \* [Scope](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1/oauth/scope) 페이지 참조 \)
+>        앱에 등록한 Scope 값을 입력 합니다   \( \* [Scope](https://koscom.gitbook.io/open-api/api-1/oauth/scope) 페이지 참조 \)
 >
 > * Authorize Endpoint
 >

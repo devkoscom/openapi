@@ -283,7 +283,7 @@ private void startJoinSampleForActivityResult() {
 responseType 은 안전한 금융거래 정보 보호를 위해 ‘Authorization Code’ 방식만 제공 합니다. 입력 파라메터는 ‘Authorization Code 요청’ 과 동일하며, callbackUrl로 Code값을 전달 합니다. Access token 은 기존 절차에 따릅니다. 
 
 {% hint style="info" %}
-OAuth 절차는 [이곳](https://koscom.gitbook.io/open-api/~/edit/primary/1/api-1/oauth) 을 참조하세요.
+OAuth 절차는 [이곳](https://koscom.gitbook.io/open-api/api-1/oauth) 을 참조하세요.
 {% endhint %}
 
 {% code-tabs %}

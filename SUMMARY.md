@@ -1,7 +1,7 @@
 # Table of contents
 
 * Introduction
-* 자본시장 오픈플랫폼 API 매뉴얼
+* Open API Platform 매뉴얼
 * [오픈플랫폼 개요](oppf-summary.md)
 * 이용방법
   * [오픈플랫폼 이용방법](how-to-use/oppf.md)

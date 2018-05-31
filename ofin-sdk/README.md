@@ -1,7 +1,3 @@
----
-description: Fintech  Mobile  SDK  Guide (Manual)
----
-
 # OFin SDK 가이드
 
 {% hint style="success" %}
@@ -16,11 +12,11 @@ description: Fintech  Mobile  SDK  Guide (Manual)
 
 ### iOS Guide
 
-{% page-ref page="ios-sdk.md" %}
+{% page-ref page="ios.md" %}
 
 ### Android Guide
 
-{% page-ref page="android-sdk.md" %}
+{% page-ref page="android.md" %}
 
 
 

@@ -1,7 +1,3 @@
----
-description: 자본시장 공동 핀테크 오픈플랫폼 REST API Developer Guide 버전 관리
----
-
 # 개정내역
 
 ## REST API Developer Guide  변경이력

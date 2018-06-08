@@ -437,7 +437,7 @@ Basic Authentication 인증 사용
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |  |
 | reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | . | 사용안함 |
@@ -455,8 +455,9 @@ Basic Authentication 인증 사용
 | totCreditAmt | Number | 총대출금 |  |
 | totlLoanAmt | Number | 총신용금액 |  |
 | valAtCur | Number | 평가금액 |  |
-| crcyCode | String\(8\) | 통화코드 | 국제 통화코드 표기 |
+| crcyCode | String\(8\) | 통화코드 | 국제 통화코드 표기                                                       결제기준\(D0\)잔고 : 통화코드-DO\(ex, KRW-D0\)                                                    전일체결기준\(D+1\) 잔고 : 통화코드-D1\(ex, KRW-D1\)체결기준\(D+2\) 잔고 : 그대로 통화코드 표시\(ex, KRW\) |
 | cashAvWithdraw | Number | 출금가능현금 |  |
+| **securitiesBalInfo** | **Array** |  |  |
 | assetType | String\(8\) | 자산유형 | 상품유형 표 참조 |
 | exchange | String\(20\) | KRX를 제외한 시장의 거래소명 | 대표적으로 해외주식 |
 | crcyCode | String\(8\) | 외화의 경우 통화코드 표기 |  |
@@ -472,6 +473,7 @@ Basic Authentication 인증 사용
 | foreignDeposit | Number | 외화예수금 |  |
 | wonDeposit | Number | 원화예수금 |  |
 | currencyRate | Number | 기준환율 |  |
+| **isinInfo** | **Array** |  |  |
 | isinType | String\(20\) | 종목코드종류 | 표준코드,축약코드, 축약영문 등 |
 | isinCode | String\(20\) | 종목코드, 펀드코드, 상품코드 |  |
 | isinName | String\(40\) | 종목명, 펀드명, 상품코드명 |  |
@@ -654,7 +656,7 @@ Basic Authentication 인증 사용
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |  |
 | reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | "" | 사용안함 |
@@ -662,6 +664,7 @@ Basic Authentication 인증 사용
 | totalCnt	 | Number | 총 메시지 건수 |  |
 | count	 | Number | 메시지 내 응답 건수 |  |
 | page	 | String\(100\) | 다음 page 번호 | null이면 더 이상 없음 |
+| **settleInfo** | **Array** |  |  |
 | accNo | String\(20\) | 계좌번호 |  |
 | accName | String\(20\) | 계좌명 |  |
 | sellBuyType | String\(8\) | 매도수구분 | 1\(매도\), 2\(매수\) |
@@ -674,9 +677,11 @@ Basic Authentication 인증 사용
 | loanCreditAmt | Number | 신용/대출금액 |  |
 | settDate | String\(12\) | 결제일자 |  |
 | costTotal | Number | 비용합계 |  |
+| **isinInfo** | **Array** |  |  |
 | isinType | String\(20\) | 코드종류 | 표준코드, 펀드코드, 단축코드, 상품코드 등 |
 | isinCode | String\(20\) | 종목코드, 펀드코드, 상품코드 |  |
 | isinName | String\(40\) | 종목명, 펀드명, 상품코드명 |  |
+| **costInfo** | **Array** |  |  |
 | costName | String\(20\) | 비용명 | 수수료, 거래세, 농특세, 주민세 등 |
 | cost | Number | 비용금액 |  |
 | respCode | string\(8\) | 응답코드 참고 |  |
@@ -808,7 +813,7 @@ Basic Authentication 인증 사용
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |  |
 | reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | "" | 사용안함 |
@@ -816,6 +821,7 @@ Basic Authentication 인증 사용
 | totalCnt | Number | 총 메시지 건수 |  |
 | count	 | Number | 메시지 내 응답 건수 |  |
 | page	 | String\(100\) | 다음 page 번호 | null이면 더 이상 없음 |
+| **account** | **Array** |  |  |
 | accNo | String\(20\) | 계좌번호 |  |
 | accName | String\(20\) | 계좌명 |  |
 | virtualAccNo | String\(20\) | 가상계좌번호 |  |
@@ -991,7 +997,7 @@ Basic Authentication 인증 사용
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |  |
 | reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | "" | 사용안함 |
@@ -1004,7 +1010,7 @@ Basic Authentication 인증 사용
 | totalCnt | Number | 총 메시지 건수 |  |
 | count	 | Number | 메시지 내 응답 건수 |  |
 | page	 | String\(100\) | 다음 page 번호 | null이면 더 이상 없음 |
-| tradeBook | Array | 거래 |  |
+| **tradeBook** | **Array** | 거래 |  |
 | accNo | String\(20\) | 계좌번호 |  |
 | accName | String\(20\) | 계좌명 |  |
 | transDate | String\(12\) | 거래일자 | YYYYMMDD |
@@ -1017,9 +1023,11 @@ Basic Authentication 인증 사용
 | crcyCode | String\(8\) | 통화코드 |  |
 | subject | String\(40\) | 계정명 | Text표기 |
 | summary | String\(40\) | 적요명 | Text표기 |
+| isinInfo | Array |  | 종목코드정보 |
 | isinType | String\(20\) | 종목코드 종류 | Text 표기 |
 | isinCode | String\(20\) | 종목코드, 펀드코드, 상품코드 등 |  |
 | isinName | String\(40\) | 종목명 |  |
+| **costInfo** | **Array** |  | 비용정보 |
 | costName | String\(20\) | 비용명 | Text 표기 |
 | cost | Number | 비용 |  |
 | respCode | string\(8\) | 응답코드 참고 |  |

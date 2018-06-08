@@ -264,7 +264,7 @@ Bearer 발급받은 access token
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
 | reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | "" | 사용안함 |
@@ -275,16 +275,23 @@ Bearer 발급받은 access token
 | count | Number | 현 메시지 내 응답 건수 |  |
 | page | String\(24\) | 다음 page 번호 | “null”이면 더 이상 없음 |
 | amt | Number | 전체 자산 중 현금잔고 또는 비중  |  |
-| equityList: assetType | String\(8\) | 상품구분자 | KSP\(코스피\), KDQ\(코스닥\), ETF\(ETF\), FUT\(선물\), OPT\(옵션\), ELW\(ELW\), ETC\(기타\) |
-| equityList :isinCode | String\(12\) | ISINCODE\(12\) |  |
+| **equityList** | **array** |  | **EQTY** |
+| assetType | String\(8\) | 상품구분자 | KSP\(코스피\), KDQ\(코스닥\), ETF\(ETF\), FUT\(선물\), OPT\(옵션\), ELW\(ELW\), ETC\(기타\) |
+| isinCode | String\(12\) | ISINCODE\(12\) |  |
 | qty | Number | 수량 또는 비중 | equity 내 비중, 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영안함 |
 | earningRate | Number | 수익률 | 소수점 2째자리까지 |
+| **fundList** | **array** |  | **FUND** |
 | fundCode | String\(20\) | 펀드표준코드 |  |
 | fundName | String\(15\) | 펀드명 | 최대 15자 |
-| maturity | String\(12\) | 만기일 | YYYYMMDD |
-| etcList: assetType | String\(8\) | 상품구분자 | BOND\(채권\), CD, CP, DLS, ELS, STB\(사채\), RP\(미구분\), CRP\(약정식RP\), RRP\(수시RP\), WRT\(워런트\) |
-| etcList: assetName | String\(15\) | 상품명 |  |
-| etcList: isinCode | String\(12\) | . | 현재는 지원 안 함 \(1.0부터 지원예정\) |
+| qty | Number | 수량 또는 비중 | 펀드내 비중, 소수점 2째자리까지 |
+| earningRate | Number | 수익률 | 소수점 2째자리까지 |
+| maturity | String\(12\) | 만기일 | YYYYMMDD |
+| **etcList** | **array** |  | **ETC** |
+| assetType | String\(8\) | 상품구분자 | BOND\(채권\), CD, CP, DLS, ELS, STB\(사채\), RP\(미구분\), CRP\(약정식RP\), RRP\(수시RP\), WRT\(워런트\) |
+| assetName | String\(15\) | 상품명 |  |
+| isinCode | String\(12\) | . | 현재는 지원 안 함 \(1.0부터 지원예정\) |
+| qty | Number | 수량 또는 비중 | etc 내 비중, 소수점 2째자리까지                      신용 매수 분 포함하고 대출잔고는 반영 안함   |
+| earningRate | Number | 수익률 | 소수점 2째자리까지 |
 | respCode | String\(8\) | 응답코드 |  |
 | respMsg | String\(50\) | 응답메시지 |  |
 

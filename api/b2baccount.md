@@ -1,6 +1,6 @@
 # 일임매매 서비스
 
-일임주문 연계조회 API는 증권사별로 호출 URI가 다르나 큰 틀은 동일하며 단지 증권사구분이 URI에 포함되어 있는 구조입니다.
+일임주문 연계조회 API는 증권사별로 호출 URI가 다르나 큰 틀은 동일하며 단지 증권사구분이 URI에 포함되어 있는 구조입니다. 
 
 {% hint style="success" %}
 일임매매 연계 API 는 [개발자센터-일임매매 연계 API](https://developers.koscom.co.kr/documentation/b2baccount) 에서 테스트할 수 있습니다.
@@ -191,7 +191,7 @@ Basic Authentication 인증 사용
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |  |
 | reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | . | 사용안함 |
@@ -199,6 +199,7 @@ Basic Authentication 인증 사용
 | totalCnt	 | Number | 총 메시지 건수 |  |
 | count	 | Number | 메시지 내 응답 건수 |  |
 | page	 | String\(100\) | 다음 page 번호 | null이면 더 이상 없음 |
+| **orderDetail** | **Array** |  |  |
 | accNo | String\(20\) | 계좌번호 |  |
 | accName | String\(20\) | 계좌명 |  |
 | modifyType | String\(8\) | 정정구분 | 0\(정상\), 1\(정정\) |
@@ -219,9 +220,11 @@ Basic Authentication 인증 사용
 | sellQtyUnit | Number | 매도수량단위 |  |
 | orderTime | String\(12\) | 주문시각 |  |
 | orderRejectReason | String\(20\) | 주문거부사유 | Text표기 |
+| **isinInfo** | **Array** |  |  |
 | isinType | String\(20\) | 종목코드종류 | 표준코드,축약코드, 축약영문 등 |
 | isinCode | String\(20\) | 종목코드 |  |
 | isinName | String\(40\) | 종목명 |  |
+| **execList** | **Array** | **체결상세내역** |  |
 | execQty | Number | 체결 수량 |  |
 | execPrice | Number | 체결 단가 |  |
 | execNo | Number | 체결번호 |  |

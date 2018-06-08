@@ -1,9 +1,9 @@
 # Table of contents
 
-* Introduction
-* Open API Platform 매뉴얼
+* [Introduction](README.md)
+* [Open API Platform 매뉴얼](manual.md)
 * [오픈플랫폼 개요](oppf-summary.md)
-* 이용방법
+* [이용방법](how-to-use/README.md)
   * [오픈플랫폼 이용방법](how-to-use/oppf.md)
   * [사용자 이용방법](how-to-use/user/README.md)
     * [핀테크포털 이용](how-to-use/user/portal.md)
@@ -11,7 +11,7 @@
   * [개발자센터 이용방법](how-to-use/devcenter/README.md)
     * [애플리케이션 등록](how-to-use/devcenter/enrollapp.md)
     * [API 테스트](how-to-use/devcenter/testapi.md)
-* [API](api/README.md)
+* [API 서비스](api/README.md)
   * [공통 서비스](api/common/README.md)
     * [서비스연동](api/common/connect.md)
     * [증권사](api/common/securities.md)
@@ -19,7 +19,7 @@
   * [일임매매 서비스](api/b2baccount.md)
   * [시세 서비스](api/market/README.md)
     * [스트리밍](api/market/streaming.md)
-    * 조회
+    * [조회](api/market/search/README.md)
       * [주식 시세조회](api/market/search/stocks.md)
       * [선물 시세조회](api/market/search/futures.md)
       * [옵션 시세조회](api/market/search/options.md)
@@ -38,7 +38,7 @@
   * [iOS](ofin-sdk/ios.md)
   * [Android](ofin-sdk/android.md)
 * [Error Code](error-code.md)
-* FAQ
+* [FAQ](faq/README.md)
   * [오픈플랫폼](faq/oppf.md)
   * [API 사용절차](faq/api.md)
   * [계좌 서비스](faq/account.md)

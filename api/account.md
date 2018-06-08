@@ -889,7 +889,7 @@ Bearer 발급받은 access token
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
 | reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | "" | 사용안함 |
@@ -905,12 +905,13 @@ Bearer 발급받은 access token
 | queryParams: side | String\(8\) | 조회조건 | BID\(매도\), ASK\(매수\) |
 | queryParams: count | Number | 응답 별 건수 | default는 50 |
 | queryParams: page | String\(24\) | 다음 page 번 | 응답데이터의 특정 지점을 지정할 경우 \(요청 시 값\) |
-| transaction: isinCode | String\(20\) | 종목코드 | 입출금은 CASH로 표기 |
-| transaction: transDate | String\(12\) | 거래일자 | YYYYMMDD |
-| transaction: transType | String\(8\) | 거래구분 | BID\(매도\), ASK\(매수\), DEP\(이체입금\), WID\(이체출금\) |
-| transaction: changeAmt | Number | 금액증감 | 매도/매수/이체에 따른 금액변동 |
-| transaction: changeQty | Number | 수량증감 | 매도/매수량, 이체 시는 0 |
-| transaction: qty | Number | 잔고수량 | 거래 후 잔량 |
+| **transaction** | **Array** | 거래 |  |
+| isinCode | String\(20\) | 종목코드 | 입출금은 CASH로 표기 |
+| transDate | String\(12\) | 거래일자 | YYYYMMDD |
+| transType | String\(8\) | 거래구분 | BID\(매도\), ASK\(매수\), DEP\(이체입금\), WID\(이체출금\) |
+| changeAmt | Number | 금액증감 | 매도/매수/이체에 따른 금액변동 |
+| changeQty | Number | 수량증감 | 매도/매수량, 이체 시는 0 |
+| qty | Number | 잔고수량 | 거래 후 잔량 |
 | respCode | String\(8\) | 응답코드 |  |
 | respMsg | String\(50\) | 응답메시지 |  |
 
@@ -1061,7 +1062,7 @@ Bearer 발급받은 access token
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
 | reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | "" | 사용안함 |
@@ -1071,9 +1072,10 @@ Bearer 발급받은 access token
 | queryResult: totalCnt | Number | 총 메시지 건수 |  |
 | queryResult: count | Number | 메시지 내 응답 건수 |  |
 | queryResult: page | String\(24\) | 다음 page 번호 | “null”이면 더 이상 없음 |
-| group: groupName | String\(20\) | 관심종목 그룹 이름 |  |
-| group: modifyDate | String\(12\) | 최종 수정일 | 선택 |
-| group: isinCode | String Array \(각 20\) | 종목코드 |  |
+| **group** | **Array** |  |  |
+| groupName | String\(20\) | 관심종목 그룹 이름 |  |
+| modifyDate | String\(12\) | 최종 수정일 | 선택 |
+| isinCode | String Array \(각 20\) | 종목코드 |  |
 | respCode | String\(8\) | 응답코드 |  |
 | respMsg | String\(50\) | 응답메시지 |  |
 

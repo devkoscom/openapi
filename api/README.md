@@ -60,6 +60,8 @@ Here are the articles in this section:
 {% endtab %}
 {% endtabs %}
 
+{% page-ref page="common/" %}
+
 
 
 ## B. 계좌 서비스

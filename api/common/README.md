@@ -47,6 +47,6 @@ API 제공 증권사, 일정, API 제공 범위 는 증권사의 사정에 따�
 {% endhint %}
 
 {% hint style="info" %}
-개발자센터 어플리케이션 등록 및 API 테스트\(인증\) 이용방법은 [이곳](https://koscom.gitbook.io/open-api/undefined-4/undefined-2) 에서 확인하세요.
+개발자센터 어플리케이션 등록 및 API 테스트\(인증\) 이용방법은 [이곳](https://koscom.gitbook.io/open-api/how-to-use/devcenter) 에서 확인하세요.
 {% endhint %}
 

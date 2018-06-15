@@ -4,15 +4,15 @@
 
 > `{APIGWAddr}`
 
-**Production**\(상용\) \| `apigw.koscom.co.kr`
+**Production**\(상용\)      \|  `apigw.koscom.co.kr`
 
-**Sandbox**\(샌드박스\) \| `sandbox-apigw.koscom.co.kr`
+**Sandbox**\(샌드박스\)  \|  `sandbox-apigw.koscom.co.kr`
 
 ## 공통 URI
 
-**URI \|** `https://{APIGWAddr}/{버전정보}/{증권사단축명}/{조회서비스구분 }`
+**URI                              \|**  `https://{APIGWAddr}/{버전정보}/{증권사단축명}/{조회서비스구분 }`
 
-**Endpoint \|** `https://{APIGWAddr}/{버전정보}/{증권사단축명}/`  
+**Endpoint                    \|**  `https://{APIGWAddr}/{버전정보}/{증권사단축명}/`  
 API는 버전으로 구분되기 때문에 URI에 버전정보가 포함되어 있습니다.
 
 {% hint style="success" %}

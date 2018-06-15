@@ -2,6 +2,8 @@
 
 Here are the articles in this section:
 
+{% page-ref page="common/" %}
+
 {% page-ref page="account.md" %}
 
 {% page-ref page="b2baccount.md" %}

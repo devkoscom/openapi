@@ -33,7 +33,7 @@ OAuth 인증체계를 사용하는 API는 **민감정보가 포함된** 데이�
 
 
 {% hint style="info" %}
-코스콤 개발자센터\(Sandbox\)   OAuth2 이용방법은  [이곳](https://koscom.gitbook.io/open-api/undefined-4/undefined-2/untitled#oauth) 을 참조하세요.
+코스콤 개발자센터\(Sandbox\)   OAuth2 이용방법은  [이곳](https://koscom.gitbook.io/open-api/how-to-use/devcenter/testapi#oauth) 을 참조하세요.
 {% endhint %}
 
 

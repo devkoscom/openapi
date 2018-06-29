@@ -18,7 +18,7 @@
   * [계좌 서비스](api/account.md)
   * [일임매매 서비스](api/b2baccount.md)
   * [시세 서비스](api/market/README.md)
-    * [스트리밍](api/market/streaming.md)
+    * [WebSocket Push](api/market/streaming.md)
     * [조회](api/market/search/README.md)
       * [주식 시세조회](api/market/search/stocks.md)
       * [선물 시세조회](api/market/search/futures.md)

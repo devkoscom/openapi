@@ -23,9 +23,9 @@ Authentication    \|   **API Key**
 현재가      \|   현재가, 누적거래량, 누적거래대금  
 제공시장  \|   유가증권, 코스닥시장
 
-{% api-method method="get" host="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/pricelist" %}
+{% api-method method="get" host="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/lists" %}
 {% api-method-summary %}
-/v2/market/multiquote/stocks/{marketcode}/pricelist
+/v2/market/multiquote/stocks/{marketcode}/lists
 {% endapi-method-summary %}
 
 {% api-method-description %}

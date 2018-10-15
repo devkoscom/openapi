@@ -174,7 +174,7 @@ Basic Authentication 인증 사용
 #### Request Parameters
 
 | **Name** | **Type** | **Description** | ​ |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | comId | string\(5\) | 핀테크 기업 코드 | ​ |
 | srvId | string\(20\) | 핀테크 서비스 코드 | ​ |
 | reqIdPlatform | string\(50\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
@@ -191,7 +191,7 @@ Basic Authentication 인증 사용
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |  |
 | reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | . | 사용안함 |
@@ -424,7 +424,7 @@ Basic Authentication 인증 사용
 #### Request Parameters {#request-parameters}
 
 | **Name** | **Type** | **Description** | ​ |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | comId | string\(5\) | 핀테크 기업 코드 | ​ |
 | srvId | string\(20\) | 핀테크 서비스 코드 | ​ |
 | reqIdPlatform | string | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
@@ -437,7 +437,7 @@ Basic Authentication 인증 사용
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |  |
 | reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | . | 사용안함 |
@@ -640,7 +640,7 @@ Basic Authentication 인증 사용
 ####  Request Parameters
 
 | **Name** | **Type** | **Description** | ​ |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | comId | string\(5\) | 핀테크 기업 코드 | ​ |
 | srvId | string\(20\) | 핀테크 서비스 코드 | ​ |
 | reqIdPlatform | string\(50\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
@@ -656,7 +656,7 @@ Basic Authentication 인증 사용
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |  |
 | reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | "" | 사용안함 |
@@ -802,7 +802,7 @@ Basic Authentication 인증 사용
 #### Request Parameters
 
 | **Name** | **Type** | **Description** | ​ |
-| --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | comId | string\(5\) | 핀테크 기업 코드 | ​ |
 | srvId | string\(20\) | 핀테크 서비스 코드 | ​ |
 | reqIdPlatform | string\(50\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
@@ -813,7 +813,7 @@ Basic Authentication 인증 사용
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |  |
 | reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | "" | 사용안함 |
@@ -983,7 +983,7 @@ Basic Authentication 인증 사용
 ####  Request Parameters
 
 | **Name** | **Type** | **Description** | ​ |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | comId | string\(5\) | 핀테크 기업 코드 | ​ |
 | srvId | string\(20\) | 핀테크 서비스 코드 | ​ |
 | reqIdPlatform | string\(50\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
@@ -997,7 +997,7 @@ Basic Authentication 인증 사용
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |  |
 | reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | "" | 사용안함 |

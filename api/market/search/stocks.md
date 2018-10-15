@@ -72,7 +72,7 @@ Authentication     \|   **API Key**
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | trdDd | String\(8\) | 체결일자, 거래일자, 매매일자 | YYYYMMDD |
 | isuLists | Array\(4\) | 종목리스트 | 데이터 개수 |
 | isuCd | String\(12\) | 종목코드 |  |
@@ -174,7 +174,7 @@ Authentication     \|   **API Key**
 #### Response Parameters
 
 | **Name** | **Type** | **Description** | ​ |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | trdDd | string\(8\) | 체결일자, 거래일자, 매매일자 | YYYYMMDD |
 | isuCd | string\(12\) | 종목코드 | ​ |
 | isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
@@ -288,7 +288,7 @@ Authentication     \|   **API Key**
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
 | cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
 | cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
@@ -375,7 +375,7 @@ Authentication     \|   **API Key**
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
 | cmpprevddTpCd | string\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
 | cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
@@ -501,7 +501,7 @@ Authentication     \|   **API Key**
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 -&gt; 000660 |
 | accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위: 주 |
 | askStep1BstordPrc | number\(11\) | 매도1단계우선호가가격 |  |
@@ -640,7 +640,7 @@ Authentication     \|   **API Key**
 **Response Parameters**
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | string\(9\) | 종목단축코드 |  |
 | invstLists | Array\(4\) | 투자자리스트 |  |
 | invstCd | string\(4\) | 투자자코드 | '투자자코드표' 참조 |
@@ -714,7 +714,7 @@ Authentication     \|   **API Key**
 **Response Parameters**
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | Tm | string\(8\) | 장시간 | HHMMSSmm |
 | invstLists | Array\(4\) | 투자자리스트 |  |
 | invstCd | string\(4\) | 투자자코드 | '투자자코드표' 참조 |
@@ -781,7 +781,7 @@ Authentication     \|   **API Key**
 **Response Parameters**
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
 | cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
 | cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
@@ -896,7 +896,7 @@ Authentication     \|   **API Key**
 **Response Parameters**
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | bidTrdMbr1 | string\(64\) | 매수상위회원명1 | 매수랭킹 TOP5 1위 회원사 한글명 |
 | bidTrdMbr2 | string\(64\) | 매수상위회원명2 | 매수랭킹 TOP5 2위 회원사 한글명 |
 | bidTrdMbr3 | string\(64\) | 매수상위회원명3 | 매수랭킹 TOP5 3위 회원사 한글명 |
@@ -1013,7 +1013,7 @@ Authentication     \|   **API Key**
 **Response Parameters**
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
 | nav | number\(11\) | 순자산가치 |  |
 | cmpprevddNav | number\(11\) | 전일대비순자산가치 |  |
@@ -1088,7 +1088,7 @@ Authentication     \|   **API Key**
 **Response Parameter**
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
 | hisLists | Array\(4\) | 과거리스트 |  |
 | trdDd | string\(8\) | 체결일자,거래일자,매매일자 | YYYYMMDD |
@@ -1160,7 +1160,7 @@ Authentication     \|   **API Key**
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | String\(9\) | 종목단축코드 |  |
 | isuNm | String\(80\) | 종목명 |  |
 | hisLists | Array\(4\) | 과거리스트 |  |
@@ -1244,7 +1244,7 @@ Authentication     \|   **API Key**
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | String\(9\) | 종목단축코드 |  |
 | hisLists | Array\(4\) | 과거리스트 |  |
 | trdDd | string\(8\) | 체결일자,거래일자,매매일자 |  |
@@ -1334,7 +1334,7 @@ Authentication     \|   **API Key**
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | String\(3\) | 종목단축코드 |  |
 | hisLists | Array\(4\) | 과거리스트 |  |
 | trdDd | string\(8\) | 체결일자,거래일자,매매일자 | YYYYMMDD |

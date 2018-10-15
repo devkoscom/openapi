@@ -112,7 +112,7 @@ Parameters          \|   **`grant_type`**=authorization\_code & **`code`**=할�
 Access Token의 응답은 JSON 형태로 제공되며 다음의 항목이 포함되어 있습니다. 응답은 정상일 경우 status는 200으로 redirection 없이 전송됩니다.
 
 | **access token** | API 호출시 사용할 Access token |
-| --- | --- | --- | --- | --- |
+| :--- | :--- |
 | **refresh token** | Access token을 갱신하기 위해 사용되는 token |
 | **scope** | Authorization code 요청시 지정된 scope \( \* [Scope ](https://koscom.gitbook.io/open-api/api-1/oauth/scope)참조\)  |
 | **token\_type** | Bearer |

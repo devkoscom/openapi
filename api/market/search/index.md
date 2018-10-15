@@ -94,7 +94,7 @@ Authentication     \|   **API Key**
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
 | cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
 | cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
@@ -165,7 +165,7 @@ Authentication     \|   **API Key**
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | String\(3\) | 업종코드 | 업종코드표 참조 |
 | trdTm | String\(8\) | 체결시각,거래시각 | \*테이블 하단 참고 |
 | trdPrc | number\(10\) | 지수 |  |
@@ -240,7 +240,7 @@ Authentication     \|   **API Key**
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | String\(3\) | 업종코드 | 업종코드표 참조 |
 | deemTm | String\(8\) | 예상체결시각 | HHMMSSmm |
 | deemTrdPrc | number\(10\) | 예상지수 |  |
@@ -304,7 +304,7 @@ Authentication     \|   **API Key**
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | String\(3\) | 업종코드 |  |
 | isuCnt | number\(16\) | 종목수 |  |
 | listShrs | number\(16\) | 상장주식수,상장증권수 | 업종상장주식수 단위는  천주, 그외는 1주 |
@@ -381,7 +381,7 @@ Authentication     \|   **API Key**
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | Tm | string\(8\) | 장시간 | HHMMSSmm |
 | invstLists | Array\(4\) | 투자자리스트 |  |
 | invstCd | string\(4\) | 투자자코드 | '투자자코드표' 참조 |
@@ -485,7 +485,7 @@ Authentication     \|   **API Key**
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | String\(3\) | 업종코드 | 0 |
 | isuNm | String\(80\) | 종목명 |  |
 | hisLists | Array\(4\) | 과거리스트 |  |
@@ -590,7 +590,7 @@ Authentication     \|   **API Key**
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | isuSrtCd | String\(3\) | 업종코드 | 코드표 &gt;업종코드표 참조 |
 | isuKorNm | String\(80\) | 종목한글명 |  |
 | hisLists | Array\(4\) | 과거리스트 |  |

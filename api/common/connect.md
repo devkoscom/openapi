@@ -84,7 +84,7 @@ Application/json
 #### Request Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | comId | String\(5\) | 핀테크기업코드 |  |
 | srvId | String\(20\) | 핀테크서비스코드 |  |
 | reqIdPlatform | String | . | 사용안함 |
@@ -95,7 +95,7 @@ Application/json
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- |
+| :--- | :--- | :--- | :--- |
 | result | String\(12\) | 회원가입여부 | member \| nonMember |
 
 
@@ -177,7 +177,7 @@ Application/json
 #### Request Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | comId | String\(5\) | 핀테크기업코드 |  |
 | srvId | String\(20\) | 핀테크서비스코드 |  |
 | reqIdPlatform | String | . | 사용안함 |
@@ -188,7 +188,7 @@ Application/json
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | comId | String\(5\) | 금융회사코드 |  |
 | vtAccNo | String\(18\) | 가상계좌번호 |  |
 | vtAccAlias | String\(20\) | 가상계좌번호 별칭 |  |

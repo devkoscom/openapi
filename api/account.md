@@ -238,7 +238,7 @@ Bearer 발급받은 access token
 #### **Request Parameters**
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | comId | String\(5\) | 핀테크기업코드 |  |
 | srvId | String\(20\) | 핀테크서비스코드 |  |
 | reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
@@ -264,7 +264,7 @@ Bearer 발급받은 access token
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
 | reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | "" | 사용안함 |
@@ -617,7 +617,7 @@ Bearer 발급받은 access token
 #### **Request Parameters**
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | comId | String\(5\) | 핀테크기업코드 |  |
 | srvId | String\(20\) | 핀테크서비스코드 |  |
 | reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
@@ -639,7 +639,7 @@ Bearer 발급받은 access token
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
 | reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | "" | 사용안함 |
@@ -869,7 +869,7 @@ Bearer 발급받은 access token
 #### **Request Parameters**
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | comId | ~~**String\(5\)**~~ | 핀테크기업코드 |  |
 | srvId | String\(20\) | 핀테크서비스코드 |  |
 | reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
@@ -889,7 +889,7 @@ Bearer 발급받은 access token
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
 | reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | "" | 사용안함 |
@@ -1040,7 +1040,7 @@ Bearer 발급받은 access token
  **Request Parameters**
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | comId | String\(5\) | 핀테크기업코드 |  |
 | srvId | String\(20\) | 핀테크서비스코드 |  |
 | reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
@@ -1062,7 +1062,7 @@ Bearer 발급받은 access token
 #### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
 | reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
 | certDn | String\(256\) | "" | 사용안함 |

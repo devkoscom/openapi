@@ -5,7 +5,7 @@
 * [오픈플랫폼 개요](oppf-summary.md)
 * [이용방법](how-to-use/README.md)
   * [오픈플랫폼 이용방법](how-to-use/oppf.md)
-  * [사용자 이용방법](how-to-use/user/README.md)
+  * [일반 사용자 이용방법](how-to-use/user/README.md)
     * [핀테크포털 이용](how-to-use/user/portal.md)
     * [오핀\(OFin\) 이용](how-to-use/user/ofin.md)
   * [개발자센터 이용방법](how-to-use/devcenter/README.md)

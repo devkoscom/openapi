@@ -33,8 +33,8 @@ HTTP methods    \|   **GET**
 
 Authentication     \|   **OAuth**
 
-End Point              \|   **​https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/authorize​  
-                                   https://apigw.koscom.co.kr/auth/oauth/v2/authorize**
+End Point              \|   **​https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/authorize​  
+                                   https://apigw.koscom.co.kr/auth/oauth/v3/authorize**
 
 Parameters          \|   **`response_type`**=code & **`client_id`**=클라이언트 ID\(API Key\)   
                                   & **`redirect_uri`**=구현된 callback listener 주소 & **`scope`**=지정된 scope   
@@ -47,7 +47,7 @@ Parameters          \|   **`response_type`**=code & **`client_id`**=클라이언
 **Example**
 
 ```python
-​https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/authorize?response_type=code&client_id=l7xxf234248b6fbd42a1a6844861524b2320&redirect_uri=http://localhost:8080/OpenAPITest/callbacknew&scope=test.kiwoom&state=70e86bd5​
+​https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/authorize?response_type=code&client_id=l7xxf234248b6fbd42a1a6844861524b2320&redirect_uri=http://localhost:8080/OpenAPITest/callbacknew&scope=test.kiwoom&state=70e86bd5​
 ```
 
 ### 
@@ -60,7 +60,7 @@ Parameters          \|   **`response_type`**=code & **`client_id`**=클라이언
 
 Flow 2를 요청하면 그 응답으로 Authorization Code를 받아오는 것을 승인할 수 있도록 아래와 같은 권한정보입력 창을 응답으로 내려줍니다.
 
-![&#xAE08;&#xC735;&#xD22C;&#xC790; &#xD540;&#xD14C;&#xD06C;&#xD3EC;&#xD138; &#xB85C;&#xADF8;&#xC778;](../../.gitbook/assets/image%20%2884%29.png)
+![](../../.gitbook/assets/image%20%2836%29.png)
 
 핀테크 서비스 이용자가 금융투자 핀테크포털 가입 시 사용했던 아이디와 비밀번호\(또는 OTP\)를 입력하고 로그인 버튼을 누르면, 오픈플랫폼은 이용자가 입력한 정보를 확인하여 정상적인 경우 authorization code를 응답으로 받을 수 있습니다. 비밀번호 또는 OTP가 연속으로 틀린 경우 계정잠김상태로 전환됩니다. 오픈플랫폼 관리자가 비밀번호 초기화 또는 OTP를 초기화할 수 있도록 안내가 필요합니다.
 
@@ -88,8 +88,8 @@ Authentication     \|   **Basic Authorization**
 Header                  \|     "**Content-Type**"   :  Application/x-www-form-urlencoded  
                                      "**authorization**"    :  Basic _Base64\(client\_id:client\_secret\)_
 
-End Point              \|   **​https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token​  
-                                   https://apigw.koscom.co.kr/auth/oauth/v2/token**
+End Point              \|   **​https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/token​  
+                                   https://apigw.koscom.co.kr/auth/oauth/v3/token**
 
 Parameters          \|   **`grant_type`**=authorization\_code & **`code`**=할당받은 authorizationcode   
                                   & **`redirect_uri`**=구현된 callback listener 주소
@@ -190,8 +190,8 @@ Authentication     \|   **Basic Authorization**
 Header                  \|     "**Content-Type**"   :  Application/x-www-form-urlencoded"  
                                      "**authorization**"    :  Basic _Base64\(client\_id:client\_secret\)_
 
-End Point              \|   **​https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token​  
-                                   https://apigw.koscom.co.kr/auth/oauth/v2/token**
+End Point              \|   **​https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/token​  
+                                   https://apigw.koscom.co.kr/auth/oauth/v3/token**
 
 Parameters          \|   **`grant_type`**=refresh\_token & **`refresh_token`**=발급받은 refresh\_token   
                                    & **`scope`**=지정된 scope
@@ -222,8 +222,8 @@ Authentication     \|   **Basic Authorization**
 Header                  \|     "**Content-Type**"   :  Application/x-www-form-urlencoded"  
                                      "**authorization**"    :  Basic _Base64\(client\_id:client\_secret\)_
 
-End Point              \|   **​https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token/revoke​  
-                                   https://apigw.koscom.co.kr/auth/oauth/v2/token/revoke**
+End Point              \|   **​https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/token/revoke​  
+                                   https://apigw.koscom.co.kr/auth/oauth/v3/token/revoke**
 
 Parameters          \|   **`token`**=발급받았던\_token & **`token_type_hint`**=access\_token또는refresh\_token
 

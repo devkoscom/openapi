@@ -141,7 +141,7 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example {#example}
+#### Request Example <a id="example"></a>
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -395,7 +395,7 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example {#example}
+#### Request Example <a id="example"></a>
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -421,7 +421,7 @@ Basic Authentication 인증 사용
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### Request Parameters {#request-parameters}
+#### Request Parameters <a id="request-parameters"></a>
 
 | **Name** | **Type** | **Description** | ​ |
 | :--- | :--- | :--- | :--- |
@@ -608,7 +608,7 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example {#example}
+#### Request Example <a id="example"></a>
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -775,7 +775,7 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example {#example-1}
+#### Request Example <a id="example-1"></a>
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -953,7 +953,7 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example {#example}
+#### Request Example <a id="example"></a>
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}

@@ -5,7 +5,7 @@
 **사전에 이용기관 등록**이 완료되어야 합니다.
 {% endhint %}
 
-## 이용기관 등록 절차 {#undefined}
+## 이용기관 등록 절차 <a id="undefined"></a>
 
 ![](../.gitbook/assets/image%20%2835%29.png)
 
@@ -37,15 +37,15 @@
 
 
 
-## API 게시\(제공\) 절차 {#api}
+## API 게시\(제공\) 절차 <a id="api"></a>
 
 오픈플랫폼에 API를 게시하기 위해서는 Sandbox에서 API게시 및 테스트를 완료하여야 합니다.
 
-![](../.gitbook/assets/image%20%2847%29.png)
+![](../.gitbook/assets/image%20%2848%29.png)
 
 
 
-## API 구독\(사용\) 절차 {#api-1}
+## API 구독\(사용\) 절차 <a id="api-1"></a>
 
 핀테크 기업이 오픈플랫폼의 API를 이용하여 새로운 서비스를 제공하기 위해서는 Sandbox에서 업무적합성 검증을 완료하여야 합니다.
 

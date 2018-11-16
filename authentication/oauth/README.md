@@ -46,21 +46,21 @@ OAuth 인증체계를 사용하는 API는 **민감정보가 포함된** 데이�
 **핀테크 앱 실행**  
 핀테크 서비스가 앱으로 구현되었다면 오핀과 연동 하세요.
 
-![](../../.gitbook/assets/image%20%2869%29.png)
+![](../../.gitbook/assets/image%20%2870%29.png)
 
 
 
 **OAuth 로그인**  
 OFin 설치 여부 체크 후 설치되어 있을 경우 OFIN 실행 &gt; OAuth 화면이 열립니다. 
 
-![](../../.gitbook/assets/image%20%28115%29.png)
+![](../../.gitbook/assets/image%20%28116%29.png)
 
 
 
 **정보제공 권한 허용**  
 OAuth로그인이 완료되면 정보제공 권한 여부 설정 화면으로 이동합니다. \[허용\] 터치 시 핀테크 앱의 서비스를 이용할 수 있습니다. 
 
-![](../../.gitbook/assets/image%20%2879%29.png)
+![](../../.gitbook/assets/image%20%2880%29.png)
 
 
 

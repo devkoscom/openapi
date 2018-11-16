@@ -1,5 +1,9 @@
 # 오핀\(OFin\) 이용
 
+## 모바일 설
+
+ **오핀\(OFin\)** 모바일 앱\([Android](https://play.google.com/store/apps/details?id=com.oppf.mobile&hl=ko) , [iOS](https://itunes.apple.com/kr/app/%EC%98%A4%ED%95%80/id1255027364)\) 설치
+
 ## 메인 화면
 
 #### \[메인화면\] 로그인 전

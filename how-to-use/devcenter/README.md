@@ -1,18 +1,32 @@
 # 개발자센터 이용방법
 
-API에 대한 개발가이드와 테스트를 하기 위해서는 **오픈플랫폼 개발자센터**\([http://developers.koscom.co.kr](http://developers.koscom.co.kr)\) 회원에 가입해야 합니다. 이메일로 승인대기 안내메일이 발송됩니다. 신청서류를 작성하여 `open@koscom.co.kr` 으로 메일 발송하시면 관리자에 의한 승인절차가 진행됩니다. 승인완료 메일수신 후 로그인이 가능합니다.
+API에 대한 개발가이드와 테스트를 하기 위해서는 **오픈플랫폼 개발자센터**\([http://developers.koscom.co.kr](http://developers.koscom.co.kr)\) 회원에 가입해야 합니다. 
+
+회원 가입 후 이메일로 승인 대기 안내메일이 발송됩니다. 신청서류를 작성하여 `open@koscom.co.kr` 으로 메일 발송하시면 관리자에 의한 승인절차가 진행됩니다. 승인완료 메일수신 후 로그인이 가능합니다.
 
 개발자센터\(Sandbox\)는 API 개발에 관련된 가이드와 개발 및 테스트용 핀테크 서비스 응용프로그램 \(앱 또는 웹 서비스이며, 이하 앱\)을 등록하여 개발단계에 이용하실 수 있도록 관련 기능을 제공합니다. 
 
-{% hint style="danger" %}
-개발자센터는 **핀테크기업** 또는 **금융투자회사**를 대상으로 합니다. \( 일반개발자 사용 불가 \)   
-자세한 안내사항은 [오픈플랫폼 이용안내](http://biz.koscom.co.kr/cmm/intro/introOppfUse.do)에서 확인하십시오.
-{% endhint %}
+### 
+
+### 개발자 센터\(sandbox 플랫폼\) 계정발급
+
+#### 신청 서류
+
+* [OpenAPI 플랫폼 사용 신청서 1 부](https://developers.koscom.co.kr/resources/documentation/OpenAPI_Platform_Reg.docx)
+* 법인등기부 등본 1부
+* 사업자 등록증 1부
+* 사업계획서 \(자유 양식\) 1부. 끝
+
+#### 계정발급 신청
+
+* 계정 발급 서류 제출 \(이메일 : open@koscom.co.kr\)
+* [개발자 센터](https://developers.koscom.co.kr/) &gt; 회원 가입
+* 서류 검토 후 온라인 가입 승인
 
 {% hint style="warning" %}
 **오픈API 플랫폼\(개발자센터\)  이용 대상**   
   
-1. 이용 대상   
+1. 이용 대상 \(법인 기업 한정\)   
 「중소기업기본법」상 중소기업 중 아래의 하나에 해당하는 기관   
 -   금융위원회의 핀테크산업 분류업종 업체   
 -   전자금융업자 또는 전자금융보조업자   

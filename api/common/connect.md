@@ -131,19 +131,20 @@ Application/json
 {% endapi-method-response-example-description %}
 
 ```yaml
-{  
-   "vtAccList":[  
-      {  
-         "comId": " 00002",
-         "vtAccNo":"160657695589800099",
-         "vtAccAlias":"주식투자용"
-      },
-      {  
-         "comId":" 00002",
-         "vtAccNo":"160657695589800099",
-         "vtAccAlias":"펀드투자용"
-      }
-   ]
+{
+	"vtAccList":[
+		{
+			"comId": " 00002",
+			"vtAccNo":"160657695589800099",
+			"vtAccAlias":"주식투자용"
+		},
+		{
+			"comId":" 00002",
+			"vtAccNo":"160657695589800099",
+			"vtAccAlias":"펀드투자용"
+		}
+	],
+	"serviceTermsExpireDate": "20190813"
 }
 ```
 {% endapi-method-response-example %}
@@ -192,6 +193,7 @@ Application/json
 | comId | String\(5\) | 금융회사코드 |  |
 | vtAccNo | String\(18\) | 가상계좌번호 |  |
 | vtAccAlias | String\(20\) | 가상계좌번호 별칭 |  |
+| serviceTermsExpireDate | String\(8\) | 이용자의 핀테크서비스 금융정보제공동의 만료일 |  |
 
 
 

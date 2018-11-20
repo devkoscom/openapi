@@ -1,6 +1,6 @@
 # 선물 시세조회
 
-상품/지수 선물시장에 상장된 종목 리스트, 종목 마스터, 종목 체결, 호가 잔량등을 제공한다.
+투상품/지수 선물시장에 상장된 종목 리스트, 종목 마스터, 종목 체결, 호가 잔량등을 제공한다.
 
 
 
@@ -508,6 +508,56 @@ Authentication     \|   **API Key**
 | askStep1BstordCnt | number\(11\) | 매도5단계우선호가건수 |  |
 | ordAcptTm | number\(11\) | 호가접수시각 |  |
 | deemTrdPrc | number\(11\) | 예상체결가격 |  |
+
+
+
+
+
+## 시장별 투자자별 매매동향
+
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/futures" path="/{marketcode}/market/investors" %}
+{% api-method-summary %}
+ /v2/market/futures/{marketcode}/market/investors
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="marketcode" required=true type="string" %}
+시장코드
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+ddd
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| :--- | :--- | :--- | :--- |
+| Tm | string\(8\) | 장시간 | HHMMSSmm |
+| invstLists | array\(4\) | 투자자리스트 |  |
+| invstCd | string\(4\) | 투자자코드 | 투자자코드표 참조 |
+| MktAccAskTrdvol | number\(11\) | 시장누적매도체결수량 |  |
+| MktAccAskTrdval | number\(11\) | 시장누적매도거래대금 | 백만 |
+| MktAccBidTrdvol | number\(11\) | 시장누적매수체결수량 |  |
+| MktAccBidTrdval | number\(11\) | 시장누적매수거래대금 | 백만 |
 
 
 

@@ -105,7 +105,8 @@ GET /v2/market/stocks/kospi/005930/selectivemaster?prevddClsprc&wk52HgstPrc
 | dd20AvgDp | number\(11\) | 전일이격도20일이동평균 |  | ~/selectivemaster 요구형만 제공 |
 | dd60AvgDp | number\(11\) | 전일이격도60일이동평균 |  | ~/selectivemaster 요구형만 제공 |
 | dd120AvgDp | number\(11\) | 전일이격도120일이동평균 |  | ~/selectivemaster 요구형만 제공 |
-| BzDd | number\(8\) | 영업일 | 시장별 최종가동일, 입회일\(오늘일 경우 정상시장 가동\) | ~/selectivemaster 요구형만 제공 |
+| BzDd | number\(11\) | 영업일 | 시장별 최종가동일, 입회일\(오늘일 경우 정상시장 가동\) | ~/selectivemaster 요구형만 제공 |
+| IsuEngNm | string\(80\) | 종목명\(영문\) |  | ~/selectivemaster 요구형만 제공 |
 
 
 

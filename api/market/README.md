@@ -57,7 +57,7 @@
 | 업종 | 업종 일중 | /v2/market/index/{marketcode}/{issuecode}/intraday |
 | 업종 | 업종 히스토리 | /v2/market/index/{marketcode}/{issuecode}/history |
 
-{% hint style="info" %}
+{% hint style="success" %}
 고객업무 요청시 협의 후 추가 API 제공가능
 {% endhint %}
 

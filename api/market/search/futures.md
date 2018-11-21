@@ -540,7 +540,37 @@ Authentication     \|   **API Key**
 {% endapi-method-response-example-description %}
 
 ```yaml
-ddd
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "Tm": "10354300",
+     "invstLists": [ 
+      {
+         "invstCd": "01",
+         "MktAccAskTrdvol": 5125,
+         "MktAccAskTrdval": 341009087,
+         "MktAccBidTrdvol": 6850,
+         "MktAccBidTrdval": 455691162 
+      },
+      {
+         "invstCd": "02",
+         "MktAccAskTrdvol": 147,
+         "MktAccAskTrdval": 9771937,
+         "MktAccBidTrdvol": 54,
+         "MktAccBidTrdval": 3590650 
+      },
+       ...
+      {
+         "invstCd": "16",
+         "MktAccAskTrdvol": 1170,
+         "MktAccAskTrdval": 77840275,
+         "MktAccBidTrdvol": 1114,
+         "MktAccBidTrdval": 74099787 
+      } 
+    ] 
+  } 
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

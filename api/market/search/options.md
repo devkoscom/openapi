@@ -514,6 +514,102 @@ Authentication     \|   **API Key**
 
 
 
+## 시장별 투자자별 매매동향
+
+{% api-method method="get" host="https://{APIGWAddr}/v2/market/options" path="/{marketcode}/market/investors" %}
+{% api-method-summary %}
+ /v2/market/options/{marketcode}/market/investors
+{% endapi-method-summary %}
+
+{% api-method-description %}
+상품/지수선물 종
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="marketcode" required=true type="string" %}
+시장코드
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "Tm": "10415900",
+     "invstLists": [ 
+      {
+         "invstCd": "01",
+         "CallAccAskTrdvol": 152062,
+         "CallAccAskTrdval": 6600222,
+         "CallAccBidTrdvol": 146356,
+         "CallAccBidTrdval": 9397987,
+         "PutAccAskTrdvol": 14062,
+         "PutAccAskTrdval": 5049965,
+         "PutAccBidTrdvol": 13850,
+         "PutAccBidTrdval": 3119705 
+      },
+      {
+         "invstCd": "02",
+         "CallAccAskTrdvol": 0,
+         "CallAccAskTrdval": 0,
+         "CallAccBidTrdvol": 190,
+         "CallAccBidTrdval": 9500,
+         "PutAccAskTrdvol": 0,
+         "PutAccAskTrdval": 0,
+         "PutAccBidTrdvol": 0,
+         "PutAccBidTrdval": 0 
+      },
+       ...
+      {
+         "invstCd": "16",
+         "CallAccAskTrdvol": 30748,
+         "CallAccAskTrdval": 3782255,
+         "CallAccBidTrdvol": 29008,
+         "CallAccBidTrdval": 2070807,
+         "PutAccAskTrdvol": 11255,
+         "PutAccAskTrdval": 2857505,
+         "PutAccBidTrdvol": 10955,
+         "PutAccBidTrdval": 7402262 
+      } 
+    ] 
+  } 
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Response Parameters
+
+| **Name** | **Type** | **Description** |  |
+| :--- | :--- | :--- | :--- |
+| Tm | String\(8\) | 장시간 | HHMMSSmm |
+| invstLists | Array\(4\) | 투자자리스트 |  |
+| invstCd | String\(4\) | 투자자코드 | '투자자코드표' 참조 |
+| CallAccAskTrdvol | Number\(11\) | 옵션콜누적매도체결수량 | 기초시장 기준 |
+| CallAccAskTrdval | Number\(11\) | 옵션콜누적매도거래대금 | 기초시장 기준, 백만 |
+| CallAccBidTrdvol | Number\(11\) | 옵션콜누적매수체결수량 | 기초시장 기준 |
+| CallAccBidTrdval | Number\(11\) | 옵션콜누적매수거래대금 | 기초시장 기준, 백만 |
+| PutAccAskTrdvol | Number\(11\) | 옵션풋누적매도체결수량 | 기초시장 기준 |
+| PutAccAskTrdval | Number\(11\) | 옵션풋누적매도거래대금 | 기초시장 기준, 백만 |
+| PutAccBidTrdvol | Number\(11\) | 옵션풋누적매수체결수량 | 기초시장 기준 |
+| PutAccBidTrdval | Number\(11\) | 옵션풋누적매수거래대금 | 기초시장 기준, 백만 |
+
+
+
+
+
 ## 상품/지수옵션 일중
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/options" path="/{marketcode}/{issuecode}/intraday" %}

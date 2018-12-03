@@ -1,7 +1,5 @@
 # API 서비스
 
-Here are the articles in this section:
-
 {% page-ref page="common/" %}
 
 {% page-ref page="account.md" %}

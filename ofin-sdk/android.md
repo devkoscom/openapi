@@ -264,7 +264,7 @@ private void startJoinSampleForActivityResult() {
 약관 및 본인인증  
 약관에 동의하시면 휴대폰 인증 버튼이 활성화됩니다. 
 
-![&#xC57D;&#xAD00; &#xBC0F; &#xBCF8;&#xC778;&#xC778;&#xC99D;](../.gitbook/assets/image%20%2888%29.png)
+![&#xC57D;&#xAD00; &#xBC0F; &#xBCF8;&#xC778;&#xC778;&#xC99D;](../.gitbook/assets/image%20%2889%29.png)
 
 휴대폰 인증  
 정보 입력 후 \[인증번호 전송\] 버튼을 터치하면 SMS로 인증번호가 발송됩니다. 수신된 인증번호 입력 후 \[인증하기\] 버튼을 터치합니다. 
@@ -376,7 +376,7 @@ OAuth  로그인창 호출시 , OFIN설치 여부 체크 후 설치되어 있을
 정보제공 권한 허용  
 OAuth로그인이 완료되면 정보제공 권한 여부 설정 화면으로 이동합니다. \[허용\] 터치 시 핀테크 앱의 서비스를 이용할 수 있습니다. 
 
-![&#xC815;&#xBCF4;&#xC81C;&#xACF5; &#xAD8C;&#xD55C; &#xD5C8;&#xC6A9;](../.gitbook/assets/image%20%28111%29.png)
+![&#xC815;&#xBCF4;&#xC81C;&#xACF5; &#xAD8C;&#xD55C; &#xD5C8;&#xC6A9;](../.gitbook/assets/image%20%28112%29.png)
 
 
 
@@ -452,7 +452,7 @@ private void startRequestSampleForActivityResult() {
 앱 사용 신청 완료  
 사용 신청이 정상적으로 완료 되면 해당 핀테크 서비스를 사용 하실 수 있습니다. 
 
-![](../.gitbook/assets/image%20%2887%29.png)
+![](../.gitbook/assets/image%20%2888%29.png)
 
 
 

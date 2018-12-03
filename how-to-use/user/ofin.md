@@ -2,7 +2,7 @@
 
 ## 모바일 설치
 
-![](../../.gitbook/assets/image%20%28121%29.png)
+![](../../.gitbook/assets/image%20%28122%29.png)
 
  **오핀\(OFin\)** 모바일 앱\([Android](https://play.google.com/store/apps/details?id=com.oppf.mobile&hl=ko) , [iOS](https://itunes.apple.com/kr/app/%EC%98%A4%ED%95%80/id1255027364)\) 설치
 
@@ -18,7 +18,7 @@
 
 로그인 후에는 신청 완료된 내 앱 목록이 출력됩니다. 
 
-![](../../.gitbook/assets/image%20%28109%29.png)
+![](../../.gitbook/assets/image%20%28110%29.png)
 
 **\[메인화면\] 검색**
 
@@ -47,7 +47,7 @@
 
 로그인 후 우측 하단 플로팅 버튼 터치 시, 앱 사용 신청과 계좌관리 화면으로 이동할 수 있는 버튼이 활성화됩니다.
 
-![](../../.gitbook/assets/image%20%2896%29.png)
+![](../../.gitbook/assets/image%20%2897%29.png)
 
 
 
@@ -113,7 +113,7 @@
 
 신청이 완료되었습니다. 코스콤과 선택한 핀테크기업에 정보 제공을 허용한 유효기간 동안 서비스 이용이 가능합니다.
 
-![](../../.gitbook/assets/image%20%28103%29.png)
+![](../../.gitbook/assets/image%20%28104%29.png)
 
 **\[앱사용신청\] 메인 \(앱목록\)**
 
@@ -141,7 +141,7 @@
 
 별칭 수정이 가능합니다. 
 
-![](../../.gitbook/assets/image%20%2892%29.png)
+![](../../.gitbook/assets/image%20%2893%29.png)
 
 **\[계좌관리\] 삭제**
 
@@ -157,13 +157,13 @@
 
 통합계좌조회 메뉴 터치 시, 신청 여부를 체크하여 신청 전일 경우 메시지를 출력합니다. 확인 버튼 터치 시 신청 화면으로 이동합니다. 
 
-![](../../.gitbook/assets/image%20%28125%29.png)
+![](../../.gitbook/assets/image%20%28126%29.png)
 
 **\[통합계좌조회\] 앱 사용 신청**
 
 앱 신청과 관련된 부분은 [앱 사용 신청 ](https://koscom.gitbook.io/open-api/1/undefined-4/undefined/ofin#undefined-3)부분을 참고하시기 바랍니다. 
 
-![](../../.gitbook/assets/image%20%28117%29.png)
+![](../../.gitbook/assets/image%20%28118%29.png)
 
 **\[통합계좌조회\] 정보제공 권한 허용**
 

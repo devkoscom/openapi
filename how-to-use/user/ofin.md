@@ -2,7 +2,7 @@
 
 ## 모바일 설치
 
-![](../../.gitbook/assets/image%20%28119%29.png)
+![](../../.gitbook/assets/image%20%28121%29.png)
 
  **오핀\(OFin\)** 모바일 앱\([Android](https://play.google.com/store/apps/details?id=com.oppf.mobile&hl=ko) , [iOS](https://itunes.apple.com/kr/app/%EC%98%A4%ED%95%80/id1255027364)\) 설치
 
@@ -18,14 +18,14 @@
 
 로그인 후에는 신청 완료된 내 앱 목록이 출력됩니다. 
 
-![](../../.gitbook/assets/image%20%28108%29.png)
+![](../../.gitbook/assets/image%20%28109%29.png)
 
 **\[메인화면\] 검색**
 
 키워드 입력 후 키패드의 이동 또는 다음 버튼을 터치하면 검색 결과가 출력됩니다.   
 \[X\]버튼 터치 시, 검색 결과 초기화
 
-![](../../.gitbook/assets/image%20%2868%29.png)
+![](../../.gitbook/assets/image%20%2869%29.png)
 
 
 
@@ -47,7 +47,7 @@
 
 로그인 후 우측 하단 플로팅 버튼 터치 시, 앱 사용 신청과 계좌관리 화면으로 이동할 수 있는 버튼이 활성화됩니다.
 
-![](../../.gitbook/assets/image%20%2895%29.png)
+![](../../.gitbook/assets/image%20%2896%29.png)
 
 
 
@@ -63,7 +63,7 @@
 
 약관에 동의하시면 휴대폰 인증 버튼이 활성화됩니다. 
 
-![](../../.gitbook/assets/image%20%2871%29.png)
+![](../../.gitbook/assets/image%20%2872%29.png)
 
 **\[회원가입\] 휴대폰인증**
 
@@ -113,7 +113,7 @@
 
 신청이 완료되었습니다. 코스콤과 선택한 핀테크기업에 정보 제공을 허용한 유효기간 동안 서비스 이용이 가능합니다.
 
-![](../../.gitbook/assets/image%20%28102%29.png)
+![](../../.gitbook/assets/image%20%28103%29.png)
 
 **\[앱사용신청\] 메인 \(앱목록\)**
 
@@ -141,7 +141,7 @@
 
 별칭 수정이 가능합니다. 
 
-![](../../.gitbook/assets/image%20%2891%29.png)
+![](../../.gitbook/assets/image%20%2892%29.png)
 
 **\[계좌관리\] 삭제**
 
@@ -157,13 +157,13 @@
 
 통합계좌조회 메뉴 터치 시, 신청 여부를 체크하여 신청 전일 경우 메시지를 출력합니다. 확인 버튼 터치 시 신청 화면으로 이동합니다. 
 
-![](../../.gitbook/assets/image%20%28123%29.png)
+![](../../.gitbook/assets/image%20%28125%29.png)
 
 **\[통합계좌조회\] 앱 사용 신청**
 
 앱 신청과 관련된 부분은 [앱 사용 신청 ](https://koscom.gitbook.io/open-api/1/undefined-4/undefined/ofin#undefined-3)부분을 참고하시기 바랍니다. 
 
-![](../../.gitbook/assets/image%20%28116%29.png)
+![](../../.gitbook/assets/image%20%28117%29.png)
 
 **\[통합계좌조회\] 정보제공 권한 허용**
 
@@ -176,7 +176,7 @@
 상단에는 통합계좌조회 서비스에 연결된 계좌의 수와 해당 계좌의 금융투자회사 수가 출력되며 계좌는 등록되었지만 통합계좌조회 서비스에 연결되지 않은 계좌가 있을 경우 추가버튼이 출력됩니다.   
 검색을 원하는 금융투자회사 또는 가상계좌 선택 후 상단 검색 버튼을 터치합니다.
 
-![](../../.gitbook/assets/image%20%2876%29.png)
+![](../../.gitbook/assets/image%20%2877%29.png)
 
 자산현황/거래내역/포트폴리오/관심종목 모두 원하는 조건 선택 후 검색 버튼을 터치하면 결과가 조회됩니다. 
 

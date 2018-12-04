@@ -1,4 +1,4 @@
-# 핀테크 기업 이용절차
+# 오픈플랫폼 이용절차 - 핀테크 기업
 
 {% hint style="danger" %}
 오픈플랫폼에 API 게시 \(제공\) 또는 API 구독 \(사용\) 을 위해서는   
@@ -7,7 +7,7 @@
 
 ## 이용기관 등록 절차 <a id="undefined"></a>
 
-![](../.gitbook/assets/image%20%2837%29.png)
+![](../.gitbook/assets/image%20%2838%29.png)
 
 1. **API 및 서비스 사전검증**
 
@@ -41,7 +41,7 @@
 
 오픈플랫폼에 API를 게시하기 위해서는 Sandbox에서 API게시 및 테스트를 완료하여야 합니다.
 
-![](../.gitbook/assets/image%20%2850%29.png)
+![](../.gitbook/assets/image%20%2851%29.png)
 
 
 

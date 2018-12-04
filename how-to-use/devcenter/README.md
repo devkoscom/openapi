@@ -1,4 +1,4 @@
-# 개발자센터 이용방법
+# 개발자센터 이용절차
 
 AP서비스에 대한 개발 및  테스트를 하기 위해서는 **코스콤 개발자센터**\([http://developers.koscom.co.kr](http://developers.koscom.co.kr)\) 계정 발급을 완료 하여야 합니다.
 
@@ -13,7 +13,7 @@ AP서비스에 대한 개발 및  테스트를 하기 위해서는 **코스콤 �
 * [OpenAPI 플랫폼 사용 신청서 1 부](https://developers.koscom.co.kr/resources/documentation/OpenAPI_Platform_Reg.docx)
 * 법인등기부 등본 1부
 * 사업자 등록증 1부
-* 사업계획서 \(자유 양식\) 1부. 끝
+* 서비스 계획서 \(자유 양식\) 1부. 끝
 
 #### 계정발급 신청
 

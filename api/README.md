@@ -1,5 +1,9 @@
 # API 서비스
 
+## **오픈API플랫폼 Gateway 주소**
+
+**Sandbox**\(샌드박스\)  \|  https://sandbox-apigw.koscom.co.kr
+
 {% page-ref page="common/" %}
 
 {% page-ref page="account.md" %}

@@ -1,8 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
-* [Open API Platform 매뉴얼](manual.md)
-* [오픈플랫폼 개요](oppf-summary.md)
+* [오픈플랫폼 개요](README.md)
 * [이용절차 안내](how-to-use/README.md)
   * [핀테크 기업 이용절차](how-to-use/oppf.md)
   * [개발자센터 이용절차](how-to-use/devcenter/README.md)

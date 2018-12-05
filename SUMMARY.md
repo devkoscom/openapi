@@ -46,6 +46,7 @@
   * [iOS](ofin-sdk/ios.md)
   * [Android](ofin-sdk/android.md)
 * [Error Code](error-code.md)
+* [Rate Limiting](rate-limiting.md)
 * [FAQ](faq/README.md)
   * [오픈플랫폼](faq/oppf.md)
   * [API 사용절차](faq/api.md)

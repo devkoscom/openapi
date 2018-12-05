@@ -639,17 +639,15 @@ Authentication     \|   **API Key**
 
 **Response Parameters**
 
-| **Name** | **Type** | **Description** |  |
-| :--- | :--- | :--- | :--- |
-| isuSrtCd | string\(9\) | 종목단축코드 |  |
-| invstLists | Array\(4\) | 투자자리스트 |  |
-| invstCd | string\(4\) | 투자자코드 | '투자자코드표' 참조 |
-| askTrdvol | number\(10\) | 매도체결수량,매도거래량 |  |
-| askTrdval | number\(22\) | 매도거래대금 |  |
-| bidTrdvol | number\(10\) | 매수체결수량,매수거래량 |  |
-| bidTrdval | number\(22\) | 매수거래대금 |  |
-
-
+| **Name** | **Type** | **Description** |
+| :--- | :--- | :--- |
+| isuSrtCd | string\(9\) | 종목단축코드 |
+| invstLists | Array\(4\) | 투자자리스트 |
+| invstCd | string\(4\) | 투자자코드 \(참조 :투자자코드표'\) |
+| askTrdvol | number\(10\) | 매도체결수량,매도거래량 |
+| askTrdval | number\(22\) | 매도거래대금 |
+| bidTrdvol | number\(10\) | 매수체결수량,매수거래량 |
+| bidTrdval | number\(22\) | 매수거래대금 |
 
 
 

@@ -1,7 +1,3 @@
----
-description: 'http://open.koscom.co.kr/'
----
-
 # 금융투자 핀테크 포털
 
 ## 금융투자 핀테크 포털 소개

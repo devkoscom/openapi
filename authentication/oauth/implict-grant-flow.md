@@ -1,4 +1,4 @@
-# Implict Grant Flow
+# Implict
 
 이 OAuth 방식은 핀테크 서비스의 최종 단말\(앱, 브라우저 등\)에서 직접 데이터소유자가 데이터접근동의를 하고 access token을 받아 단말 프로그램에서 API를 호출하는 구조에 적합합니다.
 
@@ -11,5 +11,5 @@
 
 
 
-![Implicit Grant Flow &#xC808;&#xCC28;](../../.gitbook/assets/image%20%2843%29.png)
+![Implicit Grant Flow &#xC808;&#xCC28;](../../.gitbook/assets/image%20%2845%29.png)
 

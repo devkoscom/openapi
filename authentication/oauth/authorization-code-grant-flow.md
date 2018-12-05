@@ -1,4 +1,4 @@
-# Authorization Code Grant Flow
+# Authorization Code
 
 이 OAuth 방식은 데이터소유자\(Resource Owner, 서비스 이용자\)에게 데이터 접근에 대한 권한을 위임 받아 `access token`을 오픈플랫폼으로부터 받아오고, 만기\(expiration time\)을 갖는 access token을 갱신\(refresh token\)할 수 있는 권한도 부여 받아 데이터소유자의 승인과정 없이도 API를 통해 데이터에 접근할 수 있는 인증방식입니다.
 
@@ -12,7 +12,7 @@
 
 또한 서비스단말을 통해 authorization code를 받아오고, 그 응답은 애플리케이션 서버로 redirect되기 때문에 핀테크 서비스 사용자 세션정보, authorization code, access token, refresh token 간의 매핑정보 관리 체계를 만들고 보안에 유의해야 합니다.
 
-![Authorization Code Grant Flow](../../.gitbook/assets/image%20%2820%29.png)
+![Authorization Code Grant Flow](../../.gitbook/assets/image%20%2822%29.png)
 
 > **Flow** **0 ~ 1      \|    핀테크 서비스 자체 인증 수행**
 >
@@ -60,7 +60,7 @@ Parameters          \|   **`response_type`**=code & **`client_id`**=클라이언
 
 Flow 2를 요청하면 그 응답으로 Authorization Code를 받아오는 것을 승인할 수 있도록 아래와 같은 권한정보입력 창을 응답으로 내려줍니다.
 
-![](../../.gitbook/assets/image%20%2839%29.png)
+![](../../.gitbook/assets/image%20%2841%29.png)
 
 핀테크 서비스 이용자가 금융투자 핀테크포털 가입 시 사용했던 아이디와 비밀번호\(또는 OTP\)를 입력하고 로그인 버튼을 누르면, 오픈플랫폼은 이용자가 입력한 정보를 확인하여 정상적인 경우 authorization code를 응답으로 받을 수 있습니다. 비밀번호 또는 OTP가 연속으로 틀린 경우 계정잠김상태로 전환됩니다. 오픈플랫폼 관리자가 비밀번호 초기화 또는 OTP를 초기화할 수 있도록 안내가 필요합니다.
 

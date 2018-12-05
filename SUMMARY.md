@@ -6,7 +6,7 @@
   * [개발자센터 이용절차](how-to-use/devcenter/README.md)
     * [애플리케이션 등록](how-to-use/devcenter/enrollapp.md)
     * [API 테스트](how-to-use/devcenter/testapi.md)
-  * [핀테크 금융서비스 이용](how-to-use/user/README.md)
+  * [핀테크 금융서비스 이용 절차](how-to-use/user/README.md)
     * [금융투자 핀테크 포털](how-to-use/user/portal.md)
     * [오핀\(OFin\)](how-to-use/user/ofin.md)
 * [API 서비스](api/README.md)

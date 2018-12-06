@@ -57,6 +57,19 @@ Application/json
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Request Body Parameters
+
+| **Name** | **Type** | **Description** |
+| :--- | :--- | :--- |
+| comId | String\(5\) | 핀테크기업코드 |
+| srvId | String\(20\) | 핀테크서비스코드 |
+| reqIdPlatform | String | `사용안함` |
+| reqIdConsumer | String\(20\) | `선택` 핀테크기업에서 사용하는 메시지 |
+| ci | String\(88\) | 연계정보 |
+| korName | String\(10\) | 한글이름 |
+
+핀테크기업코드
+
 #### Request Body Example
 
 {% code-tabs %}
@@ -80,24 +93,35 @@ Application/json
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### Request Parameters
+#### Response Body Parameters
 
 | **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
-| comId | String\(5\) | 핀테크기업코드 |
-| srvId | String\(20\) | 핀테크서비스코드 |
-| reqIdPlatform | String | `사용안함` |
-| reqIdConsumer | String\(20\) | `선택` 핀테크기업에서 사용하는 메시지 |
-| ci | String\(88\) | 연계정보 |
-| korName | String\(10\) | 한글이름 |
+| result | String\(12\) |  회원가입여부 \(member \| nonMember\) |
+|  commonTermsExpireDate  | String\(8\) |  이용자의 오픈플랫폼 금융정보제동 동의 만료일 |
 
-#### Response Parameters
+#### Request Body Example
 
-| **Name** | **Type** | **Description** |
-| :--- | :--- | :--- |
-| result | String\(12\) | 회원가입여부 \(member \| nonMember\) |
-
-
+{% code-tabs %}
+{% code-tabs-item title="Request Body Example" %}
+```yaml
+{  
+   "partner":{  
+      "comId":"F9999",
+      "srvId":"999"
+   },
+   "commonHeader":{  
+      "reqIdPlatform":"",
+      "reqIdConsumer":"fsfsfshi23",
+      "ci":"Q9z5ccmjYNrhPVXrdfgfgfFdfgFGHdfg3fGFGgghDFFGghghgSSSfgfgcvbdfgert45rgfgdfgfhpf5vmzjaA=="
+   },
+   "body":{  
+      "korName":"홍길동"
+   }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 ## 가상계좌 리스트 조회
 

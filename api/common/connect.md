@@ -1,4 +1,4 @@
-# 서비스연동
+# 서비스 연동
 
 오픈플랫폼과 핀테크 서비스 간에 연동을 위해 **금융투자 핀테크 포탈 가입여부 확인 API**와 핀테크 서비스에 연결된 **가상계좌를 조회할 수 있는 API**를 제공합니다. 
 
@@ -12,17 +12,16 @@
 
 
 
-## Syntax
+## Authentication    
 
-HTTP methods    \|   **POST**
+* **`API Key`**
 
-Authentication     \|   **API Key**
-
-
-
-## 금융투자 핀테크 포탈 가입 여부 확인 API
+## 회원 가입 여부 확인
 
 핀테크 서비스 이용자가 금융투자 핀테크 포탈에 가입했는지를 확인하기 위한 API
+
+* **핀테크 서비스 이용자가 오픈플랫폼 회원인지 확인하기 위한 API** 
+* 가상계좌번호 발급, 정보제공동의서 작성 등 사전절차 안내 필요 여부 확인用
 
 {% api-method method="post" host="https://{APIGWAddr}/v1/common/member" path="/register/search" %}
 {% api-method-summary %}
@@ -58,7 +57,7 @@ Application/json
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example
+#### Request Body Example
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -83,28 +82,29 @@ Application/json
 
 #### Request Parameters
 
-| **Name** | **Type** | **Description** |  |
-| :--- | :--- | :--- | :--- |
-| comId | String\(5\) | 핀테크기업코드 |  |
-| srvId | String\(20\) | 핀테크서비스코드 |  |
-| reqIdPlatform | String | . | 사용안함 |
-| reqIdConsumer | String\(20\) | 핀테크기업에서 사용하는 메시지 | 선택 |
-| ci | String\(88\) | 연계정보 |  |
-| korName | String\(10\) | 한글이름 |  |
+| **Name** | **Type** | **Description** |
+| :--- | :--- | :--- |
+| comId | String\(5\) | 핀테크기업코드 |
+| srvId | String\(20\) | 핀테크서비스코드 |
+| reqIdPlatform | String | `사용안함` |
+| reqIdConsumer | String\(20\) | `선택` 핀테크기업에서 사용하는 메시지 |
+| ci | String\(88\) | 연계정보 |
+| korName | String\(10\) | 한글이름 |
 
 #### Response Parameters
 
-| **Name** | **Type** | **Description** |  |
-| :--- | :--- | :--- | :--- |
-| result | String\(12\) | 회원가입여부 | member \| nonMember |
+| **Name** | **Type** | **Description** |
+| :--- | :--- | :--- |
+| result | String\(12\) | 회원가입여부 \(member \| nonMember\) |
 
 
 
-
-
-## 핀테크 앱 사용 신청 여부 확인 및 가상계좌 리스트 조회 API
+## 가상계좌 리스트 조회
 
 핀테크 서비스 이용자가 금융투자 핀테크 포탈에서 사용하려는 핀테크 서비스에 연결한 가상계좌리스트를 조회하기 위한 API \(금융거래정보 제3자 제공 동의 계좌\)
+
+* **핀테크 서비스 이용자가 발급받은 가상계좌번호 목록을 금투사 名과 함께 제공**
+* 금투사名과 가상계좌목록을 핀테크 서비스 App에 출력하여 이용할 계좌를 간편하게 선택할 수 있도록 함
 
 {% api-method method="post" host="https://{APIGWAddr}/v1/common/member" path="/consent/search" %}
 {% api-method-summary %}

@@ -41,7 +41,7 @@ API 제공 증권사, 일정, API 제공 범위 는 증권사의 사정에 따�
 
 ## 계좌 서비스 API 흐름도
 
-![](../.gitbook/assets/image%20%2833%29.png)
+![](../.gitbook/assets/image%20%2834%29.png)
 
 ## 유의사항
 

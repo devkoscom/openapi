@@ -40,32 +40,32 @@ OAuth 2.0 인증체계를 사용하는 API는 **민감정보가 포함된** 데�
 
 ## \*  Mobile Authentication
 
-#### **모바일 앱에서 오핀 연동 방법**
+#### **모바일 앱에서** [**오핀 연동 방법**](../../ofin-sdk/)\*\*\*\*
 
   
 **핀테크 앱 실행**  
 핀테크 서비스가 앱으로 구현되었다면 오핀과 연동 하세요.
 
-![](../../.gitbook/assets/image%20%2879%29.png)
+![](../../.gitbook/assets/image%20%2881%29.png)
 
 
 
 **OAuth 로그인**  
 OFin 설치 여부 체크 후 설치되어 있을 경우 OFIN 실행 &gt; OAuth 화면이 열립니다. 
 
-![](../../.gitbook/assets/image%20%28132%29.png)
+![](../../.gitbook/assets/image%20%28134%29.png)
 
 
 
 **정보제공 권한 허용**  
 OAuth로그인이 완료되면 정보제공 권한 여부 설정 화면으로 이동합니다. \[허용\] 터치 시 핀테크 앱의 서비스를 이용할 수 있습니다. 
 
-![](../../.gitbook/assets/image%20%2892%29.png)
+![](../../.gitbook/assets/image%20%2894%29.png)
 
 
 
 {% hint style="info" %}
-iOS 및 Android 용 SDK를 지원하고 있습니다.
+iOS 및 Android 용 [SDK](https://developers.koscom.co.kr/apiresources/sdk_download)를 지원하고 있습니다.
 {% endhint %}
 
 

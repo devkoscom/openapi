@@ -1,6 +1,6 @@
 # API 테스트
 
-본 페이지에서는 **API Key** 및 **OAuth2.0** 인증에 관한 **테스트 절차**를 다룹니다. 
+본 페이지에서는 **API를 호출하기 위한 개발자센터에서 테스트 하는 절차**를 다룹니다. 
 
 'APIs & 플랜' 메뉴에서 테스트 하려는 API의 인증유형을 확인합니다.
 
@@ -12,7 +12,7 @@
 
 
 
-## API Key 인증방식
+## API Key Authentication
 
 'API문서 &gt; 시세 서비스 &gt; 주식종목' 메뉴에서 'Select an Application' 을 눌러서 앱을 선택 합니다.  
 앱이 보이지 않으시면 해당 API를 사용하는 앱을 먼저 만드셔야 합니다. 애플리케이션 등록 방법은 [이곳](https://koscom.gitbook.io/open-api/how-to-use/devcenter/enrollapp)을 참조하세요.
@@ -37,7 +37,7 @@
 
 
 
-## Basic 인증방식
+## Basic  Authentication 
 
 'API문서 &gt; 일임매매서비스 &gt; XX증권-일임매매서비스' 메뉴에서 'Select an Application' 을 눌러서 앱을 선택 합니다. 앱이 보이지 않으시면 해당 API를 사용하는 앱을 먼저 만드셔야 합니다. 애플리케이션 등록 방법은 [이곳](https://koscom.gitbook.io/open-api/how-to-use/devcenter/enrollapp)을 참조하세요.
 
@@ -65,7 +65,7 @@ Username과 Password 항목에 등록한 어플리케이션의 API Key값과 Sec
 
 
 
-## OAuth 인증방식
+## OAuth 2.0
 
 {% hint style="warning" %}
 현재는 OAuth2.0 Grant Type 중 **Authorization Code 만 지원**하며,   
@@ -96,11 +96,11 @@ Implicit Grant Type 등은 보안수준 및 비즈니스모델에 따라 협의�
 >
 > * Authorize Endpoint
 >
->        [https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/authorize](https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/authorize) 값을 입력 합니다.
+>        [https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/authorize](https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/authorize) 값을 입력 합니다.
 >
 > * Token Endpoint
 >
->        [https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token](https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token)   값을 입력 합니다.
+>        [https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/token](https://sandbox-apigw.koscom.co.kr/auth/oauth/v2/token)   값을 입력 합니다.
 
 'OK' 버튼을 누르시면 사용자 로그인창이 오픈 되며, 아이디 및 비밀번호를 입력하시고 로그인 합니다.   
 아이디와 비밀번호\(OTP번호\)는 금융투자 핀테크 포털 가입 시 등록한 것이며, 테스트를 위해 별도로 부여됩니다. 추가적인 고유 계정이 필요하시면 관리자에게 문의하십시오.

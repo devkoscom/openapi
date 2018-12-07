@@ -12,9 +12,9 @@
 
 
 
-#### Authentication   \| **`API Key`**
+### Authentication   \| **`API Key`**
 
-### 회원 가입 여부 확인
+## 회원 가입 여부 확인
 
 핀테크 서비스 이용자가 금융투자 핀테크 포탈에 가입했는지를 확인하기 위한 API
 
@@ -66,7 +66,7 @@ Application/json
 | ci | String\(88\) | 연계정보 |
 | korName | String\(10\) | 한글이름 |
 
-`핀테크기업코드` 및 `핀테크서비스코드`는 이용기관 등록 이후 발급 되면 샌드박스에서 테스트 시에는 핀테크 기업 코드 `"comId" : "F0995"`, 핀테크 서비스 코드 `"srvId" : "297"`로 테스트 가능
+`핀테크기업코드` 및 `핀테크서비스코드`는 이용기관 등록 이후 발급 되며 샌드박스에서 테스트 시에는 임시로 핀테크 기업 코드 `"comId" : "F0995"`, 핀테크 서비스 코드 `"srvId" : "297"`로 테스트 가능
 
 #### Request Body Example
 
@@ -120,7 +120,7 @@ Application/json
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### 가상계좌 리스트 조회
+## 가상계좌 리스트 조회
 
 핀테크 서비스 이용자가 금융투자 핀테크 포탈에서 사용하려는 핀테크 서비스에 연결한 가상계좌리스트를 조회하기 위한 API \(금융거래정보 제3자 제공 동의 계좌\)
 
@@ -207,7 +207,7 @@ Application/json
 | ci | String\(88\) | 연계정보 |
 | korName | String\(12\) | 한글이름 |
 
-`핀테크기업코드` 및 `핀테크서비스코드`는 이용기관 등록 이후 발급 되면 샌드박스에서 테스트 시에는 핀테크 기업 코드 `"comId" : "F0995"`, 핀테크 서비스 코드 `"srvId" : "297"`로 테스트 가능
+`핀테크기업코드` 및 `핀테크서비스코드`는 이용기관 등록 이후 발급 되며면 샌드박스에서 테스트 시에는 임시로 핀테크 기업 코드 `"comId" : "F0995"`, 핀테크 서비스 코드 `"srvId" : "297"`로 테스트 가능
 
 #### Response Body Parameters
 
@@ -218,7 +218,7 @@ Application/json
 | vtAccAlias | String\(20\) | 가상계좌번호 별칭 |
 | serviceTermsExpireDate | String\(8\) | 이용자의 핀테크서비스 금융정보제공동의 만료일 |
 
-### 테스트용 목업데이터
+## 테스트용 목업데이터
 
 * 샌드박스에서 계좌서비스를 테스트 하기 위해서는 미리 제공되는  [계좌서비스 테스트용 ­ 목업 데이터](https://developers.koscom.co.kr/resources/documentation/Account_MockupData_V1.pdf)를 이용하여, 서비스 연동 조회 테스트를 제공한다.
 

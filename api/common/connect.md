@@ -12,11 +12,9 @@
 
 
 
-## Authentication    
+#### Authentication   \| **`API Key`**
 
-* **`API Key`**
-
-## 회원 가입 여부 확인
+### 회원 가입 여부 확인
 
 핀테크 서비스 이용자가 금융투자 핀테크 포탈에 가입했는지를 확인하기 위한 API
 
@@ -68,26 +66,25 @@ Application/json
 | ci | String\(88\) | 연계정보 |
 | korName | String\(10\) | 한글이름 |
 
-핀테크기업코드
+`핀테크기업코드` 및 `핀테크서비스코드`는 이용기관 등록 이후 발급 되면 샌드박스에서 테스트 시에는 핀테크 기업 코드 `"comId" : "F0995"`, 핀테크 서비스 코드 `"srvId" : "297"`로 테스트 가능
 
 #### Request Body Example
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
 ```yaml
-{  
-   "partner":{  
-      "comId":"F9999",
-      "srvId":"999"
-   },
-   "commonHeader":{  
-      "reqIdPlatform":"",
-      "reqIdConsumer":"fsfsfshi23",
-      "ci":"Q9z5ccmjYNrhPVXrdfgfgfFdfgFGHdfg3fGFGgghDFFGghghgSSSfgfgcvbdfgert45rgfgdfgfhpf5vmzjaA=="
-   },
-   "body":{  
-      "korName":"홍길동"
-   }
+{
+    "partner": {
+		"comId": "F0995",
+		"srvId": "297"
+    },
+    "commonHeader": {
+		"reqIdConsumer": "reqid-0001",
+		"ci": "QciuDFKLcwalCKtWALuNWic9eGm7WNdauW+A+n+mpfhif24c3msHdzVjoZK0ntkXZ1+nA6LX47nyKmIq1JoHhg=="
+    },
+	"body" : {
+		"korName": "박환덕"
+	}
 }
 ```
 {% endcode-tabs-item %}
@@ -123,7 +120,7 @@ Application/json
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-## 가상계좌 리스트 조회
+### 가상계좌 리스트 조회
 
 핀테크 서비스 이용자가 금융투자 핀테크 포탈에서 사용하려는 핀테크 서비스에 연결한 가상계좌리스트를 조회하기 위한 API \(금융거래정보 제3자 제공 동의 계좌\)
 
@@ -199,27 +196,33 @@ Application/json
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### Request Parameters
+#### Request Body Parameters
 
-| **Name** | **Type** | **Description** |  |
-| :--- | :--- | :--- | :--- |
-| comId | String\(5\) | 핀테크기업코드 |  |
-| srvId | String\(20\) | 핀테크서비스코드 |  |
-| reqIdPlatform | String | . | 사용안함 |
-| reqIdConsumer | String\(20\) | 핀테크기업에서 사용하는 메시지 | 선택 |
-| ci | String\(88\) | 연계정보 |  |
-| korName | String\(12\) | 한글이름 |  |
+| **Name** | **Type** | **Description** |
+| :--- | :--- | :--- |
+| comId | String\(5\) | 핀테크기업코드 |
+| srvId | String\(20\) | 핀테크서비스코드 |
+| reqIdPlatform | String | `사용안함` |
+| reqIdConsumer | String\(20\) | `선택` 핀테크기업에서 사용하는 메시지 |
+| ci | String\(88\) | 연계정보 |
+| korName | String\(12\) | 한글이름 |
 
-#### Response Parameters
+`핀테크기업코드` 및 `핀테크서비스코드`는 이용기관 등록 이후 발급 되면 샌드박스에서 테스트 시에는 핀테크 기업 코드 `"comId" : "F0995"`, 핀테크 서비스 코드 `"srvId" : "297"`로 테스트 가능
 
-| **Name** | **Type** | **Description** |  |
-| :--- | :--- | :--- | :--- |
-| comId | String\(5\) | 금융회사코드 |  |
-| vtAccNo | String\(18\) | 가상계좌번호 |  |
-| vtAccAlias | String\(20\) | 가상계좌번호 별칭 |  |
-| serviceTermsExpireDate | String\(8\) | 이용자의 핀테크서비스 금융정보제공동의 만료일 |  |
+#### Response Body Parameters
 
+| **Name** | **Type** | **Description** |
+| :--- | :--- | :--- |
+| comId | String\(5\) | 금융회사코드 |
+| vtAccNo | String\(18\) | 가상계좌번호 |
+| vtAccAlias | String\(20\) | 가상계좌번호 별칭 |
+| serviceTermsExpireDate | String\(8\) | 이용자의 핀테크서비스 금융정보제공동의 만료일 |
 
+### 테스트용 목업데이터
+
+* 샌드박스에서 계좌서비스를 테스트 하기 위해서는 미리 제공되는  [계좌서비스 테스트용 ­ 목업 데이터](https://developers.koscom.co.kr/resources/documentation/Account_MockupData_V1.pdf)를 이용하여, 서비스 연동 조회 테스트를 제공한다.
+
+![](../../.gitbook/assets/image%20%2846%29.png)
 
 {% hint style="info" %}
 개발자센터  어플리케이션 등록  및  API 테스트\(인증\)  이용방법은 [이곳](https://koscom.gitbook.io/open-api/how-to-use/devcenter) 에서 확인하세요.

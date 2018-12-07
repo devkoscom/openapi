@@ -280,7 +280,7 @@ JSON-RPC 2.0 에 관한 자세한 설명은[ 이곳](http://www.jsonrpc.org/spec
 5. 구독하는 종목에 대한 시세 발생시 비동기 방식으로 실시간 데이타 전송
 6. WebSocket Session 종료 시 모든 실시간 구독내역은 초기화 된다.
 
-![WebSocket &#xC885;&#xBAA9;&#xBCC4; &#xC0C1;&#xC138; &#xAD6C;&#xB3C5;](../../.gitbook/assets/image%20%2893%29.png)
+![WebSocket &#xC885;&#xBAA9;&#xBCC4; &#xC0C1;&#xC138; &#xAD6C;&#xB3C5;](../../.gitbook/assets/image%20%2894%29.png)
 
 #### WebSocket  시장별 체결구독
 

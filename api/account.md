@@ -2,21 +2,21 @@
 
 
 
-현재 증권회사가 오픈플랫폼을 통해 제공하고 있는 API는 모두 계좌를 기반으로 하고 있습니다. 
+현재 금융투자회사가 오픈플랫폼을 통해 제공하고 있는 API는 모두 계좌를 기반으로 하고 있습니다. 
 
-따라서 핀테크 서비스 회원과 증권사 고객정보를 연결시킬 식별자가 필요하며 이를 휴대폰 본인확인 서비스를 통해 발급받은 **연계정보\(CI, Connecting Information\)**을 사용하고 있습니다. 또한 증권사의 실제 계좌번호와 1:1로 매핑된 **가상계좌번호**를 오픈플랫폼 금융투자 핀테크 포탈\([http://open.koscom.co.kr](http://open.koscom.co.kr)\)에서 발급하여 연계정보\(CI\)와 함께 API를 통한 요청의 키로 사용합니다.
+따라서 핀테크 서비스 회원과 금융투자회사의 고객정보를 연결시킬 식별자가 필요하며 이를 휴대폰 본인확인 서비스를 통해 발급받은 **연계정보\(CI, Connecting Information\)**을 사용하고 있습니다. 또한 금융투자회사의 실제 계좌번호와 1:1로 매핑된 **가상계좌번호**를 오픈플랫폼 금융투자 핀테크 포털탈\([http://open.koscom.co.kr](http://open.koscom.co.kr)\)에서 발급하여 연계정보\(CI\)와 함께 API를 통한 요청의 키로 사용합니다.
 
-핀테크업체가 핀테크 서비스를  증권사가 제공하는 계좌기반 API와 같이  금융거래정보가 전달되는 API를 사용하여 개발하였다면,  **핀테크 서비스 이용자\(end user\)는 사전에 금융투자 핀테크 포탈에 가입하여, 핀테크 서비스에 연결하고자 하는 증권사의 실계좌번호에 연결된 가상계좌번호를 발급받아야 하며**, 사용하고자 하는 핀테크 서비스에 가상계좌번호를 연결하는 과정이 선행되어야 합니다.
+핀테크 기업이 핀테크 서비스를  금융투자회사가 제공하는 계좌기반 API와 같이  금융거래정보가 전달되는 API를 사용하여 개발하였다면,  **핀테크 서비스 이용자\(end user\)는 사전에 금융투자 핀테크 포털에 가입하여, 핀테크 서비스에 연결하고자 하는 금융투자회사의 실계좌번호에 연결된 가상계좌번호를 발급받아야 하며**, 사용하고자 하는 핀테크 서비스에 가상계좌번호를 연결하는 과정이 선행되어야 합니다.
 
-계좌기반 API를 사용하는 핀테크 서비스를 이용자\(end user\)가 사용하기 위해서는 사전에 위와 같은 이용조건을 충족했는지를 확인하는 것이 필요합니다. '금융투자 핀테크 포탈'에 가입하지 않은 이용자를 대상으로 핀테크포탈 가입을 유도해야 하며, 가입이 된 이용자라 하더라도 가상계좌발급을 받았는지 여부와 가상계좌를 핀테크 서비스에 연결하였는지를 확인할 수 있어야 합니다. 오픈플랫폼은 이를 확인하기 위한 [서비스연동 API](https://koscom.gitbook.io/open-api/api/common/connect)를 제공하고 있습니다.
+계좌기반 API를 사용하는 핀테크 서비스를 이용자\(end user\)가 사용하기 위해서는 사전에 위와 같은 이용조건을 충족했는지를 확인하는 것이 필요합니다. '금융투자 핀테크 포털에 가입하지 않은 이용자를 대상으로 핀테크포털 가입을 유도해야 하며, 가입이 된 이용자라 하더라도 가상계좌발급을 받았는지 여부와 가상계좌를 핀테크 서비스에 연결하였는지를 확인할 수 있어야 합니다. 오픈플랫폼은 이를 확인하기 위한 [서비스연동 API](https://koscom.gitbook.io/open-api/api/common/connect)를 제공하고 있습니다.
 
 
 
-## 증권사단축명 & API 제공여부
+### 금융투자회사 단축명 & API 제공여부
 
 > \(’2018.05.31 기준\)
 
-| `증권사명` | `증권사단축명` | `코드` | `API제공여부` |
+| **금융투자회사** | **단축명** | **코드** | **API제공여부** |
 | :--- | :--- | :--- | :--- |
 | 신한금융투자 | SHINHAN | 00002 | 제공 |
 | 대신증권 | DAISHIN | 00004 | 제공 |
@@ -36,28 +36,28 @@
 | 코리아에셋투자증권 | KOREAASSET | 00064 | 계약완료 |
 
 {% hint style="danger" %}
-API 제공 증권사, 일정, API 제공 범위 는 증권사의 사정에 따라 변경될 수 있음.
+API 제공 금융투자회사, 일정, API 제공 범위 는 금융투자회사의 사정에 따라 변경될 수 있음.
 {% endhint %}
 
-## 계좌 서비스 API 흐름도
+### 계좌 서비스 API 흐름도
 
 ![](../.gitbook/assets/image%20%2835%29.png)
 
-## 유의사항
+### 유의사항
 
 **API에 지정된 가상계좌를 조회범위**로 하기 때문에 계좌속성\(위탁, 펀드, 파생상품 등\)에 따라 조회조건이 충족되지 않을 수 있으므로 전 상품군을 대상으로 조회할 경우는 주의가 필요합니다. 
 
-보통 증권회사의 종합계좌는 모든 금융상품을 취급할 수 있는 것이지만 경우에 따라 파생상품과 같은 특정 상품군은 별도로 관리되는 증권회사도 있으며, 종합계좌 개념을 도입하지 않는 증권사도 존재합니다. 따라서 종합계좌라고 판단되어 KOSPI200 파생상품 잔고를 조회하였을 때 응답에 해당상품이 반드시 포함될 것이라 판단하고 비즈니스를 설계하면 안됩니다. 
+보통 금융투자회사의 종합계좌는 모든 금융상품을 취급할 수 있는 것이지만 경우에 따라 파생상품과 같은 특정 상품군은 별도로 관리되는 금융투자회사도 있으며, 종합계좌 개념을 도입하지 않는 금융투자회사도 존재합니다. 따라서 종합계좌라고 판단되어 KOSPI200 파생상품 잔고를 조회하였을 때 응답에 해당상품이 반드시 포함될 것이라 판단하고 비즈니스를 설계하면 안됩니다. 
 
-자산포트폴리오조회와 계좌잔고조회의 경우 모든 상품군을 조회범위에 포함하는 ‘ALL’검색조건을 지원하는 증권사의 경우 해당 조건으로 계좌를 조회하면 문제가 없지만, ‘ALL’검색조건을 지원하지 않는 증권사의 경우 각 상품군별로  계좌를 대상으로 조회해야 누락 없이 전 상품군을 조회할 수 있습니다. 
+자산포트폴리오조회와 계좌잔고조회의 경우 모든 상품군을 조회범위에 포함하는 ‘ALL’검색조건을 지원하는 금융투자회사의 경우 해당 조건으로 계좌를 조회하면 문제가 없지만, ‘ALL’검색조건을 지원하지 않는 증권사의 경우 각 상품군별로  계좌를 대상으로 조회해야 누락 없이 전 상품군을 조회할 수 있습니다. 
 
-계좌기반 조회 API는 증권사별로 호출 URI가 다르나 큰 틀은 동일하며 단지 증권사구분이 URI에 포함되어 있는 구조입니다. 
+계좌기반 조회 API는 금융투자회사별로 호출 URI가 다르나 큰 틀은 동일하며 단지 금융투자회사 구분이 URI에 포함되어 있는 구조입니다. 
 
 {% hint style="success" %}
 계좌기반 조회 API 는 [개발자센터-계좌조회API](https://developers.koscom.co.kr/documentation/account) 에서 테스트할 수 있습니다.
 {% endhint %}
 
-## API 호출  공통사항
+### API 호출  공통사항
 
 **값 없음 표기 방법**  
  요청\(request\)    데이터  : 필수 필드이나 값이 없는 경우는 ""로 표기  
@@ -73,21 +73,15 @@ API 제공 증권사, 일정, API 제공 범위 는 증권사의 사정에 따�
  \[ \]안의 숫자                   :  길이가 지정된 항목   
  숫자 표기에서 0이 9개 이상 표기되어야 하는 경우 :  JSON 표기법 표준에 따라 Scientific notation 사용
 
-## Syntax
+## 
 
-HTTP methods    \|   **POST**
-
-Authentication     \|   **OAuth2**
-
-
-
-
+#### Authentication  \|  **`Authorization Code`  \(OAuth 2.0\)**
 
 ## 자산 포트폴리오 조회 API
 
 조회대상이 되는 계좌의 실제 잔고 수량, 투자금액 대신 금융투자 상품의 구성비만을 제공함으로써 개인금융정보의 노출부담을 최소화하면서도 투자자산을 기초로 자산통합관리, 자문, 정보제공 등을 받을 수 있도록 하기 위한 API
 
-{% api-method method="post" host="https://{APIGWAddr}/v1/{증권사단축명}/account" path="/portfolio/search" %}
+{% api-method method="post" host="https://{APIGWAddr}/v1/{단축명}/account" path="/portfolio/search" %}
 {% api-method-summary %}
 /account/portfolio/search
 {% endapi-method-summary %}
@@ -263,7 +257,7 @@ Bearer 발급받은 access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example
+#### Request Body Example
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -298,22 +292,22 @@ Bearer 발급받은 access token
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### **Request Parameters**
+#### **Request Body Parameters**
 
-| **Name** | **Type** | **Description** |  |
-| :--- | :--- | :--- | :--- |
-| comId | String\(5\) | 핀테크기업코드 |  |
-| srvId | String\(20\) | 핀테크서비스코드 |  |
-| reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
-| reqIdConsumer | String\(20\) | 핀테크기업에서 사용하는 메시지 |  |
-| ci | String\(88\) | 연계정보 |  |
-| ipAddr | String\(32\) | 사용자 단말 IP주소  | dot없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 dash없이 10자리로 채워서 설정 |
-| macAddr | String\(50\) | 사용자 MAC 주소 | PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정 |
-| vtAccNo | String\(30\) | 가상계좌번호 |  |
-| assetType | String\(8\) | 요청하는 자산유형 | CASH\(현금\), EQTY\(주식\), FUND\(펀드\), ETC\(기타자산\), ALL\(전체\)인 경우는 page 처리없이 대용량 데이터 전송이 가능한 증권사만 가능 |
-| rspType | String\(8\) | 응답 유형 | RAT\(잔고구성비율\)은 기본으로 제공하며, 증권사에 따라 QTY\(실제잔고수량\)도 가능하나 본 API의 목적상 사용을 권장하지 않음 |
-| count | Number | 응답 별 최대 응답 건수 | 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 / assetType이 ‘ALL’인 경우는 page없이 일괄전송이므로 본 필드는 의미 없으므로 0으로 설정 |
-| page | String\(24\) | 다음 page를 지시하는 키 | 첫 요청은 “null”로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청 |
+| **Name** | **Type** | **Description** |
+| :--- | :--- | :--- |
+| comId | String\(5\) | 핀테크기업코드 |
+| srvId | String\(20\) | 핀테크서비스코드 |
+| reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 |
+| reqIdConsumer | String\(20\) | 핀테크기업에서 사용하는 메시지 |
+| ci | String\(88\) | 연계정보 |
+| ipAddr | String\(32\) | 사용자 단말 IP주소는 dot없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 dash없이 10자리로 채워서 설정 |
+| macAddr | String\(50\) | 사용자 MAC 주소는 PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정 |
+| vtAccNo | String\(30\) | 가상계좌번호 |
+| assetType | String\(8\) | 요청하는 자산유형은 `CASH`\(현금\), `EQTY`\(주식\), `FUND`\(펀드\), `ETC`\(기타자산\), `ALL`\(전체\)인 경우는 page 처리없이 대용량 데이터 전송이 가능한 금융투자회사만 가능 |
+| rspType | String\(8\) | 응답 유형은 `RAT`\(잔고구성비율\)은 기본으로 제공하며, 증권사에 따라 `QTY`\(실제잔고수량\)도 가능하나 본 API의 목적상 사용을 권장하지 않음 |
+| count | Number | 응답 별 최대 응답 건수는 금융투자회사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 금융투자회사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 / `assetType`이 ‘ALL’인 경우는 page없이 일괄전송이므로 본 필드는 의미 없으므로 0으로 설정 |
+| page | String\(24\) | 다음 page를 지시하는 키 \(첫 요청은 “null”로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청\) |
 
 {% hint style="success" %}
  `assetType`을 'ALL'로 요청 가능한 증권사    
@@ -324,41 +318,39 @@ Bearer 발급받은 access token
 **보유비중 조회**는 현재 일부 증권사의 경우 값이 부정확한 경우가 있고, 비중대신 수량을 제공하는 경우도 있으므로 주의 필요함. 보유비중은 수익기여도 \(해당 자산군에서 해당종목이 차지하는 수익기여도\)로 산출한 경우가 대부분이며, 증권사별 산출 기준은 추후 게시예정
 {% endhint %}
 
-#### Response Parameters
+#### Response Body Parameters
 
-| **Name** | **Type** | **Description** |  |
-| :--- | :--- | :--- | :--- |
-| reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
-| reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
-| certDn | String\(256\) | "" | 사용안함 |
-| ci | String\(88\) | 연계정보 |  |
-| realAccNo | String\(40\) | "" | 사용안함 |
-| vtAccNo | String\(30\) | 가상계좌번호 |  |
-| totalCnt | Number | 조회 조건의 총 메시지 건수 |  |
-| count | Number | 현 메시지 내 응답 건수 |  |
-| page | String\(24\) | 다음 page 번호 | “null”이면 더 이상 없음 |
-| amt | Number | 전체 자산 중 현금잔고 또는 비중  |  |
-| **equityList** | **Array** |  | **EQTY** |
-| assetType | String\(8\) | 상품구분자 | KSP\(코스피\), KDQ\(코스닥\), ETF\(ETF\), FUT\(선물\), OPT\(옵션\), ELW\(ELW\), ETC\(기타\) |
-| isinCode | String\(12\) | ISINCODE\(12\) |  |
-| qty | Number | 수량 또는 비중 | equity 내 비중, 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영안함 |
-| earningRate | Number | 수익률 | 소수점 2째자리까지 |
-| **fundList** | **Array** |  | **FUND** |
-| fundCode | String\(20\) | 펀드표준코드 |  |
-| fundName | String\(15\) | 펀드명 | 최대 15자 |
-| qty | Number | 수량 또는 비중 | 펀드내 비중, 소수점 2째자리까지 |
-| earningRate | Number | 수익률 | 소수점 2째자리까지 |
-| maturity | String\(12\) | 만기일 | YYYYMMDD |
-| **etcList** | **Array** |  | **ETC** |
-| assetType | String\(8\) | 상품구분자 | BOND\(채권\), CD, CP, DLS, ELS, STB\(사채\), RP\(미구분\), CRP\(약정식RP\), RRP\(수시RP\), WRT\(워런트\) |
-| assetName | String\(15\) | 상품명 |  |
-| isinCode | String\(12\) | . | 현재는 지원 안 함 \(1.0부터 지원예정\) |
-| qty | Number | 수량 또는 비중 | etc 내 비중, 소수점 2째자리까지                      신용 매수 분 포함하고 대출잔고는 반영 안함   |
-| earningRate | Number | 수익률 | 소수점 2째자리까지 |
-| respCode | String\(8\) | 응답코드 |  |
-| respMsg | String\(50\) | 응답메시지 |  |
-
-
+| **Name** | **Type** | **Description** |
+| :--- | :--- | :--- |
+| reqIdPlatform | String\(20\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
+| reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |
+| certDn | String\(256\) | `사용안함` |
+| ci | String\(88\) | 연계정보 |
+| realAccNo | String\(40\) | `사용안함` |
+| vtAccNo | String\(30\) | 가상계좌번호 |
+| totalCnt | Number | 조회 조건의 총 메시지 건수 |
+| count | Number | 현 메시지 내 응답 건수 |
+| page | String\(24\) | 다음 page 번호 \(“null”이면 더 이상 없음\) |
+| amt | Number | 전체 자산 중 현금잔고 또는 비중  |
+| **equityList** | **Array** | **EQTY** |
+| assetType | String\(8\) | 상품구분자는 `KSP`\(코스피\), `KDQ`\(코스닥\), `ETF`\(ETF\), `FUT`\(선물\), `OPT`\(옵션\), `ELW`\(ELW\), `ETC`\(기타\) |
+| isinCode | String\(12\) | 표준코드 |
+| qty | Number | 수량 또는 비중은 equity 내 비중, 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영안함 |
+| earningRate | Number | 수익률 \(소수점 2째자리 까지\) |
+| **fundList** | **Array** | **FUND** |
+| fundCode | String\(20\) | 펀드표준코드 |
+| fundName | String\(15\) | 펀드명 최대 15자 |
+| qty | Number | 수량 또는 비중 \(펀드내 비중, 소수점 2째자리까지\) |
+| earningRate | Number | 수익률 \(소수점 2째자리까지\) |
+| maturity | String\(12\) | 만기일 \(YYYYMMDD\) |
+| **etcList** | **Array** | **ETC** |
+| assetType | String\(8\) | 상품구분자는 `BOND`\(채권\), `CD`, `CP`, `DLS`, `ELS`, `STB`\(사채\), `RP`\(미구분\), `CRP`\(약정식RP\), `RRP`\(수시RP\), `WRT`\(워런트\) |
+| assetName | String\(15\) | 상품명 |
+| isinCode | String\(12\) | 현재는 지원 안 함 \(1.0부터 지원예정\) |
+| qty | Number | 수량 또는 비중 \(etc 내 비중, 소수점 2째자리까지                      신용 매수 분 포함하고 대출잔고는 반영 안함  \) |
+| earningRate | Number | 수익률 \(소수점 2째자리까지\) |
+| respCode | String\(8\) | 응답코드 |
+| respMsg | String\(50\) | 응답메시지 |
 
 
 
@@ -366,7 +358,7 @@ Bearer 발급받은 access token
 
 조회대상이 되는 계좌의 실제 잔고 수량, 손익, 수익률 등을 상세히 조회하기 위한 API
 
-{% api-method method="post" host="https://{APIGWAddr}/v1/{증권사단축명}/account" path="/balance/search" %}
+{% api-method method="post" host="https://{APIGWAddr}/v1/{단축명}/account" path="/balance/search" %}
 {% api-method-summary %}
 /account/balance/search
 {% endapi-method-summary %}

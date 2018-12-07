@@ -73,10 +73,6 @@ API 제공 금융투자회사, 일정, API 제공 범위 는 금융투자회사�
  \[ \]안의 숫자                   :  길이가 지정된 항목   
  숫자 표기에서 0이 9개 이상 표기되어야 하는 경우 :  JSON 표기법 표준에 따라 Scientific notation 사용
 
-## 
-
-#### Authentication  \|  **`Authorization Code`  \(OAuth 2.0\)**
-
 ## 자산 포트폴리오 조회 API
 
 조회대상이 되는 계좌의 실제 잔고 수량, 투자금액 대신 금융투자 상품의 구성비만을 제공함으로써 개인금융정보의 노출부담을 최소화하면서도 투자자산을 기초로 자산통합관리, 자문, 정보제공 등을 받을 수 있도록 하기 위한 API
@@ -256,6 +252,10 @@ Bearer 발급받은 access token
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+#### Content-Type  \|  `Application/json`
+
+#### Authentication  \|  **`Authorization Code`  \(OAuth 2.0\)**
 
 #### Request Body Example
 
@@ -637,6 +637,10 @@ Bearer 발급받은 access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Content-Type  \|  `Application/json`
+
+#### Authentication  \|  **`Authorization Code`  \(OAuth 2.0\)**
+
 #### Request Body Example
 
 {% code-tabs %}
@@ -886,6 +890,10 @@ Bearer 발급받은 access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Content-Type  \|  `Application/json`
+
+#### Authentication  \|  **`Authorization Code`  \(OAuth 2.0\)**
+
 #### Request Example
 
 {% code-tabs %}
@@ -929,13 +937,18 @@ Bearer 발급받은 access token
 
 | **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
-| comId | String\(5\) | 핀테크기업코드 |
-| srvId | String\(20\) | 핀테크서비스코드 |
+|  _**partner**_  | _**Object**_ |  _**핀테크 서비스 정보**_ |
+| comId | String\(5\) | 핀테크 기업 코드 |
+| srvId | String\(20\) | 핀테크 서비스 코드 |
+| _**commonHeader**_ |   _**Object**_  | _**요청 메시지 제어 헤더**_ |
 | reqIdPlatform | String\(20\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
-| reqIdConsumer | String\(20\) | 핀테크기업에서 사용하는 메시지 구분 |
+| reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분 |
 | ci | String\(88\) | 연계정보 |
+| _**devInfo**_  | _**Object**_ |  |
 | ipAddr | String\(32\) | 사용자 단말 IP주소 \(`dot`없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 `dash`없이 10자리로 채워서 설정\)  |
-| macAddr | ~~**String\(50\)**~~ | 사용자 MAC 주소 \(PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정\) |
+| macAddr | String\(50\) | 사용자 MAC 주소 \(PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정\) |
+| _**accInfo**_  | _**Object**_ | _\*\*\*\*_ |
+| _**queryPrams**_  | _**Object**_ |  |
 | vtAccNo | String\(30\) | 가상계좌번호 |
 | queryPrams | Object | 조회범위는 금융투자회사별로  상이 |
 | fromDate | String\(12\) | 조회시작날짜 \(YYYYMMDD\) |
@@ -1060,7 +1073,64 @@ Bearer 발급받은 access token
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example
+#### Content-Type  \|  `Application/json`
+
+#### Authentication  \|  **`Authorization Code`  \(OAuth 2.0\)**
+
+ **Request Body Parameters**
+
+| **Name** | **Type** | **Description** |
+| :--- | :--- | :--- |
+| _**partner**_ | _**Object**_ | _**핀테크 서비스 정보**_ |
+| comId | String\(5\) | 핀테크 기업 코드 |
+| srvId | String\(20\) | 핀테크 서비스 코드 |
+| _**commonHeader**_ | _**Object**_ | _**요청 메시지 제어 헤더**_ |
+| reqIdPlatform | String\(20\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
+| reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분 |
+| ci | String\(88\) | 연계정보 88Byte |
+| _**devInfo**_ | _**Object**_ | _\*\*\*\*_ |
+| ipAddr | String\(32\) | 사용자 단말 IP주소  \(`dot`없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 `dash`없이 10자리로 채워서 설정\) |
+| macAddr | String\(50\) | 사용자 MAC 주소 \(PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정\) |
+| _**accInfo**_ | _**Object**_ |  |
+| vtAccNo | String\(30\) | 가상계좌번호 |
+| _**InterestStmbolListRequestBody**_ | _**Object**_ |   |
+| _**queryType**_ | _**Object**_ |  _**queryType 지원 금융투자회사 : 삼성증권**_ |
+| assetType | String\(8\) | `EQY`\(유가증권/코스닥\) |
+| rspType | String\(8\) | "" \(값없음\) |
+| count | Number | 응답 별 최대 응답 건수 이며 금융투자회사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 금융투자회사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 |
+| page | String\(24\) | 다음 page를 지시하는 키로 첫 요청은 “null”로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청 |
+
+{% hint style="danger" %}
+`queryType`은 삼성증권만 지원되며, 타 금융투자회사는 사용하지 못함
+{% endhint %}
+
+#### Response Body Parameters
+
+| **Name** | **Type** | **Description** |
+| :--- | :--- | :--- |
+| _**commHeader**_ | _**Object**_ | _**요청 메시지 제어 헤더**_ |
+| reqIdPlatform | String\(20\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
+| reqIdConsumer | String\(20\) | `반환` 핀테크 기업에서 사용하는 메시지 구분자 |
+| certDn | String\(256\) | `사용안함` |
+| ci | String\(88\) | 연계정보 |
+| _**accInfo**_ | _**Object**_ |  |
+| realAccNo | String\(40\) | `사용안함` |
+| vtAccNo | String\(30\) | `반환` 가상계좌번호 |
+| _**interestSymbolReponseBody**_ | _**Object**_ |  |
+| _**queryResult**_ | _**Object**_ | _**queryType 지원 금융투자회사 : 삼성증권**_ |
+| totalCnt | Number | 총 메시지 건수 |
+| count | Number | 메시지 내 응답 건수 |
+| page | String\(24\) | 다음 page 번호, “null”이면 더 이상 없음 |
+| _**groupList**_ | _**Object**_ | 관심종목 그룹 |
+| _**group**_ | _**Array**_ |  |
+| groupName | String\(20\) | `설정` 관심종목 그룹 이름 |
+| modifyDate | String\(12\) | `선택` 최종 수정일 |
+| isinCode | String Array \(각 20\) | `설정` 종목코드 |
+| _**resp**_ | _**Object**_ |  |
+| respCode | String\(8\) | `설정` 응답코드 |
+| respMsg | String\(50\) | `설정` 응답메시지 |
+
+#### Request Body Example
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -1095,48 +1165,4 @@ Bearer 발급받은 access token
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
-
- **Request Parameters**
-
-| **Name** | **Type** | **Description** |  |
-| :--- | :--- | :--- | :--- |
-| comId | String\(5\) | 핀테크기업코드 |  |
-| srvId | String\(20\) | 핀테크서비스코드 |  |
-| reqIdPlatform | String\(20\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
-| reqIdConsumer | String\(20\) | 핀테크기업에서 사용하는 메시지 구분 |  |
-| ci | String\(88\) | 연계정보 |  |
-| ipAddr | String\(32\) | 사용자 단말 IP주소  | dot없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 dash없이 10자리로 채워서 설정 |
-| macAddr | ~~**String\(50\)**~~ | 사용자 MAC 주소 | PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정 |
-| vtAccNo | String\(30\) | 가상계좌번호 |  |
-| queryType | Object | . | 지원증권사 : 삼성증권 |
-| assetType | String\(8\) | . | EQY\(유가증권/코스닥\) |
-| rspType | String\(8\) | . | "" \(값없음\) |
-| count | Number | 응답 별 최대 응답 건수 | 증권사는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 증권사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 |
-| page | String\(24\) | 다음 page를 지시하는 키 | 첫 요청은 “null”로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청 |
-
-{% hint style="danger" %}
-`queryType`은 삼성증권만 지원되며, 타 증권사는 사용하지 못함
-{% endhint %}
-
-#### Response Parameters
-
-| **Name** | **Type** | **Description** |  |
-| :--- | :--- | :--- | :--- |
-| reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 | 사용안함 |
-| reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |  |
-| certDn | String\(256\) | "" | 사용안함 |
-| ci | String\(88\) | 연계정보 |  |
-| realAccNo | String\(40\) | . | 사용안함 |
-| vtAccNo | String\(30\) | 가상계좌번호 |  |
-| queryResult: totalCnt | Number | 총 메시지 건수 |  |
-| queryResult: count | Number | 메시지 내 응답 건수 |  |
-| queryResult: page | String\(24\) | 다음 page 번호 | “null”이면 더 이상 없음 |
-| **group** | **Array** |  |  |
-| groupName | String\(20\) | 관심종목 그룹 이름 |  |
-| modifyDate | String\(12\) | 최종 수정일 | 선택 |
-| isinCode | String Array \(각 20\) | 종목코드 |  |
-| respCode | String\(8\) | 응답코드 |  |
-| respMsg | String\(50\) | 응답메시지 |  |
-
-
 

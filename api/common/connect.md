@@ -12,8 +12,6 @@
 
 
 
-### Authentication   \| **`API Key`**
-
 ## 회원 가입 여부 확인
 
 핀테크 서비스 이용자가 금융투자 핀테크 포탈에 가입했는지를 확인하기 위한 API
@@ -47,7 +45,8 @@ Application/json
 
 ```yaml
 {
-  "result": "member"
+   "result": "member",
+   "commonTermsExpireDate": "20181105" 
 }
 ```
 {% endapi-method-response-example %}
@@ -55,15 +54,22 @@ Application/json
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Content-Type  \|   `Application/json; charset=utf-8`
+
+#### Authentication  \|  **`API Key`**
+
 #### Request Body Parameters
 
 | **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
-| comId | String\(5\) | 핀테크기업코드 |
-| srvId | String\(20\) | 핀테크서비스코드 |
+| _**partner**_ | _**Object**_ |  |
+| comId | String\(5\) | 핀테크 기업 코드 |
+| srvId | String\(20\) | 핀테크 서비스 코드 |
+| _**commonHeader**_ | _**Object**_ |  |
 | reqIdPlatform | String | `사용안함` |
 | reqIdConsumer | String\(20\) | `선택` 핀테크기업에서 사용하는 메시지 |
 | ci | String\(88\) | 연계정보 |
+| _**body**_ | _**Object**_ |  |
 | korName | String\(10\) | 한글이름 |
 
 `핀테크기업코드` 및 `핀테크서비스코드`는 이용기관 등록 이후 발급 되며 샌드박스에서 테스트 시에는 임시로 핀테크 기업 코드 `"comId" : "F0995"`, 핀테크 서비스 코드 `"srvId" : "297"`로 테스트 가능
@@ -95,26 +101,16 @@ Application/json
 | **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
 | result | String\(12\) |  회원가입여부 \(member \| nonMember\) |
-|  commonTermsExpireDate  | String\(8\) |  이용자의 오픈플랫폼 금융정보제동 동의 만료일 |
+| commonTermsExpireDate  | String\(8\) |  이용자의 오픈플랫폼 금융정보제동 동의 만료일 |
 
-#### Request Body Example
+#### Response Body Example
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
 ```yaml
-{  
-   "partner":{  
-      "comId":"F9999",
-      "srvId":"999"
-   },
-   "commonHeader":{  
-      "reqIdPlatform":"",
-      "reqIdConsumer":"fsfsfshi23",
-      "ci":"Q9z5ccmjYNrhPVXrdfgfgfFdfgFGHdfg3fGFGgghDFFGghghgSSSfgfgcvbdfgert45rgfgdfgfhpf5vmzjaA=="
-   },
-   "body":{  
-      "korName":"홍길동"
-   }
+{
+   "result": "member",
+   "commonTermsExpireDate": "20181105" 
 }
 ```
 {% endcode-tabs-item %}
@@ -153,19 +149,29 @@ Application/json
 
 ```yaml
 {
-	"vtAccList":[
-		{
-			"comId": " 00002",
-			"vtAccNo":"160657695589800099",
-			"vtAccAlias":"주식투자용"
-		},
-		{
-			"comId":" 00002",
-			"vtAccNo":"160657695589800099",
-			"vtAccAlias":"펀드투자용"
-		}
-	],
-	"serviceTermsExpireDate": "20190813"
+   "vtAccList": [ 
+    {
+       "comId": "00992",
+       "vtAccNo": "160635473367600099",
+       "vtAccAlias": "diamond",
+       "endpoint": "https://sandbox-apigw.koscom.co.kr/v1/diamond/account/" 
+    },
+     
+    {
+       "comId": "00991",
+       "vtAccNo": "160613251214500099",
+       "vtAccAlias": "cyber",
+       "endpoint": "https://sandbox-apigw.koscom.co.kr/v1/cyber/account/" 
+    },
+     
+    {
+       "comId": "00993",
+       "vtAccNo": "160646584478700099",
+       "vtAccAlias": "star",
+       "endpoint": "https://sandbox-apigw.koscom.co.kr/v1/star/account/" 
+    } 
+  ],
+   "serviceTermsExpireDate": "20190813" 
 }
 ```
 {% endapi-method-response-example %}
@@ -173,50 +179,91 @@ Application/json
 {% endapi-method-spec %}
 {% endapi-method %}
 
- **Request Example**
+####  Content-Type \| `Application/json` <a id="content-type-or-application-json-charset-utf-8"></a>
 
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
-```yaml
-{  
-   "partner":{  
-      "comId":"F9999",
-      "srvId":"999"
-   },
-   "commonHeader":{  
-      "reqIdPlatform":"",
-      "reqIdConsumer":"fsfsfshi23",
-      "ci":"Q9z5ccmjYNrhPVXrdfgfgfFdfgFGHdfg3fGFGgghDFFGghghgSSSfgfgcvbdfgert45rgfgdfgfhpf5vmzjaA=="
-   },
-   "body":{  
-      "korName":"홍길동"
-   }
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+#### Authentication \| **`API Key`** <a id="authentication-or-api-key"></a>
 
 #### Request Body Parameters
 
 | **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
-| comId | String\(5\) | 핀테크기업코드 |
-| srvId | String\(20\) | 핀테크서비스코드 |
+| _**partner**_ | _**Object**_ |  |
+| comId | String\(5\) | 핀테크 기업 코드 |
+| srvId | String\(20\) | 핀테크 서비스 코드 |
+| _**commonHeader**_ | _**Object**_ |  |
 | reqIdPlatform | String | `사용안함` |
 | reqIdConsumer | String\(20\) | `선택` 핀테크기업에서 사용하는 메시지 |
 | ci | String\(88\) | 연계정보 |
+| _**body**_ | _**Object**_ |  |
 | korName | String\(12\) | 한글이름 |
 
-`핀테크기업코드` 및 `핀테크서비스코드`는 이용기관 등록 이후 발급 되며면 샌드박스에서 테스트 시에는 임시로 핀테크 기업 코드 `"comId" : "F0995"`, 핀테크 서비스 코드 `"srvId" : "297"`로 테스트 가능
+`핀테크 기업 코드` 및 `핀테크 서비스 코드`는 이용기관 등록 이후 발급 되며면 샌드박스에서 테스트 시에는 임시로 핀테크 기업 코드 `"comId" : "F0995"`, 핀테크 서비스 코드 `"srvId" : "297"`로 테스트 가능
+
+**Request Body Example**
+
+{% code-tabs %}
+{% code-tabs-item title="Request Body Example" %}
+```yaml
+{
+    "partner": {
+		"comId": "F0995",
+		"srvId": "297"
+    },
+    "commonHeader": {
+		"reqIdConsumer": "reqid-0001",
+		"ci": "QciuDFKLcwalCKtWALuNWic9eGm7WNdauW+A+n+mpfhif24c3msHdzVjoZK0ntkXZ1+nA6LX47nyKmIq1JoHhg=="
+    },
+	"body" : {
+		"korName": "박환덕"
+	}
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 #### Response Body Parameters
 
 | **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
+| _**vtAccList**_ | _**Array**_ |  |
 | comId | String\(5\) | 금융회사코드 |
 | vtAccNo | String\(18\) | 가상계좌번호 |
 | vtAccAlias | String\(20\) | 가상계좌번호 별칭 |
 | serviceTermsExpireDate | String\(8\) | 이용자의 핀테크서비스 금융정보제공동의 만료일 |
+
+#### Response **Body Example**
+
+{% code-tabs %}
+{% code-tabs-item title="Response Body Example" %}
+```yaml
+{
+   "vtAccList": [ 
+    {
+       "comId": "00992",
+       "vtAccNo": "160635473367600099",
+       "vtAccAlias": "diamond",
+       "endpoint": "https://sandbox-apigw.koscom.co.kr/v1/diamond/account/" 
+    },
+     
+    {
+       "comId": "00991",
+       "vtAccNo": "160613251214500099",
+       "vtAccAlias": "cyber",
+       "endpoint": "https://sandbox-apigw.koscom.co.kr/v1/cyber/account/" 
+    },
+     
+    {
+       "comId": "00993",
+       "vtAccNo": "160646584478700099",
+       "vtAccAlias": "star",
+       "endpoint": "https://sandbox-apigw.koscom.co.kr/v1/star/account/" 
+    } 
+  ],
+   "serviceTermsExpireDate": "20190813" 
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 ## 테스트용 목업데이터
 

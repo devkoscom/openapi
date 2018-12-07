@@ -1,7 +1,3 @@
----
-description: '사용하고자 하는 API에 따라 지정된 인증방식을 사용해야 하며, 크게 3가지 방식으로 나눌 수 있습니다.'
----
-
 # Authentication
 
 ## API Key Authentication

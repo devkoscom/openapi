@@ -14,27 +14,21 @@
   * 일임 계좌 등록을 통한 매매는 협의 없이 가능
   * 사무수탁사 매매 전송은 증권회사와 협의필요\(결제예탁원 기관번호 전송 및 가상계좌 관련 협의\)
 
-일임주문 연계조회 API는 금융투자회사별로 호출 URI가 다르나 큰 틀은 동일하며 단지 금융투자회사구분이 URI에 포함되어 있는 구조입니다. 
+일임주문 연계조회 API는 금융투자회사별로 호출 URI가 다르나 큰 틀은 동일하며 단지 금융투자회사구분이 URI에 포함되어 있는 구조입니다.
 
 {% hint style="success" %}
 일임매매 연계 API 는 [개발자센터-일임매매 연계 API](https://developers.koscom.co.kr/documentation/b2baccount) 에서 테스트할 수 있습니다.
 {% endhint %}
 
 {% hint style="danger" %}
-제공대상 :  일임 투자자문이나 자산운용 회사 등의 금융기관 \(협의 필요\)
+제공대상 : 일임 투자자문이나 자산운용 회사 등의 금융기관 \(협의 필요\)
 {% endhint %}
-
-
 
 ## Syntax
 
-HTTP methods    \|   **POST**
+HTTP methods \| **POST**
 
-Authentication     \|   **Basic Authentication**
-
-
-
-
+Authentication \| **Basic Authentication**
 
 ## 주문체결 조회 API
 
@@ -155,7 +149,9 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example <a id="example"></a>
+#### Authentication \| [**`Basic Authentication`**](../authentication/basic.md)
+
+#### Request Example 
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -187,20 +183,20 @@ Basic Authentication 인증 사용
 
 #### Request Parameters
 
-| **Name** | **Type** | **Description** | 
-| :--- | :--- | :--- | 
+| **Name** | **Type** | **Description** |
+| :--- | :--- | :--- |
 | comId | string\(5\) | 핀테크 기업 코드 |
 | srvId | string\(20\) | 핀테크 서비스 코드 |
-| reqIdPlatform | string\(50\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 | 
+| reqIdPlatform | string\(50\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
 | reqIdConsumer | string\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |
 | qrAssetType | String\(8\) | 자산유형은 EQTY\(주식\), FUND\(펀드\), ETC\(기타\) |
 | qrSellBuyType | String\(8\) | 매도수구분은 0\(전체\), 1\(매도\), 2\(매수\) |
-| qrAccNo | String\(20\) | 계좌번호  |
+| qrAccNo | String\(20\) | 계좌번호 |
 | qrOrderDate | String\(12\) | 주문일자는 선택 / \(입력없는경우 당일YYYYMMDD\) |
 | qrIsinCode | String\(20\) | 종목코드는 선택 / \(입력 시 해당 종목만 요청\) |
 | qrOrderNo | String\(20\) | 주문번호는 선택 / \(입력 시 해당 주문만 조회\) |
 | count | number | 응답별 최대 응답 건수는 금융투자회사가 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 금융투자회사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 |
-| page | String\(100\) | 다음page를 지시하는 키 (선택 / 첫 요청은 null로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청함) |
+| page | String\(100\) | 다음page를 지시하는 키 \(선택 / 첫 요청은 null로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청함\) |
 
 #### Response Parameters
 
@@ -210,9 +206,9 @@ Basic Authentication 인증 사용
 | reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |
 | certDn | String\(256\) | `사용안함` |
 | ci | String\(88\) | `사용안함` 연계정보 |
-| totalCnt	 | Number | 총 메시지 건수 |
-| count	 | Number | 메시지 내 응답 건수  |
-| page	 | String\(100\) | 다음 page 번호는 null이면 더 이상 없음 |
+| totalCnt | Number | 총 메시지 건수 |
+| count | Number | 메시지 내 응답 건수 |
+| page | String\(100\) | 다음 page 번호는 null이면 더 이상 없음 |
 | **orderDetail** | **Array** |  |
 | accNo | String\(20\) | 계좌번호 |
 | accName | String\(20\) | 계좌명 |
@@ -221,21 +217,21 @@ Basic Authentication 인증 사용
 | orderNo | String\(20\) | 주문번호 |
 | orgOrderNo | String\(20\) | 원주문번호 |
 | sellBuyType | String\(8\) | 매도수구분은 1\(매도\), 2\(매수\) |
-| orderType | String\(20\) | 주문유형 (Text표기) |
-| exchange | String\(8\) | KRX를 제외한 시장의 거래소명 (Text표기) |
-| crcyCode | String\(20\) | 외화의 경우 통화코드 표기  |
+| orderType | String\(20\) | 주문유형 \(Text표기\) |
+| exchange | String\(8\) | KRX를 제외한 시장의 거래소명 \(Text표기\) |
+| crcyCode | String\(20\) | 외화의 경우 통화코드 표기 |
 | orderQty | Number | 주문수량 |
 | orderPrice | Number | 주문단가 |
 | execSumQty | Number | 체결합계수량 |
-| orderExecType | String\(20\) | 주문체결구분 (접수전, 정정, 취소확인, 거부 등) |
-| cmsnType | String\(20\) | 수수료유형 (Text표기) |
+| orderExecType | String\(20\) | 주문체결구분 \(접수전, 정정, 취소확인, 거부 등\) |
+| cmsnType | String\(20\) | 수수료유형 \(Text표기\) |
 | settDays | Number | 결제일수 |
 | buyQtyUnit | Number | 매수수량단위 |
 | sellQtyUnit | Number | 매도수량단위 |
 | orderTime | String\(12\) | 주문시각 |
-| orderRejectReason | String\(20\) | 주문거부사유 (Text표기) |
+| orderRejectReason | String\(20\) | 주문거부사유 \(Text표기\) |
 | **isinInfo** | **Array** |  |
-| isinType | String\(20\) | 종목코드종류 (표준코드,축약코드, 축약영문 등) |
+| isinType | String\(20\) | 종목코드종류 \(표준코드,축약코드, 축약영문 등\) |
 | isinCode | String\(20\) | 종목코드 |
 | isinName | String\(40\) | 종목명 |
 | **execList** | **Array** | **체결상세내역** |
@@ -245,10 +241,6 @@ Basic Authentication 인증 사용
 | execTime | String\(12\) | 체결시각 |
 | respCode | string\(8\) | 응답코드 참고 |
 | respMsg | string\(50\) | 응답메세지 참고 |
-
-
-
-
 
 ## 일임 계좌잔고 조회 API
 
@@ -409,7 +401,9 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example <a id="example"></a>
+#### Authentication \| [**`Basic Authentication`**](../authentication/basic.md)
+
+#### Request Example 
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -435,17 +429,17 @@ Basic Authentication 인증 사용
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### Request Parameters <a id="request-parameters"></a>
+#### Request Parameters 
 
 | **Name** | **Type** | **Description**​ |
 | :--- | :--- | :--- |
-| comId | string\(5\) | 핀테크 기업 코드  |
-| srvId | string\(20\) | 핀테크 서비스 코드  |
+| comId | string\(5\) | 핀테크 기업 코드 |
+| srvId | string\(20\) | 핀테크 서비스 코드 |
 | reqIdPlatform | string | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
-| reqIdConsumer | string\(20\) | 핀테크 기업에서 사용하는 메시지 구분자  |
+| reqIdConsumer | string\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |
 | qrAssetType | String\(8\) | 자산유형은 EQTY\(주식\), FUND\(펀드\), ETC\(기타\) |
-| qrAccNo | String\(20\) | 계좌번호  |
-| count | number | 응답별 최대 응답 건수  |
+| qrAccNo | String\(20\) | 계좌번호 |
+| count | number | 응답별 최대 응답 건수 |
 | page | String\(100\) | 다음page를 지시하는 키​ |
 
 #### Response Parameters
@@ -453,12 +447,12 @@ Basic Authentication 인증 사용
 | **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
 | reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |
-| reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자|
+| reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |
 | certDn | String\(256\) | `사용안함` |
 | ci | String\(88\) | `사용안함` 연계정보 |
-| totalCnt	 | Number | 총 메시지 건수  |
-| count	 | Number | 메시지 내 응답 건수 |
-| page	 | String\(100\) | 다음 page 번호 (null이면 더 이상 없음) |
+| totalCnt | Number | 총 메시지 건수 |
+| count | Number | 메시지 내 응답 건수 |
+| page | String\(100\) | 다음 page 번호 \(null이면 더 이상 없음\) |
 | accNo | String\(20\) | 계좌번호 |
 | accName | String\(20\) | 계좌명 |
 | **cashBalInfo** | **Array** |  |
@@ -473,32 +467,26 @@ Basic Authentication 인증 사용
 | cashAvWithdraw | Number | 출금가능현금 |
 | **securitiesBalInfo** | **Array** |  |
 | assetType | String\(8\) | 자산유형은 상품유형 표 참조 |
-| exchange | String\(20\) | KRX를 제외한 시장의 거래소명 (대표적으로 해외주식) |
+| exchange | String\(20\) | KRX를 제외한 시장의 거래소명 \(대표적으로 해외주식\) |
 | crcyCode | String\(8\) | 외화의 경우 통화코드 표기 |
-| loanCreditType | String\(20\) | 신용/대출구분 (Text표기) |
+| loanCreditType | String\(20\) | 신용/대출구분 \(Text표기\) |
 | loanCreditAmt | Number | 신용/대출금 |
 | qty | Number | 잔고수량 |
 | valAtTrade | Number | 매수금액 |
 | valAtCur | Number | 평가금액 |
 | proLoss | Number | 평가손익 |
-| earningRate | Number | 수익률 (소수점 2째자리까지) |
-| lastBuyDate | String\(12\) | 최종매수일 (YYYYMMDD) |
-| maturity | String\(12\) | 만기일 (YYYYMMDD) |
+| earningRate | Number | 수익률 \(소수점 2째자리까지\) |
+| lastBuyDate | String\(12\) | 최종매수일 \(YYYYMMDD\) |
+| maturity | String\(12\) | 만기일 \(YYYYMMDD\) |
 | foreignDeposit | Number | 외화예수금 |
 | wonDeposit | Number | 원화예수금 |
 | currencyRate | Number | 기준환율 |
 | **isinInfo** | **Array** |  |
-| isinType | String\(20\) | 종목코드종류 (표준코드,축약코드, 축약영문 등) |
-| isinCode | String\(20\) | 종목코드, 펀드코드, 상품코드  |
+| isinType | String\(20\) | 종목코드종류 \(표준코드,축약코드, 축약영문 등\) |
+| isinCode | String\(20\) | 종목코드, 펀드코드, 상품코드 |
 | isinName | String\(40\) | 종목명, 펀드명, 상품코드명 |
-| respCode | string\(8\) | 응답코드 참고  |
-| respMsg | string\(50\) | 응답메세지 참고  |
-
-
-
-
-
-
+| respCode | string\(8\) | 응답코드 참고 |
+| respMsg | string\(50\) | 응답메세지 참고 |
 
 ## 결제예정 정산 조회 API
 
@@ -622,7 +610,9 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example <a id="example"></a>
+#### Authentication \| [**`Basic Authentication`**](../authentication/basic.md)
+
+#### Request Example 
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -651,22 +641,22 @@ Basic Authentication 인증 사용
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-####  Request Parameters
+#### Request Parameters
 
-| **Name** | **Type** | **Description**  |
+| **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
 | comId | string\(5\) | 핀테크 기업 코드 |
 | srvId | string\(20\) | 핀테크 서비스 코드 |
 | reqIdPlatform | string\(50\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
-| reqIdConsumer | string\(50\) | 핀테크 기업에서 사용하는 메시지 구분자  |
+| reqIdConsumer | string\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |
 | qrAssetType | String\(8\) | 자산유형은 EQTY\(주식\), FUND\(펀드\), ETC\(기타\) |
 | qrSellBuyType | String\(8\) | 매도수구분은 0\(전체\), 1\(매도\), 2\(매수\) |
 | qrAccNo | String\(20\) | 계좌번호​ |
-| qrOrderDate | String\(12\) | `선택` 주문일자는 결제 전인 경우만 입력, 입력없음 당일\(YYYYMMDD\)
- |
-| qrIsinCode | String\(20\) | `선택` 종목코드 (입력 시 해당 종목만 요청) |
-| count | number | 응답별 최대 응답 건수는 ​금융투자회사가 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 금융투자회사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함
- |
+| qrOrderDate | String\(12\) | `선택` 주문일자는 결제 전인 경우만 입력, 입력없음 당일\(YYYYMMDD\) |
+|  |  |  |
+| qrIsinCode | String\(20\) | `선택` 종목코드 \(입력 시 해당 종목만 요청\) |
+| count | number | 응답별 최대 응답 건수는 ​금융투자회사가 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 금융투자회사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 |
+|  |  |  |
 | page | **String\(100\)** | 다음page를 지시하는 키는 ​첫 요청은 null\(“null”\)로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청함 |
 
 #### Response Parameters
@@ -676,20 +666,20 @@ Basic Authentication 인증 사용
 | reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |
 | reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |
 | certDn | String\(256\) | `사용안함` |
-| ci | String\(88\) | `사용안함' 연계정보 |
-| totalCnt	 | Number | 총 메시지 건수 |
-| count	 | Number | 메시지 내 응답 건수 |
-| page	 | String\(100\) | 다음 page 번호는  null이면 더 이상 없음 |
+| ci | String\(88\) | \`사용안함' 연계정보 |
+| totalCnt | Number | 총 메시지 건수 |
+| count | Number | 메시지 내 응답 건수 |
+| page | String\(100\) | 다음 page 번호는  null이면 더 이상 없음 |
 | **settleInfo** | **Array** |  |
 | accNo | String\(20\) | 계좌번호 |
 | accName | String\(20\) | 계좌명 |
 | sellBuyType | String\(8\) | 매도수구분은 1\(매도\), 2\(매수\) |
-| exchange | String\(20\) | KRX를 제외한 시장의 거래소명 (Text표기) |
+| exchange | String\(20\) | KRX를 제외한 시장의 거래소명 \(Text표기\) |
 | crcyCode | String\(8\) | 외화의 경우 통화코드 표기 |
 | settQty | Number | 결제수량 |
 | settAmt | Number | 결제금액 |
-| tradeType | String\(20\) | 거래유형 (Text 표기) |
-| loanCreditDate | String\(12\) | 신용/대출일 (YYYYMMDD) |
+| tradeType | String\(20\) | 거래유형 \(Text 표기\) |
+| loanCreditDate | String\(12\) | 신용/대출일 \(YYYYMMDD\) |
 | loanCreditAmt | Number | 신용/대출금액 |
 | settDate | String\(12\) | 결제일자 |
 | costTotal | Number | 비용합계 |
@@ -698,13 +688,10 @@ Basic Authentication 인증 사용
 | isinCode | String\(20\) | 종목코드, 펀드코드, 상품코드 |
 | isinName | String\(40\) | 종목명, 펀드명, 상품코드명 |
 | **costInfo** | **Array** |  |
-| costName | String\(20\) | 비용명 (수수료, 거래세, 농특세, 주민세 등) |
+| costName | String\(20\) | 비용명 \(수수료, 거래세, 농특세, 주민세 등\) |
 | cost | Number | 비용금액 |
 | respCode | string\(8\) | 응답코드 참고 |
 | respMsg | string\(50\) | 응답메세지 참고 |
-
-
-
 
 ## 일임설정 계좌 조회 API
 
@@ -788,7 +775,9 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example <a id="example-1"></a>
+#### Authentication \| [**`Basic Authentication`**](../authentication/basic.md)
+
+#### Request Example 
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -814,14 +803,14 @@ Basic Authentication 인증 사용
 
 #### Request Parameters
 
-| **Name** | **Type** | **Description** | 
+| **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
 | comId | string\(5\) | 핀테크 기업 코드 |
 | srvId | string\(20\) | 핀테크 서비스 코드 |
 | reqIdPlatform | string\(50\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
 | reqIdConsumer | string\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |
-| count | number | 응답별 최대 응답 건수는 ​금융투자회사가 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 금융투자회사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함
- |
+| count | number | 응답별 최대 응답 건수는 ​금융투자회사가 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 금융투자회사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 |
+|  |  |  |
 | page | **String\(100\)** | 다음page를 지시하는 키의 ​첫 요청은 null\(“null”\)로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청함 |
 
 #### Response Parameters
@@ -833,8 +822,8 @@ Basic Authentication 인증 사용
 | certDn | String\(256\) | `사용안함` |
 | ci | String\(88\) | `사용안함` 연계정보 |
 | totalCnt | Number | 총 메시지 건수 |
-| count	 | Number | 메시지 내 응답 건수 |
-| page	 | String\(100\) | 다음 page 번호는  null이면 더 이상 없음 |
+| count | Number | 메시지 내 응답 건수 |
+| page | String\(100\) | 다음 page 번호는  null이면 더 이상 없음 |
 | **account** | **Array** |  |
 | accNo | String\(20\) | 계좌번호 |
 | accName | String\(20\) | 계좌명 |
@@ -842,10 +831,6 @@ Basic Authentication 인증 사용
 | contractStatus | String\(8\) | 일임설정상태는 0\(계약\), 1\(해지\), 2\(만기\) |
 | respCode | string\(8\) | 응답코드 참고 |
 | respMsg | string\(50\) | 응답메세지 참고 |
-
-
-
-
 
 ## 일임계좌 거래내역 조회 API
 
@@ -967,7 +952,9 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example <a id="example"></a>
+#### Authentication \| [**`Basic Authentication`**](../authentication/basic.md)
+
+#### Request Example 
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -994,7 +981,7 @@ Basic Authentication 인증 사용
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-####  Request Parameters
+#### Request Parameters
 
 | **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
@@ -1003,10 +990,10 @@ Basic Authentication 인증 사용
 | reqIdPlatform | string\(50\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
 | reqIdConsumer | string\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |
 | qrAccNo | String\(20\) | 계좌번호 |
-| qrFromDate | String\(12\) | 조회시작날짜 (YYYYMMDD) |
-| qrToDate | String\(12\) | 조회종료날짜 (YYYYMMDD) |
-| count | number | 응답별 최대 응답 건수는 ​금융투자회사가 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 금융투자회사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함
- |
+| qrFromDate | String\(12\) | 조회시작날짜 \(YYYYMMDD\) |
+| qrToDate | String\(12\) | 조회종료날짜 \(YYYYMMDD\) |
+| count | number | 응답별 최대 응답 건수는 ​금융투자회사가 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 금융투자회사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 |
+|  |  |  |
 | page | **String\(100\)** | 다음page를 지시하는 키는 ​첫 요청은 null\(“null”\)로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청함 |
 
 #### Response Parameters
@@ -1018,35 +1005,33 @@ Basic Authentication 인증 사용
 | certDn | String\(256\) | `사용안함` |
 | ci | String\(88\) | `사용안함` 연계정보 |
 | qrAccNo | String\(20\) | 계좌번호 |
-| qrFromDate | String\(12\) | 조회시작날짜 (YYYYMMDD) |
-| qrToDate | String\(12\) | 조회종료날짜 (YYYYMMDD) |
+| qrFromDate | String\(12\) | 조회시작날짜 \(YYYYMMDD\) |
+| qrToDate | String\(12\) | 조회종료날짜 \(YYYYMMDD\) |
 | count | Number | . |
 | page | String\(100\) | . |
 | totalCnt | Number | 총 메시지 건수 |
-| count	 | Number | 메시지 내 응답 건수 |
-| page	 | String\(100\) | 다음 page 번호는 null이면 더 이상 없음 |
+| count | Number | 메시지 내 응답 건수 |
+| page | String\(100\) | 다음 page 번호는 null이면 더 이상 없음 |
 | **tradeBook** | **Array** | 거래 |
 | accNo | String\(20\) | 계좌번호 |
 | accName | String\(20\) | 계좌명 |
-| transDate | String\(12\) | 거래일자 (YYYYMMDD) |
+| transDate | String\(12\) | 거래일자 \(YYYYMMDD\) |
 | transType | String\(8\) | 거래구분은 BID\(매도\), ASK\(매수\),DEP\(이체입금\), WID\(이체출금\) |
 | changeAmt | Number | 금액증감은 매도/매수/이체에 따른 금액변동으로 감소 시 “-“ 표기 |
 | changeQty | Number | 수량증감은 매도/매수/출고에 따른 변동으로 수량 감소 시 “-“ 표기 |
-| qty | Number | 잔고수량 (거래 후 잔량) |
-| amt | Number | 예수금 (거래 후 현금) |
-| exchange | String\(20\) | 거래소명 (Text표기) |
+| qty | Number | 잔고수량 \(거래 후 잔량\) |
+| amt | Number | 예수금 \(거래 후 현금\) |
+| exchange | String\(20\) | 거래소명 \(Text표기\) |
 | crcyCode | String\(8\) | 통화코드 |
-| subject | String\(40\) | 계정명 (Text표기) |
-| summary | String\(40\) | 적요명 (Text표기) |
+| subject | String\(40\) | 계정명 \(Text표기\) |
+| summary | String\(40\) | 적요명 \(Text표기\) |
 | isinInfo | Array | 종목코드정보 |
-| isinType | String\(20\) | 종목코드 종류 (Text 표기) |
+| isinType | String\(20\) | 종목코드 종류 \(Text 표기\) |
 | isinCode | String\(20\) | 종목코드, 펀드코드, 상품코드 등 |
 | isinName | String\(40\) | 종목명 |
 | **costInfo** | **Array** | 비용정보 |
-| costName | String\(20\) | 비용명 (Text 표기) |
+| costName | String\(20\) | 비용명 \(Text 표기\) |
 | cost | Number | 비용 |
 | respCode | string\(8\) | 응답코드 참고 |
 | respMsg | string\(50\) | 응답메세지 참고 |
-
-
 

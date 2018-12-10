@@ -24,23 +24,11 @@
 제공대상 :  일임 투자자문이나 자산운용 회사 등의 금융기관 \(협의 필요\)
 {% endhint %}
 
-
-
-## Syntax
-
-HTTP methods    \|   **POST**
-
-Authentication     \|   **Basic Authentication**
-
-
-
-
-
 ## 주문체결 조회 API
 
 계좌의 주문 체결 내역을 상세히 조회하기 위한 API
 
-{% api-method method="post" host="https://{APIGWAddr}/v1/{증권사단축명}/b2baccount" path="/orderdetail/search" %}
+{% api-method method="post" host="https://{APIGWAddr}/v1/{단축명}/b2baccount" path="/orderdetail/search" %}
 {% api-method-summary %}
 /b2baccount/orderdetail/search
 {% endapi-method-summary %}
@@ -155,7 +143,11 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example <a id="example"></a>
+#### Content-Type \| `Application/json` <a id="content-type-or-application-json"></a>
+
+#### Authentication     \|   [**`Basic Authentication`**](../authentication/basic.md)
+
+#### Request Example
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -409,6 +401,10 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Content-Type \| `Application/json` <a id="content-type-or-application-json"></a>
+
+#### Authentication     \|   [**`Basic Authentication`**](../authentication/basic.md)
+
 #### Request Example <a id="example"></a>
 
 {% code-tabs %}
@@ -622,7 +618,11 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example <a id="example"></a>
+#### Content-Type \| `Application/json` <a id="example"></a>
+
+#### Authentication     \|   [**`Basic Authentication`**](../authentication/basic.md)
+
+#### Request Example
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -700,10 +700,6 @@ Basic Authentication 인증 사용
 | cost | Number | 비용금액 |  |
 | respCode | string\(8\) | 응답코드 참고 |  |
 | respMsg | string\(50\) | 응답메세지 참고 |  |
-
-
-
-
 
 
 
@@ -789,7 +785,11 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example <a id="example-1"></a>
+#### Content-Type \| `Application/json` <a id="example-1"></a>
+
+#### Authentication     \|   [**`Basic Authentication`**](../authentication/basic.md)
+
+#### Request Example
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -967,7 +967,11 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example <a id="example"></a>
+#### Content-Type \| `Application/json` <a id="example"></a>
+
+#### Authentication     \|   [**`Basic Authentication`**](../authentication/basic.md)
+
+#### Request Example
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}

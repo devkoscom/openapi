@@ -24,12 +24,6 @@
 제공대상 : 일임 투자자문이나 자산운용 회사 등의 금융기관 \(협의 필요\)
 {% endhint %}
 
-## Syntax
-
-HTTP methods \| **POST**
-
-Authentication \| **Basic Authentication**
-
 ## 주문체결 조회 API
 
 계좌의 주문 체결 내역을 상세히 조회하기 위한 API
@@ -149,9 +143,14 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Content-Type  \|  `Application/json`
+
 #### Authentication \| [**`Basic Authentication`**](../authentication/basic.md)
 
-#### Request Example 
+* header – comId: 오픈 플랫폼으로부터 발급받은 기관 코드번호 
+* header – authorization: Basic Authentication 인증 사용
+
+#### Request Body Example 
 
 {% code-tabs %}
 {% code-tabs-item title="Request Body Example" %}
@@ -181,14 +180,18 @@ Basic Authentication 인증 사용
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### Request Parameters
+#### Request Body Parameters
 
 | **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
+| partner  | Object   | 핀테크 서비스 정보 |
 | comId | string\(5\) | 핀테크 기업 코드 |
 | srvId | string\(20\) | 핀테크 서비스 코드 |
+| commonHeader |  Object  | 요청 메시지 제어 헤더 |
 | reqIdPlatform | string\(50\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
 | reqIdConsumer | string\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |
+| orderDetailListRequestBody | Object |  |
+| queryParameter | Object |  |
 | qrAssetType | String\(8\) | 자산유형은 EQTY\(주식\), FUND\(펀드\), ETC\(기타\) |
 | qrSellBuyType | String\(8\) | 매도수구분은 0\(전체\), 1\(매도\), 2\(매수\) |
 | qrAccNo | String\(20\) | 계좌번호 |
@@ -198,18 +201,32 @@ Basic Authentication 인증 사용
 | count | number | 응답별 최대 응답 건수는 금융투자회사가 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 금융투자회사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 |
 | page | String\(100\) | 다음page를 지시하는 키 \(선택 / 첫 요청은 null로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청함\) |
 
-#### Response Parameters
+#### Response Body Parameters
 
 | **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
+| _**commonHeader**_  | _**Object**_  | _**요청 메시지 제어 헤더**_ |
 | reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |
 | reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |
 | certDn | String\(256\) | `사용안함` |
 | ci | String\(88\) | `사용안함` 연계정보 |
+| _**orderDetailListResponseBody**_ | _**Object**_ |  |
+| _**queryParameter**_  | _**Object**_ |  |
+| qrAssetType  | String\(8\) | `반환` 자산유형 \[EQTY\(주식\), FUND\(펀드\), ETC\(기 타자산\)\] |
+| qrSellBuyType  | String\(8\) | `반환` 매도수구분 \[0\(전체\), 1\(매도\), 2\(매수\)\] |
+| qrAccNo  | String\(20\) | `반환` 계좌번호\(해당 계좌만 조회\) |
+| qrOrderDate  | String\(12\) | `반환` 주문일자\(입력 없는 경우 당일 \(YYYYMMDD\)\) |
+| qrIsinCode  | String\(20\) | `반환` 종목코드\(입력 시 해당 종목만 요청\) |
+| qrOrderNo  | String\(20\) | `반환` 주문번호\(입력 시 해당 주문만 요청\) |
+| count  | Number | `반환` |
+| page  | String\(100\) | `반환` |
+| _**queryParameter**_  | _**Object**_ |  |
+| _**queryResult**_ | _**Object**_ |  |
 | totalCnt | Number | 총 메시지 건수 |
 | count | Number | 메시지 내 응답 건수 |
 | page | String\(100\) | 다음 page 번호는 null이면 더 이상 없음 |
-| **orderDetail** | **Array** |  |
+| _**orderDetailList**_  | _**Object**_ |  |
+| _**orderDetail**_ | _**Array**_ |  |
 | accNo | String\(20\) | 계좌번호 |
 | accName | String\(20\) | 계좌명 |
 | modifyType | String\(8\) | 정정구분은 0\(정상\), 1\(정정\) |
@@ -230,17 +247,18 @@ Basic Authentication 인증 사용
 | sellQtyUnit | Number | 매도수량단위 |
 | orderTime | String\(12\) | 주문시각 |
 | orderRejectReason | String\(20\) | 주문거부사유 \(Text표기\) |
-| **isinInfo** | **Array** |  |
+| _**isinInfo**_ | _**Array**_ |  |
 | isinType | String\(20\) | 종목코드종류 \(표준코드,축약코드, 축약영문 등\) |
 | isinCode | String\(20\) | 종목코드 |
 | isinName | String\(40\) | 종목명 |
-| **execList** | **Array** | **체결상세내역** |
+| _**execList**_ | _**Array**_ | _**체결상세내역**_ |
 | execQty | Number | 체결 수량 |
 | execPrice | Number | 체결 단가 |
 | execNo | Number | 체결번호 |
 | execTime | String\(12\) | 체결시각 |
-| respCode | string\(8\) | 응답코드 참고 |
-| respMsg | string\(50\) | 응답메세지 참고 |
+| _**Resp**_ | _**Object**_ |  |
+| respCode | string\(8\) | [응답코드](../error-code.md) 참고 |
+| respMsg | string\(50\) | [응답메세지](../error-code.md#error-message-format) 참고 |
 
 ## 일임 계좌잔고 조회 API
 
@@ -401,7 +419,12 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Content-Type  \|  `Application/json`
+
 #### Authentication \| [**`Basic Authentication`**](../authentication/basic.md)
+
+* header – comId: 오픈 플랫폼으로부터 발급받은 기관 코드번호 
+* header – authorization: Basic Authentication 인증 사용
 
 #### Request Example 
 
@@ -610,7 +633,12 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Content-Type  \|  `Application/json`
+
 #### Authentication \| [**`Basic Authentication`**](../authentication/basic.md)
+
+* header – comId: 오픈 플랫폼으로부터 발급받은 기관 코드번호 
+* header – authorization: Basic Authentication 인증 사용
 
 #### Request Example 
 
@@ -775,7 +803,12 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Content-Type  \|  `Application/json`
+
 #### Authentication \| [**`Basic Authentication`**](../authentication/basic.md)
+
+* header – comId: 오픈 플랫폼으로부터 발급받은 기관 코드번호 
+* header – authorization: Basic Authentication 인증 사용
 
 #### Request Example 
 
@@ -952,7 +985,12 @@ Basic Authentication 인증 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Content-Type  \|  `Application/json`
+
 #### Authentication \| [**`Basic Authentication`**](../authentication/basic.md)
+
+* header – comId: 오픈 플랫폼으로부터 발급받은 기관 코드번호 
+* header – authorization: Basic Authentication 인증 사용
 
 #### Request Example 
 

@@ -2,7 +2,7 @@
 
 일반 **사용자\(end user\)**는 **금융투자 핀테크포털**\([http://open.koscom.co.kr/](http://open.koscom.co.kr/)\) 또는 **오핀\(OFin\)** 모바일 앱\( [android ](https://play.google.com/store/apps/details?id=com.oppf.mobile&hl=ko), [iOS](https://itunes.apple.com/kr/app/%EC%98%A4%ED%95%80/id1255027364)\)을 통해 핀테크 금융서비스를 이용할 수 있습니다. 
 
-![android OFIN - QRCode](../../.gitbook/assets/image%20%2859%29.png)
+![android OFIN - QRCode](../../.gitbook/assets/image%20%2860%29.png)
 
 ![ios OFIN - QRCode](../../.gitbook/assets/image%20%2832%29.png)
 

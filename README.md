@@ -9,13 +9,13 @@ API서비스의 공급자로서, 또한 API 서비스의 사용자로서 자유�
 
 ![&#xD540;&#xD14C;&#xD06C;&#xAE30;&#xC5C5;, &#xC790;&#xBCF8;&#xC2DC;&#xC7A5;&#xC624;&#xD508;&#xD50C;&#xB7AB;&#xD3FC;, &#xAE08;&#xD22C;&#xC0AC;, &#xACF5;&#xACF5;/&#xAE08;&#xC735;&#xAE30;&#xAD00; &#xB4F1;&#xC758; &#xC591;&#xBC29;&#xD5A5; &#xC11C;&#xBE44;&#xC2A4;](http://biz.koscom.co.kr/images/cpt/info/img_info01.jpg;jsessionid=7532B3F3E315B5534DF4CB4A9F515AC9)
 
-![](.gitbook/assets/image%20%2868%29.png)
+![](.gitbook/assets/image%20%2869%29.png)
 
 ## **성장 로드맵 \(RoadMap\)**
 
 오픈플랫폼은 각 단계별 성장 로드맵에 맞추어 필요한 데이터와 서비스를 제공할 예정입니다.
 
-![](.gitbook/assets/image%20%2884%29.png)
+![](.gitbook/assets/image%20%2885%29.png)
 
  또한 오픈플랫폼은 온라인자산관리, 투자자문서비스 등의 자산관리의 핵심 분야를 지원하는  
 자본시장 인프라로써의 역할을 수행 할 수 있도록 성장시켜 나갈 예정입니다.

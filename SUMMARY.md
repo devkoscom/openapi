@@ -2,7 +2,8 @@
 
 * [오픈플랫폼](README.md)
 * [이용절차 안내](how-to-use/README.md)
-  * [오픈플랫폼 이용절차](how-to-use/oppf.md)
+  * [오픈플랫폼 이용절차](how-to-use/oppf/README.md)
+    * [이용 대상 및 수수료 안내](how-to-use/oppf/undefined.md)
   * [개발자센터 이용절차](how-to-use/devcenter/README.md)
     * [어플리케이션 등록](how-to-use/devcenter/enrollapp.md)
     * [API 테스트](how-to-use/devcenter/testapi.md)

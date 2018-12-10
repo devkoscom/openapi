@@ -16,7 +16,6 @@
   * [주문 서비스](api/undefined.md)
   * [일임매매 서비스](api/b2baccount.md)
   * [시세 서비스](api/market/README.md)
-    * [WebSocket Push](api/market/streaming.md)
     * [주식 시세](api/market/stocks/README.md)
       * [요구형항목](api/market/stocks/change.md)
     * [선물 시세](api/market/futures.md)
@@ -53,5 +52,6 @@
   * [API 사용절차](faq/api.md)
   * [계좌 서비스](faq/account.md)
   * [시세 서비스](faq/market.md)
+* [문의사항](onlineqna.md)
 * [개정내역](revision-history.md)
 

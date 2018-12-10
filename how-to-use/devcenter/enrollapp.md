@@ -2,7 +2,7 @@
 
 대시보드 &gt; 어플리케이션 에서 하단에 있는 '**응용 프로그램 추가'** 버튼을 통해 앱을 생성 합니다.
 
-![](../../.gitbook/assets/image%20%28124%29.png)
+![](../../.gitbook/assets/image%20%28127%29.png)
 
 ​
 
@@ -12,7 +12,7 @@
 
 'Application 정보'에 해당 항목을 입력하고 'Next Step' 버튼을 클릭 합니다.
 
-![](../../.gitbook/assets/image%20%2870%29.png)
+![](../../.gitbook/assets/image%20%2873%29.png)
 
 > * 응용 프로그램 이름
 > * 플랫폼
@@ -27,7 +27,7 @@
 
 'API관리' 탭에서는 사용할 API를 선택하고, 그에 해당하는 API '이용 약관에 동의' 하고, 더 이상 사용할 API가 없으면 'Next Step'버튼을 누릅니다.
 
-![](../../.gitbook/assets/image%20%28119%29.png)
+![](../../.gitbook/assets/image%20%28122%29.png)
 
 > * API 추가 
 >
@@ -39,7 +39,7 @@
 
 ## 인증 정보 등록
 
-![&#xC778;&#xC99D; &#xD0ED;](../../.gitbook/assets/image%20%28120%29.png)
+![&#xC778;&#xC99D; &#xD0ED;](../../.gitbook/assets/image%20%28123%29.png)
 
 {% hint style="danger" %}
 인증 탭의 '**Callback URL**',  **'Scope**',  '**유형**' 항목은   

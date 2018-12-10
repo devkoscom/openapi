@@ -6,5 +6,11 @@ description: >-
 
 # 이용 대상 및 수수료 안내
 
-![](../../.gitbook/assets/image%20%2857%29.png)
+### 오픈플랫폼 및 금융투자회사 제공
+
+![](../../.gitbook/assets/image%20%2862%29.png)
+
+### 시세 및 핀테크 제공
+
+![](../../.gitbook/assets/image%20%2825%29.png)
 

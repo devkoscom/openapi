@@ -4,9 +4,9 @@
 
 > `{APIGWAddr}`
 
-**Production**\(상용\)      \|  `apigw.koscom.co.kr`
+#### **Production**\(상용\)      \|  `apigw.koscom.co.kr`
 
-**Sandbox**\(샌드박스\)  \|  `sandbox-apigw.koscom.co.kr`
+#### **Sandbox**\(샌드박스\)  \|  `sandbox-apigw.koscom.co.kr`
 
 ## 공통 URI
 

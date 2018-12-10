@@ -33,8 +33,8 @@
           Cancel/Replace Request), 주문 취소(Order Cancel Request), 리스트 주문 취소 (List Cancel
           Request) 용 Restful API 호출</p>
         <p>- 주문응답 수신을 위한 subscription 전송하여 web socket session을 설정</p>
-        <p>② Restful API 요청의 Body에 포함된 주문전문(JSON)을 FIX 메시지 형태로 변환하여 STP-HUB로 전송 ③
-          오픈플랫폼은 API 요청에 대한 응답을 즉시 전송 - JSON message 수준에서의 기본적인 오류를 확인하여 응답</p>
+        <p>② Restful API 요청의 Body에 포함된 주문전문(JSON)을 FIX 메시지 형태로 변환하여 STP-HUB로 전송</p>
+        <p>③ 오픈플랫폼은 API 요청에 대한 응답을 즉시 전송 - JSON message 수준에서의 기본적인 오류를 확인하여 응답</p>
         <p>④ ~ ⑦ 주문전문은 STP-HUB를 거쳐 증권사 및 거래소로 전달되고, 그 응답을 역순으로 반환</p>
         <p>⑧ 응답 (Execution Reports), 거부 (Order Cancel Reject) FIX 메시지를 JSON으로 변환하여
           자문사와 연결된 WebSocket Session을 통해 전송</p>

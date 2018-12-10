@@ -75,7 +75,7 @@ API 제공 금융투자회사, 일정, API 제공 범위 는 금융투자회사�
 
 ## 자산 포트폴리오 조회 API
 
-조회대상이 되는 계좌의 실제 잔고 수량, 투자금액 대신 금융투자 상품의 구성비만을 제공함으로써 개인금융정보의 노출부담을 최소화하면서도 투자자산을 기초로 자산통합관리, 자문, 정보제공 등을 받을 수 있도록 하기 위한 API
+조회대상이 되는 계좌의 실제 잔고 수량, 투자금액 대신 금융투자 상품의 구성비만을 제공함으로써 개인금융정보의 노출부담을 최소화 하면서도 투자자산을 기초로 자산통합관리, 자문, 정보제공 등을 받을 수 있도록 하기 위한 API
 
 {% api-method method="post" host="https://{APIGWAddr}/v1/{단축명}/account" path="/portfolio/search" %}
 {% api-method-summary %}
@@ -255,7 +255,7 @@ Bearer 발급받은 access token
 
 #### Content-Type  \|  `Application/json`
 
-#### Authentication  \|  **`Authorization Code`  \(OAuth 2.0\)**
+#### Authentication  \|  **`Authorization Code`  \(**[**OAuth 2.0**](../authentication/oauth/authorization-code-grant-flow.md)**\)**
 
 #### Request Body Example
 
@@ -296,14 +296,19 @@ Bearer 발급받은 access token
 
 | **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
-| comId | String\(5\) | 핀테크기업코드 |
-| srvId | String\(20\) | 핀테크서비스코드 |
+| _**partner**_ |   _**Object**_  | _**핀테크 서비스 정보**_ |
+| comId | String\(5\) | 핀테크 기업 코드 |
+| srvId | String\(20\) | 핀테크 서비스 코드 |
+| _**commonHeader**_ |   _**Object**_   | _**요청 메시지 제어 헤더**_ |
 | reqIdPlatform | String\(20\) | 플랫폼에서 사용하는 메시지 구분자 |
 | reqIdConsumer | String\(20\) | 핀테크기업에서 사용하는 메시지 |
 | ci | String\(88\) | 연계정보 |
+| _**devInfo**_ | _**Object**_  | _**단말정보**_ |
 | ipAddr | String\(32\) | 사용자 단말 IP주소는 `dot`없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 dash없이 10자리로 채워서 설정 |
 | macAddr | String\(50\) | 사용자 MAC 주소는 PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정 |
+| _**accInfo**_ | _**Object**_ |  |
 | vtAccNo | String\(30\) | 가상계좌번호 |
+| _**portfolioRequestBody**_ |  _**Object**_ |  |
 | assetType | String\(8\) | 요청하는 자산유형은 `CASH`\(현금\), `EQTY`\(주식\), `FUND`\(펀드\), `ETC`\(기타자산\), `ALL`\(전체\)인 경우는 page 처리없이 대용량 데이터 전송이 가능한 금융투자회사만 가능 |
 | rspType | String\(8\) | 응답 유형은 `RAT`\(잔고구성비율\)은 기본으로 제공하며, 증권사에 따라 `QTY`\(실제잔고수량\)도 가능하나 본 API의 목적상 사용을 권장하지 않음 |
 | count | Number | 응답 별 최대 응답 건수는 금융투자회사가 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 금융투자회사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 / `assetType`이 ‘ALL’인 경우는 `page`없이 일괄전송이므로 본 필드는 의미 없으므로 0으로 설정 |
@@ -312,7 +317,7 @@ Bearer 발급받은 access token
 `핀테크기업코드` 및 `핀테크서비스코드`는 이용기관 등록 이후 발급 되며 샌드박스에서 목업데이터\(가상증권사\)를 대상으로 테스트 할 경우 별도로 유휴효을 체크 하지 않음
 
 {% hint style="success" %}
- `assetType`을 'ALL'로 요청 가능한 증권사    
+ assetType을 'ALL'로 요청 가능한 증권사    
    : NH투자증권, 대신증권, 키움증권, 신한금융투자 
 {% endhint %}
 
@@ -324,35 +329,48 @@ Bearer 발급받은 access token
 
 | **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
+| _**commonHeader**_ |  _**Object**_  | _**요청 메시지 제어 헤더**_ |
 | reqIdPlatform | String\(20\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
 | reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |
 | certDn | String\(256\) | `사용안함` |
 | ci | String\(88\) | 연계정보 |
+| _**accInfo**_ | _**Object**_ |  |
 | realAccNo | String\(40\) | `사용안함` |
 | vtAccNo | String\(30\) | 가상계좌번호 |
+| _**portfolioResponseBody**_ | _**Object**_ |  |
+| _**queryType**_ | _**Object**_  | _**요청 시 설정했던 값이 그대로 전송**_ |
+| assetType | String\(8\) | `반환` |
+| rspType | String\(8\) | `반환` |
+| count | Number | `반환` |
+| page | String\(24\) | `반환` |
+| _**queryRequest**_ | _**Object**_  | 응답 결 |
 | totalCnt | Number | 조회 조건의 총 메시지 건수 |
 | count | Number | 현 메시지 내 응답 건수 |
 | page | String\(24\) | 다음 page 번호 \(“null”이면 더 이상 없음\) |
-| amt | Number | 전체 자산 중 현금잔고 또는 비중  |
-| **equityList** | **Array** | **EQTY** |
+| _**portfolioList**_ |  _**Object**_ | \*\*\*\* |
+| _**portfolio**_ |  _**Object**_ |  |
+| _**cash**_ |  _**Object**_  | _**CASH**_ |
+|  amt   | Number | 설정 전체 자산 중 현금잔고 또는 비중 |
+| _**equityList**_   | _**array**_ | _**EQTY**_ |
 | assetType | String\(8\) | 상품구분자는 `KSP`\(코스피\), `KDQ`\(코스닥\), `ETF`\(ETF\), `FUT`\(선물\), `OPT`\(옵션\), `ELW`\(ELW\), `ETC`\(기타\) |
 | isinCode | String\(12\) | 표준코드 |
 | qty | Number | 수량 또는 비중 \(`equity` 내 비중, 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영  안함\) |
 | earningRate | Number | 수익률 \(소수점 2째자리 까지\) |
-| **fundList** | **Array** | **FUND** |
+| _**fundList**_ | _**Array**_ | _**FUND**_ |
 | fundCode | String\(20\) | 펀드표준코드 |
 | fundName | String\(15\) | 펀드명 최대 15자 |
 | qty | Number | 수량 또는 비중 \(펀드내 비중, 소수점 2째자리까지\) |
 | earningRate | Number | 수익률 \(소수점 2째자리까지\) |
 | maturity | String\(12\) | 만기일 \(YYYYMMDD\) |
-| **etcList** | **Array** | **ETC** |
+| _etcList_ | _Array_ | _ETC_ |
 | assetType | String\(8\) | 상품구분자는 `BOND`\(채권\), `CD`, `CP`, `DLS`, `ELS`, `STB`\(사채\), `RP`\(미구분\), `CRP`\(약정식RP\), `RRP`\(수시RP\), `WRT`\(워런트\) |
 | assetName | String\(15\) | 상품명 |
 | isinCode | String\(12\) | 현재는 지원 안 함 \(1.0부터 지원예정\) |
 | qty | Number | 수량 또는 비중 \(etc 내 비중, 소수점 2째자리까지  신용 매수 분 포함하고 대출잔고는 반영 안함  \) |
 | earningRate | Number | 수익률 \(소수점 2째자리까지\) |
-| respCode | String\(8\) | 응답코드 |
-| respMsg | String\(50\) | 응답메시지 |
+| _**resp**_ | _**Object**_ |  |
+| respCode | String\(8\) | [응답코드](../error-code.md) |
+| respMsg | String\(50\) | [응답메시지](../error-code.md#error-code-message) |
 
 
 
@@ -639,7 +657,7 @@ Bearer 발급받은 access token
 
 #### Content-Type  \|  `Application/json`
 
-#### Authentication  \|  **`Authorization Code`  \(OAuth 2.0\)**
+#### Authentication  \|  **`Authorization Code`  \(**[**OAuth 2.0**](../authentication/oauth/authorization-code-grant-flow.md)**\)**
 
 #### Request Body Example
 
@@ -679,23 +697,28 @@ Bearer 발급받은 access token
 
 | **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
-| comId | String\(5\) | 핀테크기업코드 |
-| srvId | String\(20\) | 핀테크서비스코드 |
+| _**partner**_ | _**Object**_  | _**핀테크 서비스 정보**_ |
+| comId | String\(5\) | 핀테크 기업 코드 |
+| srvId | String\(20\) | 핀테크 서비스 코드 |
+| _**commonHeader**_ | _**Object**_ | _**요청 메시지 제어 헤더**_ |
 | reqIdPlatform | String\(20\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
-| reqIdConsumer | String\(20\) | 핀테크기업에서 사용하는 메시지 구분 |
+| reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분 |
 | ci | String\(88\) | 연계정보 |
+| _**devInfo**_ | _**Object**_ |  |
 | ipAddr | String\(32\) | 사용자 단말 IP주소 \(`dot`없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 `dash`없이 10자리로 채워서 설정\) |
 | macAddr | String\(50\) | 사용자 MAC 주소 \(PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정\) |
+| _**accInfo**_ | _**Object**_  | _**요청 메시지 본문**_ |
 | vtAccNo | String\(30\) | 가상계좌번호 |
+| _**balanceRequestBody**_ | _**Object**_ |  |
+| _**queryType**_ | _**Object**_ |  |
 | assetType | String\(8\) | 요청하는 자산유형은 `CASH`\(현금\), `EQTY`\(주식\), `FUND`\(펀드\), `ETC`\(기타자산\), `ALL`\(전체\)인 경우는 `page` 처리없이 대용량 데이터 전송이 가능한 금융투자회사만 가능 |
-| rspType | String\(8\) | 응답 유형은 `RAT`\(잔고구성비율\)은 기본으로 제공하며, 금융투자회사에 따라 `QTY`\(실제잔고수량\)도 가능하나 본 API의 목적상 사용을 권장하지 않음 |
 | count | Number | 응답 별 최대 응답 건수는 금융투자회사가는 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 금융투자회사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 / `assetType`이 ‘ALL’인 경우는 `page`없이 일괄전송이므로 본 필드는 의미 없으므로 0으로 설정 |
 | page | String\(24\) | 다음 `page`를 지시하는 키 \(첫 요청은 “null”로 표기하고, 다음 페이지부터는 `response`에서 주는 `page` 값을 넣어 요청\) |
 
 `핀테크기업코드` 및 `핀테크서비스코드`는 이용기관 등록 이후 발급 되며 샌드박스에서 목업데이터\(가상증권사\)를 대상으로 테스트 할 경우 별도로 유휴효을 체크 하지 않음
 
 {% hint style="success" %}
- `assetType`을 'ALL'로 요청 가능한 증권사    
+  queryType의`assetType`을 'ALL'로 요청 가능한 증권사    
    : NH투자증권, 대신증권, 키움증권, 신한금융투자
 {% endhint %}
 
@@ -703,16 +726,27 @@ Bearer 발급받은 access token
 
 | **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
+| _**commonHeader**_ | _**Object**_ |  |
 | reqIdPlatform | String\(20\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
 | reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |
 | certDn | String\(256\) | `사용안함` |
 | ci | String\(88\) | 연계정보 |
+| _**accInfo**_ | _**Object**_ |  _**요청 메시지 본문**_ |
 | realAccNo | String\(40\) | `사용안함` |
-| vtAccNo | String\(30\) | 가상계좌번호 |
+| vtAccNo | String\(30\) | `반환` 가상계좌번호 |
+| _**balanceResponseBody**_ |  _**Object**_ |  |
+| _**queryType**_ |   _**Object**_ |  |
+| assetType |  String\(8\) | `반환` 요청하는 자산유형이며 값은: `SUM`\(현금\), `EQTY`\(주식\), `FUND`\(펀드\), `ETC`\(기타자산\), `ALL`\(전체\) |
+| rspType |  String\(8\)  | `반환` |
+| count | Number | `반환` |
+| page | String\(24\)  | `반환` |
+| _**queryResult**_ | _**Object**_ |  |
 | totalCnt | Number | 조회 조건의 총 메시지 건수 |
 | count | Number | 현 메시지 내 응답 건수 |
 | page | String\(24\) | 다음 `page` 번호 \(“null”이면 더 이상 없음\) |
-| summary | Object | 잔고 요약 |
+| _**balanceList**_ | _**Object**_  | _**잔고 종합**_ |
+| _**balance**_  | _**Object**_ | _\*\*\*\*_ |
+| _**summary**_ | _**Object**_ | _**잔고 요약 \(SUM\)**_ |
 | cashBalance | Number | 현금잔고 |
 | d1 | Number | D+1잔고 |
 | d2 | Number | D+2잔고 |
@@ -725,7 +759,7 @@ Bearer 발급받은 access token
 | proLoss | Number | 유가증권평가손익 |
 | totalAccVal | Number | 총평가금액 |
 | cashAvWithdraw | Number | 출금가능액 |
-| **equityList** | **Array** | **EQTY** |
+| _**equityList**_ | _**Array**_ | _**EQTY**_ |
 | assetType | String\(8\) | 상품구분자는 `KSP`\(코스피\), `KDQ`\(코스닥\), `ETF`\(ETF\), `FUT`\(선물\), `OPT`\(옵션\), `ELW`\(ELW\), `ETC`\(기타\) |
 | isinCode | String\(12\) | 국제표준코드 |
 | qty | Number | 수량 또는 비중 \(`equity` 내 비중, 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영안함\) |
@@ -734,7 +768,7 @@ Bearer 발급받은 access token
 | valAtCur | Number | 평가금액 |
 | proLoss | Number | 평가손익 |
 | earningRate | Number | 수익률 \(소수점 2째자리까지\) |
-| **fundList** | **Array** | FUND |
+| _**fundList**_ | _**Array**_ | _FUND_ |
 | fundCode | String\(20\) | 펀드표준코드 |
 | fundName | String\(15\) | 펀드이름 \(최대 15자\) |
 | valAtTrade | Number | 매수금액 |
@@ -744,7 +778,7 @@ Bearer 발급받은 access token
 | lastDateBuy | String\(12\) | 최종매수일 \(YYYYMMDD\) |
 | maturity | String\(12\) | 만기일 \(YYYYMMDD\) |
 | earningRate | Number | 수익률 \(소수점 2째자리까지\) |
-| **etcList** | **Array** | **ETC** |
+| _**etcList**_ | _**Array**_ | _**ETC**_ |
 | assetType | String\(8\) | 상품구분자는 `BOND`\(채권\), `CD`, `CP`, `DLS`, `ELS`, `STB`\(사채\), `RP`\(미구분\), `CRP`\(약정식RP\), `RRP`\(수시RP\), `WRT`\(워런트\) |
 | assetName | String\(15\) | 상품명 |
 | isinCode | String\(12\) | `현재는 지원 안 함` \(1.0부터 지원예정\) |
@@ -753,10 +787,9 @@ Bearer 발급받은 access token
 | valAtTrade | Number | 매수금액 |
 | valAtCur | Number | 평가금액 |
 | earningRate | Number | 수익률 \(소수점 2째자리까지\) |
+|  _**resp**_  | _**Object**_ |  |
 | respCode | String\(8\) | 응답코드 |
 | respMsg | String\(50\) | 응답메시지 |
-
-
 
 
 
@@ -892,7 +925,7 @@ Bearer 발급받은 access token
 
 #### Content-Type  \|  `Application/json`
 
-#### Authentication  \|  **`Authorization Code`  \(OAuth 2.0\)**
+#### Authentication  \|  **`Authorization Code`   \(**[**OAuth 2.0**](../authentication/oauth/authorization-code-grant-flow.md)**\)**
 
 #### Request Example
 
@@ -948,9 +981,9 @@ Bearer 발급받은 access token
 | ipAddr | String\(32\) | 사용자 단말 IP주소 \(`dot`없이 3자리를 12자리로 채워서 설정하며, 모바일인 경우 휴대폰번호로 설정하고 `dash`없이 10자리로 채워서 설정\)  |
 | macAddr | String\(50\) | 사용자 MAC 주소 \(PC의 경우 MAC을 : 없이 붙여 12자리로 표현하고, 모바일인 경우 UUID 설정\) |
 | _**accInfo**_  | _**Object**_ | _\*\*\*\*_ |
-| _**queryPrams**_  | _**Object**_ |  |
 | vtAccNo | String\(30\) | 가상계좌번호 |
-| queryPrams | Object | 조회범위는 금융투자회사별로  상이 |
+| _**transactionHistoryRequestBody**_ | _**Object**_ |  |
+| _**queryPrams**_ | _**Object**_ | _**조회범위는 금융투자회사별로  상이**_ |
 | fromDate | String\(12\) | 조회시작날짜 \(YYYYMMDD\) |
 | toDate | String\(12\) | 조회종료날짜 \(YYYYMMDD\) |
 | isinCode | String\(20\) | 종목코드 \(종목코드, 종목코드지정 없으면 전체종목을 대상\) |
@@ -962,21 +995,30 @@ Bearer 발급받은 access token
 
 | **Name** | **Type** | **Description** |
 | :--- | :--- | :--- |
+| _**commonHeader**_  |  _**Object**_ | _**요청 메시지 제어 헤더**_ |
 | reqIdPlatform | String\(20\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
 | reqIdConsumer | String\(20\) | 핀테크 기업에서 사용하는 메시지 구분자 |
 | certDn | String\(256\) | `사용안함` |
 | ci | String\(88\) | 연계정보 |
+| _**accInfo**_ | _**Object**_ |  |
 | realAccNo | String\(40\) | `사용안함` |
-| vtAccNo | String\(30\) | 가상계좌번호 |
-|  totalCnt | Number | 조회 조건의 총 메시지 건수 |
-|  count | Number | 현 메시지 내 응답 건수 |
+| vtAccNo | String\(30\) | `반환` 가상계좌번호 |
+| _**transactionHistoryResponseBody**_ | _**Object**_ |  |
+| _**accInfo**_ | _**Object**_ |  |
+| realAccNo | String\(40\) | `사용안함` |
+| vtAccNo | String\(30\) | `반환`가상계좌번호 |
+| _**queryResult**_  | _**Object**_ |  |
+| totalCnt | Number | 조회 조건의 총 메시지 건수 |
+| count | Number | 현 메시지 내 응답 건수 |
 | page | String\(24\) | 다음 `page` 번호 \(“null”이면 더 이상 없음\) |
+| _**queryPrams**_  | _**Object**_ |  |
 |  fromDate | String\(12\) | 조회시작날짜 \(YYYYMMDD\) |
 |  toDate | String\(12\) | 조회종료날짜 \(YYYYMMDD\) |
 |  isinCode | String\(12\) | 조회조건 \(종목코드\) |
 |  side | String\(8\) | 조회조건은 `BID`\(매도\), `ASK`\(매수\)로 구분 |
 |  count | Number | 응답 별 건수 \(default는 50\) |
 | page | String\(24\) | 다음 `page` 번호가 응답데이터의 특정 지점을 지정할 경우 \(요청 시 값\) |
+| _**transList**_  | _**Object**_  | _**거래내역 리스트**_ |
 | **transaction** | **Array** | 거래 |
 | isinCode | String\(20\) | 종목코드 \(입출금은 `CASH`로 표기\) |
 | transDate | String\(12\) | 거래일자 \(YYYYMMDD\) |
@@ -984,10 +1026,9 @@ Bearer 발급받은 access token
 | changeAmt | Number | 금액증감 \(매도/매수/이체에 따른 금액변동\) |
 | changeQty | Number | 수량증감 \(매도/매수량, 이체 시는 0\) |
 | qty | Number | 잔고수량 \(거래 후 잔량\) |
+| _**resp**_  | _**Object**_ |  |
 | respCode | String\(8\) | 응답코드 |
 | respMsg | String\(50\) | 응답메시지 |
-
-
 
 
 
@@ -1075,7 +1116,7 @@ Bearer 발급받은 access token
 
 #### Content-Type  \|  `Application/json`
 
-#### Authentication  \|  **`Authorization Code`  \(OAuth 2.0\)**
+#### Authentication  \|  **`Authorization Code`  \(**[**OAuth 2.0**](../authentication/oauth/authorization-code-grant-flow.md)**\)**
 
  **Request Body Parameters**
 
@@ -1165,4 +1206,6 @@ Bearer 발급받은 access token
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+
 

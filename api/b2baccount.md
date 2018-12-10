@@ -199,14 +199,13 @@ Basic Authentication 인증 사용
 | qrOrderDate | String\(12\) | 주문일자는 선택 / \(입력없는경우 당일YYYYMMDD\) |
 | qrIsinCode | String\(20\) | 종목코드는 선택 / \(입력 시 해당 종목만 요청\) |
 | qrOrderNo | String\(20\) | 주문번호는 선택 / \(입력 시 해당 주문만 조회\) |
-| count | number | 응답별 최대 응답 건수는 금융투자회사가 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 금융투자회사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함
- |
+| count | number | 응답별 최대 응답 건수는 금융투자회사가 반드시 이 요청건수에 맞춰 전송할 필요는 없으나, 단일응답에 담기는 데이터는 이 건수를 초과하지 않음 / 0을 설정하면 금융투자회사 전송 시스템이 판단한 전송 가능한 적절한 건수로 요청함을 의미함 |
 | page | String\(100\) | 다음page를 지시하는 키 (선택 / 첫 요청은 null로 표기하고, 다음 페이지부터는 response에서 주는 page 값을 넣어 요청함) |
 
 #### Response Parameters
 
-| **Name** | **Type** | **Description** |  |
-| :--- | :--- | :--- | :--- |
+| **Name** | **Type** | **Description** |
+| :--- | :--- | :--- |
 | reqIdPlatform | String\(50\) | 플랫폼에서 사용하는 메시지 구분자 |
 | reqIdConsumer | String\(50\) | 핀테크 기업에서 사용하는 메시지 구분자 |
 | certDn | String\(256\) | `사용안함` |

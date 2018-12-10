@@ -31,7 +31,7 @@ GET /v2/market/stocks/kospi/005930/selectivemaster?prevddClsprc&wk52HgstPrc
 
 | **Name** | **Type** | **Description** |  | **제공구분** |
 | :--- | :--- | :--- | :--- | :--- |
-| trdDd | string\(8\) | 체결일자,거래일자,매매일자 | YYYYMMDD | ~/master, ~/selectivemaster |
+| trdDd | string\(8\) | 체결일자,거래일자,매매일자 \( |  | ~/master, ~/selectivemaster |
 | isuCd | string\(12\) | 종목코드 | 표준코드 | ~/master, ~/selectivemaster |
 | isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 | ~/master, ~/selectivemaster |
 | isuKorAbbrv | string\(40\) | 종목한글약명 | 가나다 | ~/master, ~/selectivemaster |

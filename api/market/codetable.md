@@ -26,14 +26,12 @@
 |  파생 | ktb5 | 국채5년선물 | K5FA001 |
 |  파생 | ktb10 | 국채10년선물 | KXFA001 |
 |  파생 | lean\_hogs | 돈지육선물\(lean hogs future\) | KLFA001 |
-|  파생 | kospi200 | kospi옵션 |  |
-|  파생 | mini\_kospi200 | 미니 kospi옵션 |  |
-|  파생 | usd | 달러옵션 |  |
+|  파생 | cme\_kospi200 | KOSPI200 선물 \(CME 야간시장\) |  |
 |  파생 | eurostoxx | 유로스탁스 선물 | GIXFSSX5E |
 |  지수 | kospi | 유가증권 지수 |  |
 |  지수 | kosdaq | 코스닥 지수 |  |
 |  지수 | sector | 섹터지수 |  |
-|  지수 | etc | 기타지 |  |
+|  지수 | etc | 기타지수 |  |
 
 {% hint style="success" %}
 **연결선물코드**  

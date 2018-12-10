@@ -1,3 +1,7 @@
+---
+description: 'RA테스트베드 참여 알고리즘 목록과 운용계좌별 수익률, 위험 및 성과지표 등을 조회 한다.'
+---
+
 # RA테스트베드 알고리즘
 
 #### 자세한 설명은 [RA테스트베드 알고리즘 운용실적 API 매뉴얼](https://developers.koscom.co.kr/resources/documentation/20170614_RATestBed_API.pdf) 을 참조 하세요.
@@ -16,7 +20,11 @@
 
 RA테스트베드 알고리즘 목록을 조회한다.
 
-#### Response Parameters
+####  Content-Type \| `Application/json; charset=utf-8` <a id="content-type-or-application-json-charset-utf-8"></a>
+
+#### Authentication \| **`API Key`** <a id="authentication-or-api-key"></a>
+
+#### Response Query Parameters
 
 | **항목명** | **타입** | **한글명** | **비고** |
 | :--- | :--- | :--- | :--- |
@@ -79,7 +87,11 @@ GET https://sandbox-apigw.koscom.co.kr/v1/ratestbed/algoapi.json
 
 로보어드바이저 알고리즘 운용계좌의 기준가 및 기간 수익률을 운용계좌별로 조회한다.
 
-#### Request Parameters
+#### Content-Type \| `Application/json; charset=utf-8` <a id="content-type-or-application-json-charset-utf-8"></a>
+
+#### Authentication \| **`API Key`** <a id="authentication-or-api-key"></a>
+
+#### Request Query Parameters
 
 | 항목명 | 타입 | 설명 | 비고 |
 | :--- | :--- | :--- | :--- |
@@ -87,7 +99,7 @@ GET https://sandbox-apigw.koscom.co.kr/v1/ratestbed/algoapi.json
 | startDate | number | 시작일자 | yyyymmdd |
 | endDate | number | 종료일자 | yyyymmdd |
 
-#### Response Parameters
+#### Response Body Parameters
 
 | 항목명 | 타입 | 한글명 | 비고 |
 | :--- | :--- | :--- | :--- |
@@ -193,20 +205,23 @@ GET https://sandbox-apigw.koscom.co.kr/v1/ratestbed/rateapi.json?algrthSn=35&sta
 }
 ```
 
-### riskapi
+### GET  v1/ratestbed/riskapi.json
 
 로보어드바이저 알고리즘 운용계좌의 위험 및 성과지표를 운용계좌별로 조회한다.
 
-#### Request Parameters
+#### Content-Type \| `Application/json; charset=utf-8` <a id="content-type-or-application-json-charset-utf-8"></a>
+
+#### Authentication \| **`API Key`** <a id="authentication-or-api-key"></a>
+
+#### Request Query Parameters
 
 | 항목명 | 한글명 | 비고 |
 | :--- | :--- | :--- |
 | algrthSn | 알고리즘 번호 | 예\) 35 |
 | startDate | 시작일자 | yyyymmdd |
 | endDate | 종료일자 | yyyymmdd |
-|  |  |  |
 
-#### Response Parameters
+#### Response Body Parameters
 
 | 항목명 | 한글명 | 비고 |
 | :--- | :--- | :--- |
@@ -222,7 +237,6 @@ GET https://sandbox-apigw.koscom.co.kr/v1/ratestbed/rateapi.json?algrthSn=35&sta
 | jensensAlpha | 젠센알파 | 예\) 0.07 |
 | inforRate | 정보비율 | 예\) -7.8 |
 | trackingErr | 트랙킹에러 | 예\) 0.07 |
-|  |  |  |
 
 #### Examples
 

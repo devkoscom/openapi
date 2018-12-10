@@ -24,7 +24,6 @@
     * [업종 지수](api/market/index.md)
     * [주식 시세표](api/market/multiquote.md)
     * [코드표\(시세\)](api/market/codetable.md)
-    * [Untitled](api/market/untitled.md)
     * [Wavelet](api/market/wavelet.md)
   * [재무정보 서비스](api/financialinfo/README.md)
     * [Bookkeeper](api/financialinfo/bookkeeper.md)

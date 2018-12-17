@@ -4,3 +4,9 @@ description: 금투사가 제공하는 금융거래 API를 서비스 하기 위�
 
 # 보안성 검증 \(금보원\)
 
+{% file src="../../.gitbook/assets/api.pdf" %}
+
+{% file src="../../.gitbook/assets/3.-\_v170208.hwp" %}
+
+
+

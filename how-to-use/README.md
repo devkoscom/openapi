@@ -13,9 +13,9 @@
 **금투사가 제공하는 금융거래 API는 해당 금투사 및 핀테크기업만 사용 가능합니다.**
 {% endhint %}
 
-{% page-ref page="oppf/" %}
+{% page-ref page="procedure/" %}
 
 {% page-ref page="devcenter/" %}
 
-{% page-ref page="user/" %}
+{% page-ref page="fintechservice/" %}
 

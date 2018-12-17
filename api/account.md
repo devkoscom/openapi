@@ -318,7 +318,7 @@ Bearer 발급받은 access token
 
 {% hint style="success" %}
  assetType을 'ALL'로 요청 가능한 증권사    
-   : NH투자증권, 대신증권, 키움증권, 신한금융투자 
+   : KB증권, NH투자증권, 대신증권, 키움증권, 신한금융투자 
 {% endhint %}
 
 {% hint style="warning" %}

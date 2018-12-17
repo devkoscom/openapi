@@ -33,12 +33,12 @@ description: >-
 
 ## Error Category
 
-| **`Category`** | **`시스템`** |
+| **`Category`** | **`System`** |
 | :--- | :--- |
 | `op-apim` | 오픈플랫폼 API Gateway Server |
 | `op-auth` | 오픈플랫폼 인증 서버 |
 | `op-exco` | 오픈플랫폼 증권사 연계 서버 |
-| `{증권사명}` | ex\) samsung, Hyundai  |
+| `{증권사명}` | ex\) Samsung, Hyundai  |
 
 
 

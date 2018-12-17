@@ -16,7 +16,7 @@
 
 > \(’2018.05.31 기준\)
 
-| **금융투자회사** | **단축명** | **코드** | **API제공여부** |
+| **`금융투자회사`** | **`단축명`** | **`코드`** | **`API제공여부`** |
 | :--- | :--- | :--- | :--- |
 | 신한금융투자 | SHINHAN | 00002 | 제공 |
 | 대신증권 | DAISHIN | 00004 | 제공 |
@@ -294,7 +294,7 @@ Bearer 발급받은 access token
 
 #### **Request Body Parameters**
 
-| **Name** | **Type** | **Description** |
+| **`Name`** | **`Type`** | **`Description`** |
 | :--- | :--- | :--- |
 | _**partner**_ |   _**Object**_  | _**핀테크 서비스 정보**_ |
 | comId | String\(5\) | 핀테크 기업 코드 |
@@ -327,7 +327,7 @@ Bearer 발급받은 access token
 
 #### Response Body Parameters
 
-| **Name** | **Type** | **Description** |
+| **`Name`** | **`Type`** | **`Description`** |
 | :--- | :--- | :--- |
 | _**commonHeader**_ |  _**Object**_  | _**요청 메시지 제어 헤더**_ |
 | reqIdPlatform | String\(20\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
@@ -695,7 +695,7 @@ Bearer 발급받은 access token
 
 #### **Request Parameters**
 
-| **Name** | **Type** | **Description** |
+| **`Name`** | **`Type`** | **`Description`** |
 | :--- | :--- | :--- |
 | _**partner**_ | _**Object**_  | _**핀테크 서비스 정보**_ |
 | comId | String\(5\) | 핀테크 기업 코드 |
@@ -724,7 +724,7 @@ Bearer 발급받은 access token
 
 #### Response Parameters
 
-| **Name** | **Type** | **Description** |
+| **`Name`** | **`Type`** | **`Description`** |
 | :--- | :--- | :--- |
 | _**commonHeader**_ | _**Object**_ |  |
 | reqIdPlatform | String\(20\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
@@ -968,7 +968,7 @@ Bearer 발급받은 access token
 
 #### **Request Body Parameters**
 
-| **Name** | **Type** | **Description** |
+| **`Name`** | **`Type`** | **`Description`** |
 | :--- | :--- | :--- |
 |  _**partner**_  | _**Object**_ |  _**핀테크 서비스 정보**_ |
 | comId | String\(5\) | 핀테크 기업 코드 |
@@ -993,7 +993,7 @@ Bearer 발급받은 access token
 
 #### Response Body Parameters
 
-| **Name** | **Type** | **Description** |
+| **`Name`** | **`Type`** | **`Description`** |
 | :--- | :--- | :--- |
 | _**commonHeader**_  |  _**Object**_ | _**요청 메시지 제어 헤더**_ |
 | reqIdPlatform | String\(20\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |
@@ -1120,7 +1120,7 @@ Bearer 발급받은 access token
 
  **Request Body Parameters**
 
-| **Name** | **Type** | **Description** |
+| **`Name`** | **`Type`** | **`Description`** |
 | :--- | :--- | :--- |
 | _**partner**_ | _**Object**_ | _**핀테크 서비스 정보**_ |
 | comId | String\(5\) | 핀테크 기업 코드 |
@@ -1147,7 +1147,7 @@ Bearer 발급받은 access token
 
 #### Response Body Parameters
 
-| **Name** | **Type** | **Description** |
+| **`Name`** | **`Type`** | **`Description`** |
 | :--- | :--- | :--- |
 | _**commHeader**_ | _**Object**_ | _**요청 메시지 제어 헤더**_ |
 | reqIdPlatform | String\(20\) | `사용안함` 플랫폼에서 사용하는 메시지 구분자 |

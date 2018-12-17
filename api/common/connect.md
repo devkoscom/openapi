@@ -60,7 +60,7 @@ Application/json
 
 #### Request Body Parameters
 
-| **Name** | **Type** | **Description** |
+| **`Name`** | **`Type`** | **`Description`** |
 | :--- | :--- | :--- |
 | _**partner**_ | _**Object**_ |  |
 | comId | String\(5\) | 핀테크 기업 코드 |
@@ -98,7 +98,7 @@ Application/json
 
 #### Response Body Parameters
 
-| **Name** | **Type** | **Description** |
+| **`Name`** | **`Type`** | **`Description`** |
 | :--- | :--- | :--- |
 | result | String\(12\) |  회원가입여부 \(member \| nonMember\) |
 | commonTermsExpireDate  | String\(8\) |  이용자의 오픈플랫폼 금융정보제동 동의 만료일 |
@@ -185,7 +185,7 @@ Application/json
 
 #### Request Body Parameters
 
-| **Name** | **Type** | **Description** |
+| **`Name`** | **`Type`** | **`Description`** |
 | :--- | :--- | :--- |
 | _**partner**_ | _**Object**_ |  |
 | comId | String\(5\) | 핀테크 기업 코드 |
@@ -223,7 +223,7 @@ Application/json
 
 #### Response Body Parameters
 
-| **Name** | **Type** | **Description** |
+| **`Name`** | **`Type`** | **`Description`** |
 | :--- | :--- | :--- |
 | _**vtAccList**_ | _**Array**_ |  |
 | comId | String\(5\) | 금융회사코드 |

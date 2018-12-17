@@ -469,8 +469,9 @@ SDK 를 사용하기 위하여 Activity 파일에서 상속해야 하는 Activit
   
 **setURLSchemeListener**
 
-| **Syntax** | void setURLSchemeListener\(OPPFLibURLSchemeListener urlSchemeListener\) |
+| **`Category`** | \`\` |
 | :--- | :--- |
+| **Syntax** | void setURLSchemeListener\(OPPFLibURLSchemeListener urlSchemeListener\) |
 | **Parameter** | OPPFLibURLSchemeListener urlSchemeListener  _- 서비스 결과를 전달 받기 위한 인터페이스\(OPPFLibURLSchemeListener\) 객체_ |
 | **Description** | Koscom Open API App에서 전달 빋은 서비스 결과를 전달 받기 위한 인터페이스 객체를 등록한다. |
 | **Note** | OPPFLibFintech의 requestForActivityResult / requestForResult 에서 사용 됩니다. |
@@ -483,8 +484,9 @@ SDK 를 사용하기 위하여 Activity 파일에서 상속해야 하는 Activit
 
 **requestForResult**
 
-| **Syntax** | void requestForResult\(final OPPFLibActivity activity, final String fn, JSONObject data, String resCallbackUrl, final FintechListener listener\) |
+| **`Category`** |  |
 | :--- | :--- |
+| **Syntax** | void requestForResult\(final OPPFLibActivity activity, final String fn, JSONObject data, String resCallbackUrl, final FintechListener listener\) |
 | **Parameter** | OPPFLibActivity activity _- Activity는 OPPFLibActivity를 상속 받아 구현_ // String fn _- Koscom Open API의 서비스 이름_ // JSONObject data _- App에 전달 할 데이터_ // String resCallbackUrl _- 응답 수신용 Custom URL Scheme_ // final FintechListener listener _- Koscom Open API 응답 수신 리스너_ |
 | **Description** | Koscom Open API App 실행하는 함수.  Custom URL Schem으로 Intent를 구성, Activity의 startActivity를 호출하여Koscom Open API App을 실행합니다. 응답 결과는 서비스 호출 시 데이터와 같이 전달한 수신합니다. |
 | **Note** | OPPFLibFragmentActivity 또는 OPPFLibAppCompatActivity 를 Parameter 로 받는 동일 함수가 있습니다. |
@@ -492,8 +494,9 @@ SDK 를 사용하기 위하여 Activity 파일에서 상속해야 하는 Activit
   
 **requestForActivityResult**
 
-| **Syntax** | public void requestForActivityResult\(final OPPFLibAppCompatActivity activity, final String fn, final JSONObject data, final FintechListener listener\) |
+| **`Category`** |  |
 | :--- | :--- |
+| **Syntax** | public void requestForActivityResult\(final OPPFLibAppCompatActivity activity, final String fn, final JSONObject data, final FintechListener listener\) |
 | **Parameter** | OPPFLibActivity activity _- Activity는 OPPFLibActivity를 상속 받아 구현_ // String fn _- Koscom Open API의 서비스 이름_ // JSONObject data _- App에 전달 할 데이터_ // final FintechListener listener _- Koscom Open API 응답 수신 리스너_ |
 | **Description** | Koscom Open API App 실행하는 함수.  Custom URL Schem으로 Intent를 구성, Activity의 startActivity를 호출하여 Koscom Open API App을 실행하고 응답 결과는 OPPFLibAppCompatActivity onActivityResult를 통해 전달 받습니다. |
 | **Note** | OPPFLibFragmentActivity 또는 OPPFLibAppCompatActivity 를 Parameter 로 받는 동일 함수가 있습니다. |
@@ -501,8 +504,9 @@ SDK 를 사용하기 위하여 Activity 파일에서 상속해야 하는 Activit
   
 **goAppStore**
 
-| **Syntax** | public void goAppStore\(final Activity activity\)  |
+| **`Category`** |  |
 | :--- | :--- |
+| **Syntax** | public void goAppStore\(final Activity activity\)  |
 | **Parameter** | Activity activity _- activity.startActivity 에 새로운 intent로 PlayStore 화면을 띄우는 방식._ |
 | **Description** | PlayStore 설치 화면으로 이동한다. |
 
@@ -517,16 +521,18 @@ Koscom Open API 응답 결과를 전달 받기 위한 인터페이스 정의 클
   
 **onKoscomResultData**
 
-| **Syntax** | public void goAppStore\(final Activity activity\)  |
+| **`Category`** |   |
 | :--- | :--- |
+| **Syntax** | public void goAppStore\(final Activity activity\)  |
 | **Parameter** | String fn _- Koscom Open API의 서비스 이름_ // String message _- 응답 message_ // JSONObject data _- 응답 데이터_ |
 | **Description** | 서비스 요청 성공 시 서비스 응답 결과를 전달 받기 위한 인터페이스 |
 
   
 **onKoscomResultFail**
 
-| **Syntax** | public void goAppStore\(final Activity activity\)  |
+| **Category** |  |
 | :--- | :--- |
+| **Syntax** | public void goAppStore\(final Activity activity\) |
 | **Parameter** | String fn _- Koscom Open API의 서비스 이름_ // String code _- 응답 error code_ // String message _- 응답 message_ // |
 | **Description** | 서비스 요청 실패를 전달 받기 위한 인터페이스 |
 

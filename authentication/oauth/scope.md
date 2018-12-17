@@ -7,9 +7,9 @@
     <tr>
       <th style="text-align:left"><b><code>Scope</code></b>
       </th>
-      <th style="text-align:left"><b>Description</b>
+      <th style="text-align:left"><b><code>Description</code></b>
       </th>
-      <th style="text-align:left"><b>유효시간</b>
+      <th style="text-align:left"><b><code>&#xC720;&#xD6A8;&#xC2DC;&#xAC04;</code></b>
       </th>
     </tr>
   </thead>

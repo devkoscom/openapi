@@ -8,8 +8,9 @@ description: >-
 
 ## Error Message Format
 
-| **HTTP Response  Status Code** | 4xx ~ 5xx |
+| **`Format`** |  |
 | :--- | :--- |
+| **HTTP Response  Status Code** | 4xx ~ 5xx |
 | **HTTP Response  Content-Type** | Application/json;   charset=utf-8 |
 
 **HTTP Response  Body**

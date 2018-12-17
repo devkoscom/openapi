@@ -1,7 +1,5 @@
 # 코드표\(시세\)
 
-
-
 {% hint style="success" %}
 시세 API  에러코드는 [Error Code](https://koscom.gitbook.io/open-api/error-code#error-3) 에서 확인하세요.
 {% endhint %}

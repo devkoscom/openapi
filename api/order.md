@@ -23,7 +23,7 @@
 
 ### 주문 서비스 구조
 
-![](../.gitbook/assets/image%20%2855%29.png)
+![](../.gitbook/assets/image%20%2856%29.png)
 
 <table>
   <thead>

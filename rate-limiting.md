@@ -12,7 +12,7 @@ x-rate-limit: 50000
 x-rate-value: 3
 ```
 
-| 항목 | 설명 |
+| **`항목`** | **`설명`** |
 | :--- | :--- |
 | x-rate-period | API 서버스의 호출 건수 제한 기간 \(`day`, month\) |
 | x-rate-limit | 최대 호출 가능 건수 |

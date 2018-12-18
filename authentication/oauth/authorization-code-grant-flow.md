@@ -47,7 +47,7 @@ Parameters          \|   **`response_type`**=code & **`client_id`**=클라이언
 **Example**
 
 ```python
-​https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/authorize?response_type=code&client_id=l7xxf234248b6fbd42a1a6844861524b2320&redirect_uri=http://localhost:8080/OpenAPITest/callbacknew&scope=test.kiwoom&state=70e86bd5​
+​https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/authorize?response_type=code&client_id=l7xxf234248b6fbd42a1a6844861524b2320&redirect_uri=https://sandbox.koscom.co.kr/callback&scope=account&state=hwanny
 ```
 
 ### 
@@ -101,7 +101,16 @@ Parameters          \|   **`grant_type`**=authorization\_code & **`code`**=할�
      **:**   client\_id와 client\_secret을 “:”으로 연결하여 base64 로 encoding 한 값을  위 형식으로 설정  
          더욱 자세한 설명은  [Base64 로 encoding 하는 방법](https://koscom.gitbook.io/open-api/api-1/basic-authentication#base64-encoding) 을 참조하세요.
 
+**Example**
 
+```yaml
+curl -X POST \
+  'https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/token?grant_type=authorization_code&code=92c82a51-53fb-46b7-a96b-0e7807a37c2f&redirect_uri=https://sandbox.koscom.co.kr/callback' \
+  -H 'Authorization: Basic bDd4eDA3YWYyNzk0MzY0NzQzYWJhZjZhNDkzY2RlY2E1YWEwOjZmNjA4MjAwNmQ4MTQ4M2RhODcxZGExYmQ4MmE5M2Q3' \
+  -H 'Content-Type: application/x-www-form-urlencoded'
+```
+
+### 
 
 ### **Access Token 응답**
 
@@ -117,7 +126,19 @@ Access Token의 응답은 JSON 형태로 제공되며 다음의 항목이 포함
 | **token\_type** | Bearer |
 | **expires\_in** | 유효시간 \(초\) |
 
+**Example**
 
+```yaml
+{
+    "access_token": "e9911d97-407f-45d4-b0a1-22e930c5ef08",
+    "token_type": "Bearer",
+    "expires_in": 600,
+    "refresh_token": "1f58350a-7c99-4140-8352-ac741aa96adf",
+    "scope": "profile"
+}
+```
+
+### 
 
 ## API 호출
 

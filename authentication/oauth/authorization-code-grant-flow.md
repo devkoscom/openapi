@@ -46,7 +46,7 @@ Parameters          \|   **`response_type`**=code & **`client_id`**=클라이언
 
 **Example**
 
-```python
+```yaml
 ​https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/authorize?response_type=code&client_id=l7xxf234248b6fbd42a1a6844861524b2320&redirect_uri=https://sandbox.koscom.co.kr/callback&scope=account&state=hwanny
 ```
 
@@ -60,7 +60,9 @@ Parameters          \|   **`response_type`**=code & **`client_id`**=클라이언
 
 Flow 2를 요청하면 그 응답으로 Authorization Code를 받아오는 것을 승인할 수 있도록 아래와 같은 권한정보입력 창을 응답으로 내려줍니다.
 
-![](../../.gitbook/assets/image%20%2846%29.png)
+![](../../.gitbook/assets/image%20%2847%29.png)
+
+![](../../.gitbook/assets/image%20%2861%29.png)
 
 핀테크 서비스 이용자가 금융투자 핀테크포털 가입 시 사용했던 아이디와 비밀번호\(또는 OTP\)를 입력하고 로그인 버튼을 누르면, 오픈플랫폼은 이용자가 입력한 정보를 확인하여 정상적인 경우 authorization code를 응답으로 받을 수 있습니다. 비밀번호 또는 OTP가 연속으로 틀린 경우 계정잠김상태로 전환됩니다. 오픈플랫폼 관리자가 비밀번호 초기화 또는 OTP를 초기화할 수 있도록 안내가 필요합니다.
 
@@ -70,8 +72,6 @@ Flow 2를 요청하면 그 응답으로 Authorization Code를 받아오는 것�
 
 Flow 3, 4 절차가 정상적으로 수행되면 오픈플랫폼은 authorization code를 응답으로 내려주되, 핀테크 서비스 등록과 Authorization Code 요청 시 지정된 redirect\_uri로 응답을 전달할 수 있도록 http 헤더의 status code를 302로 설정하여 응답을 전송하며, redirect된 응답은 핀테크 서비스 서버 사이드에 구현된 OAuth Callback Listener \(Servlet 등\)로 전달되며, Callback Listener로 유입된 응답 parameter에서 state와 code를 추출하고 누구의 authorization code인지를 확인\(state에 설정한 식별정보 이용\)하여 다음 절차인 access token을 요청합니다.   
 에러 처리는 [Error Code](https://koscom.gitbook.io/open-api/error)를 참고하시기 바랍니다.
-
-
 
 
 
@@ -132,9 +132,9 @@ Access Token의 응답은 JSON 형태로 제공되며 다음의 항목이 포함
 {
     "access_token": "e9911d97-407f-45d4-b0a1-22e930c5ef08",
     "token_type": "Bearer",
-    "expires_in": 600,
+    "expires_in": 2592000,
     "refresh_token": "1f58350a-7c99-4140-8352-ac741aa96adf",
-    "scope": "profile"
+    "scope": "account"
 }
 ```
 
@@ -217,13 +217,28 @@ Parameters          \|   **`grant_type`**=refresh\_token & **`refresh_token`**=�
 > `refresh_token`      :  access token을 발급받을 때 포함되어 있던 refresh token  
 > `scope`                      :  지정된 scope로 선택항목
 
+**Example**
 
+```yaml
+curl -X POST \
+  'https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/token?grant_type=refresh_token&refresh_token=1f58350a-7c99-4140-8352-ac741aa96adf&client_id=l7xx07af2794364743abaf6a493cdeca5aa0&client_secret=6f6082006d81483da871da1bd82a93d7&scope=account'
+```
 
 ### 2. 응답
 
 Access token 요청에 대한 응답과 동일한 형태의 JSON 메시지가 전달됩니다.
 
+**Example**
 
+```yaml
+{
+    "access_token": "e9911d97-407f-45d4-b0a1-22e930c5ef08",
+    "token_type": "Bearer",
+    "expires_in": 2592000,
+    "refresh_token": "1f58350a-7c99-4140-8352-ac741aa96adf",
+    "scope": "account"
+}
+```
 
 
 
@@ -248,11 +263,28 @@ Parameters          \|   **`token`**=발급받았던\_token & **`token_type_hint
 > `token`                      :  rovoke대상이되는 access token  
 > `token_type_hint` :  access\_token,  refresh\_token
 
+**Example**
+
+```yaml
+curl -X POST \
+  'https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/token/revoke?token=e9911d97-407f-45d4-b0a1-22e930c5ef08&token_type_hint=access_token' \
+  -H 'Authorization: Basic bDd4eDA3YWYyNzk0MzY0NzQzYWJhZjZhNDkzY2RlY2E1YWEwOjZmNjA4MjAwNmQ4MTQ4M2RhODcxZGExYmQ4MmE5M2Q3' \
+  -H 'Content-Type: application/x-www-form-urlencoded'
+```
+
 
 
 ### 2. 응답
 
 성공일 경우 JSON형식으로 `{"result": "revoked"}`전송
+
+**Example**
+
+```yaml
+{
+    "result": "revoked"
+}
+```
 
 
 

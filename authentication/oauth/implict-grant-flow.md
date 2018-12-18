@@ -11,5 +11,5 @@
 
 
 
-![Implicit Grant Flow &#xC808;&#xCC28;](../../.gitbook/assets/image%20%2851%29.png)
+![Implicit Grant Flow &#xC808;&#xCC28;](../../.gitbook/assets/image%20%2852%29.png)
 

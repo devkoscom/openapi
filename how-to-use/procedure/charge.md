@@ -8,7 +8,7 @@ description: >-
 
 ### 오픈플랫폼 및 금융투자회사 제공
 
-![](../../.gitbook/assets/image%20%2863%29.png)
+![](../../.gitbook/assets/image%20%2865%29.png)
 
 ### 
 

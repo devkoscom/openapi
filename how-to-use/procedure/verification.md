@@ -6,7 +6,7 @@ description: 금투사가 제공하는 금융거래 API를 서비스 하기 위�
 
 ### 핀테크서비스 보안 취약점 점검 절차
 
-![&amp;lt;&#xAC1C;&#xC815; 2017.2.8&amp;gt; ](../../.gitbook/assets/image%20%2895%29.png)
+![&amp;lt;&#xAC1C;&#xC815; 2017.2.8&amp;gt; ](../../.gitbook/assets/image%20%2897%29.png)
 
 {% file src="../../.gitbook/assets/api.pdf" %}
 

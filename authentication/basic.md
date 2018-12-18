@@ -13,7 +13,7 @@ Basic Authentication 인증체계를 사용하는 API는 **민감정보가 포�
 {% code-tabs %}
 {% code-tabs-item title="Authorization Value Example" %}
 ```swift
-Basic Qwsxxxxf1D34A5fdsdassdeerf234248b6fbd42a1a6844861524b2320
+Basic QwsxdWAf1D34A5fdsdassdeerf234248b6fbd42a1a6844861524b2320
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -36,8 +36,9 @@ HTTP header의 authorization 필드에 값을 넣어 전송
 
 ```yaml
 curl -X POST -H "comId:00995” –H 
-“authorization:Basic Qwsxxxxf1D34A5fdsdassdeerf234248b6fbd42a1a6844861524b2320” -H 
+“authorization:Basic QwsxdWAf1D34A5fdsdassdeerf234248b6fbd42a1a6844861524b2320” -H 
 "Content-Type: application/json" -H
+ "Cache-Control: no-cache" -H 
  -d '{
   "partner": {
     "comId": "COMPANY-ID",

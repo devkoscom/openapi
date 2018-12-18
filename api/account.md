@@ -316,7 +316,7 @@ Bearer 발급받은 access token
 
 {% hint style="success" %}
  assetType을 'ALL'로 요청 가능한 증권사    
-   : KB증권, NH투자증권, 대신증권, 키움증권, 신한금융투자 
+   : DB금투, KB증권, NH투자증권,  SK증권, 대신증권,  신한투자 
 {% endhint %}
 
 {% hint style="warning" %}
@@ -717,7 +717,7 @@ Bearer 발급받은 access token
 
 {% hint style="success" %}
   queryType의`assetType`을 'ALL'로 요청 가능한 증권사    
-   : NH투자증권, 대신증권, 키움증권, 신한금융투자
+   : DB금투, KB증권, NH투자증권,  SK증권, 대신증권,  신한투자 
 {% endhint %}
 
 #### Response Parameters

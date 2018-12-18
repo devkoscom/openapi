@@ -9,8 +9,8 @@ HTTP method\(GET, POST\)에 따라 `API Key`를 전달하는 방식이 달라지
 URL query parameter인 apikey에 넣어 전송
 
 ```yaml
-curl -X GET -H "Cache-Control: no-cache" -H 
-"https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/list?apikey=l7xx230ef2235e34448c982eb192ac98e206"
+curl -X GET \
+  'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/lists?apikey=l7xxxxxxxxxxxxxx48c982eb192ac98e206'
 ```
 
 ### POST 방식
@@ -18,7 +18,7 @@ curl -X GET -H "Cache-Control: no-cache" -H
 HTTP header의 apikey 필드에 API Key를 넣어 전송
 
 ```yaml
-curl -X POST -H "apikey: l7xxf234248b6fbd42a1a6844861524b2320" -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H 
+curl -X POST -H "apikey: l7xxxxxxxxxxxxxxxx46844861524b2320" -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H 
  -d '{
   "partner": {
     "comId": "COMPANY-ID",

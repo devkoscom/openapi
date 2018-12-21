@@ -72,7 +72,7 @@ Application/json
 | _**body**_ | _**Object**_ |  |
 | korName | String\(10\) | 한글이름 |
 
-`핀테크기업코드` 및 `핀테크서비스코드`는 이용기관 등록 이후 발급 되며 샌드박스에서 테스트 시에는 임시로 핀테크 기업 코드 `"comId" : "F0995"`, 핀테크 서비스 코드 `"srvId" : "297"`로 테스트 가능
+`comId` 및 `srvId`는 이용기관 등록 이후 발급 되며 샌드박스에서 테스트 시에는 임시로 핀테크 기업 코드 `"comId" : "F0995"`, 핀테크 서비스 코드 `"srvId" : "297"`로 테스트 가능
 
 #### Request Body Example
 
@@ -102,6 +102,8 @@ Application/json
 | :--- | :--- | :--- |
 | result | String\(12\) |  회원가입여부 \(member \| nonMember\) |
 | commonTermsExpireDate  | String\(8\) |  이용자의 오픈플랫폼 금융정보제동 동의 만료일 |
+
+`commonTermsExpireDate`  오픈플랫폼의 금융정보제공 동의 만료일이 지나면 계좌서비스와 같은 동의가 필요한 서비스는 중단 됩니다. 만료일 1개월 전에 사용자가 금융투자 핀테크 포털 및 오핀에 로그인 하시면 재동의 가능 합니다. 
 
 #### Response Body Example
 
@@ -197,7 +199,7 @@ Application/json
 | _**body**_ | _**Object**_ |  |
 | korName | String\(12\) | 한글이름 |
 
-`핀테크 기업 코드` 및 `핀테크 서비스 코드`는 이용기관 등록 이후 발급 되며면 샌드박스에서 테스트 시에는 임시로 핀테크 기업 코드 `"comId" : "F0995"`, 핀테크 서비스 코드 `"srvId" : "297"`로 테스트 가능
+`comId` 및 `srvId`는 이용기관 등록 이후 발급 되며면 샌드박스에서 테스트 시에는 임시로 핀테크 기업 코드 `"comId" : "F0995"`, 핀테크 서비스 코드 `"srvId" : "297"`로 테스트 가능
 
 **Request Body Example**
 
@@ -230,6 +232,8 @@ Application/json
 | vtAccNo | String\(18\) | 가상계좌번호 |
 | vtAccAlias | String\(20\) | 가상계좌번호 별칭 |
 | serviceTermsExpireDate | String\(8\) | 이용자의 핀테크서비스 금융정보제공동의 만료일 |
+
+`serviceTermsExpireDate` 핀테크 서비스의 금융정보제공 동의 만료일이 지나면 계좌서비스와 같은 동의가 필요한 서비스는 중단 됩니다. 만료일 1개월 전에 사용자가 금융투자 핀테크 포털 및 오핀에 로그인 하시면 재동의 가능 합니다. 
 
 #### Response **Body Example**
 

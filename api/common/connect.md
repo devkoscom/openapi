@@ -267,13 +267,11 @@ Application/json
 
 ## 테스트용 목업데이터 <a id="virtualaccount"></a>
 
-* 샌드박스에서 계좌서비스를 테스트 하기 위해서는 미리 제공되는  [계좌서비스 테스트용 ­ 목업 데이터](https://developers.koscom.co.kr/resources/documentation/Account_MockupData_V1.pdf)를 이용하여, 서비스 연동 조회 테스트를 제공한다.
-
-![](../../.gitbook/assets/image%20%2850%29.png)
+* 샌드박스에서 계좌서비스를 테스트 하기 위해서는 미리 제공되는  [계좌서비스 테스트용 ­ 목업 데이터 V2 \(PDF\)](https://developers.koscom.co.kr/resources/documentation/Account_MockupData_V2.pdf) 를 이용하여, 서비스 연동 조회 테스트를 제공한다.
 
 {% hint style="info" %}
 개발자센터  어플리케이션 등록  및  API 테스트\(인증\)  이용방법은 [이곳](https://koscom.gitbook.io/open-api/how-to-use/devcenter) 에서 확인하세요.
 {% endhint %}
 
-
+![](../../.gitbook/assets/image%20%2833%29.png)
 

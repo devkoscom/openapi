@@ -22,7 +22,7 @@
 *  오픈API플랫폼에 API를 게시하기 위해서는 오픈API플랫폼과 사전검토 단계에서 연계방식, API 사양 등의 협의와 API 테스트가 완료되어야 합니다. 
 * 제공하고자 API는 우선 Sandbox에 게시 되고, 해당 API를 이용한 실 서비스가 개시 되는 경우 Production 시스템으로 이전 됩니다.
 
-![](../../.gitbook/assets/image%20%28143%29.png)
+![](../../.gitbook/assets/image%20%28144%29.png)
 
 {% hint style="danger" %}
 오픈플랫폼에 API 게시 \(제공\) 또는 API 구독 \(사용\) 을 위해서는   

@@ -17,7 +17,7 @@
 'API문서 &gt; 시세 서비스 &gt; 주식종목' 메뉴에서 'Select an Application' 을 눌러서 앱을 선택 합니다.  
 앱이 보이지 않으시면 해당 API를 사용하는 앱을 먼저 만드셔야 합니다. 애플리케이션 등록 방법은 [이곳](https://koscom.gitbook.io/open-api/how-to-use/devcenter/enrollapp)을 참조하세요.
 
-![Authentication &#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../.gitbook/assets/image%20%28124%29.png)
+![Authentication &#xBC29;&#xC2DD; &#xC120;&#xD0DD;](../../.gitbook/assets/image%20%28125%29.png)
 
 ‘Authentication \(None\)’ 버튼을 __누르시고, 인증방식을 ‘API Key’로 선택 합니다.
 
@@ -29,7 +29,7 @@
 
 테스트할 API를 선택 하시고 'Try it Out' 버튼을 누르시면 아래와 같이 Response 결과를 받아 보실 수 있습니다.
 
-![Response &#xACB0;&#xACFC;](../../.gitbook/assets/image%20%28142%29.png)
+![Response &#xACB0;&#xACFC;](../../.gitbook/assets/image%20%28143%29.png)
 
 'Query' 탭을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
@@ -49,7 +49,7 @@
 
 Username과 Password 항목에 등록한 어플리케이션의 API Key값과 Secret 값을 입력합니다. 
 
-![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - Basic](../../.gitbook/assets/image%20%28144%29.png)
+![&#xC778;&#xC99D;&#xBC29;&#xC2DD; - Basic](../../.gitbook/assets/image%20%28145%29.png)
 
 > * Username
 >
@@ -61,7 +61,7 @@ Username과 Password 항목에 등록한 어플리케이션의 API Key값과 Sec
 
 테스트할 API를 선택 하시고 'Try it Out' 버튼을 누르시면 아래와 같이 Response 결과를 받아 보실 수 있습니다.
 
-![Response &#xACB0;&#xACFC;](../../.gitbook/assets/image%20%28137%29.png)
+![Response &#xACB0;&#xACFC;](../../.gitbook/assets/image%20%28138%29.png)
 
 
 
@@ -118,7 +118,7 @@ Implicit Grant Type 등은 보안수준 및 비즈니스모델에 따라 협의�
 
 ‘Query’ 탭을 누르시면 Request 및 다양한 개발언어별 샘플코드를 참고 하실 수 있습니다.
 
-![Query &#xD0ED;](../../.gitbook/assets/image%20%28151%29.png)
+![Query &#xD0ED;](../../.gitbook/assets/image%20%28152%29.png)
 
 
 
@@ -128,7 +128,7 @@ Implicit Grant Type 등은 보안수준 및 비즈니스모델에 따라 협의�
 
 '대시보드 &gt; 어플리케이션' 으로 이동 후, 등록한 애플리케이션의 '설정' 버튼을 클릭합니다.  그 뒤 '편집' 탭을 선택합니다.
 
-![&#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158; &#xD3B8;&#xC9D1;](../../.gitbook/assets/image%20%28125%29.png)
+![&#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158; &#xD3B8;&#xC9D1;](../../.gitbook/assets/image%20%28126%29.png)
 
 인증 탭에서 Key와 Secret 버튼을 클릭하면 애플리케이션의 API Key와 Secret을 확인할 수 있습니다. 
 

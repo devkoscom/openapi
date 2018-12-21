@@ -376,7 +376,7 @@ OAuth  로그인창 호출시 , OFIN설치 여부 체크 후 설치되어 있을
 정보제공 권한 허용  
 OAuth로그인이 완료되면 정보제공 권한 여부 설정 화면으로 이동합니다. \[허용\] 터치 시 핀테크 앱의 서비스를 이용할 수 있습니다. 
 
-![&#xC815;&#xBCF4;&#xC81C;&#xACF5; &#xAD8C;&#xD55C; &#xD5C8;&#xC6A9;](../.gitbook/assets/image%20%28134%29.png)
+![&#xC815;&#xBCF4;&#xC81C;&#xACF5; &#xAD8C;&#xD55C; &#xD5C8;&#xC6A9;](../.gitbook/assets/image%20%28135%29.png)
 
 
 

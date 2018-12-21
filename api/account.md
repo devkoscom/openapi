@@ -1214,7 +1214,7 @@ Bearer 발급받은 access token
 **가상증권사 - 다이아몬드 증권\(diamond\), 사이버 증권\(cyber\), 스타 증권\(star\)**
 {% endhint %}
 
-![](../.gitbook/assets/image%20%28117%29.png)
+![](../.gitbook/assets/image%20%28118%29.png)
 
 ![](../.gitbook/assets/image%20%2891%29.png)
 

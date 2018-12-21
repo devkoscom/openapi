@@ -8,15 +8,15 @@ description: >-
 
 ### 오픈플랫폼 및 금융투자회사 제공
 
+{% file src="../../.gitbook/assets/api.html" %}
+
 ![](../../.gitbook/assets/image%20%2866%29.png)
 
 ### 
 
 ### 시세 및 핀테크 제공
 
-![](../../.gitbook/assets/image%20%2826%29.png)
-
-### \*\*\*\*
+![](../../.gitbook/assets/image%20%28116%29.png)
 
 ### **스타트업 지원 정책 및 시세 서비스 이용계약 안내**
 

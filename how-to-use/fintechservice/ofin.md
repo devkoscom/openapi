@@ -2,7 +2,7 @@
 
 ## 모바일 설치
 
-![](../../.gitbook/assets/image%20%28145%29.png)
+![](../../.gitbook/assets/image%20%28146%29.png)
 
  **오핀\(OFin\)** 모바일 앱\([Android](https://play.google.com/store/apps/details?id=com.oppf.mobile&hl=ko) , [iOS](https://itunes.apple.com/kr/app/%EC%98%A4%ED%95%80/id1255027364)\) 설치
 
@@ -44,7 +44,7 @@ API서비스의 공급자 또는 사용자로 자유롭게 오핀에 참여하�
 
 로그인 후에는 신청 완료된 내 앱 목록이 출력됩니다. 
 
-![](../../.gitbook/assets/image%20%28132%29.png)
+![](../../.gitbook/assets/image%20%28133%29.png)
 
 **\[메인화면\] 검색**
 
@@ -73,7 +73,7 @@ API서비스의 공급자 또는 사용자로 자유롭게 오핀에 참여하�
 
 로그인 후 우측 하단 플로팅 버튼 터치 시, 앱 사용 신청과 계좌관리 화면으로 이동할 수 있는 버튼이 활성화됩니다.
 
-![](../../.gitbook/assets/image%20%28119%29.png)
+![](../../.gitbook/assets/image%20%28120%29.png)
 
 
 
@@ -139,7 +139,7 @@ API서비스의 공급자 또는 사용자로 자유롭게 오핀에 참여하�
 
 신청이 완료되었습니다. 코스콤과 선택한 핀테크기업에 정보 제공을 허용한 유효기간 동안 서비스 이용이 가능합니다.
 
-![](../../.gitbook/assets/image%20%28126%29.png)
+![](../../.gitbook/assets/image%20%28127%29.png)
 
 **\[앱사용신청\] 메인 \(앱목록\)**
 
@@ -183,13 +183,13 @@ API서비스의 공급자 또는 사용자로 자유롭게 오핀에 참여하�
 
 통합계좌조회 메뉴 터치 시, 신청 여부를 체크하여 신청 전일 경우 메시지를 출력합니다. 확인 버튼 터치 시 신청 화면으로 이동합니다. 
 
-![](../../.gitbook/assets/image%20%28149%29.png)
+![](../../.gitbook/assets/image%20%28150%29.png)
 
 **\[통합계좌조회\] 앱 사용 신청**
 
 앱 신청과 관련된 부분은 [앱 사용 신청 ](https://koscom.gitbook.io/open-api/1/undefined-4/undefined/ofin#undefined-3)부분을 참고하시기 바랍니다. 
 
-![](../../.gitbook/assets/image%20%28140%29.png)
+![](../../.gitbook/assets/image%20%28141%29.png)
 
 **\[통합계좌조회\] 정보제공 권한 허용**
 

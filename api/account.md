@@ -1205,7 +1205,7 @@ Bearer 발급받은 access token
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-## 테스트용 가상증권사 제공 <a id="virtual"></a>
+## 테스트용 가상증권사 제공 <a id="virtualaccount"></a>
 
 * 금융투자회사의 테스트 환경이 실제 가동 서버와 상이하기 때문에 계좌서비스 개발 및 테스트는  가상증권사를 통해 테스트 할 수 있습니다.
 * 샌드박스에서 계좌서비스를 테스트 하기 위해서는 미리 제공되는  [계좌서비스 테스트용 ­ 목업 데이터](https://developers.koscom.co.kr/resources/documentation/Account_MockupData_V1.pdf)를 이용하여, 테스트 계정의 데이터를 제공한다.
@@ -1215,4 +1215,6 @@ Bearer 발급받은 access token
 {% endhint %}
 
 ![](../.gitbook/assets/image%20%2850%29.png)
+
+
 

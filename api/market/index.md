@@ -2,15 +2,11 @@
 
 KOSPI/KOSDAQ등의 지수 예상지수 및 업종별 투자자별 거래량등을 제공한다.
 
-
-
 ## Syntax
 
-HTTP methods    \|   **GET**
+HTTP methods \| **GET**
 
-Authentication     \|   **API Key**
-
-
+Authentication \| **API Key**
 
 {% hint style="success" %}
 `marketcode` 및 `issuecode` 는 [코드표 &gt; "시장코드표"](https://koscom.gitbook.io/open-api/api/market/codetable)를 참조하세요.
@@ -20,15 +16,11 @@ Authentication     \|   **API Key**
 업종지수 스트리밍 조회는 xx를 참고하세요.
 {% endhint %}
 
-
-
-
-
 ## 업종 종가
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/index" path="/{marketcode}/{issuecode}/closeprice" %}
 {% api-method-summary %}
- /v2/market/index/{marketcode}/{issuecode}/closeprice
+/v2/market/index/{marketcode}/{issuecode}/closeprice
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -91,14 +83,12 @@ Authentication     \|   **API Key**
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Response Parameters
+### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
-| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660
- |
-| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락
- |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
 | cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
 | opnprc | number\(11\) | 시가 | 단위:원 |
 | hgprc | number\(11\) | 고가 | 단위:원 |
@@ -110,15 +100,15 @@ Authentication     \|   **API Key**
 | listShrs | number\(16\) | 상장주식수,상장증권수 | 업종상장주식수 단위는  천주, 그외는 1주 |
 | mktcap | number\(22\) | 시가총액 | 단위: 업종-백만 |
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/index/kospi/K1/closeindex'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -130,7 +120,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/index" path="/{marketcode}/{issuecode}/index" %}
 {% api-method-summary %}
- /v2/market/index/{marketcode}/{issuecode}/index
+/v2/market/index/{marketcode}/{issuecode}/index
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -176,37 +166,41 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Response Parameters
+### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
 | isuSrtCd | String\(3\) | 업종코드 | 업종코드표 참조 |
 | trdTm | String\(8\) | 체결시각,거래시각 | \*테이블 하단 참고 |
 | trdPrc | number\(10\) | 지수 |  |
-| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락
- |
+| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
 | cmpprevddPrc | number\(11\) | 전일대비지수 |  |
 | accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위:주 |
 | accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
 
 > `trdTm`  
-> "HHMMSSmm" 형태로 시간전송  
->    - 정규장 개시전 또는 정규장 체결 발생 이전 : 0  
->    - 장운영시그널, 대량체결 포함  
-> _※ 장운영시그널_  
-> 정규장마감\(15:00\):31000000 /장종료시간외마감\(15:30\):41000000 /단일가마감\(18:00\):81000000 /일반Buy-in마감\(18:00\):91000007 /당일Buy-in마감\(18:00\):91000008  
-> _※ 대량체결시_   
-> 장전대량매매체결:51000000/장중대량매매체결:61000000/장후대량매매체결:71000000"
+> "HHMMSSmm" 형태로 시간전송
+>
+> * 정규장 개시전 또는 정규장 체결 발생 이전 : 0  
+> * 장운영시그널, 대량체결 포함  
+>
+>   _※ 장운영시그널_  
+>
+>   정규장마감\(15:00\):31000000 /장종료시간외마감\(15:30\):41000000 /단일가마감\(18:00\):81000000 /일반Buy-in마감\(18:00\):91000007 /당일Buy-in마감\(18:00\):91000008  
+>
+>   _※ 대량체결시_   
+>
+>   장전대량매매체결:51000000/장중대량매매체결:61000000/장후대량매매체결:71000000"
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/index/kospi/K1/index'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -228,7 +222,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/index" path="/{marketcode}/{issuecode}/prospectindex" %}
 {% api-method-summary %}
- /v2/market/index/{marketcode}/{issuecode}/prospectindex
+/v2/market/index/{marketcode}/{issuecode}/prospectindex
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -274,28 +268,27 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Response Parameters
+### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
 | isuSrtCd | String\(3\) | 업종코드 | 업종코드표 참조 |
 | deemTm | String\(8\) | 예상체결시각 | HHMMSSmm |
 | deemTrdPrc | number\(10\) | 예상지수 |  |
-| deemcmpprevddTpCd | String\(1\) | 예상전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락
- |
+| deemcmpprevddTpCd | String\(1\) | 예상전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
 | deemcmpprevddPrc | number\(11\) | 예상전일대비지수 |  |
 | deemAccTrdvol | number\(12\) | 예상누적체결수량 | 단위:주 |
 | deemAccTrdval | number\(22\) | 예상누적거래대금 | 단위:원 |
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/index/kospi/K1/prospectindex'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -313,13 +306,11 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 }
 ```
 
-
-
 ## 업종 시가총액
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/index" path="/{marketcode}/{issuecode}/marketcap" %}
 {% api-method-summary %}
- /v2/market/index/{marketcode}/{issuecode}/marketcap
+/v2/market/index/{marketcode}/{issuecode}/marketcap
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -363,7 +354,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Response Parameters
+### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
@@ -374,15 +365,15 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
 | mktcap | number\(22\) | 시가총액 | 단위: 업종-백만 |
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/index/kospi/K1/marketcap'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -403,7 +394,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/index" path="/{marketcode}/{issuecode}/investors" %}
 {% api-method-summary %}
- /v2/market/index/{marketcode}/{issuecode}/investors
+/v2/market/index/{marketcode}/{issuecode}/investors
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -461,7 +452,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Response Parameters
+### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
@@ -473,15 +464,15 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | bidTrdvol | number\(10\) | 매수체결수량,매수거래량 |  |
 | bidTrdval | number\(22\) | 매수거래대금 |  |
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/index/kospi/K1/investors'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -498,7 +489,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 1075480,
          "bidTrdval": 45434170 
       },
-       
+
       {
          "invstCd": "02",
          "askTrdvol": 122629,
@@ -506,7 +497,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 254701,
          "bidTrdval": 11994572 
       },
-       
+
       {
          "invstCd": "03",
          "askTrdvol": 566249,
@@ -514,7 +505,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 447322,
          "bidTrdval": 17725585 
       },
-       
+
       {
          "invstCd": "04",
          "askTrdvol": 112269,
@@ -522,7 +513,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 10007,
          "bidTrdval": 543139 
       },
-       
+
       {
          "invstCd": "05",
          "askTrdvol": 2372,
@@ -530,7 +521,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 11671,
          "bidTrdval": 487228 
       },
-       
+
       {
          "invstCd": "06",
          "askTrdvol": 1278442,
@@ -538,7 +529,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 1153817,
          "bidTrdval": 54565514 
       },
-       
+
       {
          "invstCd": "07",
          "askTrdvol": 0,
@@ -546,7 +537,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "08",
          "askTrdvol": 4246576,
@@ -554,7 +545,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 3331688,
          "bidTrdval": 149146888 
       },
-       
+
       {
          "invstCd": "09",
          "askTrdvol": 1461253,
@@ -562,7 +553,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 497067,
          "bidTrdval": 9715010 
       },
-       
+
       {
          "invstCd": "10",
          "askTrdvol": 99655391,
@@ -570,7 +561,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 99692222,
          "bidTrdval": 690983059 
       },
-       
+
       {
          "invstCd": "11",
          "askTrdvol": 10024570,
@@ -578,7 +569,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 11866813,
          "bidTrdval": 234567966 
       },
-       
+
       {
          "invstCd": "12",
          "askTrdvol": 115387790,
@@ -586,7 +577,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 115387790,
          "bidTrdval": 1084412923 
       },
-       
+
       {
          "invstCd": "13",
          "askTrdvol": 357137,
@@ -594,7 +585,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 378690,
          "bidTrdval": 18396680 
       },
-       
+
       {
          "invstCd": "14",
          "askTrdvol": 9792902,
@@ -602,7 +593,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 11574270,
          "bidTrdval": 231474813 
       },
-       
+
       {
          "invstCd": "15",
          "askTrdvol": 231668,
@@ -610,7 +601,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 292543,
          "bidTrdval": 3093153 
       },
-       
+
       {
          "invstCd": "16",
          "askTrdvol": 1461253,
@@ -623,12 +614,11 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 }
 ```
 
-
 ## 업종 일중
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/index" path="/{marketcode}/{issuecode}/intraday" %}
 {% api-method-summary %}
- /v2/market/index/{marketcode}/{issuecode}/intraday
+/v2/market/index/{marketcode}/{issuecode}/intraday
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -712,7 +702,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Response Parameters
+### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
@@ -726,15 +716,15 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | inddClsprc | number\(11\) | 일중종가 | 일중데이타\(10초, 1분, 10분\) |
 | inddTrdvol | number\(11\) | 일중거래량 | 일중데이타\(10초, 1분, 10분\) |
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/index/kospi/K1/intraday?inddCycleTpCd=600&inqStrtDd=20181228&strtTm=0900&endTm=1500'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -751,7 +741,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "inddClsprc": 2039.69,
          "inddTrdvol": 117477 
       },
-       
+
       {
          "inddTm": "10100000",
          "inddOpnprc": 2041.27,
@@ -760,7 +750,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "inddClsprc": 2041.31,
          "inddTrdvol": 111972 
       },
-       
+
       {
          "inddTm": "10000000",
          "inddOpnprc": 2041.18,
@@ -769,7 +759,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "inddClsprc": 2042.74,
          "inddTrdvol": 102781 
       },
-       
+
       {
          "inddTm": "9500000",
          "inddOpnprc": 2040.07,
@@ -778,7 +768,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "inddClsprc": 2041.37,
          "inddTrdvol": 89531 
       },
-       
+
       {
          "inddTm": "9400000",
          "inddOpnprc": 2041.14,
@@ -787,7 +777,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "inddClsprc": 2039.86,
          "inddTrdvol": 74108 
       },
-       
+
       {
          "inddTm": "9300000",
          "inddOpnprc": 2041.38,
@@ -796,7 +786,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "inddClsprc": 2039.94,
          "inddTrdvol": 60232 
       },
-       
+
       {
          "inddTm": "9200000",
          "inddOpnprc": 2040.85,
@@ -805,7 +795,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "inddClsprc": 2041.41,
          "inddTrdvol": 48078 
       },
-       
+
       {
          "inddTm": "9100000",
          "inddOpnprc": 2036.7,
@@ -823,7 +813,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/index" path="/{marketcode}/{issuecode}/history" %}
 {% api-method-summary %}
- /v2/market/index/{marketcode}/{issuecode}/history
+/v2/market/index/{marketcode}/{issuecode}/history
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -852,8 +842,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="inqEndDd" required=true %}
-조회종료일자
- \(YYYYMMDD\)
+조회종료일자 \(YYYYMMDD\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="number" name="reqCnt" required=true %}
@@ -886,7 +875,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 4479971,
          "cmpprevddPrc": -4.41 
       },
-       
+
       {
          "BzDd": 20170330,
          "trdPrc": 2164.64,
@@ -907,7 +896,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Response Parameters
+### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
@@ -924,15 +913,15 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | hgprc | number\(11\) | 고가 |  |
 | lwprc | number\(11\) | 저가 |  |
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/index/kospi/K1/history?trnsmCycleTpCd=D&inqStrtDd=20181001&inqEndDd=20181231&reqCnt=20'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -952,7 +941,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 1105573,
          "cmpprevddPrc": 11.75 
       },
-       
+
       {
          "BzDd": 20181227,
          "trdPrc": 2028.44,
@@ -964,7 +953,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 5351003,
          "cmpprevddPrc": 0.43 
       },
-       
+
       {
          "BzDd": 20181226,
          "trdPrc": 2028.01,
@@ -976,7 +965,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 5424078,
          "cmpprevddPrc": -27 
       },
-       
+
       {
          "BzDd": 20181224,
          "trdPrc": 1945.91,
@@ -988,7 +977,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 5788,
          "cmpprevddPrc": -115.58 
       },
-       
+
       {
          "BzDd": 20181221,
          "trdPrc": 2213.93,
@@ -1000,7 +989,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 20216,
          "cmpprevddPrc": 153.81 
       },
-       
+
       {
          "BzDd": 20181220,
          "trdPrc": 2048.37,
@@ -1012,7 +1001,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 28627,
          "cmpprevddPrc": -30.47 
       },
-       
+
       {
          "BzDd": 20181219,
          "trdPrc": 2078.84,
@@ -1024,7 +1013,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 5124894,
          "cmpprevddPrc": 16.73 
       },
-       
+
       {
          "BzDd": 20181218,
          "trdPrc": 2062.11,
@@ -1036,7 +1025,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 5241610,
          "cmpprevddPrc": -8.98 
       },
-       
+
       {
          "BzDd": 20181217,
          "trdPrc": 2071.09,
@@ -1048,7 +1037,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 4764477,
          "cmpprevddPrc": 1.71 
       },
-       
+
       {
          "BzDd": 20181214,
          "trdPrc": 2069.38,
@@ -1060,7 +1049,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 5784241,
          "cmpprevddPrc": -26.17 
       },
-       
+
       {
          "BzDd": 20181213,
          "trdPrc": 2243.58,
@@ -1072,7 +1061,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 6351,
          "cmpprevddPrc": 161.01 
       },
-       
+
       {
          "BzDd": 20181212,
          "trdPrc": 2052.64,
@@ -1084,7 +1073,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 29458,
          "cmpprevddPrc": -0.33 
       },
-       
+
       {
          "BzDd": 20181211,
          "trdPrc": 2134.77,
@@ -1096,7 +1085,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 31708,
          "cmpprevddPrc": 80.98 
       },
-       
+
       {
          "BzDd": 20181210,
          "trdPrc": 2027.49,
@@ -1108,7 +1097,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 12553,
          "cmpprevddPrc": -48.27 
       },
-       
+
       {
          "BzDd": 20181207,
          "trdPrc": 1705.57,
@@ -1120,7 +1109,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 57237,
          "cmpprevddPrc": -363.12 
       },
-       
+
       {
          "BzDd": 20181206,
          "trdPrc": 2068.69,
@@ -1132,7 +1121,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 5606457,
          "cmpprevddPrc": -32.62 
       },
-       
+
       {
          "BzDd": 20181205,
          "trdPrc": 2101.31,
@@ -1144,7 +1133,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 4802792,
          "cmpprevddPrc": -13.04 
       },
-       
+
       {
          "BzDd": 20181204,
          "trdPrc": 2114.35,
@@ -1156,7 +1145,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 5539552,
          "cmpprevddPrc": -17.58 
       },
-       
+
       {
          "BzDd": 20181203,
          "trdPrc": 2131.93,
@@ -1168,7 +1157,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "accTrdval": 5571246,
          "cmpprevddPrc": 35.07 
       },
-       
+
       {
          "BzDd": 20181130,
          "trdPrc": 2096.86,

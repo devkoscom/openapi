@@ -1,9 +1,3 @@
----
-description: >-
-  Error는 금융투자회사, 오픈플랫폼의 시스템 등 여러 위치에서 발생할 수 있으나 HTTP Response Status Code와
-  Response Body를 통해 오픈플랫폼 표준 error code와 message로 전달합니다.
----
-
 # Error Code
 
 ## Error Message Format

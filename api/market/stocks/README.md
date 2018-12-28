@@ -2,23 +2,17 @@
 
 주식시장\(유가증권, 코스닥\) 의 종목 리스트, 종목 마스터, 종목 체결, 호가잔량, 종목 투자자별 종가등을 제공한다.
 
-
-
 ## Syntax
 
-HTTP methods    \|   **GET**
+HTTP methods \| **GET**
 
-Authentication     \|   **API Key**
+Authentication \| **API Key**
 
-
-
-
-
-## 주식종목 리스트 API <a id="api"></a>
+## 주식종목 리스트 API  <a id="api"></a>
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/lists" %}
 {% api-method-summary %}
- /v2/market/stocks/{marketcode}/lists
+/v2/market/stocks/{marketcode}/lists
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -52,7 +46,7 @@ Authentication     \|   **API Key**
        "isuKorAbbr": "동화약품",
        "map_to": "000020*001" 
     },
-     
+
     {
        "isuSrtCd": "000030",
        "isuCd": "KR7000030007",
@@ -69,27 +63,26 @@ Authentication     \|   **API Key**
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Response Parameters
+### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
 | trdDd | String\(8\) | 체결일자, 거래일자, 매매일자 | YYYYMMDD |
 | isuLists | Array\(4\) | 종목리스트 | 데이터 개수 |
 | isuCd | String\(12\) | 종목코드 |  |
-| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660
- |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
 | isuKorNm | String\(80\) | 종목한글명 |  |
 | isuKorAbbrv | String\(40\) | 종목한글약명 | 가나다 |
 
-#### Request Example <a id="request-body-example"></a>
+### Request Example  <a id="request-body-example"></a>
 
-```yaml
-curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
+```bash
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/lists'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -103,7 +96,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
        "isuKorAbbr": "동화약품",
        "map_to": "000020*001" 
     },
-     
+
     {
        "isuSrtCd": "000030",
        "isuCd": "KR7000030007",
@@ -111,7 +104,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
        "isuKorAbbr": "우리은행",
        "map_to": "000030*001" 
     },
-     
+
     {
        "isuSrtCd": "000040",
        "isuCd": "KR7000040006",
@@ -133,7 +126,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
 }
 ```
 
-## 주식종목 마스터 API <a id="api"></a>
+## 주식종목 마스터 API  <a id="api"></a>
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/master" %}
 {% api-method-summary %}
@@ -220,7 +213,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Response Parameters
+### Response Parameters
 
 | **Name** | **Type** | **Description** | ​ |
 | :--- | :--- | :--- | :--- |
@@ -228,18 +221,17 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
 | isuCd | string\(12\) | 종목코드 | ​ |
 | isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
 | isuKorAbbrv | string\(40\) | 종목한글약명 | 가나다 |
-| secugrpId | string\(2\) | 증권그룹ID | ST:주권, MF:증권투자회사, RT:부동산투자회사, SC:선박투자회사,IF:사회간접자본투융자회사, DR:주식예탁증서, EW:ELW, EF:ETF,SW:신주인수권증권, SR:신주인수권증서, BC:수익증권, FE:해외ETF, FS:외국주권, EN:ETN  |
+| secugrpId | string\(2\) | 증권그룹ID | ST:주권, MF:증권투자회사, RT:부동산투자회사, SC:선박투자회사,IF:사회간접자본투융자회사, DR:주식예탁증서, EW:ELW, EF:ETF,SW:신주인수권증권, SR:신주인수권증서, BC:수익증권, FE:해외ETF, FS:외국주권, EN:ETN |
 | mktWarnTpCd | string\(2\) | 시장경보구분코드 | 00:해당없음\(시장경보가 지정될 수 있는 종목에 대해서 지정된 바가 없음을 의미\), 01:투자주의, 02:투자경고, 03:투자위험 |
 | admisuYn | string\(1\) | 관리종목여부 | Y:관리 N:일반 |
-| haltYn | string\(1\) | 거래정지여부 | Y, N  |
-| idxIndMidclssCd | string\(3\) | 지수업종중분류코드 | 업종분류, 상세코드는 코드표\(업종\) 참고
- |
-| mktcapScaleCd | string\(1\) | 시가총액규모코드 | 유가 \(0:제외 1:대 2:중 3:소\) / 코스닥 \(0:제외 1:KOSDAQ100 2:KOSDAQmid300 3:KOSDAQsmall\)
- |
+| haltYn | string\(1\) | 거래정지여부 | Y, N |
+| idxIndMidclssCd | string\(3\) | 지수업종중분류코드 | 업종분류, 상세코드는 코드표\(업종\) 참고 |
+|  |  |  |  |
+| mktcapScaleCd | string\(1\) | 시가총액규모코드 | 유가 \(0:제외 1:대 2:중 3:소\) / 코스닥 \(0:제외 1:KOSDAQ100 2:KOSDAQmid300 3:KOSDAQsmall\) |
+|  |  |  |  |
 | mfindYn | string\(1\) | 제조업여부 | Y, N \(유가\)제조업여부 |
 | smeYn | string\(1\) | 중소기업여부 | Y, N \(코스닥\)중소기업여부 |
-| 업종 | string\(1\) | KRX100종목여부 | Y, N 
- |
+| 업종 | string\(1\) | KRX100종목여부 | Y, N |
 | kospiYn | string\(1\) | KOSPI여부 | Y,N \(유가\)KOSPI100여부 \(코스닥\)프리미어여부 |
 | kospi100Yn | string\(1\) | KOSPI100여부 | Y, N \(유가\)KOSPI여부 |
 | kospi50Yn | string\(1\) | KOSPI50여부 | Y, N \(유가\)KOSPI50여부 |
@@ -249,8 +241,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
 | prevddAccTrdval | number\(22\) | 전일누적거래대금 |  |
 | uplmtprc | number\(11\) | 상한가 |  |
 | lwlmtprc | number\(11\) | 하한가 |  |
-| sbPrc | number\(11\) | 대용가격 | ST,FS,DR,MF,RT,SC,IF,ET,FE,BC,EN 만 해당 
- |
+| sbPrc | number\(11\) | 대용가격 | ST,FS,DR,MF,RT,SC,IF,ET,FE,BC,EN 만 해당 |
 | parval | number\(11\) | 액면가 | 외국주권일 경우 소숫점셋째자리까지 표현가능/코스닥의 각국의 최소화폐단위 표시는 유가기준으로 통일 ※ST,FS,RT,SC,BC만 해당 |
 | isuPrc | number\(11\) | 발행가격 | ELW, 신주인수권증서 포함 |
 | listDd | string\(8\) | 상장일자 | YYYYMMDD |
@@ -270,15 +261,15 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
 | adjStkprcCalcYn | string\(1\) | 수정주가산출여부 | Y, N |
 | prevddNav | number\(22\) | 전일순자산가치 | ETF종목일 경우 소수점 2자리로 표현, 일반종목은 0 |
 
-#### Request Example <a id="request-body-example"></a>
+### Request Example  <a id="request-body-example"></a>
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/lists'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -292,7 +283,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
        "isuKorAbbr": "동화약품",
        "map_to": "000020*001" 
     },
-     
+
     {
        "isuSrtCd": "000030",
        "isuCd": "KR7000030007",
@@ -300,7 +291,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
        "isuKorAbbr": "우리은행",
        "map_to": "000030*001" 
     },
-     
+
     {
        "isuSrtCd": "000040",
        "isuCd": "KR7000040006",
@@ -322,9 +313,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 }
 ```
 
-
-
-## 주식종목 종가 API <a id="api"></a>
+## 주식종목 종가 API  <a id="api"></a>
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/closeprice" %}
 {% api-method-summary %}
@@ -378,7 +367,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
    "error": "당일 종가 제공 시간이 아닙니다." 
 }
@@ -388,14 +377,12 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Response Parameters
+### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
-| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660
- |
-| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락
- |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
 | cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
 | opnprc | number\(11\) | 시가 | 단위:원 |
 | hgprc | number\(11\) | 고가 | 단위:원 |
@@ -404,17 +391,15 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | accTrdvol | number\(12\) | 누적체결수량,누적거래량 | 단위:주 |
 | accTrdval | number\(22\) | 누적거래대금 | 단위:원 |
 
+### Request Example  <a id="request-body-example"></a>
 
-
-#### Request Example <a id="request-body-example"></a>
-
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/closeprice'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -422,7 +407,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 }
 ```
 
-## 주식종목 체결 API <a id="api"></a>
+## 주식종목 체결 API  <a id="api"></a>
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/price" %}
 {% api-method-summary %}
@@ -481,7 +466,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
    "error": "당일 종가 제공 시간이 아닙니다." 
 }
@@ -491,14 +476,12 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Response Parameters
+### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
-| isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660
- |
-| cmpprevddTpCd | string\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락
- |
+| isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| cmpprevddTpCd | string\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
 | cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
 | opnprc | number\(11\) | 시가 | 단위:원 |
 | hgprc | number\(11\) | 고가 | 단위:원 |
@@ -510,26 +493,31 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | lstAskbidTpCd | string\(1\) | 최종매도매수구분코드 | 1:매도, 2:매수 \(최종으로 들어온 호가의 매도매수구분값\) |
 | trdTm | string\(8\) | 체결시각,거래시각 | \*테이블 하단 참고 |
 | askordPrc\_1 | number\(11\) | 매도호가가격\_1 | 단위:원 \(체결+우선호가 발생시에만 전송\) |
-| bidordPrc\_1 | number\(11\) | 매수호가가격\_1 |  단위:원 |
+| bidordPrc\_1 | number\(11\) | 매수호가가격\_1 | 단위:원 |
 
 > `trdTm`  
-> HHMMSSmm 형태로 시간전송  
->    - 정규장 개시전 또는 정규장 체결 발생 이전 : 0  
->    - 장운영시그널, 대량체결 포함  
-> ※ _장운영시그널_  
-> 정규장마감\(15:00\):31000000 /장종료시간외마감\(15:30\):41000000 /단일가마감\(18:00\):81000000 /일반Buy-in마감\(18:00\):91000007 /당일Buy-in마감\(18:00\):91000008  
-> ※ _대량체결시_   
-> 장전대량매매체결:51000000 /장중대량매매체결:61000000 /장후대량매매체결:71000000
+> HHMMSSmm 형태로 시간전송
+>
+> * 정규장 개시전 또는 정규장 체결 발생 이전 : 0  
+> * 장운영시그널, 대량체결 포함  
+>
+>   ※ _장운영시그널_  
+>
+>   정규장마감\(15:00\):31000000 /장종료시간외마감\(15:30\):41000000 /단일가마감\(18:00\):81000000 /일반Buy-in마감\(18:00\):91000007 /당일Buy-in마감\(18:00\):91000008  
+>
+>   ※ _대량체결시_   
+>
+>   장전대량매매체결:51000000 /장중대량매매체결:61000000 /장후대량매매체결:71000000
 
-#### Request Example <a id="request-body-example"></a>
+### Request Example  <a id="request-body-example"></a>
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/price'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -554,9 +542,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 }
 ```
 
-
-
-## 주식종목 호가잔량 API <a id="api"></a>
+## 주식종목 호가잔량 API  <a id="api"></a>
 
 **LP호가 제외**
 
@@ -650,7 +636,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Response Parameters
+### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
@@ -704,15 +690,15 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | deemTrdvol | number\(12\) | 예상체결수량 |  |
 | deemAccTrdvol | number\(12\) | 예상누적체결수량 |  |
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/orderbook'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -772,10 +758,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 }
 ```
 
-
-
-
-## 주식종목별 투자자별 종가 API <a id="api"></a>
+## 주식종목별 투자자별 종가 API  <a id="api"></a>
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/investors" %}
 {% api-method-summary %}
@@ -846,7 +829,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
    "error": "당일 종가 제공 시간이 아닙니다." 
 }
@@ -868,15 +851,15 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | bidTrdvol | number\(10\) | 매수체결수량,매수거래량 |
 | bidTrdval | number\(22\) | 매수거래대금 |
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/investors'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -893,7 +876,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "02",
          "askTrdvol": 0,
@@ -901,7 +884,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "03",
          "askTrdvol": 0,
@@ -909,7 +892,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "04",
          "askTrdvol": 0,
@@ -917,7 +900,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "05",
          "askTrdvol": 0,
@@ -925,7 +908,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "06",
          "askTrdvol": 0,
@@ -933,7 +916,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "07",
          "askTrdvol": 0,
@@ -941,7 +924,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "08",
          "askTrdvol": 0,
@@ -949,7 +932,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "09",
          "askTrdvol": 0,
@@ -957,7 +940,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "10",
          "askTrdvol": 0,
@@ -965,7 +948,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "11",
          "askTrdvol": 0,
@@ -973,7 +956,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "12",
          "askTrdvol": 0,
@@ -981,7 +964,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "13",
          "askTrdvol": 0,
@@ -989,7 +972,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "14",
          "askTrdvol": 0,
@@ -997,7 +980,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "15",
          "askTrdvol": 0,
@@ -1005,7 +988,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "bidTrdvol": 0,
          "bidTrdval": 0 
       },
-       
+
       {
          "invstCd": "16",
          "askTrdvol": 0,
@@ -1017,7 +1000,6 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
   } 
 }
 ```
-
 
 ## KOSPI/KOSDAQ 지수 투자자 마감정보 API
 
@@ -1089,15 +1071,15 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | bidTrdvol | number\(10\) | 매수체결수량,매수거래량 |  |
 | bidTrdval | number\(22\) | 매수거래대금 |  |
 
-#### Request Example <a id="request-body-example"></a>
+### Request Example  <a id="request-body-example"></a>
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/investors'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -1105,8 +1087,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 }
 ```
 
-
-## KOSPI/KOSDAQ 지수 API <a id="api"></a>
+## KOSPI/KOSDAQ 지수 API  <a id="api"></a>
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/index" %}
 {% api-method-summary %}
@@ -1161,10 +1142,8 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
-| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660
- |
-| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락
- |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
 | cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
 | opnprc | number\(11\) | 시가 | 단위:원 |
 | hgprc | number\(11\) | 고가 | 단위:원 |
@@ -1176,15 +1155,15 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | listShrs | number\(16\) | 상장주식수,상장증권수 | 업종상장주식수 단위는  천주, 그외는 1주 |
 | mktcap | number\(22\) | 시가총액 | 단위: 업종-백만 |
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/index'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -1207,7 +1186,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 }
 ```
 
-## 주식 거래 상위 회원사 API <a id="api"></a>
+## 주식 거래 상위 회원사 API  <a id="api"></a>
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/traderanking" %}
 {% api-method-summary %}
@@ -1356,15 +1335,15 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | askTrdWtMbr4 | number\(5\) | 매도상위거래비중 회원4 |  |
 | askTrdWtMbr5 | number\(5\) | 매도상위거래비중 회원5 |  |
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/traderanking'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -1426,9 +1405,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 }
 ```
 
-
-
-## 주식종목\(ETF\) 장마감후 순자산가치 API <a id="api"></a>
+## 주식종목\(ETF\) 장마감후 순자산가치 API  <a id="api"></a>
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/closenav" %}
 {% api-method-summary %}
@@ -1476,7 +1453,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
    "error": "당일 종가 제공 시간이 아닙니다." 
 }
@@ -1494,15 +1471,15 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | nav | number\(11\) | 순자산가치 |  |
 | cmpprevddNav | number\(11\) | 전일대비순자산가치 |  |
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/closenav'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -1510,8 +1487,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 }
 ```
 
-
-## 주식 공매도 API <a id="api"></a>
+## 주식 공매도 API  <a id="api"></a>
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/shortsell" %}
 {% api-method-summary %}
@@ -1586,15 +1562,15 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | lendBalQty | number\(11\) | 대차잔고수량 | 대차잔고수량\(주식수, 전일기준\) |
 | lendBalAmt | number\(11\) | 대차잔고금액 | 단위 1,000 원 |
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/shortsell?inqStrtDd=20181001&inqEndDd=20181231'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -1610,7 +1586,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "srtsellTrdVol": 0,
          "srtsellTrdAmt": 0 
       },
-       
+
       {
          "BzDd": 20181227,
          "lendBalQty": 96176577,
@@ -1618,7 +1594,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "srtsellTrdVol": 0,
          "srtsellTrdAmt": 0 
       },
-       
+
       {
          "BzDd": 20181226,
          "lendBalQty": 100432709,
@@ -1629,7 +1605,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
       .
       .
       .
-       
+
       {
          "BzDd": 20181019,
          "lendBalQty": 98588612,
@@ -1639,9 +1615,8 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
       } 
     ] 
   } 
-}      
+}
 ```
-
 
 ## 주식 종목 일중 API
 
@@ -1699,7 +1674,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Response Parameters
+### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
@@ -1713,15 +1688,15 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | inddClsprc | number\(11\) | 일중종가 | 일중데이타\(10초, 1분, 10분\) |
 | inddTrdvol | number\(11\) | 일중거래량 | 일중데이타\(10초, 1분, 10분\) |
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/intraday?inddCycleTpCd=600&inqStrtDd=20181228&strtTm=0900&endTm=1500'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -1738,7 +1713,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "inddClsprc": 38500,
          "inddTrdvol": 2929814 
       },
-       
+
       {
          "inddTm": "10000000",
          "inddOpnprc": 38700,
@@ -1747,7 +1722,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "inddClsprc": 38600,
          "inddTrdvol": 2903276 
       },
-       
+
       {
          "inddTm": "9500000",
          "inddOpnprc": 38700,
@@ -1756,7 +1731,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "inddClsprc": 38700,
          "inddTrdvol": 2778449 
       },
-       
+
       {
          "inddTm": "9400000",
          "inddOpnprc": 38550,
@@ -1765,7 +1740,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "inddClsprc": 38550,
          "inddTrdvol": 1695991 
       },
-       
+
       {
          "inddTm": "9300000",
          "inddOpnprc": 38500,
@@ -1774,7 +1749,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "inddClsprc": 38550,
          "inddTrdvol": 1695991 
       },
-       
+
       {
          "inddTm": "9200000",
          "inddOpnprc": 38450,
@@ -1783,7 +1758,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "inddClsprc": 38500,
          "inddTrdvol": 1275121 
       },
-       
+
       {
          "inddTm": "9100000",
          "inddOpnprc": 38250,
@@ -1796,8 +1771,6 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
   } 
 }
 ```
-
-
 
 ## 주식 외국인보유율 히스토리 API
 
@@ -1865,7 +1838,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Response Parameters
+### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
@@ -1876,15 +1849,15 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | cmpprevddFornHdVol | number\(11\) | 외국인보유주식수전일대비 |  |
 | FornHdVolRt | number\(5\) | 외국인보유율 |  |
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/foreignhistory?inqStrtDd=20181001&inqEndDd=20181231&reqCnt=20'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -1899,133 +1872,133 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "FornHdVolRt": 55.54,
          "BzDd": 20181228 
       },
-       
+
       {
          "FornHdVol": 3315501801,
          "cmpprevddFornHdVol": 1660604,
          "FornHdVolRt": 55.54,
          "BzDd": 20181227 
       },
-       
+
       {
          "FornHdVol": 3313841197,
          "cmpprevddFornHdVol": -3541075,
          "FornHdVolRt": 55.51,
          "BzDd": 20181226 
       },
-       
+
       {
          "FornHdVol": 3317382272,
          "cmpprevddFornHdVol": 839880,
          "FornHdVolRt": 55.57,
          "BzDd": 20181224 
       },
-       
+
       {
          "FornHdVol": 3316542392,
          "cmpprevddFornHdVol": -4665291,
          "FornHdVolRt": 55.56,
          "BzDd": 20181221 
       },
-       
+
       {
          "FornHdVol": 3321207683,
          "cmpprevddFornHdVol": 390180,
          "FornHdVolRt": 0,
          "BzDd": 20181220 
       },
-       
+
       {
          "FornHdVol": 3320817503,
          "cmpprevddFornHdVol": -1753613,
          "FornHdVolRt": 55.63,
          "BzDd": 20181219 
       },
-       
+
       {
          "FornHdVol": 3322571116,
          "cmpprevddFornHdVol": -2855217,
          "FornHdVolRt": 55.66,
          "BzDd": 20181218 
       },
-       
+
       {
          "FornHdVol": 3325426333,
          "cmpprevddFornHdVol": -58073,
          "FornHdVolRt": 55.7,
          "BzDd": 20181217 
       },
-       
+
       {
          "FornHdVol": 3325484406,
          "cmpprevddFornHdVol": -1702700,
          "FornHdVolRt": 55.71,
          "BzDd": 20181214 
       },
-       
+
       {
          "FornHdVol": 3327187106,
          "cmpprevddFornHdVol": 628899,
          "FornHdVolRt": 55.73,
          "BzDd": 20181213 
       },
-       
+
       {
          "FornHdVol": 3326558207,
          "cmpprevddFornHdVol": -2033979,
          "FornHdVolRt": 55.72,
          "BzDd": 20181212 
       },
-       
+
       {
          "FornHdVol": 3328592186,
          "cmpprevddFornHdVol": -95076,
          "FornHdVolRt": 55.76,
          "BzDd": 20181211 
       },
-       
+
       {
          "FornHdVol": 3328687262,
          "cmpprevddFornHdVol": -5089822,
          "FornHdVolRt": 51.85,
          "BzDd": 20181210 
       },
-       
+
       {
          "FornHdVol": 3333777084,
          "cmpprevddFornHdVol": -581731,
          "FornHdVolRt": 51.93,
          "BzDd": 20181207 
       },
-       
+
       {
          "FornHdVol": 3334358815,
          "cmpprevddFornHdVol": -6202842,
          "FornHdVolRt": 51.94,
          "BzDd": 20181206 
       },
-       
+
       {
          "FornHdVol": 3340561657,
          "cmpprevddFornHdVol": -5120800,
          "FornHdVolRt": 52.04,
          "BzDd": 20181205 
       },
-       
+
       {
          "FornHdVol": 3345682457,
          "cmpprevddFornHdVol": -2998508,
          "FornHdVolRt": 52.12,
          "BzDd": 20181204 
       },
-       
+
       {
          "FornHdVol": 3348680965,
          "cmpprevddFornHdVol": 3417910,
          "FornHdVolRt": 52.17,
          "BzDd": 20181203 
       },
-       
+
       {
          "FornHdVol": 3345263055,
          "cmpprevddFornHdVol": -1853982,
@@ -2037,13 +2010,11 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 }
 ```
 
-
-
 ## 주식 종목 히스토리
 
 {% api-method method="get" host="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/history" %}
 {% api-method-summary %}
- /v2/market/stocks/{marketcode}/{issuecode}/history
+/v2/market/stocks/{marketcode}/{issuecode}/history
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -2058,7 +2029,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="issuecode" required=true %}
-종목코드 
+종목코드
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -2072,8 +2043,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="inqEndDd" required=true %}
-조회종료일자
- \(YYYYMMDD\)
+조회종료일자 \(YYYYMMDD\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="number" name="reqCnt" required=true %}
@@ -2115,7 +2085,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Response Parameters
+### Response Parameters
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
@@ -2131,15 +2101,15 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | hgprc | number\(11\) | 고가 | 단위:원 |
 | lwprc | number\(11\) | 저가 | 단위:원 |
 
-#### Request Example 
+### Request Example
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/history?trnsmCycleTpCd=D&inqStrtDd=20181001&inqEndDd=20181231&reqCnt=20'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -2159,7 +2129,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 113875559350,
          "cmpprevddPrc": 350 
       },
-       
+
       {
          "BzDd": 20181227,
          "trdPrc": 38250,
@@ -2171,7 +2141,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 403520824950,
          "cmpprevddPrc": -100 
       },
-       
+
       {
          "BzDd": 20181226,
          "trdPrc": 38350,
@@ -2183,7 +2153,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 488546395500,
          "cmpprevddPrc": -300 
       },
-       
+
       {
          "BzDd": 20181224,
          "trdPrc": 27600,
@@ -2195,7 +2165,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 179691950,
          "cmpprevddPrc": 150 
       },
-       
+
       {
          "BzDd": 20181221,
          "trdPrc": 38650,
@@ -2207,7 +2177,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 575188706454,
          "cmpprevddPrc": 0 
       },
-       
+
       {
          "BzDd": 20181220,
          "trdPrc": 38650,
@@ -2219,7 +2189,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 462009678419,
          "cmpprevddPrc": -450 
       },
-       
+
       {
          "BzDd": 20181219,
          "trdPrc": 39100,
@@ -2231,7 +2201,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 388002233278,
          "cmpprevddPrc": 200 
       },
-       
+
       {
          "BzDd": 20181218,
          "trdPrc": 38900,
@@ -2243,7 +2213,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 429736490346,
          "cmpprevddPrc": -2800 
       },
-       
+
       {
          "BzDd": 20181217,
          "trdPrc": 41700,
@@ -2255,7 +2225,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 1536781900,
          "cmpprevddPrc": 200 
       },
-       
+
       {
          "BzDd": 20181214,
          "trdPrc": 38950,
@@ -2267,7 +2237,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 768559029290,
          "cmpprevddPrc": -1050 
       },
-       
+
       {
          "BzDd": 20181213,
          "trdPrc": 40000,
@@ -2279,7 +2249,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 1054672523100,
          "cmpprevddPrc": -450 
       },
-       
+
       {
          "BzDd": 20181212,
          "trdPrc": 40450,
@@ -2291,7 +2261,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 486186060392,
          "cmpprevddPrc": 200 
       },
-       
+
       {
          "BzDd": 20181211,
          "trdPrc": 51000,
@@ -2303,7 +2273,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 10778627450,
          "cmpprevddPrc": 50 
       },
-       
+
       {
          "BzDd": 20181210,
          "trdPrc": 40200,
@@ -2315,7 +2285,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 598916715336,
          "cmpprevddPrc": -750 
       },
-       
+
       {
          "BzDd": 20181207,
          "trdPrc": 40950,
@@ -2327,7 +2297,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 11132416400,
          "cmpprevddPrc": -17398 
       },
-       
+
       {
          "BzDd": 20181206,
          "trdPrc": 57287,
@@ -2339,7 +2309,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 579350131900,
          "cmpprevddPrc": -9972 
       },
-       
+
       {
          "BzDd": 20181205,
          "trdPrc": 58631,
@@ -2351,7 +2321,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 522454917535,
          "cmpprevddPrc": -1060 
       },
-       
+
       {
          "BzDd": 20181204,
          "trdPrc": 59621,
@@ -2363,7 +2333,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 605987183391,
          "cmpprevddPrc": -6718 
       },
-       
+
       {
          "BzDd": 20181203,
          "trdPrc": 61177,
@@ -2375,7 +2345,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
          "accTrdval": 521013724675,
          "cmpprevddPrc": -9547 
       },
-       
+
       {
          "BzDd": 20181130,
          "trdPrc": 70725,

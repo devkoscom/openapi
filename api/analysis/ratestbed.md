@@ -1,7 +1,3 @@
----
-description: 'RA테스트베드 참여 알고리즘 목록과 운용계좌별 수익률, 위험 및 성과지표 등을 조회 한다.'
----
-
 # RA테스트베드 알고리즘
 
 #### 자세한 설명은 [RA테스트베드 알고리즘 운용실적 API 매뉴얼](https://developers.koscom.co.kr/resources/documentation/20170614_RATestBed_API.pdf) 을 참조 하세요.

@@ -1,7 +1,3 @@
----
-description: 본 문서는 Chrome Browser에 최적화 되어 있습니다.
----
-
 # 오픈플랫폼
 
 ## 오픈플랫폼 개요

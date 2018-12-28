@@ -76,7 +76,7 @@ Authentication    \|   **API Key**
 
 #### Request Example 
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/multiquote/stocks/kospi/lists'
@@ -208,7 +208,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 #### Request Example 
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/multiquote/stocks/kospi/ohlclists'
@@ -395,7 +395,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 #### Request Example 
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/multiquote/stocks/kospi/price?isuCd=005930%2C000660'
@@ -605,7 +605,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 #### Request Example 
 
-```yaml
+```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
 'https://sandbox-apigw.koscom.co.kr/v2/market/multiquote/stocks/kospi/orderbook?isuCd=005930%2C000660'

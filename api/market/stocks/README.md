@@ -76,7 +76,8 @@ Authentication     \|   **API Key**
 | trdDd | String\(8\) | 체결일자, 거래일자, 매매일자 | YYYYMMDD |
 | isuLists | Array\(4\) | 종목리스트 | 데이터 개수 |
 | isuCd | String\(12\) | 종목코드 |  |
-| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660
+ |
 | isuKorNm | String\(80\) | 종목한글명 |  |
 | isuKorAbbrv | String\(40\) | 종목한글약명 | 가나다 |
 
@@ -231,11 +232,14 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
 | mktWarnTpCd | string\(2\) | 시장경보구분코드 | 00:해당없음\(시장경보가 지정될 수 있는 종목에 대해서 지정된 바가 없음을 의미\), 01:투자주의, 02:투자경고, 03:투자위험 |
 | admisuYn | string\(1\) | 관리종목여부 | Y:관리 N:일반 |
 | haltYn | string\(1\) | 거래정지여부 | Y, N  |
-| idxIndMidclssCd | string\(3\) | 지수업종중분류코드 | 업종분류, 상세코드는 코드표\(업종\) 참고 |
-| mktcapScaleCd | string\(1\) | 시가총액규모코드 | 유가 \(0:제외 1:대 2:중 3:소\) / 코스닥 \(0:제외 1:KOSDAQ100 2:KOSDAQmid300 3:KOSDAQsmall\) |
+| idxIndMidclssCd | string\(3\) | 지수업종중분류코드 | 업종분류, 상세코드는 코드표\(업종\) 참고
+ |
+| mktcapScaleCd | string\(1\) | 시가총액규모코드 | 유가 \(0:제외 1:대 2:중 3:소\) / 코스닥 \(0:제외 1:KOSDAQ100 2:KOSDAQmid300 3:KOSDAQsmall\)
+ |
 | mfindYn | string\(1\) | 제조업여부 | Y, N \(유가\)제조업여부 |
 | smeYn | string\(1\) | 중소기업여부 | Y, N \(코스닥\)중소기업여부 |
-| 업종 | string\(1\) | KRX100종목여부 | Y, N  |
+| 업종 | string\(1\) | KRX100종목여부 | Y, N 
+ |
 | kospiYn | string\(1\) | KOSPI여부 | Y,N \(유가\)KOSPI100여부 \(코스닥\)프리미어여부 |
 | kospi100Yn | string\(1\) | KOSPI100여부 | Y, N \(유가\)KOSPI여부 |
 | kospi50Yn | string\(1\) | KOSPI50여부 | Y, N \(유가\)KOSPI50여부 |
@@ -245,7 +249,8 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
 | prevddAccTrdval | number\(22\) | 전일누적거래대금 |  |
 | uplmtprc | number\(11\) | 상한가 |  |
 | lwlmtprc | number\(11\) | 하한가 |  |
-| sbPrc | number\(11\) | 대용가격 | ST,FS,DR,MF,RT,SC,IF,ET,FE,BC,EN 만 해당  |
+| sbPrc | number\(11\) | 대용가격 | ST,FS,DR,MF,RT,SC,IF,ET,FE,BC,EN 만 해당 
+ |
 | parval | number\(11\) | 액면가 | 외국주권일 경우 소숫점셋째자리까지 표현가능/코스닥의 각국의 최소화폐단위 표시는 유가기준으로 통일 ※ST,FS,RT,SC,BC만 해당 |
 | isuPrc | number\(11\) | 발행가격 | ELW, 신주인수권증서 포함 |
 | listDd | string\(8\) | 상장일자 | YYYYMMDD |
@@ -387,8 +392,10 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
-| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
-| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660
+ |
+| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락
+ |
 | cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
 | opnprc | number\(11\) | 시가 | 단위:원 |
 | hgprc | number\(11\) | 고가 | 단위:원 |
@@ -488,8 +495,10 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
-| isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
-| cmpprevddTpCd | string\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| isuSrtCd | string\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660
+ |
+| cmpprevddTpCd | string\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락
+ |
 | cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
 | opnprc | number\(11\) | 시가 | 단위:원 |
 | hgprc | number\(11\) | 고가 | 단위:원 |
@@ -512,7 +521,38 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 > ※ _대량체결시_   
 > 장전대량매매체결:51000000 /장중대량매매체결:61000000 /장후대량매매체결:71000000
 
+#### Request Example <a id="request-body-example"></a>
 
+```yaml
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/price'
+```
+
+#### Response Example
+
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",
+     "trdPrc": 38600,
+     "cmpprevddTpCd": "2",
+     "opnprc": 38250,
+     "hgprc": 38900,
+     "lwprc": 38200,
+     "accTrdvol": 2829006,
+     "trdTm": 9544500,
+     "trdvol": 76,
+     "accTrdval": 108981501200,
+     "cmpprevddPrc": 350,
+     "bidordPrc_1": 38600,
+     "askordPrc_1": 38650,
+     "lstAskbidTpCd": 1 
+  } 
+}
+```
 
 
 
@@ -664,6 +704,73 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | deemTrdvol | number\(12\) | 예상체결수량 |  |
 | deemAccTrdvol | number\(12\) | 예상누적체결수량 |  |
 
+#### Request Example 
+
+```yaml
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/orderbook'
+```
+
+#### Response Example
+
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",
+     "askStep1BstordPrc": 38600,
+     "askStep2BstordPrc": 38650,
+     "askStep3BstordPrc": 38700,
+     "askStep4BstordPrc": 38750,
+     "askStep5BstordPrc": 38800,
+     "askStep6BstordPrc": 38850,
+     "askStep7BstordPrc": 38900,
+     "askStep8BstordPrc": 38950,
+     "askStep9BstordPrc": 39000,
+     "askStep10BstordPrc": 39050,
+     "askStep1BstordRqty": 3901,
+     "askStep2BstordRqty": 28867,
+     "askStep3BstordRqty": 24498,
+     "askStep4BstordRqty": 24882,
+     "askStep5BstordRqty": 57983,
+     "askStep6BstordRqty": 71840,
+     "askStep7BstordRqty": 94161,
+     "askStep8BstordRqty": 67534,
+     "askStep9BstordRqty": 94561,
+     "askStep10BstordRqty": 18525,
+     "bidStep1BstordPrc": 38550,
+     "bidStep2BstordPrc": 38500,
+     "bidStep3BstordPrc": 38450,
+     "bidStep4BstordPrc": 38400,
+     "bidStep5BstordPrc": 38350,
+     "bidStep6BstordPrc": 38300,
+     "bidStep7BstordPrc": 38250,
+     "bidStep8BstordPrc": 38200,
+     "bidStep9BstordPrc": 38150,
+     "bidStep10BstordPrc": 38100,
+     "bidStep1BstordRqty": 36810,
+     "bidStep2BstordRqty": 31051,
+     "bidStep3BstordRqty": 28211,
+     "bidStep4BstordRqty": 22147,
+     "bidStep5BstordRqty": 24657,
+     "bidStep6BstordRqty": 40018,
+     "bidStep7BstordRqty": 38243,
+     "bidStep8BstordRqty": 27741,
+     "bidStep9BstordRqty": 22552,
+     "bidStep10BstordRqty": 31296,
+     "askordTotRqty": 486752,
+     "bidordTotRqty": 302726,
+     "pstoffhrAskTotOrdRqty": 0,
+     "pstoffhrBidTotOrdRqty": 0,
+     "accTrdvol": 2968951,
+     "deemTrdPrc": 0,
+     "deemTrdvol": 0,
+     "deemAccTrdvol": 0 
+  } 
+}
+```
 
 
 
@@ -761,6 +868,155 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | bidTrdvol | number\(10\) | 매수체결수량,매수거래량 |
 | bidTrdval | number\(22\) | 매수거래대금 |
 
+#### Request Example 
+
+```yaml
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/investors'
+```
+
+#### Response Example
+
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuCd": "KR7005930003",
+     "isuSrtCd": "005930",
+     "invstLists": [ 
+      {
+         "invstCd": "01",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      },
+       
+      {
+         "invstCd": "02",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      },
+       
+      {
+         "invstCd": "03",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      },
+       
+      {
+         "invstCd": "04",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      },
+       
+      {
+         "invstCd": "05",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      },
+       
+      {
+         "invstCd": "06",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      },
+       
+      {
+         "invstCd": "07",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      },
+       
+      {
+         "invstCd": "08",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      },
+       
+      {
+         "invstCd": "09",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      },
+       
+      {
+         "invstCd": "10",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      },
+       
+      {
+         "invstCd": "11",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      },
+       
+      {
+         "invstCd": "12",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      },
+       
+      {
+         "invstCd": "13",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      },
+       
+      {
+         "invstCd": "14",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      },
+       
+      {
+         "invstCd": "15",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      },
+       
+      {
+         "invstCd": "16",
+         "askTrdvol": 0,
+         "askTrdval": 0,
+         "bidTrdvol": 0,
+         "bidTrdval": 0 
+      } 
+    ] 
+  } 
+}
+```
 
 
 ## KOSPI/KOSDAQ 지수 투자자 마감정보 API
@@ -833,8 +1089,21 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | bidTrdvol | number\(10\) | 매수체결수량,매수거래량 |  |
 | bidTrdval | number\(22\) | 매수거래대금 |  |
 
+#### Request Example <a id="request-body-example"></a>
 
+```yaml
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/investors'
+```
 
+#### Response Example
+
+```yaml
+{
+   "error": "당일 종가 제공 시간이 아닙니다." 
+}
+```
 
 
 ## KOSPI/KOSDAQ 지수 API <a id="api"></a>
@@ -892,8 +1161,10 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 | **Name** | **Type** | **Description** |  |
 | :--- | :--- | :--- | :--- |
-| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660 |
-| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락 |
+| isuSrtCd | String\(9\) | 종목단축코드 | 예\) KR7000660001 → 000660
+ |
+| cmpprevddTpCd | String\(1\) | 전일대비구분코드 | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락
+ |
 | cmpprevddPrc | number\(11\) | 전일대비가격 | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0 |
 | opnprc | number\(11\) | 시가 | 단위:원 |
 | hgprc | number\(11\) | 고가 | 단위:원 |
@@ -905,9 +1176,36 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | listShrs | number\(16\) | 상장주식수,상장증권수 | 업종상장주식수 단위는  천주, 그외는 1주 |
 | mktcap | number\(22\) | 시가총액 | 단위: 업종-백만 |
 
+#### Request Example 
 
+```yaml
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/index'
+```
 
+#### Response Example
 
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "K1",
+     "isuCnt": 901,
+     "trdPrc": 2041.71,
+     "cmpprevddTpCd": "2",
+     "opnprc": 2036.7,
+     "hgprc": 2044.03,
+     "lwprc": 2035.41,
+     "accTrdvol": 100875,
+     "accTrdval": 948554,
+     "mktcap": 1343984726,
+     "cmpprevddPrc": 13.27,
+     "listShrs": 55522062 
+  } 
+}
+```
 
 ## 주식 거래 상위 회원사 API <a id="api"></a>
 
@@ -1058,7 +1356,75 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | askTrdWtMbr4 | number\(5\) | 매도상위거래비중 회원4 |  |
 | askTrdWtMbr5 | number\(5\) | 매도상위거래비중 회원5 |  |
 
+#### Request Example 
 
+```yaml
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/traderanking'
+```
+
+#### Response Example
+
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930*001",
+     "askTrdVolMbr1": 337141,
+     "askTrdVolMbr2": 301678,
+     "askTrdVolMbr3": 263659,
+     "askTrdVolMbr4": 225961,
+     "askTrdVolMbr5": 201467,
+     "askTrdAmtMbr1": 12987257800,
+     "askTrdAmtMbr2": 11586362850,
+     "askTrdAmtMbr3": 10181206900,
+     "askTrdAmtMbr4": 8707360050,
+     "askTrdAmtMbr5": 7756513450,
+     "askTrdWtMbr1": 11.62,
+     "askTrdWtMbr2": 10.4,
+     "askTrdWtMbr3": 9.09,
+     "askTrdWtMbr4": 7.79,
+     "askTrdWtMbr5": 6.94,
+     "bidTrdVolMbr1": 692835,
+     "bidTrdVolMbr2": 333573,
+     "bidTrdVolMbr3": 173089,
+     "bidTrdVolMbr4": 165312,
+     "bidTrdVolMbr5": 160117,
+     "bidTrdAmtMbr1": 26663102100,
+     "bidTrdAmtMbr2": 12877911700,
+     "bidTrdAmtMbr3": 6655224300,
+     "bidTrdAmtMbr4": 6375021600,
+     "bidTrdAmtMbr5": 6167793600,
+     "bidTrdWtMbr1": 23.88,
+     "bidTrdWtMbr2": 11.5,
+     "bidTrdWtMbr3": 5.97,
+     "bidTrdWtMbr4": 5.7,
+     "bidTrdWtMbr5": 5.52,
+     "bidTrdPrcMbr1": 38484,
+     "bidTrdPrcMbr2": 38606,
+     "bidTrdPrcMbr3": 38450,
+     "bidTrdPrcMbr4": 38564,
+     "bidTrdPrcMbr5": 38521,
+     "askTrdPrcMbr1": 38522,
+     "askTrdPrcMbr2": 38406,
+     "askTrdPrcMbr3": 38615,
+     "askTrdPrcMbr4": 38535,
+     "askTrdPrcMbr5": 38500,
+     "bidTrdMbr1": "CLSA",
+     "bidTrdMbr2": "하이증권",
+     "bidTrdMbr3": "맥쿼리",
+     "bidTrdMbr4": "미래에셋대우",
+     "bidTrdMbr5": "키움증권",
+     "askTrdMbr1": "하이증권",
+     "askTrdMbr2": "CS",
+     "askTrdMbr3": "키움증권",
+     "askTrdMbr4": "미래에셋대우",
+     "askTrdMbr5": "메릴린치" 
+  } 
+}
+```
 
 
 
@@ -1128,8 +1494,21 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | nav | number\(11\) | 순자산가치 |  |
 | cmpprevddNav | number\(11\) | 전일대비순자산가치 |  |
 
+#### Request Example 
 
+```yaml
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/closenav'
+```
 
+#### Response Example
+
+```yaml
+{
+   "error": "당일 종가 제공 시간이 아닙니다." 
+}
+```
 
 
 ## 주식 공매도 API <a id="api"></a>
@@ -1207,8 +1586,61 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | lendBalQty | number\(11\) | 대차잔고수량 | 대차잔고수량\(주식수, 전일기준\) |
 | lendBalAmt | number\(11\) | 대차잔고금액 | 단위 1,000 원 |
 
+#### Request Example 
 
+```yaml
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/shortsell?inqStrtDd=20181001&inqEndDd=20181231'
+```
 
+#### Response Example
+
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",
+     "hisLists": [ 
+      {
+         "BzDd": 20181228,
+         "lendBalQty": 0,
+         "lendBalAmt": 0,
+         "srtsellTrdVol": 0,
+         "srtsellTrdAmt": 0 
+      },
+       
+      {
+         "BzDd": 20181227,
+         "lendBalQty": 96176577,
+         "lendBalAmt": 3678754070,
+         "srtsellTrdVol": 0,
+         "srtsellTrdAmt": 0 
+      },
+       
+      {
+         "BzDd": 20181226,
+         "lendBalQty": 100432709,
+         "lendBalAmt": 3851594390,
+         "srtsellTrdVol": 0,
+         "srtsellTrdAmt": 0 
+      },
+      .
+      .
+      .
+       
+      {
+         "BzDd": 20181019,
+         "lendBalQty": 98588612,
+         "lendBalAmt": 4328040067,
+         "srtsellTrdVol": 718889,
+         "srtsellTrdAmt": 31521849500 
+      } 
+    ] 
+  } 
+}      
+```
 
 
 ## 주식 종목 일중 API
@@ -1281,7 +1713,89 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | inddClsprc | number\(11\) | 일중종가 | 일중데이타\(10초, 1분, 10분\) |
 | inddTrdvol | number\(11\) | 일중거래량 | 일중데이타\(10초, 1분, 10분\) |
 
+#### Request Example 
 
+```yaml
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/intraday?inddCycleTpCd=600&inqStrtDd=20181228&strtTm=0900&endTm=1500'
+```
+
+#### Response Example
+
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",
+     "hisLists": [ 
+      {
+         "inddTm": "10032000",
+         "inddOpnprc": 38600,
+         "inddHgprc": 38600,
+         "inddLwprc": 38500,
+         "inddClsprc": 38500,
+         "inddTrdvol": 2929814 
+      },
+       
+      {
+         "inddTm": "10000000",
+         "inddOpnprc": 38700,
+         "inddHgprc": 38700,
+         "inddLwprc": 38550,
+         "inddClsprc": 38600,
+         "inddTrdvol": 2903276 
+      },
+       
+      {
+         "inddTm": "9500000",
+         "inddOpnprc": 38700,
+         "inddHgprc": 38750,
+         "inddLwprc": 38600,
+         "inddClsprc": 38700,
+         "inddTrdvol": 2778449 
+      },
+       
+      {
+         "inddTm": "9400000",
+         "inddOpnprc": 38550,
+         "inddHgprc": 38550,
+         "inddLwprc": 38550,
+         "inddClsprc": 38550,
+         "inddTrdvol": 1695991 
+      },
+       
+      {
+         "inddTm": "9300000",
+         "inddOpnprc": 38500,
+         "inddHgprc": 38550,
+         "inddLwprc": 38450,
+         "inddClsprc": 38550,
+         "inddTrdvol": 1695991 
+      },
+       
+      {
+         "inddTm": "9200000",
+         "inddOpnprc": 38450,
+         "inddHgprc": 38550,
+         "inddLwprc": 38300,
+         "inddClsprc": 38500,
+         "inddTrdvol": 1275121 
+      },
+       
+      {
+         "inddTm": "9100000",
+         "inddOpnprc": 38250,
+         "inddHgprc": 38550,
+         "inddLwprc": 38200,
+         "inddClsprc": 38400,
+         "inddTrdvol": 870273 
+      } 
+    ] 
+  } 
+}
+```
 
 
 
@@ -1362,7 +1876,166 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | cmpprevddFornHdVol | number\(11\) | 외국인보유주식수전일대비 |  |
 | FornHdVolRt | number\(5\) | 외국인보유율 |  |
 
+#### Request Example 
 
+```yaml
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/foreignhistory?inqStrtDd=20181001&inqEndDd=20181231&reqCnt=20'
+```
+
+#### Response Example
+
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",
+     "hisLists": [ 
+      {
+         "FornHdVol": 3315501801,
+         "cmpprevddFornHdVol": 0,
+         "FornHdVolRt": 55.54,
+         "BzDd": 20181228 
+      },
+       
+      {
+         "FornHdVol": 3315501801,
+         "cmpprevddFornHdVol": 1660604,
+         "FornHdVolRt": 55.54,
+         "BzDd": 20181227 
+      },
+       
+      {
+         "FornHdVol": 3313841197,
+         "cmpprevddFornHdVol": -3541075,
+         "FornHdVolRt": 55.51,
+         "BzDd": 20181226 
+      },
+       
+      {
+         "FornHdVol": 3317382272,
+         "cmpprevddFornHdVol": 839880,
+         "FornHdVolRt": 55.57,
+         "BzDd": 20181224 
+      },
+       
+      {
+         "FornHdVol": 3316542392,
+         "cmpprevddFornHdVol": -4665291,
+         "FornHdVolRt": 55.56,
+         "BzDd": 20181221 
+      },
+       
+      {
+         "FornHdVol": 3321207683,
+         "cmpprevddFornHdVol": 390180,
+         "FornHdVolRt": 0,
+         "BzDd": 20181220 
+      },
+       
+      {
+         "FornHdVol": 3320817503,
+         "cmpprevddFornHdVol": -1753613,
+         "FornHdVolRt": 55.63,
+         "BzDd": 20181219 
+      },
+       
+      {
+         "FornHdVol": 3322571116,
+         "cmpprevddFornHdVol": -2855217,
+         "FornHdVolRt": 55.66,
+         "BzDd": 20181218 
+      },
+       
+      {
+         "FornHdVol": 3325426333,
+         "cmpprevddFornHdVol": -58073,
+         "FornHdVolRt": 55.7,
+         "BzDd": 20181217 
+      },
+       
+      {
+         "FornHdVol": 3325484406,
+         "cmpprevddFornHdVol": -1702700,
+         "FornHdVolRt": 55.71,
+         "BzDd": 20181214 
+      },
+       
+      {
+         "FornHdVol": 3327187106,
+         "cmpprevddFornHdVol": 628899,
+         "FornHdVolRt": 55.73,
+         "BzDd": 20181213 
+      },
+       
+      {
+         "FornHdVol": 3326558207,
+         "cmpprevddFornHdVol": -2033979,
+         "FornHdVolRt": 55.72,
+         "BzDd": 20181212 
+      },
+       
+      {
+         "FornHdVol": 3328592186,
+         "cmpprevddFornHdVol": -95076,
+         "FornHdVolRt": 55.76,
+         "BzDd": 20181211 
+      },
+       
+      {
+         "FornHdVol": 3328687262,
+         "cmpprevddFornHdVol": -5089822,
+         "FornHdVolRt": 51.85,
+         "BzDd": 20181210 
+      },
+       
+      {
+         "FornHdVol": 3333777084,
+         "cmpprevddFornHdVol": -581731,
+         "FornHdVolRt": 51.93,
+         "BzDd": 20181207 
+      },
+       
+      {
+         "FornHdVol": 3334358815,
+         "cmpprevddFornHdVol": -6202842,
+         "FornHdVolRt": 51.94,
+         "BzDd": 20181206 
+      },
+       
+      {
+         "FornHdVol": 3340561657,
+         "cmpprevddFornHdVol": -5120800,
+         "FornHdVolRt": 52.04,
+         "BzDd": 20181205 
+      },
+       
+      {
+         "FornHdVol": 3345682457,
+         "cmpprevddFornHdVol": -2998508,
+         "FornHdVolRt": 52.12,
+         "BzDd": 20181204 
+      },
+       
+      {
+         "FornHdVol": 3348680965,
+         "cmpprevddFornHdVol": 3417910,
+         "FornHdVolRt": 52.17,
+         "BzDd": 20181203 
+      },
+       
+      {
+         "FornHdVol": 3345263055,
+         "cmpprevddFornHdVol": -1853982,
+         "FornHdVolRt": 52.11,
+         "BzDd": 20181130 
+      } 
+    ] 
+  } 
+}
+```
 
 
 
@@ -1399,7 +2072,8 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="inqEndDd" required=true %}
-조회종료일자 \(YYYYMMDD\)
+조회종료일자
+ \(YYYYMMDD\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="number" name="reqCnt" required=true %}
@@ -1457,5 +2131,264 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | hgprc | number\(11\) | 고가 | 단위:원 |
 | lwprc | number\(11\) | 저가 | 단위:원 |
 
+#### Request Example 
 
+```yaml
+curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
+--request GET \
+'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/history?trnsmCycleTpCd=D&inqStrtDd=20181001&inqEndDd=20181231&reqCnt=20'
+```
+
+#### Response Example
+
+```yaml
+{
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "005930",
+     "hisLists": [ 
+      {
+         "BzDd": 20181228,
+         "trdPrc": 38600,
+         "cmpprevddTpCd": "2",
+         "opnprc": 38250,
+         "hgprc": 38900,
+         "lwprc": 38200,
+         "accTrdvol": 2955868,
+         "accTrdval": 113875559350,
+         "cmpprevddPrc": 350 
+      },
+       
+      {
+         "BzDd": 20181227,
+         "trdPrc": 38250,
+         "cmpprevddTpCd": "5",
+         "opnprc": 38700,
+         "hgprc": 38800,
+         "lwprc": 38100,
+         "accTrdvol": 10510643,
+         "accTrdval": 403520824950,
+         "cmpprevddPrc": -100 
+      },
+       
+      {
+         "BzDd": 20181226,
+         "trdPrc": 38350,
+         "cmpprevddTpCd": "0",
+         "opnprc": 38400,
+         "hgprc": 38750,
+         "lwprc": 38300,
+         "accTrdvol": 12707675,
+         "accTrdval": 488546395500,
+         "cmpprevddPrc": -300 
+      },
+       
+      {
+         "BzDd": 20181224,
+         "trdPrc": 27600,
+         "cmpprevddTpCd": "2",
+         "opnprc": 27200,
+         "hgprc": 27600,
+         "lwprc": 27150,
+         "accTrdvol": 6571,
+         "accTrdval": 179691950,
+         "cmpprevddPrc": 150 
+      },
+       
+      {
+         "BzDd": 20181221,
+         "trdPrc": 38650,
+         "cmpprevddTpCd": "3",
+         "opnprc": 38200,
+         "hgprc": 38650,
+         "lwprc": 38100,
+         "accTrdvol": 14947080,
+         "accTrdval": 575188706454,
+         "cmpprevddPrc": 0 
+      },
+       
+      {
+         "BzDd": 20181220,
+         "trdPrc": 38650,
+         "cmpprevddTpCd": "5",
+         "opnprc": 38600,
+         "hgprc": 39100,
+         "lwprc": 38500,
+         "accTrdvol": 11937617,
+         "accTrdval": 462009678419,
+         "cmpprevddPrc": -450 
+      },
+       
+      {
+         "BzDd": 20181219,
+         "trdPrc": 39100,
+         "cmpprevddTpCd": "2",
+         "opnprc": 38900,
+         "hgprc": 39350,
+         "lwprc": 38850,
+         "accTrdvol": 9942037,
+         "accTrdval": 388002233278,
+         "cmpprevddPrc": 200 
+      },
+       
+      {
+         "BzDd": 20181218,
+         "trdPrc": 38900,
+         "cmpprevddTpCd": "5",
+         "opnprc": 38300,
+         "hgprc": 39200,
+         "lwprc": 38300,
+         "accTrdvol": 11042101,
+         "accTrdval": 429736490346,
+         "cmpprevddPrc": -2800 
+      },
+       
+      {
+         "BzDd": 20181217,
+         "trdPrc": 41700,
+         "cmpprevddTpCd": "0",
+         "opnprc": 36400,
+         "hgprc": 45000,
+         "lwprc": 36400,
+         "accTrdvol": 36302,
+         "accTrdval": 1536781900,
+         "cmpprevddPrc": 200 
+      },
+       
+      {
+         "BzDd": 20181214,
+         "trdPrc": 38950,
+         "cmpprevddTpCd": "5",
+         "opnprc": 40200,
+         "hgprc": 40200,
+         "lwprc": 38700,
+         "accTrdvol": 19671783,
+         "accTrdval": 768559029290,
+         "cmpprevddPrc": -1050 
+      },
+       
+      {
+         "BzDd": 20181213,
+         "trdPrc": 40000,
+         "cmpprevddTpCd": "5",
+         "opnprc": 40650,
+         "hgprc": 40750,
+         "lwprc": 40000,
+         "accTrdvol": 26254646,
+         "accTrdval": 1054672523100,
+         "cmpprevddPrc": -450 
+      },
+       
+      {
+         "BzDd": 20181212,
+         "trdPrc": 40450,
+         "cmpprevddTpCd": "0",
+         "opnprc": 40250,
+         "hgprc": 40700,
+         "lwprc": 40150,
+         "accTrdvol": 12024279,
+         "accTrdval": 486186060392,
+         "cmpprevddPrc": 200 
+      },
+       
+      {
+         "BzDd": 20181211,
+         "trdPrc": 51000,
+         "cmpprevddTpCd": "2",
+         "opnprc": 44000,
+         "hgprc": 51100,
+         "lwprc": 41000,
+         "accTrdvol": 245805,
+         "accTrdval": 10778627450,
+         "cmpprevddPrc": 50 
+      },
+       
+      {
+         "BzDd": 20181210,
+         "trdPrc": 40200,
+         "cmpprevddTpCd": "5",
+         "opnprc": 40450,
+         "hgprc": 40650,
+         "lwprc": 40000,
+         "accTrdvol": 14892263,
+         "accTrdval": 598916715336,
+         "cmpprevddPrc": -750 
+      },
+       
+      {
+         "BzDd": 20181207,
+         "trdPrc": 40950,
+         "cmpprevddTpCd": "5",
+         "opnprc": 0,
+         "hgprc": 74686,
+         "lwprc": 40879,
+         "accTrdvol": 300026,
+         "accTrdval": 11132416400,
+         "cmpprevddPrc": -17398 
+      },
+       
+      {
+         "BzDd": 20181206,
+         "trdPrc": 57287,
+         "cmpprevddTpCd": "0",
+         "opnprc": 0,
+         "hgprc": 0,
+         "lwprc": 57216,
+         "accTrdvol": 14251826,
+         "accTrdval": 579350131900,
+         "cmpprevddPrc": -9972 
+      },
+       
+      {
+         "BzDd": 20181205,
+         "trdPrc": 58631,
+         "cmpprevddTpCd": "0",
+         "opnprc": 0,
+         "hgprc": 0,
+         "lwprc": 0,
+         "accTrdvol": 12631983,
+         "accTrdval": 522454917535,
+         "cmpprevddPrc": -1060 
+      },
+       
+      {
+         "BzDd": 20181204,
+         "trdPrc": 59621,
+         "cmpprevddTpCd": "5",
+         "opnprc": 60328,
+         "hgprc": 60682,
+         "lwprc": 59267,
+         "accTrdvol": 14347746,
+         "accTrdval": 605987183391,
+         "cmpprevddPrc": -6718 
+      },
+       
+      {
+         "BzDd": 20181203,
+         "trdPrc": 61177,
+         "cmpprevddTpCd": "2",
+         "opnprc": 60470,
+         "hgprc": 61389,
+         "lwprc": 59975,
+         "accTrdvol": 12110702,
+         "accTrdval": 521013724675,
+         "cmpprevddPrc": -9547 
+      },
+       
+      {
+         "BzDd": 20181130,
+         "trdPrc": 70725,
+         "cmpprevddTpCd": "5",
+         "opnprc": 0,
+         "hgprc": 0,
+         "lwprc": 70555,
+         "accTrdvol": 19775519,
+         "accTrdval": 838775278782,
+         "cmpprevddPrc": -2449 
+      } 
+    ] 
+  } 
+}
+```
 

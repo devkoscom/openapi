@@ -80,9 +80,57 @@ Authentication     \|   **API Key**
 | isuKorNm | String\(80\) | 종목한글명 |  |
 | isuKorAbbrv | String\(40\) | 종목한글약명 | 가나다 |
 
+#### Request Example <a id="request-body-example"></a>
 
+```yaml
+curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
+--request GET \
+'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/lists'
+```
 
+#### Response Example
 
+```yaml
+{
+   "trdDd": "20181228",
+   "mktEndTm": "1540",
+   "isuLists": [ 
+    {
+       "isuSrtCd": "000020",
+       "isuCd": "KR7000020008",
+       "isuKorNm": "동화약품",
+       "isuKorAbbr": "동화약품",
+       "map_to": "000020*001" 
+    },
+     
+    {
+       "isuSrtCd": "000030",
+       "isuCd": "KR7000030007",
+       "isuKorNm": "우리은행",
+       "isuKorAbbr": "우리은행",
+       "map_to": "000030*001" 
+    },
+     
+    {
+       "isuSrtCd": "000040",
+       "isuCd": "KR7000040006",
+       "isuKorNm": "KR모터스",
+       "isuKorAbbr": "KR모터스",
+       "map_to": "000040*001" 
+    },
+    .
+    .
+    .
+    {
+       "isuSrtCd": "900140",
+       "isuCd": "KYG5307W1015",
+       "isuKorNm": "엘브이엠씨홀딩스",
+       "isuKorAbbr": "엘브이엠씨홀딩스",
+       "map_to": "900140*001" 
+    } 
+  ] 
+}
+```
 
 ## 주식종목 마스터 API <a id="api"></a>
 
@@ -187,8 +235,8 @@ Authentication     \|   **API Key**
 | mktcapScaleCd | string\(1\) | 시가총액규모코드 | 유가 \(0:제외 1:대 2:중 3:소\) / 코스닥 \(0:제외 1:KOSDAQ100 2:KOSDAQmid300 3:KOSDAQsmall\) |
 | mfindYn | string\(1\) | 제조업여부 | Y, N \(유가\)제조업여부 |
 | smeYn | string\(1\) | 중소기업여부 | Y, N \(코스닥\)중소기업여부 |
-| 업종 | string\(1\) | KRX100종목여부 | Y, N \(유가\)KOSPI100여부 \(코스닥\)프리미어여부 |
-| kospiYn | string\(1\) | KOSPI여부 | Y, N |
+| 업종 | string\(1\) | KRX100종목여부 | Y, N  |
+| kospiYn | string\(1\) | KOSPI여부 | Y,N \(유가\)KOSPI100여부 \(코스닥\)프리미어여부 |
 | kospi100Yn | string\(1\) | KOSPI100여부 | Y, N \(유가\)KOSPI여부 |
 | kospi50Yn | string\(1\) | KOSPI50여부 | Y, N \(유가\)KOSPI50여부 |
 | basPrc | number\(11\) | 기준가격,기준가액 |  |
@@ -198,7 +246,7 @@ Authentication     \|   **API Key**
 | uplmtprc | number\(11\) | 상한가 |  |
 | lwlmtprc | number\(11\) | 하한가 |  |
 | sbPrc | number\(11\) | 대용가격 | ST,FS,DR,MF,RT,SC,IF,ET,FE,BC,EN 만 해당  |
-| parval | number\(11\) | 액면가 | 9\(9\)V9\(3\) 외국주권일 경우 소숫점셋째자리까지 표현가능/코스닥의 각국의 최소화폐단위 표시는 유가기준으로 통일 ※ST,FS,RT,SC,BC만 해당 |
+| parval | number\(11\) | 액면가 | 외국주권일 경우 소숫점셋째자리까지 표현가능/코스닥의 각국의 최소화폐단위 표시는 유가기준으로 통일 ※ST,FS,RT,SC,BC만 해당 |
 | isuPrc | number\(11\) | 발행가격 | ELW, 신주인수권증서 포함 |
 | listDd | string\(8\) | 상장일자 | YYYYMMDD |
 | listShrs | number\(16\) | 상장주식수,상장증권수 |  |
@@ -217,7 +265,57 @@ Authentication     \|   **API Key**
 | adjStkprcCalcYn | string\(1\) | 수정주가산출여부 | Y, N |
 | prevddNav | number\(22\) | 전일순자산가치 | ETF종목일 경우 소수점 2자리로 표현, 일반종목은 0 |
 
+#### Request Example <a id="request-body-example"></a>
 
+```yaml
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/lists'
+```
+
+#### Response Example
+
+```yaml
+{
+   "trdDd": "20181228",
+   "mktEndTm": "1540",
+   "isuLists": [ 
+    {
+       "isuSrtCd": "000020",
+       "isuCd": "KR7000020008",
+       "isuKorNm": "동화약품",
+       "isuKorAbbr": "동화약품",
+       "map_to": "000020*001" 
+    },
+     
+    {
+       "isuSrtCd": "000030",
+       "isuCd": "KR7000030007",
+       "isuKorNm": "우리은행",
+       "isuKorAbbr": "우리은행",
+       "map_to": "000030*001" 
+    },
+     
+    {
+       "isuSrtCd": "000040",
+       "isuCd": "KR7000040006",
+       "isuKorNm": "KR모터스",
+       "isuKorAbbr": "KR모터스",
+       "map_to": "000040*001" 
+    },
+    .
+    .
+    .
+    {
+       "isuSrtCd": "900140",
+       "isuCd": "KYG5307W1015",
+       "isuKorNm": "엘브이엠씨홀딩스",
+       "isuKorAbbr": "엘브이엠씨홀딩스",
+       "map_to": "900140*001" 
+    } 
+  ] 
+}
+```
 
 
 
@@ -301,7 +399,21 @@ Authentication     \|   **API Key**
 
 
 
+#### Request Example <a id="request-body-example"></a>
 
+```yaml
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/closeprice'
+```
+
+#### Response Example
+
+```yaml
+{
+   "error": "당일 종가 제공 시간이 아닙니다." 
+}
+```
 
 ## 주식종목 체결 API <a id="api"></a>
 

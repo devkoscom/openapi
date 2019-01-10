@@ -1,28 +1,25 @@
 # 주식 시세표
 
-개별 종목기준 현재가 조회 대비 조회 빈도를 줄일수 있는 방식의 조회로 시장기준/복수종목기준 방식을 제공 
+개별 종목기준 현재가 조회 대비 조회 빈도를 줄일수 있는 방식의 조회로 시장기준/복수종목기준 방식을 제공
 
 ## Syntax
 
-HTTP methods   \|   **GET**
+HTTP methods \| **GET**
 
-Authentication    \|   **API Key**
+Authentication \| **API Key**
 
 {% hint style="danger" %}
 별도의 시세표 **라이센스 필요**
 {% endhint %}
 
-
-
-
-
 ## 현재가 시세표
- API
+
+API
 
 시장기준으로 1회 조회 요청 시 전종목의 현재가\(1초주기\)를 리스트 형식으로 제공
 
-현재가      \|   현재가, 누적거래량, 누적거래대금  
-제공시장  \|   유가증권, 코스닥시장
+현재가 \| 현재가, 누적거래량, 누적거래대금  
+제공시장 \| 유가증권, 코스닥시장
 
 {% api-method method="get" host="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/lists" %}
 {% api-method-summary %}
@@ -74,7 +71,7 @@ Authentication    \|   **API Key**
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example 
+### Request Example
 
 ```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
@@ -82,7 +79,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 'https://sandbox-apigw.koscom.co.kr/v2/market/multiquote/stocks/kospi/lists'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -95,28 +92,28 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
        "accTrdvol": 7772,
        "accTrdval": 70890330 
     },
-     
+
     {
        "isuSrtCd": "000030",
        "trdPrc": 15750,
        "accTrdvol": 234925,
        "accTrdval": 3700559100 
     },
-     
+
     {
        "isuSrtCd": "000040",
        "trdPrc": 498,
        "accTrdvol": 73493,
        "accTrdval": 36459950 
     },
-     
+
     {
        "isuSrtCd": "000050",
        "trdPrc": 10900,
        "accTrdvol": 161,
        "accTrdval": 1756450 
     },
-     
+
     {
        "isuSrtCd": "000060",
        "trdPrc": 21550,
@@ -132,7 +129,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
        "accTrdvol": 0,
        "accTrdval": 0 
     },
-     
+
     {
        "isuSrtCd": "900140",
        "trdPrc": 2320,
@@ -140,18 +137,17 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
        "accTrdval": 123595365 
     } 
   ] 
-}    
+}
 ```
 
-
-
 ## 시고저종 시세표
- API
 
-시장기준으로 1회 조회 요청 시 시고저종을  리스트 형식으로 제공
+API
 
-시고저종  \|  시가, 고가, 저가, 종가\(현재가\)  
-제공시장  \|  유가증권, 코스닥시장
+시장기준으로 1회 조회 요청 시 시고저종을 리스트 형식으로 제공
+
+시고저종 \| 시가, 고가, 저가, 종가\(현재가\)  
+제공시장 \| 유가증권, 코스닥시장
 
 {% api-method method="get" host="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/ohlclists" %}
 {% api-method-summary %}
@@ -189,7 +185,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
        "lwprc": 11200,
        "trdPrc": 11200 
     },
-     
+
     {
        "isuSrtCd": "000030",
        "opnprc": 15350,
@@ -206,7 +202,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example 
+### Request Example
 
 ```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
@@ -214,7 +210,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 'https://sandbox-apigw.koscom.co.kr/v2/market/multiquote/stocks/kospi/ohlclists'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -228,7 +224,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
        "lwprc": 9030,
        "trdPrc": 9120 
     },
-     
+
     {
        "isuSrtCd": "000030",
        "opnprc": 15700,
@@ -236,7 +232,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
        "lwprc": 15600,
        "trdPrc": 15750 
     },
-     
+
     {
        "isuSrtCd": "000040",
        "opnprc": 501,
@@ -244,7 +240,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
        "lwprc": 490,
        "trdPrc": 498 
     },
-     
+
     {
        "isuSrtCd": "000050",
        "opnprc": 10900,
@@ -252,7 +248,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
        "lwprc": 10900,
        "trdPrc": 10900 
     },
-     
+
     {
        "isuSrtCd": "000060",
        "opnprc": 21250,
@@ -260,7 +256,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
        "lwprc": 21250,
        "trdPrc": 21550 
     },
-     
+
     {
        "isuSrtCd": "000070",
        "opnprc": 77400,
@@ -268,7 +264,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
        "lwprc": 77400,
        "trdPrc": 78100 
     },
-     
+
     {
        "isuSrtCd": "000075",
        "opnprc": 47200,
@@ -276,7 +272,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
        "lwprc": 47200,
        "trdPrc": 47450 
     },
-     
+
     {
        "isuSrtCd": "000080",
        "opnprc": 16950,
@@ -294,7 +290,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
        "lwprc": 0,
        "trdPrc": 9560 
     },
-     
+
     {
        "isuSrtCd": "900140",
        "opnprc": 2300,
@@ -303,17 +299,16 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
        "trdPrc": 2320 
     } 
   ] 
-}  
+}
 ```
-
 
 ## 복수종목 현재가 시세표 API
 
 **현재가** 실시간조회를 최대 20개의 임의의 종목에 대해 일괄적으로 조회
-  
+
 복수종목 리스트간 구분자는 쉼표\(,\) 임
 
-제공시장  \|  유가증권 , 코스닥 시장
+제공시장 \| 유가증권 , 코스닥 시장
 
 {% api-method method="get" host="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/price" %}
 {% api-method-summary %}
@@ -367,7 +362,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "askordPrc_1": 52800,
          "lstAskbidTpCd": 1 
       },
-       
+
       {
          "trdPrc": 84200,
          "cmpprevddTpCd": "2",
@@ -393,7 +388,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example 
+### Request Example
 
 ```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
@@ -401,7 +396,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 'https://sandbox-apigw.koscom.co.kr/v2/market/multiquote/stocks/kospi/price?isuCd=005930%2C000660'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -425,7 +420,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "askordPrc_1": 38700,
          "lstAskbidTpCd": 2 
       },
-       
+
       {
          "trdPrc": 60900,
          "cmpprevddTpCd": "5",
@@ -447,15 +442,13 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 }
 ```
 
-
-
 ## 복수종목  호가잔량 시세표 API
 
 **호가잔량** 실시간조회를 최대 20개의 임의의 종목에 대해 일괄적으로 조회
-  
+
 복수종목 리스트간 구분자는 쉼표\(,\) 임
 
-제공시장  \|  유가증권 , 코스닥 시장
+제공시장 \| 유가증권 , 코스닥 시장
 
 {% api-method method="get" host="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/orderbook" %}
 {% api-method-summary %}
@@ -543,7 +536,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "deemAccTrdvol": 2122875,
          "isuSrtCd": "005930" 
       },
-       
+
       {
          "askStep1BstordPrc": 84300,
          "askStep2BstordPrc": 84400,
@@ -603,7 +596,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Request Example 
+### Request Example
 
 ```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
@@ -611,7 +604,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 'https://sandbox-apigw.koscom.co.kr/v2/market/multiquote/stocks/kospi/orderbook?isuCd=005930%2C000660'
 ```
 
-#### Response Example
+### Response Example
 
 ```yaml
 {
@@ -669,7 +662,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
          "deemAccTrdvol": 0,
          "isuSrtCd": "005930" 
       },
-       
+
       {
          "askStep1BstordPrc": 61000,
          "askStep2BstordPrc": 61100,

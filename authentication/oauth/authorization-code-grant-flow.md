@@ -99,7 +99,7 @@ Parameters          \|   **`grant_type`**=authorization\_code & **`code`**=할�
 
 \*   _**Base64\(client\_id:client\_secret\)**_ ****  
      **:**   client\_id와 client\_secret을 “:”으로 연결하여 base64 로 encoding 한 값을  위 형식으로 설정  
-         더욱 자세한 설명은  [Base64 로 encoding 하는 방법](https://koscom.gitbook.io/open-api/api-1/basic-authentication#base64-encoding) 을 참조하세요.
+         더욱 자세한 설명은  [Base64 로 encoding 하는 방법](https://koscom.gitbook.io/open-api/authentication/basic#base64-encoding) 을 참조하세요.
 
 **Example**
 

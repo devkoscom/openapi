@@ -757,7 +757,9 @@ queryType의`assetType`을 'ALL'로 요청 가능한 증권사
 | cashAvWithdraw | Number | 출금가능액 |
 | _**equityList**_ | _**Array**_ | _**EQTY**_ |
 | assetType | String\(8\) | 상품구분자는 `KSP`\(코스피\), `KDQ`\(코스닥\), `ETF`\(ETF\), `FUT`\(선물\), `OPT`\(옵션\), `ELW`\(ELW\), `ETC`\(기타\) |
+| productType | String\(02\) | 종목구분 |
 | isinCode | String\(12\) | 국제표준코드 |
+| productName | String\(40\) | 종목명 |
 | qty | Number | 수량 또는 비중 \(`equity` 내 비중, 소수점 2째자리까지 / 신용 매수 분 포함하고 대출잔고는 반영안함\) |
 | tradeType | String\(8\) | 잔고구분은 `NRM`\(일반/현금\), `CRD`\(신용\), `LOAN`\(대출\), `SUM`\(분류가 불가한 경우 구분 없이 합산한 경우며 대출잔고는 제외\) |
 | valAtTrade | Number | 매수금액 |
@@ -765,6 +767,7 @@ queryType의`assetType`을 'ALL'로 요청 가능한 증권사
 | proLoss | Number | 평가손익 |
 | earningRate | Number | 수익률 \(소수점 2째자리까지\) |
 | _**fundList**_ | _**Array**_ | _FUND_ |
+| fundType | String\(02\) | 펀드구분 02:국내, 12: |
 | fundCode | String\(20\) | 펀드표준코드 |
 | fundName | String\(15\) | 펀드이름 \(최대 15자\) |
 | valAtTrade | Number | 매수금액 |

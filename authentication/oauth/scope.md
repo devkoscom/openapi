@@ -18,19 +18,21 @@
       <td style="text-align:left"><b>account</b>
       </td>
       <td style="text-align:left">
-        <p>금융투자 회사의 계좌조회 API</p>
-        <p><em>(계좌잔고, 거래내역, 포트폴리오, 관심종목<br />)</em>
+        <p>&#xAE08;&#xC735;&#xD22C;&#xC790; &#xD68C;&#xC0AC;&#xC758; &#xACC4;&#xC88C;&#xC870;&#xD68C;
+          API</p>
+        <p><em>(&#xACC4;&#xC88C;&#xC794;&#xACE0;, &#xAC70;&#xB798;&#xB0B4;&#xC5ED;, &#xD3EC;&#xD2B8;&#xD3F4;&#xB9AC;&#xC624;, &#xAD00;&#xC2EC;&#xC885;&#xBAA9;<br />)</em>
         </p>
       </td>
-      <td style="text-align:left">2592000초
-        <br />(30일)</td>
+      <td style="text-align:left">2592000&#xCD08;
+        <br />(30&#xC77C;)</td>
     </tr>
     <tr>
       <td style="text-align:left">profile</td>
-      <td style="text-align:left">회원 프로필 API (*별도 문의)
-        <br />
+      <td style="text-align:left">&#xD68C;&#xC6D0; &#xD504;&#xB85C;&#xD544; API (*&#xBCC4;&#xB3C4; &#xBB38;&#xC758;)
+        <br
+        />
       </td>
-      <td style="text-align:left">600초</td>
+      <td style="text-align:left">600&#xCD08;</td>
     </tr>
   </tbody>
 </table>

@@ -29,15 +29,30 @@
   <thead>
     <tr>
       <th style="text-align:left">
-        <p>① - 신규주문 (New Order Single), 신규주문(New Order List – 현 사용 불가), 주문 정정(Order
-          Cancel/Replace Request), 주문 취소(Order Cancel Request), 리스트 주문 취소 (List Cancel
-          Request) 용 Restful API 호출</p>
-        <p>- 주문응답 수신을 위한 subscription 전송하여 web socket session을 설정</p>
-        <p>② Restful API 요청의 Body에 포함된 주문전문(JSON)을 FIX 메시지 형태로 변환하여 STP-HUB로 전송</p>
-        <p>③ 오픈플랫폼은 API 요청에 대한 응답을 즉시 전송 - JSON message 수준에서의 기본적인 오류를 확인하여 응답</p>
-        <p>④ ~ ⑦ 주문전문은 STP-HUB를 거쳐 증권사 및 거래소로 전달되고, 그 응답을 역순으로 반환</p>
-        <p>⑧ 응답 (Execution Reports), 거부 (Order Cancel Reject) FIX 메시지를 JSON으로 변환하여
-          자문사와 연결된 WebSocket Session을 통해 전송</p>
+        <p>&#x2460; - &#xC2E0;&#xADDC;&#xC8FC;&#xBB38; (New Order Single), &#xC2E0;&#xADDC;&#xC8FC;&#xBB38;(New
+          Order List &#x2013; &#xD604; &#xC0AC;&#xC6A9; &#xBD88;&#xAC00;), &#xC8FC;&#xBB38;
+          &#xC815;&#xC815;(Order Cancel/Replace Request), &#xC8FC;&#xBB38; &#xCDE8;&#xC18C;(Order
+          Cancel Request), &#xB9AC;&#xC2A4;&#xD2B8; &#xC8FC;&#xBB38; &#xCDE8;&#xC18C;
+          (List Cancel Request) &#xC6A9; Restful API &#xD638;&#xCD9C;</p>
+        <p>- &#xC8FC;&#xBB38;&#xC751;&#xB2F5; &#xC218;&#xC2E0;&#xC744; &#xC704;&#xD55C;
+          subscription &#xC804;&#xC1A1;&#xD558;&#xC5EC; web socket session&#xC744;
+          &#xC124;&#xC815;</p>
+        <p>&#x2461; Restful API &#xC694;&#xCCAD;&#xC758; Body&#xC5D0; &#xD3EC;&#xD568;&#xB41C;
+          &#xC8FC;&#xBB38;&#xC804;&#xBB38;(JSON)&#xC744; FIX &#xBA54;&#xC2DC;&#xC9C0;
+          &#xD615;&#xD0DC;&#xB85C; &#xBCC0;&#xD658;&#xD558;&#xC5EC; STP-HUB&#xB85C;
+          &#xC804;&#xC1A1;</p>
+        <p>&#x2462; &#xC624;&#xD508;&#xD50C;&#xB7AB;&#xD3FC;&#xC740; API &#xC694;&#xCCAD;&#xC5D0;
+          &#xB300;&#xD55C; &#xC751;&#xB2F5;&#xC744; &#xC989;&#xC2DC; &#xC804;&#xC1A1;
+          - JSON message &#xC218;&#xC900;&#xC5D0;&#xC11C;&#xC758; &#xAE30;&#xBCF8;&#xC801;&#xC778;
+          &#xC624;&#xB958;&#xB97C; &#xD655;&#xC778;&#xD558;&#xC5EC; &#xC751;&#xB2F5;</p>
+        <p>&#x2463; ~ &#x2466; &#xC8FC;&#xBB38;&#xC804;&#xBB38;&#xC740; STP-HUB&#xB97C;
+          &#xAC70;&#xCCD0; &#xC99D;&#xAD8C;&#xC0AC; &#xBC0F; &#xAC70;&#xB798;&#xC18C;&#xB85C;
+          &#xC804;&#xB2EC;&#xB418;&#xACE0;, &#xADF8; &#xC751;&#xB2F5;&#xC744; &#xC5ED;&#xC21C;&#xC73C;&#xB85C;
+          &#xBC18;&#xD658;</p>
+        <p>&#x2467; &#xC751;&#xB2F5; (Execution Reports), &#xAC70;&#xBD80; (Order
+          Cancel Reject) FIX &#xBA54;&#xC2DC;&#xC9C0;&#xB97C; JSON&#xC73C;&#xB85C;
+          &#xBCC0;&#xD658;&#xD558;&#xC5EC; &#xC790;&#xBB38;&#xC0AC;&#xC640; &#xC5F0;&#xACB0;&#xB41C;
+          WebSocket Session&#xC744; &#xD1B5;&#xD574; &#xC804;&#xC1A1;</p>
       </th>
     </tr>
   </thead>

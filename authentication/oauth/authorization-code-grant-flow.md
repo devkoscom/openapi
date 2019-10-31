@@ -33,8 +33,8 @@ HTTP methods    \|   **GET**
 
 Authentication     \|   **OAuth**
 
-End Point              \|   **​https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/authorize​  
-                                   https://apigw.koscom.co.kr/auth/oauth/v3/authorize**
+End Point              \| **https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/authorize  
+                                 https://apigw.koscom.co.kr/auth/oauth/v3/authorize**
 
 Parameters          \|   **`response_type`**=code & **`client_id`**=클라이언트 ID\(API Key\)   
                                   & **`redirect_uri`**=구현된 callback listener 주소 & **`scope`**=지정된 scope   
@@ -88,8 +88,8 @@ Authentication     \|   **Basic Authorization**
 Header                  \|     "**Content-Type**"   :  Application/x-www-form-urlencoded  
                                      "**authorization**"    :  Basic _Base64\(client\_id:client\_secret\)_
 
-End Point              \|   **​https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/token​  
-                                   https://apigw.koscom.co.kr/auth/oauth/v3/token**
+End Point              \|  **https://sandbox-apigw.koscom.co.kr/auth/oauth/v3/token  
+                                  https://apigw.koscom.co.kr/auth/oauth/v3/token**
 
 Parameters          \|   **`grant_type`**=authorization\_code & **`code`**=할당받은 authorizationcode   
                                   & **`redirect_uri`**=구현된 callback listener 주소

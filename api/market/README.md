@@ -16,7 +16,7 @@
 
  다양한 금융시장정보의 실시간 및  과거데이터를 이용하기 편한 **Restful API** 서비스로 제공
 
-#### 자세한 설명은  [정보시세데이터\_정의서 V3.02](https://developers.koscom.co.kr/resources/documentation/OPEN_API_Marketdata_SPEC_V3_02_20180907.xlsx) 를 참조 하세요.
+#### 자세한 설명은  [정보시세데이터\_정의서 V3.09](https://developers.koscom.co.kr/resources/documentation/OPEN_API_Marketdata_SPEC_V3_09_20200117.xlsx) 를 참조 하세요.
 
 
 

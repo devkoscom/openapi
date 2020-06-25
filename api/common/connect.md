@@ -76,8 +76,7 @@ Application/json
 
 #### Request Body Example
 
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
+{% code title="Request Body Example" %}
 ```yaml
 {
     "partner": {
@@ -93,8 +92,7 @@ Application/json
 	}
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### Response Body Parameters
 
@@ -107,16 +105,14 @@ Application/json
 
 #### Response Body Example
 
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
+{% code title="Request Body Example" %}
 ```yaml
 {
    "result": "member",
    "commonTermsExpireDate": "20181105" 
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## 가상계좌 리스트 조회
 
@@ -203,8 +199,7 @@ Application/json
 
 **Request Body Example**
 
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
+{% code title="Request Body Example" %}
 ```yaml
 {
     "partner": {
@@ -220,8 +215,7 @@ Application/json
 	}
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### Response Body Parameters
 
@@ -237,8 +231,7 @@ Application/json
 
 #### Response **Body Example**
 
-{% code-tabs %}
-{% code-tabs-item title="Response Body Example" %}
+{% code title="Response Body Example" %}
 ```yaml
 {
    "vtAccList": [ 
@@ -266,8 +259,7 @@ Application/json
    "serviceTermsExpireDate": "20190813" 
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## 테스트용 목업데이터 <a id="virtualaccount"></a>
 

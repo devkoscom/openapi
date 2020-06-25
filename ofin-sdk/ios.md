@@ -159,8 +159,7 @@ responseType 은 안전한 금융거래 정보 보호를 위해 ‘Authorization
 OAuth 절차는 [이곳](https://koscom.gitbook.io/open-api/authentication/oauth) 을 참조하세요.
 {% endhint %}
 
-{% code-tabs %}
-{% code-tabs-item title="JSON 파라미터 예제" %}
+{% code title="JSON 파라미터 예제" %}
 ```yaml
 {
   "data": {
@@ -172,8 +171,7 @@ OAuth 절차는 [이곳](https://koscom.gitbook.io/open-api/authentication/oauth
    }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 해당 API는 사용자 인증을 위한 OAuth 로그인창만 제공하며, Access Token 취득은 기존 URL을 통해 획득 하시면 됩니다. 인증 성공 \(SUCCESS\), 인증 실패\(FAIL\)는 아래와 같은 에러가 리턴 됩니다.   
 더 자세한 에러 코드 정보는 [이곳](https://koscom.gitbook.io/open-api/error-code#oauth-error) 에서 확인하세요.
@@ -188,8 +186,7 @@ OAuth 절차는 [이곳](https://koscom.gitbook.io/open-api/authentication/oauth
 | 4300 | 사용자가 요청한 리소스의 권한 허용 거부 |
 | 4400 | 비회원 인증 중 이미 가입된 회원 |
 
-{% code-tabs %}
-{% code-tabs-item title="Service OAuth API Request Example" %}
+{% code title="Service OAuth API Request Example" %}
 ```swift
 //Service OAuth API 호출 코드 예
 NSMutableDictionary* dicData = [[NSMutableDictionary alloc] init];
@@ -229,8 +226,7 @@ NSString * responseType = [txtResponseType text];
     }
 ];
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 
@@ -253,8 +249,7 @@ OAuth로그인이 완료되면 정보제공 권한 여부 설정 화면으로 �
 서비스연동 API \(가상계좌 리스트 조회\) 확인 후 해당 고객에 연결된 계좌가 없거나 추가로 앱 사용 신청이 필요한 경우 ‘오핀’ 앱 상세 페이지로 이동하여 서비스 신청을 유도 합니다.  
 \* appId : 앱 등록 후 할당 받은 AppID 값을 입력
 
-{% code-tabs %}
-{% code-tabs-item title="JSON parameter Example" %}
+{% code title="JSON parameter Example" %}
 ```yaml
 {
    "data": {
@@ -262,11 +257,9 @@ OAuth로그인이 완료되면 정보제공 권한 여부 설정 화면으로 �
    }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="앱 상세페이지 이동 API 호출 Example" %}
+{% code title="앱 상세페이지 이동 API 호출 Example" %}
 ```swift
 //Service Page 이동 API 호출 코드 예
 
@@ -295,8 +288,7 @@ NSString * appID = [txtAppID text ];
     }
 ];
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 

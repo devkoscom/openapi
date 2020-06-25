@@ -257,8 +257,7 @@ Bearer 발급받은 access token
 
 #### Request Body Example
 
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
+{% code title="Request Body Example" %}
 ```yaml
 { 
   "partner":{ 
@@ -287,8 +286,7 @@ Bearer 발급받은 access token
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### **Request Body Parameters**
 
@@ -653,8 +651,7 @@ Bearer 발급받은 access token
 
 #### Request Body Example
 
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
+{% code title="Request Body Example" %}
 ```yaml
 { 
   "partner":{ 
@@ -682,8 +679,7 @@ Bearer 발급받은 access token
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### **Request Parameters**
 
@@ -926,8 +922,7 @@ Bearer 발급받은 access token
 
 #### Request Example
 
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
+{% code title="Request Body Example" %}
 ```yaml
 { 
   "partner":{ 
@@ -959,8 +954,7 @@ Bearer 발급받은 access token
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### **Request Body Parameters**
 
@@ -1168,8 +1162,7 @@ Bearer 발급받은 access token
 
 #### Request Body Example
 
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
+{% code title="Request Body Example" %}
 ```yaml
 { 
   "partner":{ 
@@ -1199,8 +1192,7 @@ Bearer 발급받은 access token
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## 테스트용 가상증권사 제공   <a id="virtualaccount"></a>
 

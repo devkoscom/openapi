@@ -57,7 +57,9 @@
     </tr>
   </thead>
   <tbody></tbody>
-</table>{% hint style="info" %}
+</table>
+
+{% hint style="info" %}
 #### 자세한 설명은  [자본시장 공동 핀테크 오픈 플랫폼 주문 API](https://developers.koscom.co.kr/resources/documentation/FIX_REST_API_v1.03.pdf) 을 참조 하세요.
 {% endhint %}
 

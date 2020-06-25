@@ -150,8 +150,7 @@ Basic Authentication 인증 사용
 
 #### Request Body Example
 
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
+{% code title="Request Body Example" %}
 ```yaml
 {
     "partner": {
@@ -175,8 +174,7 @@ Basic Authentication 인증 사용
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### Request Body Parameters
 
@@ -426,8 +424,7 @@ Basic Authentication 인증 사용
 
 #### Request Body Example
 
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
+{% code title="Request Body Example" %}
 ```yaml
 {
     "partner": {
@@ -447,8 +444,7 @@ Basic Authentication 인증 사용
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### Request Body Parameters
 
@@ -655,8 +651,7 @@ Basic Authentication 인증 사용
 
 #### Request Body Example
 
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
+{% code title="Request Body Example" %}
 ```yaml
 {
     "partner": {
@@ -679,8 +674,7 @@ Basic Authentication 인증 사용
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### Request Body Parameters
 
@@ -842,8 +836,7 @@ Basic Authentication 인증 사용
 
 #### Request Body Example
 
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
+{% code title="Request Body Example" %}
 ```yaml
 {
     "partner": {
@@ -861,8 +854,7 @@ Basic Authentication 인증 사용
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### Request Body Parameters
 
@@ -1035,8 +1027,7 @@ Basic Authentication 인증 사용
 
 #### Request Body Example
 
-{% code-tabs %}
-{% code-tabs-item title="Request Body Example" %}
+{% code title="Request Body Example" %}
 ```yaml
 {
     "partner": {
@@ -1057,8 +1048,7 @@ Basic Authentication 인증 사용
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### Request Body Parameters
 

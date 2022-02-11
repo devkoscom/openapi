@@ -4,9 +4,9 @@
 
 ## Syntax
 
-HTTP methods \| **GET**
+HTTP methods | **GET**
 
-Authentication \| **API Key**
+Authentication | **API Key**
 
 {% hint style="danger" %}
 별도의 시세표 **라이센스 필요**
@@ -16,35 +16,21 @@ Authentication \| **API Key**
 
 API
 
-시장기준으로 1회 조회 요청 시 전종목의 현재가\(1초주기\)를 리스트 형식으로 제공
+시장기준으로 1회 조회 요청 시 전종목의 현재가(1초주기)를 리스트 형식으로 제공
 
-현재가 \| 현재가, 누적거래량, 누적거래대금  
-제공시장 \| 유가증권, 코스닥시장
+현재가 | 현재가, 누적거래량, 누적거래대금\
+제공시장 | 유가증권, 코스닥시장
 
-{% api-method method="get" host="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/lists" %}
-{% api-method-summary %}
-/v2/market/multiquote/stocks/{marketcode}/lists
-{% endapi-method-summary %}
+{% swagger baseUrl="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/lists" method="get" summary="/v2/market/multiquote/stocks/{marketcode}/lists" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="path" name="marketcode" type="string" %}
+시장구분(kospi | kosdaq)
+{% endswagger-parameter %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter type="string" name="marketcode" required=true %}
-시장구분\(kospi \| kosdaq\)
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```yaml
 {
    "trdDd": "20180508",
@@ -66,10 +52,8 @@ API
     ]
  }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### Request Example
 
@@ -146,33 +130,19 @@ API
 
 시장기준으로 1회 조회 요청 시 시고저종을 리스트 형식으로 제공
 
-시고저종 \| 시가, 고가, 저가, 종가\(현재가\)  
-제공시장 \| 유가증권, 코스닥시장
+시고저종 | 시가, 고가, 저가, 종가(현재가)\
+제공시장 | 유가증권, 코스닥시장
 
-{% api-method method="get" host="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/ohlclists" %}
-{% api-method-summary %}
-/v2/market/multiquote/stocks/{marketcode}/ohlclists
-{% endapi-method-summary %}
+{% swagger baseUrl="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/ohlclists" method="get" summary="/v2/market/multiquote/stocks/{marketcode}/ohlclists" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="path" name="marketcode" type="string" %}
+시장구분(kospi | kosdaq)
+{% endswagger-parameter %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter type="string" required=true name="marketcode" %}
-시장구분\(kospi \| kosdaq\)
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```yaml
 {
    "trdDd": "20180508",
@@ -197,10 +167,8 @@ API
   ]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### Request Example
 
@@ -306,40 +274,24 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 **현재가** 실시간조회를 최대 20개의 임의의 종목에 대해 일괄적으로 조회
 
-복수종목 리스트간 구분자는 쉼표\(,\) 임
+복수종목 리스트간 구분자는 쉼표(,) 임
 
-제공시장 \| 유가증권 , 코스닥 시장
+제공시장 | 유가증권 , 코스닥 시장
 
-{% api-method method="get" host="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/price" %}
-{% api-method-summary %}
-/v2/market/multiquote/stocks/{marketcode}/price
-{% endapi-method-summary %}
+{% swagger baseUrl="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/price" method="get" summary="/v2/market/multiquote/stocks/{marketcode}/price" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="path" name="marketcode" type="string" %}
+시장구분(kospi | kosdaq)
+{% endswagger-parameter %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter type="string" name="marketcode" required=true %}
-시장구분\(kospi \| kosdaq\)
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% swagger-parameter in="query" name="isuCd" type="string" %}
+종목코드 ex) 005930,000660
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter type="string" name="isuCd" required=true %}
-종목코드 ex\) 005930,000660
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```yaml
 {
    "jsonrpc": "2.0",
@@ -383,10 +335,8 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
   } 
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### Request Example
 
@@ -446,40 +396,24 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 **호가잔량** 실시간조회를 최대 20개의 임의의 종목에 대해 일괄적으로 조회
 
-복수종목 리스트간 구분자는 쉼표\(,\) 임
+복수종목 리스트간 구분자는 쉼표(,) 임
 
-제공시장 \| 유가증권 , 코스닥 시장
+제공시장 | 유가증권 , 코스닥 시장
 
-{% api-method method="get" host="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/orderbook" %}
-{% api-method-summary %}
-/v2/market/list/{marketcode}/orderbook
-{% endapi-method-summary %}
+{% swagger baseUrl="https://{APIGWAddr}" path="/v2/market/multiquote/stocks/{marketcode}/orderbook" method="get" summary="/v2/market/list/{marketcode}/orderbook" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="path" name="marketcode" type="string" %}
+시장구분(kospi | kosdaq)
+{% endswagger-parameter %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter type="string" name="marketcode" required=true %}
-시장구분\(kospi \| kosdaq\)
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% swagger-parameter in="query" name="isuCd" type="string" %}
+종목코드 ex) 005930,000660
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter type="string" name="isuCd" required=true %}
-종목코드 ex\) 005930,000660
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```yaml
 {
    "jsonrpc": "2.0",
@@ -591,10 +525,8 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
   } 
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### Request Example
 
@@ -717,4 +649,3 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
   } 
 }
 ```
-

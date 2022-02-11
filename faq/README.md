@@ -1,12 +1,14 @@
 # FAQ
 
-{% page-ref page="oppf.md" %}
+{% content-ref url="oppf.md" %}
+[oppf.md](oppf.md)
+{% endcontent-ref %}
 
-{% page-ref page="api.md" %}
+{% content-ref url="api.md" %}
+[api.md](api.md)
+{% endcontent-ref %}
 
-{% page-ref page="account.md" %}
-
-{% page-ref page="market.md" %}
-
-
+{% content-ref url="market.md" %}
+[market.md](market.md)
+{% endcontent-ref %}
 

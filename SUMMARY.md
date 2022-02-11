@@ -11,8 +11,6 @@
   * [핀테크 금융서비스 이용 절차](how-to-use/fintechservice/README.md)
     * [금융투자 핀테크 포털](how-to-use/fintechservice/portal.md)
 * [API 서비스](api/README.md)
-  * [공통 서비스](api/common/README.md)
-    * [서비스 연동](api/common/connect.md)
   * [시세 서비스](api/market/README.md)
     * [주식 시세](api/market/stocks/README.md)
       * [요구형항목](api/market/stocks/change.md)

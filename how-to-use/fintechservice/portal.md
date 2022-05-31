@@ -56,7 +56,7 @@
 
 {% hint style="warning" %}
 **핀테크기업** 또는 **금융투자회사**의 경우,\
-기업/금투사전용 금융투자 핀테크포털([http://biz.koscom.co.kr/](http://biz.koscom.co.kr))을 이용하시길 바랍니다.
+기업/금투사전용 금융투자 핀테크포털([http://biz.koscom.co.kr/](http://biz.koscom.co.kr/))을 이용하시길 바랍니다.
 {% endhint %}
 
 ## 금융투자 핀테크 포털

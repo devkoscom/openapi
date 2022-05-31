@@ -18,7 +18,7 @@
 #### 계정발급 신청
 
 * 계정 발급 서류 제출 (이메일 : open@koscom.co.kr)
-* [개발자 센터](https://developers.koscom.co.kr) > 회원 가입
+* [개발자 센터](https://developers.koscom.co.kr/) > 회원 가입
 * 서류 검토 후 온라인 가입 승인
 
 {% hint style="warning" %}

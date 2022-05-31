@@ -1,6 +1,6 @@
-# 주식 시세
+# 주식실시간종가A
 
-주식시장(유가증권, 코스닥) 의 종목 리스트, 종목 마스터, 종목 체결, 호가잔량, 종목 투자자별 종가등을 제공한다.
+주식시장(유가증권) ㄱ리스의 종목 리스트, 종목 마스터 등 종가 정보를 제공한다.
 
 ## Syntax
 
@@ -8,16 +8,14 @@ HTTP methods | **GET**
 
 Authentication | **API Key**
 
-## 주식종목 리스트 API  <a href="#api" id="api"></a>
+## KOSPI 주식 종목 리스트 API  <a href="#api" id="api"></a>
 
-{% swagger baseUrl="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/lists" method="get" summary="/v2/market/stocks/{marketcode}/lists" %}
+주식리스트&#x20;
+
+{% swagger baseUrl="https://{APIGWAddr}/v3/market/closed/kospi" path="/lists" method="get" summary="/v3/market/closed/kospi/lists" %}
 {% swagger-description %}
-
+종목리스트
 {% endswagger-description %}
-
-{% swagger-parameter in="path" name="marketcode" type="string" %}
-시장구분 (kospi | kosdaq)
-{% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}
 ```yaml
@@ -63,7 +61,7 @@ Authentication | **API Key**
 ```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
-'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/lists'
+'https://testoap.k-mydata.org/v3/market/closed/kospi/lists'
 ```
 
 ### Response Example
@@ -110,7 +108,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 }
 ```
 
-## 주식종목 마스터 API  <a href="#api" id="api"></a>
+## KOSPI 주식종목 마스터 API  <a href="#api" id="api"></a>
 
 {% swagger baseUrl="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/master" method="get" summary="/v2/market/stocks/{marketcode}/{issuecode}/master" %}
 {% swagger-description %}

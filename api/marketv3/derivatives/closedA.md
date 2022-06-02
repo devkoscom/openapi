@@ -257,6 +257,220 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 }
 ```
 
+## 상품/지수 선물 종목 종가 API  <a href="#api" id="api"></a>
+
+* 선물 당일 종가제공
+* 제공시간 : 15:30
+
+{% swagger baseUrl="https://{APIGWAddr}/v3/market/closed/derivative" path="/futures/{marketcode}/{issuecode}/closeprice" method="get" summary="/v3/market/closed/derivative/futures/{marketcode}/{issuecode}/closeprice" %}
+{% swagger-description %}
+종목리스트
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="marketcode" required="true" %}
+ex) kospi200
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" required="true" name="issuecode" %}
+ex) 101S6000
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
+```yaml
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "isuSrtCd": "101S6000",
+        "trdPrc": 350,
+        "cmpprevddTpCd": "5",
+        "opnprc": 351.85,
+        "hgprc": 352.35,
+        "lwprc": 349.3,
+        "accTrdvol": 219918,
+        "accTrdval": 19266094350000,
+        "cmpprevddPrc": -4.15
+    }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### Response Parameters
+
+| **Name**      | **Type**   | **Description** |                                                           |
+| ------------- | ---------- | --------------- | --------------------------------------------------------- |
+| isuSrtCd      | String(9)  | 종목단축코드          | 예) KR7000660001 → 000660&#xD;                             |
+| cmpprevddTpCd | String(1)  | 전일대비구분코드        | 1:상한/2:상승/3:보합/4:하한/5:하락/6:기세상한/7:기세상승/8:기세하한/9:기세하락&#xD; |
+| cmpprevddPrc  | number(11) | 전일대비가격          | 단위:원 / 신주인수권 증서&증권의 신규 상장 당일 : 0                          |
+| opnprc        | number(11) | 시가              | 단위:원                                                      |
+| hgprc         | number(11) | 고가              | 단위:원                                                      |
+| lwprc         | number(11) | 저가              | 단위:원                                                      |
+| trdPrc        | number(11) | 체결가격            |                                                           |
+| accTrdvol     | number(12) | 누적체결수량,누적거래량    | 단위:주                                                      |
+| accTrdval     | number(22) | 누적거래대금          | 단위:원                                                      |
+
+#### Request Example  <a href="#request-body-example" id="request-body-example"></a>
+
+```bash
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://testoap.k-mydata.org/v3/market/closed/derivative/futures/kospi200/101S6000/closeprice'
+```
+
+#### Response Example
+
+```yaml
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "isuSrtCd": "101S6000",
+        "trdPrc": 350,
+        "cmpprevddTpCd": "5",
+        "opnprc": 351.85,
+        "hgprc": 352.35,
+        "lwprc": 349.3,
+        "accTrdvol": 219918,
+        "accTrdval": 19266094350000,
+        "cmpprevddPrc": -4.15
+    }
+}
+```
+
+## 상품/지수 선물 종목 히스토리 API  <a href="#api" id="api"></a>
+
+* 상품/지수선물 종목 일별 과거데이터 제공 (연결선물코드 지원-코드표1)
+* 제공시간 : 06:30
+
+{% swagger baseUrl="https://{APIGWAddr}/v3/market/closed/derivative" path="/futures/{marketcode}/{issuecode}/history" method="get" summary="/v3/market/closed/derivative/futures/{marketcode}/{issuecode}/history" %}
+{% swagger-description %}
+종목리스트
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="marketcode" required="true" %}
+ex) kospi200
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" required="true" name="issuecode" %}
+ex) 101S6000
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="trnsmCycleTpCd" required="true" %}
+전송주기구분코드 (D:일 W:주 M:월)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="inqStrtDd" required="true" %}
+조회시작일자 YYYYMMDD
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="inqEndDd" required="true" %}
+조회종료일자 YYYYMMDD
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="reqCnt" required="true" %}
+요청건수 (최대 100건)
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
+```yaml
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "isuSrtCd": "101S6000",
+        "hisLists": [
+            {
+                "trdDd": 20220503,
+                "trdPrc": 352.85,
+                "cmpprevddTpCd": "5",
+                "opnprc": 353.3,
+                "hgprc": 356.15,
+                "lwprc": 352.5,
+                "accTrdvol": 250067,
+                "accTrdval": 22149554612500,
+                "opnintQty": 275009,
+                "cmpprevddPrc": -0.6
+            },
+            {
+                "trdDd": 20220502,
+                "trdPrc": 353.45,
+                "cmpprevddTpCd": "5",
+                "opnprc": 351.2,
+                "hgprc": 354.05,
+                "lwprc": 351.15,
+                "accTrdvol": 218940,
+                "accTrdval": 19298914775000,
+                "opnintQty": 273444,
+                "cmpprevddPrc": -2.15
+            }
+        ]
+    }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### Response Parameters
+
+| **Name**      | **Type**   | **Description** |                               |
+| ------------- | ---------- | --------------- | ----------------------------- |
+| isuSrtCd      | String(9)  | 종목단축코드          | 예) KR7000660001 → 000660&#xD; |
+| isuKorNm      | String(80) | 종목명             |                               |
+| hisLists      | Array(4)   | 과거리스트           |                               |
+| trdDd         | string(8)  | 체결일자,거래일자,매매일자  | YYYYMMDD                      |
+| trdPrc        | number(11) | 체결가격            |                               |
+| cmpprevddTpCd | string(1)  | 전일대비부호          |                               |
+| cmpprevddPrc  | number(11) | 전일대비가격          |                               |
+| accTrdvol     | number(12) | 누적체결수량,누적거래량    |                               |
+| accTrdval     | number(22) | 누적거래대금          |                               |
+| opnprc        | number(11) | 시가              |                               |
+| hgprc         | number(11) | 고가              |                               |
+| lwprc         | number(11) | 저가              |                               |
+| opnintQty     | number(10) | 미결제약정수량         |                               |
+
+#### Request Example  <a href="#request-body-example" id="request-body-example"></a>
+
+```bash
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://testoap.k-mydata.org/v3/market/closed/derivative/futures/kospi200/101S6000/history?trnsmCycleTpCd=D&inqStrtDd=20220501&inqEndDd=20220503&reqCnt=2'
+```
+
+#### Response Example
+
+```yaml
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "isuSrtCd": "101S6000",
+        "hisLists": [
+            {
+                "trdDd": 20220503,
+                "trdPrc": 352.85,
+                "cmpprevddTpCd": "5",
+                "opnprc": 353.3,
+                "hgprc": 356.15,
+                "lwprc": 352.5,
+                "accTrdvol": 250067,
+                "accTrdval": 22149554612500,
+                "opnintQty": 275009,
+                "cmpprevddPrc": -0.6
+            },
+            {
+                "trdDd": 20220502,
+                "trdPrc": 353.45,
+                "cmpprevddTpCd": "5",
+                "opnprc": 351.2,
+                "hgprc": 354.05,
+                "lwprc": 351.15,
+                "accTrdvol": 218940,
+                "accTrdval": 19298914775000,
+                "opnintQty": 273444,
+                "cmpprevddPrc": -2.15
+            }
+        ]
+    }
+}
+```
+
 
 
 

@@ -1096,8 +1096,6 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | inddAccTrdvol | number(11) | 일중누적거래량         | 일중 누적거래량                    |
 | inddAccTrdval | number(11) | 일중누적대금          | 일중 누적거래대금                   |
 
-### Request Example
-
 #### Request Example  <a href="#request-body-example" id="request-body-example"></a>
 
 ```bash
@@ -1142,6 +1140,214 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 ```
 
 
+
+## KOSPI 주식 거래상위 회원사 정보 API  <a href="#api" id="api"></a>
+
+* 종목 매수/매도 상위 5개 회원사 정보
+* 제공시간 : 실시간
+
+{% swagger baseUrl="https://{APIGWAddr}/v3/market/realtime/kospi/stocks" path="/{issuecode}/traderanking" method="get" summary="/v3/market/realtime/kospi/stocks/{issuecode}/traderanking" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="issuecode" type="string" required="true" %}
+종목코드 ex)005930
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
+```yaml
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "isuSrtCd": "005930*001",
+        "askTrdVolMbr1": 1602594,
+        "askTrdVolMbr2": 1546376,
+        "askTrdVolMbr3": 1523917,
+        "askTrdVolMbr4": 1409545,
+        "askTrdVolMbr5": 1022395,
+        "askTrdAmtMbr1": 106720756800,
+        "askTrdAmtMbr2": 103036585600,
+        "askTrdAmtMbr3": 101470996800,
+        "askTrdAmtMbr4": 93890130800,
+        "askTrdAmtMbr5": 68138125500,
+        "askTrdWtMbr1": 11.58,
+        "askTrdWtMbr2": 11.18,
+        "askTrdWtMbr3": 11.01,
+        "askTrdWtMbr4": 10.19,
+        "askTrdWtMbr5": 7.39,
+        "bidTrdVolMbr1": 2123403,
+        "bidTrdVolMbr2": 1542124,
+        "bidTrdVolMbr3": 1187107,
+        "bidTrdVolMbr4": 1051463,
+        "bidTrdVolMbr5": 979252,
+        "bidTrdAmtMbr1": 141505144700,
+        "bidTrdAmtMbr2": 102754795900,
+        "bidTrdAmtMbr3": 79074334000,
+        "bidTrdAmtMbr4": 70038390000,
+        "bidTrdAmtMbr5": 65233490700,
+        "bidTrdWtMbr1": 15.35,
+        "bidTrdWtMbr2": 11.15,
+        "bidTrdWtMbr3": 8.58,
+        "bidTrdWtMbr4": 7.6,
+        "bidTrdWtMbr5": 7.08,
+        "bidTrdPrcMbr1": 66641,
+        "bidTrdPrcMbr2": 66632,
+        "bidTrdPrcMbr3": 66611,
+        "bidTrdPrcMbr4": 66610,
+        "bidTrdPrcMbr5": 66616,
+        "askTrdPrcMbr1": 66593,
+        "askTrdPrcMbr2": 66631,
+        "askTrdPrcMbr3": 66586,
+        "askTrdPrcMbr4": 66610,
+        "askTrdPrcMbr5": 66646,
+        "bidTrdMbr1": "씨티그룹",
+        "bidTrdMbr2": "이베스트투자증권",
+        "bidTrdMbr3": "삼성증권",
+        "bidTrdMbr4": "키움증권",
+        "bidTrdMbr5": "미래에셋증권",
+        "askTrdMbr1": "제이피모간",
+        "askTrdMbr2": "이베스트투자증권",
+        "askTrdMbr3": "모간스탠리",
+        "askTrdMbr4": "삼성증권",
+        "askTrdMbr5": "한화투자"
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400" description="" %}
+```
+{
+   "error": "당일 종가 제공 시간이 아닙니다." 
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### Response Parameters
+
+| **Name**      | **Type**   | **Description** |                                   |
+| ------------- | ---------- | --------------- | --------------------------------- |
+| bidTrdMbr1    | string(64) | 매수상위회원명1        | 매수랭킹 TOP5 1위 회원사 한글명              |
+| bidTrdMbr2    | string(64) | 매수상위회원명2        | 매수랭킹 TOP5 2위 회원사 한글명              |
+| bidTrdMbr3    | string(64) | 매수상위회원명3        | 매수랭킹 TOP5 3위 회원사 한글명              |
+| bidTrdMbr4    | string(64) | 매수상위회원명4        | 매수랭킹 TOP5 4위 회원사 한글명              |
+| bidTrdMbr5    | string(64) | 매수상위회원명5        | 매수랭킹 TOP5 5위 회원사 한글명              |
+| askTrdMbr1    | string(64) | 매도상위회원명1        | 매도랭킹 TOP5 1위 회원사 한글명              |
+| askTrdMbr2    | string(64) | 매도상위회원명2        | 매도랭킹 TOP5 2위 회원사 한글명              |
+| askTrdMbr3    | string(64) | 매도상위회원명3        | 매도랭킹 TOP5 3위 회원사 한글명              |
+| askTrdMbr4    | string(64) | 매도상위회원명4        | 매도랭킹 TOP5 4위 회원사 한글명              |
+| askTrdMbr5    | string(64) | 매도상위회원명5        | 매도랭킹 TOP5 5위 회원사 한글명              |
+| bidTrdVolMbr1 | number(11) | 매수상위거래량 회원1     | 매수랭킹 TOP5 1위 회원사 거래량              |
+| bidTrdVolMbr2 | number(11) | 매수상위거래량 회원2     |                                   |
+| bidTrdVolMbr3 | number(11) | 매수상위거래량 회원3     |                                   |
+| bidTrdVolMbr4 | number(11) | 매수상위거래량 회원4     |                                   |
+| bidTrdVolMbr5 | number(11) | 매수상위거래량 회원5     |                                   |
+| askTrdVolMbr1 | number(11) | 매도상위거래량 회원1     | 매도랭킹 TOP5 1위 회원사 거래량              |
+| askTrdVolMbr2 | number(11) | 매도상위거래량 회원2     |                                   |
+| askTrdVolMbr3 | number(11) | 매도상위거래량 회원3     |                                   |
+| askTrdVolMbr4 | number(11) | 매도상위거래량 회원4     |                                   |
+| askTrdVolMbr5 | number(11) | 매도상위거래량 회원5     |                                   |
+| bidTrdAmtMbr1 | number(11) | 매수상위거래금액 회원1    | 매수랭킹 TOP5 1위 회원사 거래금액             |
+| bidTrdAmtMbr2 | number(11) | 매수상위거래금액 회원2    |                                   |
+| bidTrdAmtMbr3 | number(11) | 매수상위거래금액 회원3    |                                   |
+| bidTrdAmtMbr4 | number(11) | 매수상위거래금액 회원4    |                                   |
+| bidTrdAmtMbr5 | number(11) | 매수상위거래금액 회원5    |                                   |
+| askTrdAmtMbr1 | number(11) | 매도상위거래금액 회원1    | 매도랭킹 TOP5 1위 회원사 거래금액             |
+| askTrdAmtMbr2 | number(11) | 매도상위거래금액 회원2    |                                   |
+| askTrdAmtMbr3 | number(11) | 매도상위거래금액 회원3    |                                   |
+| askTrdAmtMbr4 | number(11) | 매도상위거래금액 회원4    |                                   |
+| askTrdAmtMbr5 | number(11) | 매도상위거래금액 회원5    |                                   |
+| bidTrdPrcMbr1 | number(11) | 매수상위거래단가 회원1    | 매수랭킹 TOP5 1위 회원사 거래단가             |
+| bidTrdPrcMbr2 | number(11) | 매수상위거래단가 회원2    |                                   |
+| bidTrdPrcMbr3 | number(11) | 매수상위거래단가 회원3    |                                   |
+| bidTrdPrcMbr4 | number(11) | 매수상위거래단가 회원4    |                                   |
+| bidTrdPrcMbr5 | number(11) | 매수상위거래단가 회원5    |                                   |
+| askTrdPrcMbr1 | number(11) | 매도상위거래단가 회원1    | 매도랭킹 TOP5 1위 회원사 거래단가             |
+| askTrdPrcMbr2 | number(11) | 매도상위거래단가 회원2    |                                   |
+| askTrdPrcMbr3 | number(11) | 매도상위거래단가 회원3    |                                   |
+| askTrdPrcMbr4 | number(11) | 매도상위거래단가 회원4    |                                   |
+| askTrdPrcMbr5 | number(11) | 매도상위거래단가 회원5    |                                   |
+| bidTrdWtMbr1  | number(5)  | 매수상위거래비중 회원1    | 매수랭킹 TOP5 1위 회원사 거래비중 (백분율, X100) |
+| bidTrdWtMbr2  | number(5)  | 매수상위거래비중 회원2    |                                   |
+| bidTrdWtMbr3  | number(5)  | 매수상위거래비중 회원3    |                                   |
+| bidTrdWtMbr4  | number(5)  | 매수상위거래비중 회원4    |                                   |
+| bidTrdWtMbr5  | number(5)  | 매수상위거래비중 회원5    |                                   |
+| askTrdWtMbr1  | number(5)  | 매도상위거래비중 회원1    | 매도랭킹 TOP5 1위 회원사 거래비중 (백분율, X100) |
+| askTrdWtMbr2  | number(5)  | 매도상위거래비중 회원2    |                                   |
+| askTrdWtMbr3  | number(5)  | 매도상위거래비중 회원3    |                                   |
+| askTrdWtMbr4  | number(5)  | 매도상위거래비중 회원4    |                                   |
+| askTrdWtMbr5  | number(5)  | 매도상위거래비중 회원5    |                                   |
+
+#### Request Example  <a href="#request-body-example" id="request-body-example"></a>
+
+```bash
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://testoap.k-mydata.org/v3/market/realtime/kospi/stocks/005930/traderanking'
+```
+
+#### Response Example
+
+```yaml
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "isuSrtCd": "005930*001",
+        "askTrdVolMbr1": 1602594,
+        "askTrdVolMbr2": 1546376,
+        "askTrdVolMbr3": 1523917,
+        "askTrdVolMbr4": 1409545,
+        "askTrdVolMbr5": 1022395,
+        "askTrdAmtMbr1": 106720756800,
+        "askTrdAmtMbr2": 103036585600,
+        "askTrdAmtMbr3": 101470996800,
+        "askTrdAmtMbr4": 93890130800,
+        "askTrdAmtMbr5": 68138125500,
+        "askTrdWtMbr1": 11.58,
+        "askTrdWtMbr2": 11.18,
+        "askTrdWtMbr3": 11.01,
+        "askTrdWtMbr4": 10.19,
+        "askTrdWtMbr5": 7.39,
+        "bidTrdVolMbr1": 2123403,
+        "bidTrdVolMbr2": 1542124,
+        "bidTrdVolMbr3": 1187107,
+        "bidTrdVolMbr4": 1051463,
+        "bidTrdVolMbr5": 979252,
+        "bidTrdAmtMbr1": 141505144700,
+        "bidTrdAmtMbr2": 102754795900,
+        "bidTrdAmtMbr3": 79074334000,
+        "bidTrdAmtMbr4": 70038390000,
+        "bidTrdAmtMbr5": 65233490700,
+        "bidTrdWtMbr1": 15.35,
+        "bidTrdWtMbr2": 11.15,
+        "bidTrdWtMbr3": 8.58,
+        "bidTrdWtMbr4": 7.6,
+        "bidTrdWtMbr5": 7.08,
+        "bidTrdPrcMbr1": 66641,
+        "bidTrdPrcMbr2": 66632,
+        "bidTrdPrcMbr3": 66611,
+        "bidTrdPrcMbr4": 66610,
+        "bidTrdPrcMbr5": 66616,
+        "askTrdPrcMbr1": 66593,
+        "askTrdPrcMbr2": 66631,
+        "askTrdPrcMbr3": 66586,
+        "askTrdPrcMbr4": 66610,
+        "askTrdPrcMbr5": 66646,
+        "bidTrdMbr1": "씨티그룹",
+        "bidTrdMbr2": "이베스트투자증권",
+        "bidTrdMbr3": "삼성증권",
+        "bidTrdMbr4": "키움증권",
+        "bidTrdMbr5": "미래에셋증권",
+        "askTrdMbr1": "제이피모간",
+        "askTrdMbr2": "이베스트투자증권",
+        "askTrdMbr3": "모간스탠리",
+        "askTrdMbr4": "삼성증권",
+        "askTrdMbr5": "한화투자"
+    }
+}
+```
 
 
 

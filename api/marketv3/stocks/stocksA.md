@@ -799,7 +799,9 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 }
 ```
 
-## KOSPI 주식종목 체결 API  <a href="#api" id="api"></a>
+
+
+## KOSPI 주식 종목 호가잔량 (LP호가제외) API  <a href="#api" id="api"></a>
 
 * 종목 호가잔량 (LP호가 제외)
 * 제공시간 : 실시간
@@ -935,7 +937,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | deemTrdvol            | number(12) | 예상체결수량          |                           |
 | deemAccTrdvol         | number(12) | 예상누적체결수량        |                           |
 
-### Request Example
+#### Request Example
 
 ```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
@@ -943,7 +945,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 'https://testoap.k-mydata.org/v3/market/realtime/kospi/stocks/005930/orderbook'
 ```
 
-### Response Example
+#### Response Example
 
 ```yaml
 {

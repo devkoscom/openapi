@@ -425,6 +425,20 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 {% swagger-response status="200" description="" %}
 ```yaml
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "isuSrtCd": "247540",
+        "trdPrc": 503200,
+        "cmpprevddTpCd": "5",
+        "opnprc": 500700,
+        "hgprc": 505100,
+        "lwprc": 496100,
+        "accTrdvol": 100002,
+        "accTrdval": 50129874200,
+        "cmpprevddPrc": -1800
+    }
+}
 ```
 {% endswagger-response %}
 
@@ -463,7 +477,18 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 ```yaml
 {
-   "error": "당일 종가 제공 시간이 아닙니다." 
+    "jsonrpc": "2.0",
+    "result": {
+        "isuSrtCd": "247540",
+        "trdPrc": 503200,
+        "cmpprevddTpCd": "5",
+        "opnprc": 500700,
+        "hgprc": 505100,
+        "lwprc": 496100,
+        "accTrdvol": 100002,
+        "accTrdval": 50129874200,
+        "cmpprevddPrc": -1800
+    }
 }
 ```
 

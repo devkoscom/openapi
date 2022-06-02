@@ -490,19 +490,18 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% swagger-response status="200" description="" %}
 ```yaml
 {
-   "jsonrpc": "2.0",
-   "result": 
-  {
-     "isuSrtCd": "005930",
-     "trdPrc": 51900,
-     "cmpprevddTpCd": "5",
-     "opnprc": 53000,
-     "hgprc": 53900,
-     "lwprc": 51800,
-     "accTrdvol": 39421505,
-     "accTrdval": 2070538849200,
-     "cmpprevddPrc": -1100 
-  } 
+    "jsonrpc": "2.0",
+    "result": {
+        "isuSrtCd": "005930",
+        "trdPrc": 66700,
+        "cmpprevddTpCd": "5",
+        "opnprc": 66600,
+        "hgprc": 67000,
+        "lwprc": 66400,
+        "accTrdvol": 13866071,
+        "accTrdval": 923783719900,
+        "cmpprevddPrc": -700
+    }
 }
 ```
 {% endswagger-response %}
@@ -542,7 +541,18 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 ```yaml
 {
-   "error": "당일 종가 제공 시간이 아닙니다." 
+    "jsonrpc": "2.0",
+    "result": {
+        "isuSrtCd": "005930",
+        "trdPrc": 66700,
+        "cmpprevddTpCd": "5",
+        "opnprc": 66600,
+        "hgprc": 67000,
+        "lwprc": 66400,
+        "accTrdvol": 13866071,
+        "accTrdval": 923783719900,
+        "cmpprevddPrc": -700
+    }
 }
 ```
 

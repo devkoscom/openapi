@@ -1003,3 +1003,145 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
     }
 }
 ```
+
+## KOSPI 주식 종목 일중 API  <a href="#api" id="api"></a>
+
+* 종목 일중 데이터 제공 \[10초, 1분, 10분단위 시/고/저/종]
+* 최대 100건 까지만 조회 가능
+* 제공시간 : 실시간
+
+{% swagger baseUrl="https://{APIGWAddr}/v3/market/realtime/kospi/stocks" path="/{issuecode}/intraday" method="get" summary="/v3/market/realtime/kospi/stocks/{issuecode}/intraday" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="issuecode" type="string" required="true" %}
+종목코드 ex)005930
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="inddCycleTpCd" required="true" %}
+일중 전송주기 구분코드 (10:10초, 60:1분, 600:10분)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="inqStrtDd" required="false" %}
+조회시작일자 YYYYMMSS
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="strtTm" required="true" type="String" %}
+개시시각,시작시각 HHMM
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="endTm" required="true" type="String" %}
+종료시각 HHMM
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
+```yaml
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "isuSrtCd": "005930",
+        "hisLists": [
+            {
+                "inddTm": "10000000",
+                "inddOpnprc": 66500,
+                "inddHgprc": 66800,
+                "inddLwprc": 66400,
+                "inddClsprc": 66800,
+                "inddTrdvol": 1577394,
+                "inddTrdval": 105061416800,
+                "inddAccTrdvol": 11340696,
+                "inddAccTrdval": 750382201300
+            },
+            {
+                "inddTm": "9100000",
+                "inddOpnprc": 65100,
+                "inddHgprc": 66000,
+                "inddLwprc": 65000,
+                "inddClsprc": 66000,
+                "inddTrdvol": 3472896,
+                "inddTrdval": 227416478800,
+                "inddAccTrdvol": 3472896,
+                "inddAccTrdval": 227416478800
+            }
+        ]
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400" description="" %}
+```
+{
+   "error": "당일 종가 제공 시간이 아닙니다." 
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### Response Parameters
+
+| **Name**      | **Type**   | **Description** |                             |
+| ------------- | ---------- | --------------- | --------------------------- |
+| isuSrtCd      | String(9)  | 종목단축코드          |                             |
+| isuNm         | String(80) | 종목명             |                             |
+| hisLists      | Array(4)   | 과거리스트           |                             |
+| inddTm        | string(8)  | 일중시간            | HH:MM:SS                    |
+| inddOpnprc    | number(11) | 일중시가            | 일중데이타(10초, 1분, 10분)         |
+| inddHgprc     | number(11) | 일중고가            | 일중데이타(10초, 1분, 10분)         |
+| inddLwprc     | number(11) | 일중저가            | 일중데이타(10초, 1분, 10분)         |
+| inddClsprc    | number(11) | 일중종가            | 일중데이타(10초, 1분, 10분)         |
+| inddTrdvol    | number(11) | 일중거래량           | 일중데이타(10초, 1분, 10분)         |
+| inddTrdval    | number(11) | 일중거래대금          | 일중데이타(10초, 1분, 10분) 구간 거래대금 |
+| inddAccTrdvol | number(11) | 일중누적거래량         | 일중 누적거래량                    |
+| inddAccTrdval | number(11) | 일중누적대금          | 일중 누적거래대금                   |
+
+### Request Example
+
+#### Request Example  <a href="#request-body-example" id="request-body-example"></a>
+
+```bash
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://testoap.k-mydata.org/v3/market/realtime/kospi/stocks/005930/intraday?inddCycleTpCd=600&inqStrtDd=20220501&strtTm=0900&endTm=1500'
+```
+
+#### Response Example
+
+```yaml
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "isuSrtCd": "005930",
+        "hisLists": [
+            {
+                "inddTm": "10000000",
+                "inddOpnprc": 66500,
+                "inddHgprc": 66800,
+                "inddLwprc": 66400,
+                "inddClsprc": 66800,
+                "inddTrdvol": 1577394,
+                "inddTrdval": 105061416800,
+                "inddAccTrdvol": 11340696,
+                "inddAccTrdval": 750382201300
+            },
+            {
+                "inddTm": "9100000",
+                "inddOpnprc": 65100,
+                "inddHgprc": 66000,
+                "inddLwprc": 65000,
+                "inddClsprc": 66000,
+                "inddTrdvol": 3472896,
+                "inddTrdval": 227416478800,
+                "inddAccTrdvol": 3472896,
+                "inddAccTrdval": 227416478800
+            }
+        ]
+    }
+}
+```
+
+
+
+
+

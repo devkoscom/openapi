@@ -23,6 +23,7 @@
     * [주식](api/marketv3/stocks/README.md)
       * [주식실시간종가A](api/marketv3/stocks/stocksA.md)
       * [주식실시간종가B](api/marketv3/stocks/closedB.md)
+      * [주식실시간종가C](api/marketv3/stocks/closedC.md)
     * [옵션 시세](api/marketv3/options.md)
     * [주식 시세표](api/marketv3/multiquote.md)
     * [코드표(시세)](api/marketv3/codetable.md)

@@ -1307,7 +1307,13 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 ```yaml
 {
-   "error": "당일 종가 제공 시간이 아닙니다." 
+   "jsonrpc": "2.0",
+   "result": 
+  {
+     "isuSrtCd": "590003",
+     "nav": 11936.79,
+     "cmpprevddNav": -156.52 
+  } 
 }
 ```
 

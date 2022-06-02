@@ -45,7 +45,7 @@ Authentication | **API Key**
 {% endswagger-response %}
 {% endswagger %}
 
-### Response Parameters
+#### Response Parameters
 
 | **Name**    | **Type**   | **Description**  |                          |
 | ----------- | ---------- | ---------------- | ------------------------ |
@@ -56,7 +56,7 @@ Authentication | **API Key**
 | isuKorNm    | String(80) | 종목한글명            |                          |
 | isuKorAbbrv | String(40) | 종목한글약명           | 가나다                      |
 
-### Request Example  <a href="#request-body-example" id="request-body-example"></a>
+#### Request Example  <a href="#request-body-example" id="request-body-example"></a>
 
 ```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
@@ -64,7 +64,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 'https://testoap.k-mydata.org/v3/market/closed/kospi/lists'
 ```
 
-### Response Example
+#### Response Example
 
 ```yaml
 {
@@ -177,7 +177,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endswagger-response %}
 {% endswagger %}
 
-### Response Parameters
+#### Response Parameters
 
 | **Name**              | **Type**   | **Description**  | ​                                                                                                                                            |
 | --------------------- | ---------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -224,7 +224,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | adjStkprcCalcYn       | string(1)  | 수정주가산출여부         | Y, N                                                                                                                                         |
 | prevddNav             | number(22) | 전일순자산가치          | ETF종목일 경우 소수점 2자리로 표현, 일반종목은 0                                                                                                               |
 
-### Request Example  <a href="#request-body-example" id="request-body-example"></a>
+#### Request Example  <a href="#request-body-example" id="request-body-example"></a>
 
 ```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
@@ -232,7 +232,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 'https://testoap.k-mydata.org/v3/market/closed/kospi/005930/master'
 ```
 
-### Response Example
+#### Response Example
 
 ```yaml
 {
@@ -361,7 +361,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endswagger-response %}
 {% endswagger %}
 
-### Response Parameters
+#### Response Parameters
 
 | **Name**              | **Type**       | **Description** |                                                                                                                                                   | **제공구분**                        |
 | --------------------- | -------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
@@ -452,7 +452,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | CrdtGrd               | string(64)     | 신용등급            |                                                                                                                                                   |                                 |
 | Cap                   | number(11)     | 자본금             |                                                                                                                                                   |                                 |
 
-### Request Example  <a href="#request-body-example" id="request-body-example"></a>
+#### Request Example  <a href="#request-body-example" id="request-body-example"></a>
 
 ```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
@@ -460,7 +460,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 'https://testoap.k-mydata.org/v3/market/closed/kospi/005930/selectivemaster'
 ```
 
-### Response Example
+#### Response Example
 
 ```yaml
 {
@@ -516,7 +516,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endswagger-response %}
 {% endswagger %}
 
-### Response Parameters
+#### Response Parameters
 
 | **Name**      | **Type**   | **Description** |                                                      |
 | ------------- | ---------- | --------------- | ---------------------------------------------------- |
@@ -530,7 +530,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | accTrdvol     | number(12) | 누적체결수량,누적거래량    | 단위:주                                                 |
 | accTrdval     | number(22) | 누적거래대금          | 단위:원                                                 |
 
-### Request Example  <a href="#request-body-example" id="request-body-example"></a>
+#### Request Example  <a href="#request-body-example" id="request-body-example"></a>
 
 ```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
@@ -538,7 +538,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 'https://testoap.k-mydata.org/v3/market/closed/kospi/005930/closeprice'
 ```
 
-### Response Example
+#### Response Example
 
 ```yaml
 {
@@ -576,7 +576,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endswagger-response %}
 {% endswagger %}
 
-### **Response Parameters**
+#### **Response Parameters**
 
 | **Name**      | **Type**   | **Description** |                                                      |
 | ------------- | ---------- | --------------- | ---------------------------------------------------- |
@@ -593,7 +593,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | listShrs      | number(16) | 상장주식수,상장증권수     | 업종상장주식수 단위는  천주, 그외는 1주                              |
 | mktcap        | number(22) | 시가총액            | 단위: 업종-백만                                            |
 
-### Request Example
+#### Request Example
 
 ```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
@@ -601,7 +601,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 'https://testoap.k-mydata.org/v3/market/closed/kospi/index'
 ```
 
-### Response Example
+#### Response Example
 
 ```yaml
 {
@@ -686,7 +686,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | lendBalQty    | number(11) | 대차잔고수량          | 대차잔고수량(주식수, 전일기준)        |
 | lendBalAmt    | number(11) | 대차잔고금액          | 단위 1,000 원               |
 
-### Request Example
+#### Request Example
 
 ```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
@@ -694,7 +694,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 'https://testoap.k-mydata.org/v3/market/closed/kospi/005930/shortsell?inqStrtDd=20181001&inqEndDd=20181231'
 ```
 
-### Response Example
+#### Response Example
 
 ```yaml
 {
@@ -777,7 +777,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endswagger-response %}
 {% endswagger %}
 
-### Response Parameters
+#### Response Parameters
 
 | **Name**           | **Type**   | **Description** |   |
 | ------------------ | ---------- | --------------- | - |
@@ -788,7 +788,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | cmpprevddFornHdVol | number(11) | 외국인보유주식수전일대비    |   |
 | FornHdVolRt        | number(5)  | 외국인보유율          |   |
 
-### Request Example
+#### Request Example
 
 ```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
@@ -796,7 +796,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 'https://testoap.k-mydata.org/v3/market/closed/kospi/005930/foreignhistory?inqStrtDd=20181001&inqEndDd=20181231&reqCnt=20'
 ```
 
-### Response Example
+#### Response Example
 
 ```yaml
 {
@@ -889,7 +889,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {% endswagger-response %}
 {% endswagger %}
 
-### Response Parameters
+#### Response Parameters
 
 | **Name**      | **Type**   | **Description** |                                                      |
 | ------------- | ---------- | --------------- | ---------------------------------------------------- |
@@ -905,7 +905,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | hgprc         | number(11) | 고가              | 단위:원                                                 |
 | lwprc         | number(11) | 저가              | 단위:원                                                 |
 
-### Request Example
+#### Request Example
 
 ```bash
 curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
@@ -913,7 +913,7 @@ curl --include --header "apikey:l7xx230ef2235e34448c982eb192ac98e206" \
 'https://testoap.k-mydata.org/v3/market/closed/kospi/005930/history?trnsmCycleTpCd=D&inqStrtDd=20181001&inqEndDd=20181231&reqCnt=5'
 ```
 
-### Response Example
+#### Response Example
 
 ```bash
 {

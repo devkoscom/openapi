@@ -449,18 +449,34 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | CrdtGrd               | string(64)     | 신용등급            |                                                                                                                                                   |                                 |
 | Cap                   | number(11)     | 자본금             |                                                                                                                                                   |                                 |
 
+### Request Example  <a href="#request-body-example" id="request-body-example"></a>
+
+```bash
+curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
+--request GET \
+'https://testoap.k-mydata.org/v3/market/closed/kospi/005930/selectivemaster'
+```
+
+### Response Example
+
+```yaml
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "isuSrtCd": "005930",
+        "prevddClsprc": 67400
+    }
+}
+```
 
 
-## 주식종목 종가 API  <a href="#api" id="api"></a>
 
-{% swagger baseUrl="https://{APIGWAddr}/v2/market/stocks" path="/{marketcode}/{issuecode}/closeprice" method="get" summary="/v2/market/stocks/{marketcode}/{issuecode}/closeprice" %}
+## KOSPI 주식종목 종가 API  <a href="#api" id="api"></a>
+
+{% swagger baseUrl="https://{APIGWAddr}/v3/market/closed/kospi" path="/{issuecode}/closeprice" method="get" summary="/v3/market/closed/kospi/{issuecode}/closeprice" %}
 {% swagger-description %}
 종목 당일 종가제공
 {% endswagger-description %}
-
-{% swagger-parameter in="path" name="marketcode" type="string" %}
-시장구분 (kospi | kosdaq)
-{% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="issuecode" type="string" %}
 종목코드 ex)005930
@@ -514,7 +530,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 ```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
-'https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/closeprice'
+'https://testoap.k-mydata.org/v3/market/closed/kospi/005930/closeprice'
 ```
 
 ### Response Example

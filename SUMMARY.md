@@ -21,7 +21,7 @@
     * [코드표(시세)](api/market/codetable.md)
   * [시세 서비스 (라이센스별) v3](api/marketv3/README.md)
     * [주식](api/marketv3/stocks/README.md)
-      * [주식실시간종가A](api/marketv3/stocks/closedA.md)
+      * [주식실시간종가A](api/marketv3/stocks/stocksA.md)
       * [주식실시간종가B](api/marketv3/stocks/closedB.md)
     * [옵션 시세](api/marketv3/options.md)
     * [주식 시세표](api/marketv3/multiquote.md)

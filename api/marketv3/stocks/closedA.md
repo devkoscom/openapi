@@ -10,7 +10,6 @@ Authentication | **API Key**
 
 ## KOSPI 주식 종목 리스트 API  <a href="#api" id="api"></a>
 
-* 주식리스트
 * 제공시간 : AM 06:30
 
 {% swagger baseUrl="https://{APIGWAddr}/v3/market/closed/kospi" path="/lists" method="get" summary="/v3/market/closed/kospi/lists" %}
@@ -118,7 +117,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="issuecode" type="string" %}
+{% swagger-parameter in="path" name="issuecode" type="string" required="true" %}
 종목코드 ex)005930
 {% endswagger-parameter %}
 
@@ -302,7 +301,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="issuecode" type="string" %}
+{% swagger-parameter in="path" name="issuecode" type="string" required="true" %}
 종목코드 ex)005930
 {% endswagger-parameter %}
 
@@ -484,7 +483,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 종목 당일 종가제공
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="issuecode" type="string" %}
+{% swagger-parameter in="path" name="issuecode" type="string" required="true" %}
 종목코드 ex)005930
 {% endswagger-parameter %}
 

@@ -32,17 +32,17 @@ ex) 005930
         "invstLists": [
             {
                 "invstCd": "01",
-                "askTrdvol": 0,
-                "askTrdval": 0,
-                "bidTrdvol": 0,
-                "bidTrdval": 0
+                "askTrdvol": 534814,
+                "askTrdval": 35819799,
+                "bidTrdvol": 1365197,
+                "bidTrdval": 91357237
             },
             {
                 "invstCd": "02",
-                "askTrdvol": 0,
-                "askTrdval": 0,
-                "bidTrdvol": 0,
-                "bidTrdval": 0
+                "askTrdvol": 110469,
+                "askTrdval": 7389240,
+                "bidTrdvol": 53331,
+                "bidTrdval": 3574395
             }
         ]
     }
@@ -82,17 +82,17 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
         "invstLists": [
             {
                 "invstCd": "01",
-                "askTrdvol": 0,
-                "askTrdval": 0,
-                "bidTrdvol": 0,
-                "bidTrdval": 0
+                "askTrdvol": 534814,
+                "askTrdval": 35819799,
+                "bidTrdvol": 1365197,
+                "bidTrdval": 91357237
             },
             {
                 "invstCd": "02",
-                "askTrdvol": 0,
-                "askTrdval": 0,
-                "bidTrdvol": 0,
-                "bidTrdval": 0
+                "askTrdvol": 110469,
+                "askTrdval": 7389240,
+                "bidTrdvol": 53331,
+                "bidTrdval": 3574395
             }
         ]
     }
@@ -113,6 +113,29 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 {% swagger-response status="200" description="" %}
 ```yaml
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "Tm": "15303000",
+        "isuSrtCd": "K1",
+        "invstLists": [
+            {
+                "invstCd": "01",
+                "askTrdvol": 5230835,
+                "askTrdval": 237317084,
+                "bidTrdvol": 8907542,
+                "bidTrdval": 451127644
+            },
+            {
+                "invstCd": "02",
+                "askTrdvol": 1573971,
+                "askTrdval": 65330223,
+                "bidTrdvol": 1279825,
+                "bidTrdval": 60207485
+            }
+        ]
+    }
+}
 ```
 {% endswagger-response %}
 
@@ -148,6 +171,29 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 #### Response Example
 
 ```yaml
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "Tm": "15303000",
+        "isuSrtCd": "K1",
+        "invstLists": [
+            {
+                "invstCd": "01",
+                "askTrdvol": 5230835,
+                "askTrdval": 237317084,
+                "bidTrdvol": 8907542,
+                "bidTrdval": 451127644
+            },
+            {
+                "invstCd": "02",
+                "askTrdvol": 1573971,
+                "askTrdval": 65330223,
+                "bidTrdvol": 1279825,
+                "bidTrdval": 60207485
+            }
+        ]
+    }
+}
 ```
 
 

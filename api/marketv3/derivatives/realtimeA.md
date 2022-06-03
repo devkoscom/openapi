@@ -535,7 +535,7 @@ ex) kospi200
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="issuecode" required="true" %}
-ex) 201S6210
+ex) 201S6212
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}
@@ -543,20 +543,20 @@ ex) 201S6210
 {
     "jsonrpc": "2.0",
     "result": {
-        "isuSrtCd": "201S6210*006",
-        "trdPrc": 140.6,
-        "opnprc": 0,
-        "hgprc": 0,
-        "lwprc": 0,
+        "isuSrtCd": "201S6212*006",
+        "trdPrc": 138.1,
+        "opnprc": 138.1,
+        "hgprc": 138.1,
+        "lwprc": 138.1,
         "accTrdvol": 0,
-        "trdTm": 0,
+        "trdTm": 31000000,
         "trdvol": 0,
         "lstTrdTpCd": 0,
         "accTrdval": 0,
-        "isuCd": "KR4201S62101",
+        "isuCd": "KR4201S62127",
         "negoBlkAccTrdvol": 0,
-        "realtmUplmtprc": 168.6,
-        "realtmLwlmtprc": 112.55
+        "realtmUplmtprc": 166.1,
+        "realtmLwlmtprc": 110.05
     }
 }
 ```
@@ -600,7 +600,7 @@ ex) 201S6210
 ```bash
 curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 --request GET \
-'https://testoap.k-mydata.org/v3/market/realtime/derivative/options/kospi200/201S6210/price'
+'https://testoap.k-mydata.org/v3/market/realtime/derivative/options/kospi200/201S6212/price'
 ```
 
 #### Response Example
@@ -609,20 +609,20 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 {
     "jsonrpc": "2.0",
     "result": {
-        "isuSrtCd": "201S6210*006",
-        "trdPrc": 140.6,
-        "opnprc": 0,
-        "hgprc": 0,
-        "lwprc": 0,
+        "isuSrtCd": "201S6212*006",
+        "trdPrc": 138.1,
+        "opnprc": 138.1,
+        "hgprc": 138.1,
+        "lwprc": 138.1,
         "accTrdvol": 0,
-        "trdTm": 0,
+        "trdTm": 31000000,
         "trdvol": 0,
         "lstTrdTpCd": 0,
         "accTrdval": 0,
-        "isuCd": "KR4201S62101",
+        "isuCd": "KR4201S62127",
         "negoBlkAccTrdvol": 0,
-        "realtmUplmtprc": 168.6,
-        "realtmLwlmtprc": 112.55
+        "realtmUplmtprc": 166.1,
+        "realtmLwlmtprc": 110.05
     }
 }
 ```

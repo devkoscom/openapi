@@ -20,26 +20,24 @@ Authentication | **API Key**
 {% swagger-response status="200" description="" %}
 ```yaml
 {
-   "trdDd": "20180306",
-   "mktEndTm": "1540",
-   "isuLists": [ 
-    {
-       "isuSrtCd": "000020",
-       "isuCd": "KR7000020008",
-       "isuKorNm": "동화약품",
-       "isuKorAbbr": "동화약품",
-       "map_to": "000020*001" 
-    },
-
-    {
-       "isuSrtCd": "000030",
-       "isuCd": "KR7000030007",
-       "isuKorNm": "우리은행",
-       "isuKorAbbr": "우리은행",
-       "map_to": "000030*001" 
-    },
-     ... 이하생략...
-  ]
+    "trdDd": "20220603",
+    "mktEndTm": "1540",
+    "isuLists": [
+        {
+            "isuSrtCd": "000020",
+            "isuCd": "KR7000020008",
+            "isuKorNm": "동화약품",
+            "isuKorAbbr": "동화약품",
+            "map_to": "000020*001"
+        },
+        {
+            "isuSrtCd": "000040",
+            "isuCd": "KR7000040006",
+            "isuKorNm": "KR모터스",
+            "isuKorAbbr": "KR모터스",
+            "map_to": "000040*001"
+        }
+    ]
 }
 ```
 {% endswagger-response %}
@@ -68,43 +66,24 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 
 ```yaml
 {
-   "trdDd": "20181228",
-   "mktEndTm": "1540",
-   "isuLists": [ 
-    {
-       "isuSrtCd": "000020",
-       "isuCd": "KR7000020008",
-       "isuKorNm": "동화약품",
-       "isuKorAbbr": "동화약품",
-       "map_to": "000020*001" 
-    },
-
-    {
-       "isuSrtCd": "000030",
-       "isuCd": "KR7000030007",
-       "isuKorNm": "우리은행",
-       "isuKorAbbr": "우리은행",
-       "map_to": "000030*001" 
-    },
-
-    {
-       "isuSrtCd": "000040",
-       "isuCd": "KR7000040006",
-       "isuKorNm": "KR모터스",
-       "isuKorAbbr": "KR모터스",
-       "map_to": "000040*001" 
-    },
-    .
-    .
-    .
-    {
-       "isuSrtCd": "900140",
-       "isuCd": "KYG5307W1015",
-       "isuKorNm": "엘브이엠씨홀딩스",
-       "isuKorAbbr": "엘브이엠씨홀딩스",
-       "map_to": "900140*001" 
-    } 
-  ] 
+    "trdDd": "20220603",
+    "mktEndTm": "1540",
+    "isuLists": [
+        {
+            "isuSrtCd": "000020",
+            "isuCd": "KR7000020008",
+            "isuKorNm": "동화약품",
+            "isuKorAbbr": "동화약품",
+            "map_to": "000020*001"
+        },
+        {
+            "isuSrtCd": "000040",
+            "isuCd": "KR7000040006",
+            "isuKorNm": "KR모터스",
+            "isuKorAbbr": "KR모터스",
+            "map_to": "000040*001"
+        }
+    ]
 }
 ```
 
@@ -377,7 +356,7 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 | mktcapScaleCd         | string(1)      | 시가총액규모코드        | 유가(0:제외 1:대 2:중 3:소) 코스닥(0:제외 1:KOSDAQ100 2:KOSDAQmid300 3:KOSDAQsmall)                                                                           | \~/master, \~/selectivemaster   |
 | mfindYn               | string(1)      | 제조업여부           | Y, N (유가)제조업여부                                                                                                                                    | \~/master, \~/selectivemaster   |
 | smeYn                 | string(1)      | 중소기업여부          | Y, N (코스닥)중소기업여부                                                                                                                                  | \~/master, \~/selectivemaster   |
-| 업종                    | string(1)      | KRX100종목여부      | Y, N                                                                                                                                              | \~/master, \~/selectivemaster   |
+| krx100IsuYn           | string(1)      | KRX100종목여부      | Y, N                                                                                                                                              | \~/master, \~/selectivemaster   |
 | kospiYn               | string(1)&#xD; | KOSPI여부         | Y, N (유가)KOSPI100여부,(코스닥)프리미어여부, 프리미어여부 추가 2009.11.16                                                                                             | \~/master, \~/selectivemaster   |
 | kospi100Yn            | string(1)&#xD; | KOSPI100여부      | Y, N (유가)KOSPI여부                                                                                                                                  | \~/master, \~/selectivemaster   |
 | kospi50Yn             | string(1)&#xD; | KOSPI50여부       | Y, N (유가)KOSPI50여부                                                                                                                                | \~/master, \~/selectivemaster   |

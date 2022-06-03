@@ -25,6 +25,23 @@ ex) K1
 
 {% swagger-response status="200" description="" %}
 ```yaml
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "isuSrtCd": "K1",
+        "isuCnt": 941,
+        "trdPrc": 2670.65,
+        "cmpprevddTpCd": "2",
+        "opnprc": 2679.57,
+        "hgprc": 2681.51,
+        "lwprc": 2663,
+        "accTrdvol": 552199,
+        "accTrdval": 7452658,
+        "mktcap": 2101702986,
+        "cmpprevddPrc": 11.66,
+        "listShrs": 62187655
+    }
+}
 ```
 {% endswagger-response %}
 
@@ -65,6 +82,23 @@ curl --include --header "apikey:l7xx230ef2235e3xxxxxc982eb192ac98e206" \
 #### Response Example
 
 ```yaml
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "isuSrtCd": "K1",
+        "isuCnt": 941,
+        "trdPrc": 2670.65,
+        "cmpprevddTpCd": "2",
+        "opnprc": 2679.57,
+        "hgprc": 2681.51,
+        "lwprc": 2663,
+        "accTrdvol": 552199,
+        "accTrdval": 7452658,
+        "mktcap": 2101702986,
+        "cmpprevddPrc": 11.66,
+        "listShrs": 62187655
+    }
+}
 ```
 
 

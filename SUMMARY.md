@@ -28,6 +28,7 @@
       * [주식실시간B](api/marketv3/stocks/stocksB.md)
     * [파생](api/marketv3/derivatives/README.md)
       * [파생실시간종가A](api/marketv3/derivatives/closedA.md)
+      * [파생실시간A](api/marketv3/derivatives/realtimeA.md)
     * [옵션 시세](api/marketv3/options.md)
     * [주식 시세표](api/marketv3/multiquote.md)
     * [코드표(시세)](api/marketv3/codetable.md)

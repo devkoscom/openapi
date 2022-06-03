@@ -1,10 +1,14 @@
 # 분석서비스
 
-{% page-ref page="bccard.md" %}
+{% content-ref url="bccard.md" %}
+[bccard.md](bccard.md)
+{% endcontent-ref %}
 
-{% page-ref page="ratestbed.md" %}
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 
-{% page-ref page="bigbot.md" %}
-
-
+{% content-ref url="bigbot.md" %}
+[bigbot.md](bigbot.md)
+{% endcontent-ref %}
 

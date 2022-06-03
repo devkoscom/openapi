@@ -35,6 +35,8 @@
     * [옵션 시세](api/marketv3/options.md)
     * [주식 시세표](api/marketv3/multiquote.md)
     * [코드표(시세)](api/marketv3/codetable.md)
+    * [기타](api/marketv3/etc/README.md)
+      * [유가종목별투자자](api/marketv3/etc/investorsA.md)
   * [재무정보 서비스](api/financialinfo/README.md)
     * [NICE-기업정보](api/financialinfo/nice.md)
     * [Fabotdw](api/financialinfo/fabotdw.md)

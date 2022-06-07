@@ -18,7 +18,7 @@
     * [업종 지수](api/market/index.md)
     * [주식 시세표](api/market/multiquote.md)
     * [코드표(시세)](api/market/codetable.md)
-  * [시세 서비스 (라이센스별) v3](api/marketv3/README.md)
+  * [시세 서비스 v3 (라이센스별)](api/marketv3/README.md)
     * [주식](api/marketv3/stocks/README.md)
       * [주식실시간종가A](<api/marketv3/stocks/stocksA (1).md>)
       * [주식실시간종가B](api/marketv3/stocks/closedB.md)

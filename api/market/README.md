@@ -1,22 +1,16 @@
 # 시세 서비스 v2 (종료)
 
-## 시세 서비스 이용 안내
 
-&#x20;개발자센터 (샌드박스)에  제공되는 시세 데이터는 개발 지원용으로만 제공됩니다.
 
-&#x20;현재 코스콤에서 제공되는 실시간 제공 시세와 자료가 상이할 수 있으며, 제공되는 서비스는 시스템 점검등으로 별도 고지 없이 중단될 수 있습니다.
+{% hint style="warning" %}
+시세라이센스 정책에 따라 기존의 API v2는 **v3으로 업데이트**되었으니 참고해주시길 바랍니다.
+{% endhint %}
 
-&#x20;또한, 개발 지원용 시세 데이터라 할지라도 데이터의 가공 또는 축적을 위해서는 코스콤의 정보시세 라이센스가 필요한 것으로써 계약이 수반되어야 시세 데이터의 가공 또는 축적이 가능합니다.
 
-&#x20;오픈API플랫폼 '정보시세 라이센스' 관련 문의는 코스콤 시장정보영업팀 이상원 수석 (이메일 : [success@koscom.co.kr](mailto:success@koscom.co.kr), tel : 02-767-7574)에게 문의 하시면 신속하게 답변 드리겠습니다.
-
-{% content-ref url="../../how-to-use/procedure/charge.md" %}
-[charge.md](../../how-to-use/procedure/charge.md)
-{% endcontent-ref %}
 
 ## Open API 시세 정보
 
-&#x20;다양한 금융시장정보의 실시간 및  과거데이터를 이용하기 편한 **Restful API** 서비스로 제공
+&#x20;다양한 금융시장정보의 실시간 및  과거데이터를 이용하기 편한 **Restul API** 서비스로 제공
 
 #### 자세한 설명은  [정보시세데이터\_정의서 V3.11](https://developers.koscom.co.kr/resources/documentation/OPEN\_API\_Marketdata\_SPEC\_V3\_11\_\_20200720.xlsx) 를 참조 하세요.
 
@@ -69,10 +63,6 @@
 | 업종     | 업종 투자자별&#xD;                 | /v2/market/index/{marketcode}/{issuecode}/investors&#xD;        |
 | 업종     | 업종 일중&#xD;                   | /v2/market/index/{marketcode}/{issuecode}/intraday&#xD;         |
 | 업종     | 업종 히스토리&#xD;                 | /v2/market/index/{marketcode}/{issuecode}/history&#xD;          |
-
-{% hint style="success" %}
-고객업무 요청시 협의 후 추가 API 제공가능
-{% endhint %}
 
 
 

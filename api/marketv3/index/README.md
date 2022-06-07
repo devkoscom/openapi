@@ -1,6 +1,6 @@
 # 업종
 
-
+KRX 업종(index) 정보
 
 {% content-ref url="closed.md" %}
 [closed.md](closed.md)

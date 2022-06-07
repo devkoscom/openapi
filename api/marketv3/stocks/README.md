@@ -1,6 +1,6 @@
 # 주식
 
-
+주식 실시간정보 및 종가정보 제
 
 {% content-ref url="stocksA (1).md" %}
 [stocksA (1).md](<stocksA (1).md>)
@@ -21,6 +21,4 @@
 {% content-ref url="stocksB.md" %}
 [stocksB.md](stocksB.md)
 {% endcontent-ref %}
-
-
 

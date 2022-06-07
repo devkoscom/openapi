@@ -14,14 +14,14 @@ API 제공(게시)자는 자본시장의 발전에 도움이 되는 API인 경�
 금투사가 제공하는 금융거래 API는 **해당 금투사 및 핀테크기업만 사용 가능**합니다.
 {% endhint %}
 
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
+
 {% content-ref url="procedure/" %}
 [procedure](procedure/)
 {% endcontent-ref %}
 
 {% content-ref url="devcenter/" %}
 [devcenter](devcenter/)
-{% endcontent-ref %}
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
 {% endcontent-ref %}

@@ -10,13 +10,15 @@
 
 #### 신청 서류
 
-1. [OpenAPI 플랫폼 사용 신청서 1 부](https://developers.koscom.co.kr/resources/documentation/OpenAPI\_Platform\_Reg.docx)
+1. 오픈API플랫폼 사용 신청서 1 부
 2. 법인등기부 등본 1부
 3. 사업자 등록증 1부
 4. 서비스 계획서 (자유 양식) 1부. 끝
 
 * 계정 발급 서류 제출 (이메일 : <mark style="color:blue;">open@koscom.co.kr</mark>)
 * 서류 검토 후 API Key 발급&#x20;
+
+{% file src="../../.gitbook/assets/오픈API플랫폼_사용_신청서_양식.doc" %}
 
 
 

@@ -4,7 +4,7 @@
 
 &#x20;1\. 개발자센터 가입 안내 참조               |    [http://biz.koscom.co.kr/cmm/intro/introOppfUse.do](http://biz.koscom.co.kr/cmm/intro/introOppfUse.do)
 
-&#x20;2\. 기타 코스콤 오픈API플랫폼 문의     |    코스콤 데이터오피스플랫폼팀  02-767-7913
+&#x20;2\. 기타 코스콤 오픈API플랫폼 문의     |    코스콤 API플랫폼팀  02-767-7913
 
 ## **API 이용료가 따로 있나요?**
 

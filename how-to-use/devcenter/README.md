@@ -44,8 +44,8 @@
 
 개발자센터에서 API 테스트를 원하실 경우, 사전에 사용할 애플리케이션을 등록해야 합니다.
 
-{% content-ref url="enrollapp.md" %}
-[enrollapp.md](enrollapp.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 ## API 테스트

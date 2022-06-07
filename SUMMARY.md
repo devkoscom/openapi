@@ -6,7 +6,6 @@
     * [이용 대상 및 수수료 안내](how-to-use/procedure/charge.md)
     * [보안성 검증 (금보원)](how-to-use/procedure/verification.md)
   * [개발자센터 이용절차](how-to-use/devcenter/README.md)
-    * [어플리케이션 등록](how-to-use/devcenter/enrollapp.md)
     * [API 테스트](how-to-use/devcenter/testapi.md)
   * [핀테크 금융서비스 이용 절차](how-to-use/fintechservice/README.md)
     * [금융투자 핀테크 포털](how-to-use/fintechservice/portal.md)

@@ -8,7 +8,7 @@
 
 | **`HTTP Response Status Code`** | **`Error Message`** | **`Response Body Message`**                           | **`Description`**                     |
 | ------------------------------- | ------------------- | ----------------------------------------------------- | ------------------------------------- |
-| 400                             | Bad Request         | `{ "error": "당일 종가 제공 시간이 아닙니다." }`                   | 종가정보 제공 시간대가 아닌 시점에 종가 관련 API를 호출한 경우 |
+| 400                             | `Bad Request`       | `{ "error": "당일 종가 제공 시간이 아닙니다." }`                   | 종가정보 제공 시간대가 아닌 시점에 종가 관련 API를 호출한 경우 |
 | 401                             | `Unauthorized`      | `{ "message": "Invalid authentication credentials" }` | 유효하지 않은 API Key 를 통해 API를 호출한 경우      |
 | 401                             | `Unauthorized`      | `{ "message": "No API key found in request" }`        | API Key 를 입력하지 않 호출한 경우               |
 | 404                             | `Not Found`         | `{ "message": "no Route matched with those values" }` | 잘못된 URI 경로로 호출할 경우                    |

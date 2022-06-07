@@ -12,6 +12,7 @@
 | 401                             | `Unauthorized`      | `{ "message": "Invalid authentication credentials" }` | 유효하지 않은 API Key 를 통해 API를 호출한 경우      |
 | 401                             | `Unauthorized`      | `{ "message": "No API key found in request" }`        | API Key 를 입력하지 않 호출한 경우               |
 | 404                             | `Not Found`         | `{ "message": "no Route matched with those values" }` | 잘못된 URI 경로로 호출할 경우                    |
+| 429                             | `Too Many Requests` | `{ "message": "API rate limit exceeded" }`            | 요청 한도 수를 초과한 경우 (rate-limit 초과)       |
 
 
 

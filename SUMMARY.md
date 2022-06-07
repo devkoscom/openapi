@@ -4,7 +4,6 @@
 * [이용절차 안내](how-to-use/README.md)
   * [오픈플랫폼 이용절차](how-to-use/procedure/README.md)
     * [이용 대상 및 수수료 안내](how-to-use/procedure/charge.md)
-    * [보안성 검증 (금보원)](how-to-use/procedure/verification.md)
   * [개발자센터 이용절차](how-to-use/devcenter/README.md)
     * [API 테스트](how-to-use/devcenter/testapi.md)
     * [API Key Authentication](how-to-use/devcenter/api-key.md)

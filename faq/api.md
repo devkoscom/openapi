@@ -64,5 +64,3 @@
 {% content-ref url="../how-to-use/devcenter/" %}
 [devcenter](../how-to-use/devcenter/)
 {% endcontent-ref %}
-
-개발자센터 계정발급 을 참조 하십시요.

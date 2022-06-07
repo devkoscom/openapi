@@ -13,8 +13,8 @@ X-RateLimit-Limit-Day : 50000
 
 | **`항목`**                  | **`설명`**                |
 | ------------------------- | ----------------------- |
-| X-RateLimit-Remaining-Day | 하루동안 호출한 건수 (GMT기준)     |
-| X-RateLimit-Limit-Day     | 하루 동안의 최종 호출 건수 (GMT기준) |
+| X-RateLimit-Remaining-Day | 하루 동안 호출 가능한 건수 (GMT기준) |
+| X-RateLimit-Limit-Day     | 하루 호출 가 건수 (GMT기준)      |
 
 **제한된 기간에 호출건수가 초과되면 API서비스를 제한 합니다.**
 

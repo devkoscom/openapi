@@ -1,13 +1,5 @@
 # 코드표(시세)
 
-
-
-{% hint style="warning" %}
-시세라이센스 정책에 따라 API **v3으로 업데이트**되었으니 참고해주시길 바랍니다.
-{% endhint %}
-
-
-
 {% hint style="success" %}
 시세 API  에러코드는 [Error Code](https://koscom.gitbook.io/open-api/error-code#error-3) 에서 확인하세요.
 {% endhint %}

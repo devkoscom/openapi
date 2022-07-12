@@ -1,6 +1,6 @@
 # Table of contents
 
-* [오픈플랫폼](README.md)
+* [오픈API플랫폼](README.md)
 * [이용절차 안내](how-to-use/README.md)
   * [오픈플랫폼 이용절차](how-to-use/procedure/README.md)
     * [이용 대상 및 수수료 안내](how-to-use/procedure/charge.md)
@@ -20,6 +20,7 @@
       * [주식실시간종가A](<api/marketv3/stocks/stocksA (1).md>)
       * [주식실시간종가B](api/marketv3/stocks/closedB.md)
       * [주식실시간종가C](api/marketv3/stocks/closedC.md)
+      * [KONEX종가](api/marketv3/stocks/closedKonex.md)
       * [주식실시간A](api/marketv3/stocks/stocksA.md)
       * [주식실시간B](api/marketv3/stocks/stocksB.md)
     * [파생](api/marketv3/derivatives/README.md)

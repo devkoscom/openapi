@@ -61,6 +61,6 @@
 
 ## **API 이용시 저희 쪽에서 준비해야 할 서류 및 상세내용 같은 것들을 안내받을 수 있나요?** <a href="#api-3" id="api-3"></a>
 
-{% content-ref url="../how-to-use/devcenter.md" %}
-[devcenter.md](../how-to-use/devcenter.md)
+{% content-ref url="../how-to-use/devcenter/" %}
+[devcenter](../how-to-use/devcenter/)
 {% endcontent-ref %}

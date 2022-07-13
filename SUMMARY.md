@@ -4,7 +4,7 @@
 * [이용절차 안내](how-to-use/README.md)
   * [오픈플랫폼 이용절차](how-to-use/procedure/README.md)
     * [이용 대상 및 수수료 안내](how-to-use/procedure/charge.md)
-  * [API 테스트 절차](how-to-use/devcenter.md)
+  * [API 테스트 절차](how-to-use/devcenter/README.md)
 * [API 서비스](api/README.md)
   * [시세 서비스 v2 (종료)](api/market/README.md)
     * [주식 시세](api/market/stocks/README.md)

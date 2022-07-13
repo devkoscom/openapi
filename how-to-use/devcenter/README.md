@@ -35,7 +35,7 @@ API 이용 신청 및 Sandbox(테스트용) API Key 발급
    ****샌드박스(테스트)환경 API Key 발급 후 전달\
    추후 샌드박스(테스트) 환경에서 테스트가 완료되면 실가동(Production/운영)환경 API KEY 전달
 
-{% file src="../.gitbook/assets/오픈API플랫폼_사용_신청서.doc" %}
+{% file src="../../.gitbook/assets/오픈API플랫폼_사용_신청서.doc" %}
 
 {% hint style="danger" %}
 오픈API플랫폼은 **"법인"**기업만 이용 가능합니다. \

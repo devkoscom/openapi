@@ -6,6 +6,6 @@
 [procedure](procedure/)
 {% endcontent-ref %}
 
-{% content-ref url="devcenter.md" %}
-[devcenter.md](devcenter.md)
+{% content-ref url="devcenter/" %}
+[devcenter](devcenter/)
 {% endcontent-ref %}

@@ -12,7 +12,9 @@
 
 &#x20;다양한 금융시장정보의 실시간 및  과거데이터를 이용하기 편한 **Restul API** 서비스로 제공
 
-#### 자세한 설명은  [정보시세데이터\_정의서 V3.11](https://developers.koscom.co.kr/resources/documentation/OPEN\_API\_Marketdata\_SPEC\_V3\_11\_\_20200720.xlsx) 를 참조 하세요.
+#### 자세한 설명은 아래 문서를 참조 하세요.
+
+{% file src="../../.gitbook/assets/OPEN_API_Marketdata_SPEC_V3_11__20200720.xlsx" %}
 
 
 

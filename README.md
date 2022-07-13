@@ -7,8 +7,6 @@
 오픈플랫폼은 다수의 참여자 간 상호 교류를 위해 상호 양방향 서비스를 지향합니다.\
 API서비스의 공급자로서, 또한 API 서비스의 사용자로서 자유롭게 오픈플랫폼에 참여하여 새로운 금융서비스를 창출할 수 있는 기회를 경험하시기 바랍니다.
 
-![핀테크기업, 자본시장오픈플랫폼, 금투사, 공공/금융기관 등의 양방향 서비스](http://biz.koscom.co.kr/images/cpt/info/img\_info01.jpg;jsessionid=7532B3F3E315B5534DF4CB4A9F515AC9)
-
 ![](<.gitbook/assets/image (76).png>)
 
 ## **성장 로드맵 (RoadMap)**

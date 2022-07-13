@@ -22,5 +22,5 @@
 
 * **코스콤 DATA** : [https://data.koscom.co.kr/kor/main.do](https://data.koscom.co.kr/kor/main.do)
 * **코스콤 DATAMALL**: [https://datamall.koscom.co.kr/kor/main.do](https://datamall.koscom.co.kr/kor/main.do)
-* **코스콤 데이터 문의처** : <mark style="color:blue;">marketdata@koscom.co.kr</mark>&#x20;
+* **코스콤 데이터 문의처** : _<mark style="color:blue;">marketdata@koscom.co.kr</mark> _&#x20;
 

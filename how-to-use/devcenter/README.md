@@ -65,7 +65,9 @@ API 이용 신청 및 Sandbox(테스트용) API Key 발급
 
 개발 지원용 시세 데이터라 할지라도 데이터의 가공 또는 축적을 위해서는 코스콤의 정보시세 라이센스가 필요한 것으로써 **'**정보시세 라이센스' 계약이 수반되어야 시세 데이터의 가공 또는 축적이 가능합니다.
 
-오픈API플랫폼은 RESTful API 방식으로 시세 정보를 제공합니다. 실시간 및 Bulk 형식의 시세 정보 수신을 희망하는 경우 아래 코스콤 DATA 사이트를 이용하여 주시길 바랍니다.
+오픈API플랫폼은 RESTful API 방식으로 시세 정보를 제공합니다.&#x20;
+
+실시간 및 Bulk 형식의 시세 정보 수신을 희망하는 경우 아래 코스콤 DATA 사이트를 이용하여 주시길 바랍니다.
 
 * **코스콤 DATA** : [https://data.koscom.co.kr/kor/main.do](https://data.koscom.co.kr/kor/main.do)
 * **코스콤 DATAMALL**: [https://datamall.koscom.co.kr/kor/main.do](https://datamall.koscom.co.kr/kor/main.do)

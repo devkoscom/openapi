@@ -11,10 +11,10 @@ X-RateLimit-Remaining-Day : 49973
 X-RateLimit-Limit-Day : 50000
 ```
 
-| **`항목`**                  | **`설명`**                  |
-| ------------------------- | ------------------------- |
-| X-RateLimit-Remaining-Day | 하루 동안 남 호출 가능한 건수 (GMT기준) |
-| X-RateLimit-Limit-Day     | 하루 rate limit 건수 (GMT기준)  |
+| **`항목`**                  | **`설명`**                       |
+| ------------------------- | ------------------------------ |
+| X-RateLimit-Remaining-Day | 하루 동안 남 호출 가능한 건수 (GMT+00시 기준) |
+| X-RateLimit-Limit-Day     | 하루 rate limit 건수 (GMT+00시 기준)  |
 
 **제한된 기간에 호출건수가 초과되면 API서비스를 제한 합니다.**
 
@@ -25,5 +25,5 @@ HTTP/1.1 429 Too Many Requests
 }
 ```
 
-호출건수를 상향 하려면 [오픈플랫폼 담당자](https://koscom.gitbook.io/open-api/onlineqna)에게 문의 하세요.
+부득이하게 호출건수 상향이 필요한 경우 [오픈API플랫폼 담당자](https://koscom.gitbook.io/open-api/onlineqna)에게 문의 하세요.
 

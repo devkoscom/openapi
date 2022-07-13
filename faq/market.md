@@ -16,9 +16,9 @@
 
 ## 코스콤 DATA
 
-시세 정보를 **API 방식이 아닌 다른 방식(실시간, bulk)로 수신**하길 희망하시는 경우 아래 코스콤 데이터 사이트를 참조하여 주시길 바랍니다.&#x20;
+시세 정보를 **API 방식이 아닌, 다른 방식(실시간, bulk)으로 수신**하길 희망하시는 경우 아래 코스콤 데이터 사이트를 참조하여 주시길 바랍니다.&#x20;
 
-코스콤 데이터몰은 오픈API플랫폼과 무관하므로 데이터몰 관련 문의가 있을 경우 아래 담당자에게 연락하여 주십시오.
+코스콤 데이터몰은 오픈API플랫폼과 무관합니다. 데이터몰 관련 문의가 있을 경우 아래 담당자에게 연락하여 주십시오.
 
 * **코스콤 DATA** : [https://data.koscom.co.kr/kor/main.do](https://data.koscom.co.kr/kor/main.do)
 * **코스콤 DATAMALL**: [https://datamall.koscom.co.kr/kor/main.do](https://datamall.koscom.co.kr/kor/main.do)

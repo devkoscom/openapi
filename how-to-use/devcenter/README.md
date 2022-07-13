@@ -80,16 +80,16 @@ HTTP method(GET, POST)에 따라 `API Key`를 전달하는 방식이 달라지�
 
 URL query parameter인 apikey에 넣어 전송
 
-```yaml
+```powershell
 curl -X GET \
-  'https://testoap.k-mydata.org/v3/market/realtime/kosdaq/stocks/247540/price?apikey=l7xxxxxxxxxxxxxx48c982eb192ac98e206'
+  'https://testoap.k-mydata.org/v3/shemarket/realtime/kosdaq/stocks/247540/price?apikey=l7xxxxxxxxxxxxxx48c982eb192ac98e206'
 ```
 
 ### POST 방식
 
 HTTP header의 apikey 필드에 API Key를 넣어 전송
 
-```yaml
+```powershell
 curl -X POST -H "apikey: l7xxxxxxxxxxxxxxxx46844861524b2320" -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H 
  -d '{
   "partner": {
@@ -99,7 +99,7 @@ curl -X POST -H "apikey: l7xxxxxxxxxxxxxxxx46844861524b2320" -H "Content-Type: a
   "commonHeader": {
     "reqIdPlatform": "android",
     "reqIdConsumer": "tx-001",
-    "certDn": Ou=KOSCOM,
+    "certDn": "Ou=KOSCOM,blah",
     "ci": "35SA9SlOxR3vOSQF0aXztoWpwgLmXFZbH074ZcqwbPBCIwt4xo1I0az0lu7qp5nuDRs78QNJxAnZk5SP/XB8Yw=="
   },
   "body": {

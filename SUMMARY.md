@@ -2,7 +2,7 @@
 
 * [오픈API플랫폼](README.md)
 * [이용절차 안내](how-to-use/README.md)
-  * [오픈플랫폼 이용절차](how-to-use/procedure/README.md)
+  * [오픈API플랫폼 이용절차](how-to-use/procedure/README.md)
     * [이용 대상 및 수수료 안내](how-to-use/procedure/charge.md)
   * [API 테스트 절차](how-to-use/devcenter/README.md)
 * [API 서비스](api/README.md)
@@ -43,7 +43,7 @@
 * [Error Code](error-code.md)
 * [Rate Limiting](rate-limiting.md)
 * [FAQ](faq/README.md)
-  * [오픈플랫폼](faq/oppf.md)
+  * [오픈API플랫폼](faq/oppf.md)
   * [API 사용절차](faq/api.md)
   * [시세 서비스](faq/market.md)
 * [문의사항](onlineqna.md)

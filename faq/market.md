@@ -14,7 +14,7 @@
 [charge.md](../how-to-use/procedure/charge.md)
 {% endcontent-ref %}
 
-## 코스콤 DATAMALL
+## 코스콤 DATA
 
 시세 정보를 **API 방식이 아닌 다른 방식(실시간, bulk)로 수신**하길 희망하시는 경우 아래 코스콤 데이터 사이트를 참조하여 주시길 바랍니다.&#x20;
 

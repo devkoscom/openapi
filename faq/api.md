@@ -1,17 +1,12 @@
 # API 사용절차
 
-## 오픈 API를 사용하려면 어떤 서류가 필요한가요?
-
-* 오픈 플랫폼 이용 신청서
-* 법인등기부등본
-* 사업자 등록증
-* 사업계획서 (자유양식)
-* API 기능 내역(API 제공자) 또는 API 이용 예정 서비스 내역(API 구독자)
-  * \[참조] 금융투자 핀테크 포털 (기업/금투사) > [오픈플랫폼 이용 안내](http://biz.koscom.co.kr/cmm/intro/introOppfUse.do)​
-
-## 오픈 API 사용자격은 무엇인가요?
+## 오픈 API 사용 자격은 무엇인가요?
 
 &#x20;중소기업 중 핀테크산업 유관업종의 법인 또는 전자금융업자, 전자금융 보조업자(전자금융거래법상)이면 사용이 가능합니다. 다만, 본 오픈API를 이용하여 영위하려는 서비스가 사행성 또는 미풍양속에 저해되는 것을 방지하고자 사전 사업계획서(서비스설명서) 제출을 통하여 사전 사용승인 절차를 진행하고 있습니다.
+
+{% content-ref url="../how-to-use/procedure/charge.md" %}
+[charge.md](../how-to-use/procedure/charge.md)
+{% endcontent-ref %}
 
 {% hint style="warning" %}
 **오픈API 플랫폼(개발자센터)  이용 대상** \
@@ -41,9 +36,11 @@
 [api](../api/)
 {% endcontent-ref %}
 
-## 이용기관 등록 절차에서 API 서비스 사전검증통과는 어떻게 하고 어떤 서류가 필요하나요?
+## API 서비스 사전검증통과는 어떻게 하고 어떤 서류가 필요하나요?
 
-이용기관은 개발자센터에서 개발 완료 후 상용 서비스로 전환 시에 필요한 절차로 서비스에 대한 설명 자료 및 보안 취약점 점검 문서등이 필요 합니다. 자세한 사항은 코스콤 데이터오피스사업부 김동범 차장 (02-767-7913, imaro@koscom.co.kr) 으로 연락 바랍니다.
+샌드박스(테스트환경)에서 먼저 개발 및 테스트를 완료한 뒤 상용(운영) 서비스로 전환 시에 필요한 절차입니다. 서비스에 대한 설명 자료 및 보안 취약점 점검 문서 등이 필요 합니다.&#x20;
+
+자세한 사항은 코스콤 오픈API플랫폼 담당자 김동범 차장 (02-767-7913, imaro@koscom.co.kr) 으로 연락 바랍니다.
 
 ## 플랫폼 이용 적격여부 검토는 무엇을 심사하는 것인가요?
 
@@ -55,12 +52,12 @@
 
 ## **모바일 개발용으로 제공하는 API가 있나요? 만약에 있다면 API 이용료가 따로 있나요?** <a href="#api-2" id="api-2"></a>
 
-별도 모바일 전용은 없습니다.&#x20;
+별도 모바일 개발 전용 API는 없습니다.&#x20;
 
-주식시세, 종목정보, 뉴스검색 API는 제공, 환율정보는 미제공 되고 있습니다. 자세한 사항은 '[https://developers.koscom.co.kr/documentation/reference](https://developers.koscom.co.kr/documentation/reference)' API 문서를 참조하세요. 주식시세의 경우 정보시세 라이센스에 따라 과금 됩니다. 단, 핀테크 활성화를 위해 오픈API플랫폼을 통한 시세 사용의 경우 중소기업 업력 7년 미만의 기업에게는 기본료 면제 (36개월간) 정책을 적용 하고 있습니다. 주식시세 비용에 대한 자세한 사항은 '영업2부 이상원 수석 02-767-7574)로 문의 해 주십시요.
+자세한 사항은 [https://koscom.gitbook.io/open-api/api](https://koscom.gitbook.io/open-api/api) API 문서를 참조하세요.
 
-## **API 이용시 저희 쪽에서 준비해야 할 서류 및 상세내용 같은 것들을 안내받을 수 있나요?** <a href="#api-3" id="api-3"></a>
+## **API 이용시 준비해야 할 서류 및 상세 내용을 안내받을 수 있나요?** <a href="#api-3" id="api-3"></a>
 
-{% content-ref url="../how-to-use/devcenter/" %}
-[devcenter](../how-to-use/devcenter/)
+{% content-ref url="../how-to-use/" %}
+[how-to-use](../how-to-use/)
 {% endcontent-ref %}

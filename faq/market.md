@@ -10,14 +10,17 @@
 * &#x20;[스타트업-\[KRX\] 종가정보 이용계약, 2018-07-11(hwp)](https://developers.koscom.co.kr/resources/documentation/Contract\_Startup\_\[KRX]ClosingPrice.hwp)
 * &#x20;[스타트업-\[KRX\] 실시간정보 이용계약, 2018-07-11(hwp)](https://developers.koscom.co.kr/resources/documentation/Contract\_Startup\_\[KRX]RealTime.hwp)
 
-
+{% content-ref url="../how-to-use/procedure/charge.md" %}
+[charge.md](../how-to-use/procedure/charge.md)
+{% endcontent-ref %}
 
 ## 코스콤 DATAMALL
 
-시세 정보를 API 방식이 아닌 다른 방식으로 수신하길 희망하시는 경우 아래 코스콤 데이터몰 사이트를 참조하여 주시길 바랍니다.&#x20;
+시세 정보를 **API 방식이 아닌 다른 방식(실시간, bulk)로 수신**하길 희망하시는 경우 아래 코스콤 데이터 사이트를 참조하여 주시길 바랍니다.&#x20;
 
 코스콤 데이터몰은 오픈API플랫폼과 무관하므로 데이터몰 관련 문의가 있을 경우 아래 담당자에게 연락하여 주십시오.
 
-* **코스콤 데이터몰 안내** : [https://datamall.koscom.co.kr/kor/main.do](https://datamall.koscom.co.kr/kor/main.do)
-* **코스콤 데이터몰 문의처** : <mark style="color:blue;">marketdata@koscom.co.kr</mark>&#x20;
+* **코스콤 DATA** : [https://data.koscom.co.kr/kor/main.do](https://data.koscom.co.kr/kor/main.do)
+* **코스콤 DATAMALL**: [https://datamall.koscom.co.kr/kor/main.do](https://datamall.koscom.co.kr/kor/main.do)
+* **코스콤 데이터 문의처** : <mark style="color:blue;">marketdata@koscom.co.kr</mark>&#x20;
 

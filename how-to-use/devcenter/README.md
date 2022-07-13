@@ -2,7 +2,7 @@
 
 오픈API플랫폼에서 제공하는 API서비스에 대한 개발 및 테스트를 위해서는  **API Key** 발급을 완료 하여야 합니다.
 
-사전에 시세라이센스 계약을 먼저 진행하신 후, 오픈API플랫폼 계약 시 아래 4가지 신청 서류를 작성하여 open@koscom.co.kr 으로 이메일 발송하여 주시면 관리자에 의한 승인 절차가 진행됩니다. 승인이 완료되면 샌드박스 환경 (테스트용) API Key를 제공합니다.
+사전에 시세라이센스 계약을 먼저 진행하신 후, 오픈API플랫폼 계약 시 아래 4가지 신청 서류를 작성하여 `open@koscom.co.kr`으로 메일 발송하여 주시면 관리자에 의한 승인 절차가 진행됩니다. 승인이 완료되면 샌드박스 환경 (테스트용) API Key를 제공합니다.
 
 
 
@@ -19,7 +19,7 @@ API 이용 신청 및 Sandbox(테스트용) API Key 발급
 2.  **시세라이센스 계약** _(시세API서비스 이용 시)_\
     문의 : 코스콤 시장정보영업팀 이상원 수석 (E : [success@koscom.co.kr](mailto:success@koscom.co.kr), T : 02-767-7574)
 
-    ​
+    ​\`
 3.  **오픈API플랫폼 계약 및 이용적격여부 검토**\
     ****문의 : 코스콤 API플랫폼팀 (E : <mark style="color:blue;">open@koscom.co.kr</mark> 및 <mark style="color:blue;">imaro@koscom.co.kr</mark>, T : 02-767-7913)\
 
@@ -68,9 +68,9 @@ API 이용 신청 및 Sandbox(테스트용) API Key 발급
 
 
 
-## API KEY 인증방식
+## API KEY 인증방식 - API Key Authentication
 
-> _API Key Authentication_
+
 
 API Key Authentication만을 사용하는 API는 주로 **민감정보가 포함되지 않은** 데이터를 요청•응답하는 경우이며, 핀테크 서비스를 등록할 때 받은 `API Key`만으로 API 호출권한을 확인하게 됩니다.
 

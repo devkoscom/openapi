@@ -2,9 +2,9 @@
 
 ## 코스콤 오픈API플랫폼 담당자 연락처는 무엇인가요?
 
-&#x20;1\. 이용신청 안내 참조                          |    [https://koscom.gitbook.io/open-api/how-to-use/procedure](https://koscom.gitbook.io/open-api/how-to-use/procedure)
+&#x20;1\. 이용신청 안내 참조                       |    [https://koscom.gitbook.io/open-api/how-to-use/procedure](https://koscom.gitbook.io/open-api/how-to-use/procedure)
 
-&#x20;2\. 코스콤 오픈API플랫폼 문의     |    코스콤 API플랫폼팀 open@koscom.co.kr , 02-767-7913
+&#x20;2\. 코스콤 오픈API플랫폼 문의          |    코스콤 API플랫폼팀 open@koscom.co.kr , 02-767-7913
 
 ## **API 이용료가 따로 있나요?**
 
@@ -24,6 +24,6 @@
 
 ## 서비스이용계약(약관)은 어떻게 체결하나요?
 
-오픈API플랫폼을 이용하기 위해서는 운영사인 코스콤과 사전에「오픈API플랫폼 이용계약」을 체결하여야 합니다. 오픈API플랫폼 계약체결을 원하시면, <mark style="color:blue;">imaro@koscom.co.kr</mark> 또는 <mark style="color:blue;">open@koscom.co.kr</mark> 로 문의해 주세요.
+오픈API플랫폼을 이용하기 위해서는 운영사인 코스콤과 사전에 「오픈API플랫폼 이용계약」을 체결하여야 합니다. 오픈API플랫폼 계약체결을 원하시면 <mark style="color:blue;">imaro@koscom.co.kr</mark> 또는 <mark style="color:blue;">open@koscom.co.kr</mark> 로 문의해 주세요.
 
 만약 시세API 이용을 희망하실 경우 오픈API플랫폼 이용계약 전에 시세라이센스 계약을 먼저 진행하셔야 합니다.&#x20;

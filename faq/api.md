@@ -61,3 +61,9 @@
 {% content-ref url="../how-to-use/" %}
 [how-to-use](../how-to-use/)
 {% endcontent-ref %}
+
+## API Key를 통해 API 테스트는 어떻게 진행하나요?
+
+시세라이센스계약 및 오픈API플랫폼 이용신청을 하신 뒤에 코스콤 담당자로부터 샌드박스(테스트)용 API Key를 전달받으셨을 것입니다. 이를 활용하여 RESTful API 표준에 맞추어 API를 호출하시면 됩니다. 이 때 인증방식은 API key authentication 입니다. 자세한 사항은 아래 링크를 참조하세요.
+
+[https://koscom.gitbook.io/open-api/how-to-use/devcenter#api-key-api-key-authentication](https://koscom.gitbook.io/open-api/how-to-use/devcenter#api-key-api-key-authentication)

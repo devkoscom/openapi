@@ -19,7 +19,7 @@
 2.  **시세라이센스 계약** _(시세API서비스 이용 시)_\
     문의 : 코스콤 시장정보영업팀 이상원 수석 (E : [success@koscom.co.kr](mailto:success@koscom.co.kr), T : 02-767-7574)
 
-    ​\`
+    ​
 3. **오픈API플랫폼 계약 및 이용적격여부 검토**\
    ****문의 : 코스콤 API플랫폼팀 (E : <mark style="color:blue;">open@koscom.co.kr</mark> 및 <mark style="color:blue;">imaro@koscom.co.kr</mark>, T : 02-767-7913)\
 

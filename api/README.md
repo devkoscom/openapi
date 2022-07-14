@@ -29,6 +29,7 @@ _`{APIGWAddr}`_ : 오픈API플랫폼 Gateway 주소
 * 주식실시간종가A
 * 주식실시간종가B
 * 주식실시간종가C
+* KONEX종가
 * 주식실시간A
 * 주식실시간B
 
@@ -49,7 +50,7 @@ _`{APIGWAddr}`_ : 오픈API플랫폼 Gateway 주소
 * 부가서비스
 
 {% hint style="info" %}
-한국거래소 -> 코스콤 ->오픈플랫폼 -> 핀테크업
+한국거래소 -> 코스콤 -> 오픈API플랫폼 -> 핀테크업체
 
 _**코스콤 (**<mark style="color:blue;">**정보시세 라이센스 계약 필요**</mark>**)**_
 {% endhint %}

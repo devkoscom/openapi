@@ -1,6 +1,6 @@
 # Table of contents
 
-* [오픈API플랫폼](README.md)
+* [코스콤 오픈API플랫폼](README.md)
 * [이용절차 안내](how-to-use/README.md)
   * [오픈API플랫폼 이용절차](how-to-use/procedure/README.md)
     * [이용 대상 및 수수료 안내](how-to-use/procedure/charge.md)

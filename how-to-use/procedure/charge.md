@@ -33,9 +33,11 @@
 
 &#x20;'정보시세 라이센스' 관련 문의는 코스콤 시장정보영업팀 이상원 수석 (E : [success@koscom.co.kr](mailto:success@koscom.co.kr), T : 02-767-7574)으로 문의 하시면 신속하게 답변 드리겠습니다.
 
-* &#x20;[시장정보 스타트업 지원 확대 방안, 2018-07-11(hwp)](https://developers.koscom.co.kr/resources/documentation/Support\_Startup\_Plan-Market\_Information\_180702.hwp)
-* &#x20;[스타트업-\[KRX\] 종가정보 이용계약, 2018-07-11(hwp)](https://developers.koscom.co.kr/resources/documentation/Contract\_Startup\_\[KRX]ClosingPrice.hwp)
-* &#x20;[스타트업-\[KRX\] 실시간정보 이용계약, 2018-07-11(hwp)](https://developers.koscom.co.kr/resources/documentation/Contract\_Startup\_\[KRX]RealTime.hwp)****
+{% file src="../../.gitbook/assets/시장정보 스타트업 지원 확대 방안 20180702.hwp" %}
+
+{% file src="../../.gitbook/assets/스타트업-[KRX] 종가정보 이용계약_20180711.hwp" %}
+
+{% file src="../../.gitbook/assets/스타트업-[KRX] 실시간정보 이용계약_20180711.hwp" %}
 
 {% hint style="info" %}
 코스콤 오픈API플랫폼의 시세API 서비스를 이용하시기 위해서는 **사전에  "시세라이센스 계약"이 진행**되어야 합니다.\

@@ -12,10 +12,6 @@
 
 &#x20;다양한 금융시장정보의 실시간 및  과거데이터를 이용하기 편한 **Restul API** 서비스로 제공
 
-#### 자세한 설명은 아래 문서를 참조 하세요.
-
-{% file src="../../.gitbook/assets/OPEN_API_Marketdata_SPEC_V3_11__20200720.xlsx" %}
-
 
 
 ## API  URI

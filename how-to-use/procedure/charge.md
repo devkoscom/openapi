@@ -27,8 +27,6 @@
 
 
 
-![](<../../.gitbook/assets/image (66).png>)
-
 ### **스타트업 지원 정책 및 시세 서비스 이용계약 안내**
 
 &#x20;'정보시세 라이센스' 관련 문의는 코스콤 시장정보영업팀 이상원 수석 (E : [success@koscom.co.kr](mailto:success@koscom.co.kr), T : 02-767-7574)으로 문의 하시면 신속하게 답변 드리겠습니다.
@@ -48,7 +46,7 @@
   전화       |    02-767-7574\
 
 * 오픈API플랫폼 이용 문의처\
-  &#x20;이메일  |    [open@koscom.co.kr](mailto:open@koscom.co.kr) , <mark style="color:blue;">imaro@koscom.co.kr</mark>\
+  &#x20;이메일  |    [open@koscom.co.kr](mailto:open@koscom.co.kr) \
   &#x20;전화      |    02-767-7913
 {% endhint %}
 

@@ -13,7 +13,7 @@
   전화       |    02-767-7574\
 
 * 오픈API플랫폼 이용 문의처\
-  &#x20;이메일  |    [open@koscom.co.kr](mailto:open@koscom.co.kr) \
+  &#x20;이메일  |    [open@koscom.co.kr](mailto:open@koscom.co.kr) , <mark style="color:blue;">imaro@koscom.co.kr</mark>\
   &#x20;전화      |    02-767-7913
 {% endhint %}
 
